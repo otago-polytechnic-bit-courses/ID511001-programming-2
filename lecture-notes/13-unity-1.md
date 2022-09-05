@@ -10,13 +10,21 @@ Open **Unity Hub**. You will be presented with the following:
 
 Currently, you have no projects. To create a new project, click the **New project** button.
 
-There are a variety of templates to choose from, i.e., 2D and 3D. Choose the **2D** template. In the **Project Settings**, you can set the project's name and location. Set the project's location to your **Class Tasks** repository. Click the **Create project** button.
+There are a variety of templates to choose from, i.e., 2D and 3D. Choose the **2D** template. In the **Project Settings**, you can set the project's name and location. Set the project's location to your **Class Tasks** repository path. Click the **Create project** button.
 
 <img src="../resources/13-unity-1/unity-2-project-creation.PNG" height="400" width="700"/>
 
 ## Project Configuration
 
+In might take about a minute or so to create a new project. Once the project is created, you will be presented with the following:
+
 <img src="../resources/13-unity-1/unity-3-project-configuration.PNG" height="400" width="700"/>
+
+At first, it might be overwhelming. Do not worry, you will become somewhat familiar with the environment as you progress through the lecture notes. 
+
+In the **Hierarchy** window displays every **GameObject** in a **Scene**. For example, **Main Camera**. You can use the **Hierarchy** window to add, remove, sort and group **GameObjects** in a **Scene**.
+
+**Resource:** <https://docs.unity3d.com/Manual/Hierarchy.html>
 
 <img src="../resources/13-unity-1/unity-4-project-configuration.PNG" height="400" width="700"/>
 

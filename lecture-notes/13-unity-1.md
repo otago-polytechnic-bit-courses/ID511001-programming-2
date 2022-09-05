@@ -28,13 +28,19 @@ In the **Hierarchy** window displays every **GameObject** in a **Scene**. For ex
 
 <img src="../resources/13-unity-1/unity-4-project-configuration.PNG" height="400" width="700"/>
 
+In the **Assets** window, create three new folders - **Prefabs**, **Scripts** and **Sprites**. You will notice that each folder excluding **Scenes** are not solid grey. It indicates that these folders are empty.
+
 <img src="../resources/13-unity-1/unity-5-project-configuration.PNG" height="400" width="700"/>
 
 ## Asset Creation
 
+In the `lecture-notes` directory, you will find a directory called `13-unity-1`. This directory contains three assets - `background.png`, `obstacle.png` and `player.png`. Drag and drop these assets into the **Sprites** directory.
+
 <img src="../resources/13-unity-1/unity-6-asset-creation.PNG" height="400" width="700"/>
 
 ## Player Controller
+
+
 
 <img src="../resources/13-unity-1/unity-7-player-controller.PNG" height="400" width="700"/>
 

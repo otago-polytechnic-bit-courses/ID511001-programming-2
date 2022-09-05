@@ -4,11 +4,33 @@
 
 ## Project Creation
 
+![](../resources/13-unity-1/unity-1-project-creation.PNG)
+
+![](../resources/13-unity-1/unity-2-project-creation.PNG)
+
 ## Project Configuration
+
+![](../resources/13-unity-1/unity-3-project-configuration.PNG)
+
+![](../resources/13-unity-1/unity-4-project-configuration.PNG)
+
+![](../resources/13-unity-1/unity-5-project-configuration.PNG)
 
 ## Asset Creation
 
+![](../resources/13-unity-1/unity-6-asset-creation.PNG)
+
 ## Player Controller
+
+![](../resources/13-unity-1/unity-7-player-controller.PNG)
+
+![](../resources/13-unity-1/unity-8-player-controller.PNG)
+
+![](../resources/13-unity-1/unity-9-player-controller.PNG)
+
+![](../resources/13-unity-1/unity-10-player-controller-2d-rigid-body.PNG)
+
+![](../resources/13-unity-1/unity-11-player-controller-cs-script.PNG)
 
 Please read the comments in the code snippet below:
 
@@ -18,7 +40,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // ADD COMMENT
-
 public class PlayerController : MonoBehaviour
 {
     // ADD COMMENT
@@ -55,6 +76,10 @@ public class PlayerController : MonoBehaviour
     }
 }
 ```
+
+![](../resources/13-unity-1/unity-11-player-controller-adding-cs-script.PNG)
+
+![](../resources/13-unity-1/unity-11-player-controller-testing.PNG)
 
 ## Camera Movement
 

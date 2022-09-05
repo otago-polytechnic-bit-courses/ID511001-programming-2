@@ -6,16 +6,15 @@
 
 <img src="../resources/13-unity-1/unity-1-project-creation.PNG" height="400" width="700"/>
 
-
-![](../resources/13-unity-1/unity-2-project-creation.PNG)
+<img src="../resources/13-unity-1/unity-2-project-creation.PNG" height="400" width="700"/>
 
 ## Project Configuration
 
-![](../resources/13-unity-1/unity-3-project-configuration.PNG)
+<img src="../resources/13-unity-1/unity-3-project-configuration.PNG" height="400" width="700"/>
 
-![](../resources/13-unity-1/unity-4-project-configuration.PNG)
+<img src="../resources/13-unity-1/unity-4-project-configuration.PNG" height="400" width="700"/>
 
-![](../resources/13-unity-1/unity-5-project-configuration.PNG)
+<img src="../resources/13-unity-1/unity-5-project-configuration.PNG" height="400" width="700"/>
 
 ## Asset Creation
 
@@ -45,10 +44,10 @@ public class PlayerController : MonoBehaviour
 {
     // ADD COMMENT
     public float speed;
-    
+
     // ADD COMMENT
     private Rigidbody2D rb;
-    
+
     // ADD COMMENT
     private Vector2 direction;
 
@@ -64,13 +63,13 @@ public class PlayerController : MonoBehaviour
     {
         // ADD COMMENT
         float directionY = Input.GetAxisRaw("Vertical");
-        
+
         // ADD COMMENT
         direction = new Vector2(0, directionY).normalized;
     }
 
     // ADD COMMENT
-    void FixedUpdate() 
+    void FixedUpdate()
     {
         // ADD COMMENT
         rb.velocity = new Vector2(0, direction.y * speed);

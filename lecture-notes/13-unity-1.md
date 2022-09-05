@@ -4,7 +4,8 @@
 
 ## Project Creation
 
-![](../resources/13-unity-1/unity-1-project-creation.PNG)
+<img src="../resources/13-unity-1/unity-1-project-creation.PNG" height="400" width="700"/>
+
 
 ![](../resources/13-unity-1/unity-2-project-creation.PNG)
 

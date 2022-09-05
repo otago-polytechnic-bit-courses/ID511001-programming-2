@@ -77,9 +77,9 @@ public class PlayerController : MonoBehaviour
 }
 ```
 
-![](../resources/13-unity-1/unity-11-player-controller-adding-cs-script.PNG)
+<img src="../resources/13-unity-1/unity-11-player-controller-adding-cs-script.PNG" height="400" width="700"/>
 
-![](../resources/13-unity-1/unity-11-player-controller-testing.PNG)
+<img src="../resources/13-unity-1/unity-11-player-controller-testing.PNG" height="400" width="700"/>
 
 ## Camera Movement
 

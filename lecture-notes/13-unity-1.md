@@ -18,19 +18,19 @@
 
 ## Asset Creation
 
-![](../resources/13-unity-1/unity-6-asset-creation.PNG)
+<img src="../resources/13-unity-1/unity-6-asset-creation.PNG" height="400" width="700"/>
 
 ## Player Controller
 
-![](../resources/13-unity-1/unity-7-player-controller.PNG)
+<img src="../resources/13-unity-1/unity-7-player-controller.PNG" height="400" width="700"/>
 
-![](../resources/13-unity-1/unity-8-player-controller.PNG)
+<img src="../resources/13-unity-1/unity-8-player-controller.PNG" height="400" width="700"/>
 
-![](../resources/13-unity-1/unity-9-player-controller.PNG)
+<img src="../resources/13-unity-1/unity-9-player-controller.PNG" height="400" width="700"/>
 
-![](../resources/13-unity-1/unity-10-player-controller-2d-rigid-body.PNG)
+<img src="../resources/13-unity-1/unity-10-player-controller-2d-rigid-body.PNG" height="400" width="700"/>
 
-![](../resources/13-unity-1/unity-11-player-controller-cs-script.PNG)
+<img src="../resources/13-unity-1/unity-11-player-controller-cs-script.PNG" height="400" width="700"/>
 
 Please read the comments in the code snippet below:
 

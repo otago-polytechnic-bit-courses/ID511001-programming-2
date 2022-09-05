@@ -4,7 +4,13 @@
 
 ## Project Creation
 
+Open **Unity Hub**. You will be presented with the following:
+
 <img src="../resources/13-unity-1/unity-1-project-creation.PNG" height="400" width="700"/>
+
+Currently, you have no projects. To create a new project, click the **New project** button.
+
+There are a variety of templates to choose from, i.e., 2D and 3D. Choose the **2D** template. In the **Project Settings**, you can set the project's name and location. Set the project's location to your **Class Tasks** repository. Click the **Create project** button.
 
 <img src="../resources/13-unity-1/unity-2-project-creation.PNG" height="400" width="700"/>
 

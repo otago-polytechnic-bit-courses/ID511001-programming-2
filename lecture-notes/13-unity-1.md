@@ -28,7 +28,7 @@ In the **Hierarchy** window displays every **GameObject** in a **Scene**. For ex
 
 <img src="../resources/13-unity-1/unity-4-project-configuration.PNG" height="400" width="700"/>
 
-In the **Assets** window, create three new folders - `Prefabs`, `Scripts` and `Sprites`. You will notice that each folder excluding `Scenes` are not solid grey. It indicates that these folders are empty.
+In the **Assets** window, create three new folders - `Prefabs`, `Scripts` and `Sprites`. To do so, right-click on the **Assets window > Create > Folder**. You will notice that each folder excluding `Scenes` are not solid grey. It indicates that these folders are empty.
 
 <img src="../resources/13-unity-1/unity-5-project-configuration.PNG" height="400" width="700"/>
 
@@ -54,7 +54,7 @@ Drag and drop the `Player Sprite` into the `Player` **GameObject**. `Player Spri
 
 <img src="../resources/13-unity-1/unity-9-player-controller.PNG" height="400" width="700"/>
 
-Click on the `Player` **GameObject**. In the **Inspector** window, click the **Add component** button. Search for **Rigidbody 2D** and press <kbd>Enter</kbd>. **Rigidbody 2D** places an object under the control of the physics engine, i.e., allow the `Player` **GameObject** to move. Set the **Scale X and Y** to 0.5, **Gravity scale** to zero (0) to ensure the `Player` **GameObject** stays in the air and **Constraints > Freeze Rotation** to checked to prevent the `Player` **GameObject** from rotating on the Z axis.
+Click on the `Player` **GameObject**. In the **Inspector** window, click the **Add component** button. Search for **Rigidbody 2D** and press <kbd>Enter</kbd>. **Rigidbody 2D** places an object under the control of the physics engine, i.e., allow the `Player` **GameObject** to move. Set the **Scale X and Y** to 0.5, **Gravity scale** to zero (0) to ensure the `Player` **GameObject** stays in the air and **Constraints > Freeze Rotation** to checked to prevent the `Player` **GameObject** from rotating/spinning on the Z axis.
 
 **Note:** a **GameObject** can only have one **Rigidbody 2D** component.
 
@@ -65,52 +65,55 @@ Click on the `Player` **GameObject**. In the **Inspector** window, click the **A
 
 <img src="../resources/13-unity-1/unity-10-player-controller-2d-rigid-body.PNG" height="400" width="700"/>
 
+In the `Scripts` directory, create a new **C# Script**. To do so, right-click on the **Assets window/Scripts > Create > C# Script**. Name the **C# Script**, `PlayerController.cs`.
+
 <img src="../resources/13-unity-1/unity-11-player-controller-cs-script.PNG" height="400" width="700"/>
 
-Please read the comments in the code snippet below:
+Open the Please read the comments in the code snippet below:
 
 ```cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// ADD COMMENT
+// PlayerController implements the MonoBehaviour interface.
+// The MonoBehaviour interface's members which PlayerController must implement are Start() and Update()
 public class PlayerController : MonoBehaviour
 {
-    // ADD COMMENT
+    // Public field which you can set its value in the Player GameObject's inspector window
     public float speed;
 
-    // ADD COMMENT
     private Rigidbody2D rb;
-
-    // ADD COMMENT
     private Vector2 direction;
 
     // Start is called before the first frame update
     void Start()
     {
-        // ADD COMMENT
+        // Getting the component of type Rigidbody2D
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // ADD COMMENT
+        // Get the value of the virtual axis identified by "Horizontal" or "Vertical"
+        // Resource: https://docs.unity3d.com/ScriptReference/Input.GetAxisRaw
         float directionY = Input.GetAxisRaw("Vertical");
-
-        // ADD COMMENT
         direction = new Vector2(0, directionY).normalized;
     }
 
-    // ADD COMMENT
     void FixedUpdate()
     {
-        // ADD COMMENT
+        // The Rigidbody's velocity is specified as a vector with components in 
+        // the X and Y directions. This allows the Player GameObject to move
+        // in the Y direction direction at a given speed
+
         rb.velocity = new Vector2(0, direction.y * speed);
     }
 }
 ```
+
+Drag and drop `PlayerController` **C# Script** into the **Inspector** window.
 
 <img src="../resources/13-unity-1/unity-11-player-controller-adding-cs-script.PNG" height="400" width="700"/>
 

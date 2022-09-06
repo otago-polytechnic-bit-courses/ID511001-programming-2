@@ -8,9 +8,9 @@ Open **Unity Hub**. You will be presented with the following:
 
 <img src="../resources/13-unity-1/unity-1-project-creation.PNG" height="400" width="700" />
 
-Currently, you have no projects. To create a new project, click the **New project** button.
+Currently, you have no projects. To create a new project, click on the **New project** button.
 
-There are a variety of templates to choose from, i.e., 2D and 3D. Choose the **2D** template. In the **Project Settings**, you can set the project's name and location. Set the project's location to your **Class Tasks** repository path. Click the **Create project** button.
+There are a variety of templates to choose from, i.e., 2D and 3D. Choose the **2D** template. In the **Project Settings**, you can set the project's name and location. Set the project's location to your **Class Tasks** repository path. Click on the **Create project** button.
 
 <img src="../resources/13-unity-1/unity-2-project-creation.PNG" height="400" width="700" />
 
@@ -54,7 +54,7 @@ Drag and drop the `Player Sprite` into the `Player` **GameObject**. `Player Spri
 
 <img src="../resources/13-unity-1/unity-9-player-controller.PNG" height="400" width="700" />
 
-Click on the `Player` **GameObject**. In the **Inspector** window, click the **Add component** button. Search for **Rigidbody 2D** and press <kbd>Enter</kbd>. **Rigidbody 2D** places an object under the control of the physics engine, i.e., allow the `Player` **GameObject** to move. Set the **Scale X and Y** to 0.5, **Gravity scale** to zero (0) to ensure the `Player` **GameObject** stays in the air and **Constraints > Freeze Rotation** to checked to prevent the `Player` **GameObject** from rotating/spinning on the Z axis.
+Click on the `Player` **GameObject**. In the **Inspector** window, click on the **Add component** button. Search for **Rigidbody 2D** and press <kbd>Enter</kbd>. **Rigidbody 2D** places an object under the control of the physics engine, i.e., allow the `Player` **GameObject** to move. Set the **Scale X and Y** to 0.5, **Gravity scale** to zero (0) to ensure the `Player` **GameObject** stays in the air and **Constraints > Freeze Rotation** to checked to prevent the `Player` **GameObject** from rotating/spinning on the Z axis.
 
 **Note:** a **GameObject** can only have one **Rigidbody 2D** component.
 
@@ -166,6 +166,8 @@ Drag and drop the `Main Camera` and `Player` **GameObjects** into the `Game Mana
 Create a new **Quad** called `Background`. To do so, right-click on the **Hierarchy window > 3D Object > Quad**. 
 
 <img src="../resources/13-unity-1/unity-18-camera-movement.PNG" height="400" width="700" />
+
+In the **Assets** window, click on the `background` asset and set the **Wrap Mode** to **Repeat**.
 
 <img src="../resources/13-unity-1/unity-19-camera-movement.PNG" height="400" width="700" />
 

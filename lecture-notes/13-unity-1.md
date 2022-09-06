@@ -119,11 +119,11 @@ Save the `PlayerController.cs` file and return to the **Unity Editor**.
 
 Drag and drop `PlayerController.cs` **C# Script** into the **Inspector** window.
 
-<img src="../resources/13-unity-1/unity-11-player-controller-adding-cs-script.PNG" height="400" width="700" />
+<img src="../resources/13-unity-1/unity-12-player-controller-adding-cs-script.PNG" height="400" width="700" />
 
 Test the changes by clicking on the **Play** button. Move the `Player` **GameObject** by using the <kbd>↑</kbd> and <kbd>↓</kbd> arrows.
 
-<img src="../resources/13-unity-1/unity-11-player-controller-testing.PNG" height="400" width="700" />
+<img src="../resources/13-unity-1/unity-13-player-controller-testing.PNG" height="400" width="700" />
 
 ## Camera Movement
 
@@ -151,25 +151,23 @@ public class CameraMovement : MonoBehaviour
 }
 ```
 
-<img src="../resources/13-unity-1/unity-13-camera-movement.PNG" height="400" width="700" />
+<img src="../resources/13-unity-1/unity-14-camera-movement.PNG" height="400" width="700" />
 
 Create a new **GameObject** called `Game Manager`.
 
-<img src="../resources/13-unity-1/unity-14-camera-movement.PNG" height="400" width="700" />
+<img src="../resources/13-unity-1/unity-15-camera-movement.PNG" height="400" width="700" />
 
 Drag and drop the `Main Camera` and `Player` **GameObjects** into the `Game Manager` **GameObject**. 
 
-<img src="../resources/13-unity-1/unity-15-camera-movement.PNG" height="400" width="700" />
+<img src="../resources/13-unity-1/unity-16-camera-movement.PNG" height="400" width="700" />
 
 Create a new **Quad** called `Background`. To do so, right-click on the **Hierarchy window > 3D Object > Quad**. 
 
 **Resource:** 
 
-<img src="../resources/13-unity-1/unity-16-camera-movement.PNG" height="400" width="700" />
-
-
-
 <img src="../resources/13-unity-1/unity-17-camera-movement.PNG" height="400" width="700" />
+
+
 
 <img src="../resources/13-unity-1/unity-18-camera-movement.PNG" height="400" width="700" />
 
@@ -178,6 +176,8 @@ Create a new **Quad** called `Background`. To do so, right-click on the **Hierar
 <img src="../resources/13-unity-1/unity-20-camera-movement.PNG" height="400" width="700" />
 
 <img src="../resources/13-unity-1/unity-21-camera-movement.PNG" height="400" width="700" />
+
+<img src="../resources/13-unity-1/unity-22-camera-movement.PNG" height="400" width="700" />
 
 ```cs
 using System.Collections;
@@ -203,4 +203,6 @@ public class LoopingBackground : MonoBehaviour
 }
 ```
 
-<img src="../resources/13-unity-1/unity-22-camera-movement.PNG" height="400" width="700" />
+<img src="../resources/13-unity-1/unity-23-camera-movement.PNG" height="400" width="700" />
+
+<img src="../resources/13-unity-1/unity-24-camera-movement.PNG" height="400" width="700" />

@@ -24,7 +24,7 @@ At first, it might be overwhelming. Do not worry, you will become somewhat famil
 
 In the **Hierarchy** window displays every **GameObject** in a **Scene**. For example, **Main Camera**. You can use the **Hierarchy** window to add, remove, sort and group **GameObjects** in a **Scene**.
 
-**Resource:** <https://docs.unity3d.com/Manual/Hierarchy.html>
+**Resource:** <https://docs.unity3d.com/Manual/Hierarchy>
 
 <img src="../resources/13-unity-1/unity-4-project-configuration.PNG" height="400" width="700"/>
 
@@ -46,13 +46,22 @@ Drag and drop the `player` asset into the **Hierarchy** window. Rename the `play
 
 Create a new **GameObject** called `Player`. A **GameObject** is a base class for all entities, i.e., `Player Sprite` in a **Scene**. 
 
-**Resource:** <https://docs.unity3d.com/ScriptReference/GameObject.html>
+**Resource:** <https://docs.unity3d.com/ScriptReference/GameObject>
 
 <img src="../resources/13-unity-1/unity-8-player-controller.PNG" height="400" width="700"/>
 
 Drag and drop the `Player Sprite` into the `Player` **GameObject**. `Player Sprite` is a descendent or child of `Player` **GameObject**.
 
 <img src="../resources/13-unity-1/unity-9-player-controller.PNG" height="400" width="700"/>
+
+Click on the `Player` **GameObject**. In the **Inspector** window, click the **Add component** button. Search for **Rigidbody 2D** and press <kbd>Enter</kbd>. **Rigidbody 2D** places an object under the control of the physics engine, i.e., allow the `Player` **GameObject** to move. Set the **Scale X and Y** to 0.5, **Gravity scale** to zero (0) to ensure the `Player` **GameObject** stays in the air and **Constraints > Freeze Rotation** to checked to prevent the `Player` **GameObject** from rotating on the Z axis.
+
+**Note:** a **GameObject** can only have one **Rigidbody 2D** component.
+
+**Resources:** 
+
+- <https://docs.unity3d.com/Manual/UsingTheInspector>
+- <https://docs.unity3d.com/Manual/class-Rigidbody2D>
 
 <img src="../resources/13-unity-1/unity-10-player-controller-2d-rigid-body.PNG" height="400" width="700"/>
 

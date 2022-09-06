@@ -1,7 +1,5 @@
 # Unity
 
-## Overview
-
 ## Project Creation
 
 Open **Unity Hub**. You will be presented with the following:
@@ -163,7 +161,7 @@ Drag and drop the `Main Camera` and `Player` **GameObjects** into the `Game Mana
 
 <img src="../resources/img/13-unity-1/unity-17-camera-movement.PNG" height="400" width="700" />
 
-### Looping Background
+## Background
 
 In the **Hierarchy** window, create a new quad called `Background`. To do so, right-click on the **Hierarchy window > 3D Object > Quad**. 
 
@@ -211,3 +209,62 @@ In the **Hierarchy** window, click on the `Background` **GameObject**. Drag and 
 <img src="../resources/img/13-unity-1/unity-23-background.PNG" height="400" width="700" />
 
 Test the changes by clicking on the **Play** button. 
+
+## Obstacles
+
+Drag and drop the `obstacle` asset into the `Game Manager` **GameObject**. Rename the `obstacle` asset to `Obstacle Sprite`.
+
+<img src="../resources/img/13-unity-1/unity-24-obstacle.PNG" height="400" width="700" />
+
+Create a new **GameObject** called `Obstacle`. Drag and drop the `Obstacle Sprite` into the `Obstacle` **GameObject**. Set the **Scale X** and **Y** to 0.5. **Note:** make sure the `Obstacle` **GameObject** is in the `Game Manager` **GameObject**.
+
+<img src="../resources/img/13-unity-1/unity-25-obstacle.PNG" height="400" width="700" />
+
+Drag and drop the `Obstacle` **GameObject** into the `Prefabs` directory.
+
+**Resource:**
+
+<img src="../resources/img/13-unity-1/unity-26-obstacle.PNG" height="400" width="700" />
+
+Delete the `Obstacle` **GameObject** from the `Game Manager` **GameObject**.
+
+<img src="../resources/img/13-unity-1/unity-27-obstacle.PNG" height="400" width="700" />
+
+By now, you should have an understanding on how to use basic features in the **Unity Editor**.
+
+Create a new **C# Script** called `SpawnObstacle.cs`. Add the following code:
+
+```cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SpawnObstacle : MonoBehaviour
+{
+    public GameObject obstacle;
+    public float minX, minY, maxX, maxY;
+    public float timeBetweenSpawn;
+    private float spawnTime;
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Time.time > spawnTime)
+        {
+            Spawn();
+            spawnTime = Time.time + timeBetweenSpawn;
+        }
+    }
+
+    void Spawn()
+    {
+        float randX = Random.Range(minX, maxX);
+        float randY = Random.Range(minY, maxY);
+        Instantiate(obstacle, transform.position + new Vector3(randX, randY, 0), transform.rotation);
+    }
+}
+```
+
+Create a new **GameObject** called `Spawn Point` in the `Game Manager` **GameObject**. Add the `SpawnObstacle.cs` **C# Script** to the `Spawn Point` **GameObject**. Set `Obstacle` to the `obstacle` **Prefab**, `Max X` to 3.5, `Min X` to 3, `Max Y` to 4, `Min Y` to -4 and `Time Between Spawn` to 0.5. Set the `Spawn Point` **GameObject's** **Position X** to 20 so that it does not spawn an `Obstacle` **GameObject** on the `Player` **GameObject**. Test the changes by clicking on the **Play** button. 
+
+<img src="../resources/img/13-unity-1/unity-28-obstacle.PNG" height="400" width="700" />

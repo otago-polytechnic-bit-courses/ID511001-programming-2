@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
 
 Save the `PlayerController.cs` file and return to the **Unity Editor**.
 
-Drag and drop `PlayerController.cs` **C# Script** into the **Inspector** window.
+Drag and drop `PlayerController.cs` **C# Script** into the **Inspector** window. Set the `speed` to 10.
 
 <img src="../resources/13-unity-1/unity-12-player-controller-adding-cs-script.PNG" height="400" width="700" />
 
@@ -155,19 +155,15 @@ public class CameraMovement : MonoBehaviour
 
 Create a new **GameObject** called `Game Manager`.
 
-<img src="../resources/13-unity-1/unity-15-camera-movement.PNG" height="400" width="700" />
+<img src="../resources/13-unity-1/unity-16-camera-movement.PNG" height="400" width="700" />
+
+<!-- <img src="../resources/13-unity-1/unity-15-camera-movement.PNG" height="400" width="700" /> -->
 
 Drag and drop the `Main Camera` and `Player` **GameObjects** into the `Game Manager` **GameObject**. 
 
-<img src="../resources/13-unity-1/unity-16-camera-movement.PNG" height="400" width="700" />
-
-Create a new **Quad** called `Background`. To do so, right-click on the **Hierarchy window > 3D Object > Quad**. 
-
-**Resource:** 
-
 <img src="../resources/13-unity-1/unity-17-camera-movement.PNG" height="400" width="700" />
 
-
+Create a new **Quad** called `Background`. To do so, right-click on the **Hierarchy window > 3D Object > Quad**. 
 
 <img src="../resources/13-unity-1/unity-18-camera-movement.PNG" height="400" width="700" />
 

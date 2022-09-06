@@ -67,6 +67,8 @@ Click on the `Player` **GameObject**. In the **Inspector** window, click the **A
 
 In the `Scripts` directory, create a new **C# Script**. To do so, right-click on the **Assets window/Scripts > Create > C# Script**. Name the **C# Script**, `PlayerController.cs`.
 
+Open the `PlayerController.cs` **C# Script** in **Visual Studio Code**. Add the following code:
+
 <img src="../resources/13-unity-1/unity-11-player-controller-cs-script.PNG" height="400" width="700"/>
 
 Open the Please read the comments in the code snippet below:
@@ -113,9 +115,13 @@ public class PlayerController : MonoBehaviour
 }
 ```
 
-Drag and drop `PlayerController` **C# Script** into the **Inspector** window.
+Save the `PlayerController.cs` file and return to the **Unity Editor**.
+
+Drag and drop `PlayerController.cs` **C# Script** into the **Inspector** window.
 
 <img src="../resources/13-unity-1/unity-11-player-controller-adding-cs-script.PNG" height="400" width="700"/>
+
+Test the changes by clicking on the **Play** button.
 
 <img src="../resources/13-unity-1/unity-11-player-controller-testing.PNG" height="400" width="700"/>
 

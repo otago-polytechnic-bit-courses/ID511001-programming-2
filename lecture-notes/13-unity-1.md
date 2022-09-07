@@ -147,37 +147,37 @@ public class CameraMovement : MonoBehaviour
 }
 ```
 
-<img src="../resources/img/13-unity-1/unity-14-camera-movement.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-14-camera-movement.png" height="400" width="700" />
 
 Create a new **GameObject** called `Game Manager`.
 
-<img src="../resources/img/13-unity-1/unity-15-camera-movement.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-15-camera-movement.png" height="400" width="700" />
 
 In the **Hierarchy** window, click on the `Game Controller` **GameObject**. Drag and drop the `CameraMovement.cs` **C# Script** into the **Inspector** window. Set the `Speed` to 15.
 
-<img src="../resources/img/13-unity-1/unity-16-camera-movement.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-16-camera-movement.png" height="400" width="700" />
 
 Drag and drop the `Main Camera` and `Player` **GameObjects** into the `Game Manager` **GameObject**. `Main Camera` and `Player` are descendent or children of `Game Manager` **GameObject**.
 
-<img src="../resources/img/13-unity-1/unity-17-camera-movement.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-17-camera-movement.png" height="400" width="700" />
 
 ## Background
 
 In the **Hierarchy** window, create a new quad called `Background`. To do so, right-click on the **Hierarchy window > 3D Object > Quad**. 
 
-<img src="../resources/img/13-unity-1/unity-18-background.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-18-background.png" height="400" width="700" />
 
 In the `Sprites` directory, click on the `background.png` file. Set the **Wrap Mode** to **Repeat**, then click on the **Apply** button.
 
-<img src="../resources/img/13-unity-1/unity-19-background.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-19-background.png" height="400" width="700" />
 
 In the **Hierarchy** window, click on the `Background` **GameObject**. Drag and drop the `background` asset into the **Inspector** window. Set the **Shader** to **Unlit/Texture** and **Scale X** and **Y** to 20 and 10. As you can see, the background has cover the entire scene.
 
-<img src="../resources/img/13-unity-1/unity-20-background.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-20-background.png" height="400" width="700" />
 
 Drag and drop the `Background` **GameObject** into the `Game Manager` **GameObject**.
 
-<img src="../resources/img/13-unity-1/unity-21-background.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-21-background.png" height="400" width="700" />
 
 In the `Scripts` directory, create a new **C# Script** called `LoopingBackground.cs`. Open the `LoopingBackground.cs` **C# Script** in **Visual Studio Code**. Add the following code:
 
@@ -202,11 +202,11 @@ public class LoopingBackground : MonoBehaviour
 }
 ```
 
-<img src="../resources/img/13-unity-1/unity-22-background.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-22-background.png" height="400" width="700" />
 
 In the **Hierarchy** window, click on the `Background` **GameObject**. Drag and drop the `LoopingBackground.cs` **C# Script** into the **Inspector** window. Set the `Speed` to 1 and `Renderer` to **Background (Mesh Renderer)**.
 
-<img src="../resources/img/13-unity-1/unity-23-background.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-23-background.png" height="400" width="700" />
 
 Test the changes by clicking on the **Play** button. 
 
@@ -214,21 +214,21 @@ Test the changes by clicking on the **Play** button.
 
 Drag and drop the `obstacle` asset into the `Game Manager` **GameObject**. Rename the `obstacle` asset to `Obstacle Sprite`.
 
-<img src="../resources/img/13-unity-1/unity-24-obstacle.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-24-obstacle.png" height="400" width="700" />
 
 Create a new **GameObject** called `Obstacle`. Drag and drop the `Obstacle Sprite` into the `Obstacle` **GameObject**. Set the **Scale X** and **Y** to 0.5. **Note:** make sure the `Obstacle` **GameObject** is in the `Game Manager` **GameObject**.
 
-<img src="../resources/img/13-unity-1/unity-25-obstacle.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-25-obstacle.png" height="400" width="700" />
 
 Drag and drop the `Obstacle` **GameObject** into the `Prefabs` directory.
 
 **Resource:**
 
-<img src="../resources/img/13-unity-1/unity-26-obstacle.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-26-obstacle.png" height="400" width="700" />
 
 Delete the `Obstacle` **GameObject** from the `Game Manager` **GameObject**.
 
-<img src="../resources/img/13-unity-1/unity-27-obstacle.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-27-obstacle.png" height="400" width="700" />
 
 By now, you should have an understanding on how to use basic features in the **Unity Editor**.
 
@@ -267,4 +267,4 @@ public class SpawnObstacle : MonoBehaviour
 
 Create a new **GameObject** called `Spawn Point` in the `Game Manager` **GameObject**. Add the `SpawnObstacle.cs` **C# Script** to the `Spawn Point` **GameObject**. Set `Obstacle` to the `obstacle` **Prefab**, `Max X` to 3.5, `Min X` to 3, `Max Y` to 4, `Min Y` to -4 and `Time Between Spawn` to 0.5. Set the `Spawn Point` **GameObject's** **Position X** to 20 so that it does not spawn an `Obstacle` **GameObject** on the `Player` **GameObject**. Test the changes by clicking on the **Play** button. 
 
-<img src="../resources/img/13-unity-1/unity-28-obstacle.PNG" height="400" width="700" />
+<img src="../resources/img/13-unity-1/unity-28-obstacle.png" height="400" width="700" />

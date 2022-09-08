@@ -363,3 +363,22 @@ public class SpawnObstacle : MonoBehaviour
 Create a new **GameObject** called `Spawn Point` in the `Game Manager` **GameObject**. Add the `SpawnObstacle.cs` **C# Script** to the `Spawn Point` **GameObject**. Set `Obstacle` to the `obstacle` **Prefab**, `Max X` to 3.5, `Min X` to 3, `Max Y` to 4, `Min Y` to -4 and `Time Between Spawn` to 0.5. Set the `Spawn Point` **GameObject's** **Position X** to 20 so that it does not spawn an `Obstacle` **GameObject** on the `Player` **GameObject**. Test the changes by clicking on the **Play** button. 
 
 <img src="../resources/img/13-unity-1/unity-28-obstacle.png" height="400" width="700" />
+
+## Other Functionality
+
+### Player Collision
+
+1. Create two **GameObjects** called `Edges` and `Top Edge`
+2. Put the `Top Edge` **GameObject** in `Edges`
+3. Put this in the `Game Manager` **GameObject**
+4. Set the `Top Edge`'s **Y Position** to the top of the **Scene** 
+5. In `Top Edge` **GameObject**, add a **Box Collider 2D** component. Click the **Add component** button
+6. Set the **Box Collider 2D** component's **X Size** to 15
+7. Copy the `Top Edge` **GameObject** and rename it `Bottom Edge`
+8. Set the `Bottom Edge`'s **Y Position** to the bottom of the **Scene** 
+9. In the `Player` **GameObject**, add a **Box Collider 2D** component
+10. Edit the collider so that the box is around the `Player` **GameObject**
+11. Run the game
+
+
+

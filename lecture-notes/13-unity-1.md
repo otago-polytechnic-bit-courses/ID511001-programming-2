@@ -380,5 +380,37 @@ Create a new **GameObject** called `Spawn Point` in the `Game Manager` **GameObj
 10. Edit the collider so that the box is around the `Player` **GameObject**
 11. Run the game
 
+### Destroying Obstacles
 
+1. Copy the `Top` or `Bottom Edge` **GameObject** and rename it `Left Edge`
+2. Currently, the `Left Edge` **GameObject** is horizontal...what property allows you to rotate so that
+the `Left Edge` **GameObject** is vertical?
+3. Set the `Left Edge`'s **X Position** to the left of the **Scene**
+4. In the `Edges` **GameObject**, create a tag called **"Edges"**. A tag is reference word that you assign to
+one or more **GameObjects**
+5. Apply the **"Edges"** tag to the `Top Edge`, `Bottom Edge` and `Left Edge` **GameObjects**
+6. In the `Prebabs` directory, click on the `Obstacle` **Prefab** and click on the **Open Prefab** button
+7. Add a **Circle Collider 2D** to the `Obstacle` **Prefab**
+8. Check the **isTrigger** property
+9. Edit the collider so that the circle is around the `Obstacle` **Prefab**
+10. Create a new **C# Script** called `Collision.cs`
+11. Create a method called `OnTriggerEnter2D` which accepts an argument called `Collider2D collision`
 
+For example:
+
+```cs
+private void OnTriggerEnter2D(Collider2D collision)
+```
+
+12. In the code block, you want to check if the collision tag equals **"Edges"**. This is a simple `if` statement
+
+For example: 
+
+```cs
+if (collision.tag == "Edges")
+```
+
+13. In side the `if` block, you want to destroy the **GameObject**, which in this case will be the `Obstacle` **Prefab**.
+There is a function called `Destroy`. This function accepts a **GameObject**. To access the **GameObject**, use `this.gameObject`
+14. Add the `Collision.cs` **C# Script** to the `Obstacle` **Prefab**
+15. Run the game

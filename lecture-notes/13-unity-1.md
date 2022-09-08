@@ -380,6 +380,8 @@ Create a new **GameObject** called `Spawn Point` in the `Game Manager` **GameObj
 10. Edit the collider so that the box is around the `Player` **GameObject**
 11. Run the game
 
+**Resource:** <https://docs.unity3d.com/Manual/class-BoxCollider2D>
+
 ### Destroying Obstacles
 
 1. Copy the `Top` or `Bottom Edge` **GameObject** and rename it `Left Edge`
@@ -414,3 +416,9 @@ if (collision.tag == "Edges")
 There is a function called `Destroy`. This function accepts a **GameObject**. To access the **GameObject**, use `this.gameObject`
 14. Add the `Collision.cs` **C# Script** to the `Obstacle` **Prefab**
 15. Run the game
+
+**Resources:** 
+
+- <https://docs.unity3d.com/Manual/class-CircleCollider2D>
+- <https://docs.unity3d.com/Manual/Tags>
+- <https://docs.unity3d.com/ScriptReference/Object.Destroy>

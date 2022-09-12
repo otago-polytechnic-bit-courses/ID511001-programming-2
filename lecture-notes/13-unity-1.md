@@ -431,25 +431,26 @@ Ideally, you want to display a game over screen when the `Player` **GameObject**
 1. Firstly, you will need to create a **panel**. To do this, in the **Hierarchy** window, right-click **UI > Panel**. This will create a **GameObject** called `Canvas`. 
 2. Rename the `Panel` **GameObject** to `Game Over Panel`.
 3. In the **Inspector** window, set the **Image > Color** value to **black**.
-4. Click on the `Canvas` **GameObject** and set the **Canvas Scaler > UI Scale Mode** to **Scale With Screen Size**. This enables the scene to scale with the screen size.
+4. Click on the `Canvas` **GameObject** and set the **Canvas Scaler > UI Scale Mode** value to **Scale With Screen Size**. This enables the scene to scale with the screen size.
 5. Set the **Canvas Scaler > Resolution's X** and **Y** values to 1600 and 900. Feel free to adjust these values.
 6. Right-click the `Game Over Panel` **GameObject > UI > Image** and name the **Game Object** `Game Over Popup`.
 7. In the `lecture-notes/13-unity-1` directory. Drag and drop the `game-over-popup.png` file into the `Sprites` directory.
-8. Click on the `Game Over Popup` **GameObject** and set the **Image > Source Image** to the `game-over-popup.png` file and **Rect Transfrom > Width** and **Rect Transform > Height**.  
+8. Click on the `Game Over Popup` **GameObject** and set the **Image > Source Image** value to the `game-over-popup.png` file and **Rect Transfrom > Width** and **Rect Transform > Height** to appropriate values (You choose).  
 9. Right-click the `Game Over Panel` **GameObject > UI > Text** and name the **Game Object** `Game Over Text`.
-10. Click on the `Game Over Text` **GameObject** and set the **Text > Text** to **Game Over!** and **Text > Character > Font Size** to 100. I encourage you to try the other properties.
+10. Click on the `Game Over Text` **GameObject** and set the **Text > Text** value to **Game Over!** and **Text > Character > Font Size** value to 100. I encourage you to try the other properties.
 11. Right-click the `Game Over Panel` **GameObject > UI > Button** and name the **Game Object** `Restart Button`.
-12. Change the **Width**, **Height** and **Text** so that it is clear to the user.
-13. Hide the `Game Over Panel` **GameObject**.
-14. Open the `Obstacle.cs` file. Declare `private GameObject player;`. In the `Start()` method, add the following code:
+12. Change the **Width**, **Height** and **Text** values so that it is clear to the user.
+13. Click on the `Player` **GameObject** and set the **tag** value to **"Player"**.
+14. Hide the `Game Over Panel` **GameObject**.
+15. Open the `Obstacle.cs` file. Declare `private GameObject player;`. In the `Start()` method, add the following code:
 
 ```cs
 player = GameObject.FindGameObjectWithTag("Player");
 ```
 
-In the `OnTriggerEnter2D()` method, add an if statement that checks if the collision's tag is "Player". If `true`, destroy the `Player` **GameObject**.
+In the `OnTriggerEnter2D()` method, add an if statement that checks if the collision's tag is **"Player"**. If `true`, destroy the `Player` **GameObject**.
 
-15. Create a new **C# Script** called `GameOver.cs`. Declare `private GameObject gameOverPanel;`. In the `Update()` method, add an if statement that checks if the **GameObject** with the tag "Player" is `null`. If `true`, call the `Game Over Panel`'s `setActive()` and pass in the appropriate boolean, i.e., `true` or `false`.
+15. Create a new **C# Script** called `GameOver.cs`. Declare `private GameObject gameOverPanel;`. In the `Update()` method, add an if statement that checks if the **GameObject** with the tag **"Player"** is `null`. If `true`, call the `Game Over Panel`'s `setActive()` and pass in the appropriate boolean, i.e., `true` or `false`.
 16. Below the `using UnityEngine;` directive, add the following directive:
 
 ```cs
@@ -461,4 +462,6 @@ using UnityEngine.SceneManagement;
 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 ```
 18. Add the `GameOver.cs` **C# Script** to the `Game Manager` **GameObject**.
+19. Set the **Game Over Panel** value to the `Game Over Panel` **GameObject**.
+20. Click on the `Restart Button` **GameObject** and in the **On Click()**, replace `None (Object)` with the `Game Manager` **GameObject** and set the **Runtime Only** value to **Game Over > Restart()**.
 

@@ -423,3 +423,16 @@ There is a function called `Destroy`. This function accepts a **GameObject**. To
 - <https://docs.unity3d.com/Manual/class-CircleCollider2D>
 - <https://docs.unity3d.com/Manual/Tags>
 - <https://docs.unity3d.com/ScriptReference/Object.Destroy>
+
+### Collision Detection with Obstacles
+
+Ideally, you want to display a game over screen when the `Player` **GameObject** collides with the `Obstacle` **Prefab**. 
+
+1. Firstly, you will need to create a **panel**. To do this, in the **Hierarchy** window, right-click **UI > Panel**. This will create a **GameObject** called `Canvas`. 
+2. Rename the `Panel` **GameObject** to `Game Over Panel`.
+3. In the **Inspector** window, set the **Image > Color** value to **black**.
+4. Click on the `Canvas` **GameObject** and set the **Canvas Scaler > UI Scale Mode** to **Scale With Screen Size**. This enables the scene to scale with the screen size.
+5. Set the **Canvas Scaler > Resolution's X** and **Y** values to 1600 and 900. Feel free to adjust these values.
+6. Right-click the `Game Over Panel` **GameObject > UI > Image** and name the **Game Object** `Game Over Popup`.
+7. In the `lecture-notes/13-unity-1` directory. Drag and drop the `game-over-popup.png` into the `Sprites` directory.
+

@@ -1,5 +1,7 @@
 # Unity
 
+# Endless Runner (1%)
+
 ## Preparation
 
 Add the following rules to your **Class Tasks** repository `.gitignore` file:
@@ -415,7 +417,7 @@ if (collision.tag == "Edges")
 13. In side the `if` block, you want to destroy the **GameObject**, which in this case will be the `Obstacle` **Prefab**.
 There is a function called `Destroy`. This function accepts a **GameObject**. To access the **GameObject**, use `this.gameObject`
 14. Add the `Collision.cs` **C# Script** to the `Obstacle` **Prefab**
-15. **Gravity scale** to zero (0) and stop the `Obstacle` **Prefab** from rotating/spinning on the Z axis. 
+15. Add a **Rigidbody 2D** to the `Obstacle` **Prefab**. Set the **Gravity scale** to zero (0) and stop the `Obstacle` **Prefab** from rotating/spinning on the Z axis. 
 16. Run the game
 
 **Resources:** 

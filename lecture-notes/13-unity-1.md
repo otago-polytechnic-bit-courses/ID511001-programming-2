@@ -467,3 +467,13 @@ SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 19. Set the **Game Over Panel** value to the `Game Over Panel` **GameObject**.
 20. Click on the `Restart Button` **GameObject** and in the **On Click()**, replace `None (Object)` with the `Game Manager` **GameObject** and set the **Runtime Only** value to **Game Over > Restart()**.
 
+# Breakout (1%)
+
+**Note:** You will need to create a new **2D** project.
+
+Complete the following tutorial - <https://noobtuts.com/unity/2d-arkanoid-game>
+
+# Exam Preparation
+
+In the exam, you need to identify the various colliders used in both tutorials, what **Rigidbody 2D** is, the basic file structure, i.e., `Sprites`, `Scripts`, `Prefabs`, etc., and **GameObjects**. 
+

@@ -452,7 +452,7 @@ player = GameObject.FindGameObjectWithTag("Player");
 
 In the `OnTriggerEnter2D()` method, add an if statement that checks if the collision's tag is **"Player"**. If `true`, destroy the `Player` **GameObject**.
 
-15. Create a new **C# Script** called `GameOver.cs`. Declare `private GameObject gameOverPanel;`. In the `Update()` method, add an if statement that checks if the **GameObject** with the tag **"Player"** is `null`. If `true`, call the `Game Over Panel`'s `setActive()` and pass in the appropriate boolean, i.e., `true` or `false`.
+15. Create a new **C# Script** called `GameOver.cs`. Declare `public GameObject gameOverPanel;`. In the `Update()` method, add an if statement that checks if the **GameObject** with the tag **"Player"** is `null`. If `true`, call the `Game Over Panel`'s `setActive()` and pass in the appropriate boolean, i.e., `true` or `false`.
 16. Below the `using UnityEngine;` directive, add the following directive:
 
 ```cs

@@ -170,7 +170,7 @@ class Map
 }
 ```
 
-This map class uses a Dictionary object from the C# standard library to store the key-value pairs. The Add method adds a new key-value pair to the map by simply assigning the value to the corresponding key in the dictionary. The Remove method removes a key-value pair from the map by using the TryGetValue method to retrieve the value associated with the key and then calling the Remove method on the dictionary. The Lookup method retrieves the value associated with a given key by using the TryGetValue method to look up the value in the dictionary.
+This map class uses a `Dictionary` object from the C# standard library to store the key-value pairs. The Add method adds a new key-value pair to the map by simply assigning the value to the corresponding key in the dictionary. The `Remove` method removes a key-value pair from the map by using the `TryGetValue` method to retrieve the value associated with the key and then calling the `Remove` method on the dictionary. The `Lookup` method retrieves the value associated with a given key by using the `TryGetValue` method to look up the value in the dictionary.
 
 Overall, maps are a useful data structure that can be used to store and manipulate data in which the key is used to identify the value, and the value is the data being stored. They are especially useful when working with large collections of data and when the data needs to be accessed quickly using a specific identifier.
 

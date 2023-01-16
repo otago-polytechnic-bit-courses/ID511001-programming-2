@@ -41,6 +41,11 @@ names.Remove("Charlie");
 int count = names.Count;
 ```
 
+**Questions:**
+
+1. What is the output if you print `firstName`?
+2. What is the output if you print `count`?
+
 One of the main advantages of using a list is that it provides fast and efficient access to the items it contains. Since each item in a list is identified by its index, it is possible to access any item in the list in constant time by simply specifying its index. This makes lists an ideal data structure for storing and accessing large collections of data, especially when the order of the items is important.
 
 Inserting or deleting items from the middle of a list can be relatively expensive, as it may require shifting the items around to make room for the new item or fill the gap left by the deleted item.

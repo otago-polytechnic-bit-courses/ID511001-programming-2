@@ -91,6 +91,62 @@ You can chain as many else if you need.
 
 ## Switch Statement
 
+A switch statement is a control flow statement that allows a program to select one of many code blocks to be executed based on the value of a given expression. The basic syntax of a switch statement is:
+
+```cs
+switch (expression)
+{
+    case value1:
+        // code to be executed if expression equals value1
+        break;
+    case value2:
+        // code to be executed if expression equals value2
+        break;
+    ...
+    default:
+        // code to be executed if expression does not match any of the values
+        break;
+}
+```
+
+The expression is evaluated and its value is compared to the values specified in each case. If a match is found, the code block associated with that case is executed. It's important to include a break statement at the end of each case block to exit the switch statement after the code block has been executed.
+
+For example, the following code uses a switch statement to check the value of the variable x and prints a message to the console based on its value:
+
+
+```cs
+switch (x)
+{
+    case 1:
+        Console.WriteLine("x is 1");
+        break;
+    case 2:
+        Console.WriteLine("x is 2");
+        break;
+    default:
+        Console.WriteLine("x is not 1 or 2");
+        break;
+}
+```
+
+The default case is optional, and it will be executed if the value of the expression does not match any of the values specified in the case statements. You can also use the switch statement with string, like the following example:
+
+```cs
+string day = "Monday";
+switch (day)
+{
+    case "Monday":
+        Console.WriteLine("Today is Monday");
+        break;
+    case "Tuesday":
+        Console.WriteLine("Today is Tuesday");
+        break;
+    default:
+        Console.WriteLine("Today is not Monday nor Tuesday");
+        break;
+}
+```
+
 ## Loops
 
 ## Methods

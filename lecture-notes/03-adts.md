@@ -1,4 +1,4 @@
-# 02: Abstract Data Types (ADTs)
+# 03: Abstract Data Types (ADTs)
 
 ## What is an abstract data type?
 
@@ -10,7 +10,7 @@ An ADT is typically defined by a set of function prototypes or method signatures
 
 It is important to note that an ADT does not specify the actual implementation of the operations. This means that different implementations of the same ADT may use different algorithms or data structures to achieve the same behaviour. For example, a stack ADT could be implemented using an array or a linked list, depending on the specific needs and constraints of the application.
 
-Overall, abstract data types are a useful tool for designing and organising data structures in computer science. They allow developers to think about the high-level behaviour of the data structure, rather than the low-level details of its implementation, making it easier to write and maintain code.
+Abstract data types are a useful tool for designing and organising data structures in computer science. They allow developers to think about the high-level behaviour of the data structure, rather than the low-level details of its implementation, making it easier to write and maintain code.
 
 ## List
 
@@ -45,7 +45,7 @@ One of the main advantages of using a list is that it provides fast and efficien
 
 Inserting or deleting items from the middle of a list can be relatively expensive, as it may require shifting the items around to make room for the new item or fill the gap left by the deleted item.
 
-Overall, lists are a very useful and widely-used data structure that can be used to store and manage large collections of data in a wide variety of applications.
+Lists are a very useful and widely-used data structure that can be used to store and manage large collections of data in a wide variety of applications.
 
 ## Set
 
@@ -117,7 +117,7 @@ One of the main advantages of using a set is that it allows you to quickly and e
 
 However, sets have some limitations as well. Because they do not preserve the order of the items, sets are not suitable for storing data that needs to be accessed in a specific order. Additionally, sets do not allow duplicate items, which means that they cannot be used to store data that requires multiple copies of the same item.
 
-Overall, sets are a useful data structure that can be used to store and manipulate collections of data in which the order of the items is not important, and the focus is on the items themselves.
+Sets are a useful data structure that can be used to store and manipulate collections of data in which the order of the items is not important, and the focus is on the items themselves.
 
 ## Map
 
@@ -172,7 +172,7 @@ class Map
 
 This map class uses a `Dictionary` object from the C# standard library to store the key-value pairs. The Add method adds a new key-value pair to the map by simply assigning the value to the corresponding key in the dictionary. The `Remove` method removes a key-value pair from the map by using the `TryGetValue` method to retrieve the value associated with the key and then calling the `Remove` method on the dictionary. The `Lookup` method retrieves the value associated with a given key by using the `TryGetValue` method to look up the value in the dictionary.
 
-Overall, maps are a useful data structure that can be used to store and manipulate data in which the key is used to identify the value, and the value is the data being stored. They are especially useful when working with large collections of data and when the data needs to be accessed quickly using a specific identifier.
+Maps are a useful data structure that can be used to store and manipulate data in which the key is used to identify the value, and the value is the data being stored. They are especially useful when working with large collections of data and when the data needs to be accessed quickly using a specific identifier.
 
 ## Stack
 
@@ -229,7 +229,7 @@ class Stack
 
 This stack class uses an array to store the items in the stack, and the `top` variable keeps track of the index of the top item in the stack. The `Push` method adds a new item to the top of the stack by incrementing the `top` variable and storing the item at the new index. The `Pop` method removes the top item from the stack by returning the item at the current `top` index and then decrementing the `top` variable. The `Peek` method retrieves the top item from the stack without removing it by simply returning the item at the current `top` index.
 
-Overall, stacks are a useful data structure that can be used to store and manipulate data that needs to be processed in a specific order. They are especially useful for implementing undo/redo functionality and for maintaining the call stack in a program.
+Stacks are a useful data structure that can be used to store and manipulate data that needs to be processed in a specific order. They are especially useful for implementing undo/redo functionality and for maintaining the call stack in a program.
 
 ## Queue
 
@@ -270,4 +270,4 @@ In addition to the basic enqueue and dequeue operations, queues may also support
 
 Queues can also be implemented using other data structures, such as stacks or linked lists. Stack-based queues, for example, use a stack to store elements that are waiting to be dequeued, while linked list-based queues use a linked list to store the elements in the queue.
 
-In general, queues are useful for storing and processing data that needs to be handled in a specific order, or for storing data that will be used by multiple consumers. They are commonly used in computer systems to manage tasks, communications, and other types of data flow.
+Queues are useful for storing and processing data that needs to be handled in a specific order, or for storing data that will be used by multiple consumers. They are commonly used in computer systems to manage tasks, communications, and other types of data flow.

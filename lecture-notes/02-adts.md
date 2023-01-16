@@ -1,4 +1,4 @@
-# 02 B: Abstract Data Types (ADTs)
+# 02: Abstract Data Types (ADTs)
 
 ## What is an abstract data type?
 

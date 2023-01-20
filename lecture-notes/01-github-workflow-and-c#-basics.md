@@ -151,6 +151,80 @@ switch (day)
 
 ## Loops
 
+There are several types of loops in C#, including:
+
+1. `for` loops: These loops are used to execute a block of code a specified number of times. The basic syntax of a `for` loop is:
+
+```cs
+for (initialization; condition; increment)
+{
+    // code to be executed
+}
+```
+
+For example, the following code uses a `for` loop to print the numbers 0 to 9 to the console:
+
+```cs
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+}
+```
+
+2. `while` loops: These loops are used to execute a block of code while a certain condition is true. The basic syntax of a `while` loop is:
+
+```cs
+while (condition)
+{
+    // code to be executed
+}
+```
+
+For example, the following code uses a `while` loop to print the numbers 0 to 9 to the console:
+
+```cs
+int i = 0;
+while (i < 10)
+{
+    Console.WriteLine(i);
+    i++;
+}
+```
+
+3. `do-while` loops: These loops are similar to while loops, but the code inside the loop is guaranteed to be executed at least once. The basic syntax of a `do-while` loop is:
+
+```cs
+do
+{
+    // code to be executed
+} while (condition);
+```
+
+For example, the following code uses a `do-while` loop to print the numbers 0 to 9 to the console:
+
+```cs
+int i = 0;
+do
+{
+    Console.WriteLine(i);
+    i++;
+} while (i < 10);
+```
+
+4. `foreach` loops: These loops are used to iterate over the elements in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
+
+```cs
+foreach (var item in collection)
+{
+    // code to be executed
+}
+```
+
+For example, the following code uses a foreach loop to print the elements of an array to the console:
+
+```
+
+
 ## Methods
 
 ## Error Handling

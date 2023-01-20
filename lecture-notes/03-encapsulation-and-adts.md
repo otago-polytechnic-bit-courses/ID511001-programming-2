@@ -1,4 +1,6 @@
-# 03: Abstract Data Types (ADTs)
+# 03 A: Encapsulation
+
+# 03 B: Abstract Data Types (ADTs)
 
 ## What is an abstract data type?
 

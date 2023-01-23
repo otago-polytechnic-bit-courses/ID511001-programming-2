@@ -4,8 +4,8 @@ Polymorphism is a mechanism that allows a single method or property to have mult
 
 There are two types of polymorphism:
 
-- Compile-time polymorphism: also known as static polymorphism or overloading. It allows different methods to have the same name but different signatures (number, type, or order of parameters). This is achieved by method overloading, operator overloading, and constructor overloading.
-- Run-time polymorphism: also known as dynamic polymorphism or overriding. It allows a derived class to provide a different implementation of a method that is already defined in its base class. This is achieved by method overriding, and it requires the `virtual` and `override` keywords.
+1. Compile-time polymorphism: also known as static polymorphism or overloading. It allows different methods to have the same name but different signatures (number, type, or order of parameters). It is achieved by method overloading, operator overloading, and constructor overloading.
+2. Run-time polymorphism: also known as dynamic polymorphism or overriding. It allows a derived class to provide a different implementation of a method already defined in its base class. It is achieved by method overriding, requiring the `virtual` and `override` keywords.
 
 Here is an example of polymorphism using method overloading:
 
@@ -24,7 +24,7 @@ class Calculator
 }
 ```
 
-In this example, the `Calculator` class has two methods called `Add()` that have the same name but different signatures. The first one takes two integers as arguments and returns their sum, and the second one takes two doubles as arguments and returns their sum.
+In this example, the `Calculator` class has two methods called `Add()` that have the same name but different signatures. The first one takes two integers as arguments and returns their sum, and the second takes two doubles as arguments and returns their sum.
 
 Here is an example of polymorphism using method overriding:
 
@@ -54,7 +54,7 @@ class Circle : Shape
 }
 ```
 
-In this example, the `Shape` class is the base class and it has a virtual method `Draw()` that prints "Drawing a shape" to the console. The `Rectangle` class and `Circle` class are derived classes, they both inherit the Draw() method from the base class and then override it to provide their own implementation. The `Rectangle` class will print "Drawing a rectangle"
+In this example, the `Shape` class is the base class, and it has a virtual method `Draw()`, that prints "Drawing a shape" to the console. The `Rectangle` class and `Circle` class are derived classes. They both inherit the Draw() method from the base class and then override it to provide their implementation. The `Rectangle` class will print "Drawing a rectangle".
 
 # 06 B: Enumerations
 
@@ -74,9 +74,9 @@ You can also give explicit values to the enumerators, for example:`
 enum Days { Monday=1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
 ```
 
-In this example Monday is assigned the value 1 and the rest of the enumerators are assigned the value of the previous enumerator plus one.
+In this example, Monday is assigned the value 1, and the rest of the enumerators are assigned the value of the previous enumerator plus one.
 
-You can use an enumeration like any other variable, you can assign a value to it or compare it to other enumeration values. For example:
+You can use an enumeration like any other variable. You can assign a value or compare it to other enumeration values. For example:
 
 ```cs
 Days today = Days.Monday;

@@ -231,7 +231,7 @@ foreach (int i in numbers)
 
 ## Methods
 
-In **C#**, a method is a block of code that performs a specific task and can be called (invoked) by name. Methods are used to encapsulate and organise code and can accept parameters and return a value. There are several types of methods in C#, including:
+In **C#**, a method is a block of code that performs a specific task and can be called (invoked) by name. Methods are used to encapsulate and organise code and can accept parameters and return a value. There are several types of methods in **C#**, including:
 
 1. Instance methods: These methods are associated with an instance of a class and can access the instance's data.
 
@@ -306,7 +306,7 @@ Console.WriteLine(result);
 
 ## Error Handling
 
-Error handling is anticipating and managing errors that may occur during the execution of a program. It is typically achieved through the use of try-catch blocks and exception objects. The try block contains code that may generate an exception, and the catch block contains code that will be executed if an exception is thrown. The exception object contains information about the error that occurred, such as the type of error and a description of the error. The `using` statement can also be used to ensure that resources are properly disposed of even in the event of an exception.
+Error handling is anticipating and managing errors that may occur during the execution of a program. It is typically achieved through the use of **try-catch** blocks and **exception** objects. The `try` block contains code that may generate an **exception**, and the `catch` block contains code that will be executed if an **exception** is thrown. The **exception** object contains information about the error that occurred, such as the type of error and a description of the error. The `using` statement can also be used to ensure that resources are properly disposed of even in the event of an **exception**.
 
 Here is an example of a basic try-catch block in C#:
 
@@ -323,7 +323,7 @@ catch (FormatException ex)
 }
 ```
 
-In this example, the code in the try block attempts to parse a string to an integer, but the string `abc`is not a valid integer, so a `FormatException` is thrown. The catch block catches this exception and prints an error message to the console.
+In this example, the code in the try block attempts to parse a string to an integer, but the string `abc` is not a valid integer, so a `FormatException` is thrown. The catch block catches this exception and prints an error message to the console.
 
 Another example using the using statement:
 

@@ -1,6 +1,6 @@
 # 06 A: Polymorphism
 
-Polymorphism is a mechanism that allows a single method or property to have multiple forms or behaviors. It is one of the fundamental principles of object-oriented programming, along with encapsulation and inheritance.
+Polymorphism is a mechanism that allows a single method or property to have multiple forms or behaviours. It is one of the fundamental principles of object-oriented programming, encapsulation, and inheritance.
 
 There are two types of polymorphism:
 

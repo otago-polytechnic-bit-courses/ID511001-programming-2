@@ -62,7 +62,7 @@ The condition is a Boolean expression that is evaluated as either true or false.
 For example, the following code checks if the variable x is greater than the variable y, and if so, it prints "x is greater than y" to the console. If not, it prints "x is less than or equal to y" to the console.
 
 ```cs
-if (x > y) 
+if (x > y)
 {
     Console.WriteLine("x is greater than y");
 }
@@ -75,7 +75,7 @@ else
 You can also chain multiple conditions using 'else if' like the following example:
 
 ```cs
-if (x > y) 
+if (x > y)
 {
     Console.WriteLine("x is greater than y");
 }
@@ -111,10 +111,9 @@ switch (expression)
 }
 ```
 
-The expression is evaluated and its value is compared to the values specified in each case. If a match is found, the code block associated with that case is executed. It's important to include a break statement at the end of each case block to exit the switch statement after the code block has been executed.
+The expression is evaluated and its value is compared to the values specified in each case. If a match is found, the code block associated with that case is executed. It is important to include a break statement at the end of each case block to exit the switch statement after the code block has been executed.
 
 For example, the following code uses a switch statement to check the value of the variable x and prints a message to the console based on its value:
-
 
 ```cs
 switch (x)
@@ -222,13 +221,192 @@ foreach (var item in collection)
 
 For example, the following code uses a foreach loop to print the elements of an array to the console:
 
+```cs
+int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+foreach (int i in numbers)
+{
+    Console.WriteLine(i);
+}
 ```
-
 
 ## Methods
 
+In C#, a method is a block of code that performs a specific task and can be called (invoked) by name. Methods are used to encapsulate and organize code, and can accept parameters and return a value. There are several types of methods in C#, including:
+
+1. Instance methods: These methods are associated with an instance of a class and can access the instance's data.
+
+```cs
+class MyClass {
+    public int myValue = 0;
+
+    public void IncreaseValue(int amount) {
+        myValue += amount;
+    }
+}
+
+// Usage:
+MyClass myObj = new MyClass();
+myObj.IncreaseValue(5);
+Console.WriteLine(myObj.myValue); 
+```
+
+2. Static methods: These methods are associated with a class and do not have access to an instance's data. They can only access static data.
+
+```cs
+class MyMath {
+    public static int Add(int a, int b) {
+        return a + b;
+    }
+}
+
+// Usage:
+int result = MyMath.Add(2, 3);
+Console.WriteLine(result); 
+```
+
+* Constructors: These methods are used to create and initialize an instance of a class.
+
+```cs
+class MyClass {
+    public int myValue;
+
+    public MyClass(int value) {
+        myValue = value;
+    }
+}
+
+// Usage:
+MyClass myObj = new MyClass(5);
+Console.WriteLine(myObj.myValue); 
+```
+
+* Destructors: These methods are used to clean up resources when an instance of a class is no longer needed. It is not recommended to use it, and is not used often in C#. 
+
+```cs
+class MyClass {
+    ~MyClass() {
+        // Clean up resources
+    }
+}
+```
+
+* Extension methods: These methods are used to add functionality to existing classes without modifying the original source code. Also, they require the `this` keyword on the first parameter, which defines the type of object that the method will be an extension of.
+
+```cs
+static class MyExtensions {
+    public static int Multiply(this int num, int factor) {
+        return num * factor;
+    }
+}
+
+// Usage:
+int result = 5.Multiply(3);
+Console.WriteLine(result); 
+```
+
 ## Error Handling
+
+Error handling in C# is the process of anticipating and managing errors that may occur during the execution of a program. This is typically achieved through the use of try-catch blocks and exception objects. The try block contains code that may generate an exception, and the catch block contains code that will be executed if an exception is thrown. The exception object contains information about the error that occurred, such as the type of error and a description of the error. The using statement can also be used to ensure that resources are properly disposed of even in the event of an exception.
+
+Here is an example of a basic try-catch block in C#:
+
+```cs
+try
+{
+    // code that may throw an exception
+    int x = int.Parse("abc");
+}
+catch (FormatException ex)
+{
+    // code that will be executed if an exception is thrown
+    Console.WriteLine("Error: " + ex.Message);
+}
+```
+
+In this example, the code in the try block attempts to parse a string to an integer, but the string "abc" is not a valid integer, so a `FormatException` is thrown. The catch block catches this exception and prints an error message to the console.
+
+Another example using the using statement:
+
+```cs
+using (FileStream stream = new FileStream("file.txt", FileMode.Open))
+{
+    // code that uses the stream
+    // ...
+}
+```
+
+In this example, the using statement ensures that the `FileStream` object is properly disposed of, even if an exception is thrown while the stream is in use.
+
+You can also have multiple catch block to handle different exception types, like this:
+
+```cs
+try
+{
+    // code that may throw an exception
+    int x = int.Parse("abc");
+    int y = int.Parse("456");
+}
+catch (FormatException ex)
+{
+    // code that will be executed if a FormatException is thrown
+    Console.WriteLine("Error: " + ex.Message);
+}
+catch (OverflowException ex)
+{
+    // code that will be executed if a OverflowException is thrown
+    Console.WriteLine("Error: " + ex.Message);
+}
+```
+
+In this example, if the code in the try block throws a `FormatException`, the first catch block will be executed, if it throws a `OverflowException`, the second catch block will be executed.
 
 ## File Processing
 
-## Visual Studio
+File processing in C# is the process of reading from or writing to files on a computer's file system. This can be done using the classes and methods in the System.IO namespace, which provides various classes for working with files, directories and other types of I/O (input/output) operations.
+
+For example, the `File` class provides methods for creating, copying, moving, and deleting files, while the `StreamReader` and `StreamWriter` classes provide methods for reading from and writing to text files, respectively.
+
+Here is an example of how to use the `File` class to read the contents of a text file:
+
+```cs
+string text = File.ReadAllText("example.txt");
+Console.WriteLine(text);
+```
+
+This code uses the `ReadAllText()` method of the `File` class to read the contents of the file "example.txt" and assigns the result to a variable named "text".
+
+Here is another example of how to use the `StreamReader` class to read the contents of a text file:
+
+```cs
+using (StreamReader reader = new StreamReader("example.txt"))
+{
+    string line;
+    while ((line = reader.ReadLine()) != null)
+    {
+        Console.WriteLine(line);
+    }
+}
+```
+
+In this example, the `StreamReader` class is used to read the contents of the file "example.txt" line by line, and each line is printed to the console.
+
+Similarly, the `File` class has methods to write to a file, as well as `StreamWriter` class.
+
+```cs
+File.WriteAllText("example.txt", "Hello, World!");
+```
+This code uses the `WriteAllText()` method of the `File` class to write the string "Hello, World!" to the file "example.txt"
+
+```cs
+using (StreamWriter writer = new StreamWriter("example.txt"))
+{
+    writer.WriteLine("Hello,");
+    writer.WriteLine("World!");
+}
+```
+
+This example uses the `StreamWriter` class to write the strings "Hello," and "World!" to the file "example.txt", each on a new line.
+
+These are just a few examples of how to perform file processing in C#, but the System.IO namespace provides many other classes and methods for working with files and directories, such as the `Directory` class for working with directories, the `FileInfo` and `DirectoryInfo` classes for working with file and directory metadata, and the `FileSystemWatcher` class for monitoring changes to the file system.
+
+## Formative Assessment

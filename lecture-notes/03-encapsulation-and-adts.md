@@ -1,5 +1,28 @@
 # 03 A: Encapsulation
 
+Encapsulation is the process of hiding the implementation details of a class from the outside world, and exposing only the necessary information and functionality through a public interface. Encapsulation is one of the fundamental principles of object-oriented programming, and it is used to promote the principles of abstraction, modularity, and information hiding.
+
+Encapsulation is achieved through the use of access modifiers, such as `public`, `private`, and `protected`, which control the visibility and accessibility of class members (fields and methods).
+
+For example, a class can have a private field that holds some important data and a public property that allows the data to be accessed, like this:
+
+```cs
+class BankAccount
+{
+    private decimal balance;
+
+    public decimal Balance
+    {
+        get { return balance; }
+        set { balance = value; }
+    }
+}
+```
+
+In this example, the `balance` field is defined as private, which means that it can only be accessed within the class. The `Balance` property, on the other hand, is defined as public, which means that it can be accessed from outside the class. This allows the class to control how the `balance` field is modified and accessed, and to ensure that the data is always in a consistent state.
+
+Additionally, encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change the way that the `balance` field is stored, without affecting the code that accesses it through the `Balance` property.
+
 # 03 B: Abstract Data Types (ADTs)
 
 ## What is an abstract data type?
@@ -26,7 +49,7 @@ There are different types of lists in different programming languages, but they 
 * Searching the list: You can search the list for a specific item and find its position.
 * Sorting the list: You can sort the items in the list in ascending or descending order.
 
-Here is an example of how to create and use a list in C#:
+Here is an example of how to create and use a list:
 
 ```cs
 List<string> names = new List<string>();
@@ -67,7 +90,7 @@ In most programming languages, sets are implemented using a hash table or a tree
 * Set intersection: Creating a new set that includes only the items that are present in both sets
 * Set difference: Creating a new set that includes only the items that are present in one set but not the other
 
-Here is an example of a simple set class implemented in C# using a hash table:
+Here is an example of a simple set class implemented using a hash table:
 
 ```cs
 class Set
@@ -137,7 +160,7 @@ In most programming languages, maps are implemented using a hash table or a tree
 * Lookup: Retrieving the value associated with a given key
 * Update: Modifying the value associated with a given key
 
-Here is an example of a simple map class implemented in C# using a hash table:
+Here is an example of a simple map class implemented using a hash table:
 
 ```cs
 class Map
@@ -191,7 +214,7 @@ In most programming languages, stacks are implemented using an array or a linked
 * Pop: Removing the top item from the stack
 * Peek: Retrieving the top item from the stack without removing it
 
-Here is an example of a simple stack class implemented in C#:
+Here is an example of a simple stack class implemented:
 
 ```cs
 class Stack
@@ -250,7 +273,7 @@ In a computer program, a queue might be used to store data that needs to be proc
 
 There are a number of variations of the basic queue data structure, including priority queues, which allow elements to be added with a priority level that determines the order in which they are dequeued, and circular queues, which reuse empty space at the end of the queue when new elements are added.
 
-Here is an example of a queue in C#:
+Here is an example of a queue:
 
 ```cs
 Queue<int> myQueue = new Queue<int>();
@@ -278,3 +301,5 @@ In addition to the basic enqueue and dequeue operations, queues may also support
 Queues can also be implemented using other data structures, such as stacks or linked lists. Stack-based queues, for example, use a stack to store elements that are waiting to be dequeued, while linked list-based queues use a linked list to store the elements in the queue.
 
 Queues are useful for storing and processing data that needs to be handled in a specific order, or for storing data that will be used by multiple consumers. They are commonly used in computer systems to manage tasks, communications, and other types of data flow.
+
+# Formative Assessment

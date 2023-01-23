@@ -63,7 +63,7 @@ An enumeration (or enum for short) is a value type that is used to define a set 
 An enumeration is defined using the `enum` keyword, followed by the name of the enumeration, and a list of enumerators, which are the named constants. Each enumerator is separated by a comma, and each enumerator is assigned an integer value starting from 0 by default. Here is an example:
 
 ```cs
-enum Days { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
+enum Days { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
 ```
 
 The enumerators in the example above are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday and their respective values will be 0, 1, 2, 3, 4, 5, 6.
@@ -71,7 +71,7 @@ The enumerators in the example above are Monday, Tuesday, Wednesday, Thursday, F
 You can also give explicit values to the enumerators, for example:`
 
 ```cs
-enum Days { Monday=1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
+enum Days { Monday=1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
 ```
 
 In this example, Monday is assigned the value 1, and the rest of the enumerators are assigned the value of the previous enumerator plus one.

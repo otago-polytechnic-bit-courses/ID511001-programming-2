@@ -4,11 +4,11 @@
 
 ## What is C#?
 
-C# is a programming language developed by Microsoft for building web, mobile and desktop applications as well as games. It is a modern, object-oriented language that is designed to be easy to use and is similar in syntax to other popular programming languages such as C++ and Java. C# is commonly used to build applications on the Microsoft .NET Framework, but it can also be used to build cross-platform applications using frameworks like Xamarin and .NET Core.
+**C#** is a programming language developed by **Microsoft** for building web, mobile applications, desktop applications and games. It is a modern, **object-oriented** language designed to be easy to use and similar in syntax to other popular programming languages such as **C++** and **Java**. **C#** is commonly used to build applications on the **Microsoft .NET Framework**, but developers can also use it to build cross-platform applications using frameworks like **Xamarin** and **.NET Core**.
 
 ## Variables
 
-A variable is a named storage location that holds a value of a specific data type. Variables are used to store values that can change during the execution of a program. A variable is declared by specifying the data type, followed by the variable name. For example:
+A variable is a named storage location that holds a value of a specific data type. Variables are used to store values that can change during the execution of a program. A variable is declared by specifying the data type and the variable name. For example:
 
 ```cs
 int x;
@@ -16,7 +16,7 @@ string name;
 bool isTrue;
 ```
 
-In the above example, `x` is a variable of type `int`, `name` is a variable of type `string`, and `isTrue` is a variable of type `bool`. Once a variable is declared, you can assign a value to it using the assignment operator (`=`). For example:
+In the above example, `x` is a variable of type `int`, `name` is a variable of type `string`, and `isTrue` is a variable of type `bool`. Once a variable is declared, you can assign a value using the assignment operator (`=`). For example:
 
 ```cs
 x = 5;
@@ -32,7 +32,7 @@ string name = "John Doe";
 bool isTrue = true;
 ```
 
-It is also possible to use the var keyword to declare a variable, the compiler will then infer the type based on the value assigned to it.
+It is also possible to use the `var` keyword to declare a variable. The compiler will then infer the type based on the value assigned to it.
 
 ```cs
 var x = 5;
@@ -40,11 +40,11 @@ var name = "John Doe";
 var isTrue = true;
 ```
 
-Note that variables declared with `var` keyword can only be initialized at the time of declaration, it cannot be reassigned with different type.
+Note that variables declared with the `var` keyword can only be initialised at the time of declaration. It cannot be reassigned with a different type.
 
 ## If-Else Statements
 
-An if-else statement in C# is a type of control flow statement that allows the program to make decisions based on a certain condition. The basic syntax of an if-else statement is:
+An **if-else** statement is a control flow statement that allows the program to make decisions based on a specific condition. The basic syntax of an **if-else** statement is:
 
 ```cs
 if (condition)
@@ -57,9 +57,9 @@ else
 }
 ```
 
-The condition is a Boolean expression that is evaluated as either true or false. If the condition is true, the code inside the first set of curly braces ({ }) is executed. If the condition is false, the code inside the second set of curly braces is executed.
+The condition is a **boolean expression** evaluated as either `true` or `false`. The code inside the first curly braces (`{ }`) is executed if the condition is `true`. If the condition is `false`, the code inside the second set of curly braces is executed.
 
-For example, the following code checks if the variable x is greater than the variable y, and if so, it prints "x is greater than y" to the console. If not, it prints "x is less than or equal to y" to the console.
+For example, the following code checks if `x` is greater than `y`. If so, it prints "x is greater than y" to the console. If not, it prints "x is less than or equal to y" to the console.
 
 ```cs
 if (x > y)
@@ -72,7 +72,7 @@ else
 }
 ```
 
-You can also chain multiple conditions using 'else if' like the following example:
+You can also chain multiple conditions using `else if` like the following example:
 
 ```cs
 if (x > y)
@@ -93,7 +93,7 @@ You can chain as many else if you need.
 
 ## Switch Statement
 
-A switch statement is a control flow statement that allows a program to select one of many code blocks to be executed based on the value of a given expression. The basic syntax of a switch statement is:
+A `switch` statement is a control flow statement that allows a program to select one of many code blocks to be executed based on the value of a given expression. The basic syntax of a `switch` statement is:
 
 ```cs
 switch (expression)
@@ -111,9 +111,9 @@ switch (expression)
 }
 ```
 
-The expression is evaluated and its value is compared to the values specified in each case. If a match is found, the code block associated with that case is executed. It is important to include a break statement at the end of each case block to exit the switch statement after the code block has been executed.
+The expression is evaluated and its value is compared to the values specified in each case. If a match is found, the code block associated with that case is executed. It is important to include a `break` statement at the end of each case block to exit the `switch` statement after the code block has been executed.
 
-For example, the following code uses a switch statement to check the value of the variable x and prints a message to the console based on its value:
+For example, the following code uses a `switch` statement to check the value of `x` and prints a message to the console based on its value:
 
 ```cs
 switch (x)
@@ -130,7 +130,7 @@ switch (x)
 }
 ```
 
-The default case is optional, and it will be executed if the value of the expression does not match any of the values specified in the case statements. You can also use the switch statement with string, like the following example:
+The `default` case is optional and will be executed if the value of the expression does not match any of the values specified in the case statements. You can also use the `switch` statement with `string`, like the following example:
 
 ```cs
 string day = "Monday";
@@ -150,12 +150,12 @@ switch (day)
 
 ## Loops
 
-There are several types of loops in C#, including:
+There are several types of loops in **C#**, including:
 
 1. `for` loops: These loops are used to execute a block of code a specified number of times. The basic syntax of a `for` loop is:
 
 ```cs
-for (initialization; condition; increment)
+for (initialisation; condition; increment)
 {
     // code to be executed
 }
@@ -231,7 +231,7 @@ foreach (int i in numbers)
 
 ## Methods
 
-In C#, a method is a block of code that performs a specific task and can be called (invoked) by name. Methods are used to encapsulate and organize code, and can accept parameters and return a value. There are several types of methods in C#, including:
+In **C#**, a method is a block of code that performs a specific task and can be called (invoked) by name. Methods are used to encapsulate and organise code and can accept parameters and return a value. There are several types of methods in C#, including:
 
 1. Instance methods: These methods are associated with an instance of a class and can access the instance's data.
 
@@ -253,18 +253,18 @@ Console.WriteLine(myObj.myValue);
 2. Static methods: These methods are associated with a class and do not have access to an instance's data. They can only access static data.
 
 ```cs
-class MyMath {
+class MyClass {
     public static int Add(int a, int b) {
         return a + b;
     }
 }
 
 // Usage:
-int result = MyMath.Add(2, 3);
+int result = MyClass.Add(2, 3);
 Console.WriteLine(result); 
 ```
 
-* Constructors: These methods are used to create and initialize an instance of a class.
+3. Constructors: These methods are used to create and initialise an instance of a class.
 
 ```cs
 class MyClass {
@@ -280,7 +280,7 @@ MyClass myObj = new MyClass(5);
 Console.WriteLine(myObj.myValue); 
 ```
 
-* Destructors: These methods are used to clean up resources when an instance of a class is no longer needed. It is not recommended to use it, and is not used often in C#. 
+4. Destructors: These methods are used to clean up resources when an instance of a class is no longer needed. It is not recommended in **C#**. 
 
 ```cs
 class MyClass {
@@ -290,10 +290,10 @@ class MyClass {
 }
 ```
 
-* Extension methods: These methods are used to add functionality to existing classes without modifying the original source code. Also, they require the `this` keyword on the first parameter, which defines the type of object that the method will be an extension of.
+5. Extension methods: These methods are used to add functionality to existing classes without modifying the source code. Also, they require the `this` keyword on the first parameter, which defines the type of object the method will be an extension of.
 
 ```cs
-static class MyExtensions {
+static class MyClass {
     public static int Multiply(this int num, int factor) {
         return num * factor;
     }
@@ -306,7 +306,7 @@ Console.WriteLine(result);
 
 ## Error Handling
 
-Error handling in C# is the process of anticipating and managing errors that may occur during the execution of a program. This is typically achieved through the use of try-catch blocks and exception objects. The try block contains code that may generate an exception, and the catch block contains code that will be executed if an exception is thrown. The exception object contains information about the error that occurred, such as the type of error and a description of the error. The using statement can also be used to ensure that resources are properly disposed of even in the event of an exception.
+Error handling is anticipating and managing errors that may occur during the execution of a program. It is typically achieved through the use of try-catch blocks and exception objects. The try block contains code that may generate an exception, and the catch block contains code that will be executed if an exception is thrown. The exception object contains information about the error that occurred, such as the type of error and a description of the error. The `using` statement can also be used to ensure that resources are properly disposed of even in the event of an exception.
 
 Here is an example of a basic try-catch block in C#:
 
@@ -323,7 +323,7 @@ catch (FormatException ex)
 }
 ```
 
-In this example, the code in the try block attempts to parse a string to an integer, but the string "abc" is not a valid integer, so a `FormatException` is thrown. The catch block catches this exception and prints an error message to the console.
+In this example, the code in the try block attempts to parse a string to an integer, but the string `abc`is not a valid integer, so a `FormatException` is thrown. The catch block catches this exception and prints an error message to the console.
 
 Another example using the using statement:
 
@@ -337,7 +337,7 @@ using (FileStream stream = new FileStream("file.txt", FileMode.Open))
 
 In this example, the using statement ensures that the `FileStream` object is properly disposed of, even if an exception is thrown while the stream is in use.
 
-You can also have multiple catch block to handle different exception types, like this:
+You can also have multiple catch blocks to handle different exception types, like this:
 
 ```cs
 try
@@ -362,9 +362,9 @@ In this example, if the code in the try block throws a `FormatException`, the fi
 
 ## File Processing
 
-File processing in C# is the process of reading from or writing to files on a computer's file system. This can be done using the classes and methods in the System.IO namespace, which provides various classes for working with files, directories and other types of I/O (input/output) operations.
+File processing is the process of reading from or writing to files on a computer's file system. It can be done using the classes and methods in the System.IO namespace, which provides various classes for working with files, directories and other types of I/O (input/output) operations.
 
-For example, the `File` class provides methods for creating, copying, moving, and deleting files, while the `StreamReader` and `StreamWriter` classes provide methods for reading from and writing to text files, respectively.
+For example, the `File` class provides methods for creating, copying, moving, and deleting files. In contrast, the `StreamReader` and `StreamWriter` classes provide methods for reading from and writing to text files, respectively.
 
 Here is an example of how to use the `File` class to read the contents of a text file:
 
@@ -373,7 +373,7 @@ string text = File.ReadAllText("example.txt");
 Console.WriteLine(text);
 ```
 
-This code uses the `ReadAllText()` method of the `File` class to read the contents of the file "example.txt" and assigns the result to a variable named "text".
+This code uses the `ReadAllText()` method of the `File` class to read the contents of the file "example.txt" and assigns the result to `text`.
 
 Here is another example of how to use the `StreamReader` class to read the contents of a text file:
 
@@ -407,6 +407,6 @@ using (StreamWriter writer = new StreamWriter("example.txt"))
 
 This example uses the `StreamWriter` class to write the strings "Hello," and "World!" to the file "example.txt", each on a new line.
 
-These are just a few examples of how to perform file processing in C#, but the System.IO namespace provides many other classes and methods for working with files and directories, such as the `Directory` class for working with directories, the `FileInfo` and `DirectoryInfo` classes for working with file and directory metadata, and the `FileSystemWatcher` class for monitoring changes to the file system.
+These are just a few examples of how to perform file processing. Still, the System.IO namespace provides many other classes and methods for working with files and directories, such as the `Directory` class for working with directories, the `FileInfo` and `DirectoryInfo` classes for working with file and directory metadata, and the `FileSystemWatcher` class for monitoring changes to the file system.
 
 ## Formative Assessment

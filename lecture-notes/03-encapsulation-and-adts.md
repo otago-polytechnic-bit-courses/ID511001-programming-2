@@ -25,6 +25,8 @@ Encapsulation also allows you to change the implementation of a class without af
 
 # 03 A: Encapsulation Formative Assessment
 
+Before you start, create a new branch called 03-in-class.
+
 ## Task 1:
 
 1. Create a `Car` class that has three `private` fields: `make`, `model`, and `year`. These fields are used to store the car's make, model, and year, respectively. The class also has three `public` properties: `Make`, `Model`, and `Year`, which allow the car's make, model, and year to be accessed from outside the class. The class also has a constructor that allows the make, model, and year to be set when the object is created. 
@@ -65,16 +67,12 @@ Here is an example of how to create and use a list:
 
 ```cs
 List<string> names = new List<string>();
-
 names.Add("Alice");
 names.Add("Bob");
 names.Add("Charlie");
-
 string firstName = names[0];
 string secondName = names[1];
-
 names.Remove("Charlie");
-
 int count = names.Count;
 ```
 
@@ -289,13 +287,10 @@ Here is an example of a queue:
 
 ```cs
 Queue<int> myQueue = new Queue<int>();
-
 myQueue.Enqueue(1);
 myQueue.Enqueue(2);
 myQueue.Enqueue(3);
-
 int firstItem = myQueue.Dequeue();
-
 foreach (int item in myQueue)
 {
   Console.WriteLine(item);
@@ -382,8 +377,6 @@ Stack myStack = new Stack(10);
 myStack.Push("Programming 2");
 myStack.Push("Introductory Application Development Concepts");
 myStack.Push("Intermediate Application Development Concepts");
-myStack.Push("Mobile Application Development");
-myStack.Push("Game Development");
 ```
 
 Just note that you will have to update the `Stack` class.
@@ -395,3 +388,21 @@ Implement the following:
 3. Pop two items off `myStack`
 
 ## Task 5:
+
+You have been given a **queue** containing course names.
+
+```cs
+Queue<string> myQueue = new Queue<string>();
+myQueue.Enqueue("Programming 2");
+myQueue.Enqueue("Introductory Application Development Concepts");
+myQueue.Enqueue("Intermediate Application Development Concepts");
+```
+
+Implement the following:
+
+1. Peek `myQueue`
+2. Return the size of `myQueue`
+
+## Formative Assessment Submission
+
+Create a new pull request and assign **grayson-orr** to review your practical submission. Please don't merge your own pull request.

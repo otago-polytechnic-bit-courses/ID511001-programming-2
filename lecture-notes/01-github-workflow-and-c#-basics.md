@@ -423,7 +423,7 @@ Create a method called `fizzBuzz` that takes in an integer `num`. Inside the met
 
 ## Task 3
 
-Create an array of integers called `nums` with the values { 21, 19, 68, 55, 42, 12 }. Iterate over the array and check if each number is odd. If it is, display it. Finally, sort the array from lowest to highest.
+Create an array of integers called `nums` with the values 21, 19, 68, 55, 42, 12. Iterate over the array and check if each number is odd. If it is, display it. Finally, sort the array from lowest to highest.
 
 ## Task 4
 

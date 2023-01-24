@@ -29,13 +29,11 @@ Before you start, create a new branch called **03-in-class**.
 
 ## Task 1:
 
-1. Create a `Car` class that has three `private` fields: `make`, `model`, and `year`. These fields are used to store the car's make, model, and year, respectively. The class also has three `public` properties: `Make`, `Model`, and `Year`, which allow the car's make, model, and year to be accessed from outside the class. The class also has a constructor that allows the make, model, and year to be set when the object is created. 
-2. Create three `Car` objects. Display each object's `Make`, `Model`, and `Year` properties. 
+Create a `Car` class withee `private` fields: `make`, `model`, and `year`. Add `public` properties for `Make`, `Model`, and `Year`. Include a constructor that sets the make, model, and year when the object is created. Create three `Car` objects and display their `Make`, `Model`, and `Year` properties. 
 
 ## Task 2:
 
-1. Create an `Employee` class that has three `private` fields: `name`, `age`, and `salary`. These fields are used to store the employee's name, age, and salary, respectively. The class also has three `public` properties: `Name`, `Age`, and `Salary`, which allow the employee's name, age, and salary to be accessed from outside the class. The `Salary` property also has a setter that checks if the provided value is negative, if so it throws an `ArgumentException` which the message "Salary can not be negative". The class also has a constructor that allows the name, age, and salary to be set when the object is created. 
-2. Create three `Employee` objects. Display each object's `Name`, `Age`, and `Salary` properties. 
+Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` properties for `Name`, `Age`, and `Salary` with a setter for the `Salary` property that checks for negative input and throws an `ArgumentException` with message "Salary can not be negative." Include a constructor that sets the name, age, and salary when the object is created. Create three `Employee` objects and display their `Name`, `Age`, and `Salary` properties.
 
 # 03 B: Abstract Data Types (ADTs)
 
@@ -322,10 +320,10 @@ List<string> progLangTwo = new List<string>() { "C++", "Go", "Swift", "TypeScrip
 
 Implement the following:
 
-1. Add `progLangOne` to `progLangTwo` using the `AddRange` method. Assign this to a variable called `allProgLanguages`
-2. Add "Rust" using the `Add` method
-3. Remove "Swift" using the `Remove` method
-4. Display each language in `allProgLanguages`
+1. Use the `AddRange` method to add the elements of `progLangOne` to `progLangTwo` and assign the resulting combined list to a variable called `allProgLanguages`
+2. Use the `Add` method to add "Rust" to `allProgLanguages`
+3. Use the `Remove` method to remove "Swift" from `allProgLanguages`
+4. Use a loop to display each language in `allProgLanguages`
 
 ## Task 2:
 
@@ -344,10 +342,10 @@ myOtherSet.Add(4);
 
 Implement the following:
 
-1. In the `Set` class, create a method called `Print` that displays each item in `items`
-2. Check if `mySet` contains `10`
-3. Remove `2` from `mySet`
-4. Display the union, intersection and difference between `mySet` and `myOtherSet`
+1. In the `Set` class, create a `Print` method that uses a loop to display each item in the `items` collection.
+2. Use the `Contains` method to check if `mySet` contains the value `10`
+3. Use the `Remove` method to remove the value `2` from `mySet`
+4. Use the `Union`, `Intersection` and `Difference` methods to display the union, intersection and difference between `mySet` and `myOtherSet`
 
 ## Task 3:
 
@@ -364,9 +362,9 @@ myMap.Add("ID737001", 5);
 
 Implement the following:
 
-1. Lookup the value with the key "ID721001"
-2. Remove the key-value pair with the key "ID607001"
-3. Lookup the value with the key "ID607001"
+1. Use the `Lookup` method to lookup the value associated with the key "ID721001" in `myMap`
+2. Use the `Remove` method to remove the key-value pair with the key "ID607001" from `myMap`.
+3. Use the `Lookup` method to lookup the value associated with the key "ID607001" in `myMap`
 
 ## Task 4:
 
@@ -383,9 +381,9 @@ Just note that you will have to update the `Stack` class.
 
 Implement the following:
 
-1. Peek `myStack`
-2. Push two items onto `myStack`
-3. Pop two items off `myStack`
+1. Use the `Peek` method to display the top item on `myStack` without removing it
+2. Use the `Push` method to add two items to `myStack`
+3. Use the `Pop` method to remove and return the top item from `myStack`
 
 ## Task 5:
 
@@ -400,8 +398,8 @@ myQueue.Enqueue("Intermediate Application Development Concepts");
 
 Implement the following:
 
-1. Peek `myQueue`
-2. Return the size of `myQueue`
+1. Use the `Peek` method to display the top item on `myQueue` without removing it
+2. Use the `Count` property to return the size of `myQueue`
 
 # Formative Assessment Submission
 

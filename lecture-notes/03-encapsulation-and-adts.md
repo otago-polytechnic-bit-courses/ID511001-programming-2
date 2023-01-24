@@ -375,6 +375,23 @@ Implement the following:
 
 ## Task 4:
 
-Implement the following
+You have been given a **stack** containing course names.
+
+```cs
+Stack myStack = new Stack(10);
+myStack.Push("Programming 2");
+myStack.Push("Introductory Application Development Concepts");
+myStack.Push("Intermediate Application Development Concepts");
+myStack.Push("Mobile Application Development");
+myStack.Push("Game Development");
+```
+
+Just note that you will have to update the `Stack` class.
+
+Implement the following:
+
+1. Peek `myStack`
+2. Push two items onto `myStack`
+3. Pop two items off `myStack`
 
 ## Task 5:

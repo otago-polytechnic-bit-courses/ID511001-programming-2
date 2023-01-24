@@ -25,7 +25,7 @@ Encapsulation also allows you to change the implementation of a class without af
 
 # 03 A: Encapsulation Formative Assessment
 
-Before you start, create a new branch called **03-in-class**.
+Before you start, create a new branch called **03-formative-assessment**.
 
 ## Task 1:
 

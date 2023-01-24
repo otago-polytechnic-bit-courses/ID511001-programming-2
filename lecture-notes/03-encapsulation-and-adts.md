@@ -358,12 +358,14 @@ Implement the following:
 
 You have been given a **map** containing course codes.
 
+```cs
 Map myMap = new Map();
 myMap.Add("ID511001", 1);
 myMap.Add("ID607001", 2);
 myMap.Add("ID608001", 3);
 myMap.Add("ID721001", 4);
 myMap.Add("ID737001", 5);
+```
 
 Implement the following:
 

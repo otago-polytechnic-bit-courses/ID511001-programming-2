@@ -23,6 +23,18 @@ In this example, the `balance` field is defined as private, meaning it can only 
 
 Encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change how the `balance` field is stored, without affecting the code that accesses it through the `Balance` property.
 
+# 03 A: Encapsulation Formative Assessment
+
+## Task 1:
+
+1. Create a `Car` class that has three `private` fields: `make`, `model`, and `year`. These fields are used to store the car's make, model, and year, respectively. The class also has three `public` properties: `Make`, `Model`, and `Year`, which allow the car's make, model, and year to be accessed from outside the class. The class also has a constructor that allows the make, model, and year to be set when the object is created. 
+2. Create three `Car` objects. Display each object's `Make`, `Model`, and `Year` properties. 
+
+## Task 2:
+
+1. Create an `Employee` class that has three `private` fields: `name`, `age`, and `salary`. These fields are used to store the employee's name, age, and salary, respectively. The class also has three `public` properties: `Name`, `Age`, and `Salary`, which allow the employee's name, age, and salary to be accessed from outside the class. The `Salary` property also has a setter that checks if the provided value is negative, if so it throws an `ArgumentException` which the message "Salary can not be negative". The class also has a constructor that allows the name, age, and salary to be set when the object is created. 
+2. Create three `Employee` objects. Display each object's `Name`, `Age`, and `Salary` properties. 
+
 # 03 B: Abstract Data Types (ADTs)
 
 ## What is an abstract data type?

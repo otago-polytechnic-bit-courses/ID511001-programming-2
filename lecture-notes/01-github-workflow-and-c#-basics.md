@@ -210,7 +210,7 @@ do
 } while (i < 10);
 ```
 
-4. `foreach` loops: These loops are used to iterate over the elements in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
+4. `foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
 
 ```cs
 foreach (var item in collection)
@@ -219,7 +219,7 @@ foreach (var item in collection)
 }
 ```
 
-For example, the following code uses a foreach loop to print the elements of an array to the console:
+For example, the following code uses a foreach loop to print the items of an array to the console:
 
 ```cs
 int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -409,4 +409,44 @@ This example uses the `StreamWriter` class to write the strings "Hello," and "Wo
 
 These are just a few examples of how to perform file processing. Still, the System.IO namespace provides many other classes and methods for working with files and directories, such as the `Directory` class for working with directories, the `FileInfo` and `DirectoryInfo` classes for working with file and directory metadata, and the `FileSystemWatcher` class for monitoring changes to the file system.
 
-## Formative Assessment
+# 01 B: C# Basics Formative Assessment
+
+Before you start, create a new branch called **01-formative-assessment**.
+
+## Task 1:
+
+Create a double array named `nums` with the values { 45.3, 67.5, -45.6, 20.34, -33.0, 45.6 }. Iterate over the array using a loop and calculate the sum of all items. Divide that sum by the total number of items in the array to find the average. Use string interpolation to display the average in the desired format.
+
+## Task 2
+
+Create a method called `fizzBuzz` that takes in an integer `num`. Inside the method, check if `num` is a multiple of 3 and if so, return "Fizz". Check if `num` is a multiple of 5 and if so, return "Buzz". If `num` is a multiple of both 3 and 5, return "FizzBuzz". Create a for loop that starts at 1, ends at 15 and increments by 2 each time. Inside the for loop, call the `fizzBuzz` method with the current iteration variable `i` and print the result.
+
+## Task 3
+
+Create an array of integers called `nums` with the values { 21, 19, 68, 55, 42, 12 }. Iterate over the array and check if each number is odd. If it is, display it. Finally, sort the array from lowest to highest.
+
+## Task 4
+
+Create a method called `isAnagram` that takes in two parameters, `someStrOne` and `someStrTwo` which are both strings. Inside the method, write code to check if `someStrOne` and `someStrTwo` are an anagram of each other. An anagram is a word or phrase made by rearranging the letters of another word or phrase. Compare the characters of both strings after sorting them. Return `true` if they match and `false` otherwise.
+
+In my solution, I convert the two strings to char arrays and sort them using the `Array.Sort` method. Then I compare the sorted char arrays using the `SequenceEqual` method and return `true` if they match, otherwise `false`.
+
+## Task 5
+
+Create a method called `convert` that takes in two parameters, `hours` and `minutes` which are both integers. Inside the method, write code to convert both `hours` and `minutes` to seconds. Multiply the number of hours by 3600 (the number of seconds in an hour) and the number of minutes by 60 (the number of seconds in a minute). Add these values together and return the total number of seconds.
+
+## Task 6
+
+Create a string variable called `sentence` and assign the value "The anemone, the wild violet, the hepatica, and the funny little curled-up." to it.
+
+Use the `String.Split` method to split the sentence into words by the space character, and then use a loop to count the number of occurrences of the word "the" in the sentence.
+
+## Task 7
+
+Create a method called `removeVowels` that takes in a parameter `word` which is a string. Inside the method, write code to remove all vowels from `word`. Use a regular expression or a loop to check each character of the word and remove the vowels.
+
+To handle the edge case where the word does not contain vowels, you can check if `word` is equal to the result after removing vowels. If it is the same, you can return a message indicating that the word does not contain vowels, otherwise, return `word` without vowels.
+
+# Formative Assessment Submission
+
+Create a new pull request and assign **grayson-orr** to review your practical submission. Please don't merge your own pull request.

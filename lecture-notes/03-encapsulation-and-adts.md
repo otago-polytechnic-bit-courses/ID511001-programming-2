@@ -318,7 +318,7 @@ Queues are useful for storing and processing data that needs to be handled in a 
 
 ## Task 1:
 
-You have been given two lists containing some of my favourite programming languages.
+You have been given two **lists** containing some of my favourite programming languages.
 
 ```cs
 List<string> progLangOne = new List<string>() { "C#", "JavaScript", "Kotlin", "Python" };
@@ -332,22 +332,9 @@ Implement the following:
 3. Remove "Swift" using the `Remove` method
 4. Display each language in `allProgLanguages`
 
-The expected output should be:
-
-```cs
-C#
-JavaScript
-Kotlin
-Python
-C++
-Go
-TypeScript
-Rust
-```
-
 ## Task 2:
 
-You have been given two sets containing some numbers.
+You have been given two **sets** containing some numbers.
 
 ```cs
 Set mySet = new Set();
@@ -366,3 +353,26 @@ Implement the following:
 2. Check if `mySet` contains `10`
 3. Remove `2` from `mySet`
 4. Display the union, intersection and difference between `mySet` and `myOtherSet`
+
+## Task 3:
+
+You have been given a **map** containing course codes.
+
+Map myMap = new Map();
+myMap.Add("ID511001", 1);
+myMap.Add("ID607001", 2);
+myMap.Add("ID608001", 3);
+myMap.Add("ID721001", 4);
+myMap.Add("ID737001", 5);
+
+Implement the following:
+
+1. Lookup the value with the key "ID721001"
+2. Remove the key-value pair with the key "ID607001"
+3. Lookup the value with the key "ID607001"
+
+## Task 4:
+
+Implement the following
+
+## Task 5:

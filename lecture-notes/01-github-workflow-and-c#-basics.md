@@ -415,7 +415,7 @@ Before you start, create a new branch called **01-formative-assessment**.
 
 ## Task 1:
 
-Create a double array named `nums` with the values { 45.3, 67.5, -45.6, 20.34, -33.0, 45.6 }. Iterate over the array using a loop and calculate the sum of all items. Divide that sum by the total number of items in the array to find the average. Use string interpolation to display the average in the desired format.
+Create a double array named `nums` with the values 45.3, 67.5, -45.6, 20.34, -33.0, 45.6. Iterate over the array using a loop and calculate the sum of all items. Divide that sum by the total number of items in the array to find the average. Use string interpolation to display the average in the desired format.
 
 ## Task 2
 

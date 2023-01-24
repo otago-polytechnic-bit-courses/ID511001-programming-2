@@ -314,4 +314,35 @@ Queues can also be implemented using other data structures, such as stacks or li
 
 Queues are useful for storing and processing data that needs to be handled in a specific order or storing data that multiple consumers will use. They are commonly used in computer systems to manage tasks, communications, and data flow.
 
-# Formative Assessment
+# 03 B: Abstract Data Types (ADTs) Formative Assessment
+
+## Task 1:
+
+You have been given two lists containing some of my favourite programming languages.
+
+```cs
+List<string> progLangOne = new List<string>() { "C#", "JavaScript", "Kotlin", "Python" };
+List<string> progLangTwo = new List<string>() { "C++", "Go", "Swift", "TypeScript" };
+```
+
+Implement the following:
+
+1. Add `progLangOne` to `progLangTwo` using the `AddRange` method.
+2. Add "Rust" using the `Add` method.
+3. Remove "Swift" using the `Remove` method.
+
+The expected output should be:
+
+```cs
+C#
+JavaScript
+Kotlin
+Python
+C++
+Go
+TypeScript
+Rust
+```
+
+## Task 2:
+

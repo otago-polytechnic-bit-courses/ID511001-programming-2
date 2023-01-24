@@ -403,6 +403,6 @@ Implement the following:
 1. Peek `myQueue`
 2. Return the size of `myQueue`
 
-## Formative Assessment Submission
+# Formative Assessment Submission
 
 Create a new pull request and assign **grayson-orr** to review your practical submission. Please don't merge your own pull request.

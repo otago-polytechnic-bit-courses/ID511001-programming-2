@@ -429,7 +429,7 @@ Create an array of integers called `nums` with the values { 21, 19, 68, 55, 42, 
 
 Create a method called `isAnagram` that takes in two parameters, `someStrOne` and `someStrTwo` which are both strings. Inside the method, write code to check if `someStrOne` and `someStrTwo` are an anagram of each other. An anagram is a word or phrase made by rearranging the letters of another word or phrase. Compare the characters of both strings after sorting them. Return `true` if they match and `false` otherwise.
 
-In my solution, I convert the two strings to char arrays and sort them using the `Array.Sort` method. Then I compare the sorted char arrays using the `SequenceEqual` method and return `true` if they match, otherwise `false`.
+In my solution, I converted the two strings to char arrays and sorted them using the `Array.Sort` method. Then I compared the sorted char arrays using the `SequenceEqual` method and returned `true` if they match, otherwise `false`.
 
 ## Task 5
 
@@ -439,7 +439,7 @@ Create a method called `convert` that takes in two parameters, `hours` and `minu
 
 Create a string variable called `sentence` and assign the value "The anemone, the wild violet, the hepatica, and the funny little curled-up." to it.
 
-Use the `String.Split` method to split the sentence into words by the space character, and then use a loop to count the number of occurrences of the word "the" in the sentence.
+In my solution, I used the `String.Split` method to split the sentence into words by the space character, and then used a loop to count the number of occurrences of the word "the" in the sentence.
 
 ## Task 7
 

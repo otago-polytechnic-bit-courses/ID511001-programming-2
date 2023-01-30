@@ -29,7 +29,7 @@ Before you start, create a new branch called **03-formative-assessment**.
 
 ## Task 1:
 
-Create a `Car` class withee `private` fields: `make`, `model`, and `year`. Add `public` properties for `Make`, `Model`, and `Year`. Include a constructor that sets the make, model, and year when the object is created. Create three `Car` objects and display their `Make`, `Model`, and `Year` properties. 
+Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `public` properties for `Make`, `Model`, and `Year`. Include a constructor that sets the make, model, and year when the object is created. Create three `Car` objects and display their `Make`, `Model`, and `Year` properties. 
 
 ## Task 2:
 

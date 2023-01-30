@@ -69,17 +69,17 @@ This code creates a new object of type `Dog` named "myDog" and assigns values to
 
 There are several keywords that can be used to define the scope of variables, methods, and other elements of a class or struct. The most commonly used scope keywords are:
 
-1. `public`: Elements defined as public can be accessed from anywhere within the program, both inside and outside the class or struct in which they are defined.
+- `public`: Elements defined as public can be accessed from anywhere within the program, both inside and outside the class or struct in which they are defined.
 
-2. `private`: Elements defined as private can only be accessed within the class or struct in which they are defined.
+- `private`: Elements defined as private can only be accessed within the class or struct in which they are defined.
 
-3. `protected`: Elements defined as protected can be accessed within the class or struct in which they are defined and any derived classes.
+- `protected`: Elements defined as protected can be accessed within the class or struct in which they are defined and any derived classes.
 
-4. `internal`: Elements defined as internal can be accessed within the same assembly (a single deployment unit such as a .dll or .exe file) in which they are defined, but not from other assemblies.
+- `internal`: Elements defined as internal can be accessed within the same assembly (a single deployment unit such as a .dll or .exe file) in which they are defined, but not from other assemblies.
 
-5. `protected internal`: Elements defined as protected internal can be accessed within the same assembly in which they are defined and from derived classes in other assemblies.
+- `protected internal`: Elements defined as protected internal can be accessed within the same assembly in which they are defined and from derived classes in other assemblies.
 
-6. `static`: Elements defined as static are associated with the class or struct rather than with a specific instance of the class or struct. They can be accessed without creating an instance of the class or struct.
+- `static`: Elements defined as static are associated with the class or struct rather than with a specific instance of the class or struct. They can be accessed without creating an instance of the class or struct.
 
 It is also worth noting that there are other keywords, such as `abstract`, `sealed`, `override` and `virtual`, are used in the context of inheritance and polymorphism to define the behaviour of the classes and methods.
 

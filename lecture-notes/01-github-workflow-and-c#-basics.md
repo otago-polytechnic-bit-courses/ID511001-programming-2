@@ -369,7 +369,7 @@ catch (FormatException ex)
 }
 ```
 
-In this example, the code in the try block attempts to parse a string to an integer, but the string `abc` is not a valid integer, so a `FormatException` is thrown. The `catch` block catches this exception and prints an error message to the console.
+In this example, the code in the `try` block attempts to parse a string to an integer, but the string `abc` is not a valid integer, so a `FormatException` is thrown. The `catch` block catches this exception and prints an error message to the console.
 
 Another example using the `using` statement:
 
@@ -498,6 +498,10 @@ In my solution, I used the `String.Split` **method** to split the sentence into 
 Create a **method** called `removeVowels` that takes in a parameter `word` which is a string. Inside the **method**, write code to remove all vowels from `word`. Use a regular expression or a loop to check each character of the word and remove the vowels.
 
 To handle the edge case where the word does not contain vowels, you can check if `word` is equal to the result after removing vowels. If it is the same, you can return a message indicating that the word does not contain vowels, otherwise, return `word` without vowels.
+
+## Task 8
+
+
 
 # Formative Assessment Submission
 

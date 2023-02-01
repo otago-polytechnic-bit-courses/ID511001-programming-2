@@ -256,7 +256,9 @@ do
 } while (i < 10);
 ```
 
-- `foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
+**Ask ChatGPT 🤖** - What is a `foreach` loop in **C#**?:
+
+<!-- - `foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
 
 ```cs
 foreach (var item in collection)
@@ -273,7 +275,7 @@ foreach (int i in numbers)
 {
     Console.WriteLine(i);
 }
-```
+``` -->
 
 ## Methods
 
@@ -296,7 +298,9 @@ myObj.IncreaseValue(5);
 Console.WriteLine(myObj.myValue); 
 ```
 
-- Static **methods**: These **methods** are associated with a **class** and do not have access to an instance's data. They can only access static data.
+**Ask ChatGPT 🤖** - What are other methods in **C#**?:
+
+<!-- - Static **methods**: These **methods** are associated with a **class** and do not have access to an instance's data. They can only access static data.
 
 ```cs
 class MyClass {
@@ -348,7 +352,7 @@ static class MyClass {
 // Usage:
 int result = 5.Multiply(3);
 Console.WriteLine(result); 
-```
+``` -->
 
 ## Error Handling
 
@@ -368,6 +372,8 @@ catch (FormatException ex)
     Console.WriteLine("Error: " + ex.Message);
 }
 ```
+
+**Ask ChatGPT 🤖** - How do you convert `Console.WriteLine("Error: " + ex.Message);` to use **string interpolation** in **C#**?:
 
 In this example, the code in the `try` block attempts to parse a string to an integer, but the string `abc` is not a valid integer, so a `FormatException` is thrown. The `catch` block catches this exception and prints an error message to the console.
 

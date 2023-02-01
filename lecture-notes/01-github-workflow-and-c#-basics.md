@@ -45,7 +45,6 @@ On the right side of the screen, you will see **Reviewers**. Click on the **Revi
 
 **Grayson** will receive an email. **Grayson** will review your formative assessment code, and you will receive feedback. You may be asked to reflect on your feedback and fix your formative assessment code. You will receive an email when your formative assessment code has been reviewed or approved.
 
-
 # 01 B: C# Basics
 
 ## What is C#?
@@ -256,7 +255,7 @@ do
 } while (i < 10);
 ```
 
-**Ask ChatGPT 🤖** - What is a `foreach` loop in **C#**?:
+## Ask ChatGPT 🤖 - What is a `foreach` loop in **C#**?:
 
 <!-- - `foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
 
@@ -298,7 +297,7 @@ myObj.IncreaseValue(5);
 Console.WriteLine(myObj.myValue); 
 ```
 
-**Ask ChatGPT 🤖** - What are other methods in **C#**?:
+**Ask ChatGPT 🤖** - What are other **methods** in **C#**?:
 
 <!-- - Static **methods**: These **methods** are associated with a **class** and do not have access to an instance's data. They can only access static data.
 

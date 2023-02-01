@@ -255,7 +255,7 @@ do
 } while (i < 10);
 ```
 
-## Ask ChatGPT 🤖 - What is a `foreach` loop in **C#**?:
+**Ask ChatGPT 🤖** - What is a `foreach` loop in **C#**?:
 
 <!-- - `foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
 

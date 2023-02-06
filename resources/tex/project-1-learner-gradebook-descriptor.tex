@@ -1,0 +1,154 @@
+% Author: Grayson Orr
+% Course: ID511001: Programming 2
+
+\documentclass{article}
+\author{}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage[margin = 2.25cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{soul}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue
+}
+\setlength\parindent{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{College of Engineering, Construction \& Living Sciences\\Bachelor of Information Technology}
+\lfoot{Project 1 (C\# Console App): Learner Gradebook\\Version 1, Semester One, 2023}
+\rfoot{\thepage}
+ 
+\begin{document}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=50mm]{../../resources/img/logo.png}
+\end{figure}
+
+\title{College of Engineering, Construction \& Living Sciences\\Bachelor of Information Technology\\ID511001: Programming 2\\Level 5, Credits 15\\\textbf{Project 1 (C\# Console App): Learner Gradebook}}
+\date{}
+\maketitle
+
+\section*{Assessment Overview}
+In this assessment, you will design \& develop a GUI implementation of the classic arcade game \textbf{Pong}.
+
+\section*{Learning Outcomes}
+At the successful completion of this course, learners will be able to:
+\begin{enumerate}
+    \item Build interactive, event-driven GUI applications using pre-built components.
+    \item Declare \& implement user-defined classes using encapsulation, inheritance \& polymorphism.
+\end{enumerate}
+
+\section*{Assessments}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Assessment}                                 & \textbf{Weighting} & \textbf{Due Date}            & \textbf{Learning Outcomes} \\ \hline
+	\small Project 1 (C\# Console App): Learner Gradebook  & \small 25\%        & \small 26-04-2023 (Wednesday at 4.59 PM)   & \small 1 \& 2                   \\ \hline
+	\small Project 2 (C\# Windows Forms App): Pong & \small 35\%        & \small 14-06-2023 (Wednesday at 4.59 PM)   & \small 1 \& 2                   \\ \hline
+	\small Theory Examination                        & \small 30\%        & \small 21-06-2023 (Wednesday at 4.45 PM)  & \small 1 \& 2                   \\ \hline
+	\small Classroom Tasks                       & \small 10\%        & \small 07-06-2023 (Wednesday at 4.59 PM)  & \small 1 \& 2                   \\ \hline
+\end{tabular} 
+
+\section*{Conditions of Assessment}
+You will complete this assessment during your learner-managed time. However, there will be time during class to discuss the requirements \& your progress on this assessment. This assessment will need to be completed by \textbf{Wednesday, 26 April 2022} at \textbf{4.59 PM}.
+
+\section*{Pass Criteria}
+This assessment is criterion-referenced (CRA) with a cumulative pass mark of \textbf{50\%} over all assessments in \textbf{ID511001: Programming 2}.
+
+\section*{Authenticity}
+All parts of your submitted assessment \textbf{must} be completely your work. If you use code snippets from \textbf{GitHub}, \textbf{StackOverflow} or other online resources, you \textbf{must} reference it appropriately using \textbf{APA 7th edition}. Provide your references in the \textbf{README.md} file in your repository. Failure to do this will result in a mark of \textbf{zero} for this assessment.
+
+\section*{Policy on Submissions, Extensions, Resubmissions \& Resits}
+The school's process concerning submissions, extensions, resubmissions \& resits complies with \textbf{Te Pūkenga} policies. Learners can view policies on the \textbf{Te Pūkenga} website located at \href{https://www.op.ac.nz/about-us/governance-and-management/policies}{https://www.op.ac.nz/about-us/governance-and-management/policies}.
+
+\section*{Submission}
+You \textbf{must} submit all project files via \textbf{GitHub Classroom}. Here is the URL to the repository you will use for your submission – \href{https://classroom.github.com/a/eFe1Oh97}{https://classroom.github.com/a/eFe1Oh97}.  Create a \textbf{.gitignore} \& add the ignored files in this resource - \href{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}. The latest project files in the \textbf{master} or \textbf{main} branch will be used to mark against the \textbf{Functionality} criterion. Please test before you submit. Partial marks \textbf{will not} be given for incomplete functionality. Late submissions will incur a \textbf{10\% penalty per day}, rolling over at \textbf{5:00 PM}.
+
+\section*{Extensions}
+Familiarise yourself with the assessment due date. Contact the course lecturer before the due date if you need an extension. If you require more than a week's extension, you will need to provide a medical certificate or support letter from your manager.
+
+\section*{Resubmissions}
+Learners may be requested to resubmit an assessment following a rework of part/s of the original assessment. Resubmissions are to be completed within a negotiable short time frame \& usually \textbf{must} be completed within the timing of the course to which the assessment relates. Resubmissions will be available to learners who have made a genuine attempt at the first assessment opportunity \& achieved a \textbf{D grade (40-49\%)}. The maximum grade awarded for resubmission will be \textbf{C-}.
+
+\section*{Resits}
+Resits \& reassessments \textbf{are not} applicable in \textbf{ID511001: Programming 2}.
+
+\section*{Instructions}
+You will need to submit a project \& documentation that meet the following requirements:\\
+
+\subsection*{Functionality - Learning Outcomes 1 \& 2 (40\%)}
+\begin{itemize}
+    \item The project \textbf{must} open without code or file structure modification in \textbf{Visual Studio}.
+    \item Read a text file called \textbf{data.txt} which contains information about five learners. This information includes \textbf{id}, \textbf{first name}, \textbf{last name}, three \textbf{ID510001: Programming 1 assessment marks} \& three \textbf{ID511001: Programming 2 assessment marks}. \textbf{Note:} \textbf{data.txt} \textbf{must} be located in the \textbf{bin/Debug} folder.
+    \item The learners' information is stored in a \textbf{List} of \textbf{Learner} objects. A \textbf{Learner} object \textbf{must} have the following fields:
+    \begin{itemize}
+        \item \textbf{id}
+        \item \textbf{firstName}
+        \item \textbf{lastName}
+        \item A \textbf{List} of \textbf{int} called \textbf{prog1AssessmentMarks}
+        \item A \textbf{List} of \textbf{int} called \textbf{prog2AssessmentMarks}
+        \item A \textbf{List} of \textbf{int} called \textbf{prog1AssessmentGrades}
+        \item \item A \textbf{List} of \textbf{int} called \textbf{prog2AssessmentGrades}
+        \item \textbf{prog1OverallGrade}
+        \item \textbf{prog2OverallGrade}
+    \end{itemize}
+    \item A grade is calculated using the following grade table:
+    
+    \renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|}
+\hline
+    \textbf{Grade} & \textbf{Mark Range} \\ \hline
+    A+ & 90-100  \\ \hline
+    A & 85-89  \\ \hline
+    A- & 80-84 \\ \hline
+    B+ & 75-79   \\ \hline
+    B & 70-74  \\ \hline
+    B- & 65-69  \\ \hline
+    C+ & 60-64  \\ \hline
+    C & 55-59 \\ \hline
+    C- & 50-54  \\ \hline
+    D & 40-49   \\ \hline
+    E & 0-39   \\ \hline
+    \end{tabular}
+    \item When the project is run, display a menu to the user that allows them to:
+    \begin{itemize}
+        \item Display a learner's assessment marks, assessment grades \& overall grade
+        \item Display all learners' assessment marks, assessment grades \& overall grades
+        \item Display all assessment's average grade
+        \item Add a new learner. You should prompt the user for the learner's information \& add the learner to the \textbf{List} of \textbf{Learner} objects. \textbf{Note:} The learner's \textbf{id} \textbf{must} be unique.
+        \item Remove a learner. You should prompt the user for the learner's \textbf{id} \& remove the learner from the \textbf{List} of \textbf{Learner} objects.
+    \end{itemize} 
+\end{itemize}
+
+\subsection*{Code Elegance - Learning Outcomes 1 \& 2  (45\%)}
+\begin{itemize}
+    \item Adhere to the four principles of \textbf{OO}, i.e., encapsulation, abstraction, inheritance \& polymorphism.
+    \item Use of intermediate variables, constants \& enumerations.
+    \item Idiomatic use of control flow, data structures \& in-built functions.
+    \item Efficient algorithmic approach.
+    \item Sufficient modularity.
+    \item Each method \& class \textbf{must} have a header comment located immediately before its declaration.
+    \item In-line comments where required. 
+    \item Project files, i.e., \textbf{.cs} files are formatted. 
+    \item No dead or unused code.
+\end{itemize}
+
+\subsection*{Documentation \& Git Usage - Learning Outcomes 1 \& 2 (15\%)}
+\begin{itemize}
+    \item Provide the following in your repository \textbf{README.md} file:
+    \begin{itemize}
+        \item The project's class diagram created in \textbf{Visual Studio}.
+        \item Known bugs if applicable.
+    \end{itemize}
+    \item Commit at least \textbf{20} times per week.
+    \item Commit messages \textbf{must} reflect the context of each functional requirement change.
+\end{itemize}
+
+\end{document}

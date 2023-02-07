@@ -568,10 +568,6 @@ Create a **method** called `removeVowels` that takes in a parameter `word` which
 
 To handle the edge case where the word does not contain vowels, you can check if `word` is equal to the result after removing vowels. If it is the same, you can return a message indicating that the word does not contain vowels, otherwise, return `word` without vowels.
 
-## Task 8
-
-
-
 # Formative Assessment Submission
 
 Create a new pull request and assign **grayson-orr** to review your practical submission. Please don't merge your own pull request.

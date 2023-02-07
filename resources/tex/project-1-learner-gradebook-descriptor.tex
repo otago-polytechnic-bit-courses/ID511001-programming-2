@@ -36,7 +36,7 @@
 \maketitle
 
 \section*{Assessment Overview}
-In this assessment, you will design \& develop a GUI implementation of the classic arcade game \textbf{Pong}.
+In this assessment, you will design \& develop a learner gradebook \textbf{Console App} using \textbf{C\#}. 
 
 \section*{Learning Outcomes}
 At the successful completion of this course, learners will be able to:
@@ -69,7 +69,7 @@ All parts of your submitted assessment \textbf{must} be completely your work. If
 The school's process concerning submissions, extensions, resubmissions \& resits complies with \textbf{Te Pūkenga} policies. Learners can view policies on the \textbf{Te Pūkenga} website located at \href{https://www.op.ac.nz/about-us/governance-and-management/policies}{https://www.op.ac.nz/about-us/governance-and-management/policies}.
 
 \section*{Submission}
-You \textbf{must} submit all project files via \textbf{GitHub Classroom}. Here is the URL to the repository you will use for your submission – \href{https://classroom.github.com/a/eFe1Oh97}{https://classroom.github.com/a/eFe1Oh97}.  Create a \textbf{.gitignore} \& add the ignored files in this resource - \href{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}. The latest project files in the \textbf{master} or \textbf{main} branch will be used to mark against the \textbf{Functionality} criterion. Please test before you submit. Partial marks \textbf{will not} be given for incomplete functionality. Late submissions will incur a \textbf{10\% penalty per day}, rolling over at \textbf{5:00 PM}.
+You \textbf{must} submit all app files via \textbf{GitHub Classroom}. Here is the URL to the repository you will use for your submission – \href{https://classroom.github.com/a/eFe1Oh97}{https://classroom.github.com/a/eFe1Oh97}.  Create a \textbf{.gitignore} \& add the ignored files in this resource - \href{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}. The latest app files in the \textbf{master} or \textbf{main} branch will be used to mark against the \textbf{Functionality} criterion. Please test before you submit. Partial marks \textbf{will not} be given for incomplete functionality. Late submissions will incur a \textbf{10\% penalty per day}, rolling over at \textbf{5:00 PM}.
 
 \section*{Extensions}
 Familiarise yourself with the assessment due date. Contact the course lecturer before the due date if you need an extension. If you require more than a week's extension, you will need to provide a medical certificate or support letter from your manager.
@@ -81,32 +81,27 @@ Learners may be requested to resubmit an assessment following a rework of part/s
 Resits \& reassessments \textbf{are not} applicable in \textbf{ID511001: Programming 2}.
 
 \section*{Instructions}
-You will need to submit an application \& documentation that meet the following requirements:\\
+You will need to submit an app \& documentation that meet the following requirements:\\
 
 \subsection*{Functionality - Learning Outcomes 1 \& 2 (40\%)}
 \begin{itemize}
-    \item The application \textbf{must} open without code or file structure modification in \textbf{Visual Studio}.
-    
-    \item Read a text file called \textbf{learners.txt} which contains information about ten learners. This information includes \textbf{id}, \textbf{first name}, \textbf{last name}, three \textbf{ID510001: Programming 1 assessment marks} \& three \textbf{ID511001: Programming 2 assessment marks}. \textbf{Note:} \textbf{learners.txt} \textbf{must} be located in the \textbf{bin/Debug} folder.
-    
+    \item The app \textbf{must} open without code or file structure modification in \textbf{Visual Studio}.
+    \item Read a text file called \textbf{learners.txt} which contains information about five learners. This information includes \textbf{id}, \textbf{first name}, \textbf{last name}, three \textbf{ID510001: Programming 1 assessment marks} \& three \textbf{ID511001: Programming 2 assessment marks}. \textbf{Note:} \textbf{learners.txt} \textbf{must} be located in the \textbf{bin/Debug} folder.
     \item The learners' information is stored in a \textbf{List} of \textbf{Learner} objects. A \textbf{Learner} object \textbf{must} have the following fields:
     \begin{itemize}
         \item \textbf{id}
         \item \textbf{firstName}
         \item \textbf{lastName}
-        \item A \textbf{List} of \textbf{AssessmentMarks} objects called \textbf{prog1AssessmentMarks}
-        \item A \textbf{List} of \textbf{AssessmentMarks} objects called \textbf{prog2AssessmentMarks}
+        \item \textbf{AssessmentMarks} object called \textbf{prog1AssessmentMarks}
+        \item \textbf{AssessmentMarks} object called \textbf{prog2AssessmentMarks}
     \end{itemize}
     \textbf{Note:} A \textbf{Learner} has no behaviours.
-
     \item An \textbf{AssessmentMarks} object \textbf{must} have the following fields:
     \begin{itemize}
         \item A \textbf{List} of \textbf{int} called \textbf{assessmentMarks}
     \end{itemize}
-
-    \item An \textbf{AssessmentMarks} object has several behaviours such as getting all marks, all grades, the highest mark(s), the lowest mark(s), the fail mark(s), the average mark and the average grade.
-
-    \item A grade is calculated using the following grade table:
+    \item An \textbf{AssessmentMarks} object has several behaviours such as getting all marks, all grades, highest mark(s), lowest mark(s), fail mark(s), average mark and average grade.
+    \item A grade is calculated using the following grade table:\\\\
     \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{|c|c|}
         \hline
@@ -123,8 +118,7 @@ You will need to submit an application \& documentation that meet the following 
         D & 40-49   \\ \hline
         E & 0-39   \\ \hline
     \end{tabular}
-
-    \item The application \textbf{must} display the following menu:
+    \item The app \textbf{must} display the following menu options:
     \begin{itemize}
         \item 1. Display all marks
         \item 2. Display all grades
@@ -135,30 +129,41 @@ You will need to submit an application \& documentation that meet the following 
         \item 7. Remove a learner
         \item 0. Exit
     \end{itemize}
-    \textbf{Note:} You will need to create individual methods to achieve this functionality.
-
-    \item When the user selects \textbf{1. Display all marks}, the application \textbf{must} display all marks for all learners. The marks \textbf{must} be displayed as follows:
-
-    % insert screenshot
-
-    \item When the user selects \textbf{2. Display all grades}, the application \textbf{must} display all grades for all learners. The grades \textbf{must} be displayed as follows:
-
-    % insert screenshot
-
-    \item When the user selects \textbf{3. Display highest, lowest and fail marks}, the application \textbf{must} display the highest, lowest and fail marks for all learners. The marks \textbf{must} be displayed as follows:
-
-    % insert screenshot
-
-    \item When the user selects \textbf{4. Display average marks}, the application \textbf{must} display the average marks for all learners. The marks \textbf{must} be displayed as follows:
-
-    % insert screenshot
-
-    \item When the user selects \textbf{5. Display average grades}, the application \textbf{must} display the average grades for all learners. The grades \textbf{must} be displayed as follows:
-
-    % insert screenshot
-
-    \item When the user selects \textbf{6. Add a learner}, the application \textbf{must} prompt the user to enter the following information:
-
+    \textbf{Note:} You will need to create individual methods to achieve this functionality. Also, the app \textbf{must} be able to handle invalid user input. If the user enters an invalid option, an error message \textbf{must} be displayed.
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=150mm,height=50mm]{../../resources/img/project-1/1.PNG}
+    \end{figure} 
+    \item When the user selects \textbf{1. Display all marks}, the app \textbf{must} display all marks for all learners. The marks \textbf{must} be displayed as follows:
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=150mm,height=75mm]{../../resources/img/project-1/2.PNG}
+    \end{figure}
+    \newpage
+    \item When the user selects \textbf{2. Display all grades}, the app \textbf{must} display all grades for all learners. The grades \textbf{must} be displayed as follows:
+    \begin{figure}[ht] 
+        \centering
+        \includegraphics[width=150mm,height=75mm]{../../resources/img/project-1/3.PNG}
+    \end{figure}
+    \item When the user selects \textbf{3. Display highest, lowest and fail marks}, the app \textbf{must} display the highest, lowest and fail marks for all learners. The marks \textbf{must} be displayed as follows:
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=150mm,height=90mm]{../../resources/img/project-1/4.PNG}
+    \end{figure}
+    \newpage
+    \textbf{Note:} If there is no fail mark(s), the \textbf{Fail marks:} \textbf{must} be displayed as \textbf{No fail marks}. If there is no lowest mark(s), the \textbf{Lowest marks:} \textbf{must} be displayed as \textbf{No lowest marks}. If there is no highest mark(s), the \textbf{Highest marks:} \textbf{must} be displayed as \textbf{No highest marks}.
+    \item When the user selects \textbf{4. Display average marks}, the app \textbf{must} display the average marks for all learners. The marks \textbf{must} be displayed as follows:
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=150mm,height=75mm]{../../resources/img/project-1/5.PNG}
+    \end{figure}
+    \item When the user selects \textbf{5. Display average grades}, the app \textbf{must} display the average grades for all learners. The grades \textbf{must} be displayed as follows:
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=150mm,height=75mm]{../../resources/img/project-1/6.PNG}
+    \end{figure}
+    \newpage
+    \item When the user selects \textbf{6. Add a learner}, the app \textbf{must} prompt the user to enter the following information:
     \begin{itemize}
         \item \textbf{First name}
         \item \textbf{Last name}
@@ -169,30 +174,31 @@ You will need to submit an application \& documentation that meet the following 
         \item \textbf{ID511001: Programming 2 assessment mark 2}
         \item \textbf{ID511001: Programming 2 assessment mark 3}
     \end{itemize}
-
     \textbf{Note:} An \textbf{assessment mark} \textbf{must} be between \textbf{0} and \textbf{100}. If an \textbf{assessment mark} is invalid, an error message \textbf{must} be displayed. Also, the \textbf{id} of the learner \textbf{must} be generated automatically. However, the \textbf{id} \textbf{must} be unique. 
-
-    % insert screenshot
-
-    \item When the user selects \textbf{7. Remove a learner}, the application \textbf{must} prompt the user to enter the \textbf{id} of the learner to be removed. If the learner is found, the learner \textbf{must} be removed from the \textbf{List} of \textbf{Learner} objects. If the learner is not found, an error message \textbf{must} be displayed.
-
-    % insert screenshot
-
-    \item When the user selects \textbf{0. Exit}, the application \textbf{must} exit.
-
-    % insert screenshot
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=150mm,height=110mm]{../../resources/img/project-1/7.PNG}
+    \end{figure}
+    \newpage
+    \item When the user selects \textbf{7. Remove a learner}, the app \textbf{must} prompt the user to enter the \textbf{id} of the learner to be removed. If the learner is found, the learner \textbf{must} be removed from the \textbf{List} of \textbf{Learner} objects. If the learner is not found, an error message \textbf{must} be displayed.
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=150mm,height=85mm]{../../resources/img/project-1/8.PNG}
+    \end{figure}
+    \item When the user selects \textbf{0. Exit}, the app \textbf{must} exit. 
+    \item 20 \textbf{unit tests} using \textbf{MSTest} which verify the functionality.
 \end{itemize}
 
 \subsection*{Code Elegance - Learning Outcomes 1 \& 2  (45\%)}
 \begin{itemize}
     \item Adhere to the four principles of \textbf{OO}, i.e., encapsulation, abstraction, inheritance \& polymorphism.
-    \item Use of intermediate variables, constants \& enumerations.
+    \item Use of intermediate variables, constants \& try-catch blocks.
     \item Idiomatic use of control flow, data structures \& in-built functions.
     \item Efficient algorithmic approach.
     \item Sufficient modularity.
     \item Each method \& class \textbf{must} have a header comment located immediately before its declaration.
     \item In-line comments where required. 
-    \item Project files, i.e., \textbf{.cs} files are formatted. 
+    \item App files, i.e., \textbf{.cs} files are formatted. 
     \item No dead or unused code.
 \end{itemize}
 
@@ -200,7 +206,8 @@ You will need to submit an application \& documentation that meet the following 
 \begin{itemize}
     \item Provide the following in your repository \textbf{README.md} file:
     \begin{itemize}
-        \item The project's class diagram created in \textbf{Visual Studio}.
+        \item The app's class diagram created in \textbf{Visual Studio}.
+        \item How to run the \textbf{unit tests}.
         \item Known bugs if applicable.
     \end{itemize}
     \item Commit at least \textbf{20} times per week.

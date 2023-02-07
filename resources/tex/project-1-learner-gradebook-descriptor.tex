@@ -81,51 +81,106 @@ Learners may be requested to resubmit an assessment following a rework of part/s
 Resits \& reassessments \textbf{are not} applicable in \textbf{ID511001: Programming 2}.
 
 \section*{Instructions}
-You will need to submit a project \& documentation that meet the following requirements:\\
+You will need to submit an application \& documentation that meet the following requirements:\\
 
 \subsection*{Functionality - Learning Outcomes 1 \& 2 (40\%)}
 \begin{itemize}
-    \item The project \textbf{must} open without code or file structure modification in \textbf{Visual Studio}.
-    \item Read a text file called \textbf{data.txt} which contains information about five learners. This information includes \textbf{id}, \textbf{first name}, \textbf{last name}, three \textbf{ID510001: Programming 1 assessment marks} \& three \textbf{ID511001: Programming 2 assessment marks}. \textbf{Note:} \textbf{data.txt} \textbf{must} be located in the \textbf{bin/Debug} folder.
+    \item The application \textbf{must} open without code or file structure modification in \textbf{Visual Studio}.
+    
+    \item Read a text file called \textbf{learners.txt} which contains information about ten learners. This information includes \textbf{id}, \textbf{first name}, \textbf{last name}, three \textbf{ID510001: Programming 1 assessment marks} \& three \textbf{ID511001: Programming 2 assessment marks}. \textbf{Note:} \textbf{learners.txt} \textbf{must} be located in the \textbf{bin/Debug} folder.
+    
     \item The learners' information is stored in a \textbf{List} of \textbf{Learner} objects. A \textbf{Learner} object \textbf{must} have the following fields:
     \begin{itemize}
         \item \textbf{id}
         \item \textbf{firstName}
         \item \textbf{lastName}
-        \item A \textbf{List} of \textbf{int} called \textbf{prog1AssessmentMarks}
-        \item A \textbf{List} of \textbf{int} called \textbf{prog2AssessmentMarks}
-        \item A \textbf{List} of \textbf{int} called \textbf{prog1AssessmentGrades}
-        \item \item A \textbf{List} of \textbf{int} called \textbf{prog2AssessmentGrades}
-        \item \textbf{prog1OverallGrade}
-        \item \textbf{prog2OverallGrade}
+        \item A \textbf{List} of \textbf{AssessmentMarks} objects called \textbf{prog1AssessmentMarks}
+        \item A \textbf{List} of \textbf{AssessmentMarks} objects called \textbf{prog2AssessmentMarks}
     \end{itemize}
-    \item A grade is calculated using the following grade table:
-    
-    \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{|c|c|}
-\hline
-    \textbf{Grade} & \textbf{Mark Range} \\ \hline
-    A+ & 90-100  \\ \hline
-    A & 85-89  \\ \hline
-    A- & 80-84 \\ \hline
-    B+ & 75-79   \\ \hline
-    B & 70-74  \\ \hline
-    B- & 65-69  \\ \hline
-    C+ & 60-64  \\ \hline
-    C & 55-59 \\ \hline
-    C- & 50-54  \\ \hline
-    D & 40-49   \\ \hline
-    E & 0-39   \\ \hline
-    \end{tabular}
-    \item When the project is run, display a menu to the user that allows them to:
+    \textbf{Note:} A \textbf{Learner} has no behaviours.
+
+    \item An \textbf{AssessmentMarks} object \textbf{must} have the following fields:
     \begin{itemize}
-        \item Display a learner's assessment marks, assessment grades \& overall grade
-        \item Display all learners' assessment marks, assessment grades \& overall grades
-        \item Display all assessment's average grade
-        \item Add a new learner. You should prompt the user for the learner's information \& add the learner to the \textbf{List} of \textbf{Learner} objects. \textbf{Note:} The learner's \textbf{id} \textbf{must} be unique.
-        \item Remove a learner. You should prompt the user for the learner's \textbf{id} \& remove the learner from the \textbf{List} of \textbf{Learner} objects.
-        \item Exit the application. You should prompt the user to confirm their decision.
-    \end{itemize} 
+        \item A \textbf{List} of \textbf{int} called \textbf{assessmentMarks}
+    \end{itemize}
+
+    \item An \textbf{AssessmentMarks} object has several behaviours such as getting all marks, all grades, the highest mark(s), the lowest mark(s), the fail mark(s), the average mark and the average grade.
+
+    \item A grade is calculated using the following grade table:
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Grade} & \textbf{Mark Range} \\ \hline
+        A+ & 90-100  \\ \hline
+        A & 85-89  \\ \hline
+        A- & 80-84 \\ \hline
+        B+ & 75-79   \\ \hline
+        B & 70-74  \\ \hline
+        B- & 65-69  \\ \hline
+        C+ & 60-64  \\ \hline
+        C & 55-59 \\ \hline
+        C- & 50-54  \\ \hline
+        D & 40-49   \\ \hline
+        E & 0-39   \\ \hline
+    \end{tabular}
+
+    \item The application \textbf{must} display the following menu:
+    \begin{itemize}
+        \item 1. Display all marks
+        \item 2. Display all grades
+        \item 3. Display highest, lowest and fail marks
+        \item 4. Display average marks
+        \item 5. Display average grades
+        \item 6. Add a learner
+        \item 7. Remove a learner
+        \item 0. Exit
+    \end{itemize}
+    \textbf{Note:} You will need to create individual methods to achieve this functionality.
+
+    \item When the user selects \textbf{1. Display all marks}, the application \textbf{must} display all marks for all learners. The marks \textbf{must} be displayed as follows:
+
+    % insert screenshot
+
+    \item When the user selects \textbf{2. Display all grades}, the application \textbf{must} display all grades for all learners. The grades \textbf{must} be displayed as follows:
+
+    % insert screenshot
+
+    \item When the user selects \textbf{3. Display highest, lowest and fail marks}, the application \textbf{must} display the highest, lowest and fail marks for all learners. The marks \textbf{must} be displayed as follows:
+
+    % insert screenshot
+
+    \item When the user selects \textbf{4. Display average marks}, the application \textbf{must} display the average marks for all learners. The marks \textbf{must} be displayed as follows:
+
+    % insert screenshot
+
+    \item When the user selects \textbf{5. Display average grades}, the application \textbf{must} display the average grades for all learners. The grades \textbf{must} be displayed as follows:
+
+    % insert screenshot
+
+    \item When the user selects \textbf{6. Add a learner}, the application \textbf{must} prompt the user to enter the following information:
+
+    \begin{itemize}
+        \item \textbf{First name}
+        \item \textbf{Last name}
+        \item \textbf{ID510001: Programming 1 assessment mark 1}
+        \item \textbf{ID510001: Programming 1 assessment mark 2}
+        \item \textbf{ID510001: Programming 1 assessment mark 3}
+        \item \textbf{ID511001: Programming 2 assessment mark 1}
+        \item \textbf{ID511001: Programming 2 assessment mark 2}
+        \item \textbf{ID511001: Programming 2 assessment mark 3}
+    \end{itemize}
+
+    \textbf{Note:} An \textbf{assessment mark} \textbf{must} be between \textbf{0} and \textbf{100}. If an \textbf{assessment mark} is invalid, an error message \textbf{must} be displayed. Also, the \textbf{id} of the learner \textbf{must} be generated automatically. However, the \textbf{id} \textbf{must} be unique. 
+
+    % insert screenshot
+
+    \item When the user selects \textbf{7. Remove a learner}, the application \textbf{must} prompt the user to enter the \textbf{id} of the learner to be removed. If the learner is found, the learner \textbf{must} be removed from the \textbf{List} of \textbf{Learner} objects. If the learner is not found, an error message \textbf{must} be displayed.
+
+    % insert screenshot
+
+    \item When the user selects \textbf{0. Exit}, the application \textbf{must} exit.
+
+    % insert screenshot
 \end{itemize}
 
 \subsection*{Code Elegance - Learning Outcomes 1 \& 2  (45\%)}

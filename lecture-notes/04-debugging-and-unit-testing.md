@@ -1,10 +1,10 @@
-# 04 A: Debugging
+# 04: Debugging
 
 Debugging is the process of identifying and resolving errors (also called bugs) in your code. When you write code, it is not uncommon to make mistakes, such as syntax errors, logical errors, or runtime errors. Debugging is the process of finding and fixing these errors so that your code runs correctly.
 
 There are several techniques and tools that can be used for debugging code, including:
 
-* Using the **Visual Studio Debugge**r: **Visual Studio** provides a built-in debugger that allows you to step through your code line by line, set breakpoints, view the values of variables, and more.
+* Using the **Visual Studio Debugger**: **Visual Studio** provides a built-in debugger that allows you to step through your code line by line, set breakpoints, view the values of variables, and more.
 * Using the **Console**: You can use the `Console` class to print out the values of variables and other information to the console while your program is running. This can help you to understand what your code is doing and to identify errors.
 * Using the **Immediate Window**: The **Immediate Window** allows you to execute code and check the values of variables while your program is in break mode.
 * Using the **Watch Window**: The **Watch Window** allows you to see the value of a variable or an expression while your program is running.
@@ -15,7 +15,7 @@ When you find an error in your code, you can use these tools and techniques to u
 
 Debugging is an important part of the development process and it can save a lot of time and effort by identifying and resolving errors early on.
 
-# 04 B: Unit Testing
+# 04: Unit Testing
 
 Unit testing is the process of testing individual units of code, such as methods or classes, in isolation from the rest of the program. The goal of unit testing is to ensure that each unit of code behaves correctly and that it meets the requirements specified for it. Unit tests are usually automated, which means that they can be run automatically and repeatedly without human intervention.
 
@@ -52,3 +52,11 @@ When the test is run, the unit testing framework will execute the `AddShouldRetu
 Unit testing is an important practice in software development, as it helps to ensure that the code is working correctly, it helps to detect and fix bugs early, and it allows for more confident and safe changes and refactoring of the code. It also helps to increase the quality and maintainability of the code.
 
 # Formative Assessment
+
+Before you start, create a new branch called **04-formative-assessment**.
+
+If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
+
+- If you provide **ChatGPT** with a prompt that is not refined enough, it may generate a not-so-useful response
+- Do not trust **ChatGPT's** responses blindly. You must still use your judgement and may need to do additional research to determine if the response is correct
+- Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work

@@ -1,41 +1,4 @@
-# 03 A: Encapsulation
-
-Encapsulation is the process of hiding the implementation details of a class from the outside world and exposing only the necessary information and functionality through a public interface. Encapsulation is one of the fundamental principles of object-oriented programming, and it is used to promote the principles of abstraction, modularity, and information hiding.
-
-Encapsulation is achieved through access modifiers, such as `public`, `private`, and `protected`, which control the visibility and accessibility of class members (fields and methods).
-
-For example, a class can have a private field that holds some important data and a public property that allows the data to be accessed, like this:
-
-```cs
-class BankAccount
-{
-    private decimal balance;
-
-    public decimal Balance
-    {
-        get { return balance; }
-        set { balance = value; }
-    }
-}
-```
-
-In this example, the `balance` field is defined as private, meaning it can only be accessed within the class. On the other hand, the `Balance` property is defined as public, meaning it can be accessed from outside the class. It allows the class to control how the `balance` field is modified and accessed and to ensure that the data is always in a consistent state.
-
-Encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change how the `balance` field is stored, without affecting the code that accesses it through the `Balance` property.
-
-# 03 A: Encapsulation Formative Assessment
-
-Before you start, create a new branch called **03-formative-assessment**.
-
-## Task 1:
-
-Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `public` properties for `Make`, `Model`, and `Year`. Include a constructor that sets the make, model, and year when the object is created. Create three `Car` objects and display their `Make`, `Model`, and `Year` properties. 
-
-## Task 2:
-
-Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` properties for `Name`, `Age`, and `Salary` with a setter for the `Salary` property that checks for negative input and throws an `ArgumentException` with message "Salary can not be negative." Include a constructor that sets the name, age, and salary when the object is created. Create three `Employee` objects and display their `Name`, `Age`, and `Salary` properties.
-
-# 03 B: Abstract Data Types (ADTs)
+# 03: Abstract Data Types (ADTs)
 
 ## What is an abstract data type?
 
@@ -307,7 +270,15 @@ Queues can also be implemented using other data structures, such as stacks or li
 
 Queues are useful for storing and processing data that needs to be handled in a specific order or storing data that multiple consumers will use. They are commonly used in computer systems to manage tasks, communications, and data flow.
 
-# 03 B: Abstract Data Types (ADTs) Formative Assessment
+# Formative Assessment
+
+Before you start, create a new branch called **03-formative-assessment**.
+
+If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
+
+- If you provide **ChatGPT** with a prompt that is not refined enough, it may generate a not-so-useful response
+- Do not trust **ChatGPT's** responses blindly. You must still use your judgement and may need to do additional research to determine if the response is correct
+- Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work
 
 ## Task 1:
 

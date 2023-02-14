@@ -1,4 +1,4 @@
-# 01 A: GitHub Workflow
+# 01: GitHub Workflow
 
 By default, **GitHub Classroom** creates an empty repository. Firstly, you must create a **README** and `.gitignore` file. **GitHub** provides an option for creating new files once the repository is created.
 
@@ -109,7 +109,7 @@ git log --oneline --grep "^build\|^feat\|^style"
 
 **Resource:** <https://git-scm.com/docs/git-log>
 
-# 01 B: C# Basics
+# 01: C# Basics
 
 ## What is C#?
 
@@ -536,7 +536,7 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-Create a double array named `nums` with the values 45.3, 67.5, -45.6, 20.34, -33.0, 45.6. Iterate over the array using a loop and calculate the sum of all items. Divide that sum by the total number of items in the array to find the average. Use string interpolation to display the average in the desired format.
+Create a **double array** named `nums` with the values 45.3, 67.5, -45.6, 20.34, -33.0, 45.6. Iterate over the **array** using a loop and calculate the sum of all items. Divide that sum by the total number of items in the **array** to find the average. Use **string interpolation** to display the average in the desired format.
 
 ## Task 2
 
@@ -544,13 +544,13 @@ Create a **method** called `fizzBuzz` that takes in an integer `num`. Inside the
 
 ## Task 3
 
-Create an array of integers called `nums` with the values 21, 19, 68, 55, 42, 12. Iterate over the array and check if each number is odd. If it is, display it. Finally, sort the array from lowest to highest.
+Create an **array** of **integers** called `nums` with the values 21, 19, 68, 55, 42, 12. Iterate over the **array** and check if each number is odd. If it is, display it. Finally, sort the **array** from lowest to highest.
 
 ## Task 4
 
 Create a **method** called `isAnagram` that takes in two parameters, `someStrOne` and `someStrTwo` which are both strings. Inside the **method**, write code to check if `someStrOne` and `someStrTwo` are an anagram of each other. An anagram is a word or phrase made by rearranging the letters of another word or phrase. Compare the characters of both strings after sorting them. Return `true` if they match and `false` otherwise.
 
-In my solution, I converted the two strings to char arrays and sorted them using the `Array.Sort` **method**. Then I compared the sorted char arrays using the `SequenceEqual` **method** and returned `true` if they match, otherwise `false`.
+In my solution, I converted the two **strings** to **char** arrays and sorted them using the `Array.Sort` **method**. Then I compared the sorted char arrays using the `SequenceEqual` **method** and returned `true` if they match, otherwise `false`.
 
 ## Task 5
 
@@ -558,7 +558,7 @@ Create a **method** called `convert` that takes in two parameters, `hours` and `
 
 ## Task 6
 
-Create a string **variable** called `sentence` and assign the value "The anemone, the wild violet, the hepatica, and the funny little curled-up." to it.
+Create a **string variable** called `sentence` and assign the value "The anemone, the wild violet, the hepatica, and the funny little curled-up." to it.
 
 In my solution, I used the `String.Split` **method** to split the sentence into words by the space character, and then used a loop to count the number of occurrences of the word "the" in the sentence.
 

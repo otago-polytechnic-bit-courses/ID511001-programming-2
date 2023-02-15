@@ -65,6 +65,16 @@ myDog.Bark(); // Output: "Woof woof!"
 
 This code creates a new **object** of type `Dog` named "myDog" and assigns values to its `name` and `age` **fields** via the constructor. Then it calls the `Bark()` **method** on the **object**, which causes it to bark.
 
+## Class Diagram
+
+To create a class diagram in **Visual Studio**, do the following:
+
+1. In the **Solution Explorer**, right-click on the project name and select **Add** > **New Item**.
+2. In the **Add New Item** window, select **Class Diagram** and give it a name. Click **Add**.
+3. The class diagram will open in the designer. You can start adding classes by dragging the **Class** item from the toolbox onto the designer. **Note:** There might be a slight delay.
+4. Once you have created your class diagram, you can save it and close the designer.
+5. You can reopen the class diagram at any time by double-clicking on it in the **Solution Explorer**.
+
 ## Scoping
 
 There are several keywords that can be used to define the scope of **variables**, **methods**, and other elements of a **class** or **struct**. The most commonly used scope keywords are:
@@ -136,7 +146,7 @@ Create a `BankAccount` class, which should have methods for depositing and withd
 
 Create a `Customer` class, which should have fields for the customer's name, address, and contact information and a method for opening a new bank account.
 
-Create a **Transaction** class, which should have fields for the amount of money transferred and the transaction date.
+Create a `Transaction` class, which should have fields for the amount of money transferred and the transaction date.
 
 Use these classes to create a program allowing customers to open a bank account, deposit and withdraw money, and view their account balance. Also, create a log of all transactions made on the account.
 
@@ -166,8 +176,26 @@ Use these **classes** to create a program that allows a customer to browse produ
 
 ## Task 6:
 
-## Task 7:
+Create a program that reads data from a text file and creates five `Dog` **objects**.
+
+Use the `Dog` **class** above.
+
+Create a text file called `dogs.txt` with the following data:
+
+```
+Scooby-Doo,2
+Astro,5
+Bolt,10
+Augie,6
+Dixie,9
+```
+
+Use the `StreamReader` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to an array. Print out the `name` and `age` for each item in the array. Add error handling to ensure that the program gracefully handles any issues with reading the file or parsing the data.
+
+## Task 7: 
+
+Create a class diagram for two of the six programs.
 
 # Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your practical submission. Please don't merge your own pull request.
+Create a new pull request and assign **grayson-orr** to review your submission. Please don't merge your own pull request.

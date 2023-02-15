@@ -60,3 +60,69 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 - If you provide **ChatGPT** with a prompt that is not refined enough, it may generate a not-so-useful response
 - Do not trust **ChatGPT's** responses blindly. You must still use your judgement and may need to do additional research to determine if the response is correct
 - Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work
+
+## Task 1:
+
+Create a unit test for four of the six programs in **02-formative-assessment**. Ensure that you cover all fields and methods concerned.
+
+# Research Assessment
+
+## Task 1:
+
+The following activity involves debugging a program called `Debugging`.
+
+```cs
+using System;
+
+namespace Debugging
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 5
+            Console.WriteLine("The value of x is: " + x);
+
+            int x = 5;
+            int y = 10;
+
+            if (x < y)
+            {
+                Console.WriteLine("x is greater than y");
+            }
+            else
+            {
+                Console.WriteLine("y is greater than x");
+            }
+        }
+
+        static void SomeMethod()
+        {
+            int i = 0;
+
+            while (i < 10)
+            {
+                Console.WriteLine(i);
+                i--;
+            }
+        }
+    }
+}
+```
+
+Identify one syntax error and two logical errors in the code above. Also, explain how to fix these errors.
+
+## Task 2:
+
+Explain the following exceptions:
+
+1. `ArgumentNullException`
+2. `IndexOutOfRangeException`
+3. `NullReferenceException`
+4. `FileNotFoundException`
+5. `IOException`
+6. `DivideByZeroException`
+
+# Formative and Research Assessment Submission
+
+Create a new pull request and assign **grayson-orr** to review your submission. Please don't merge your own pull request.

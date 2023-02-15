@@ -488,7 +488,9 @@ string text = File.ReadAllText("example.txt");
 Console.WriteLine(text);
 ```
 
-This code uses the `ReadAllText()` **method** of the `File` **class** to read the contents of the file "example.txt" and assigns the result to `text`.
+**Question:** Where do you stored `example.txt`?
+
+This code uses the `ReadAllText()` **method** of the `File` **class** to read the contents of the file `example.txt` and assigns the result to `text`.
 
 Here is another example of how to use the `StreamReader` **class** to read the contents of a text file:
 
@@ -503,14 +505,14 @@ using (StreamReader reader = new StreamReader("example.txt"))
 }
 ```
 
-In this example, the `StreamReader` **class** is used to read the contents of the file **"example.txt"** line by line, and each line is printed to the console.
+In this example, the `StreamReader` **class** is used to read the contents of the file `example.txt` line by line, and each line is printed to the console.
 
 Similarly, the `File` **class** has **methods** to write to a file, as well as `StreamWriter` **class**.
 
 ```cs
 File.WriteAllText("example.txt", "Hello, World!");
 ```
-This code uses the `WriteAllText()` **method** of the `File` **class** to write the string "Hello, World!" to the file "example.txt"
+This code uses the `WriteAllText()` **method** of the `File` **class** to write the string "Hello, World!" to the file `example.txt`.
 
 ```cs
 using (StreamWriter writer = new StreamWriter("example.txt"))
@@ -570,4 +572,4 @@ To handle the edge case where the word does not contain vowels, you can check if
 
 # Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your practical submission. Please don't merge your own pull request.
+Create a new pull request and assign **grayson-orr** to review your submission. Please don't merge your own pull request.

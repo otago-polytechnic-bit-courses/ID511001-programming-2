@@ -28,28 +28,27 @@ Here's an example of a simple unit test using **MSTest**:
 public class CalculatorTests
 {
     [TestMethod]
-    public void AddShouldReturnSum()
+    public void AddShouldReturnCorrectSum()
     {
-        // Arrange
         Calculator calculator = new Calculator();
         int x = 2;
         int y = 3;
         int expected = 5;
 
-        // Act
         int actual = calculator.Add(x, y);
 
-        // Assert
         Assert.AreEqual(expected, actual);
     }
 }
 ```
 
-In this example, the test class `CalculatorTests` has one test method `AddShouldReturnSum()`. This method uses the `Assert.AreEqual()` method to check that the result of the `Add()` method of the `Calculator` class is equal to the expected value. The test method is decorated with the `[TestMethod]` attribute, which tells the unit testing framework that this method is a test.
+In this example, the test class `CalculatorTests` has one test method `AddShouldReturnCorrectSum()`. This method uses the `Assert.AreEqual()` method to check that the result of the `Add()` method of the `Calculator` class is equal to the expected value. The test method is decorated with the `[TestMethod]` attribute, which tells the unit testing framework that this method is a test.
 
 When the test is run, the unit testing framework will execute the `AddShouldReturnSum()` method and check the assertion. If the assertion passes, the test is considered to have passed. If the assertion fails, the test is considered to have failed and the framework will provide a detailed error message.
 
 Unit testing is an important practice in software development, as it helps to ensure that the code is working correctly, it helps to detect and fix bugs early, and it allows for more confident and safe changes and refactoring of the code. It also helps to increase the quality and maintainability of the code.
+
+Let us look at how to create a test class. Open the `Calculator` project in **Visual Studio**.
 
 # Formative Assessment
 
@@ -76,7 +75,7 @@ using System;
 
 namespace Debugging
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {

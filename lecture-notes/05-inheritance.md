@@ -7,7 +7,7 @@ Inheritance is one of the fundamental principles of object-oriented programming,
 Here's an example of inheritance:
 
 ```cs
-class Animal
+public class Animal
 {
     public string Name { get; set; }
     public int Age { get; set; }
@@ -16,7 +16,7 @@ class Animal
     public void Sleep() { /*...*/ }
 }
 
-class Dog : Animal
+public class Dog : Animal
 {
     public void Bark() { /*...*/ }
 }
@@ -27,7 +27,7 @@ In this example, the `Animal` class is the base class. It has two properties, `N
 A derived class can also override the base class's methods, properties or events. It can implement a method or property already defined in the base class using the `override` keyword.
 
 ```cs
-class Dog : Animal
+public class Dog : Animal
 {
     public override string Name { get; set; }
     public void Bark() { /*...*/ }

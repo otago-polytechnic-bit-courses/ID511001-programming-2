@@ -64,7 +64,7 @@ In most programming languages, sets are implemented using a hash table or a tree
 Here is an example of a simple set class implemented using a hash table:
 
 ```cs
-class Set
+public class Set
 {
     private HashSet<int> items;
 
@@ -134,7 +134,7 @@ In most programming languages, maps are implemented using a hash table or a tree
 Here is an example of a simple map class implemented using a hash table:
 
 ```cs
-class Map
+public class Map
 {
     private Dictionary<string, int> items;
 
@@ -188,7 +188,7 @@ In most programming languages, stacks are implemented using an array or a linked
 Here is an example of a simple stack class implemented:
 
 ```cs
-class Stack
+public class Stack
 {
     private int[] items;
     private int top;

@@ -5,7 +5,7 @@ A **class** is a blueprint for creating **objects** (a particular data structure
 Here is an example of a simple **class**:
 
 ```cs
-class Dog
+public class Dog
 {
     // fields
     public string name;
@@ -35,7 +35,7 @@ This code creates a new **object** of type `Dog` named "myDog", assigns values t
 Classes can also have constructors, which are special **methods** that are called when an **object** is created and can be used to initialise the **object's** state. For example:
 
 ```cs
-class Dog
+public class Dog
 {
     // fields
     public string name;
@@ -104,7 +104,7 @@ Encapsulation is achieved through access modifiers, such as `public`, `private`,
 For example, a class can have a private field that holds some important data and a public property that allows the data to be accessed, like this:
 
 ```cs
-class BankAccount
+public class BankAccount
 {
     private decimal balance;
 

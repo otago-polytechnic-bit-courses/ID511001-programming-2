@@ -10,7 +10,7 @@ There are two types of polymorphism:
 Here is an example of polymorphism using method overloading:
 
 ```cs
-class Calculator
+public class Calculator
 {
     public int Add(int x, int y)
     {
@@ -29,7 +29,7 @@ In this example, the `Calculator` class has two methods called `Add()` that have
 Here is an example of polymorphism using method overriding:
 
 ```cs
-class Shape
+public class Shape
 {
     public virtual void Draw()
     {
@@ -37,7 +37,7 @@ class Shape
     }
 }
 
-class Rectangle : Shape
+public class Rectangle : Shape
 {
     public override void Draw()
     {
@@ -45,7 +45,7 @@ class Rectangle : Shape
     }
 }
 
-class Circle : Shape
+public class Circle : Shape
 {
     public override void Draw()
     {

@@ -347,7 +347,7 @@ In **C#**, a **method** is a block of code that performs a specific task and can
 - Instance **methods**: These **methods** are associated with an instance of a **class** and can access the instance's data.
 
 ```cs
-class MyClass {
+public class MyClass {
     public int myValue = 0;
 
     public void IncreaseValue(int amount) {
@@ -366,7 +366,7 @@ Console.WriteLine(myObj.myValue);
 <!-- - Static **methods**: These **methods** are associated with a **class** and do not have access to an instance's data. They can only access static data.
 
 ```cs
-class MyClass {
+public class MyClass {
     public static int Add(int a, int b) {
         return a + b;
     }
@@ -380,7 +380,7 @@ Console.WriteLine(result);
 - Constructors: These **methods** are used to create and initialise an instance of a **class**.
 
 ```cs
-class MyClass {
+public class MyClass {
     public int myValue;
 
     public MyClass(int value) {
@@ -396,7 +396,7 @@ Console.WriteLine(myObj.myValue);
 - Destructors: These **methods** are used to clean up resources when an instance of a **class** is no longer needed. It is not recommended in **C#**. 
 
 ```cs
-class MyClass {
+public class MyClass {
     ~MyClass() {
         // Clean up resources
     }
@@ -406,7 +406,7 @@ class MyClass {
 - Extension methods: These **methods** are used to add functionality to existing **classes** without modifying the source code. Also, they require the `this` keyword on the first parameter, which defines the type of object the **method** will be an extension of.
 
 ```cs
-static class MyClass {
+public static class MyClass {
     public static int Multiply(this int num, int factor) {
         return num * factor;
     }

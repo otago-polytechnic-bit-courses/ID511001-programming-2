@@ -51,7 +51,7 @@ When the test is run, the unit testing framework will execute the `AddShouldRetu
 
 Unit testing is an important practice in software development, as it helps to ensure that the code is working correctly, it helps to detect and fix bugs early, and it allows for more confident and safe changes and refactoring of the code. It also helps to increase the quality and maintainability of the code.
 
-Let us look at how to create a test class. Open the `Calculator` project in **Visual Studio**. It can be found in the `04-Calculator-Example` directory. Right-click on `Solution 'Calculator'` in the **Solution Explorer**. Click on **Add** then **New Project...**. You will be presented with a **Add a new project** window. Choose the **MSTest Test Project** template, and name it `CalculatorTests`. Once you have created the project, you will see the following:
+Let us look at how to create a test class. Open the `Calculator` project in **Visual Studio**. It can be found in the `04-calculator-example` directory. Right-click on `Solution 'Calculator'` in the **Solution Explorer**. Click on **Add** then **New Project...**. You will be presented with a **Add a new project** window. Choose the **MSTest Test Project** template, and name it `CalculatorTests`. Once you have created the project, you will see the following:
 
 ```cs
 using Microsoft.VisualStudio.TestTools.UnitTesting;

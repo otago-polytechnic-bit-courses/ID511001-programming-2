@@ -24,31 +24,52 @@ Unit tests are typically written using a unit testing framework, such as **MSTes
 Here's an example of a simple unit test using **MSTest**:
 
 ```cs
-[TestClass]
-public class CalculatorTests
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace CalculatorTests
 {
-    [TestMethod]
-    public void AddShouldReturnCorrectSum()
+    [TestClass]
+    public class CalcTests
     {
-        Calculator calculator = new Calculator();
-        int x = 2;
-        int y = 3;
-        int expected = 5;
-
-        int actual = calculator.Add(x, y);
-
-        Assert.AreEqual(expected, actual);
+        [TestMethod]
+        public void AddShouldReturnCorrectSum()
+        {
+            Calc calculator = new Calc();
+            double firstNum = 2.0;
+            double secondNum = 3.0;
+            double expected = 5.0;
+            double actual = calculator.Add(firstNum, secondNum);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
 ```
 
-In this example, the test class `CalculatorTests` has one test method `AddShouldReturnCorrectSum()`. This method uses the `Assert.AreEqual()` method to check that the result of the `Add()` method of the `Calculator` class is equal to the expected value. The test method is decorated with the `[TestMethod]` attribute, which tells the unit testing framework that this method is a test.
+In this example, the test class `CalcTests` has one test method `AddShouldReturnCorrectSum()`. This method uses the `Assert.AreEqual()` method to check that the result of the `Add()` method of the `Calculator` class is equal to the expected value. The test method is decorated with the `[TestMethod]` attribute, which tells the unit testing framework that this method is a test.
 
-When the test is run, the unit testing framework will execute the `AddShouldReturnSum()` method and check the assertion. If the assertion passes, the test is considered to have passed. If the assertion fails, the test is considered to have failed and the framework will provide a detailed error message.
+When the test is run, the unit testing framework will execute the `AddShouldReturnCorrectSum()` method and check the assertion. If the assertion passes, the test is considered to have passed. If the assertion fails, the test is considered to have failed and the framework will provide a detailed error message.
 
 Unit testing is an important practice in software development, as it helps to ensure that the code is working correctly, it helps to detect and fix bugs early, and it allows for more confident and safe changes and refactoring of the code. It also helps to increase the quality and maintainability of the code.
 
-Let us look at how to create a test class. Open the `Calculator` project in **Visual Studio**.
+Let us look at how to create a test class. Open the `Calculator` project in **Visual Studio**. This can found in the `04-Calculator-Example` directory. Right-click on `Solution 'Calculator'` in the **Solution Explorer**. Click on **Add** then **New Project...**. You will be presented with a **Add a new project** window. Choose the **MSTest Test Project** template and name is `CalculatorTests`. Once you have created the project, you see the following:
+
+```cs
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace CalculatorTests
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void TestMethod1()
+        {
+        }
+    }
+}
+```
+
+Rename the `UnitTest1.cs` file to `CalcTests.cs` and add the code from the `CalcTests` example above. **Note:** Do not remove any `using` directives. You will need to add a project reference to `CalculatorTests`. Without this, you will not be able to access the `Calc` class. To do this, right-click on `CalculatorTests`. Click on **Add** then **Project Reference...**. You will be presented with a **Reference Manager** window. Check `Calculator`. Add the following `using` directive - `using Calculator;` below `using Microsoft.VisualStudio.TestTools.UnitTesting;`. Now you should have access to the `Calc` class. To run `CalculatorTests`, press the <kbd>ctrl</kbd> + <kbd>r</kbd> + <kbd>t</kbd>.
 
 # Formative Assessment
 

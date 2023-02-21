@@ -321,7 +321,7 @@ do
 
 **Ask ChatGPT 🤖** - What is a `foreach` loop in **C#**?:
 
-<!-- - `foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
+`foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
 
 ```cs
 foreach (var item in collection)
@@ -338,7 +338,7 @@ foreach (int i in numbers)
 {
     Console.WriteLine(i);
 }
-``` -->
+```
 
 ## Methods
 
@@ -363,7 +363,7 @@ Console.WriteLine(myObj.myValue);
 
 **Ask ChatGPT 🤖** - What are other **methods** in **C#**?:
 
-<!-- - Static **methods**: These **methods** are associated with a **class** and do not have access to an instance's data. They can only access static data.
+- Static **methods**: These **methods** are associated with a **class** and do not have access to an instance's data. They can only access static data.
 
 ```cs
 public class MyClass {
@@ -415,7 +415,7 @@ public static class MyClass {
 // Usage:
 int result = 5.Multiply(3);
 Console.WriteLine(result); 
-``` -->
+```
 
 ## Error Handling
 

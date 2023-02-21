@@ -560,9 +560,9 @@ Create a **method** called `convert` that takes in two parameters, `hours` and `
 
 ## Task 6
 
-Create a **string variable** called `sentence` and assign the value "The anemone, the wild violet, the hepatica, and the funny little curled-up." to it.
+Create a **string variable** called `sentence` and assign the value "The anemone, the wild violet, the hepatica, and the funny little curled-up." to it. Convert the string into an array. Use a loop to count the number of occurrences of the word "the" in the array.
 
-In my solution, I used the `String.Split` **method** to split the sentence into words by the space character, and then used a loop to count the number of occurrences of the word "the" in the sentence.
+In my solution, I used the `String.Split` **method** to split the sentence into words by the space character.
 
 ## Task 7
 

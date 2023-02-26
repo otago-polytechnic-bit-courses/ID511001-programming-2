@@ -132,17 +132,21 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `public` properties for `Make`, `Model`, and `Year`. Include a constructor that sets the make, model, and year when the object is created. Create three `Car` objects and display their `Make`, `Model`, and `Year` properties. 
+You are asked to design a student enrolment system for this task. Let's start by noting some of the system's requirements in a Microsoft Word document. For example, the system should allow students to enrol in multiple courses, withdraw from a course and view the course timetables. Create a rough class diagram showing the classes' relationships. Consider what attributes and methods each class should have and how they should interact with each other.
 
 ## Task 2:
 
-This task aims to help you understand how to apply OO principles in real-world scenarios and how to design effective and efficient class structures before coding. You are asked to design a student enrolment system for this task. Let's start by noting some of the system's requirements in a Microsoft Word document. For example, the system should allow students to enrol in multiple courses, withdraw from a course and view the course timetables. Create a rough class diagram showing the classes' relationships. Consider what attributes and methods each class should have and how they should interact with each other. 
+Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `public` properties for `Make`, `Model`, and `Year`. Include a constructor that sets the make, model, and year when the object is created. Create three `Car` objects and display their `Make`, `Model`, and `Year` properties. 
 
 ## Task 3:
 
-Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` properties for `Name`, `Age`, and `Salary` with a setter for the `Salary` property that checks for negative input and throws an `ArgumentException` with message "Salary can not be negative." Include a constructor that sets the name, age, and salary when the object is created. Create three `Employee` objects and display their `Name`, `Age`, and `Salary` properties.
+Choose an object in the classroom environment or even in the outside environment. Create a class for it. Include at least **three** fields. Feel free to add **methods** but this is not required.
 
 ## Task 4:
+
+Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` properties for `Name`, `Age`, and `Salary` with a setter for the `Salary` property that checks for negative input and throws an `ArgumentException` with message "Salary can not be negative." Include a constructor that sets the name, age, and salary when the object is created. Create three `Employee` objects and display their `Name`, `Age`, and `Salary` properties.
+
+## Task 5:
 
 Create a program that simulates a banking system. 
 
@@ -154,7 +158,7 @@ Create a `Transaction` class, which should have fields for the amount of money t
 
 Use these classes to create a program allowing customers to open a bank account, deposit and withdraw money, and view their account balance. Also, create a log of all transactions made on the account.
 
-## Task 5:
+## Task 6:
 
 Create a program that simulates a movie rental system.
 
@@ -166,7 +170,7 @@ Create a `Rental` class, which should have **fields** for the movie rented, the 
 
 Use these **classes** to create a program allowing customers to search for and rent a movie, view their rental history, and return a rented movie. The program should also have an inventory of available movies and a log of all rentals.
 
-## Task 6:
+## Task 7:
 
 Create a program that simulates an online store.
 
@@ -178,7 +182,7 @@ Create an `Order` class, which should have **fields** for the customer who place
 
 Use these **classes** to create a program that allows a customer to browse products, add them to a shopping cart, and place an order. The program should also have an inventory of available products, and it should update the inventory when a product is purchased.
 
-## Task 7:
+## Task 8: 
 
 Create a program that reads data from a text file and creates five `Dog` **objects**.
 
@@ -196,9 +200,9 @@ Dixie,9
 
 Use the `StreamReader` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to an array. Print out the `name` and `age` for each item in the array. Add error handling to ensure that the program gracefully handles any issues with reading the file or parsing the data.
 
-## Task 8: 
+## Task 9:
 
-Create a class diagram for two of the six programs.
+Create a class diagram for two programs you have created.
 
 # Formative Assessment Submission
 

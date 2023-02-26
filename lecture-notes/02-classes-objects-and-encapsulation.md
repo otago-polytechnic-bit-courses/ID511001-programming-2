@@ -30,9 +30,9 @@ myDog.age = 3;
 myDog.Bark(); 
 ```
 
-This code creates a new **object** of type `Dog` named "myDog", assigns values to its name and age **fields**, and then calls the `Bark()` **method** on the **object**.
+This code creates a new **object** of type `Dog` named `myDog`, assigns values to its `name` and `age` **fields**, and then calls the `Bark()` **method** on the **object**.
 
-Classes can also have constructors, which are special **methods** that are called when an **object** is created and can be used to initialise the **object's** state. For example:
+Classes can also have **constructors**, which are special **methods** that are called when an **object** is created and can be used to initialise the **object's** state. For example:
 
 ```cs
 public class Dog
@@ -56,7 +56,7 @@ public class Dog
 }
 ```
 
-In this example, the **class** `Dog` has a constructor that takes two parameters, `name` and `age`, and assigns them to the corresponding **fields**. To create an **object** from this **class**, you can use the constructor and pass in the required parameters like this:
+In this example, the **class** `Dog` has a constructor that takes two parameters, `name` and `age`, and assigns them to the corresponding **fields**. To create an **object** from this **class**, you can use the **constructor** and pass in the required parameters like this:
 
 ```cs
 Dog myDog = new Dog("Max", 3);

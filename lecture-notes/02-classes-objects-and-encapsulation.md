@@ -132,7 +132,7 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-You are asked to design a student enrolment system for this task. Let's start by noting some of the system's requirements in a Microsoft Word document. For example, the system should allow students to enrol in multiple courses, withdraw from a course and view the course timetables. Create a rough class diagram showing the classes' relationships. Consider what attributes and methods each class should have and how they should interact with each other.
+Choose an object in the classroom environment or even in the outside environment. Create a class for it. Include at least **three** fields. Feel free to add **methods** but this is not required.
 
 ## Task 2:
 
@@ -140,7 +140,7 @@ Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `pu
 
 ## Task 3:
 
-Choose an object in the classroom environment or even in the outside environment. Create a class for it. Include at least **three** fields. Feel free to add **methods** but this is not required.
+You are asked to design a student enrolment system for this task. Let's start by noting some of the system's requirements in a Microsoft Word document. For example, the system should allow students to enrol in multiple courses, withdraw from a course and view the course timetables. Create a rough class diagram showing the classes' relationships. Consider what attributes and methods each class should have and how they should interact with each other.
 
 ## Task 4:
 

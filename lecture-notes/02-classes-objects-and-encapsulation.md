@@ -1,5 +1,7 @@
 # 02: Classes & Objects
 
+Lecture video can found here - [https://otagopoly.sharepoint.com/sites/id511001-programming-2-s1-23/_layouts/15/stream.aspx?id=%2Fsites%2Fid511001%2Dprogramming%2D2%2Ds1%2D23%2FShared%20Documents%2FRecordings%2FMeeting%20in%20%5Fs1%2D23%5F%2D20230227%5F150945%2DMeeting%20Recording%2Emp4](https://otagopoly.sharepoint.com/:v:/r/sites/id511001-programming-2-s1-23/Shared%20Documents/Recordings/Meeting%20in%20_s1-23_-20230227_150945-Meeting%20Recording.mp4?csf=1&web=1&e=Dg0pzD)
+
 A **class** is a blueprint for creating **objects** (a particular data structure), providing initial values for state (member **variables** or **fields**), and implementations of behaviour (member functions or **methods**). A **class** can be defined using the `class` keyword, followed by the **class** name.
 
 Here is an example of a simple **class**:

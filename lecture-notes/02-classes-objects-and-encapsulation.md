@@ -146,17 +146,17 @@ You are asked to design a student enrolment system for this task. Let's start by
 
 ## Task 4:
 
-Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` properties for `Name`, `Age`, and `Salary` with a setter for the `Salary` property that checks for negative input and throws an `ArgumentException` with message "Salary can not be negative." Include a constructor that sets the name, age, and salary when the object is created. Create three `Employee` objects and display their `Name`, `Age`, and `Salary` properties.
+Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` properties for `Name`, `Age`, and `Salary` with a **setter** for the `Salary` property that checks for negative input and **throws** an `ArgumentException` with the message "Salary can not be negative." Include a **constructor** that sets the **name**, **age**, and **salary** when the **object** is created. Create three `Employee` objects and display their `Name`, `Age`, and `Salary` properties.
 
 ## Task 5:
 
 Create a program that simulates a banking system. 
 
-Create a `BankAccount` class, which should have methods for depositing and withdrawing money and checking the account balance.
+Create a `BankAccount` **class**, which should have **methods** for depositing and withdrawing money and checking the account balance.
 
-Create a `Customer` class, which should have fields for the customer's name, address, and contact information and a method for opening a new bank account.
+Create a `Customer` **class**, which should have **fields** for the customer's name, address, and mobile number and a method for opening a new bank account.
 
-Create a `Transaction` class, which should have fields for the amount of money transferred and the transaction date.
+Create a `Transaction` **class**, which should have **fields** for the amount of money transferred.
 
 Use these classes to create a program allowing customers to open a bank account, deposit and withdraw money, and view their account balance. Also, create a log of all transactions made on the account.
 
@@ -164,11 +164,11 @@ Use these classes to create a program allowing customers to open a bank account,
 
 Create a program that simulates a movie rental system.
 
-Create a `Movie` class, which should have **fields** for the movie's `title`, `genre`, `rating`, and `availability`.
+Create a `Movie` **class**, which should have **fields** for the movie's `title`, `genre`, `rating`, and `availability`.
 
-Create a `Customer` class, which should have **fields** for the customer's `first name`, `last name`, `address`, and `mobile number`, as well as an **array** of the movies they have rented.
+Create a `Customer` **class**, which should have **fields** for the customer's `first name`, `last name`, `address`, and `mobile number`, as well as an **array** of the movies they have rented.
 
-Create a `Rental` class, which should have **fields** for the movie rented, the customer who rented it, and the rental date.
+Create a `Rental` **class**, which should have **fields** for the movie rented, the customer who rented it, and the rental date.
 
 Use these **classes** to create a program allowing customers to search for and rent a movie, view their rental history, and return a rented movie. The program should also have an inventory of available movies and a log of all rentals.
 
@@ -176,11 +176,11 @@ Use these **classes** to create a program allowing customers to search for and r
 
 Create a program that simulates an online store.
 
-Create a `Product` class, which should have **fields** for the product's `name`, `description`, `price`, and `stock`.
+Create a `Product` **class**, which should have **fields** for the product's `name`, `description`, `price`, and `stock`.
 
-Create a `Customer` class, which should have **fields** for the customer's `first name`, `last name`, `address`, and `mobile number`, as well as an **array** of the products they have purchased.
+Create a `Customer` **class**, which should have **fields** for the customer's `first name`, `last name`, `address`, and `mobile number`, as well as an **array** of the products they have purchased.
 
-Create an `Order` class, which should have **fields** for the customer who placed the order, the products ordered, and the order date.
+Create an `Order` **class**, which should have **fields** for the customer who placed the order, the products ordered, and the order date.
 
 Use these **classes** to create a program that allows a customer to browse products, add them to a shopping cart, and place an order. The program should also have an inventory of available products, and it should update the inventory when a product is purchased.
 

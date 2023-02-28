@@ -86,21 +86,46 @@ You will need to submit an app \& documentation that meet the following requirem
 \subsection*{Functionality - Learning Outcomes 1 \& 2 (40\%)}
 \begin{itemize}
     \item The app \textbf{must} open without code or file structure modification in \textbf{Visual Studio}.
+    \item Create the following classes:
+    \begin{itemize}
+        \item \textbf{AssessmentMarks} which has the following field:
+        \begin{itemize}
+            \item \textbf{assessmentMarks} of type \textbf{List<int>}
+        \end{itemize}
+        \item \textbf{Person} which is an \textbf{abstract} class \& has the following fields \& method:
+        \begin{itemize}
+            \item \textbf{id} of type \textbf{int}
+            \item \textbf{firstName} of type \textbf{string}
+            \item \textbf{lastName} of type \textbf{string}
+            \item \textbf{DisplayDetails()} which is an \textbf{public abstract} method, has no arguments \& returns a \textbf{string}
+        \end{itemize}    
+        \item \textbf{Learner} which inherits from \textbf{Person} \& has the following additional fields \& method:
+        \begin{itemize}
+            \item \textbf{prog1AssessmentMarks} of type \textbf{AssessmentMarks}
+            \item \textbf{prog2AssessmentMarks} of type \textbf{AssessmentMarks}
+            \item \textbf{DisplayDetails()} which is an \textbf{override} method, has no arguments \& returns a \textbf{Learner's} \textbf{id}, \textbf{first name} \& \textbf{last name}
+        \end{itemize}
+        \item \textbf{Lecturer} which inherits from \textbf{Person} \& has the following additional fields \& method:
+        \begin{itemize}
+            \item \textbf{position} of type \textbf{string}
+            \item \textbf{salary} of type \textbf{int}
+            \item \textbf{DisplayDetails()} which is an \textbf{override} method, has no arguments \& returns a \textbf{Lecturer's} \textbf{id}, \textbf{first name}, \textbf{last name}, \textbf{position} \& \textbf{salary}
+        \end{itemize}
+    \end{itemize}
     \item Read a text file called \textbf{learners.txt} which contains information about five learners. This information includes \textbf{id}, \textbf{first name}, \textbf{last name}, three \textbf{ID510001: Programming 1 assessment marks} \& three \textbf{ID511001: Programming 2 assessment marks}. \textbf{Note:} \textbf{learners.txt} \textbf{must} be located in the \textbf{bin/Debug} folder.
-    \item The learners' information is stored in a \textbf{List} of \textbf{Learner} objects. A \textbf{Learner} object \textbf{must} have the following fields:
+    \item Create a \textbf{List} of \textbf{Learner} objects \& populate it with the information from the \textbf{learners.txt} file.
+    \item Read a text file called \textbf{lecturers.txt} which contains information about three lecturers. This information includes \textbf{id}, \textbf{first name}, \textbf{last name}, \textbf{position} \& \textbf{salary}. \textbf{Note:} \textbf{lecturers.txt} \textbf{must} be located in the \textbf{bin/Debug} folder.
+    \item Create a \textbf{List} of \textbf{Lecturer} objects \& populate it with the information from the \textbf{lecturers.txt} file.
+    \item An \textbf{AssessmentMarks} object has several behaviours such as getting all marks, all grades, highest mark(s), lowest mark(s), fail mark(s), average marks \& average grades. Create the following \textbf{public} methods in the \textbf{AssessmentMarks} class:
     \begin{itemize}
-        \item \textbf{id}
-        \item \textbf{firstName}
-        \item \textbf{lastName}
-        \item \textbf{AssessmentMarks} object called \textbf{prog1AssessmentMarks}
-        \item \textbf{AssessmentMarks} object called \textbf{prog2AssessmentMarks}
+        \item \textbf{GetAllMarks()} which has no arguments \& returns a \textbf{List<int>} 
+        \item \textbf{GetAllGrades()} which has no arguments \& returns a \textbf{List<string>}
+        \item \textbf{GetHighestMarks()} which has no arguments \& returns a \textbf{List<int>}
+        \item \textbf{GetLowestMarks()} which has no arguments \& returns a \textbf{List<int>}
+        \item \textbf{GetFailMarks()} which has no arguments \& returns a \textbf{List<int>}
+        \item \textbf{GetAverageMarks()} which has no arguments \& returns a \textbf{double}
+        \item \textbf{GetAverageGrade()} which has no arguments \& returns a \textbf{string}
     \end{itemize}
-    \textbf{Note:} A \textbf{Learner} has no behaviours.
-    \item An \textbf{AssessmentMarks} object \textbf{must} have the following fields:
-    \begin{itemize}
-        \item A \textbf{List} of \textbf{int} called \textbf{assessmentMarks}
-    \end{itemize}
-    \item An \textbf{AssessmentMarks} object has several behaviours such as getting all marks, all grades, highest mark(s), lowest mark(s), fail mark(s), average marks and average grades.
     \item A grade is calculated using the following grade table:\\\\
     \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{|c|c|}
@@ -127,9 +152,10 @@ You will need to submit an app \& documentation that meet the following requirem
         \item 5. Display average grades
         \item 6. Add a learner
         \item 7. Remove a learner
+        \item 8. Display lecturer details
         \item 0. Exit
     \end{itemize}
-    \textbf{Note:} You will need to create individual methods to achieve this functionality. Also, the app \textbf{must} be able to handle invalid user input. If the user enters an invalid option, an error message \textbf{must} be displayed.
+    \textbf{Note:} In the \textbf{Program.cs} file, you will need to create methods to achieve this functionality. Also, the app \textbf{must} be able to handle invalid user input. If the user enters an invalid option, a message \textbf{must} be displayed.
     \begin{figure}[ht]
         \centering
         \includegraphics[width=150mm,height=50mm]{../../resources/img/project-1/1.PNG}
@@ -145,7 +171,7 @@ You will need to submit an app \& documentation that meet the following requirem
         \centering
         \includegraphics[width=150mm,height=75mm]{../../resources/img/project-1/3.PNG}
     \end{figure}
-    \item When the user selects \textbf{3. Display highest, lowest and fail marks}, the app \textbf{must} display the highest, lowest and fail marks for all learners. The marks \textbf{must} be displayed as follows:
+    \item When the user selects \textbf{3. Display highest, lowest and fail marks}, the app \textbf{must} display the highest, lowest \& fail marks for all learners. The marks \textbf{must} be displayed as follows:
     \begin{figure}[ht]
         \centering
         \includegraphics[width=150mm,height=90mm]{../../resources/img/project-1/4.PNG}
@@ -174,7 +200,7 @@ You will need to submit an app \& documentation that meet the following requirem
         \item \textbf{ID511001: Programming 2 assessment mark 2}
         \item \textbf{ID511001: Programming 2 assessment mark 3}
     \end{itemize}
-    \textbf{Note:} An \textbf{assessment mark} \textbf{must} be between \textbf{0} and \textbf{100}. If an \textbf{assessment mark} is invalid, an error message \textbf{must} be displayed. Also, the \textbf{id} of the learner \textbf{must} be generated automatically. However, the \textbf{id} \textbf{must} be unique. 
+    \textbf{Note:} A \textbf{first name} \& \textbf{last name} \textbf{must} not contain numbers or special characters. An \textbf{assessment mark} \textbf{must} be between \textbf{0} \& \textbf{100}. If an \textbf{assessment mark} is invalid, an error message \textbf{must} be displayed. The learner's \textbf{id} \textbf{must} be generated automatically. However, the \textbf{id} \textbf{must} be unique. Append the learner's information to the \textbf{learners.txt} file.  
     \begin{figure}[h]
         \centering
         \includegraphics[width=150mm,height=110mm]{../../resources/img/project-1/7.PNG}
@@ -185,13 +211,18 @@ You will need to submit an app \& documentation that meet the following requirem
         \centering
         \includegraphics[width=150mm,height=85mm]{../../resources/img/project-1/8.PNG}
     \end{figure}
+    \item When the user selects \textbf{8. Display lecturer details}, the app \textbf{must} display the lecturer's details. The details \textbf{must} be displayed as follows:
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=150mm,height=75mm]{../../resources/img/project-1/9.PNG}
+    \end{figure}
     \item When the user selects \textbf{0. Exit}, the app \textbf{must} exit. 
-    \item 20 \textbf{unit tests} using \textbf{MSTest} which verify the functionality.
+    \item 10 \textbf{unit tests} using \textbf{MSTest} which verify the functionality.
 \end{itemize}
 
 \subsection*{Code Elegance - Learning Outcomes 1 \& 2  (45\%)}
 \begin{itemize}
-    \item Adhere to the two principles of \textbf{OO}, i.e., encapsulation \& abstraction.
+    \item Adhere to the principles of \textbf{OO}.
     \item Use of intermediate variables, constants \& try-catch blocks.
     \item Idiomatic use of control flow, data structures \& in-built functions.
     \item Efficient algorithmic approach.
@@ -211,7 +242,7 @@ You will need to submit an app \& documentation that meet the following requirem
         \item Known bugs if applicable.
     \end{itemize}
     \item Commit at least \textbf{20} times per week.
-    \item Commit messages \textbf{must} be formatted using the recommended conventions \& reflect the context of each functional requirement change.
+    \item Commit messages \textbf{must} be formatted using the convention discussed in \textbf{01-github-workflow-and-c#-basics} \& reflect the context of each functional requirement change.
 \end{itemize}
 
 \end{document}

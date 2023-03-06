@@ -1,6 +1,6 @@
 # 03: Abstract Data Types (ADTs)
 
-Lecture video can found here - https://otagopoly.sharepoint.com/sites/id511001-programming-2-s1-23/Shared%20Documents/Recordings/Meeting%20in%20_s1-23_-20230306_150550-Meeting%20Recording.mp4?web=1
+Lecture video can found here - https://bit.ly/3JfCb4c
 
 ## What is an abstract data type?
 

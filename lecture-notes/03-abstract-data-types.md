@@ -337,7 +337,7 @@ Implement the following:
 
 1. Use the `Lookup` method to lookup the value associated with the key "ID721001" in `myMap`
 2. Use the `Remove` method to remove the key-value pair with the key "ID607001" from `myMap`.
-3. Use the `Lookup` method to lookup the value associated with the key "ID607001" in `myMap`
+3. Use the `Lookup` method to lookup the value associated with the key "ID607001" in `myMap`. **Note:** This will thrown an `Exception`. Comment this line of code to continue the execution of your program.
 
 ## Task 4:
 

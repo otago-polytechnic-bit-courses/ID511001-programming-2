@@ -170,6 +170,15 @@ public class Map
         }
         return value;
     }
+    
+    public void Update(string key, int newValue)
+    {
+        if (!items.ContainsKey(key))
+        {
+            throw new Exception("Key not found");
+        }
+        items[key] = newValue;
+    }
 }
 ```
 

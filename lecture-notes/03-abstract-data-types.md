@@ -1,5 +1,7 @@
 # 03: Abstract Data Types (ADTs)
 
+Lecture video can found here - https://otagopoly.sharepoint.com/sites/id511001-programming-2-s1-23/Shared%20Documents/Recordings/Meeting%20in%20_s1-23_-20230306_150550-Meeting%20Recording.mp4?web=1
+
 ## What is an abstract data type?
 
 An abstract data type (ADT) is a mathematical model for a certain class of data structures with similar behaviour. An ADT specifies a set of operations that can be performed on the data and the behaviour of those operations. It is called "abstract" because it is not tied to any specific data structure implementation. It does not specify how the data is stored or organised in memory.

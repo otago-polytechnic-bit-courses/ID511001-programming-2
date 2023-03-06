@@ -83,7 +83,7 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-Create a unit test for four of the six programs in **02-formative-assessment**. Ensure that you cover all fields and methods concerned.
+Create a unit test for four tasks in **02-formative-assessment**. Ensure that you cover all fields and methods concerned.
 
 # Research Assessment
 

@@ -9,27 +9,45 @@ Here's an example of inheritance:
 ```cs
 public class Animal
 {
+    private string name;
+    private int age;
+
+    public Animal(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+
     public string Name { get; set; }
     public int Age { get; set; }
 
-    public void Eat() { /*...*/ }
-    public void Sleep() { /*...*/ }
+    // Derived classes can override the base class implementation.
+    public virtual void Eat() { /*...*/ }
+    public virtual void Sleep() { /*...*/ }
 }
 
 public class Dog : Animal
 {
+    public Dog(string name, int age)
+        :base(name, age)
+    {
+
+    }
+
+    public override void Eat() { /*...*/ }
     public void Bark() { /*...*/ }
 }
 ```
 
-In this example, the `Animal` class is the base class. It has two properties, `Name` and `Age`, and two methods `Eat()` and `Sleep()`. The `Dog` class is the derived class. It inherits the base class's properties and methods and has a new method, `Bark()`.
+In this example, the `Animal` class is the base class. It has two fields, `name` and `age`, and two virtual methods `Eat()` and `Sleep()`. The `Dog` class is the derived class. It inherits the base class's fields and methods and has a new method, `Bark()`.
 
-A derived class can also override the base class's methods, properties or events. It can implement a method or property already defined in the base class using the `override` keyword.
+A derived class can also override the base class's methods and properties using the `override` keyword.
 
 ```cs
 public class Dog : Animal
 {
     public override string Name { get; set; }
+
     public void Bark() { /*...*/ }
 }
 ```

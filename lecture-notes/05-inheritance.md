@@ -21,27 +21,32 @@ public class Animal
     public string Name { get; set; }
     public int Age { get; set; }
 
-    // Derived classes can override the base class implementation.
+    // virtual - derived classes can override the base class implementation
     public virtual void Eat() { /*...*/ }
     public virtual void Sleep() { /*...*/ }
 }
 
 public class Dog : Animal
 {
-    public Dog(string name, int age)
+    private string colour;
+
+    public Dog(string name, int age, string colour)
         :base(name, age)
     {
 
     }
 
+    // Overriding the base class implementation
     public override void Eat() { /*...*/ }
+
+    // Its own class method
     public void Bark() { /*...*/ }
 }
 ```
 
-In this example, the `Animal` class is the base class. It has two fields, `name` and `age`, and two virtual methods `Eat()` and `Sleep()`. The `Dog` class is the derived class. It inherits the base class's fields and methods and has a new method, `Bark()`.
+In this example, the `Animal` class is the base class. It has two fields, `name` and `age`, two properties, `Name` and `Age` and two virtual methods `Eat()` and `Sleep()`. 
 
-A derived class can also override the base class's methods and properties using the `override` keyword.
+The `Dog` class is the derived class. It inherits the base class's fields and methods and has a new method, `Bark()`. A derived class can also override the base class's methods and properties using the `override` keyword.
 
 ```cs
 public class Dog : Animal
@@ -65,3 +70,9 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 - If you provide **ChatGPT** with a prompt that is not refined enough, it may generate a not-so-useful response
 - Do not trust **ChatGPT's** responses blindly. You must still use your judgement and may need to do additional research to determine if the response is correct
 - Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work
+
+## Task 1
+
+Create a base class call `Vehicle` with the `private` fields - `brand`, `model`, and `year`. Create a `virtual` method call `PrintDetails` which prints the `Vehicle`'s `brand`, `model`, and `year` using `Console.WriteLine`. 
+
+Create a class called `Car` which derives from `Vehicle` with the private field - `numOfDoors`.

@@ -130,8 +130,8 @@ In most programming languages, maps are implemented using a hash table or a tree
 
 * Insertion: Adding a new key-value pair to the map
 * Deletion: Removing a key-value pair from the map
-* Lookup: Retrieving the value associated with a given key
-* Update: Modifying the value associated with a given key
+* Lookup: Retrieving a value associated with a given key
+* Update: Modifying a value associated with a given key
 
 Here is an example of a simple map class implemented using a hash table:
 

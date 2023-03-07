@@ -89,9 +89,9 @@ In the `main` method, create a `Dog` and `Cat` object and call the `Eat` and `Sl
 
 Create a base class called `Person` with the `private` fields - `name` and `age`. Create a constructor method that accepts all fields. Create a `virtual` method called `PrintDetails` which prints the `Person`'s `name` and `age` using `Console.WriteLine`. 
 
-Create a class called `Student` which derives from `Person` with the private field - `grade`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `grade`. Create an `override` method for `PrintDetails` which prints the `Student`s `name`, `age` and `grade` using `Console.WriteLine`. 
+Create a class called `Student` which derives from `Person` with the private field - `grade`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `grade`. Create an `override` method for `PrintDetails` which prints the `Student`'s `name`, `age` and `grade` using `Console.WriteLine`. 
 
-Create a class called `Lecturer` which derives from `Person` with the private field - `subject`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `subject`. Create an `override` method for `PrintDetails` which prints the `Lecturer`s `name`, `age` and `subject` using `Console.WriteLine`. 
+Create a class called `Lecturer` which derives from `Person` with the private field - `subject`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `subject`. Create an `override` method for `PrintDetails` which prints the `Lecturer`'s `name`, `age` and `subject` using `Console.WriteLine`. 
 
 In the `main` method, create a `Person`, `Student` and `Lecturer` object and call the `PrintDetails` method for each.
 

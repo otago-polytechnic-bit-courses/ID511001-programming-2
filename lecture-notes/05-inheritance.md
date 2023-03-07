@@ -28,15 +28,15 @@ public class Animal
 
 public class Dog : Animal
 {
+    // Adding a new field
     private string colour;
 
-    public Dog(string name, int age, string colour)
-        :base(name, age)
+    public Dog(string name, int age, string colour) : base(name, age) // The base class's contructor
     {
 
     }
 
-    // Overriding the base class implementation
+    // Overriding the base class's implementation
     public override void Eat() { /*...*/ }
 
     // Its own class method
@@ -71,8 +71,30 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 - Do not trust **ChatGPT's** responses blindly. You must still use your judgement and may need to do additional research to determine if the response is correct
 - Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work
 
-## Task 1
+## Task 1:
 
-Create a base class call `Vehicle` with the `private` fields - `brand`, `model`, and `year`. Create a `virtual` method call `PrintDetails` which prints the `Vehicle`'s `brand`, `model`, and `year` using `Console.WriteLine`. 
+Create a base class called `Vehicle` with the `private` fields - `brand`, `model`, and `year`. Create a constructor method that accepts all fields. Create a `virtual` method called `PrintDetails` which prints the `Vehicle`'s `brand`, `model`, and `year` using `Console.WriteLine`. 
 
-Create a class called `Car` which derives from `Vehicle` with the private field - `numOfDoors`.
+Create a class called `Car` which derives from `Vehicle` with the private field - `numOfDoors`. Create a constructor that accepts all base class's fields, i.e., `brand`, `model`, and `year` and its own, i.e., `numOfDoors`. Create an `override` method for `PrintDetails` which prints the `Car`s `numOfDoors` using `Console.WriteLine`. 
+
+In the `main` method, create two `Car` objects and call the `PrintDetails` method for each.
+
+## Task 2:
+
+Extend the `Animal` and `Dog` example to include a derived class called `Cat`. 
+
+In the `main` method, create a `Dog` and `Cat` object and call the `Eat` and `Sleep` methods.
+
+## Task 3:
+
+Create a base class called `Person` with the `private` fields - `name` and `age`. Create a constructor method that accepts all fields. Create a `virtual` method called `PrintDetails` which prints the `Person`'s `name` and `age` using `Console.WriteLine`. 
+
+Create a class called `Student` which derives from `Person` with the private field - `grade`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `grade`. Create an `override` method for `PrintDetails` which prints the `Student`s `name`, `age` and `grade` using `Console.WriteLine`. 
+
+Create a class called `Lecturer` which derives from `Person` with the private field - `subject`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `subject`. Create an `override` method for `PrintDetails` which prints the `Lecturer`s `name`, `age` and `subject` using `Console.WriteLine`. 
+
+In the `main` method, create a `Person`, `Student` and `Lecturer` object and call the `PrintDetails` method for each.
+
+## Task 4:
+
+Create a unit test for each task above. Ensure that you cover all fields and methods concerned.

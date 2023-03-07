@@ -83,11 +83,9 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-Create a unit test for four tasks in **02-formative-assessment**. Ensure that you cover all fields and methods concerned.
+Create a unit test for four tasks in **02-formative-assessment** and two tasks in **03-formative-assessment**. Ensure that you cover all fields and methods concerned.
 
-# Research Assessment
-
-## Task 1:
+## Task 2 (Research):
 
 The following activity involves debugging a program called `Debugging`.
 
@@ -132,7 +130,7 @@ namespace Debugging
 
 Identify one syntax error and two logical errors in the code above. Also, explain how to fix these errors.
 
-## Task 2:
+## Task 3 (Research):
 
 Explain the following exceptions:
 

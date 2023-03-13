@@ -104,7 +104,12 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 In this task, you will create a console program that prompts the user to enter their favourite day of the week.
 
-Define an enum called `Days` with the following days: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, and `Sunday`. Parse the user's input and convert it into a `Day` enum value. Use a `switch` statement to output a message to the console based on the user's input. For example, if the user enters "Friday", the program should output "You like Fridays!". Add error handling to handle an invalid input. If the user enters an invalid day, the program should output "Invalid input. Please try again." and prompt the user to enter a valid day of the week.
+Here are steps you should consider:
+
+1. Declare an `enum` called `Days` with the following days: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, and `Sunday`. 
+2. Parse the user's input and convert it into a `Day` enum value. 
+3. Use a `switch` statement to output a message to the console based on the user's input. For example, if the user enters "Friday", the program should output "You like Fridays!". 
+4. Add error handling to handle an invalid input. If the user enters an invalid day, the program should output "Invalid input. Please try again." and prompt the user to enter a valid day of the week.
 
 ```cs
 // Expected output:
@@ -121,3 +126,21 @@ Invalid input. Please try again.
 Enter your favorite day of the week: Wednesday
 You like Wednesdays!
 ```
+
+## Task 1 (Advanced Task):
+
+Modify the program to allow the user to enter multiple days of the week separated by commas. The program should output a message for each day of the week entered by the user.
+
+## Task 2:
+
+In this task, you will create a console program that prompts the user to select a colour and display some text in that selected colour.
+
+Here are steps you should consider:
+
+1. Declare an `enum` called `Colour` with the following values: `Red`, `Green`, `Blue`, and `Yellow`.
+2. Declare an `enum` called `ColourHexCode` with the following hex codes for each color: Red - "#FF0000", Green - "#00FF00", Blue - "#0000FF", and Yellow - "#FFFF00".
+3. Display all the available colours to the user before prompting them to select a colour.
+4. Prompts the user to select a colour from the list of colors.
+5. Parse the user's input and convert it into a `Colour` enum value.
+6. Use a `switch` statement to set the text colour based on the user's input, and output a message to the console based on the user's input. For example, if the user selects Red, the program should set the console text colour to red and output "You selected Red with hex code #FF0000!".
+7. Add error handling to the program to handle invalid input. If the user enters an invalid colour, the program should output "Invalid input. Please try again." and prompt the user to select a valid colour. 

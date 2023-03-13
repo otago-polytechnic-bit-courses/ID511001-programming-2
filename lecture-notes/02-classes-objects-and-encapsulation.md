@@ -112,8 +112,8 @@ public class BankAccount
 
     public decimal Balance
     {
-        get { return balance; }
-        set { balance = value; }
+        get => balance;
+        set => balance = value;
     }
 }
 ```

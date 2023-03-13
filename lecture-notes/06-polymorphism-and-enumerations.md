@@ -144,3 +144,34 @@ Here are steps you should consider:
 5. Parse the user's input and convert it into a `Colour` enum value.
 6. Use a `switch` statement to set the text colour based on the user's input, and output a message to the console based on the user's input. For example, if the user selects Red, the program should set the console text colour to red and output "You selected Red with hex code #FF0000!".
 7. Add error handling to the program to handle invalid input. If the user enters an invalid colour, the program should output "Invalid input. Please try again." and prompt the user to select a valid colour. 
+
+```cs
+// Expected output:
+
+Please select a color:
+1. Red
+2. Green
+3. Blue
+4. Yellow
+
+Enter your choice: 2
+You selected Green with hex code #00FF00!
+
+Please select a color:
+1. Red
+2. Green
+3. Blue
+4. Yellow
+
+Enter your choice: Purple
+Invalid input. Please try again.
+
+Please select a color:
+1. Red
+2. Green
+3. Blue
+4. Yellow
+
+Enter your choice: 5
+Invalid input. Please try again.
+```

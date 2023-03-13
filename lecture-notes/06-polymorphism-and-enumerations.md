@@ -100,7 +100,66 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 - Do not trust **ChatGPT's** responses blindly. You must still use your judgement and may need to do additional research to determine if the response is correct
 - Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work
 
+## Task 1:
+
+In this task, you will create a console program that prompts the user to enter a shape and return the area of that shape.
+
+Here are steps you should consider:
+
+1. Declare a base class called Shape that contains a `virtual` method called `CalculateArea()` that returns a `double`.
+2. Declare two derived classes called `Rectangle` and `Circle` that inherit from the `Shape` base class.
+3. Implement the `CalculateArea()` method in the `Rectangle` and `Circl`e classes to calculate the area of a rectangle and a circle respectively.
+4. Prompt the user to select a shape from the list of shapes.
+5. Parse the user's input and create an instance of the selected shape.
+6. Prompt the user to enter the required dimensions of the selected shape. For example, if the user selects a rectangle, the program should prompt the user to enter the length and width of the rectangle.
+7. Calculate the area of the selected shape using polymorphism by calling the `CalculateArea()` method on the shape object created in step 5.
+8. Output the area of the selected shape to the console.
+9. Add error handling to the program to handle invalid input. If the user enters invalid input, the program should output "Invalid input. Please try again." and prompt the user to enter valid input.
+
+```cs
+// Expected output:
+
+Please select a shape:
+1. Rectangle
+2. Circle
+
+Enter your choice: 1
+You selected Rectangle. Please enter the length: 5
+Please enter the width: 3
+The area of the rectangle is 15.
+
+Please select a shape:
+1. Rectangle
+2. Circle
+
+Enter your choice: 2
+You selected Circle. Please enter the radius: 4
+The area of the circle is 50.27.
+
+Please select a shape:
+1. Rectangle
+2. Circle
+
+Enter your choice: 3
+Invalid input. Please try again.
+
+Please select a shape:
+1. Rectangle
+2. Circle
+
+Enter your choice: Circle
+Invalid input. Please try again.
+```
+
+## Task 2:
+
+Create a two unit tests for calculating the area of a rectangle and circle.
+
 ## Task 3:
+
+Create a class diagram for task 1.
+
+## Task 4:
 
 In this task, you will create a console program that prompts the user to enter their favourite day of the week.
 
@@ -127,11 +186,11 @@ Enter your favorite day of the week: Wednesday
 You like Wednesdays!
 ```
 
-## Task 4 (Advanced Task):
+## Task 5 (Advanced Task):
 
 Modify the program to allow the user to enter multiple days of the week separated by commas. The program should output a message for each day of the week entered by the user.
 
-## Task 5:
+## Task 6:
 
 In this task, you will create a console program that prompts the user to select a colour and output some text in that selected colour.
 

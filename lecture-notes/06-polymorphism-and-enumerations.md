@@ -99,3 +99,25 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 - If you provide **ChatGPT** with a prompt that is not refined enough, it may generate a not-so-useful response
 - Do not trust **ChatGPT's** responses blindly. You must still use your judgement and may need to do additional research to determine if the response is correct
 - Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work
+
+## Task 1:
+
+In this task, you will create a console program that prompts the user to enter their favourite day of the week.
+
+Define an enum called `Days` with the following days: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, and `Sunday`. Parse the user's input and convert it into a `Day` enum value. Use a `switch` statement to output a message to the console based on the user's input. For example, if the user enters "Friday", the program should output "You like Fridays!". Add error handling to handle an invalid input. If the user enters an invalid day, the program should output "Invalid input. Please try again." and prompt the user to enter a valid day of the week.
+
+```cs
+// Expected output:
+
+Enter your favorite day of the week: Tuesday
+You like Tuesdays!
+
+Enter your favorite day of the week: Monday
+You like Mondays!
+
+Enter your favorite day of the week: Blah
+Invalid input. Please try again.
+
+Enter your favorite day of the week: Wednesday
+You like Wednesdays!
+```

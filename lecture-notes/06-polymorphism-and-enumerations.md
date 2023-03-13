@@ -100,7 +100,7 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 - Do not trust **ChatGPT's** responses blindly. You must still use your judgement and may need to do additional research to determine if the response is correct
 - Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work
 
-## Task 1:
+## Task 3:
 
 In this task, you will create a console program that prompts the user to enter their favourite day of the week.
 
@@ -127,11 +127,11 @@ Enter your favorite day of the week: Wednesday
 You like Wednesdays!
 ```
 
-## Task 1 (Advanced Task):
+## Task 4 (Advanced Task):
 
 Modify the program to allow the user to enter multiple days of the week separated by commas. The program should output a message for each day of the week entered by the user.
 
-## Task 2:
+## Task 5:
 
 In this task, you will create a console program that prompts the user to select a colour and display some text in that selected colour.
 

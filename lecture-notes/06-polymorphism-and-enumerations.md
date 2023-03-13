@@ -133,7 +133,7 @@ Modify the program to allow the user to enter multiple days of the week separate
 
 ## Task 5:
 
-In this task, you will create a console program that prompts the user to select a colour and display some text in that selected colour.
+In this task, you will create a console program that prompts the user to select a colour and output some text in that selected colour.
 
 Here are steps you should consider:
 

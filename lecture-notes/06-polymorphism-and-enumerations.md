@@ -173,16 +173,16 @@ Here are steps you should consider:
 ```cs
 // Expected output:
 
-Enter your favorite day of the week: Tuesday
+Enter your favourite day of the week: Tuesday
 You like Tuesdays!
 
-Enter your favorite day of the week: Monday
+Enter your favourite day of the week: Monday
 You like Mondays!
 
-Enter your favorite day of the week: Blah
+Enter your favourite day of the week: Blah
 Invalid input. Please try again.
 
-Enter your favorite day of the week: Wednesday
+Enter your favourite day of the week: Wednesday
 You like Wednesdays!
 ```
 
@@ -207,7 +207,7 @@ Here are steps you should consider:
 ```cs
 // Expected output:
 
-Please select a color:
+Please select a colour:
 1. Red
 2. Green
 3. Blue
@@ -216,7 +216,7 @@ Please select a color:
 Enter your choice: 2
 You selected Green with hex code #00FF00!
 
-Please select a color:
+Please select a colour:
 1. Red
 2. Green
 3. Blue
@@ -225,7 +225,7 @@ Please select a color:
 Enter your choice: Purple
 Invalid input. Please try again.
 
-Please select a color:
+Please select a colour:
 1. Red
 2. Green
 3. Blue

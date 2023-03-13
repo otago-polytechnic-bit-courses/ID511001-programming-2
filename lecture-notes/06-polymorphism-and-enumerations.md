@@ -108,7 +108,7 @@ Here are steps you should consider:
 
 1. Declare a base class called Shape that contains a `virtual` method called `CalculateArea()` that returns a `double`.
 2. Declare two derived classes called `Rectangle` and `Circle` that inherit from the `Shape` base class.
-3. Implement the `CalculateArea()` method in the `Rectangle` and `Circl`e classes to calculate the area of a rectangle and a circle respectively.
+3. Implement the `CalculateArea()` method in the `Rectangle` and `Circle` classes to calculate the area of a rectangle and a circle respectively.
 4. Prompt the user to select a shape from the list of shapes.
 5. Parse the user's input and create an instance of the selected shape.
 6. Prompt the user to enter the required dimensions of the selected shape. For example, if the user selects a rectangle, the program should prompt the user to enter the length and width of the rectangle.

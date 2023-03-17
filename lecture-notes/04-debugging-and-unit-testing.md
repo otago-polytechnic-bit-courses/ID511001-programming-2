@@ -17,6 +17,8 @@ Debugging is an important part of the development process and it can save a lot 
 
 # 04: Unit Testing
 
+You can find today's coding example - **04-calculator-example.zip** in the **lecture-notes** directory.
+
 Unit testing is the process of testing individual units of code, such as methods or classes, in isolation from the rest of the program. The goal of unit testing is to ensure that each unit of code behaves correctly and that it meets the requirements specified for it. Unit tests are usually automated, which means that they can be run automatically and repeatedly without human intervention.
 
 Unit tests are typically written using a unit testing framework, such as **MSTest**, **xUnit**, or **NUnit**, which provides a set of tools and libraries for creating, running, and managing unit tests. The tests are usually written using a test-driven development (TDD) approach, where the tests are written before the actual implementation of the code.

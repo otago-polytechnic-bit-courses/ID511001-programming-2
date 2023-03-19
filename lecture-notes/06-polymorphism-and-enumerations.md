@@ -4,10 +4,10 @@ Polymorphism is a mechanism that allows a single method or property to have mult
 
 There are two types of polymorphism:
 
-1. Compile-time polymorphism: also known as static polymorphism or overloading. It allows different methods to have the same name but different signatures (number, type, or order of parameters). It is achieved by method overloading, operator overloading, and constructor overloading.
+1. Compile-time polymorphism: also known as static polymorphism or overloading. It allows different methods to have the same name but different signatures (number, type, or order of parameters). It is achieved by **method overloading**, **operator overloading**, and **constructor overloading**.
 2. Run-time polymorphism: also known as dynamic polymorphism or overriding. It allows a derived class to provide a different implementation of a method already defined in its base class. It is achieved by method overriding, requiring the `virtual` and `override` keywords.
 
-Here is an example of polymorphism using method overloading:
+Here is an example of **polymorphism** using **method overloading**:
 
 ```cs
 public class Calculator
@@ -26,7 +26,7 @@ public class Calculator
 
 In this example, the `Calculator` class has two methods called `Add()` that have the same name but different signatures. The first one takes two integers as arguments and returns their sum, and the second takes two doubles as arguments and returns their sum.
 
-Here is an example of polymorphism using method overriding:
+Here is an example of **polymorphism** using **virtual** method and **method overriding**:
 
 ```cs
 public class Shape
@@ -55,6 +55,36 @@ public class Circle : Shape
 ```
 
 In this example, the `Shape` class is the base class, and it has a virtual method `Draw()`, that prints "Drawing a shape" to the console. The `Rectangle` class and `Circle` class are derived classes. They both inherit the Draw() method from the base class and then override it to provide their implementation. The `Rectangle` class will print "Drawing a rectangle".
+
+Here is an example of **polymorphism** using **abstract** classes and **method overriding**:
+
+```cs
+
+public abstract class Shape
+{
+    public abstract void Draw();
+}
+
+public class Rectangle : Shape
+{
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a rectangle");
+    }
+}
+
+public class Circle : Shape
+{
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a circle");
+    }
+}
+```
+
+**What is the difference?**
+
+The `virtual` method in the original code provides a default implementation for the `Draw()` method in the `Shape` class, which can be overridden in any derived classes if necessary. The `abstract` method, i.e., `Draw()` method, does not provide any default implementation in the `Shape` class. Instead, it requires any derived classes to implement the `Draw()` method, making it mandatory for them to provide their own implementation.
 
 # 06 B: Enumerations
 
@@ -165,9 +195,9 @@ In this task, you will create a console program that prompts the user to enter t
 
 Here are steps you should consider:
 
-1. Declare an `enum` called `Days` with the following days: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, and `Sunday`. 
-2. Parse the user's input and convert it into a `Day` enum value. 
-3. Use a `switch` statement to output a message to the console based on the user's input. For example, if the user enters "Friday", the program should output "You like Fridays!". 
+1. Declare an `enum` called `Days` with the following days: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, and `Sunday`.
+2. Parse the user's input and convert it into a `Day` enum value.
+3. Use a `switch` statement to output a message to the console based on the user's input. For example, if the user enters "Friday", the program should output "You like Fridays!".
 4. Add error handling to handle an invalid input. If the user enters an invalid day, the program should output "Invalid input. Please try again." and prompt the user to enter a valid day of the week.
 
 ```cs
@@ -202,7 +232,7 @@ Here are steps you should consider:
 4. Prompts the user to select a colour from the list of colors.
 5. Parse the user's input and convert it into a `Colour` enum value.
 6. Use a `switch` statement to set the text colour based on the user's input, and output a message to the console based on the user's input. For example, if the user selects Red, the program should set the console text colour to red and output "You selected Red with hex code #FF0000!".
-7. Add error handling to the program to handle invalid input. If the user enters an invalid colour, the program should output "Invalid input. Please try again." and prompt the user to select a valid colour. 
+7. Add error handling to the program to handle invalid input. If the user enters an invalid colour, the program should output "Invalid input. Please try again." and prompt the user to select a valid colour.
 
 ```cs
 // Expected output:

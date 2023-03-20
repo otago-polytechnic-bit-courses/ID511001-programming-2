@@ -9,8 +9,8 @@ Here's an example of inheritance:
 ```cs
 public class Animal
 {
-    private string name;
-    private int age;
+    protected string name;
+    protected int age;
 
     public Animal(string name, int age)
     {
@@ -18,12 +18,12 @@ public class Animal
         this.age = age;
     }
 
-    public string Name { get; set; }
-    public int Age { get; set; }
-
     // virtual - derived classes can override the base class implementation
     public virtual void Eat() { /*...*/ }
     public virtual void Sleep() { /*...*/ }
+
+    public virtual string Name { get => name; set => name = value; }
+    public int Age { get => age; set => age = value; }
 }
 
 public class Dog : Animal
@@ -31,9 +31,9 @@ public class Dog : Animal
     // Adding a new field
     private string colour;
 
-    public Dog(string name, int age, string colour) : base(name, age) // The base class's contructor
+    public Dog(string name, int age, string colour) : base(name, age) // The base class's constructor
     {
-
+        this.colour = colour;
     }
 
     // Overriding the base class's implementation
@@ -41,23 +41,16 @@ public class Dog : Animal
 
     // Its own class method
     public void Bark() { /*...*/ }
+
+    public override string Name { get => name; set => name = value; }
+    public int Colour { get => colour; set => colour = value; }
 }
 ```
 
 In this example, the `Animal` class is the base class. It has two fields, `name` and `age`, two properties, `Name` and `Age` and two virtual methods `Eat()` and `Sleep()`. 
 
-The `Dog` class is the derived class. It inherits the base class's fields and methods and has a new method, `Bark()`. A derived class can also override the base class's methods and properties using the `override` keyword.
-
-```cs
-public class Dog : Animal
-{
-    public override string Name { get; set; }
-
-    public void Bark() { /*...*/ }
-}
-```
-
-In this example, the `Dog` class overrides the `Name` property of the `Animal` class, to provide its implementation of the property.
+The `Dog` class is the derived class. It inherits the base class's fields and methods and has a new method, `Bark()`. A derived class can also override the base class's methods and properties
+ using the `override` keyword.
 
 Inheritance is a powerful concept that allows you to reuse existing code and to model relationships between classes and objects naturally and intuitively. It also enables you to create a hierarchical structure of classes that allows you to define common behaviour and characteristics in a base class and then extend or specialize that behaviour in derived classes.
 

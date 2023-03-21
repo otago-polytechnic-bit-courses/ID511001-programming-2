@@ -1,6 +1,6 @@
 # 05: Inheritance
 
-Lecture video can be found here - https://bit.ly/3mVhEZS
+Lecture video can be found here - [https://bit.ly/3mVhEZS](https://bit.ly/3TuGBrv)
 
 Inheritance is a mechanism that allows a new class to inherit the properties and methods of an existing class, called the base class or the parent class. The new class, called the derived class or the child class, can inherit all or some of the base class members and can also add new members or override existing members.
 

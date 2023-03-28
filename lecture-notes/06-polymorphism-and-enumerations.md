@@ -227,7 +227,7 @@ In this task, you will create a console program that prompts the user to select 
 Here are steps you should consider:
 
 1. Declare an `enum` called `Colour` with the following values: `Red`, `Green`, `Blue`, and `Yellow`.
-2. Declare an `enum` called `ColourHexCode` with the following hex codes for each color: Red - "#FF0000", Green - "#00FF00", Blue - "#0000FF", and Yellow - "#FFFF00".
+2. Declare an `enum` called `ColourHexCode` with the following hex codes for each color: Red - "0xFF0000", Green - "0x00FF00", Blue - "0x0000FF", and Yellow - "0xFFFF00".
 3. Display all the available colours to the user before prompting them to select a colour.
 4. Prompts the user to select a colour from the list of colors.
 5. Parse the user's input and convert it into a `Colour` enum value.

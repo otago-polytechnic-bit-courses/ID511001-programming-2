@@ -11,7 +11,7 @@ The Microsoft Visual Studio IDE (integrated development environment) is made up 
 3. Select **Windows Forms App (.NET Framework)**
 4. Click **Next**
 
-![](../resources/img/07-introduction-to-c#-windows-forms-apps/01-introduction-to-c#-windows-forms-apps.png)
+<img src="../resources/img/07-introduction-to-c#-windows-forms-apps/01-introduction-to-c#-windows-forms-apps.png">
 
 # Formative Assessment
 

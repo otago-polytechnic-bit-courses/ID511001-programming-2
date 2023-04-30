@@ -1,5 +1,17 @@
 # 07: Introduction to C# Windows Forms App
 
+## Overview
+
+The Microsoft Visual Studio IDE (integrated development environment) is made up of several tools that are used to build GUI (Graphical User Interface) applications – those with windows, buttons menus, graphics, etc., by dragging and dropping these pre-built controls onto an existing form as we want it to appear. We build applications that will respond to events – when the user clicks on a button, when a form is closed, etc. Visual Studio fills in all the necessary code for how to make these events happen when it compiles our program. We concentrate on writing the code to describe what should happen when the user clicks on a button, selects a menu-item, closes a window, and so on. We don’t have to worry about all the complex operating system programming underneath – Visual Studio takes care of that for us.
+
+## Creating a Windows Forms App
+
+1. Open Visual Studio
+2. Select **Create a new project**
+3. Select **Windows Forms App (.NET Framework)**
+4. Click **Next**
+
+![](../resources/img/07-introduction-to-c#-windows-forms-apps/01-introduction-to-c#-windows-forms-apps.png)
 
 # Formative Assessment
 

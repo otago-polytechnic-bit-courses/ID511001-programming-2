@@ -186,7 +186,7 @@ Write an application for use in a Pizza Parlour. The user enters his order, and 
 1. Start a new application.
 2.	Your program should allow at least two sizes of pizza, with different prices. Users must select a size. If a user tries to order without selecting a size, he should receive polite feedback asking him to please specify the size.
 3.	You should provide at least five different extra toppings, each with associated prices. Users can select any combination of extra toppings, or none at all.
-4.	You should correctly display the order in a ListBox and compute the total and display it in a TextBox.
+4.	You should correctly display the order in a `ListBox` and compute the total and display it in a `TextBox`.
 5.	When a new order is generated, the old order information should be cleared from the display. 
 
 # Formative and Research Assessment Submission

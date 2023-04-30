@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Microsoft Visual Studio IDE** (integrated development environment) is made up of several tools that are used to build **GUI** (Graphical User Interface) applications – those with windows, buttons menus, graphics, etc., by dragging and dropping these pre-built controls onto an existing form as we want it to appear. We build applications that will respond to events – when the user clicks on a button, when a form is closed, etc. **Visual Studio** fills in all the necessary code for how to make these events happen when it compiles our program. We concentrate on writing the code to describe what should happen when the user clicks on a button, selects a menu-item, closes a window, and so on. We don’t have to worry about all the complex operating system programming underneath – **Visual Studio** takes care of that for us.
+The **Microsoft Visual Studio IDE** (integrated development environment) is made up of several tools that are used to build **GUI** (Graphical User Interface) applications – those with windows, buttons menus, graphics, etc., by dragging and dropping these pre-built controls onto an existing form as we want it to appear. We build applications that will respond to events – when the user clicks on a button, when a form is closed, etc. **Visual Studio** fills in all the necessary code for how to make these events happen when it compiles our program. We concentrate on writing the code to describe what should happen when the user clicks on a button, selects a menu-item, closes a window, and so on. We don't have to worry about all the complex operating system programming underneath – **Visual Studio** takes care of that for us.
 
 ## Creating a Windows Forms App
 
@@ -25,37 +25,110 @@ The main part is named `Form1.cs (Design)`. This is where, at design time, you c
 
 Open View/Toolbox/Common Controls.
 
-1.	Add two `Buttons`, a `TextBox`, a `PictureBox` and a `Label` to the `Form`.
+1. Add two `Buttons`, a `TextBox`, a `PictureBox` and a `Label` to the `Form`.
 2. Run the program. Click on one of the `Buttons`, write in the `TextBox`. What happens?
 3. Change the **size**, **text** and **name** of each of your `Buttons`.
-4.	Change the text, font and visibility of the `Label`.
+4. Change the text, font and visibility of the `Label`.
 5. Add an image to the `PictureBox`. How can you resize the image?
 6. Change the colour of the `Form`.
 
 ## Design-Time or Run-Time?
 
-We said earlier that `TextBoxes` could be used to show messages to the user of your program. For this to be useful, you need to be able to change the `Text` property while the program is running, when you won’t be able to get at the **Properties** list. Changing a property while you are creating your application is called *"modifying at design-time"*. Changing the property from within the program while the program is running is called *"modifying at run-time"*.
+We said earlier that `TextBoxes` could be used to show messages to the user of your program. For this to be useful, you need to be able to change the `Text` property while the program is running, when you won't be able to get at the **Properties** list. Changing a property while you are creating your application is called _"modifying at design-time"_. Changing the property from within the program while the program is running is called _"modifying at run-time"_.
 
-Modifying at run-time is very easy: you simply write an assignment statement to assign a new value to the property. To refer to an object’s property at run-time you use *"dot notation"*, which you have seen before when referring to elements of records at runtime. For example, to assign the text *"Here is my new text"* to your `TextBox`, you put this statement in your code:
+Modifying at run-time is very easy: you simply write an assignment statement to assign a new value to the property. To refer to an object's property at run-time you use _"dot notation"_, which you have seen before when referring to elements of records at runtime. For example, to assign the text _"Here is my new text"_ to your `TextBox`, you put this statement in your code:
 
 ```cs
-textBox1.Text  = "Here is my new text"; 
+textBox1.Text  = "Here is my new text";
 ```
 
 Assume you have three controls `button1`, `label1` and `textBox1` on your `Form`. What will be the effect of each of these statements at run-time?
 
-1.	`button1.Width = 400;`
-2.	`label1.Visible = false;`
-3.	`textBox1.Text  = "Go Otago";`
-4.	`button1.Text = label1.Text;`
+1. `button1.Width = 400;`
+2. `label1.Visible = false;`
+3. `textBox1.Text  = "Go Otago";`
+4. `button1.Text = label1.Text;`
 
+## Responding to Events
 
+We have seen that controls have **Properties**. But there is also a tab for **Events**, the lightning bolt in the **Properties** window.
 
+![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/02-image.png)
+
+If you select a `Button` on your `Form`, and click on the **Events** tab, it will look like this:
+
+![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/03-image.png)
+
+This is a list of all the **Events** – things the user can do (or the program can do) – that the `Button` control understands. For each of these events, you can specify some **C#** code that should be executed if the event occurs. For example, the `Button` understands the `Click` event. Whatever code you assign to that event (we'll see how to do this in a moment), will be executed when the user clicks on the `Button`. The `Button` also has a `MouseHover` event. This event occurs when the user passes the mouse over the `Button`. The `DragDrop` event occurs when the user drags the `Button` on the screen. And so forth.
+
+Until you write code for any event, nothing happens when the event occurs. For example, if you haven't assigned any code to the `Click` event, the user can click on the `Button` as much as he likes, and it has no effect. You saw this happen above.
+
+The code that you assign to an event is called an Event Handler. The code you assign to the `Click` event is called the `button1_Click` handler. Each event handler is simply a **C#** method. The code for your event handler goes in the `Form1.cs`.
+
+Imagine that you have several `Buttons` on your `Form`, and you want different things to happen when you click each `Button`. A separate `Click` handler is associated with each `Button`, enforced by the naming convention of event handlers.
+
+For example, if my `Form` is named `Form1`, and my `Button` is named `button1`, then the code that I want to execute when the user clicks on `button1` should be in a method called
+
+```cs
+private void button1_Click(object sender, EventArgs e) { ... }
+```
+
+Fortunately, you don't have to worry about typing out these complicated method names, because **C#** will do it for you. If you double-click in the space beside any event on the Events page, three things happen:
+
+- The correct method name is entered into that space.
+- You are automatically moved from the Form into the code.
+- **C#** creates a skeleton for your event handler with the correct method name, and curly brackets, and places the cursor after the first curly bracket, ready for you to start typing your code.
+
+It can be confusing to find yourself suddenly looking at the code instead of the `Form`. Don't be alarmed. This is the same thing that occurs when you toggle between the two views – **C#** has just done it for you.
+
+## Responding to Events
+
+1. Place a `Button` and a `Label` on the `Form`.
+2. Select the `Button`. Select the Events tab. Double-click on the space beside **Click**. You'll see this:
+
+![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/04-image.png)
+
+Enter some code for the `Button` to execute. For example, when the `button1` is clicked, the caption property of the `Label` is changed. Here is one possibility:
+
+```cs
+label1.Text = "My text has changed";
+```
+
+Run your program and click on the `Button` to see the `Label` change.
+
+3. Add a `Textbox` to your `Form`. Set it `Text` property to 0. Create a variable `nClicks`, The `Click` handler for a `Button` is shown below. What would be the effect of clicking on this `Button` ten times?
+
+```cs
+private void button1_Click(object sender, EventArgs e)
+{
+   int nClicks = Convert.ToInt16(textBox1.Text);
+   nClicks = nClicks + 1; // or nClicks++; or nClicks += 1;
+   textBox1.Text = Convert.ToString(nClicks);
+}
+```
+
+**Note:** The `Convert.ToInt16(n)` function translates the parameter value n into its 16 bit integer representation. Thus `Convert.ToInt16(5)` converts the string "5" into the integer value 5.
+
+Similarly the `Convert.ToString()` method converts from integer to the equivalent string representation.
+
+**Note:** The `Convert.ToString` method could also be replaced by the `.ToString()` method.
+
+4. 5.	Add a `TextBox` to your `Form`. As we saw earlier, the contents of a `TextBox` can be changed while the program is running. Modify your `button1_Click` handler, so that when the `button1` is clicked, the caption of the `label1` changes to whatever is in `textBox1`. Run the program and change the `Label` several times by modifying what is in `textBox1`, then clicking the `button1`.
+
+## TextBox and ListBox Controls
+
+We used a single-lined `TextBox` to read and write text. A `TextBox` can be also be multi-lined, selected from the drop down box at the top right corner of the `TextBox` control.  
+
+Each control has its own set of properties, events and methods, events. We used the `TextBox` control's properties (e.g. Width) and control Events (e.g. Click). There is a third part to the interface of a control: its methods. Methods are commands that the control understands. You use these commands when writing event handlers for the control. For example, `TextBox` controls have a method called `Clear()`. This method tells a `TextBox` to erase all the text it contains. To invoke a method, you use the same dot notation that you used for properties. Thus, the statement `textBox1.Clear();` will erase all the text in a `TextBox` named `textBox1`. To add text to a `TextBox`, use the `AppendText(s)` method, where the parameters is the string that is to be added to the `TextBox`.
+
+A ListBox is another control for reading and writing text. It is multi-lined by definition.
+
+One of the things that makes **C#** so powerful is that a control's properties can themselves be complex objects that have their own methods, events and sub-properties. For example, a `ListBox` contains a property called `Items`, which stores the text contents of the `ListBox` (just as the `Width` property of a `Button` stores the `Width` of the `Button`). The `Items` property is itself a complex data object with methods and properties. For example, `Items` has a method called `Clear()` to clear all items in the `ListBox`. It also has a method called `Add()`, which adds a new line of text to `Items` (and thus to the `ListBox`). To call a sub-method like `Add()`, just extend the dot notation in the logical way, adding the method name after the property name. For example, the following statement puts the string "This is a new line of text” after the current contents of the `ListBox` called `listBox1`: 
 
 
 # Formative Assessment
 
-Before you start, create a new branch called **06-formative-assessment**.
+Before you start, create a new branch called **07-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 

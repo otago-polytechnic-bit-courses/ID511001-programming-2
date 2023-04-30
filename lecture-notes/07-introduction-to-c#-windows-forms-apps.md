@@ -113,7 +113,7 @@ Similarly the `Convert.ToString()` method converts from integer to the equivalen
 
 **Note:** The `Convert.ToString` method could also be replaced by the `.ToString()` method.
 
-4. 5.	Add a `TextBox` to your `Form`. As we saw earlier, the contents of a `TextBox` can be changed while the program is running. Modify your `button1_Click` handler, so that when the `button1` is clicked, the caption of the `label1` changes to whatever is in `textBox1`. Run the program and change the `Label` several times by modifying what is in `textBox1`, then clicking the `button1`.
+4. Add a `TextBox` to your `Form`. As we saw earlier, the contents of a `TextBox` can be changed while the program is running. Modify your `button1_Click` handler, so that when the `button1` is clicked, the caption of the `label1` changes to whatever is in `textBox1`. Run the program and change the `Label` several times by modifying what is in `textBox1`, then clicking the `button1`.
 
 ## TextBox and ListBox Controls
 

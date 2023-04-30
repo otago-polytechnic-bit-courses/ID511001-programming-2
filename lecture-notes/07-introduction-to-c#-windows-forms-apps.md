@@ -157,6 +157,38 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
+Write a program that allows the user to enter a number into each of five `TextBoxes`. Provide `Buttons` that compute the sum and the average of the five numbers. Remember that you must use convert the contents of a `TextBox` to an integer, and convert an integer back to a string that can be displayed in a `TextBox`. A possible form layout is:
+
+![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/05-image.png)
+
+## Task 2:
+
+Write a program that allows the user to enter two numbers, select an arithmetic operation and calculate the answer. Note that this calculator accepts the data as a text entry inside a `TextBox`, rather than as a series of push-button clicks.
+
+![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/06-image.png)
+
+1.	Start a new application.
+2.	Set up the `Form`, selecting an appropriate colour, font and style. Set the form’s `Text` property to **Calculator**.
+3.	Add the `Buttons`, providing the values for each `Text` property. 
+4.	The line between the top two `TextBoxes` and the third `TextBox` is a `Panel`. Decide how you want your interface to look and use the appropriate control.
+5.	Add the code for the `Click` event for each `Button`. 
+6.	Set the third `TextBox’s` `ReadOnly` property to `True`. This will stop the user entering a value in this `TextBox` and overwriting the calculated answer.
+7.	Add **mod** and **div** `Buttons` with the appropriate functionality.
+
+**Note:** To make this application robust, so that it doesn’t break under different conditions, we need to check for data validation on the input (checking that the user has entered a valid number.) This is beyond our expertise at present, so we will assume the best-case scenario, that the user enters only valid integers. 
+
+## Task 3:
+
+Write an application for use in a Pizza Parlour. The user enters his order, and the application displays the order and computes the price. Your solution could looks like this (images are optional):
+
+![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/07-image.png)
+
+1. Start a new application.
+2.	Your program should allow at least two sizes of pizza, with different prices. Users must select a size. If a user tries to order without selecting a size, he should receive polite feedback asking him to please specify the size.
+3.	You should provide at least five different extra toppings, each with associated prices. Users can select any combination of extra toppings, or none at all.
+4.	You should correctly display the order in a ListBox and compute the total and display it in a TextBox.
+5.	When a new order is generated, the old order information should be cleared from the display. 
+
 # Formative and Research Assessment Submission
 
 Create a new pull request and assign **grayson-orr** to review your submission. Please don't merge your own pull request.

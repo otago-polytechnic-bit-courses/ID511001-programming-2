@@ -168,14 +168,14 @@ Write a program that allows the user to enter two numbers, select an arithmetic 
 ![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/06-image.png)
 
 1.	Start a new application.
-2.	Set up the `Form`, selecting an appropriate colour, font and style. Set the form’s `Text` property to **Calculator**.
+2.	Set up the `Form`, selecting an appropriate colour, font and style. Set the form's `Text` property to **Calculator**.
 3.	Add the `Buttons`, providing the values for each `Text` property. 
 4.	The line between the top two `TextBoxes` and the third `TextBox` is a `Panel`. Decide how you want your interface to look and use the appropriate control.
 5.	Add the code for the `Click` event for each `Button`. 
-6.	Set the third `TextBox’s` `ReadOnly` property to `True`. This will stop the user entering a value in this `TextBox` and overwriting the calculated answer.
+6.	Set the third `TextBox's` `ReadOnly` property to `True`. This will stop the user entering a value in this `TextBox` and overwriting the calculated answer.
 7.	Add **mod** and **div** `Buttons` with the appropriate functionality.
 
-**Note:** To make this application robust, so that it doesn’t break under different conditions, we need to check for data validation on the input (checking that the user has entered a valid number.) This is beyond our expertise at present, so we will assume the best-case scenario, that the user enters only valid integers. 
+**Note:** To make this application robust, so that it doesn't break under different conditions, we need to check for data validation on the input (checking that the user has entered a valid number.) This is beyond our expertise at present, so we will assume the best-case scenario, that the user enters only valid integers. 
 
 ## Task 3:
 

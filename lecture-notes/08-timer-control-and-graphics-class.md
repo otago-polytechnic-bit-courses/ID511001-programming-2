@@ -6,8 +6,6 @@ The `Timer` controls provides a way to execute code at specified intervals. It i
 
 To use the `Timer` control, you must first drag it from the toolbox onto the form. Once you have done this, you can set properties such as `Interval` and `Enabled`. The `Timer` control exposes several events. The most commonly used event is the `Tick` event. This event is raised each time the `Interval` elapses.
 
-<ADD CODE HERE>
-
 ## Graphics Class
 
 The `Graphics` class provides methods for drawing shapes, text, images and other objects onto the form.
@@ -66,13 +64,31 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 - Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work
 
 ## Task 1:
+1. Start a new project.
+2. Place three `PictureBox` controls on the form.
+3. Place a `Button` directly above each `PictureBox`.
+
+![](../resources/img/08-timer-control-and-graphics-class/01-image.png)
+
+4. Write a `button1_Click` handler so that, when the button1 is clicked, the first image moves 10 pixels down the page:
+
+```csharp	
+pictureBox1.Top = pictureBox1.Top + 10;
+```	
+
+5.	When you have checked that this code works, rewrite the code using constants and the += operator. More about constants here - <https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constants>.
+6.	Write a `button2_Click` handler so that, when the `button2` is clicked, the second image moves 10 pixels across the page.
+7.	Write a `button3_Click` handler so that, when the `button3` is clicked, a timer is enabled and the third image moves down and across the page, from top right corner to bottom left of the screen.
+8.	What other properties could you change?
+
+## Task 2:
 
 1. Create a new project.
 2. On the form, draw a green cross, a red rectangle with a black border a yellow ellipse with a blue shadowing ellipse and the slogan "Hi there!" as shown below.
 
-![](../resources/img/08-timer-control-and-graphics-class/01-image.png)
+![](../resources/img/08-timer-control-and-graphics-class/02-image.png)
 
-## Task 2:
+## Task 3:
 
 1. Create a new project.
 2. Most of your work with `Graphics` will involve thinking about your forms as a grid of (x, y) coordinates. Here is the skeleton to build the grid shown below. Fill in the missing parts.
@@ -94,11 +110,11 @@ private void Form1_MouseClick(object sender, MouseEventArgs e)
 }
 ```
 
-![](../resources/img/08-timer-control-and-graphics-class/02-image.png)
+![](../resources/img/08-timer-control-and-graphics-class/03-image.png)
 
 Note: You need to create the `Form1_MouseClick` event handler via the `Events` tab in the `Properties` window. 
 
-## Task 3:
+## Task 4:
 
 1. What will be drawn when you run the code below? Notice that a curve is defined by an array of connected points.
 
@@ -116,9 +132,9 @@ graphics.DrawLine(pen, new Point(60, 200), new Point(80, 200));
 
 2. Draw the output on the grid.
 
-![](../resources/img/08-timer-control-and-graphics-class/03-image.png)
+![](../resources/img/08-timer-control-and-graphics-class/04-image.png)
 
-## Task 4:
+## Task 5:
 
 1. What will be drawn when you run the code below? Notice that a polygon is defined by an array of connected lines.
 
@@ -138,29 +154,29 @@ graphics.DrawString("Pow!", font, Brushes.White, new Point(240, 240));
 
 3. Could you rewrite the DrawString statements with a variable and a loop?
 
-![](../resources/img/08-timer-control-and-graphics-class/04-image.png)
+![](../resources/img/08-timer-control-and-graphics-class/05-image.png)
 
-## Task 5:
+## Task 6:
 
 1. Create a new project. 
 2. Write a `Timer1_tick` handler to draw three circles on the form. Use a different colour for each circle.
 3. Place a `Timer` on the form. Modify your program so that, when the program starts, the figures are drawn automatically, and each 100 msec, the figures shift 20 pixels to the right. The example below shows the screen after several `Timer` cycles.
 
-![](../resources/img/08-timer-control-and-graphics-class/05-image.png)
+![](../resources/img/08-timer-control-and-graphics-class/06-image.png)
 
 4.	Add a `CheckBox` control to your form. As the program runs, the user can turn the screen refresh feature on and off by checking and unchecking this `CheckBox`. 
 
 When the `CheckBox` is checked, the screen refreshes.
 
-![](../resources/img/08-timer-control-and-graphics-class/06-image.png)
+![](../resources/img/08-timer-control-and-graphics-class/07-image.png)
 
 When the `CheckBox` is unchecked, the screen does not refresh. 
 
-![](../resources/img/08-timer-control-and-graphics-class/07-image.png)
+![](../resources/img/08-timer-control-and-graphics-class/08-image.png)
 
 5. Modify your program so that when the drawings reach the right edge of the screen, they "wrap around" and come back in from the left edge.
 
-![](../resources/img/08-timer-control-and-graphics-class/08-image.png)
+![](../resources/img/08-timer-control-and-graphics-class/09-image.png)
 
 # Formative and Research Assessment Submission
 

@@ -27,15 +27,11 @@ public Form1()
 }
 ```
 
-Below `graphics = CreateGraphics();`, add the following:
+Create a new `Form` event called `Paint`.
 
 ```csharp
-public Form1()
+private void Form1_Paint(object sender, PaintEventArgs e)
 {
-    InitializeComponent();
-
-    graphics = CreateGraphics();
-
     // Draw a line
     graphics.DrawLine(Pens.Red, new Point(10, 10), new Point(20, 20));
 
@@ -70,10 +66,10 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ![](../resources/img/08-timer-control-and-graphics-class/01-image.png)
 
-4. Write a `button1_Click` handler so that, when the button1 is clicked, the first image moves 10 pixels down the page:
+4. Write a `button1_Click` handler so that, when the `button1` is clicked, the first image moves 10 pixels down the page:
 
 ```csharp	
-pictureBox1.Top = pictureBox1.Top + 10;
+pictureBox1.Top += 10;
 ```	
 
 5.	When you have checked that this code works, rewrite the code using constants and the += operator. More about constants here - <https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constants>.

@@ -27,7 +27,7 @@ public Form1()
 }
 ```
 
-Create a new `Form` event called `Paint`.
+Create a new `Form` event called `Paint`. In the `Form1_Paint`, add the following:
 
 ```csharp
 private void Form1_Paint(object sender, PaintEventArgs e)

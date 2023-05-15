@@ -165,7 +165,7 @@ The `Ball` class will need to have the following fields:
 - A `private` `Color` field called `colour`
 - A `private` `Graphics` field called `graphics`
 - A `private` `Brush` field called `brush`
-- A private `Size` field called `clientSize``
+- A private `Size` field called `clientSize`
 
 The `Ball` class will need to have a constructor that takes in a `Point` called `position`, a `Point` called `speed`, a `Color` called `colour`, a `Graphics` called `graphics`, and a `Size` called `clientSize`. Also, you will need to create a new `SolidBrush` object and assign it to the `brush` field.
 
@@ -189,9 +189,7 @@ When you run the application, you will notice the ball is flickering. In this ta
 
 What is double buffering? Double buffering is a technique that involves drawing to an off-screen buffer and then copying the off-screen buffer to the screen. This technique is used to prevent flickering.
 
-
 In the `Form1` class, you will need to create two new fields: a `private` `Bitmap` field called `offScreenBitmap` and a `private` `Graphics` field called `offScreenGraphics`.
-
 
 In the `Form1` constructor, replace the existing code with the following:
 
@@ -201,7 +199,7 @@ public Form1()
     InitializeComponent();
 
     offScreenBitmap = new Bitmap(Width, Height);
-    offScreenGraphics = Graphics.FromImage(bufferImage);
+    offScreenGraphics = Graphics.FromImage(offScreenBitmap);
     graphics = CreateGraphics();
     controller = new World(offScreenGraphics, ClientSize);     
     timer1.Enabled = true;
@@ -213,9 +211,9 @@ In the `timer1_Tick` method, replace the existing code with the following:
 ```cs
 private void timer1_Tick(object sender, EventArgs e)
 {
-    bufferGraphics.FillRectangle(Brushes.Black, 0, 0, Width, Height);
+    offScreenGraphics.FillRectangle(Brushes.Black, 0, 0, Width, Height);
     controller.Run();
-    graphics.DrawImage(bufferImage, 0, 0);
+    graphics.DrawImage(offScreenBitmap, 0, 0);
 }
 ```
 

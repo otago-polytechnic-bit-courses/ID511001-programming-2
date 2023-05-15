@@ -208,7 +208,7 @@ public Form1()
 }
 ```
 
-In the `timer1_Tick` constructor, replace the existing code with the following:
+In the `timer1_Tick` method, replace the existing code with the following:
 
 ```cs
 private void timer1_Tick(object sender, EventArgs e)

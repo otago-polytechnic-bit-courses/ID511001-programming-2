@@ -88,7 +88,7 @@ public class Controller
 
     private List <Molecule> molecules;
 
-    public World(Graphics graphics, Random random)
+    public Controller(Graphics graphics, Random random)
     {
         molecules = new List<Molecule>();
 

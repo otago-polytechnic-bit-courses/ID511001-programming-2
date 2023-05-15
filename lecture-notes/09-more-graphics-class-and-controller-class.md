@@ -1,5 +1,7 @@
 # 09: More Graphics Class and Controller Class
 
+A controller class is responsible for creating objects and calling their methods. 
+
 Let us digest the following classes:
 
 ```cs
@@ -74,7 +76,7 @@ public partial class Form1 : Form
 }
 ```
 
-How can we extract business logic code from `Form1.cs` into `Controller.cs`?
+How can we extract ūn-related UI code from `Form1.cs` into `Controller.cs`?
 
 ```cs
 public class Controller
@@ -151,7 +153,71 @@ In the `Molecule` class, create a new `public void` method called `Move`. In the
 1. Randomly generate an integer value between -10 (inclusive) and 11 (exclusive) using the `Random` class's `Next` method.
 2. Get the `Molecule's` X and Y position and add the random integer value using the addition assignment operator (`+=`).
 
-In the `Controller` class
+In the `Controller` class, call the `Molecule's` `Move` method in the `Run` method.
+
+## Task 2:
+In this task, you will create a bouncing ball. Feel free to create a project. You will need to create a `Ball` class and a `Controller` class. 
+
+The `Ball` class will need to have the following fields:
+- A `private` `const` `int` field called `SIZE` that is set to `25`
+- A `private` `Point` field called `speed`
+- A `private` `Point` field called `position`
+- A `private` `Color` field called `colour`
+- A `private` `Graphics` field called `graphics`
+- A `private` `Brush` field called `brush`
+- A private `Size` field called `clientSize``
+
+The `Ball` class will need to have a constructor that takes in a `Point` called `position`, a `Point` called `speed`, a `Color` called `colour`, a `Graphics` called `graphics`, and a `Size` called `clientSize`. Also, you will need to create a new `SolidBrush` object and assign it to the `brush` field.
+
+The `Ball` class will have three other methods:
+- A `public void` method called `Draw` that takes in no parameters. In the `Draw` method, you will need to call the `FillEllipse` method on the `graphics` field and pass in the `brush` object and a new `Rectangle` object that takes in the `position.X`, `position.Y`, `SIZE`, and `SIZE` fields.
+- A `public void` method called `Move` that takes in no parameters. In the `Move` method, you will need to set the `position.X` property to the `position.X` property plus the `speed.X` property. You will also need to set the `position.Y` property to the `position.Y` property plus the `speed.Y` property.
+- A `public void` method called `BounceSide` that takes in no parameters. In the `BounceSide` method, you will need to check if the `position.X` property is less than 0 or greater than the `clientSize.Width` property. If it is, you will need to set the `speed.X` property to the negative of the `speed.X` property. You will also need to do something similar for the `position.Y` property.
+
+The `Controller` class will need to have the following field: a `private` `Ball` field called `ball`.
+
+The `Controller` class will need to have a constructor that takes in a `Graphics` called `graphics`, and a `Size` called `clientSize`. In the constructor, you will need to create a new `Ball` object and assign it to the `ball` field.
+
+The `Controller` class will have one other methods:
+- A `public void` method called `Run` that takes in no parameters. In the `Run` method, you will need to call the `Move`, `BounceSide` and `Draw` methods on the `ball` field.
+
+In the `Form1` class, call the `Controller's` `Run` method in the `timer1_Tick` method.	
+
+## Task 3:
+
+When you run the application, you will notice the ball is flickering. In this task, you will implement double buffering. 
+
+What is double buffering? Double buffering is a technique that involves drawing to an off-screen buffer and then copying the off-screen buffer to the screen. This technique is used to prevent flickering.
+
+
+In the `Form1` class, you will need to create two new fields: a `private` `Bitmap` field called `offScreenBitmap` and a `private` `Graphics` field called `offScreenGraphics`.
+
+
+In the `Form1` constructor, replace the existing code with the following:
+
+```cs	
+public Form1()
+{
+    InitializeComponent();
+
+    offScreenBitmap = new Bitmap(Width, Height);
+    offScreenGraphics = Graphics.FromImage(bufferImage);
+    graphics = CreateGraphics();
+    controller = new World(offScreenGraphics, ClientSize);     
+    timer1.Enabled = true;
+}
+```
+
+In the `timer1_Tick` constructor, replace the existing code with the following:
+
+```cs
+private void timer1_Tick(object sender, EventArgs e)
+{
+    bufferGraphics.FillRectangle(Brushes.Black, 0, 0, Width, Height);
+    controller.Run();
+    graphics.DrawImage(bufferImage, 0, 0);
+}
+```
 
 # Formative and Research Assessment Submission
 

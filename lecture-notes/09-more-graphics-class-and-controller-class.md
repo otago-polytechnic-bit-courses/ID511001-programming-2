@@ -201,7 +201,7 @@ public Form1()
     offScreenBitmap = new Bitmap(Width, Height);
     offScreenGraphics = Graphics.FromImage(offScreenBitmap);
     graphics = CreateGraphics();
-    controller = new World(offScreenGraphics, ClientSize);     
+    controller = new Controller(offScreenGraphics, ClientSize);     
     timer1.Enabled = true;
 }
 ```

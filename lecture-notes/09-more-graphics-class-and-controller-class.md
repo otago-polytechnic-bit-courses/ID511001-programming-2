@@ -139,7 +139,7 @@ public partial class Form1 : Form
 
 # Formative Assessment
 
-Before you start, create a new branch called **06-formative-assessment**.
+Before you start, create a new branch called **09-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 

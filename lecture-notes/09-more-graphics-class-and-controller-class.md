@@ -197,7 +197,7 @@ In the `Form1` constructor, replace the existing code with the following:
 public Form1()
 {
     InitializeComponent();
-
+    
     offScreenBitmap = new Bitmap(Width, Height);
     offScreenGraphics = Graphics.FromImage(offScreenBitmap);
     graphics = CreateGraphics();
@@ -216,6 +216,8 @@ private void timer1_Tick(object sender, EventArgs e)
     graphics.DrawImage(offScreenBitmap, 0, 0);
 }
 ```
+
+Buffergraphics refers to a technique where drawing operations are performed off-screen on a buffer, i.e., image before being displayed on the screen. This approach is often used to reduce flickering and improve rendering performance in graphical applications.
 
 # Formative and Research Assessment Submission
 

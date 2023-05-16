@@ -91,13 +91,13 @@ crashlytics-build.properties
 
 Open **Unity Hub**. You will be presented with the following:
 
-<img src="../resources/img/classroom-tasks/unity-1-project-creation.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-1-project-creation.PNG" height="400" width="700" />
 
 Currently, you have no projects. To create a new project, click on the **New project** button.
 
 There are a variety of templates to choose from, i.e., 2D and 3D. Choose the **2D** template. In the **Project Settings**, you can set the project's name and location. Set the project's location to your **Class Tasks** repository path. Click on the **Create project** button.
 
-<img src="../resources/img/classroom-tasks/unity-2-project-creation.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-2-project-creation.PNG" height="400" width="700" />
 
 ---
 
@@ -105,7 +105,7 @@ There are a variety of templates to choose from, i.e., 2D and 3D. Choose the **2
 
 In might take about a minute or so to create a new project. Once the project is created, you will be presented with the following:
 
-<img src="../resources/img/classroom-tasks/unity-3-project-configuration.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-3-project-configuration.PNG" height="400" width="700" />
 
 At first, it might be overwhelming. Do not worry, you will become somewhat familiar with the environment as you progress through the lecture notes. 
 
@@ -113,11 +113,11 @@ In the **Hierarchy** window displays every **GameObject** in a **Scene**. For ex
 
 **Resource:** <https://docs.unity3d.com/Manual/Hierarchy>
 
-<img src="../resources/img/classroom-tasks/unity-4-project-configuration.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-4-project-configuration.PNG" height="400" width="700" />
 
 In the **Assets** window, create three new folders - `Prefabs`, `Scripts` and `Sprites`. To do so, right-click on the **Assets window > Create > Folder**. You will notice that each folder excluding `Scenes` are not solid grey. It indicates that these folders are empty.
 
-<img src="../resources/img/classroom-tasks/unity-5-project-configuration.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-5-project-configuration.PNG" height="400" width="700" />
 
 ---
 
@@ -125,7 +125,7 @@ In the **Assets** window, create three new folders - `Prefabs`, `Scripts` and `S
 
 In this directory, you will find a directory called `assets`. This directory contains three assets - `background.png`, `obstacle.png` and `player.png`. Drag and drop these assets into the `Sprites` directory.
 
-<img src="../resources/img/classroom-tasks/unity-6-asset-creation.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-6-asset-creation.PNG" height="400" width="700" />
 
 ---
 
@@ -133,17 +133,17 @@ In this directory, you will find a directory called `assets`. This directory con
 
 Drag and drop the `player` asset into the **Hierarchy** window. Rename the `player` asset (in the **Hierarchy** window) to `Player Sprite`. 
 
-<img src="../resources/img/classroom-tasks/unity-7-player-controller.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-7-player-controller.PNG" height="400" width="700" />
 
 Create a new **GameObject** called `Player`. A **GameObject** is a base class for all entities, i.e., `Player Sprite` in a **Scene**. 
 
 **Resource:** <https://docs.unity3d.com/ScriptReference/GameObject>
 
-<img src="../resources/img/classroom-tasks/unity-8-player-controller.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-8-player-controller.PNG" height="400" width="700" />
 
 Drag and drop the `Player Sprite` into the `Player` **GameObject**. `Player Sprite` is a descendent or child of `Player` **GameObject**.
 
-<img src="../resources/img/classroom-tasks/unity-9-player-controller.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-9-player-controller.PNG" height="400" width="700" />
 
 Click on the `Player` **GameObject**. In the **Inspector** window, click on the **Add component** button. Search for **Rigidbody 2D** and press <kbd>Enter</kbd>. **Rigidbody 2D** places an object under the control of the physics engine, i.e., allow the `Player` **GameObject** to move. Set the **Scale X and Y** to 0.5, **Gravity scale** to zero (0) to ensure the `Player` **GameObject** stays in the air and **Constraints > Freeze Rotation** to checked to prevent the `Player` **GameObject** from rotating/spinning on the Z axis.
 
@@ -154,13 +154,13 @@ Click on the `Player` **GameObject**. In the **Inspector** window, click on the 
 - <https://docs.unity3d.com/Manual/UsingTheInspector>
 - <https://docs.unity3d.com/Manual/class-Rigidbody2D>
 
-<img src="../resources/img/classroom-tasks/unity-10-player-controller-2d-rigid-body.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-10-player-controller-2d-rigid-body.PNG" height="400" width="700" />
 
 In the `Scripts` directory, create a new **C# Script**. To do so, right-click on the **Assets window/Scripts > Create > C# Script**. Name the **C# Script**, `PlayerController.cs`.
 
 Open the `PlayerController.cs` **C# Script** in **Visual Studio Code**. Add the following code:
 
-<img src="../resources/img/classroom-tasks/unity-11-player-controller-cs-script.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-11-player-controller-cs-script.PNG" height="400" width="700" />
 
 Open the Please read the comments in the code snippet below:
 
@@ -210,11 +210,11 @@ Save the `PlayerController.cs` file and return to the **Unity Editor**.
 
 In the **Hierarchy** window, click on the `Player` **GameObject**. Drag and drop the `PlayerController.cs` **C# Script** into the **Inspector** window. Set the `Speed` to 10.
 
-<img src="../resources/img/classroom-tasks/unity-12-player-controller-adding-cs-script.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-12-player-controller-adding-cs-script.PNG" height="400" width="700" />
 
 Test the changes by clicking on the **Play** button. Move the `Player` **GameObject** by using the <kbd>↑</kbd> and <kbd>↓</kbd> arrows.
 
-<img src="../resources/img/classroom-tasks/unity-13-player-controller-testing.PNG" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-13-player-controller-testing.PNG" height="400" width="700" />
 
 ---
 
@@ -242,19 +242,19 @@ public class CameraMovement : MonoBehaviour
 }
 ```
 
-<img src="../resources/img/classroom-tasks/unity-14-camera-movement.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-14-camera-movement.png" height="400" width="700" />
 
 Create a new **GameObject** called `Game Manager`.
 
-<img src="../resources/img/classroom-tasks/unity-15-camera-movement.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-15-camera-movement.png" height="400" width="700" />
 
 In the **Hierarchy** window, click on the `Game Controller` **GameObject**. Drag and drop the `CameraMovement.cs` **C# Script** into the **Inspector** window. Set the `Speed` to 15.
 
-<img src="../resources/img/classroom-tasks/unity-16-camera-movement.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-16-camera-movement.png" height="400" width="700" />
 
 Drag and drop the `Main Camera` and `Player` **GameObjects** into the `Game Manager` **GameObject**. `Main Camera` and `Player` are descendent or children of `Game Manager` **GameObject**.
 
-<img src="../resources/img/classroom-tasks/unity-17-camera-movement.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-17-camera-movement.png" height="400" width="700" />
 
 ---
 
@@ -262,19 +262,19 @@ Drag and drop the `Main Camera` and `Player` **GameObjects** into the `Game Mana
 
 In the **Hierarchy** window, create a new quad called `Background`. To do so, right-click on the **Hierarchy window > 3D Object > Quad**. 
 
-<img src="../resources/img/classroom-tasks/unity-18-background.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-18-background.png" height="400" width="700" />
 
 In the `Sprites` directory, click on the `background.png` file. Set the **Wrap Mode** to **Repeat**, then click on the **Apply** button.
 
-<img src="../resources/img/classroom-tasks/unity-19-background.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-19-background.png" height="400" width="700" />
 
 In the **Hierarchy** window, click on the `Background` **GameObject**. Drag and drop the `background` asset into the **Inspector** window. Set the **Shader** to **Unlit/Texture** and **Scale X** and **Y** to 20 and 10. As you can see, the background has cover the entire scene.
 
-<img src="../resources/img/classroom-tasks/unity-20-background.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-20-background.png" height="400" width="700" />
 
 Drag and drop the `Background` **GameObject** into the `Game Manager` **GameObject**.
 
-<img src="../resources/img/classroom-tasks/unity-21-background.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-21-background.png" height="400" width="700" />
 
 In the `Scripts` directory, create a new **C# Script** called `LoopingBackground.cs`. Open the `LoopingBackground.cs` **C# Script** in **Visual Studio Code**. Add the following code:
 
@@ -299,11 +299,11 @@ public class LoopingBackground : MonoBehaviour
 }
 ```
 
-<img src="../resources/img/classroom-tasks/unity-22-background.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-22-background.png" height="400" width="700" />
 
 In the **Hierarchy** window, click on the `Background` **GameObject**. Drag and drop the `LoopingBackground.cs` **C# Script** into the **Inspector** window. Set the `Speed` to 1 and `Renderer` to **Background (Mesh Renderer)**.
 
-<img src="../resources/img/classroom-tasks/unity-23-background.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-23-background.png" height="400" width="700" />
 
 Test the changes by clicking on the **Play** button. 
 
@@ -313,21 +313,21 @@ Test the changes by clicking on the **Play** button.
 
 Drag and drop the `obstacle` asset into the `Game Manager` **GameObject**. Rename the `obstacle` asset to `Obstacle Sprite`.
 
-<img src="../resources/img/classroom-tasks/unity-24-obstacle.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-24-obstacle.png" height="400" width="700" />
 
 Create a new **GameObject** called `Obstacle`. Drag and drop the `Obstacle Sprite` into the `Obstacle` **GameObject**. Set the **Scale X** and **Y** to 0.5. **Note:** make sure the `Obstacle` **GameObject** is in the `Game Manager` **GameObject**.
 
-<img src="../resources/img/classroom-tasks/unity-25-obstacle.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-25-obstacle.png" height="400" width="700" />
 
 Drag and drop the `Obstacle` **GameObject** into the `Prefabs` directory.
 
 **Resource:**
 
-<img src="../resources/img/classroom-tasks/unity-26-obstacle.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-26-obstacle.png" height="400" width="700" />
 
 Delete the `Obstacle` **GameObject** from the `Game Manager` **GameObject**.
 
-<img src="../resources/img/classroom-tasks/unity-27-obstacle.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-27-obstacle.png" height="400" width="700" />
 
 By now, you should have an understanding on how to use basic features in the **Unity Editor**.
 
@@ -366,7 +366,7 @@ public class SpawnObstacle : MonoBehaviour
 
 Create a new **GameObject** called `Spawn Point` in the `Game Manager` **GameObject**. Add the `SpawnObstacle.cs` **C# Script** to the `Spawn Point` **GameObject**. Set `Obstacle` to the `obstacle` **Prefab**, `Max X` to 3.5, `Min X` to 3, `Max Y` to 4, `Min Y` to -4 and `Time Between Spawn` to 0.5. Set the `Spawn Point` **GameObject's** **Position X** to 20 so that it does not spawn an `Obstacle` **GameObject** on the `Player` **GameObject**. Test the changes by clicking on the **Play** button. 
 
-<img src="../resources/img/classroom-tasks/unity-28-obstacle.png" height="400" width="700" />
+<img src="https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-23/resources/img/classroom-tasks/unity-28-obstacle.png" height="400" width="700" />
 
 ## Other Functionality
 

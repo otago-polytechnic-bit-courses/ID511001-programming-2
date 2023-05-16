@@ -446,7 +446,7 @@ Ideally, you want to display a game over screen when the `Player` **GameObject**
 12. Change the **Width**, **Height** and **Text** values so that it is clear to the user.
 13. Click on the `Player` **GameObject** and set the **tag** value to **"Player"**.
 14. Hide the `Game Over Panel` **GameObject**.
-15. Open the `Obstacle.cs` file. Declare `private GameObject player;`. In the `Start()` method, add the following code:
+15. Open the `Collision.cs` file. Declare `private GameObject player;`. In the `Start()` method, add the following code:
 
 ```cs
 player = GameObject.FindGameObjectWithTag("Player");

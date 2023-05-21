@@ -122,7 +122,7 @@ polygon = null;
 4. To make the `Form` invisible, so that the window behind shows through:
 
 - Check that the `Opacity` is set to `100%`.
-- Select a colour value for the Form’s TransparencyKey from the drop down box. Choose any colour you like. This means that you will be nominating a colour such that any pixels in that colour will be invisible.
+- Select a colour value for the `Form's` `TransparencyKey` from the drop down box. Choose any colour you like. This means that you will be nominating a colour such that any pixels in that colour will be invisible.
 - Set the `Form's` `BackColor` property (still in the Properties window) to whatever you selected as the `TransparencyKey`. This will cause all the pixels of the `Form` to be invisible; only the window bar at the top of the `Form` will show.
 
 5. Experiment with the parameters of your application until you get a performance you like. Then modify your `timer1_Tick()` handler so that after some number of ticks (enough to let the screen get pretty full), it clears the screen and starts again.

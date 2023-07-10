@@ -200,8 +200,6 @@ The fourth class is called `Utils`. This class has three `static` fields called 
 
 For each of the `Seed` methods, you will need to create at least three **objects** and add them to the appropriate list. For example, the `SeedInstitutions` method will create three `Institution` **objects** and add them to the `institutions` list.
 
-For each `course`, display its information and which `department` and `institution` it belongs to.
-
 Here is an `Utils` class example to get you started:
 
 ```cs
@@ -222,6 +220,8 @@ public static class Utils
 // Usage in Program.cs:
 List<Institution> institutions = Utils.SeedInstitutions();
 ```
+
+For each `course`, display its information and which `department` and `institution` it belongs to.
 
 ## Task 8: 
 

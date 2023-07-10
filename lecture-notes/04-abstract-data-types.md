@@ -1,6 +1,4 @@
-# 03: Abstract Data Types (ADTs)
-
-Lecture video can found here - https://bit.ly/3JfCb4c
+# 04: Abstract Data Types (ADTs)
 
 ## What is an abstract data type?
 
@@ -13,42 +11,6 @@ An ADT is typically defined by a set of function prototypes or method signatures
 It is important to note that an ADT does not specify the actual implementation of the operations. It means that different implementations of the same ADT may use different algorithms or data structures to achieve the same behaviour. For example, a stack ADT could be implemented using an array or a linked list, depending on the specific needs and constraints of the application.
 
 Abstract data types are a useful tool for designing and organising data structures in computer science. They allow developers to think about the high-level behaviour of the data structure rather than the low-level details of its implementation, making it easier to write and maintain code.
-
-## List
-
-A list is a collection of items stored as an array and can be accessed by an index number. Lists are similar to arrays, but they can be resized dynamically, which means that you can add or remove items from the list after it is created.
-
-There are different types of lists in different programming languages, but they all have some basic features. Here are some common operations that can be performed on lists:
-
-* Adding items to the list: You can add new items to the end of the list or insert them at a specific position.
-* Removing items from the list: You can remove them from the list by their position or value.
-* Accessing items in the list: You can access an item by its position using an index number.
-* Searching the list: You can search the list for a specific item and find its position.
-* Sorting the list: You can sort the items in the list in ascending or descending order.
-
-Here is an example of how to create and use a list:
-
-```cs
-List<string> names = new List<string>();
-names.Add("Alice");
-names.Add("Bob");
-names.Add("Charlie");
-string firstName = names[0];
-string secondName = names[1];
-names.Remove("Charlie");
-int count = names.Count;
-```
-
-**Questions:**
-
-1. What is the output if you print `firstName`?
-2. What is the output if you print `count`?
-
-One of the main advantages of using a list is that it provides fast and efficient access to the items it contains. Since each item in a list is identified by its index, it is possible to access any item in the list in constant time by simply specifying its index. It makes lists an ideal data structure for storing and accessing large data collections, especially when the order of the items is important.
-
-Inserting or deleting items from the middle of a list can be expensive, as it may require shifting the items around to make room for the new item or filling the gap left by the deleted item.
-
-Lists are a very useful and widely-used data structure that can be used to store and manage large data collections in various applications.
 
 ## Set
 
@@ -283,7 +245,7 @@ Queues are useful for storing and processing data that needs to be handled in a 
 
 # Formative Assessment
 
-Before you start, create a new branch called **03-formative-assessment**.
+Before you start, create a new branch called **04-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -292,22 +254,6 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 - Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work
 
 ## Task 1:
-
-You have been given two **lists** containing some of my favourite programming languages.
-
-```cs
-List<string> progLangOne = new List<string>() { "C#", "JavaScript", "Kotlin", "Python" };
-List<string> progLangTwo = new List<string>() { "C++", "Go", "Swift", "TypeScript" };
-```
-
-Implement the following:
-
-1. Use the `AddRange` method to add the elements of `progLangOne` to `progLangTwo` and assign the resulting combined list to a variable called `allProgLanguages`
-2. Use the `Add` method to add "Rust" to `allProgLanguages`
-3. Use the `Remove` method to remove "Swift" from `allProgLanguages`
-4. Use a loop to display each language in `allProgLanguages`
-
-## Task 2:
 
 You have been given two **sets** containing some numbers.
 
@@ -329,7 +275,7 @@ Implement the following:
 3. Use the `Remove` method to remove the value `2` from `mySet`
 4. Use the `Union`, `Intersection` and `Difference` methods to display the union, intersection and difference between `mySet` and `myOtherSet`
 
-## Task 3:
+## Task 2:
 
 You have been given a **map** containing course codes.
 
@@ -348,7 +294,7 @@ Implement the following:
 2. Use the `Remove` method to remove the key-value pair with the key "ID607001" from `myMap`.
 3. Use the `Lookup` method to lookup the value associated with the key "ID607001" in `myMap`. **Note:** This will thrown an `Exception`. Comment this line of code to continue the execution of your program.
 
-## Task 4:
+## Task 3:
 
 You have been given a **stack** containing course names.
 
@@ -367,7 +313,7 @@ Implement the following:
 2. Use the `Push` method to add two items to `myStack`
 3. Use the `Pop` method to remove and return the top item from `myStack`
 
-## Task 5:
+## Task 4:
 
 You have been given a **queue** containing course names.
 
@@ -385,4 +331,4 @@ Implement the following:
 
 # Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your submission. Please don't merge your own pull request.
+Create a new pull request and assign **grayson-orr** to review your submission. Please do not your own pull request.

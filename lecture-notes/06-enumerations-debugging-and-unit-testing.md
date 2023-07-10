@@ -1,4 +1,40 @@
-# 04: Debugging
+# 06: Enumerations, Debugging and Unit Testing
+
+## Enumerations
+
+An enumeration (or enum for short) is a value type that is used to define a set of named constants. Enumerations are useful when you have a fixed set of values that a variable can take on, such as the days of the week or the suits in a deck of cards.
+
+An enumeration is defined using the `enum` keyword, followed by the name of the enumeration, and a list of enumerators, which are the named constants. Each enumerator is separated by a comma, and each enumerator is assigned an integer value starting from 0 by default. Here is an example:
+
+```cs
+enum Days { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
+```
+
+The enumerators in the example above are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday and their respective values will be 0, 1, 2, 3, 4, 5, 6.
+
+You can also give explicit values to the enumerators, for example:`
+
+```cs
+enum Days { Monday=1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
+```
+
+In this example, Monday is assigned the value 1, and the rest of the enumerators are assigned the value of the previous enumerator plus one.
+
+You can use an enumeration like any other variable. You can assign a value or compare it to other enumeration values. For example:
+
+```cs
+Days today = Days.Monday;
+if (today == Days.Friday)
+{
+    Console.WriteLine("It's Friday!");
+}
+else
+{
+    Console.WriteLine("It's not Friday.");
+}
+```
+
+## Debugging
 
 Debugging is the process of identifying and resolving errors (also called bugs) in your code. When you write code, it is not uncommon to make mistakes, such as syntax errors, logical errors, or runtime errors. Debugging is the process of finding and fixing these errors so that your code runs correctly.
 
@@ -15,9 +51,9 @@ When you find an error in your code, you can use these tools and techniques to u
 
 Debugging is an important part of the development process and it can save a lot of time and effort by identifying and resolving errors early on.
 
-# 04: Unit Testing
+## Unit Testing 
 
-You can find today's coding example - **04-calculator-example.zip** in the **lecture-notes** directory.
+You can find today's coding example - **06-calculator-example.zip** in the **lecture-notes** directory.
 
 Unit testing is the process of testing individual units of code, such as methods or classes, in isolation from the rest of the program. The goal of unit testing is to ensure that each unit of code behaves correctly and that it meets the requirements specified for it. Unit tests are usually automated, which means that they can be run automatically and repeatedly without human intervention.
 
@@ -75,7 +111,7 @@ Rename the `UnitTest1.cs` file to `CalcTests.cs` and add the code from the `Calc
 
 # Formative Assessment
 
-Before you start, create a new branch called **04-formative-assessment**.
+Before you start, create a new branch called **06-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -85,9 +121,81 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-Create a unit test for four tasks in **02-formative-assessment** and two tasks in **03-formative-assessment**. Ensure that you cover all fields and methods concerned.
+In this task, you will create a console program that prompts the user to enter their favourite day of the week.
 
-## Task 2 (Research):
+Here are steps you should consider:
+
+1. Declare an `enum` called `Days` with the following days: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, and `Sunday`.
+2. Parse the user's input and convert it into a `Day` enum value.
+3. Use a `switch` statement to output a message to the console based on the user's input. For example, if the user enters "Friday", the program should output "You like Fridays!".
+4. Add error handling to handle an invalid input. If the user enters an invalid day, the program should output "Invalid input. Please try again." and prompt the user to enter a valid day of the week.
+
+```cs
+// Expected output:
+
+Enter your favourite day of the week: Tuesday
+You like Tuesdays!
+
+Enter your favourite day of the week: Monday
+You like Mondays!
+
+Enter your favourite day of the week: Blah
+Invalid input. Please try again.
+
+Enter your favourite day of the week: Wednesday
+You like Wednesdays!
+```
+
+## Task 2:
+
+Modify the program to allow the user to enter multiple days of the week separated by commas. The program should output a message for each day of the week entered by the user.
+
+## Task 3:
+
+In this task, you will create a console program that prompts the user to select a colour and output some text in that selected colour.
+
+Here are steps you should consider:
+
+1. Declare an `enum` called `Colour` with the following values: `Red`, `Green`, `Blue`, and `Yellow`.
+2. Declare an `enum` called `ColourHexCode` with the following hex codes for each color: Red - "0xFF0000", Green - "0x00FF00", Blue - "0x0000FF", and Yellow - "0xFFFF00".
+3. Display all the available colours to the user before prompting them to select a colour.
+4. Prompts the user to select a colour from the list of colors.
+5. Parse the user's input and convert it into a `Colour` enum value.
+6. Use a `switch` statement to set the text colour based on the user's input, and output a message to the console based on the user's input. For example, if the user selects Red, the program should set the console text colour to red and output "You selected Red with hex code #FF0000!".
+7. Add error handling to the program to handle invalid input. If the user enters an invalid colour, the program should output "Invalid input. Please try again." and prompt the user to select a valid colour.
+
+```cs
+// Expected output:
+
+Please select a colour:
+1. Red
+2. Green
+3. Blue
+4. Yellow
+
+Enter your choice: 2
+You selected Green with hex code #00FF00!
+
+Please select a colour:
+1. Red
+2. Green
+3. Blue
+4. Yellow
+
+Enter your choice: Purple
+Invalid input. Please try again.
+
+Please select a colour:
+1. Red
+2. Green
+3. Blue
+4. Yellow
+
+Enter your choice: 5
+Invalid input. Please try again.
+```
+
+## Task 4:
 
 The following activity involves debugging a program called `Debugging`.
 
@@ -132,17 +240,10 @@ namespace Debugging
 
 Identify one syntax error and two logical errors in the code above. Also, explain how to fix these errors.
 
-## Task 3 (Research):
+## Task 5:
 
-Explain the following exceptions:
+Create a unit test for two tasks in **03-formative-assessment**. Ensure that you cover all fields and methods concerned.
 
-1. `ArgumentNullException`
-2. `IndexOutOfRangeException`
-3. `NullReferenceException`
-4. `FileNotFoundException`
-5. `IOException`
-6. `DivideByZeroException`
+# Formative Assessment Submission
 
-# Formative and Research Assessment Submission
-
-Create a new pull request and assign **grayson-orr** to review your submission. Please don't merge your own pull request.
+Create a new pull request and assign **grayson-orr** to review your submission. Please do not your own pull request.

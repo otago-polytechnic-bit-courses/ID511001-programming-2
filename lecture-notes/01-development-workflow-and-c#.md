@@ -1,4 +1,6 @@
-# 01: GitHub Workflow
+# 01: Development Workflow and C#
+
+# Development Workflow
 
 By default, **GitHub Classroom** creates an empty repository. Firstly, you must create a **README** and `.gitignore` file. **GitHub** provides an option for creating new files once the repository is created.
 
@@ -45,71 +47,7 @@ On the right side of the screen, you will see **Reviewers**. Click on the **Revi
 
 **Grayson** will receive an email. **Grayson** will review your formative assessment code, and you will receive feedback. You may be asked to reflect on your feedback and fix your formative assessment code. You will receive an email when your formative assessment code has been reviewed or approved.
 
-### Commit Message Conventions
-
-You have written many commit messages thus far in your **BIT** degree. However, based on my observations, you could format your messages more concisely, and it only takes a little bit of care. We will discuss a message convention (not a standard) heavily adopted in the industry.
-
-A message is broken down into five components - type, scope (optional), subject, extended description (optional) and footer (optional).
-
-List of types:
-* build: build related change, i.e., installing application dependencies.
-* chore: change that an end-user will not see, i.e., configuring files for but not limited to code formatting, code linting and version control.
-* feat: a new feature or piece of functionality that an end-user will see, i.e., a register or login page.
-* fix: a bug fix, i.e. an issue with the register or login page.
-* docs: documentation related change, i.e., changing **README.md** file.
-* refactor: something that is neither a feat nor fix, i.e., a semantic code change.
-* style: style-related change, i.e., formatting a file or piece of code.
-* test: an automation test change, i.e., adding a new test file or updating an existing test file.
-
-What is a scope? A noun referring to functionality in your codebase, i.e., authentication. 
-
-Familiarise yourself with this convention, particularly if you are currently enrolled in my courses. However, if you are not, then it is something you should consider adding to your existing **Git** skills and knowledge.
-
-You are probably wondering, how do I write a message using this convention. A **Git** commit looks like this:
-
-```bash
-git commit -m "<type> (optional scope): <subject>" -m "<optional extended description>" -m "<optional footer>"
-```
-
-Let us see this in action!
-
-Here is a **Git** commit example:
-
-```bash
-git commit -m "style (login): format jsx"
-```
-
-Here is a **Git** commit example with an extended description and footer:
-
-```bash
-git commit -m "style (login): format jsx" -m "additional information" -m "PR Close #12345"
-```
-
-When should I use an extended description? When a message is greater than 50 characters. **Note:** This convention is recommended by **GitHub**. However, this can vary from company to company.
-
-What happens if I want view a commit with a specific type? 
-
-```bash
-git log --oneline --grep <type>
-```
-
-- --oneline - Display the output as one commit per line
-
-Here is a **Git**  log example:
-
-```bash
-git log --oneline --grep feat
-```
-
-Here is a **Git**  example with multiple types:
- 
-```bash
-git log --oneline --grep "^build\|^feat\|^style"
-```
-
-**Resource:** <https://git-scm.com/docs/git-log>
-
-# 01: C# Basics
+# C#
 
 ## What is C#?
 
@@ -538,36 +476,47 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 Create a **double array** named `nums` with the values 45.3, 67.5, -45.6, 20.34, -33.0, 45.6. Iterate over the **array** using a loop and calculate the sum of all items. Divide that sum by the total number of items in the **array** to find the average. Use **string interpolation** to display the average in the desired format.
 
-## Task 2
+## Task 2:
 
 Create a **method** called `fizzBuzz` that takes in an integer `num`. Inside the **method**, check if `num` is a multiple of 3 and if so, return "Fizz". Check if `num` is a multiple of 5 and if so, return "Buzz". If `num` is a multiple of both 3 and 5, return "FizzBuzz". Create a for loop that starts at 1, ends at 15 and increments by 2 each time. Inside the for loop, call the `fizzBuzz` **method** with the current iteration **variable** `i` and print the result.
 
-## Task 3
+## Task 3:
 
 Create an **array** of **integers** called `nums` with the values 21, 19, 68, 55, 42, 12. Iterate over the **array** and check if each number is odd. If it is, display it. Finally, sort the **array** from lowest to highest, then display again.
 
-## Task 4
+## Task 4:
 
 Create a **method** called `isAnagram` that takes in two parameters, `someStrOne` and `someStrTwo` which are both strings. Inside the **method**, write code to check if `someStrOne` and `someStrTwo` are an anagram of each other. An anagram is a word or phrase made by rearranging the letters of another word or phrase. Compare the characters of both strings after sorting them. Return `true` if they match and `false` otherwise.
 
 In my solution, I converted the two **strings** to **char** arrays and sorted them using the `Array.Sort` **method**. Then I compared the sorted char arrays using the `SequenceEqual` **method** and returned `true` if they match, otherwise `false`.
 
-## Task 5
+## Task 5:
 
 Create a **method** called `convert` that takes in two parameters, `hours` and `minutes` which are both integers. Inside the **method**, write code to convert both `hours` and `minutes` to seconds. Multiply the number of hours by 3600 (the number of seconds in an hour) and the number of minutes by 60 (the number of seconds in a minute). Add these values together and return the total number of seconds.
 
-## Task 6
+## Task 6:
 
 Create a **string variable** called `sentence` and assign the value "The anemone, the wild violet, the hepatica, and the funny little curled-up." to it. Convert the string into an array. Use a loop to count the number of occurrences of the word "the" in the array.
 
 In my solution, I used the `String.Split` **method** to split the sentence into words by the space character.
 
-## Task 7
+## Task 7:
 
 Create a **method** called `removeVowels` that takes in a parameter `word` which is a string. Inside the **method**, write code to remove all vowels from `word`. Use a regular expression or a loop to check each character of the word and remove the vowels.
 
 To handle the edge case where the word does not contain vowels, you can check if `word` is equal to the result after removing vowels. If it is the same, you can return a message indicating that the word does not contain vowels, otherwise, return `word` without vowels.
 
+## Task 8:
+
+Create a **method** called `isPalindrome` that takes in a parameter `word` which is a string. Inside the **method**, write code to check if `word` is a palindrome. A palindrome is a word, phrase, or sequence that reads the same backward as forward. Compare the characters of `word` from the beginning and end of the string. If they match, continue checking until you reach the middle of the string. If all characters match, return `true`, otherwise, return `false`.
+
+## Task 9:
+
+Create a **method** called `isPrime` that takes in a parameter `num` which is an integer. Inside the **method**, write code to check if `num` is a prime number. A prime number is a number that is only divisible by 1 and itself. Use a loop to check if `num` is divisible by any number other than 1 and itself. If it is, return `false`, otherwise, return `true`.
+
+## Task 10:
+
+
 # Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your submission. Please don't merge your own pull request.
+Create a new pull request and assign **grayson-orr** to review your submission. Please do not your own pull request.

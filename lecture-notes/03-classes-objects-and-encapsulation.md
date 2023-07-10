@@ -1,6 +1,4 @@
-# 02: Classes & Objects
-
-Lecture video can found here - https://bit.ly/3YqEXrH
+# 03: Classes, Objects and Encapsulation
 
 A **class** is a blueprint for creating **objects** (a particular data structure), providing initial values for state (member **variables** or **fields**), and implementations of behaviour (member functions or **methods**). A **class** can be defined using the `class` keyword, followed by the **class** name.
 
@@ -67,15 +65,58 @@ myDog.Bark(); // Output: "Woof woof!"
 
 This code creates a new **object** of type `Dog` named "myDog" and assigns values to its `name` and `age` **fields** via the constructor. Then it calls the `Bark()` **method** on the **object**, which causes it to bark.
 
-## Class Diagram
+## Static Class
 
-To create a class diagram in **Visual Studio**, do the following:
+A **static** class cannot be instantiated and can only contain **static** members. It is often used to group related **static** members together, such as **constants** and **utility methods**. For example:
 
-1. In the **Solution Explorer**, right-click on the project name and select **Add** > **New Item**.
-2. In the **Add New Item** window, select **Class Diagram** and give it a name. Click **Add**.
-3. The class diagram will open in the designer. You can start adding classes by dragging the **Class** item from the toolbox onto the designer. **Note:** There might be a slight delay.
-4. Once you have created your class diagram, you can save it and close the designer.
-5. You can reopen the class diagram at any time by double-clicking on it in the **Solution Explorer**.
+```cs
+```cs
+public static class Utils
+{
+    public static void BubbleSort(int[] arr)
+    {
+        int n = arr.Length;
+        bool isSwapped;
+
+        for (int i = 0; i < n - 1; i++)
+        {
+            isSwapped = false;
+
+            for (int j = 0; j < n - i - 1; j++)
+            {
+                if (arr[j] > arr[j + 1])
+                {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    isSwapped = true;
+                }
+            }
+
+            // If no two elements were swapped by inner loop, then break
+            if (!isSwapped) break;
+        }
+    }
+}
+
+// Usage in Program.cs:
+
+int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
+
+Console.WriteLine("Original array");
+for (int i = 0; i < arr.Length; ++i)
+{
+    Console.Write(arr[i] + " ");
+}
+
+Utils.BubbleSort(arr);
+
+Console.WriteLine("\nSorted array");
+for (int i = 0; i < arr.Length; ++i)
+{
+    Console.Write(arr[i] + " ");
+}
+```
 
 ## Scoping
 
@@ -97,7 +138,7 @@ It is also worth noting that there are other keywords, such as `abstract`, `seal
 
 It is important to choose the right scope keyword depending on the intended use of the element in question, as it can affect the visibility, accessibility and overall design of the program.
 
-# 03: Encapsulation
+# Encapsulation
 
 Encapsulation is the process of hiding the implementation details of a class from the outside world and exposing only the necessary information and functionality through a public interface. Encapsulation is one of the fundamental principles of object-oriented programming, and it is used to promote the principles of abstraction, modularity, and information hiding.
 
@@ -109,12 +150,7 @@ For example, a class can have a private field that holds some important data and
 public class BankAccount
 {
     private decimal balance;
-
-    public decimal Balance
-    {
-        get => balance;
-        set => balance = value;
-    }
+    public decimal Balance { get => balance; set => balance = value; }
 }
 ```
 
@@ -122,9 +158,21 @@ In this example, the `balance` field is defined as private, meaning it can only 
 
 Encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change how the `balance` field is stored, without affecting the code that accesses it through the `Balance` property.
 
+## Class Diagram
+
+A class diagram is a type of UML diagram that shows the structure of a class and its relationships with other classes. It is used to visualise the design of a system and to communicate the design to other developers.
+
+To create a class diagram in **Visual Studio**, do the following:
+
+1. In the **Solution Explorer**, right-click on the project name and select **Add** > **New Item**.
+2. In the **Add New Item** window, select **Class Diagram** and give it a name. Click **Add**.
+3. The class diagram will open in the designer. You can start adding classes by dragging the **Class** item from the toolbox onto the designer. **Note:** There might be a slight delay.
+4. Once you have created your class diagram, you can save it and close the designer.
+5. You can reopen the class diagram at any time by double-clicking on it in the **Solution Explorer**.
+
 # Formative Assessment
 
-Before you start, create a new branch called **02-formative-assessment**.
+Before you start, create a new branch called **03-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -138,51 +186,42 @@ Choose an object in the classroom environment or even in the outside environment
 
 ## Task 2:
 
-Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `public` properties for `Make`, `Model`, and `Year`. Include a constructor that sets the make, model, and year when the object is created. Create three `Car` objects and display their `Make`, `Model`, and `Year` properties. 
+Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `public` **properties** for `Make`, `Model`, and `Year`. Include a **constructor** that sets the **make**, **model**, and **year** when the **object** is created. Create three `Car` **objects** and display their `Make`, `Model`, and `Year` **properties**. 
 
 ## Task 3:
 
-You are asked to design a student enrolment system for this task. Let's start by noting some of the system's requirements in a Microsoft Word document. For example, the system should allow students to enrol in multiple courses, withdraw from a course and view the course timetables. Create a rough class diagram showing the classes' relationships. Consider what attributes and methods each class should have and how they should interact with each other.
+Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` **properties** for `Name`, `Age`, and `Salary`. Include a **constructor** that sets the **name**, **age**, and **salary** when the **object** is created. Create three `Employee` **objects** and display their `Name`, `Age`, and `Salary` **properties**.
 
-## Task 4:
+## Task 4: 
 
-Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` properties for `Name`, `Age`, and `Salary` with a **setter** for the `Salary` property that checks for negative input and **throws** an `ArgumentException` with the message "Salary can not be negative." Include a **constructor** that sets the **name**, **age**, and **salary** when the **object** is created. Create three `Employee` objects and display their `Name`, `Age`, and `Salary` properties.
+In this task, you will create four classes that communicate with each other. The first class is called `Institution` with `private` fields for `name`, `region` and `country`. The second class is called `Department` with `private` fields for `institution` and `name`. The third class is called `Course` with `private` fields for `department` and `code`, `name`, `description`, `credits` and `fees`.
 
-## Task 5:
+The fourth class is called `Utils`. This class has three `static` fields called `institutions`, `departments` and `courses`. These fields are `static` **lists** of `Institution`, `Department` and `Course` **objects** respectively. The `Utils` class also has three `static` methods called `SeedInstitutions`, `SeedDepartments` and `SeedCourses`. These methods are used to populate the `institutions`, `departments` and `courses` lists respectively.
 
-Create a program that simulates a banking system. 
+For each of the `Seed` methods, you will need to create at least three **objects** and add them to the appropriate list. For example, the `SeedInstitutions` method will create three `Institution` **objects** and add them to the `institutions` list.
 
-Create a `BankAccount` **class**, which should have **methods** for depositing and withdrawing money and checking the account balance.
+For each `course`, display its information and which `department` and `institution` it belongs to.
 
-Create a `Customer` **class**, which should have **fields** for the customer's name, address, and mobile number and a method for opening a new bank account.
+Here is an `Utils` class example to get you started:
 
-Create a `Transaction` **class**, which should have **fields** for the amount of money transferred.
+```cs
+public static class Utils
+{
+    private static List<Institution> institutions = new List<Institution>();
 
-Use these classes to create a program allowing customers to open a bank account, deposit and withdraw money, and view their account balance. Also, create a log of all transactions made on the account.
+    public static List<Institution> SeedInstitutions()
+    {
+        institutions.Add(new Institution("Otago Polytechnic", "Otago", "New Zealand"));
 
-## Task 6:
+        // Add two more institutions
+        
+        return institutions;
+    }
+}
 
-Create a program that simulates a movie rental system.
-
-Create a `Movie` **class**, which should have **fields** for the movie's `title`, `genre`, `rating`, and `availability`.
-
-Create a `Customer` **class**, which should have **fields** for the customer's `first name`, `last name`, `address`, and `mobile number`, as well as an **array** of the movies they have rented.
-
-Create a `Rental` **class**, which should have **fields** for the movie rented, the customer who rented it, and the rental date.
-
-Use these **classes** to create a program allowing customers to search for and rent a movie, view their rental history, and return a rented movie. The program should also have an inventory of available movies and a log of all rentals.
-
-## Task 7:
-
-Create a program that simulates an online store.
-
-Create a `Product` **class**, which should have **fields** for the product's `name`, `description`, `price`, and `stock`.
-
-Create a `Customer` **class**, which should have **fields** for the customer's `first name`, `last name`, `address`, and `mobile number`, as well as an **array** of the products they have purchased.
-
-Create an `Order` **class**, which should have **fields** for the customer who placed the order, the products ordered, and the order date.
-
-Use these **classes** to create a program that allows a customer to browse products, add them to a shopping cart, and place an order. The program should also have an inventory of available products, and it should update the inventory when a product is purchased.
+// Usage in Program.cs:
+List<Institution> institutions = Utils.SeedInstitutions();
+```
 
 ## Task 8: 
 
@@ -208,4 +247,4 @@ Create a class diagram for two programs you have created.
 
 # Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your submission. Please don't merge your own pull request.
+Create a new pull request and assign **grayson-orr** to review your submission. Please do not your own pull request.

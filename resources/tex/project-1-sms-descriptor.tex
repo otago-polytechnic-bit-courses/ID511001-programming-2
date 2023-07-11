@@ -88,23 +88,23 @@ You will need to submit an application and documentation that meet the following
     \item The application needs to open without code or file structure modification in \textbf{Visual Studio}.
     \item The application needs to contain the following \textbf{enums}:
     \begin{verbatim}
-public enum Position
-{
-    LECTURER,
-    SENIOR_LECTURER,
-    PRINCIPAL_LECTURER,
-    ASSOCIATE_PROFESSOR,
-    PROFESSOR
-}
-    
-public enum Salary
-{
-    LECTURER_SALARY = 85000,
-    SENIOR_LECTURER_SALARY = 100000,
-    PRINCIPAL_LECTURER_SALARY = 115000,
-    ASSOCIATE_PROFESSOR_SALARY = 130000,
-    PROFESSOR_SALARY = 145000
-}
+        public enum Position
+        {
+            LECTURER,
+            SENIOR_LECTURER,
+            PRINCIPAL_LECTURER,
+            ASSOCIATE_PROFESSOR,
+            PROFESSOR
+        }
+            
+        public enum Salary
+        {
+            LECTURER_SALARY = 85000,
+            SENIOR_LECTURER_SALARY = 100000,
+            PRINCIPAL_LECTURER_SALARY = 115000,
+            ASSOCIATE_PROFESSOR_SALARY = 130000,
+            PROFESSOR_SALARY = 145000
+        }
     \end{verbatim}
     \item The application needs to contain the following \textbf{classes}:
     \begin{itemize}
@@ -115,7 +115,7 @@ public enum Salary
         \begin{itemize}
             \item \textbf{GetAllMarks()} with the return type of \textbf{List$<$int$>$}. This method returns all assessment marks.
             \item \textbf{GetAllGrades()} with the return type of \textbf{List$<$string$>$}. This method returns all assessment grades.
-            \item \textbf{GetHighestMarks()} with the return type of \textbf{int}. This method returns the highest passing assessment mark(s). .
+            \item \textbf{GetHighestMarks()} with the return type of \textbf{int}. This method returns the highest passing assessment mark(s).
             \item \textbf{GetLowestMarks()} with the return type of \textbf{int}. This method returns the lowest passing assessment mark(s). 
             \item \textbf{GetFailMarks()} with the return type of \textbf{int}. This method returns the fail assessment mark(s).
             \item \textbf{GetAverageMarks()} with the return type of \textbf{double}. This method returns the average assessment mark.
@@ -130,19 +130,81 @@ public enum Salary
             \item \textbf{SeedInstitutions()} with the return type of \textbf{List$<$Institution$>$}. This method seeds a \textbf{List$<$Institution$>$} with \textbf{three} \textbf{Institution} objects.
             \item \textbf{SeedDepartments()} with the return type of \textbf{List$<$Department$>$}. This method seeds a \textbf{List$<$Department$>$} with \textbf{three} \textbf{Department} objects.
             \item \textbf{SeedCourses()} with the return type of \textbf{List$<$Course$>$}. This method seeds a \textbf{List$<$Course$>$} with \textbf{three} \textbf{Course} objects. 
-            \item \textbf{ReadLearnersFromFile()} with no return type and two parameters: \textbf{filePath} of type \textbf{string} and \textbf{learners} of type \textbf{List$<$Learner$>$}. This method reads the \textbf{learners.txt} file and populates the \textbf{learners} parameter.
-            \item \textbf{ReadLecturersFromFile()} with no return type and two parameters: \textbf{filePath} of type \textbf{string} and \textbf{lecturers} of type \textbf{List$<$Lecturer$>$}. This method reads the \textbf{lecturers.txt} file and populates the \textbf{lecturers} parameter.
+            \item \textbf{ReadLearnersFromFile()} with no return type and two parameters: \textbf{filePath} of type \textbf{string} and \textbf{learners} of type \textbf{List$<$Learner$>$}. This method reads the \textbf{learners.txt} file and populates the \textbf{learners} parameter. The \textbf{learners.txt} file contains the following information:
+            \begin{verbatim}
+                1,John,Doe,0,100,100,95,10,0
+                2,Jane,Doe,0,45,35,45,75,65
+                3,Grayson,Orr,1,50,60,75,80,55
+                4,Joe,Blogs,1,10,20,30,70,80
+                5,Bob,Brown,2,75,82,95,55,10
+            \end{verbatim}
+            \item \textbf{ReadLecturersFromFile()} with no return type and two parameters: \textbf{filePath} of type \textbf{string} and \textbf{lecturers} of type \textbf{List$<$Lecturer$>$}. This method reads the \textbf{lecturers.txt} file and populates the \textbf{lecturers} parameter. he \textbf{lecturers.txt} file contains the following information:
+            \begin{verbatim}
+                1,Graydon,Ore,1,100000,0
+                2,Aidan,Moscow,2,115000,1
+                3,Jon,Seena,0,85000,2
+            \end{verbatim}
         \end{itemize}
         \textbf{Program}. This \textbf{public} class manages the business logic and user interface of the application. This class needs to account for the following functionality:
         \begin{itemize}
-            \item Displaying course details
-            \item Displaying all marks
-            \item Displaying all grades
-            \item Displaying highest marks
-            \item Displaying lowest marks
-            \item Displaying fail marks
-            \item Displaying average marks
-            \item Displaying average grades
+            \item Displaying course details. This needs to display the following details:
+            \begin{itemize}
+                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+                \item course \textbf{description}
+                \item course \textbf{credits}
+                \item course \textbf{fees}
+                \item institution \textbf{name}, \textbf{region} and \textbf{country} in this format - \textbf{name, region, country}
+                \item department \textbf{name}
+            \end{itemize}
+            \item Displaying all marks. This needs to display the following details:
+            \begin{itemize}
+                \item learner \textbf{id}
+                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+                \item learner \textbf{assessment marks 1-5} in this format - \textbf{mark 1, mark 2, mark 3, mark 4, mark 5}
+            \end{itemize}
+            \item Displaying all grades. This needs to display the following details:
+            \begin{itemize}
+                \item learner \textbf{id}
+                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+                \item learner \textbf{assessment grades 1-5} in this format - \textbf{grade 1, grade 2, grade 3, grade 4, grade 5}
+            \end{itemize}
+            \item Displaying highest marks. This needs to display the following details:
+            \begin{itemize}
+                \item learner \textbf{id}
+                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+                \item learner \textbf{highest assessment mark(s)}
+            \end{itemize}
+            \item Displaying lowest marks. This needs to display the following details:
+            \begin{itemize}
+                \item learner \textbf{id}
+                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+                \item learner \textbf{lowest assessment mark(s)}
+            \end{itemize}
+            \item Displaying fail marks. This needs to display the following details:
+            \begin{itemize}
+                \item learner \textbf{id}
+                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+                \item learner \textbf{fail assessment mark(s)}
+            \end{itemize}
+            \item Displaying average marks. This needs to display the following details:
+            \begin{itemize}
+                \item learner \textbf{id}
+                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+                \item learner \textbf{average assessment mark}
+            \end{itemize}
+            \item Displaying average grades. This needs to display the following details:
+            \begin{itemize}
+                \item learner \textbf{id}
+                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+                \item learner \textbf{average assessment grade}
+            \end{itemize}
             \item Adding a learner. When adding a learner, the \textbf{id} is auto-generated and unique. Prompt the user to enter the following details: \textbf{first name}, \textbf{last name}, \textbf{course} and \textbf{assessment marks 1-5}. Implement the following validation:
             \begin{itemize}
                 \item \textbf{first name} and \textbf{last name} are not empty or, contain numbers, or special characters.
@@ -151,7 +213,16 @@ public enum Salary
             \end{itemize} 
             If the validation is successful, add the learner to the \textbf{learners} list, write the learner to the \textbf{learners.txt} file and display a success message. Otherwise, display an error message.             
             \item Removing a learner. When removing a learner, prompt the user to enter the \textbf{id} of the learner to remove. If the \textbf{id} is valid, prompt the user to confirm the removal. If the user confirms the removal, remove the learner from the \textbf{learners} list and \textbf{learners.txt} file, and display a success message. Otherwise, display an error message.             
-            \item Displaying lecturer details
+            \item Displaying lecturer details. This needs to display the following details:
+            \begin{itemize}
+                \item lecturer \textbf{id}
+                \item lecturer \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+                \item lecturer \textbf{position}
+                \item institution \textbf{name}, \textbf{region} and \textbf{country} in this format - \textbf{name, region, country}
+                \item department \textbf{name}
+                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+                \item lecturer \textbf{salary}
+            \end{itemize}
             \item Adding a lecturer. When adding a lecturer, the \textbf{id} is auto-generated and unique. The \textbf{salary} is calculated based on the \textbf{position}. Prompt the user to enter the following details: \textbf{first name}, \textbf{last name}, \textbf{position} and \textbf{course}. Implement the following validation:
             \begin{itemize}
                 \item \textbf{first name} and \textbf{last name} are not empty or, contain numbers, or special characters.
@@ -164,8 +235,7 @@ public enum Salary
     \end{itemize}
 \end{itemize}
 
-\newpage
-\subsection*{Code Elegance - Learning Outcomes 1 and 2  (40\%)}
+\subsection*{Code Elegance - Learning Outcomes 1 and 2 (40\%)}
 \begin{itemize}
     \item A \textbf{Visual Studio} \textbf{.gitignore} file is used. 
     \item Appropriate naming of files, variables, methods and classes.
@@ -175,24 +245,24 @@ public enum Salary
     \item Each files needs to have a header comment located at the top of the file.
     \item In-line comments where required. It should be for code that needs further explanation.
     \item Formatted code.
-    \item No dead or unused code. 
+    \item No dead or unused code.
 \end{itemize}
 
 \subsection*{Documentation and Git Usage - Learning Outcomes 1 and 2 (10\%)}
 \begin{itemize}
     \item Provide the following in your repository \textbf{README.md} file:
     \begin{itemize}
-        \item 
+        \item A class diagram of your application.
+        \item If applicable, known bugs.
     \end{itemize}
-    \item Commit at least \textbf{five} times per week.
     \item Commit messages reflect the context of each functional requirement change.
 \end{itemize}
 
-
 \subsection*{Additional Information}
 \begin{itemize}
-	\item \textbf{Do not} rewrite your \textbf{Git} history. It is important that the course lecturer can see how you worked on your assessment over time.
-    \item Grade table:\\\\
+    \item An exemplar is available in the \textbf{assessment} directory of the \textbf{course materials} repository.
+    \item You may add additional classes and methods. 
+    \item Grade and mark range table:\\\\
     \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{|c|c|}
         \hline
@@ -209,6 +279,7 @@ public enum Salary
         D & 40-49 (fail assessment marks)   \\ \hline
         E & 0-39 (fail assessment marks)   \\ \hline
     \end{tabular}
+    \item \textbf{Do not} rewrite your \textbf{Git} history. It is important that the course lecturer can see how you worked on your assessment over time.
 \end{itemize}
 
 \end{document}

@@ -84,38 +84,35 @@ Resits and reassessments \textbf{are not} applicable in \textbf{ID511001: Progra
 You will need to submit an application and documentation that meet the following requirements:\\
 
 \subsection*{Functionality - Learning Outcomes 1 and 2 (50\%)}
-\begin{itemize}
-    \item The application \textbf{must} open without code or file structure modification in \textbf{Visual Studio}.
-    \item The game \textbf{must} be driven by one \textbf{Timer} and begins when the user presses the \textbf{space bar} key.
-    \item The ball and two paddles \textbf{must} be created using the \textbf{Graphics} class. 
-    \item The ball \textbf{must} bounce/collide off the top and bottom of the screen, and paddles.
-    \item The paddles \textbf{must} move vertically but not exceed the top and bottom of the screen.
-    \item The user controls the left paddle via the \textbf{up} and \textbf{down} keys. The computer controls the right paddle. It is acceptable for the right paddle to follow the ball's position. However, other solutions are encouraged.
-    \item Double buffering to prevent the ball and paddles from flickering.
-    \item A scoring system. When the ball collides with the left and right-hand side of the screen, one point is given to either the user or computer. The game is over when either score is 10. 
+    \item The application needs to open without code or file structure modification in \textbf{Visual Studio}.
+    \item The game needs to be driven by one \textbf{Timer} and begins when the user presses the \textbf{space bar} key.
+    \item The ball and two paddles need to be created using the \textbf{Graphics} class. 
+    \item The ball needs to bounce/collide off the top and bottom of the screen, and paddles.
+    \item The paddles needs to move vertically but not exceed the top and bottom of the screen.
+    \item The user controls the left paddle via the \textbf{up arrow} and \textbf{down arrow} keys. The computer controls the right paddle. It is acceptable for the right paddle to follow the ball's position. However, other solutions are encouraged.
     \item Display the user and computer's score using the \textbf{DrawString} method.
-    \item A highscore system. When the game is over, appropriate feedback \textbf{must} be displayed to the user, i.e., \textbf{"You win!"} or \textbf{"You lose!"}, the user and computer's scores are saved, i.e., written to a text file. Read the scores from the text file and display the last five to the user.
-    \item Play a sound when:
+    \item A scoring system. When the ball collides with the left and right-hand side of the screen, one point is given to either the user or computer. The game is over when either score is 10. 
+    \item A highscore system. When the game is over, appropriate feedback needs to be displayed to the user, i.e., \textbf{"You win!"} or \textbf{"You lose!"}, the user and computer's scores are saved, i.e., written to a text file. Read the scores from the text file and display the last five to the user.
+    \item Double buffering to prevent the ball, paddles and scores from flickering.
+    \item Play a sound using the \textbf{SoundPlayer} class when:
     \begin{itemize}
         \item The ball bounces off the paddle, and top and bottom of the screen.
-        \item The user wins.
-        \item The user loses.
+        \item The user wins and loses.
     \end{itemize}
-    \textbf{Note:} These sounds \textbf{must} be unique.
-    \item An ability to restart and pause a game.
+    \item Restart and pause a game via the \textbf{R} and \textbf{P} keys.
     \item Randomise the colour of the ball and paddles.
 \end{itemize}
 
-\subsection*{Code Elegance - Learning Outcomes 1 and 2  (40\%)}
+\subsection*{Code Elegance - Learning Outcomes 1 and 2 (40\%)}
 \begin{itemize}
-    \item Adhere to the four principles of \textbf{OO}, i.e., encapsulation, abstraction, inheritance and polymorphism.
-    \item Use of intermediate variables, constants and enumerations.
+    \item A \textbf{Visual Studio} \textbf{.gitignore} file is used. 
+    \item Appropriate naming of files, variables, methods and classes.
     \item Idiomatic use of control flow, data structures and in-built functions.
     \item Efficient algorithmic approach.
     \item Sufficient modularity.
-    \item Each method and class \textbf{must} have a header comment located immediately before its declaration.
-    \item In-line comments where required. 
-    \item Project files, i.e., \textbf{.cs} files are formatted. 
+    \item Each files needs to have a header comment located at the top of the file.
+    \item In-line comments where required. It should be for code that needs further explanation.
+    \item Formatted code.
     \item No dead or unused code.
 \end{itemize}
 
@@ -123,21 +120,21 @@ You will need to submit an application and documentation that meet the following
 \begin{itemize}
     \item Provide the following in your repository \textbf{README.md} file:
     \begin{itemize}
-        \item The application's class diagram created in \textbf{Visual Studio}.
-        \item Known bugs if applicable.
+        \item A class diagram of your application.
+        \item If applicable, known bugs.
     \end{itemize}
-    \item Commit at least \textbf{20} times per week.
-    \item Commit messages \textbf{must} be formatted using the recommended conventions and reflect the context of each functional requirement change.
+    \item Commit messages reflect the context of each functional requirement change.
 \end{itemize}
 
 \subsection*{Additional Information}
 \begin{itemize}
-    \item \textbf{Do not} rewrite your \textbf{Git} history. It is important that the course lecturer can see how you worked on your assessment over time.
-    \item When the user presses a key, i.e., up or down, a \textbf{KeyDown} event is generated. For the \textbf{Form1's} \textbf{KeyDown} event, the method signature is:
+    \item An exemplar is available in the \textbf{assessment} directory of the \textbf{course materials} repository.
+    \item You may add additional classes and methods.
+    \item When the user presses a key, i.e., \textbf{up arrow} or \textbf{down arrow}, a \textbf{KeyDown} event is generated. For the \textbf{Form1's} \textbf{KeyDown} event, the method signature is:
     \begin{Verbatim}[tabsize=2]
 		private void Form1_KeyDown(object sender, KeyEventArgs e) {}
 	\end{Verbatim}
-	The argument you will be interested in is \textbf{KeyEventArgs e} which is the value of the pressed key. The arrow key values are \textbf{Keys.Left}, \textbf{Keys.Right}, \textbf{Keys.Up} and \textbf{Keys.Down}. In the \textbf{Form1\_KeyDown} method, you can use a \textbf{switch} statement. For example:
+	The argument you will be interested in is \textbf{KeyEventArgs e} which is the value of the pressed key. The \textbf{arrow} key values are \textbf{Keys.Left}, \textbf{Keys.Right}, \textbf{Keys.Up} and \textbf{Keys.Down}. In the \textbf{Form1\_KeyDown} method, you can use a \textbf{switch} statement. For example:
 	\begin{Verbatim}[tabsize=2]
 		switch (e.KeyCode) 
 		{
@@ -158,7 +155,8 @@ You will need to submit an application and documentation that meet the following
 				break;
 		}
 	\end{Verbatim}
-	\textbf{Note:} The \textbf{Form1's} \textbf{KeyPreview} event \textbf{must} be set to \textbf{True}. Otherwise, \textbf{Form1} will not respond to the \textbf{KeyDown} event.
+	\textbf{Note:} The \textbf{Form1's} \textbf{KeyPreview} event needs to be set to \textbf{True}. Otherwise, \textbf{Form1} will not respond to the \textbf{KeyDown} event.
+    \item \textbf{Do not} rewrite your \textbf{Git} history. It is important that the course lecturer can see how you worked on your assessment over time
 \end{itemize}
 
 \end{document}

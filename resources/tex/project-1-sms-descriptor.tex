@@ -50,15 +50,14 @@ At the successful completion of this course, learners will be able to:
 \begin{tabular}{|c|c|c|c|}
 	\hline
 	\textbf{Assessment}                                 & \textbf{Weighting} & \textbf{Due Date}            & \textbf{Learning Outcomes} \\ \hline
-	\small Project 1: Student Management System  & \small 35\%        & \small 20-09-2023 (Wednesday at 4.59 PM)   & \small 1 and 2                   \\ \hline
+	\small Project 1: Student Management System  & \small 35\%        & \small 22-09-2023 (Friday at 4.59 PM)   & \small 1 and 2                   \\ \hline
 	\small Project 2: Pong & \small 25\%        & \small 10-11-2023 (Friday at 04.59 PM)  & \small 1 and 2                   \\ \hline
 	\small Theory Examination                        & \small 30\%        & \small 15-11-2023 (Wednesday at 12.10 PM)  & \small 1 and 2                   \\ \hline
-	\small Classroom Tasks                       & \small 10\%        & \small Multiple Due Dates  & \small 1 and 2                   \\ \hline
+	\small Classroom Task: Unit Testing                       & \small 10\%        & \small 22-09-2023 (Friday at 4.59 PM)  & \small 1 and 2                   \\ \hline
 \end{tabular} 
 
-
 \section*{Conditions of Assessment}
-You will complete this assessment during your learner-managed time. However, there will be time during class to discuss the requirements and your progress on this assessment. This assessment will need to be completed by \textbf{Wednesday, 20 September 2023} at \textbf{4.59 PM}.
+You will complete this assessment during your learner-managed time. However, there will be time during class to discuss the requirements and your progress on this assessment. This assessment will need to be completed by \textbf{Friday, 22 September 2023} at \textbf{4.59 PM}.
 
 \section*{Pass Criteria}
 This assessment is criterion-referenced (CRA) with a cumulative pass mark of \textbf{50\%} over all assessments in \textbf{ID511001: Programming 2}.
@@ -73,7 +72,7 @@ The school's process concerning submissions, extensions, resubmissions and resit
 You \textbf{must} submit all application files via \textbf{GitHub Classroom}. Here is the URL to the repository you will use for your submission – \href{https://classroom.github.com/a/xIHtZr71}{https://classroom.github.com/a/xIHtZr71}.  Create a \textbf{.gitignore} and add the ignored files in this resource - \href{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}. The latest application files in the \textbf{master} or \textbf{main} branch will be used to mark against the \textbf{Functionality} criterion. Please test before you submit. Partial marks \textbf{will not} be given for incomplete functionality. Late submissions will incur a \textbf{10\% penalty per day}, rolling over at \textbf{5:00 PM}.
 
 \section*{Extensions}
-Familiarise yourself with the assessment due date. Contact the course lecturer before the due date if you need an extension. If you require more than a week's extension, you will need to provide a medical certificate or support letter from your manager.
+Familiarise yourself with the assessment due date. Extensions will \textbf{only} be granted if you are unable to complete the assessment by the due date because of \textbf{unforeseen circumstances outside your control}. The length of the extension granted will depend on the circumstances and \textbf{must} be negotiated with the course lecturer before the assessment due date. A medical certificate or support letter may be needed. Extensions will not be granted for poor time management or pressure of other assessments.
 
 \section*{Resubmissions}
 Learners may be requested to resubmit an assessment following a rework of part/s of the original assessment. Resubmissions are to be completed within a negotiable short time frame and usually \textbf{must} be completed within the timing of the course to which the assessment relates. Resubmissions will be available to learners who have made a genuine attempt at the first assessment opportunity and achieved a \textbf{D grade (40-49\%)}. The maximum grade awarded for resubmission will be \textbf{C-}.
@@ -86,8 +85,8 @@ You will need to submit an application and documentation that meet the following
 
 \subsection*{Functionality - Learning Outcomes 1 and 2 (50\%)}
 \begin{itemize}
-    \item The application \textbf{must} open without code or file structure modification in \textbf{Visual Studio}.
-    \item The application must contain the following \textbf{enums}:
+    \item The application needs to open without code or file structure modification in \textbf{Visual Studio}.
+    \item The application needs to contain the following \textbf{enums}:
     \begin{verbatim}
 public enum Position
 {
@@ -107,7 +106,7 @@ public enum Salary
     PROFESSOR_SALARY = 145000
 }
     \end{verbatim}
-    \item The application must contain the following \textbf{classes}:
+    \item The application needs to contain the following \textbf{classes}:
     \begin{itemize}
         \item \textbf{Institution}. This \textbf{public} class has the following \textbf{private} fields: \textbf{name} of type \textbf{string}, \textbf{region} of type \textbf{string} and \textbf{country} of type \textbf{string}. 
         \item \textbf{Department}. This \textbf{public} class has the following \textbf{private} fields: \textbf{institution} of type \textbf{Institution} and \textbf{name} of type \textbf{string}.
@@ -124,8 +123,8 @@ public enum Salary
         \end{itemize}
         For more information on how to calculate the highest, lowest and fail marks, refer to the \textbf{grade table} in the \textbf{Additional Information} section below.
         \item \textbf{Person}. This \textbf{parent} and \textbf{public} class has the following \textbf{protected} fields: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string} and \textbf{lastName} of type \textbf{string}.
-        \item \textbf{Learner}. This \textbf{child} and \textbf{public} class inherits from \textbf{Person}. However, has one \textbf{private} field: \textbf{courseAssessmentMarks} of type \textbf{CourseAssessmentMark}.
-        \item \textbf{Lecturer}. This \textbf{child} and \textbf{public} class inherits from \textbf{Person}. However, has three \textbf{private} fields: \textbf{position} of type \textbf{Position}, \textbf{salary} of type \textbf{Salary} and \textbf{course} of type \textbf{Course}.
+        \item \textbf{Learner}. This \textbf{child} and \textbf{public} class inherits from \textbf{Person} and has additional one \textbf{private} field: \textbf{courseAssessmentMarks} of type \textbf{CourseAssessmentMark}.
+        \item \textbf{Lecturer}. This \textbf{child} and \textbf{public} class inherits from \textbf{Person} and three additional \textbf{private} fields: \textbf{position} of type \textbf{Position}, \textbf{salary} of type \textbf{Salary} and \textbf{course} of type \textbf{Course}.
         \item \textbf{Utils}. This \textbf{static} class has the following \textbf{public static} methods:
         \begin{itemize}
             \item \textbf{SeedInstitutions()} with the return type of \textbf{List$<$Institution$>$}. This method seeds a \textbf{List$<$Institution$>$} with \textbf{three} \textbf{Institution} objects.
@@ -134,7 +133,7 @@ public enum Salary
             \item \textbf{ReadLearnersFromFile()} with no return type and two parameters: \textbf{filePath} of type \textbf{string} and \textbf{learners} of type \textbf{List$<$Learner$>$}. This method reads the \textbf{learners.txt} file and populates the \textbf{learners} parameter.
             \item \textbf{ReadLecturersFromFile()} with no return type and two parameters: \textbf{filePath} of type \textbf{string} and \textbf{lecturers} of type \textbf{List$<$Lecturer$>$}. This method reads the \textbf{lecturers.txt} file and populates the \textbf{lecturers} parameter.
         \end{itemize}
-        \textbf{Program}. This \textbf{public} class manages the business logic and user interface of the application. This class must account for the following functionality:
+        \textbf{Program}. This \textbf{public} class manages the business logic and user interface of the application. This class needs to account for the following functionality:
         \begin{itemize}
             \item Displaying course details
             \item Displaying all marks
@@ -144,24 +143,39 @@ public enum Salary
             \item Displaying fail marks
             \item Displaying average marks
             \item Displaying average grades
-            \item Adding a learner. When adding a learner, the \textbf{id} must be auto-generated and unique.  You must prompt the user to enter the following details: \textbf{first name}, \textbf{last name}, \textbf{course} and \textbf{assessment marks 1-5}. Also, you must implement the following validation:
+            \item Adding a learner. When adding a learner, the \textbf{id} is auto-generated and unique. Prompt the user to enter the following details: \textbf{first name}, \textbf{last name}, \textbf{course} and \textbf{assessment marks 1-5}. Implement the following validation:
             \begin{itemize}
-                \item \textbf{first name} and \textbf{last name} must not be empty or, contain numbers or special characters.
-                \item \textbf{course} must be a valid number.
-                \item \textbf{assessment marks 1-5} must be between 0 and 100.
+                \item \textbf{first name} and \textbf{last name} are not empty or, contain numbers, or special characters.
+                \item \textbf{course} is valid number.
+                \item \textbf{assessment marks 1-5} are between 0 and 100.
             \end{itemize} 
-            \item Removing a learner
+            If the validation is successful, add the learner to the \textbf{learners} list, write the learner to the \textbf{learners.txt} file and display a success message. Otherwise, display an error message.             
+            \item Removing a learner. When removing a learner, prompt the user to enter the \textbf{id} of the learner to remove. If the \textbf{id} is valid, prompt the user to confirm the removal. If the user confirms the removal, remove the learner from the \textbf{learners} list and \textbf{learners.txt} file, and display a success message. Otherwise, display an error message.             
             \item Displaying lecturer details
-            \item Adding a lecturer
+            \item Adding a lecturer. When adding a lecturer, the \textbf{id} is auto-generated and unique. The \textbf{salary} is calculated based on the \textbf{position}. Prompt the user to enter the following details: \textbf{first name}, \textbf{last name}, \textbf{position} and \textbf{course}. Implement the following validation:
+            \begin{itemize}
+                \item \textbf{first name} and \textbf{last name} are not empty or, contain numbers, or special characters.
+                \item \textbf{position} and \textbf{course} are valid numbers.
+            \end{itemize}
+            If the validation is successful, add the lecturer to the \textbf{lecturers} list, write the lecturer to the \textbf{lecturers.txt} file and display a success message. Otherwise, display an error message.
             \item Exiting the application
         \end{itemize} 
+        If the user enters an invalid option, display an error message and prompt the user to enter a valid option.
     \end{itemize}
 \end{itemize}
 
 \newpage
 \subsection*{Code Elegance - Learning Outcomes 1 and 2  (40\%)}
 \begin{itemize}
-    \item 
+    \item A \textbf{Visual Studio} \textbf{.gitignore} file is used. 
+    \item Appropriate naming of files, variables, methods and classes.
+    \item Idiomatic use of control flow, data structures and in-built functions.
+    \item Efficient algorithmic approach.
+    \item Sufficient modularity.
+    \item Each files needs to have a header comment located at the top of the file.
+    \item In-line comments where required. It should be for code that needs further explanation.
+    \item Formatted code.
+    \item No dead or unused code. 
 \end{itemize}
 
 \subsection*{Documentation and Git Usage - Learning Outcomes 1 and 2 (10\%)}

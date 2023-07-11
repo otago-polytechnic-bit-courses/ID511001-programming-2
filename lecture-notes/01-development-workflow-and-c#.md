@@ -89,6 +89,16 @@ var isTrue = true;
 
 Note that **variables** declared with the `var` keyword can only be initialised at the time of declaration. It cannot be reassigned with a different type.
 
+What happens if you want to declare a variable whose value cannot be changed once it has been assigned? You can use the `const` keyword to declare a **constant**. For example:
+
+```cs
+const int x = 5;
+const string name = "John Doe";
+const bool isTrue = true;
+
+x = 10; // This will cause an error
+```
+
 ## If-Else Statements
 
 An **if-else** statement is a **control flow statement** that allows the program to make decisions based on a specific condition. The basic syntax of an **if-else** statement is:

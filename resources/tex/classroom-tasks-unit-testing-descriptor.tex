@@ -1,0 +1,119 @@
+% Author: Grayson Orr
+% Course: ID511001: Programming 2
+
+\documentclass{article}
+\author{}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage[margin = 2.25cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{soul}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue
+}
+\setlength\parindent{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{College of Engineering, Construction and Living Sciences\\Bachelor of Information Technology}
+\lfoot{Classroom Task: Unit Testing \\Version 1, Semester Two, 2023}
+\rfoot{\thepage}
+ 
+\begin{document}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=50mm]{../../resources/img/logo.png}
+\end{figure}
+
+\title{College of Engineering, Construction and Living Sciences\\Bachelor of Information Technology\\ID511001: Programming 2\\Level 5, Credits 15\\\textbf{Classroom Task: Unit Testing }}
+\date{}
+\maketitle
+
+\section*{Assessment Overview}
+In this assessment, you will \textbf{unit test} your student management system \textbf{Console Application} using \textbf{C\#}. 
+
+\section*{Learning Outcomes}
+At the successful completion of this course, learners will be able to:
+\begin{enumerate}
+    \item Build interactive, event-driven GUI applications using pre-built components.
+    \item Declare and implement user-defined classes using encapsulation, inheritance and polymorphism.
+\end{enumerate}
+
+\section*{Assessments}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{Assessment}                                 & \textbf{Weighting} & \textbf{Due Date}            & \textbf{Learning Outcomes} \\ \hline
+	\small Project 1: Student Management System  & \small 35\%        & \small 22-09-2023 (Friday at 4.59 PM)   & \small 1 and 2                   \\ \hline
+	\small Project 2: Pong & \small 25\%        & \small 10-11-2023 (Friday at 04.59 PM)  & \small 1 and 2                   \\ \hline
+	\small Theory Examination                        & \small 30\%        & \small 15-11-2023 (Wednesday at 12.10 PM)  & \small 1 and 2                   \\ \hline
+	\small Classroom Task: Unit Testing                       & \small 10\%        & \small 22-09-2023 (Friday at 4.59 PM)  & \small 1 and 2                   \\ \hline
+\end{tabular} 
+
+\section*{Conditions of Assessment}
+You will complete this assessment during your learner-managed time. However, there will be time during class to discuss the requirements and your progress on this assessment. This assessment will need to be completed by \textbf{Friday, 22 September 2023} at \textbf{4.59 PM}.
+
+\section*{Pass Criteria}
+This assessment is criterion-referenced (CRA) with a cumulative pass mark of \textbf{50\%} over all assessments in \textbf{ID511001: Programming 2}.
+
+\section*{Authenticity}
+All parts of your submitted assessment \textbf{must} be completely your work. If you use code snippets from \textbf{GitHub}, \textbf{StackOverflow} or other online resources, you \textbf{must} reference it appropriately using \textbf{APA 7th edition}. Provide your references in the \textbf{README.md} file in your repository. Failure to do this will result in a mark of \textbf{zero} for this assessment. 
+
+\section*{Policy on Submissions, Extensions, Resubmissions and Resits}
+The school's process concerning submissions, extensions, resubmissions and resits complies with \textbf{Otago Polytechnic | Te Pūkenga} policies. Learners can view policies on the \textbf{Otago Polytechnic | Te Pūkenga} website located at \href{https://www.op.ac.nz/about-us/governance-and-management/policies}{https://www.op.ac.nz/about-us/governance-and-management/policies}.
+
+\section*{Submission}
+You \textbf{must} submit all application files via \textbf{GitHub Classroom}. Here is the URL to the repository you will use for your submission – \href{https://classroom.github.com/a/xIHtZr71}{https://classroom.github.com/a/xIHtZr71}.  Create a \textbf{.gitignore} and add the ignored files in this resource - \href{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}. The latest application files in the \textbf{master} or \textbf{main} branch will be used to mark against the \textbf{Functionality} criterion. Please test before you submit. Partial marks \textbf{will not} be given for incomplete functionality. Late submissions will incur a \textbf{10\% penalty per day}, rolling over at \textbf{5:00 PM}.
+
+\section*{Extensions}
+Familiarise yourself with the assessment due date. Extensions will \textbf{only} be granted if you are unable to complete the assessment by the due date because of \textbf{unforeseen circumstances outside your control}. The length of the extension granted will depend on the circumstances and \textbf{must} be negotiated with the course lecturer before the assessment due date. A medical certificate or support letter may be needed. Extensions will not be granted for poor time management or pressure of other assessments.
+
+\section*{Resubmissions}
+Learners may be requested to resubmit an assessment following a rework of part/s of the original assessment. Resubmissions are to be completed within a negotiable short time frame and usually \textbf{must} be completed within the timing of the course to which the assessment relates. Resubmissions will be available to learners who have made a genuine attempt at the first assessment opportunity and achieved a \textbf{D grade (40-49\%)}. The maximum grade awarded for resubmission will be \textbf{C-}.
+
+\section*{Resits}
+Resits and reassessments \textbf{are not} applicable in \textbf{ID511001: Programming 2}.
+
+\section*{Instructions}
+You will need to submit an application and documentation that meet the following requirements:\\
+
+\subsection*{Functionality - Learning Outcomes 1 and 2 (50\%)}
+\begin{itemize}
+    \item The application needs to open without code or file structure modification in \textbf{Visual Studio}.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Code Elegance - Learning Outcomes 1 and 2 (40\%)}
+\begin{itemize}
+    \item A \textbf{Visual Studio} \textbf{.gitignore} file is used. 
+    \item Appropriate naming of files, variables, methods and classes.
+    \item Idiomatic use of control flow, data structures and in-built functions.
+    \item Efficient algorithmic approach.
+    \item Sufficient modularity.
+    \item Each file needs to have a header comment located at the top of the file.
+    \item In-line comments where required. It should be for code that needs further explanation.
+    \item Formatted code.
+    \item No dead or unused code.
+\end{itemize}
+
+\subsection*{Documentation and Git Usage - Learning Outcomes 1 and 2 (10\%)}
+\begin{itemize}
+    \item Provide the following in your repository \textbf{README.md} file:
+    \begin{itemize}
+        \item How to run your unit tests?
+    \end{itemize}
+    \item Commit messages reflect the context of each functional requirement change.
+\end{itemize}
+
+\subsection*{Additional Information}
+\begin{itemize}
+    \item \textbf{Do not} rewrite your \textbf{Git} history. It is important that the course lecturer can see how you worked on your assessment over time.
+\end{itemize}
+
+\end{document}

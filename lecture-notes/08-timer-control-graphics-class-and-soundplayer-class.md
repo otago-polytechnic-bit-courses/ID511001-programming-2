@@ -1,4 +1,4 @@
-# 08: Timer Control and Graphics Class
+# 08: Timer Control, Graphics Class and SoundPlayer Class
 
 ## Timer Control
 
@@ -48,6 +48,10 @@ private void Form1_Paint(object sender, PaintEventArgs e)
     graphics.DrawString("Hello, World!", font, Brushes.SkyBlue, new Point(20, 45));
 }
 ```
+
+## SoundPlayer Class
+
+
 
 # Formative Assessment
 
@@ -173,6 +177,10 @@ When the `CheckBox` is unchecked, the screen does not refresh.
 5. Modify your program so that when the drawings reach the right edge of the screen, they "wrap around" and come back in from the left edge.
 
 ![](../resources/img/08/09-image.png)
+
+## Task 7:
+
+
 
 # Formative and Research Assessment Submission
 

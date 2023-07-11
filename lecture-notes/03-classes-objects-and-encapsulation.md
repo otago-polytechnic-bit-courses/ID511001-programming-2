@@ -218,12 +218,50 @@ public static class Utils
 }
 
 // Usage in Program.cs:
-List<Institution> institutions = Utils.SeedInstitutions();
+private static List<Institution> institutions; // Declare this above the Main method
+
+institutions = Utils.SeedInstitutions(); // Declare this inside the Main method
 ```
 
 For each `course`, display its information and which `department` and `institution` it belongs to.
 
-## Task 8: 
+## Task 5:
+
+You have been given the following **class** and **list** of `Product` **objects**:
+
+```cs
+// Create a new file called Product.cs. Copy and paste the following code into it
+public class Product
+{
+    private string name;
+    private double price;
+
+    public Product(string name, double price)
+    {
+        this.name = name;
+        this.price = price;
+    }
+
+    public string Name { get => name; set => name = value; }
+    public double Price { get => price; set => price = value; }
+}
+
+// Declare the following code in Program.cs
+private static List<Product> products; // Declare this above the Main method
+
+products = new List<Product>() // Declare this inside the Main method
+{
+    new Product("Apple", 1.99),
+    new Product("Banana", 2.99),
+    new Product("Orange", 3.99),
+    new Product("Pineapple", 4.99),
+    new Product("Watermelon", 5.99)
+};
+```
+
+Write a **LINQ** query that displays the average price of all products in the **list** of `Product`.
+
+## Task 6: 
 
 Create a program that reads data from a text file and creates five `Dog` **objects**.
 
@@ -241,7 +279,7 @@ Dixie,9
 
 Use the `StreamReader` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to an array. Print out the `name` and `age` for each item in the array. Add error handling to ensure that the program gracefully handles any issues with reading the file or parsing the data.
 
-## Task 9:
+## Task 7:
 
 Create a class diagram for two programs you have created.
 

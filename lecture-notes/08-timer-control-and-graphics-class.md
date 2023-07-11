@@ -64,7 +64,7 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 2. Place three `PictureBox` controls on the form.
 3. Place a `Button` directly above each `PictureBox`.
 
-![](../resources/img/08-timer-control-and-graphics-class/01-image.png)
+![](../resources/img/08/01-image.png)
 
 4. Write a `button1_Click` handler so that, when the `button1` is clicked, the first image moves 10 pixels down the page:
 
@@ -82,7 +82,7 @@ pictureBox1.Top += 10;
 1. Create a new project.
 2. On the form, draw a green cross, a red rectangle with a black border a yellow ellipse with a blue shadowing ellipse and the slogan "Hi there!" as shown below.
 
-![](../resources/img/08-timer-control-and-graphics-class/02-image.png)
+![](../resources/img/08/02-image.png)
 
 ## Task 3:
 
@@ -106,7 +106,7 @@ private void Form1_MouseClick(object sender, MouseEventArgs e)
 }
 ```
 
-![](../resources/img/08-timer-control-and-graphics-class/03-image.png)
+![](../resources/img/08/03-image.png)
 
 Note: You need to create the `Form1_MouseClick` event handler via the `Events` tab in the `Properties` window. 
 
@@ -128,7 +128,7 @@ graphics.DrawLine(pen, new Point(60, 200), new Point(80, 200));
 
 2. Draw the output on the grid.
 
-![](../resources/img/08-timer-control-and-graphics-class/04-image.png)
+![](../resources/img/08/04-image.png)
 
 ## Task 5:
 
@@ -150,7 +150,7 @@ graphics.DrawString("Pow!", font, Brushes.White, new Point(240, 240));
 
 3. Could you rewrite the DrawString statements with a variable and a loop?
 
-![](../resources/img/08-timer-control-and-graphics-class/05-image.png)
+![](../resources/img/08/05-image.png)
 
 ## Task 6:
 
@@ -158,21 +158,21 @@ graphics.DrawString("Pow!", font, Brushes.White, new Point(240, 240));
 2. Write a `Timer1_tick` handler to draw three circles on the form. Use a different colour for each circle.
 3. Place a `Timer` on the form. Modify your program so that, when the program starts, the figures are drawn automatically, and each 100 msec, the figures shift 20 pixels to the right. The example below shows the screen after several `Timer` cycles.
 
-![](../resources/img/08-timer-control-and-graphics-class/06-image.png)
+![](../resources/img/08/06-image.png)
 
 4.	Add a `CheckBox` control to your form. As the program runs, the user can turn the screen refresh feature on and off by checking and unchecking this `CheckBox`. 
 
 When the `CheckBox` is checked, the screen refreshes.
 
-![](../resources/img/08-timer-control-and-graphics-class/07-image.png)
+![](../resources/img/08/07-image.png)
 
 When the `CheckBox` is unchecked, the screen does not refresh. 
 
-![](../resources/img/08-timer-control-and-graphics-class/08-image.png)
+![](../resources/img/08/08-image.png)
 
 5. Modify your program so that when the drawings reach the right edge of the screen, they "wrap around" and come back in from the left edge.
 
-![](../resources/img/08-timer-control-and-graphics-class/09-image.png)
+![](../resources/img/08/09-image.png)
 
 # Formative and Research Assessment Submission
 

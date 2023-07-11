@@ -15,7 +15,7 @@ The **Microsoft Visual Studio IDE** (integrated development environment) is made
 
 Ensure that these four windows are visible on your screen. Note they are all dockable.
 
-![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/01-image.png)
+![](../resources/img/07/01-image.png)
 
 The main part is named `Form1.cs (Design)`. This is where, at design time, you create the **GUI**; it is used as a drawing canvas to resize the main form, add the buttons, labels etc that you will use in your application. This will be the main window that the user sees when your application is run. Your application can contain multiple windows (or **Forms**) that are displayed in response to user input, data values, etc. To start with, we will build projects that have only one Form.
 
@@ -51,11 +51,11 @@ Assume you have three controls `button1`, `label1` and `textBox1` on your `Form`
 
 We have seen that controls have **Properties**. But there is also a tab for **Events**, the lightning bolt in the **Properties** window.
 
-![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/02-image.png)
+![](../resources/img/07/02-image.png)
 
 If you select a `Button` on your `Form`, and click on the **Events** tab, it will look like this:
 
-![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/03-image.png)
+![](../resources/img/07/03-image.png)
 
 This is a list of all the **Events** – things the user can do (or the program can do) – that the `Button` control understands. For each of these events, you can specify some **C#** code that should be executed if the event occurs. For example, the `Button` understands the `Click` event. Whatever code you assign to that event (we'll see how to do this in a moment), will be executed when the user clicks on the `Button`. The `Button` also has a `MouseHover` event. This event occurs when the user passes the mouse over the `Button`. The `DragDrop` event occurs when the user drags the `Button` on the screen. And so forth.
 
@@ -84,7 +84,7 @@ It can be confusing to find yourself suddenly looking at the code instead of the
 1. Place a `Button` and a `Label` on the `Form`.
 2. Select the `Button`. Select the Events tab. Double-click on the space beside **Click**. You'll see this:
 
-![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/04-image.png)
+![](../resources/img/07/04-image.png)
 
 Enter some code for the `Button` to execute. For example, when the `button1` is clicked, the caption property of the `Label` is changed. Here is one possibility:
 
@@ -157,13 +157,13 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 Write a program that allows the user to enter a number into each of five `TextBoxes`. Provide `Buttons` that compute the sum and the average of the five numbers. Remember that you must use convert the contents of a `TextBox` to an integer, and convert an integer back to a string that can be displayed in a `TextBox`. A possible form layout is:
 
-![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/05-image.png)
+![](../resources/img/07/05-image.png)
 
 ## Task 2:
 
 Write a program that allows the user to enter two numbers, select an arithmetic operation and calculate the answer. Note that this calculator accepts the data as a text entry inside a `TextBox`, rather than as a series of push-button clicks.
 
-![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/06-image.png)
+![](../resources/img/07/06-image.png)
 
 1.	Start a new application.
 2.	Set up the `Form`, selecting an appropriate colour, font and style. Set the form's `Text` property to **Calculator**.
@@ -179,10 +179,10 @@ Write a program that allows the user to enter two numbers, select an arithmetic 
 
 Write an application for use in a Pizza Parlour. The user enters his order, and the application displays the order and computes the price. Your solution could looks like this (images are optional):
 
-![](../resources/img/07-introduction-to-c-sharp-windows-forms-apps/07-image.png)
+![](../resources/img/07/07-image.png)
 
 1. Start a new application.
-2.	Your program should allow at least two sizes of pizza, with different prices. Users must select a size. If a user tries to order without selecting a size, he should receive polite feedback asking him to please specify the size.
+2.	Your program should allow at least two sizes of pizza, with different prices. Users must select a size. If a user tries to order without selecting a size, the user should receive polite feedback asking him to please specify the size.
 3.	You should provide at least five different extra toppings, each with associated prices. Users can select any combination of extra toppings, or none at all.
 4.	You should correctly display the order in a `ListBox` and compute the total and display it in a `TextBox`.
 5.	When a new order is generated, the old order information should be cleared from the display. 

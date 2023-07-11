@@ -239,13 +239,45 @@ Implement the following:
 
 # Task 2:
 
+Reactor the `BubbleSort` method to sort a list of `int` in **descending** order instead of **ascending** order.
+
 # Task 3:
+
+Refactor the `InsertionSort` method to sort a list of `string` instead of a list of `int`. **Hint:** You will need to change the method signature and the type of the `key` variable. Also, you might find the `string.Compare` method useful.
 
 # Task 4:
 
+You have seen three sorting algorithms, i.e., bubble, selection and insertion sorts. Research and implement a fourth sorting algorithm of your choice. Comment your code to explain how the algorithm works.
+
 # Task 5:
 
+You have been given a list of `int` containing even numbers. Write a **LINQ** query that displays the sum of all even numbers in the list of `int`.
+
+```cs
+List<int> numbers = new List<int>() { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+```
+
 # Task 6:
+
+You have been given a list of `string` containing countries. Write a **LINQ** query that displays all countries starting with the letter "I" or "i".
+
+```cs
+List<string> countries = new List<string>
+{
+    "Argentina",
+    "Australia",
+    "Brazil",
+    "Canada",
+    "Egypt",
+    "France",
+    "India",
+    "Italy",
+    "Mexico",
+    "Netherlands",
+    "South Africa",
+    "United States",
+};
+```
 
 # Formative Assessment Submission
 

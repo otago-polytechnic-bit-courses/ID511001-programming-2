@@ -286,7 +286,7 @@ In **C#**, a **method** is a block of code that performs a specific task and can
 public class MyClass {
     public int myValue = 0;
 
-    public void IncreaseValue(int amount) {
+    public void IncreaseValue(int amount) { // This is the method signature - name and parameter(s)
         myValue += amount;
     }
 }
@@ -303,7 +303,7 @@ Console.WriteLine(myObj.myValue);
 
 ```cs
 public class MyClass {
-    public static int Add(int a, int b) {
+    public static int Add(int a, int b) { // This is the method signature
         return a + b;
     }
 }

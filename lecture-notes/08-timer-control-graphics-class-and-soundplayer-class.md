@@ -181,7 +181,6 @@ When the `CheckBox` is unchecked, the screen does not refresh.
 ## Task 7:
 
 
-
 # Formative and Research Assessment Submission
 
 Create a new pull request and assign **grayson-orr** to review your submission. Please do not your own pull request.

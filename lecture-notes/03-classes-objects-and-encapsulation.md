@@ -70,7 +70,6 @@ This code creates a new **object** of type `Dog` named "myDog" and assigns value
 A **static** class cannot be instantiated and can only contain **static** members. It is often used to group related **static** members together, such as **constants** and **utility methods**. For example:
 
 ```cs
-```cs
 public static class Utils
 {
     public static void BubbleSort(int[] arr)

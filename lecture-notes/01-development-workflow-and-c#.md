@@ -524,8 +524,13 @@ Create a **method** called `isPalindrome` that takes in a parameter `word` which
 
 Create a **method** called `isPrime` that takes in a parameter `num` which is an integer. Inside the **method**, write code to check if `num` is a prime number. A prime number is a number that is only divisible by 1 and itself. Use a loop to check if `num` is divisible by any number other than 1 and itself. If it is, return `false`, otherwise, return `true`.
 
-## Task 10:
+## Task 10: 
 
+Write some code that reads in a file called `computer-jokes.txt` containing a list of computer jokes. The program should store the jokes in an array and randomly select and display a joke each time it is run.
+
+## Task 11:
+
+Write some code that reads in a file called `countries.txt` containing a list of country names. The program should display only the names of the countries that start with the letter **'B'**. 
 
 # Formative Assessment Submission
 

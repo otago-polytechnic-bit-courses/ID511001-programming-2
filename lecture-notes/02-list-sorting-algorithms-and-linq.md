@@ -1,4 +1,4 @@
-# 02: List, Sorting Algorithms and LINQ
+# 02: List and LINQ
 
 ## List
 

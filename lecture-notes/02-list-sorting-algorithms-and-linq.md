@@ -36,144 +36,6 @@ Inserting or deleting items from the middle of a list can be expensive, as it ma
 
 Lists are a very useful and widely-used data structure that can be used to store and manage large data collections in various applications.
 
-## Sorting Algorithms
-
-In the **Maths for IT** course, you learned about sorting algorithms. We are going to look at how to implemented a few of them in **C#**.
-
-### Bubble Sort
-
-```cs
-static void BubbleSort(int[] arr)
-{
-    int n = arr.Length;
-    bool isSwapped;
-
-    for (int i = 0; i < n - 1; i++)
-    {
-        isSwapped = false;
-
-        for (int j = 0; j < n - i - 1; j++)
-        {
-            if (arr[j] > arr[j + 1])
-            {
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-                isSwapped = true;
-            }
-        }
-
-        // If no two elements were swapped by inner loop, then break
-        if (!isSwapped) break;
-    }
-}
-
-// Usage:
-
-int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
-
-Console.WriteLine("Original array");
-for (int i = 0; i < arr.Length; ++i)
-{
-    Console.Write(arr[i] + " ");
-}
-
-BubbleSort(arr);
-
-Console.WriteLine("\nSorted array");
-for (int i = 0; i < arr.Length; ++i)
-{
-    Console.Write(arr[i] + " ");
-}
-```
-
-### Selection Sort
-
-```cs
-static void SelectionSort(int[] arr)
-{
-    int n = arr.Length;
-
-    for (int i = 0; i < n - 1; i++)
-    {
-        int minIndex = i;
-
-        for (int j = i + 1; j < n; j++)
-        {
-            if (arr[j] < arr[minIndex])
-            {
-                minIndex = j;
-            }
-        }
-
-        int temp = arr[minIndex];
-        arr[minIndex] = arr[i];
-        arr[i] = temp;
-    }
-}
-
-// Usage:
-
-int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
-
-Console.WriteLine("Original array");
-for (int i = 0; i < arr.Length; ++i)
-{
-    Console.Write(arr[i] + " ");
-}
-
-SelectionSort(arr);
-
-Console.WriteLine("\nSorted array");
-for (int i = 0; i < arr.Length; ++i)
-{
-    Console.Write(arr[i] + " ");
-}
-```
-
-### Insertion Sort
-
-```cs
-static void InsertionSort(List<int> arr)
-{
-    int n = arr.Count;
-
-    for (int i = 1; i < n; i++)
-    {
-        int key = arr[i];
-        int j = i - 1;
-
-        while (j >= 0 && arr[j] > key)
-        {
-            arr[j + 1] = arr[j];
-            j = j - 1;
-        }
-
-        arr[j + 1] = key;
-    }
-}
-
-// Usage:
-
-List<int> arr = new List<int> { 64, 34, 25, 12, 22, 11, 90 };
-
-Console.WriteLine("Original array");
-foreach (int i in arr)
-{
-    Console.Write(i + " ");
-}
-
-InsertionSort(arr);
-
-Console.WriteLine("\nSorted array");
-foreach (int i in arr)
-{
-    Console.Write(i + " ");
-}
-```	
-
-What is the time complexity of each of the sorting algorithms? Which one is the most efficient? Which one is the least efficient? Why?
-
 ## LINQ
 
 **LINQ** stands for **Language Integrated Query**. It is a set of features that extends the **C#** language to support queries against data sources. It provides a consistent way to query data from different data sources, i.e., in-memory collections, databases, etc.
@@ -239,25 +101,13 @@ Implement the following:
 
 # Task 2:
 
-Reactor the `BubbleSort` method to sort a list of `int` in **descending** order instead of **ascending** order.
-
-# Task 3:
-
-Refactor the `InsertionSort` method to sort a list of `string` instead of a list of `int`. **Hint:** You will need to change the method signature and the type of the `key` variable. Also, you might find the `string.Compare` method useful.
-
-# Task 4:
-
-You have seen three sorting algorithms, i.e., bubble, selection and insertion sorts. Research and implement a fourth sorting algorithm of your choice. Comment your code to explain how the algorithm works.
-
-# Task 5:
-
 You have been given a list of `int` containing even numbers. Write a **LINQ** query that displays the sum of all even numbers in the list of `int`.
 
 ```cs
 List<int> numbers = new List<int>() { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
 ```
 
-# Task 6:
+# Task 3:
 
 You have been given a list of `string` containing countries. Write a **LINQ** query that displays all countries starting with the letter "I" or "i".
 

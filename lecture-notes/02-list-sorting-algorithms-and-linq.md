@@ -101,13 +101,43 @@ Implement the following:
 
 # Task 2:
 
+You have been given the following list of integers:
+
+```c#
+List<int> nums = new List<int>() { 10, 20, 30, 40, 50 };
+```
+
+Implement the following:
+
+1. Use the `Insert` method to insert the number 25 at the second position in `nums`. Display the contents of `nums` after inserting the number 25.
+2. Use the `Contains` method to check if the number 35 exists in `nums`. Assign the result to a variable called `hasNumber35`. Display the value of `hasNumber35`.
+3. Use the `Find` method to find the first number in `nums` that is greater than 30 and assign it to a variable called `firstNumberGreaterThan30`. Display the value of `firstNumberGreaterThan30`.
+4. Use the `Sort` method to sort `nums` in ascending order. Display the contents of `nums` after sorting it.
+
+# Task 3:
+
+You have been given the following list of strings representing book titles:
+
+```c#
+List<string> bookTitles = new List<string>() { "The Great Gatsby", "To Kill a Mockingbird", "1984", "Brave New World" };
+```
+
+Implement the following:
+
+1. Use the `Count` method to get the total number of book titles in `bookTitles` and assign it to a variable called `totalBooks`. Display the value of `totalBooks`.
+2. Use the `Contains` method to check if the title "Brave New World" exists in `bookTitles`. Assign the result to a variable called `hasBraveNewWorld`. Display the value of `hasBraveNewWorld`.
+3. Use the `FindIndex` method to find the index of the book title "1984" in `bookTitles` and assign it to a variable called `index1984`. Display the value of `index1984`.
+4. Use the `Clear` method to remove all elements from `bookTitles`. Display the contents of `bookTitles` after clearing it.
+
+# Task 4:
+
 You have been given a list of `int` containing even numbers. Write a **LINQ** query that displays the sum of all even numbers in the list of `int`.
 
 ```cs
 List<int> numbers = new List<int>() { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
 ```
 
-# Task 3:
+# Task 5:
 
 You have been given a list of `string` containing countries. Write a **LINQ** query that displays all countries starting with the letter "I" or "i".
 
@@ -128,6 +158,66 @@ List<string> countries = new List<string>
     "United States",
 };
 ```
+
+# Task 6:
+
+You have been given a list of temperatures in celsius for a week. 
+
+```cs
+List<double> temperatures = new List<double>() { 24.5, 23.8, 25.3, 22.6, 26.1, 27.5, 21.9 };
+```
+
+Implement the following:
+
+1. Calculate the average temperature for the week.
+2. Find the highest temperature recorded during the week.
+3. Find all the temperatures that are above 25 degrees celsius and store them in a new list.
+
+# Task 7:
+
+You have been given a list of integers representing exam scores of learners. 
+
+```cs
+List<int> scores = new List<int>() { 78, 89, 92, 65, 70, 85, 92, 78, 93, 80 };
+```
+
+Implement the following:
+
+1. Find the highest score in the list.
+2. Find all the distinct scores (remove duplicates) and store them in a new list.
+
+# Task 8:
+
+You have been given a list of strings representing words. Implement the following:
+
+```cs
+List<string> words = new List<string>() { "apple", "banana", "orange", "grape", "kiwi", "pineapple" };
+```
+
+Implement the following:
+
+1. Find all words that contain the letter "a" and end with the letter "e" (case-insensitive) and store them in a new list.
+2. Find the longest word in the list.
+
+# Task 9:
+
+You have been given a list of integers representing the population of cities. 
+
+```cs	
+List<int> cityPopulations = new List<int>() { 5000000, 3000000, 1200000, 8000000, 2000000, 4500000, 6000000 };
+```
+
+Implement the following:
+
+1. Find the top 3 cities with the highest populations and store their populations in a new list.
+2. Calculate the total population of all cities.
+
+# Task 10:
+
+Using `LINQ`, solve the following tasks from the previous formative assessment:
+
+- Task 3
+- Task 10
 
 # Formative Assessment Submission
 

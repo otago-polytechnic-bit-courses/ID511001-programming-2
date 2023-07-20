@@ -276,7 +276,7 @@ Augie,6
 Dixie,9
 ```
 
-Use the `StreamReader` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to an array. Print out the `name` and `age` for each item in the array. Add error handling to ensure that the program gracefully handles any issues with reading the file or parsing the data.
+Use the `StreamReader` or `File` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to an array. Print out the `name` and `age` for each item in the array. Add error handling to ensure that the program gracefully handles any issues with reading the file or parsing the data.
 
 ## Task 7:
 

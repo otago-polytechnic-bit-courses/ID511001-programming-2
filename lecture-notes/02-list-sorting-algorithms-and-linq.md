@@ -99,7 +99,7 @@ Implement the following:
 3. Use the `Remove` method to remove "Swift" from `allProgLanguages`
 4. Use a loop to display each language in `allProgLanguages`
 
-# Task 2:
+## Task 2:
 
 You have been given the following list of integers:
 
@@ -114,7 +114,7 @@ Implement the following:
 3. Use the `Find` method to find the first number in `nums` that is greater than 30 and assign it to a variable called `firstNumberGreaterThan30`. Display the value of `firstNumberGreaterThan30`.
 4. Use the `Sort` method to sort `nums` in ascending order. Display the contents of `nums` after sorting it.
 
-# Task 3:
+## Task 3:
 
 You have been given the following list of strings representing book titles:
 
@@ -129,7 +129,7 @@ Implement the following:
 3. Use the `FindIndex` method to find the index of the book title "1984" in `bookTitles` and assign it to a variable called `index1984`. Display the value of `index1984`.
 4. Use the `Clear` method to remove all elements from `bookTitles`. Display the contents of `bookTitles` after clearing it.
 
-# Task 4:
+## Task 4:
 
 You have been given a list of `int` containing even numbers. Write a **LINQ** query that displays the sum of all even numbers in the list of `int`.
 
@@ -137,7 +137,7 @@ You have been given a list of `int` containing even numbers. Write a **LINQ** qu
 List<int> numbers = new List<int>() { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
 ```
 
-# Task 5:
+## Task 5:
 
 You have been given a list of `string` containing countries. Write a **LINQ** query that displays all countries starting with the letter "I" or "i".
 
@@ -159,7 +159,7 @@ List<string> countries = new List<string>
 };
 ```
 
-# Task 6:
+## Task 6:
 
 You have been given a list of temperatures in celsius for a week. 
 
@@ -173,7 +173,7 @@ Implement the following:
 2. Find the highest temperature recorded during the week.
 3. Find all the temperatures that are above 25 degrees celsius and store them in a new list.
 
-# Task 7:
+## Task 7:
 
 You have been given a list of integers representing exam scores of learners. 
 
@@ -186,7 +186,7 @@ Implement the following:
 1. Find the highest score in the list.
 2. Find all the distinct scores (remove duplicates) and store them in a new list.
 
-# Task 8:
+## Task 8:
 
 You have been given a list of strings representing words. Implement the following:
 
@@ -199,7 +199,7 @@ Implement the following:
 1. Find all words that contain the letter "a" and end with the letter "e" (case-insensitive) and store them in a new list.
 2. Find the longest word in the list.
 
-# Task 9:
+## Task 9:
 
 You have been given a list of integers representing the population of cities. 
 
@@ -212,7 +212,7 @@ Implement the following:
 1. Find the top 3 cities with the highest populations and store their populations in a new list.
 2. Calculate the total population of all cities.
 
-# Task 10:
+## Task 10:
 
 Using `LINQ`, solve the following tasks from the previous formative assessment:
 

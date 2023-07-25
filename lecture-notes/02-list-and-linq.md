@@ -75,7 +75,7 @@ What is the output?
 
 # Formative Assessment
 
-Before you start, create a new branch called **02-formative-assessment**.
+Before you start, create a new **C# Console** application called **02-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -221,4 +221,4 @@ Using `LINQ`, solve the following tasks from the previous formative assessment:
 
 # Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your submission. Please do not your own pull request.
+Push your code to your **GitHub** repository.

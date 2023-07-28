@@ -37,6 +37,14 @@ public class Set
         items = new HashSet<int>();
     }
 
+    public void Display() // Alternatively use IEnumerator
+    {
+        foreach (int item in items)
+        {
+            Console.WriteLine(item);
+        }
+    }
+
     public void Add(int item)
     {
         items.Add(item);
@@ -107,6 +115,14 @@ public class Map
         items = new Dictionary<string, int>();
     }
 
+    public void Display()
+    {
+        foreach (KeyValuePair<string, int> kvp in items)
+        {
+            Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
+        }
+    }
+
     public void Add(string key, int value)
     {
         items[key] = value;
@@ -132,7 +148,7 @@ public class Map
         }
         return value;
     }
-    
+
     public void Update(string key, int newValue)
     {
         if (!items.ContainsKey(key))
@@ -170,6 +186,19 @@ public class Stack
     {
         items = new int[capacity];
         top = -1;
+    }
+
+    public void Display()
+    {
+        if (top == -1)
+        {
+            throw new Exception("Stack is empty");
+        }
+
+        for (int i = 0; i < items.Length; i++)
+        {
+            Console.WriteLine(items[i]);            
+        }
     }
 
     public void Push(int item)

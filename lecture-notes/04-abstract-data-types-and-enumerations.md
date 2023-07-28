@@ -294,12 +294,12 @@ You have been given two **sets** containing some numbers.
 ```cs
 Set mySet = new Set();
 mySet.Add(1);
-mySet.Add(2);
 mySet.Add(3);
+mySet.Add(2);
 
 Set myOtherSet = new Set();
-myOtherSet.Add(3);
 myOtherSet.Add(4);
+myOtherSet.Add(3);
 ```
 
 Implement the following:

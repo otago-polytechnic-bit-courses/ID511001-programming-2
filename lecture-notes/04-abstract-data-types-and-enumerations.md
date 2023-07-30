@@ -195,7 +195,7 @@ public class Stack
             throw new Exception("Stack is empty");
         }
 
-        for (int i = 0; i < items.Length; i++)
+        for (int i = 0; i <= top; i++)
         {
             Console.WriteLine(items[i]);            
         }

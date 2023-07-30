@@ -139,7 +139,7 @@ public partial class Form1 : Form
 
 # Formative Assessment
 
-Before you start, create a new branch called **09-formative-assessment**.
+Before you start, create a new **C# Console** application called **09-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -337,6 +337,6 @@ polygon = null;
 6. One of the advantages of the Object-Oriented approach is that the resulting code is easily extensible. Satisfy yourself of this by extending your screensaver to also draw hexagons and pentagons. 
 Did you have to modify your `Timer` handler? If so, how might you have written it so that no modification would be required?
 
-# Formative and Research Assessment Submission
+# Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your submission. Please don't merge your own pull request.
+Push your code to your **GitHub** repository.

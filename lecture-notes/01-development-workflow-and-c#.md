@@ -25,28 +25,6 @@ Open up **Git Bash** or whatever alternative you see fit on your computer. Clone
 
 - <https://git-scm.com/docs/git-clone>
 
-## Create a Local Branch
-
-`cd` into your formative assessments repository and create a branch using the command `git branch <name of the branch>`. Checkout from the `main` branch to the new branch using the command `git checkout <name of the branch>`. Alternatively, you can create and checkout a branch using the command `git checkout -b <name of the branch>`.
-
-For each formative assessment, create a new branch, i.e., branch name `01-formative-assessment`. When you create a new branch, make sure you are creating it from the branch you last worked on.
-
-**Resources:**
-- <https://git-scm.com/docs/git-branch>
-- <https://git-scm.com/docs/git-checkout>
-
-## Push Local Branch to Remote Repository
-
-Push your local branch, i.e., `01-formative-assessment`, to your remote repository using the command `git push -u origin <name of branch>`. You will continue working on your formative assessment code until you are ready to submit it.
-
-## Create a Pull Request
-
-Once you have completed a formative assessment, create a pull request. Go to your formative assessments repository on GitHub. Click on the **Pull requests** tab, then click on the **New pull request** button. You will see two dropdowns (base and compare). Click the compare dropdown, select the formative assessments branch you want to compare with the `main` branch, and then click the **Create pull request** button.
-
-On the right side of the screen, you will see **Reviewers**. Click on the **Reviewers** section. Add **grayson-orr** as reviewers, then click the **Create pull request** button.
-
-**Grayson** will receive an email. **Grayson** will review your formative assessment code, and you will receive feedback. You may be asked to reflect on your feedback and fix your formative assessment code. You will receive an email when your formative assessment code has been reviewed or approved.
-
 # C#
 
 ## What is C#?
@@ -474,7 +452,7 @@ These are just a few examples of how to perform file processing. Still, the Syst
 
 # Formative Assessment
 
-Before you start, create a new branch called **01-formative-assessment**.
+Before you start, create a new **C# Console** application called **01-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -534,4 +512,4 @@ Write some code that reads in a file called `countries.txt` containing a list of
 
 # Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your submission. Please do not your own pull request.
+Push your code to your **GitHub** repository.

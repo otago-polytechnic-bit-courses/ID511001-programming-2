@@ -55,7 +55,7 @@ private void Form1_Paint(object sender, PaintEventArgs e)
 
 # Formative Assessment
 
-Before you start, create a new branch called **08-formative-assessment**.
+Before you start, create a new **C# Console** application called **08-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -181,6 +181,6 @@ When the `CheckBox` is unchecked, the screen does not refresh.
 ## Task 7:
 
 
-# Formative and Research Assessment Submission
+# Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your submission. Please do not your own pull request.
+Push your code to your **GitHub** repository.

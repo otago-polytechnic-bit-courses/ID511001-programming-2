@@ -77,7 +77,7 @@ Rename the `UnitTest1.cs` file to `CalcTests.cs` and add the code from the `Calc
 
 # Formative Assessment
 
-Before you start, create a new branch called **06-formative-assessment**.
+Before you start, create a new **C# Console** application called **06-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -136,4 +136,4 @@ Create a unit test for two tasks in **03-formative-assessment**. Ensure that you
 
 # Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your submission. Please do not your own pull request.
+Push your code to your **GitHub** repository.

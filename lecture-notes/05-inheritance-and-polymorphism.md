@@ -145,7 +145,7 @@ The `virtual` method in the original code provides a default implementation for 
 
 # Formative Assessment
 
-Before you start, create a new branch called **05-formative-assessment**.
+Before you start, create a new **C# Console** application called **05-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -230,4 +230,4 @@ Invalid input. Please try again.
 
 # Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your submission. Please do not your own pull request.
+Push your code to your **GitHub** repository.

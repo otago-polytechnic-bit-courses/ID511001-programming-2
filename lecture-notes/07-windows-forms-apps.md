@@ -145,7 +145,7 @@ If you place a number of radio buttons directly on the `Form`, they are automati
 
 # Formative Assessment
 
-Before you start, create a new branch called **07-formative-assessment**.
+Before you start, create a new **C# Console** application called **07-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -187,6 +187,6 @@ Write an application for use in a Pizza Parlour. The user enters his order, and 
 4.	You should correctly display the order in a `ListBox` and compute the total and display it in a `TextBox`.
 5.	When a new order is generated, the old order information should be cleared from the display. 
 
-# Formative and Research Assessment Submission
+# Formative Assessment Submission
 
-Create a new pull request and assign **grayson-orr** to review your submission. Please do not your own pull request.
+Push your code to your **GitHub** repository.

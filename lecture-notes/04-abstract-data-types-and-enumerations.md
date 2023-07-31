@@ -151,7 +151,7 @@ public class Map
 
     public void Update(string key, int newValue)
     {
-        if (!items.ContainsKey(key))
+        if (!items.ContainsKey(key)) // Another way to do !items.TryGetValue(key, out value) 
         {
             throw new Exception("Key not found");
         }

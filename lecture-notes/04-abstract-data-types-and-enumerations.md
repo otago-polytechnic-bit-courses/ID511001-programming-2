@@ -125,13 +125,11 @@ public class Map
 
     public void Add(string key, int value)
     {
+        if (items.ContainsKey(key))
         {
-            if (items.ContainsKey(key))
-            {
-                throw new Exception("Key already exists");
-            }
-            items[key] = value;
+            throw new Exception("Key already exists");
         }
+        items[key] = value;
     }
 
     public int Remove(string key)

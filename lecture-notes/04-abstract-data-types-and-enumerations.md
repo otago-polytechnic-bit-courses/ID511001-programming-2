@@ -434,41 +434,29 @@ In this task, you will create a console program that prompts the user to select 
 Here are steps you should consider:
 
 1. Declare an `enum` called `Colour` with the following values: `Red`, `Green`, `Blue`, and `Yellow`.
-2. Declare an `enum` called `ColourHexCode` with the following hex codes for each color: Red - "0xFF0000", Green - "0x00FF00", Blue - "0x0000FF", and Yellow - "0xFFFF00".
 3. Display all the available colours to the user before prompting them to select a colour.
 4. Prompts the user to select a colour from the list of colors.
 5. Parse the user's input and convert it into a `Colour` enum value.
-6. Use a `switch` statement to set the text colour based on the user's input, and output a message to the console based on the user's input. For example, if the user selects Red, the program should set the console text colour to red and output "You selected Red with hex code #FF0000!".
+6. Use a `switch` statement to set the text colour based on the user's input, and output a message to the console based on the user's input. For example, if the user selects Red, the program should set the console text colour to red and output "You selected red".
 7. Add error handling to the program to handle invalid input. If the user enters an invalid colour, the program should output "Invalid input. Please try again." and prompt the user to select a valid colour.
 
 ```cs
 // Expected output:
 
-Please select a colour:
-1. Red
-2. Green
-3. Blue
-4. Yellow
+Available colours:
+* Red
+* Green
+* Blue
+* Yellow
+Please select a colour: green
+You selected green 
 
-Enter your choice: 2
-You selected Green with hex code #00FF00!
-
-Please select a colour:
-1. Red
-2. Green
-3. Blue
-4. Yellow
-
-Enter your choice: Purple
-Invalid input. Please try again.
-
-Please select a colour:
-1. Red
-2. Green
-3. Blue
-4. Yellow
-
-Enter your choice: 5
+Available colours:
+* Red
+* Green
+* Blue
+* Yellow
+Please select a colour: purple
 Invalid input. Please try again.
 ```
 

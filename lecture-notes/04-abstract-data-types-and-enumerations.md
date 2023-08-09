@@ -423,11 +423,11 @@ Enter your favourite day of the week: Wednesday
 You like Wednesdays!
 ```
 
-## Task 6:
+## Task 6 - Research (Hard):
 
 Modify the program to allow the user to enter multiple days of the week separated by commas. The program should output a message for each day of the week entered by the user.
 
-## Task 7:
+## Task 7 - Research (Hard):
 
 In this task, you will create a console program that prompts the user to select a colour and output some text in that selected colour.
 
@@ -436,7 +436,7 @@ Here are steps you should consider:
 1. Declare an `enum` called `Colour` with the following values: `Red`, `Green`, `Blue`, and `Yellow`.
 3. Display all the available colours to the user before prompting them to select a colour.
 4. Prompts the user to select a colour from the list of colors.
-5. Parse the user's input and convert it into a `Colour` enum value.
+5. Parse the user's input and convert it into a `Colour` enum value. **Hint:** Use `Enum.TryParse`.
 6. Use a `switch` statement to set the text colour based on the user's input, and output a message to the console based on the user's input. For example, if the user selects Red, the program should set the console text colour to red and output "You selected red".
 7. Add error handling to the program to handle invalid input. If the user enters an invalid colour, the program should output "Invalid input. Please try again." and prompt the user to select a valid colour.
 

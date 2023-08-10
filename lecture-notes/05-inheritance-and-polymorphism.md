@@ -45,7 +45,7 @@ public class Dog : Animal
     public void Bark() { /*...*/ }
 
     public override string Name { get => name; set => name = value; }
-    public int Colour { get => colour; set => colour = value; }
+    public string Colour { get => colour; set => colour = value; }
 }
 ```
 

@@ -99,33 +99,33 @@ public enum Position
             
 public enum Salary
 {
-     LECTURER_SALARY = 85000,
+    LECTURER_SALARY = 85000,
     SENIOR_LECTURER_SALARY = 100000,
     PRINCIPAL_LECTURER_SALARY = 115000,
     ASSOCIATE_PROFESSOR_SALARY = 130000,
     PROFESSOR_SALARY = 145000
 }
     \end{verbatim}
-    \item The application needs to contain the following \textbf{classes}:
+    \item The application needs to contain the following \textbf{classes/.cs files}:
     \begin{itemize}
-        \item \textbf{Institution}. This \textbf{public} class has the following \textbf{private} fields: \textbf{name} of type \textbf{string}, \textbf{region} of type \textbf{string} and \textbf{country} of type \textbf{string}. 
-        \item \textbf{Department}. This \textbf{public} class has the following \textbf{private} fields: \textbf{institution} of type \textbf{Institution} and \textbf{name} of type \textbf{string}.
-        \item \textbf{Course}. This \textbf{public} class has the following \textbf{private} fields: \textbf{department} of type \textbf{Department}, \textbf{code} of type \textbf{string}, \textbf{name} of type \textbf{string}, \textbf{description} of type \textbf{string}, \textbf{credits} of type \textbf{int} and \textbf{fees} of type \textbf{double}.
-        \item \textbf{CourseAssessmentMark}. This \textbf{public} class has the following \textbf{private} fields: \textbf{course} of type \textbf{Course} and \textbf{assessmentMarks} of type \textbf{List$<$int$>$}. Also, this \textbf{public} class has the following \textbf{public} methods:
+        \item \textbf{Institution.cs}. \textbf{public class Institution} has the following \textbf{private} fields: \textbf{name} of type \textbf{string}, \textbf{region} of type \textbf{string} and \textbf{country} of type \textbf{string}. 
+        \item \textbf{Department.cs}. \textbf{public class Department} has the following \textbf{private} fields: \textbf{institution} of type \textbf{Institution} and \textbf{name} of type \textbf{string}.
+        \item \textbf{Course.cs}. \textbf{public class Course} has the following \textbf{private} fields: \textbf{department} of type \textbf{Department}, \textbf{code} of type \textbf{string}, \textbf{name} of type \textbf{string}, \textbf{description} of type \textbf{string}, \textbf{credits} of type \textbf{int} and \textbf{fees} of type \textbf{double}.
+        \item \textbf{CourseAssessmentMark.cs}. \textbf{public class CourseAssessmentMark} has the following \textbf{private} fields: \textbf{course} of type \textbf{Course} and \textbf{assessmentMarks} of type \textbf{List$<$int$>$}. Also, this class has the following \textbf{public} methods:
         \begin{itemize}
             \item \textbf{GetAllMarks()} with the return type of \textbf{List$<$int$>$}. This method returns all assessment marks.
             \item \textbf{GetAllGrades()} with the return type of \textbf{List$<$string$>$}. This method returns all assessment grades.
-            \item \textbf{GetHighestMarks()} with the return type of \textbf{int}. This method returns the highest passing assessment mark(s).
-            \item \textbf{GetLowestMarks()} with the return type of \textbf{int}. This method returns the lowest passing assessment mark(s). 
-            \item \textbf{GetFailMarks()} with the return type of \textbf{int}. This method returns the fail assessment mark(s).
-            \item \textbf{GetAverageMarks()} with the return type of \textbf{double}. This method returns the average assessment mark.
+            \item \textbf{GetHighestMarks()} with the return type of \textbf{List$<$int$>$}. This method returns the highest passing assessment mark(s).
+            \item \textbf{GetLowestMarks()} with the return type of \textbf{List$<$int$>$}. This method returns the lowest passing assessment mark(s). 
+            \item \textbf{GetFailMarks()} with the return type of \textbf{List$<$int$>$}. This method returns the fail assessment mark(s).
+            \item \textbf{GetAverageMark()} with the return type of \textbf{double}. This method returns the average assessment mark rounded to two decimal places.
             \item \textbf{GetAverageGrade()} with the return type of \textbf{string}. This method returns the average assessment grade.
         \end{itemize}
         For more information on how to calculate the highest, lowest and fail marks, refer to the \textbf{grade table} in the \textbf{Additional Information} section below.
-        \item \textbf{Person}. This \textbf{parent} and \textbf{public} class has the following \textbf{protected} fields: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string} and \textbf{lastName} of type \textbf{string}.
-        \item \textbf{Learner}. This \textbf{child} and \textbf{public} class inherits from \textbf{Person} and has one additional \textbf{private} field: \textbf{courseAssessmentMarks} of type \textbf{CourseAssessmentMark}.
-        \item \textbf{Lecturer}. This \textbf{child} and \textbf{public} class inherits from \textbf{Person} and has three additional \textbf{private} fields: \textbf{position} of type \textbf{Position}, \textbf{salary} of type \textbf{Salary} and \textbf{course} of type \textbf{Course}.
-        \item \textbf{Utils}. This \textbf{static} class has the following \textbf{public static} methods:
+        \item \textbf{Person.cs}. \textbf{public class Person} has the following \textbf{protected} fields: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string} and \textbf{lastName} of type \textbf{string}.
+        \item \textbf{Learner.cs}. \textbf{public class Learner} inherits from \textbf{Person} and has one additional \textbf{private} field: \textbf{courseAssessmentMarks} of type \textbf{CourseAssessmentMark}.
+        \item \textbf{Lecturer}. \textbf{public class Lecturer} inherits from \textbf{Person} and has three additional \textbf{private} fields: \textbf{position} of type \textbf{Position}, \textbf{salary} of type \textbf{Salary} and \textbf{course} of type \textbf{Course}.
+        \item \textbf{Utils.cs}. \textbf{public static class Utils} has the following \textbf{public static} methods:
         \begin{itemize}
             \item \textbf{SeedInstitutions()} with the return type of \textbf{List$<$Institution$>$}. This method seeds a \textbf{List$<$Institution$>$} with \textbf{three} \textbf{Institution} objects.
             \item \textbf{SeedDepartments()} with the return type of \textbf{List$<$Department$>$}. This method seeds a \textbf{List$<$Department$>$} with \textbf{three} \textbf{Department} objects.
@@ -145,7 +145,7 @@ public enum Salary
 	3,Jon,Seena,0,85000,2
             \end{verbatim}
         \end{itemize}
-        \textbf{Program}. This \textbf{public} class manages the business logic and user interface of the application. This class needs to account for the following functionality:
+        \textbf{Program.cs}. \textbf{public class Program} manages the business logic and user interface of the application. This class needs to account for the following functionality:
         \begin{itemize}
             \item Displaying course details. This needs to display the following details:
             \begin{itemize}

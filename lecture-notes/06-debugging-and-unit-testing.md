@@ -87,7 +87,7 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-Write ten tests for the **Calculator** application above. Make sure you cover all methods in the `Calc.cs` file.
+Create ten unit tests for the **Calculator** application above. Make sure you cover all methods in the `Calc.cs` file.
 
 ## Task 2:
 

@@ -19,7 +19,7 @@ Debugging is an important part of the development process and it can save a lot 
 
 ## Unit Testing 
 
-You can find today's coding example - **06-calculator-example.zip** in the **lecture-notes** directory.
+You can find today's coding example - `06-calculator-example.zip` in the **lecture-notes** directory.
 
 Unit testing is the process of testing individual units of code, such as methods or classes, in isolation from the rest of the program. The goal of unit testing is to ensure that each unit of code behaves correctly and that it meets the requirements specified for it. Unit tests are usually automated, which means that they can be run automatically and repeatedly without human intervention.
 

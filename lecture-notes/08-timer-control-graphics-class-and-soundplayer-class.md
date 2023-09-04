@@ -178,9 +178,6 @@ When the `CheckBox` is unchecked, the screen does not refresh.
 
 ![](../resources/img/08/09-image.png)
 
-## Task 7:
-
-
 # Formative Assessment Submission
 
 Push your code to your **GitHub** repository.

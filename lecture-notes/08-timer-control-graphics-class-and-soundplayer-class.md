@@ -51,7 +51,34 @@ private void Form1_Paint(object sender, PaintEventArgs e)
 
 ## SoundPlayer Class
 
+The `SoundPlayer` class provides methods for playing sounds files. To get started, above the `Form1`'s constructor, declare a `SoundPlayer` variable:
 
+```csharp
+private SoundPlayer soundPlayer;
+```
+
+In the `Form1`'s constructor, create a new instance of the `SoundPlayer` class by calling the `SoundPlayer` constructor:
+
+```csharp
+public Form1()
+{
+    InitializeComponent();
+
+    soundPlayer = new SoundPlayer(); // You can also pass a file path to the constructor
+}
+```
+
+To play a sound, call the `Play` method:
+
+```csharp
+soundPlayer.Play();
+```
+
+To stop a sound, call the `Stop` method:
+
+```csharp
+soundPlayer.Stop();
+```
 
 # Formative Assessment
 
@@ -64,6 +91,7 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 - Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work
 
 ## Task 1:
+
 1. Start a new project.
 2. Place three `PictureBox` controls on the form.
 3. Place a `Button` directly above each `PictureBox`.
@@ -72,14 +100,14 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 4. Write a `button1_Click` handler so that, when the `button1` is clicked, the first image moves 10 pixels down the page:
 
-```csharp	
+```csharp
 pictureBox1.Top += 10;
-```	
+```
 
-5.	When you have checked that this code works, rewrite the code using constants and the += operator. More about constants here - <https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constants>.
-6.	Write a `button2_Click` handler so that, when the `button2` is clicked, the second image moves 10 pixels across the page.
-7.	Write a `button3_Click` handler so that, when the `button3` is clicked, a timer is enabled and the third image moves down and across the page, from top right corner to bottom left of the screen.
-8.	What other properties could you change?
+5. When you have checked that this code works, rewrite the code using constants and the += operator. More about constants here - <https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constants>.
+6. Write a `button2_Click` handler so that, when the `button2` is clicked, the second image moves 10 pixels across the page.
+7. Write a `button3_Click` handler so that, when the `button3` is clicked, a timer is enabled and the third image moves down and across the page, from top right corner to bottom left of the screen.
+8. What other properties could you change?
 
 ## Task 2:
 
@@ -112,7 +140,7 @@ private void Form1_MouseClick(object sender, MouseEventArgs e)
 
 ![](../resources/img/08/03-image.png)
 
-Note: You need to create the `Form1_MouseClick` event handler via the `Events` tab in the `Properties` window. 
+Note: You need to create the `Form1_MouseClick` event handler via the `Events` tab in the `Properties` window.
 
 ## Task 4:
 
@@ -141,8 +169,8 @@ graphics.DrawLine(pen, new Point(60, 200), new Point(80, 200));
 ```csharp
 graphics.FillPolygon(Brushes.Black, new Point[] { new Point(60, 40), new Point(140, 80), new Point(200, 40), new Point(300, 80), new Point(380, 60), new Point(340, 140), new Point(320, 180), new Point(380, 240), new Point (320, 300), new Point(340, 340), new Point(240, 320), new Point(180, 340), new Point(20, 320), new Point(60, 280), new Point(100, 240), new Point(40, 220), new Point(80, 160) });
 
-Font font = new Font("Times New Roman", 24, FontStyle.Italic); 
-    
+Font font = new Font("Times New Roman", 24, FontStyle.Italic);
+
 graphics.DrawString("Pow!", font, Brushes.White, new Point(80, 80));
 graphics.DrawString("Pow!", font, Brushes.White, new Point(120, 120));
 graphics.DrawString("Pow!", font, Brushes.White, new Point(160, 160));
@@ -158,28 +186,25 @@ graphics.DrawString("Pow!", font, Brushes.White, new Point(240, 240));
 
 ## Task 6:
 
-1. Create a new project. 
+1. Create a new project.
 2. Write a `Timer1_tick` handler to draw three circles on the form. Use a different colour for each circle.
 3. Place a `Timer` on the form. Modify your program so that, when the program starts, the figures are drawn automatically, and each 100 msec, the figures shift 20 pixels to the right. The example below shows the screen after several `Timer` cycles.
 
 ![](../resources/img/08/06-image.png)
 
-4.	Add a `CheckBox` control to your form. As the program runs, the user can turn the screen refresh feature on and off by checking and unchecking this `CheckBox`. 
+4. Add a `CheckBox` control to your form. As the program runs, the user can turn the screen refresh feature on and off by checking and unchecking this `CheckBox`.
 
 When the `CheckBox` is checked, the screen refreshes.
 
 ![](../resources/img/08/07-image.png)
 
-When the `CheckBox` is unchecked, the screen does not refresh. 
+When the `CheckBox` is unchecked, the screen does not refresh.
 
 ![](../resources/img/08/08-image.png)
 
 5. Modify your program so that when the drawings reach the right edge of the screen, they "wrap around" and come back in from the left edge.
 
 ![](../resources/img/08/09-image.png)
-
-## Task 7:
-
 
 # Formative Assessment Submission
 

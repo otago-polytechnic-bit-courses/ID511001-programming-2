@@ -34,8 +34,6 @@ One of the main advantages of using a list is that it provides fast and efficien
 
 Inserting or deleting items from the middle of a list can be expensive, as it may require shifting the items around to make room for the new item or filling the gap left by the deleted item.
 
-Lists are a very useful and widely-used data structure that can be used to store and manage large data collections in various applications.
-
 ## LINQ
 
 **LINQ** stands for **Language Integrated Query**. It is a set of features that extends the **C#** language to support queries against data sources. It provides a consistent way to query data from different data sources, i.e., in-memory collections, databases, etc.

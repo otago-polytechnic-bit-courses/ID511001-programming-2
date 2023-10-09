@@ -1,6 +1,10 @@
-# 01: Development Workflow and C#
+# 01: GitHub and C#
 
-# Development Workflow
+# GitHub
+
+In this course, we are going to use **GitHub** and **GitHub Classroom** to manage our development. Begin by clicking the following:
+
+https://classroom.github.com/a/E3ML3zsA
 
 By default, **GitHub Classroom** creates an empty repository. Firstly, you must create a **README** and `.gitignore` file. **GitHub** provides an option for creating new files once the repository is created.
 
@@ -205,6 +209,25 @@ for (int i = 0; i < 10; i++)
 }
 ```
 
+`foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
+
+```cs
+foreach (var item in collection)
+{
+    // code to be executed
+}
+```
+
+For example, the following code uses a foreach loop to print the items of an array to the console:
+
+```cs
+int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+foreach (int i in numbers)
+{
+    Console.WriteLine(i);
+}
+```
+
 - `while` loops: These loops are used to execute a block of code while a certain condition is true. The basic syntax of a `while` loop is:
 
 ```cs
@@ -245,25 +268,6 @@ do
 } while (i < 10);
 ```
 
-`foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
-
-```cs
-foreach (var item in collection)
-{
-    // code to be executed
-}
-```
-
-For example, the following code uses a foreach loop to print the items of an array to the console:
-
-```cs
-int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-foreach (int i in numbers)
-{
-    Console.WriteLine(i);
-}
-```
-
 ## Methods
 
 In **C#**, a **method** is a block of code that performs a specific task and can be called (invoked) by name. Methods are used to encapsulate and organise code and can accept parameters and return a value. There are several types of **methods** in **C#**, including:
@@ -282,10 +286,8 @@ public class MyClass {
 // Usage:
 MyClass myObj = new MyClass();
 myObj.IncreaseValue(5);
-Console.WriteLine(myObj.myValue); 
+Console.WriteLine(myObj.myValue); // 5
 ```
-
-**Ask ChatGPT 🤖** - What are other **methods** in **C#**?:
 
 - Static **methods**: These **methods** are associated with a **class** and do not have access to an instance's data. They can only access static data.
 
@@ -298,7 +300,7 @@ public class MyClass {
 
 // Usage:
 int result = MyClass.Add(2, 3);
-Console.WriteLine(result); 
+Console.WriteLine(result); // 5
 ```
 
 - Constructors: These **methods** are used to create and initialise an instance of a **class**.
@@ -314,10 +316,10 @@ public class MyClass {
 
 // Usage:
 MyClass myObj = new MyClass(5);
-Console.WriteLine(myObj.myValue); 
+Console.WriteLine(myObj.myValue); // 5
 ```
 
-- Destructors: These **methods** are used to clean up resources when an instance of a **class** is no longer needed. It is not recommended in **C#**. 
+- Destructors: These **methods** are used to clean up resources when an instance of a **class** is no longer needed. It is not recommended in **C#**.
 
 ```cs
 public class MyClass {
@@ -338,7 +340,7 @@ public static class MyClass {
 
 // Usage:
 int result = 5.Multiply(3);
-Console.WriteLine(result); 
+Console.WriteLine(result); // 15
 ```
 
 ## Error Handling
@@ -359,8 +361,6 @@ catch (FormatException ex)
     Console.WriteLine("Error: " + ex.Message);
 }
 ```
-
-**Ask ChatGPT 🤖** - How do you convert `Console.WriteLine("Error: " + ex.Message);` to use **string interpolation** in **C#**?:
 
 In this example, the code in the `try` block attempts to parse a string to an integer, but the string `abc` is not a valid integer, so a `FormatException` is thrown. The `catch` block catches this exception and prints an error message to the console.
 
@@ -388,12 +388,12 @@ try
 catch (FormatException ex)
 {
     // code that will be executed if a FormatException is thrown
-    Console.WriteLine("Error: " + ex.Message);
+    Console.WriteLine($"Error: {ex.Message}");
 }
 catch (OverflowException ex)
 {
     // code that will be executed if a OverflowException is thrown
-    Console.WriteLine("Error: " + ex.Message);
+    Console.WriteLine($"Error: {ex.Message}");
 }
 ```
 
@@ -436,6 +436,7 @@ Similarly, the `File` **class** has **methods** to write to a file, as well as `
 ```cs
 File.WriteAllText("example.txt", "Hello, World!");
 ```
+
 This code uses the `WriteAllText()` **method** of the `File` **class** to write the string "Hello, World!" to the file `example.txt`.
 
 ```cs
@@ -449,6 +450,32 @@ using (StreamWriter writer = new StreamWriter("example.txt"))
 This example uses the `StreamWriter` **class** to write the strings "Hello," and "World!" to the file "example.txt", each on a new line.
 
 These are just a few examples of how to perform file processing. Still, the System.IO namespace provides many other **classes** and **methods** for working with files and directories, such as the `Directory` **class** for working with directories, the `FileInfo` and `DirectoryInfo` **classes** for working with file and directory metadata, and the `FileSystemWatcher` **class** for monitoring changes to the file system.
+
+## Commenting
+
+Comments are used to explain the code and make it easier to understand. They are ignored by the compiler and do not affect the execution of the program. There are two types of comments in **C#**:
+
+- Single-line comments: These comments start with `//` and continue until the end of the line.
+
+```cs
+// This is a single-line comment
+```
+
+- Multi-line comments: These comments start with `/*` and end with `*/`. They can span multiple lines.
+
+```cs
+/*
+This is a multi-line comment
+*/
+```
+
+There are also **XML** comments, which are used to document code and can be used by tools like **Visual Studio** to provide **IntelliSense**. They start with `///` and continue until the end of the line.
+
+```cs
+/// <summary>
+/// This is an XML comment
+/// </summary>
+```
 
 # Formative Assessment
 
@@ -466,7 +493,7 @@ Create a **double array** named `nums` with the values 45.3, 67.5, -45.6, 20.34,
 
 ## Task 2:
 
-Create a **method** called `fizzBuzz` that takes in an integer `num`. Inside the **method**, check if `num` is a multiple of 3 and if so, return "Fizz". Check if `num` is a multiple of 5 and if so, return "Buzz". If `num` is a multiple of both 3 and 5, return "FizzBuzz". Create a for loop that starts at 1, ends at 15 and increments by 2 each time. Inside the for loop, call the `fizzBuzz` **method** with the current iteration **variable** `i` and print the result.
+Create a **static method** called `fizzBuzz` that takes in an integer `num`. Inside the **static method**, check if `num` is a multiple of 3 and if so, return "Fizz". Check if `num` is a multiple of 5 and if so, return "Buzz". If `num` is a multiple of both 3 and 5, return "FizzBuzz". Create a for loop that starts at 1, ends at 15 and increments by 2 each time. Inside the for loop, call the `fizzBuzz` **static method** with the current iteration **variable** `i` and print the result.
 
 ## Task 3:
 
@@ -474,41 +501,41 @@ Create an **array** of **integers** called `nums` with the values 21, 19, 68, 55
 
 ## Task 4:
 
-Create a **method** called `isAnagram` that takes in two parameters, `someStrOne` and `someStrTwo` which are both strings. Inside the **method**, write code to check if `someStrOne` and `someStrTwo` are an anagram of each other. An anagram is a word or phrase made by rearranging the letters of another word or phrase. Compare the characters of both strings after sorting them. Return `true` if they match and `false` otherwise.
+Create a **static method** called `isAnagram` that takes in two parameters, `someStrOne` and `someStrTwo` which are both strings. Inside the **static method**, write code to check if `someStrOne` and `someStrTwo` are an anagram of each other. An anagram is a word or phrase made by rearranging the letters of another word or phrase. Compare the characters of both strings after sorting them. Return `true` if they match and `false` otherwise.
 
-In my solution, I converted the two **strings** to **char** arrays and sorted them using the `Array.Sort` **method**. Then I compared the sorted char arrays using the `SequenceEqual` **method** and returned `true` if they match, otherwise `false`.
+In my solution, I converted the two **strings** to **char** arrays and sorted them using the `Array.Sort` **static method**. Then I compared the sorted char arrays using the `SequenceEqual` **static method** and returned `true` if they match, otherwise `false`.
 
 ## Task 5:
 
-Create a **method** called `convert` that takes in two parameters, `hours` and `minutes` which are both integers. Inside the **method**, write code to convert both `hours` and `minutes` to seconds. Multiply the number of hours by 3600 (the number of seconds in an hour) and the number of minutes by 60 (the number of seconds in a minute). Add these values together and return the total number of seconds.
+Create a **static method** called `convert` that takes in two parameters, `hours` and `minutes` which are both integers. Inside the **static method**, write code to convert both `hours` and `minutes` to seconds. Multiply the number of hours by 3600 (the number of seconds in an hour) and the number of minutes by 60 (the number of seconds in a minute). Add these values together and return the total number of seconds.
 
 ## Task 6:
 
 Create a **string variable** called `sentence` and assign the value "The anemone, the wild violet, the hepatica, and the funny little curled-up." to it. Convert the string into an array. Use a loop to count the number of occurrences of the word "the" in the array.
 
-In my solution, I used the `String.Split` **method** to split the sentence into words by the space character.
+In my solution, I used the `String.Split` **static method** to split the sentence into words by the space character.
 
 ## Task 7:
 
-Create a **method** called `removeVowels` that takes in a parameter `word` which is a string. Inside the **method**, write code to remove all vowels from `word`. Use a regular expression or a loop to check each character of the word and remove the vowels.
+Create a **static method** called `removeVowels` that takes in a parameter `word` which is a string. Inside the **static method**, write code to remove all vowels from `word`. Use a regular expression or a loop to check each character of the word and remove the vowels.
 
 To handle the edge case where the word does not contain vowels, you can check if `word` is equal to the result after removing vowels. If it is the same, you can return a message indicating that the word does not contain vowels, otherwise, return `word` without vowels.
 
 ## Task 8:
 
-Create a **method** called `isPalindrome` that takes in a parameter `word` which is a string. Inside the **method**, write code to check if `word` is a palindrome. A palindrome is a word, phrase, or sequence that reads the same backward as forward. Compare the characters of `word` from the beginning and end of the string. If they match, continue checking until you reach the middle of the string. If all characters match, return `true`, otherwise, return `false`.
+Create a **static method** called `isPalindrome` that takes in a parameter `word` which is a string. Inside the **static method**, write code to check if `word` is a palindrome. A palindrome is a word, phrase, or sequence that reads the same backward as forward. Compare the characters of `word` from the beginning and end of the string. If they match, continue checking until you reach the middle of the string. If all characters match, return `true`, otherwise, return `false`.
 
 ## Task 9:
 
-Create a **method** called `isPrime` that takes in a parameter `num` which is an integer. Inside the **method**, write code to check if `num` is a prime number. A prime number is a number that is only divisible by 1 and itself. Use a loop to check if `num` is divisible by any number other than 1 and itself. If it is, return `false`, otherwise, return `true`.
+Create a **static method** called `isPrime` that takes in a parameter `num` which is an integer. Inside the **static method**, write code to check if `num` is a prime number. A prime number is a number that is only divisible by 1 and itself. Use a loop to check if `num` is divisible by any number other than 1 and itself. If it is, return `false`, otherwise, return `true`.
 
-## Task 10: 
+## Task 10:
 
 Write some code that reads in a file called `computer-jokes.txt` containing a list of computer jokes. The program should store the jokes in an array and randomly select and display a joke each time it is run.
 
 ## Task 11:
 
-Write some code that reads in a file called `countries.txt` containing a list of country names. The program should display only the names of the countries that start with the letter **'B'**. 
+Write some code that reads in a file called `countries.txt` containing a list of country names. The program should display only the names of the countries that start with the letter **'B'**.
 
 # Formative Assessment Submission
 

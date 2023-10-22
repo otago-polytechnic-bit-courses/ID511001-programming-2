@@ -34,7 +34,7 @@ The `Ball` class will need to have the following fields:
 
 The `Ball` class will need to have a constructor that takes in a `Point` called `position`, a `Point` called `speed`, a `Color` called `colour`, a `Graphics` called `graphics`, and a `Size` called `clientSize`. Also, you will need to create a new `SolidBrush` object and assign it to the `brush` field. For example:
 
-```bs
+```cs
 public Ball(Point speed, Point position, Color colour, Graphics graphics, Size clientSize)
 {
     this.speed = speed;

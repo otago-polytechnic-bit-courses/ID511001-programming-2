@@ -32,7 +32,19 @@ The `Ball` class will need to have the following fields:
 - A `private` `Brush` field called `brush`
 - A private `Size` field called `clientSize`
 
-The `Ball` class will need to have a constructor that takes in a `Point` called `position`, a `Point` called `speed`, a `Color` called `colour`, a `Graphics` called `graphics`, and a `Size` called `clientSize`. Also, you will need to create a new `SolidBrush` object and assign it to the `brush` field.
+The `Ball` class will need to have a constructor that takes in a `Point` called `position`, a `Point` called `speed`, a `Color` called `colour`, a `Graphics` called `graphics`, and a `Size` called `clientSize`. Also, you will need to create a new `SolidBrush` object and assign it to the `brush` field. For example:
+
+```bs
+public Ball(Point speed, Point position, Color colour, Graphics graphics, Size clientSize)
+{
+    this.speed = speed;
+    this.position = position;
+    this.colour = colour;
+    this.graphics = graphics;
+    this.clientSize = clientSize;
+    brush = new SolidBrush(colour);
+}
+```
 
 The `Ball` class will have three other methods:
 - A `public void` method called `Draw` that takes in no parameters. In the `Draw` method, you will need to call the `FillEllipse` method on the `graphics` field and pass in the `brush` object and a new `Rectangle` object that takes in the `position.X`, `position.Y`, `SIZE`, and `SIZE` fields.
@@ -41,7 +53,11 @@ The `Ball` class will have three other methods:
 
 The `Controller` class will need to have the following field: a `private` `Ball` field called `ball`.
 
-The `Controller` class will need to have a constructor that takes in a `Graphics` called `graphics`, and a `Size` called `clientSize`. In the constructor, you will need to create a new `Ball` object and assign it to the `ball` field.
+The `Controller` class will need to have a constructor that takes in a `Graphics` called `graphics`, and a `Size` called `clientSize`. In the constructor, you will need to create a new `Ball` object and assign it to the `ball` field. For example:
+
+```cs
+ball = new Ball(new Point(10, 10), new Point(100, 100), Color.Black, graphics, clientSize);
+```
 
 The `Controller` class will have one other methods:
 - A `public void` method called `Run` that takes in no parameters. In the `Run` method, you will need to call the `Move`, `BounceSide` and `Draw` methods on the `ball` field.

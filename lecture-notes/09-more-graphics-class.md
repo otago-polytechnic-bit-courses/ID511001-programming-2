@@ -60,7 +60,16 @@ ball = new Ball(new Point(10, 10), new Point(100, 100), Color.Black, graphics, c
 ```
 
 The `Controller` class will have one other methods:
-- A `public void` method called `Run` that takes in no parameters. In the `Run` method, you will need to call the `Move`, `BounceSide` and `Draw` methods on the `ball` field.
+- A `public void` method called `Run` that takes in no parameters. In the `Run` method, you will need to call the `Move`, `BounceSide` and `Draw` methods on the `ball` field. For example:
+
+```cs
+public void Run()
+{
+    ball.Move();
+    ball.Draw();
+    ball.BounceSide();
+}
+```
 
 In the `Form1` class, call the `Controller's` `Run` method in the `timer1_Tick` method.	
 

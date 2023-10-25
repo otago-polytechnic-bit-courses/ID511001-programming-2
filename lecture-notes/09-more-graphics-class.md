@@ -87,10 +87,11 @@ In the `Form1` constructor, replace the existing code with the following:
 public Form1()
 {
     InitializeComponent();
-    
-    offScreenBitmap = new Bitmap(Width, Height);
-    offScreenGraphics = Graphics.FromImage(offScreenBitmap);
-    graphics = CreateGraphics();
+
+
+    offScreenBitmap = new Bitmap(Width, Height); // An image used as a buffer for rendering
+    offScreenGraphics = Graphics.FromImage(offScreenBitmap); // Enables you to draw on the offScreenBitmap
+    graphics = CreateGraphics(); // Used to rendering the form
     controller = new Controller(offScreenGraphics, ClientSize);     
     timer1.Enabled = true;
 }
@@ -101,9 +102,10 @@ In the `timer1_Tick` method, replace the existing code with the following:
 ```cs
 private void timer1_Tick(object sender, EventArgs e)
 {
+    // Clears the buffer by filling the entire image with a black rectangle. This prevents the previous fram from being displayed
     offScreenGraphics.FillRectangle(Brushes.Black, 0, 0, Width, Height);
     controller.Run();
-    graphics.DrawImage(offScreenBitmap, 0, 0);
+    graphics.DrawImage(offScreenBitmap, 0, 0); // Eliminates flickering and ensures the frame is displayed without partial updates
 }
 ```
 

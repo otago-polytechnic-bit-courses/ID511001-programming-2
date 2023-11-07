@@ -1,141 +1,6 @@
-# 09: More Graphics Class and Controller Class
+# 09: More Graphics Class
 
-A controller class is responsible for creating objects and calling their methods. 
-
-Let us digest the following classes:
-
-```cs
-public class Molecule
-{
-    private const int SIZE = 10;
-
-    private Point position;
-    private Color colour;
-    private Graphics graphics;
-    private Random random; 
-    private Brush brush;
-
-    public Molecule(Point position, Color colour, Graphics graphics, Random random)
-    {
-        this.position = position;
-        this.colour = colour;
-        this.graphics = graphics;
-        this.random = random;
-    }
-
-    public void Draw()
-    {
-        graphics.FillEllipse(new SolidBrush(colour), new Rectangle(position.X, position.Y, SIZE, SIZE));
-
-        // or
-
-        // graphics.FillEllipse(brush, position.X, position.Y, SIZE, SIZE);
-    }
-}
-```
-
-```cs
-public partial class Form1 : Form
-{
-    private const int TOTAL = 50;
-    private const int RED_POSITION = 180;
-    private const int BLUE_POSITION = 280;
-    private const int PURPLE_POSITION = 380;
-
-    private Graphics graphics;
-    private Random random;
-    private List<Molecule> molecules;
-
-    public Form1()
-    {
-        InitializeComponent();
-
-        graphics = CreateGraphics();
-        random = new Random();
-        
-        molecules = new List<Molecule>();
-
-        for (int i = 0; i < TOTAL; i++)
-        {
-            molecules.Add(new Molecule(new Point(RED_POSITION, RED_POSITION), Color.Red, graphics, random));
-            molecules.Add(new Molecule(new Point(BLUE_POSITION, BLUE_POSITION), Color.Blue, graphics, random));
-            molecules.Add(new Molecule(new Point(PURPLE_POSITION, PURPLE_POSITION), Color.Purple, graphics, random));
-        }
-
-        timer1.Enabled = true;
-    }
-
-    private void timer1_Tick(object sender, EventArgs e)
-    {
-        Refresh();
-        foreach (Molecule molecule in molecules)
-        {
-            molecule.Draw();
-        }
-    }
-}
-```
-
-How can we extract ūn-related UI code from `Form1.cs` into `Controller.cs`?
-
-```cs
-public class Controller
-{
-    private const int TOTAL = 50;
-    private const int RED_POSITION = 180;
-    private const int BLUE_POSITION = 280;
-    private const int PURPLE_POSITION = 380;
-
-    private List <Molecule> molecules;
-
-    public Controller(Graphics graphics, Random random)
-    {
-        molecules = new List<Molecule>();
-
-        for (int i = 0; i < TOTAL; i++)
-        {
-            molecules.Add(new Molecule(new Point(RED_POSITION, RED_POSITION), Color.Red, graphics, random));
-            molecules.Add(new Molecule(new Point(BLUE_POSITION, BLUE_POSITION), Color.Blue, graphics, random));
-            molecules.Add(new Molecule(new Point(PURPLE_POSITION, PURPLE_POSITION), Color.Purple, graphics, random));
-        }
-    }
-
-    public void Run()
-    {
-        foreach (Molecule molecule in molecules)
-        {
-            molecule.Draw();
-        }
-    }
-}
-```
-
-```cs
-public partial class Form1 : Form
-{
-    private Graphics graphics;
-    private Random random;
-    private Controller controller;
-
-    public Form1()
-    {
-        InitializeComponent();
-
-        graphics = CreateGraphics();
-        random = new Random();
-
-        controller = new Controller(graphics, random);
-
-        timer1.Enabled = true;
-    }
-
-    private void timer1_Tick(object sender, EventArgs e)
-    {
-        Refresh();
-        controller.Run();
-    }
-}
-```
+No new material...just practice.
 
 # Formative Assessment
 
@@ -167,7 +32,19 @@ The `Ball` class will need to have the following fields:
 - A `private` `Brush` field called `brush`
 - A private `Size` field called `clientSize`
 
-The `Ball` class will need to have a constructor that takes in a `Point` called `position`, a `Point` called `speed`, a `Color` called `colour`, a `Graphics` called `graphics`, and a `Size` called `clientSize`. Also, you will need to create a new `SolidBrush` object and assign it to the `brush` field.
+The `Ball` class will need to have a constructor that takes in a `Point` called `position`, a `Point` called `speed`, a `Color` called `colour`, a `Graphics` called `graphics`, and a `Size` called `clientSize`. Also, you will need to create a new `SolidBrush` object and assign it to the `brush` field. For example:
+
+```cs
+public Ball(Point speed, Point position, Color colour, Graphics graphics, Size clientSize)
+{
+    this.speed = speed;
+    this.position = position;
+    this.colour = colour;
+    this.graphics = graphics;
+    this.clientSize = clientSize;
+    brush = new SolidBrush(colour);
+}
+```
 
 The `Ball` class will have three other methods:
 - A `public void` method called `Draw` that takes in no parameters. In the `Draw` method, you will need to call the `FillEllipse` method on the `graphics` field and pass in the `brush` object and a new `Rectangle` object that takes in the `position.X`, `position.Y`, `SIZE`, and `SIZE` fields.
@@ -176,10 +53,23 @@ The `Ball` class will have three other methods:
 
 The `Controller` class will need to have the following field: a `private` `Ball` field called `ball`.
 
-The `Controller` class will need to have a constructor that takes in a `Graphics` called `graphics`, and a `Size` called `clientSize`. In the constructor, you will need to create a new `Ball` object and assign it to the `ball` field.
+The `Controller` class will need to have a constructor that takes in a `Graphics` called `graphics`, and a `Size` called `clientSize`. In the constructor, you will need to create a new `Ball` object and assign it to the `ball` field. For example:
+
+```cs
+ball = new Ball(new Point(10, 10), new Point(100, 100), Color.Black, graphics, clientSize);
+```
 
 The `Controller` class will have one other methods:
-- A `public void` method called `Run` that takes in no parameters. In the `Run` method, you will need to call the `Move`, `BounceSide` and `Draw` methods on the `ball` field.
+- A `public void` method called `Run` that takes in no parameters. In the `Run` method, you will need to call the `Move`, `BounceSide` and `Draw` methods on the `ball` field. For example:
+
+```cs
+public void Run()
+{
+    ball.Move();
+    ball.Draw();
+    ball.BounceSide();
+}
+```
 
 In the `Form1` class, call the `Controller's` `Run` method in the `timer1_Tick` method.	
 
@@ -197,10 +87,11 @@ In the `Form1` constructor, replace the existing code with the following:
 public Form1()
 {
     InitializeComponent();
-    
-    offScreenBitmap = new Bitmap(Width, Height);
-    offScreenGraphics = Graphics.FromImage(offScreenBitmap);
-    graphics = CreateGraphics();
+
+
+    offScreenBitmap = new Bitmap(Width, Height); // An image used as a buffer for rendering
+    offScreenGraphics = Graphics.FromImage(offScreenBitmap); // Enables you to draw on the offScreenBitmap
+    graphics = CreateGraphics(); // Used to rendering the form
     controller = new Controller(offScreenGraphics, ClientSize);     
     timer1.Enabled = true;
 }
@@ -211,9 +102,10 @@ In the `timer1_Tick` method, replace the existing code with the following:
 ```cs
 private void timer1_Tick(object sender, EventArgs e)
 {
+    // Clears the buffer by filling the entire image with a black rectangle. This prevents the previous fram from being displayed
     offScreenGraphics.FillRectangle(Brushes.Black, 0, 0, Width, Height);
     controller.Run();
-    graphics.DrawImage(offScreenBitmap, 0, 0);
+    graphics.DrawImage(offScreenBitmap, 0, 0); // Eliminates flickering and ensures the frame is displayed without partial updates
 }
 ```
 

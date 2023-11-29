@@ -296,6 +296,7 @@ For example, the following code uses a `do-while` loop to print the numbers 0 to
 
 ```cs
 int i = 0;
+
 do
 {
     Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
@@ -315,7 +316,8 @@ foreach (var item in collection)
 For example, the following code uses a foreach loop to print the items of an array to the console:
 
 ```cs
-int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
 foreach (int i in numbers)
 {
     Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
@@ -424,7 +426,9 @@ In this example, the code in the `try` block attempts to parse a string to an in
 Another example using the `using` statement:
 
 ```cs
-using (FileStream stream = new FileStream("file.txt", FileMode.Open))
+string fileName = "example.txt";
+
+using (FileStream stream = new FileStream(fileName, FileMode.Open))
 {
     // Code that uses the stream
 }
@@ -479,6 +483,7 @@ Here is another example of how to use the `StreamReader` **class** to read the c
 
 ```cs
 string fileName = "example.txt";
+
 using (StreamReader reader = new StreamReader(fileName))
 {
     string line;

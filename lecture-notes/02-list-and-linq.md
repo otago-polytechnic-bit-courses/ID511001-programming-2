@@ -1,10 +1,9 @@
-# 02: List and LINQ
-
+# 02: List and Language Integrated Query
 ## List
 
-A list is a collection of items stored as an array and can be accessed by an index number. Lists are similar to arrays, but they can be resized dynamically, which means that you can add or remove items from the list after it is created.
+A list is a data structure that stores a collection of items. It is a linear data structure, which means that the items are stored in a sequence. Each item in the list is identified by its position in the list, which is called its index. The first item in the list has an index of 0, the second item has an index of 1, and so on. The last item in the list has an index of `n - 1`, where `n` is the total number of items in the list. A list is a dynamic data structure, which means that it can grow or shrink in size during the execution of a program.
 
-There are different types of lists in different programming languages, but they all have some basic features. Here are some common operations that can be performed on lists:
+Here are some common operations that can be performed on lists:
 
 - Adding items to the list: You can add new items to the end of the list or insert them at a specific position.
 - Removing items from the list: You can remove them from the list by their position or value.
@@ -15,14 +14,18 @@ There are different types of lists in different programming languages, but they 
 Here is an example of how to create and use a list:
 
 ```cs
-List<string> names = new List<string>();
-names.Add("Alice");
+List<string> names = new List<string>(); // Create an empty list
+
+names.Add("Alice"); // Add a new name to the list
 names.Add("Bob");
 names.Add("Charlie");
-string firstName = names[0];
-string secondName = names[1];
-names.Remove("Charlie");
-int count = names.Count;
+
+string firstName = names[0];  // Access the first name in the list
+string secondName = names[1]; // Access the second name in the list
+
+names.Remove("Charlie"); // Remove a name from the list by its value
+
+int count = names.Count; // Get the total number of names in the list
 ```
 
 **Questions:**
@@ -30,20 +33,52 @@ int count = names.Count;
 1. What is the output if you print `firstName`?
 2. What is the output if you print `count`?
 
-One of the main advantages of using a list is that it provides fast and efficient access to the items it contains. Since each item in a list is identified by its index, it is possible to access any item in the list in constant time by simply specifying its index. It makes lists an ideal data structure for storing and accessing large data collections, especially when the order of the items is important.
+How do you iterate over the items in a list? You can use a `for` loop or a `foreach` loop. Here are some examples:
 
-Inserting or deleting items from the middle of a list can be expensive, as it may require shifting the items around to make room for the new item or filling the gap left by the deleted item.
+```cs
+List<string> names = new List<string>() { "Alice", "Bob", "Charlie" }; // Create a list with initial values
 
-Lists are a very useful and widely-used data structure that can be used to store and manage large data collections in various applications.
+for (int i = 0; i < names.Count; i++) // Iterate over the names in the list using a for loop
+{
+    Console.WriteLine(names[i]); 
+}
 
-## LINQ
+foreach (string name in names) // Iterate over the names in the list using a foreach loop
+{
+    Console.WriteLine(name); 
+}
+```
 
-**LINQ** stands for **Language Integrated Query**. It is a set of features that extends the **C#** language to support queries against data sources. It provides a consistent way to query data from different data sources, i.e., in-memory collections, databases, etc.
+There are other useful methods that can be used to manipulate lists. Here are some examples:
+
+```cs
+List<string> names = new List<string>() { "Alice", "Bob", "Charlie" }; // Create a list with initial values
+
+names.Insert(1, "Eve"); // Insert a new name at a specific position in the list
+names.RemoveAt(2); // Remove a name from the list by its position
+names.Contains("Alice"); // Check if a name exists in the list
+names.IndexOf("Alice"); // Find the position of a name in the list
+names.Sort(); // Sort the names in the list in ascending order
+names.Reverse(); // Reverse the order of the names in the list
+names.Clear(); // Remove all names from the list
+
+foreach (string name in names) // Iterate over the names in the list using a foreach loop
+{
+    Console.WriteLine(name); // What is the output?
+}
+```
+
+**Resource:**
+- [List\<T> Class](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-8.0)
+
+## Language Integrated Query
+
+**Language Integrated Query** or **LINQ** provides a set of features that extends the **C#** language to support queries against data sources. It provides a consistent way to query data from different data sources, i.e., in-memory collections, databases, etc.
 
 **LINQ** queries are written using **query expressions**. A query expression is a query that is written in a declarative syntax, similar to **SQL**. It consists of a **from** clause, a **where** clause, a **orderby** clause, a **select** clause, and a **groupby** clause.
 
 ```cs
-List<string> names = new List<string>() { "Bob", "Charlie", "Alice", "Eve" };
+List<string> names = new List<string>() { "Alice", "Bob", "Charlie" }; 
 
 var query = from name in names
             where name.Length > 4
@@ -59,19 +94,19 @@ foreach (string name in query)
 The above query is equivalent to the following:
 
 ```cs
-List<string> names = new List<string>() { "Bob", "Charlie", "Alice", "Eve" };
+List<string> names = new List<string>() { "Alice", "Bob", "Charlie" }; 
 
 var query = names.Where(name => name.Length > 4)
                  .OrderBy(name => name)
                  .Select(name => name);
-            
+
 foreach (string name in query)
 {
     Console.WriteLine(name);
 }
 ```
 
-What is the output?
+Feel free to choose whichever syntax you prefer.
 
 # Formative Assessment
 
@@ -85,19 +120,19 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-You have been given two **lists** containing some of my favourite programming languages.
+You have been given two **lists** containing some programming languages.
 
 ```cs
-List<string> progLangOne = new List<string>() { "C#", "JavaScript", "Kotlin", "Python" };
-List<string> progLangTwo = new List<string>() { "C++", "Go", "Swift", "TypeScript" };
+List<string> progLangsOne = new List<string>() { "C#", "JavaScript", "Kotlin", "Python" };
+List<string> progLangsTwo = new List<string>() { "C++", "Go", "Swift", "TypeScript" };
 ```
 
 Implement the following:
 
-1. Use the `AddRange` method to add the elements of `progLangOne` to `progLangTwo` and assign the resulting combined list to a variable called `allProgLanguages`
-2. Use the `Add` method to add "Rust" to `allProgLanguages`
-3. Use the `Remove` method to remove "Swift" from `allProgLanguages`
-4. Use a loop to display each language in `allProgLanguages`
+1. Use the `AddRange` method to add the elements of `progLangsOne` to `progLangsTwo` and assign the resulting combined list to a variable called `allProgLangs`
+2. Use the `Add` method to add "Rust" to `allProgLangs`
+3. Use the `Remove` method to remove "Swift" from `allProgLangs`
+4. Use a loop to display each language in `allProgLangs`
 
 ## Task 2:
 
@@ -161,7 +196,7 @@ List<string> countries = new List<string>
 
 ## Task 6:
 
-You have been given a list of temperatures in celsius for a week. 
+You have been given a list of temperatures in celsius for a week.
 
 ```cs
 List<double> temperatures = new List<double>() { 24.5, 23.8, 25.3, 22.6, 26.1, 27.5, 21.9 };
@@ -175,7 +210,7 @@ Implement the following:
 
 ## Task 7:
 
-You have been given a list of integers representing exam scores of learners. 
+You have been given a list of integers representing exam scores of learners.
 
 ```cs
 List<int> scores = new List<int>() { 78, 89, 92, 65, 70, 85, 92, 78, 93, 80 };
@@ -201,9 +236,9 @@ Implement the following:
 
 ## Task 9:
 
-You have been given a list of integers representing the population of cities. 
+You have been given a list of integers representing the population of cities.
 
-```cs	
+```cs
 List<int> cityPopulations = new List<int>() { 5000000, 3000000, 1200000, 8000000, 2000000, 4500000, 6000000 };
 ```
 

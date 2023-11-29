@@ -42,6 +42,8 @@ public class Dog
 
 In this example, the **class** `Dog` has two **fields**, `name` and `age`, which represent the name and age of a dog, respectively. The **class** also has one **method**, `Bark()`, which causes the dog to bark by printing "Woof woof!" to the console.
 
+## Objects
+
 To create an **object** from this **class**, you can use the `new` keyword and the **class** constructor like this:
 
 ```cs
@@ -104,7 +106,7 @@ This code creates a new **object** of type `Dog` named "myDog" and assigns value
 - **Immutable**: An object whose state cannot be changed after it has been created.
 - **Nullable**: A type that can be assigned `null`.
 - **Parameterless constructor**: A constructor that takes no parameters.
-- **Inheritance**: The ability to create a new class from an existing class. We will talk more about this in `05-inheritance-and-polymorphism.md`.
+- **Inheritance**: The ability to create a new class from an existing class. We will talk more about this in `04-inheritance-and-polymorphism.md`.
 
 
 ## Static Class
@@ -176,7 +178,7 @@ It is also worth noting that there are other keywords, such as `abstract`, `seal
 
 It is important to choose the right scope keyword depending on the intended use of the element in question, as it can affect the visibility, accessibility and overall design of the program.
 
-# Encapsulation
+## Encapsulation
 
 Encapsulation is the process of hiding the implementation details of a class from the outside world and exposing only the necessary information and functionality through a public interface. Encapsulation is one of the fundamental principles of object-oriented programming, and it is used to promote the principles of abstraction, modularity, and information hiding.
 
@@ -186,7 +188,7 @@ A good example of encapsulation is a bank account. A bank account has a balance,
 
 You will see below that encapsulation is achieved through access modifiers, such as `public`, `private`, and `protected`, which control the visibility and accessibility of class members (fields and methods).
 
-For example, a class can have a private field that holds some important data and a public property that allows the data to be accessed, like this:
+For example, a class can have a `private` field that holds some important data and a public property that allows the data to be accessed, like this:
 
 ```cs
 public class BankAccount
@@ -197,7 +199,7 @@ public class BankAccount
 }
 ```
 
-In this example, the `balance` field is defined as private, meaning it can only be accessed within the class. On the other hand, the `Balance` property is defined as public, meaning it can be accessed from outside the class. It allows the class to control how the `balance` field is modified and accessed and to ensure that the data is always in a consistent state.
+In this example, the `balance` field is defined as `private`, meaning it can only be accessed within the class. On the other hand, the `Balance` property is defined as `public`, meaning it can be accessed from outside the class. It allows the class to control how the `balance` field is modified and accessed and to ensure that the data is always in a consistent state.
 
 Encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change how the `balance` field is stored, without affecting the code that accesses it through the `Balance` property.
 
@@ -365,6 +367,6 @@ Use the `StreamReader` or `File` **class** to read the contents of the `dogs.txt
 
 Create a class diagram for two programs you have created.
 
-# Formative Assessment Submission
+## Submission
 
 Push your code to your **GitHub** repository.

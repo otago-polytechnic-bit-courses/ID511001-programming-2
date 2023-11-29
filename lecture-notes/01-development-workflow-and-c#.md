@@ -1,6 +1,6 @@
 # 01: Development Workflow and C#
 
-# Development Workflow
+## Development Workflow
 
 By default, **GitHub Classroom** creates an empty repository. Firstly, you must create a **README** and `.gitignore` file. **GitHub** provides an option for creating new files once the repository is created.
 
@@ -25,9 +25,7 @@ Open up **Git Bash** or whatever alternative you see fit on your computer. Clone
 
 - <https://git-scm.com/docs/git-clone>
 
-# C#
-
-## What is C#?
+## C#
 
 **C#** is a programming language developed by **Microsoft** for building web, mobile applications, desktop applications and games. It is a modern, **object-oriented** language designed to be easy to use and similar in syntax to other popular programming languages such as **C++** and **Java**. **C#** is commonly used to build applications on the **Microsoft .NET Framework**, but developers can also use it to build cross-platform applications using frameworks like **Xamarin** and **.NET Core**.
 
@@ -361,8 +359,6 @@ myObj.IncreaseValue(5);
 Console.WriteLine(myObj.myValue); // Outputs 5
 ```
 
-**Ask ChatGPT 🤖** - What are other **methods** in **C#**?:
-
 - Static **methods**: These **methods** are associated with a **class** and do not have access to an instance's data. They can only access static data.
 
 ```cs
@@ -424,7 +420,7 @@ int result = 5.Multiply(3);
 Console.WriteLine(result); // Outputs 15
 ```
 
-**Note:** If a method's block has one statement, you use the **expression-bodied** syntax. For example:
+**Note:** If a method's block has one statement, you can use the **expression-bodied** syntax. For example:
 
 ```cs
 public class MyClass 
@@ -457,11 +453,9 @@ try
 catch (FormatException ex)
 {
     // Code that will be executed if an exception is thrown
-    Console.WriteLine("Error: " + ex.Message);
+    Console.WriteLine($"Error: {ex.Message}");
 }
 ```
-
-**Ask ChatGPT 🤖** - How do you convert `Console.WriteLine("Error: " + ex.Message);` to use **string interpolation** in **C#**?:
 
 In this example, the code in the `try` block attempts to parse a string to an integer, but the string `abc` is not a valid integer, so a `FormatException` is thrown. The `catch` block catches this exception and prints an error message to the console.
 

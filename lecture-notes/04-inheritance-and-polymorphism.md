@@ -1,4 +1,4 @@
-# 05: Inheritance and Polymorphism
+# 04: Inheritance and Polymorphism
 
 ## Inheritance
 

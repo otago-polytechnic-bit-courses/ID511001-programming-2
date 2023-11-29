@@ -7,11 +7,11 @@ Here is an example of a simple **class**:
 ```cs
 public class Dog
 {
-    // fields
+    // Fields
     public string name;
     public int age;
 
-    // methods
+    // Methods
     public void Bark()
     {
         Console.WriteLine("Woof woof!");
@@ -24,10 +24,10 @@ In this example, the **class** `Dog` has two **fields**, `name` and `age`, which
 To create an **object** from this **class**, you can use the `new` keyword and the **class** constructor like this:
 
 ```cs
-Dog myDog = new Dog();
-myDog.name = "Max";
-myDog.age = 3;
-myDog.Bark(); 
+Dog myDog = new Dog(); // Create a new object of type Dog
+myDog.name = "Max"; // Set the name field to "Max"
+myDog.age = 3; // Set the age field to 3
+myDog.Bark(); // Call the Bark() method which outputs - "Woof woof!"
 ```
 
 This code creates a new **object** of type `Dog` named `myDog`, assigns values to its `name` and `age` **fields**, and then calls the `Bark()` **method** on the **object**.

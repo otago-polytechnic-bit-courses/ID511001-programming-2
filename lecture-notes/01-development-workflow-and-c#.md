@@ -262,6 +262,19 @@ for (int i = 0; i < 10; i += 2) // Initialise i to 0, check if i is less than 10
 }
 ```
 
+What happens if you want to `break` out of a loop? You can use the `break` keyword to exit the loop. For example:
+
+```cs
+for (int i = 0; i < 10; i++)
+{
+    if (i == 5)
+    {
+        break; // Exit the loop when i is equal to 5
+    }
+    Console.WriteLine(i); // Prints 0, 1, 2, 3, 4
+}
+```
+
 - `while` loops: These loops are used to execute a block of code while a certain condition is true. The basic syntax of a `while` loop is:
 
 ```cs
@@ -336,14 +349,14 @@ public class MyClass {
     public int myValue = 0;
 
     public void IncreaseValue(int amount) { // This is the method signature - name and parameter(s)
-        myValue += amount;
+        myValue += amount; // or myValue = myValue + amount;
     }
 }
 
 // Usage:
 MyClass myObj = new MyClass();
 myObj.IncreaseValue(5);
-Console.WriteLine(myObj.myValue); // Prints 5
+Console.WriteLine(myObj.myValue); // Outputs 5
 ```
 
 **Ask ChatGPT 🤖** - What are other **methods** in **C#**?:
@@ -358,7 +371,7 @@ public class MyClass {
 }
 
 // Usage:
-Console.WriteLine(MyClass.Add(2, 3)); // Prints 5
+Console.WriteLine(MyClass.Add(2, 3)); // Outputs 5
 ```
 
 - Constructors: These **methods** are used to create and initialise an instance of a **class**.
@@ -374,7 +387,7 @@ public class MyClass {
 
 // Usage:
 MyClass myObj = new MyClass(5);
-Console.WriteLine(myObj.myValue); // Prints 5
+Console.WriteLine(myObj.myValue); // Outputs 5
 ```
 
 - Destructors: These **methods** are used to clean up resources when an instance of a **class** is no longer needed. It is not recommended in **C#**.
@@ -383,6 +396,7 @@ Console.WriteLine(myObj.myValue); // Prints 5
 public class MyClass {
     ~MyClass() { // Note: The use of the tilde (~) character. This indicates that this 
                  // is a destructor. You may see this in other programming languages, for example, C++
+
         // Clean up resources
     }
 }
@@ -399,7 +413,7 @@ public static class MyClass {
 
 // Usage:
 int result = 5.Multiply(3);
-Console.WriteLine(result); // Prints 15
+Console.WriteLine(result); // Outputs 15
 ```
 
 ## Error Handling
@@ -412,7 +426,7 @@ Here is an example of a basic **try-catch** block:
 try
 {
     // Code that may throw an exception
-    int x = int.Parse("abc");
+    int x = int.Parse("abc"); // Is "abc" a valid integer?
 }
 catch (FormatException ex)
 {

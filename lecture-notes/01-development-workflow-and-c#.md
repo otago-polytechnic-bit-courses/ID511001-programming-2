@@ -31,6 +31,36 @@ Open up **Git Bash** or whatever alternative you see fit on your computer. Clone
 
 **C#** is a programming language developed by **Microsoft** for building web, mobile applications, desktop applications and games. It is a modern, **object-oriented** language designed to be easy to use and similar in syntax to other popular programming languages such as **C++** and **Java**. **C#** is commonly used to build applications on the **Microsoft .NET Framework**, but developers can also use it to build cross-platform applications using frameworks like **Xamarin** and **.NET Core**.
 
+## Main Method
+
+The **Main** method is the entry point for all **C#** programs. It is the first method that is called when a program is executed. The **Main** method is declared with the `static` keyword, which means that it can be called without creating an instance of the class that contains it. It also has a return type of `void`, which means that it does not return a value. The **Main** method is typically declared in a **class** called `Program` and is usually the only method in that **class**. For example:
+
+```cs
+// Using directives
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Code to be executed
+    }
+}
+```
+
+You can also use **top-level statements** to declare the **Main** method. This allows you to write code directly in the **Main** method without having to create a **class**. For example:
+
+```cs
+// Using directives
+
+Console.WriteLine("Hello, World!");
+```
+
+**Note:** In this course, it is recommended that you use the **Main** method approach.
+
+**Resources:**
+- Main method - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/>
+- Top-level statements - <https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/top-level-statements>
+
 ## Variables
 
 A **variable** is a named storage location that holds a value of a specific data type. **Variables** are used to store values that can change during the execution of a program. A **variable** is declared by specifying the data type and the **variable** name. For example:
@@ -84,11 +114,11 @@ An **if-else** statement is a **control flow statement** that allows the program
 ```cs
 if (condition)
 {
-    // code to be executed if the condition is true
+    // Code to be executed if the condition is true
 }
 else
 {
-    // code to be executed if the condition is false
+    // Code to be executed if the condition is false
 }
 ```
 
@@ -97,6 +127,9 @@ The condition is a **boolean expression** evaluated as either `true` or `false`.
 For example, the following code checks if `x` is greater than `y`. If so, it prints "x is greater than y" to the console. If not, it prints "x is less than or equal to y" to the console.
 
 ```cs
+int x = 5;
+int y = 10;
+
 if (x > y)
 {
     Console.WriteLine("x is greater than y");
@@ -110,6 +143,9 @@ else
 You can also chain multiple conditions using `else if` like the following example:
 
 ```cs
+int x = 5;
+int y = 10;
+
 if (x > y)
 {
     Console.WriteLine("x is greater than y");
@@ -134,14 +170,14 @@ A `switch` statement is a **control flow statement** that allows a program to se
 switch (expression)
 {
     case value1:
-        // code to be executed if expression equals value1
+        // Code to be executed if expression equals value1
         break;
     case value2:
-        // code to be executed if expression equals value2
+        // Code to be executed if expression equals value2
         break;
-    ...
+    ... // As many cases as you need
     default:
-        // code to be executed if expression does not match any of the values
+        // Code to be executed if expression does not match any of the values
         break;
 }
 ```
@@ -151,7 +187,9 @@ The expression is evaluated and its value is compared to the values specified in
 For example, the following code uses a `switch` statement to check the value of `x` and prints a message to the console based on its value:
 
 ```cs
-switch (x)
+int x = 1;
+
+switch (x) // Switch on an integer
 {
     case 1:
         Console.WriteLine("x is 1");
@@ -169,7 +207,8 @@ The `default` case is optional and will be executed if the value of the expressi
 
 ```cs
 string day = "Monday";
-switch (day)
+
+switch (day) // Switch on a string
 {
     case "Monday":
         Console.WriteLine("Today is Monday");
@@ -192,16 +231,34 @@ There are several types of loops in **C#**, including:
 ```cs
 for (initialisation; condition; increment)
 {
-    // code to be executed
+    // Code to be executed
 }
 ```
 
 For example, the following code uses a `for` loop to print the numbers 0 to 9 to the console:
 
 ```cs
-for (int i = 0; i < 10; i++)
+for (int i = 0; i < 10; i++) // Initialise i to 0, check if i is less than 10, increment i by 1
 {
-    Console.WriteLine(i);
+    Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
+}
+```
+
+You can also decrement the value of the loop variable, like the following example:
+
+```cs
+for (int i = 10; i > 0; i--) // Initialise i to 10, check if i is greater than 0, decrement i by 1
+{
+    Console.WriteLine(i); // Prints 10, 9, 8, ..., 1
+}
+```
+
+How about incrementing by 2? You can do that too:
+
+```cs
+for (int i = 0; i < 10; i += 2) // Initialise i to 0, check if i is less than 10, increment i by 2
+{
+    Console.WriteLine(i); // Prints 0, 2, 4, ..., 8
 }
 ```
 
@@ -210,7 +267,7 @@ for (int i = 0; i < 10; i++)
 ```cs
 while (condition)
 {
-    // code to be executed
+    // Code to be executed
 }
 ```
 
@@ -218,9 +275,10 @@ For example, the following code uses a `while` loop to print the numbers 0 to 9 
 
 ```cs
 int i = 0;
+
 while (i < 10)
 {
-    Console.WriteLine(i);
+    Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
     i++;
 }
 ```
@@ -230,7 +288,7 @@ while (i < 10)
 ```cs
 do
 {
-    // code to be executed
+    // Code to be executed
 } while (condition);
 ```
 
@@ -240,7 +298,7 @@ For example, the following code uses a `do-while` loop to print the numbers 0 to
 int i = 0;
 do
 {
-    Console.WriteLine(i);
+    Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
     i++;
 } while (i < 10);
 ```
@@ -250,7 +308,7 @@ do
 ```cs
 foreach (var item in collection)
 {
-    // code to be executed
+    // Code to be executed
 }
 ```
 
@@ -260,7 +318,7 @@ For example, the following code uses a foreach loop to print the items of an arr
 int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 foreach (int i in numbers)
 {
-    Console.WriteLine(i);
+    Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
 }
 ```
 
@@ -282,7 +340,7 @@ public class MyClass {
 // Usage:
 MyClass myObj = new MyClass();
 myObj.IncreaseValue(5);
-Console.WriteLine(myObj.myValue); 
+Console.WriteLine(myObj.myValue); // Prints 5
 ```
 
 **Ask ChatGPT 🤖** - What are other **methods** in **C#**?:
@@ -297,8 +355,7 @@ public class MyClass {
 }
 
 // Usage:
-int result = MyClass.Add(2, 3);
-Console.WriteLine(result); 
+Console.WriteLine(MyClass.Add(2, 3)); // Prints 5
 ```
 
 - Constructors: These **methods** are used to create and initialise an instance of a **class**.
@@ -314,10 +371,10 @@ public class MyClass {
 
 // Usage:
 MyClass myObj = new MyClass(5);
-Console.WriteLine(myObj.myValue); 
+Console.WriteLine(myObj.myValue); // Prints 5
 ```
 
-- Destructors: These **methods** are used to clean up resources when an instance of a **class** is no longer needed. It is not recommended in **C#**. 
+- Destructors: These **methods** are used to clean up resources when an instance of a **class** is no longer needed. It is not recommended in **C#**.
 
 ```cs
 public class MyClass {
@@ -338,7 +395,7 @@ public static class MyClass {
 
 // Usage:
 int result = 5.Multiply(3);
-Console.WriteLine(result); 
+Console.WriteLine(result); // Prints 15
 ```
 
 ## Error Handling
@@ -350,12 +407,12 @@ Here is an example of a basic **try-catch** block:
 ```cs
 try
 {
-    // code that may throw an exception
+    // Code that may throw an exception
     int x = int.Parse("abc");
 }
 catch (FormatException ex)
 {
-    // code that will be executed if an exception is thrown
+    // Code that will be executed if an exception is thrown
     Console.WriteLine("Error: " + ex.Message);
 }
 ```
@@ -369,8 +426,7 @@ Another example using the `using` statement:
 ```cs
 using (FileStream stream = new FileStream("file.txt", FileMode.Open))
 {
-    // code that uses the stream
-    // ...
+    // Code that uses the stream
 }
 ```
 
@@ -381,23 +437,25 @@ You can also have multiple `catch` blocks to handle different exception types, l
 ```cs
 try
 {
-    // code that may throw an exception
-    int x = int.Parse("abc");
+    // Code that may throw an exception
+    int x = int.Parse("abc"); 
     int y = int.Parse("456");
 }
 catch (FormatException ex)
 {
-    // code that will be executed if a FormatException is thrown
-    Console.WriteLine("Error: " + ex.Message);
+    // Code that will be executed if a FormatException is thrown
+    Console.WriteLine($"Error: {ex.Message}");
 }
 catch (OverflowException ex)
 {
-    // code that will be executed if a OverflowException is thrown
-    Console.WriteLine("Error: " + ex.Message);
+    // Code that will be executed if a OverflowException is thrown
+    Console.WriteLine($"Error: {ex.Message}");
 }
 ```
 
-In this example, if the code in the try block throws a `FormatException`, the first catch block will be executed, if it throws a `OverflowException`, the second catch block will be executed.
+In this example, if the code in the `try` block throws a `FormatException`, the first `catch` block will be executed, if it throws a `OverflowException`, the second `catch` block will be executed.
+
+**Note:** There is a third type of block called `finally` that can be used to execute code after the `try` and `catch` blocks have been executed, regardless of whether an exception was thrown or not. 
 
 ## File Processing
 
@@ -408,7 +466,8 @@ For example, the `File` **class** provides **methods** for creating, copying, mo
 Here is an example of how to use the `File` **class** to read the contents of a text file:
 
 ```cs
-string text = File.ReadAllText("example.txt");
+string fileName = "example.txt";
+string text = File.ReadAllText(fileName);
 Console.WriteLine(text);
 ```
 
@@ -419,7 +478,8 @@ This code uses the `ReadAllText()` **method** of the `File` **class** to read th
 Here is another example of how to use the `StreamReader` **class** to read the contents of a text file:
 
 ```cs
-using (StreamReader reader = new StreamReader("example.txt"))
+string fileName = "example.txt";
+using (StreamReader reader = new StreamReader(fileName))
 {
     string line;
     while ((line = reader.ReadLine()) != null)
@@ -434,12 +494,16 @@ In this example, the `StreamReader` **class** is used to read the contents of th
 Similarly, the `File` **class** has **methods** to write to a file, as well as `StreamWriter` **class**.
 
 ```cs
-File.WriteAllText("example.txt", "Hello, World!");
+string fileName = "example.txt";
+File.WriteAllText(fileName, "Hello, World!");
 ```
+
 This code uses the `WriteAllText()` **method** of the `File` **class** to write the string "Hello, World!" to the file `example.txt`.
 
 ```cs
-using (StreamWriter writer = new StreamWriter("example.txt"))
+string fileName = "example.txt";
+
+using (StreamWriter writer = new StreamWriter(fileName))
 {
     writer.WriteLine("Hello,");
     writer.WriteLine("World!");
@@ -448,7 +512,7 @@ using (StreamWriter writer = new StreamWriter("example.txt"))
 
 This example uses the `StreamWriter` **class** to write the strings "Hello," and "World!" to the file "example.txt", each on a new line.
 
-These are just a few examples of how to perform file processing. Still, the System.IO namespace provides many other **classes** and **methods** for working with files and directories, such as the `Directory` **class** for working with directories, the `FileInfo` and `DirectoryInfo` **classes** for working with file and directory metadata, and the `FileSystemWatcher` **class** for monitoring changes to the file system.
+These are just a few examples of how to perform file processing. Still, the `System.IO` namespace provides many other **classes** and **methods** for working with files and directories, such as the `Directory` **class** for working with directories, the `FileInfo` and `DirectoryInfo` **classes** for working with file and directory metadata, and the `FileSystemWatcher` **class** for monitoring changes to the file system.
 
 # Formative Assessment
 
@@ -502,13 +566,13 @@ Create a **method** called `isPalindrome` that takes in a parameter `word` which
 
 Create a **method** called `isPrime` that takes in a parameter `num` which is an integer. Inside the **method**, write code to check if `num` is a prime number. A prime number is a number that is only divisible by 1 and itself. Use a loop to check if `num` is divisible by any number other than 1 and itself. If it is, return `false`, otherwise, return `true`.
 
-## Task 10: 
+## Task 10:
 
 Write some code that reads in a file called `computer-jokes.txt` containing a list of computer jokes. The program should store the jokes in an array and randomly select and display a joke each time it is run.
 
 ## Task 11:
 
-Write some code that reads in a file called `countries.txt` containing a list of country names. The program should display only the names of the countries that start with the letter **'B'**. 
+Write some code that reads in a file called `countries.txt` containing a list of country names. The program should display only the names of the countries that start with the letter **'B'**.
 
 # Formative Assessment Submission
 

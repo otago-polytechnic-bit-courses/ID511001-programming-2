@@ -307,6 +307,7 @@ do
 `foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
 
 ```cs
+// Note: item is a variable that represents an item in the collection. It can be named anything you want
 foreach (var item in collection)
 {
     // Code to be executed
@@ -351,7 +352,7 @@ Console.WriteLine(myObj.myValue); // Prints 5
 
 ```cs
 public class MyClass {
-    public static int Add(int a, int b) { // This is the method signature
+    public static int Add(int a, int b) { 
         return a + b;
     }
 }
@@ -380,7 +381,8 @@ Console.WriteLine(myObj.myValue); // Prints 5
 
 ```cs
 public class MyClass {
-    ~MyClass() {
+    ~MyClass() { // Note: The use of the tilde (~) character. This indicates that this 
+                 // is a destructor. You may see this in other programming languages, for example, C++
         // Clean up resources
     }
 }

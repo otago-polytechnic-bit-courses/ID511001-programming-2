@@ -1,4 +1,5 @@
 # 02: List and Language Integrated Query
+
 ## List
 
 A list is a data structure that stores a collection of items. It is a linear data structure, which means that the items are stored in a sequence. Each item in the list is identified by its position in the list, which is called its index. The first item in the list has an index of 0, the second item has an index of 1, and so on. The last item in the list has an index of `n - 1`, where `n` is the total number of items in the list. A list is a dynamic data structure, which means that it can grow or shrink in size during the execution of a program.
@@ -40,12 +41,12 @@ List<string> names = new List<string>() { "Alice", "Bob", "Charlie" }; // Create
 
 for (int i = 0; i < names.Count; i++) // Iterate over the names in the list using a for loop
 {
-    Console.WriteLine(names[i]); 
+    Console.WriteLine(names[i]);
 }
 
 foreach (string name in names) // Iterate over the names in the list using a foreach loop
 {
-    Console.WriteLine(name); 
+    Console.WriteLine(name);
 }
 ```
 
@@ -69,6 +70,7 @@ foreach (string name in names) // Iterate over the names in the list using a for
 ```
 
 **Resource:**
+
 - [List\<T> Class](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-8.0)
 
 ## Language Integrated Query
@@ -78,12 +80,12 @@ foreach (string name in names) // Iterate over the names in the list using a for
 **LINQ** queries are written using **query expressions**. A query expression is a query that is written in a declarative syntax, similar to **SQL**. It consists of a **from** clause, a **where** clause, a **orderby** clause, a **select** clause, and a **groupby** clause.
 
 ```cs
-List<string> names = new List<string>() { "Alice", "Bob", "Charlie" }; 
+List<string> names = new List<string>() { "Alice", "Bob", "Charlie" };
 
-var query = from name in names
-            where name.Length > 4
-            orderby name
-            select name;
+IEnumerable<string> query = from name in names
+            where name.Length > 4 // Where name length is greater than 4
+            orderby name // Order by name in ascending order
+            select name; 
 
 foreach (string name in query)
 {
@@ -94,9 +96,9 @@ foreach (string name in query)
 The above query is equivalent to the following:
 
 ```cs
-List<string> names = new List<string>() { "Alice", "Bob", "Charlie" }; 
+List<string> names = new List<string>() { "Alice", "Bob", "Charlie" };
 
-var query = names.Where(name => name.Length > 4)
+IEnumerable<string> query = names.Where(name => name.Length > 4)
                  .OrderBy(name => name)
                  .Select(name => name);
 
@@ -106,7 +108,35 @@ foreach (string name in query)
 }
 ```
 
+How would you do this without using **LINQ**?
+
+```cs
+List<string> names = new List<string>() { "Alice", "Bob", "Charlie" };
+
+List<string> query = new List<string>();
+
+foreach (string name in names)
+{
+    if (name.Length > 4)
+    {
+        query.Add(name);
+    }
+}
+
+query.Sort();
+
+foreach (string name in query)
+{
+    Console.WriteLine(name);
+}
+```
+
 Feel free to choose whichever syntax you prefer.
+
+**Resources:**
+
+- [LINQ (Language-Integrated Query)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/)
+- [Query Syntax and Method Syntax in LINQ (C#)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq)
 
 # Formative Assessment
 

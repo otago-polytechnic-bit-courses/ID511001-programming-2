@@ -85,6 +85,30 @@ myDog.Bark(); // Output: "Woof woof!"
 
 This code creates a new **object** of type `Dog` named "myDog" and assigns values to its `name` and `age` **fields** via the constructor. Then it calls the `Bark()` **method** on the **object**, which causes it to bark.
 
+## this
+
+In the previous example, we used the `this` keyword. The `this` keyword is used to refer to the current **object** in a **class** or **struct**. It can be used to access the **fields** and **methods** of the current **object**. For example:
+
+```cs
+public class Dog
+{
+    // Fields
+    public string name;
+    public int age;
+
+    // Constructor
+    public Dog(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Methods
+    public void Bark() => Console.WriteLine("Woof woof!");
+    public void PrintInfo() => Console.WriteLine($"Name: {this.name}, Age: {this.age}");
+}
+```
+
 ## What is the difference between a struct and a class?
 
 | Feature                       | Struct                   | Class                     |
@@ -107,7 +131,6 @@ This code creates a new **object** of type `Dog` named "myDog" and assigns value
 - **Nullable**: A type that can be assigned `null`.
 - **Parameterless constructor**: A constructor that takes no parameters.
 - **Inheritance**: The ability to create a new class from an existing class. We will talk more about this in `04-inheritance-and-polymorphism.md`.
-
 
 ## Static Class
 

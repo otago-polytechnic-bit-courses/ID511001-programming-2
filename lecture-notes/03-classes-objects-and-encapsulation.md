@@ -9,20 +9,22 @@ A **struct** is a data structure that can contain **fields** and **methods**. It
 Here is an example of a simple **struct**:
 
 ```cs
-public struct Person
+public struct Dog
 {
     // Fields
     public string name;
     public int age;
 
     // Methods
-    public void SayHello() => Console.WriteLine("Hello!");
+    public void Bark() => Console.WriteLine("Woof woof!");
 }
 ```
 
+Look familiar? 
+
 ## Class
 
-A **class** is a blueprint for creating **objects** (a particular data structure), providing initial values for state (member **variables** or **fields**), and implementations of behaviour (member functions or **methods**). A **class** can be defined using the `class` keyword, followed by the **class** name.
+So what is the difference? **class** is a blueprint for creating **objects** (a particular data structure), providing initial values for state (member **variables** or **fields**), and implementations of behaviour (member functions or **methods**). A **class** can be defined using the `class` keyword, followed by the **class** name.
 
 Here is an example of a simple **class**:
 
@@ -80,6 +82,30 @@ myDog.Bark(); // Output: "Woof woof!"
 ```
 
 This code creates a new **object** of type `Dog` named "myDog" and assigns values to its `name` and `age` **fields** via the constructor. Then it calls the `Bark()` **method** on the **object**, which causes it to bark.
+
+## What is the difference between a struct and a class?
+
+| Feature                       | Struct                   | Class                     |
+|-------------------------------|--------------------------|---------------------------|
+| **Value Type vs Reference Type** | Value type              | Reference type            |
+| **Memory Allocation**           | Stack or inline         | Heap                      |
+| **Default Constructor**         | No parameterless constructor | Allows parameterless constructor |
+| **Inheritance**                | Cannot inherit          | Supports inheritance      |
+| **Nullability**                | Cannot be null (unless nullable) | Can be null               |
+| **Performance**                | Efficient for small, immutable types | Provides more flexibility, slight overhead |
+| **Usage Scenarios**            | Small, lightweight, single-value objects | Larger, complex objects with shared state |
+| **Copying**                    | Copy involves entire value | Copy involves reference   |
+
+**Glossary:**
+- **Value type**: A type whose value is copied when it is assigned to a variable or passed as a parameter. Examples include `int`, `double`, `bool`, `char`, `struct`, and `enum`.
+- **Reference type**: A type whose value is passed by reference. Examples include `string`, `class`, `interface`, `delegate`, and `object`.
+- **Stack**: A region of memory that is used to store local variables and parameters.
+- **Heap**: A region of memory that is used to store objects.
+- **Immutable**: An object whose state cannot be changed after it has been created.
+- **Nullable**: A type that can be assigned `null`.
+- **Parameterless constructor**: A constructor that takes no parameters.
+- **Inheritance**: The ability to create a new class from an existing class. We will talk more about this in `05-inheritance-and-polymorphism.md`.
+
 
 ## Static Class
 

@@ -1,5 +1,27 @@
 # 03: Classes, Objects and Encapsulation
 
+In **ID510001: Programming 1**, you learned about **struts**. Before we take a look at **classes**, let us first recap what a **struct** is.
+
+## Struct
+
+A **struct** is a data structure that can contain **fields** and **methods**. It is similar to a **class**, but it cannot be inherited from or used as a base class. It is often used to group related data together, such as the properties of a person or the attributes of a product.
+
+Here is an example of a simple **struct**:
+
+```cs
+public struct Person
+{
+    // Fields
+    public string name;
+    public int age;
+
+    // Methods
+    public void SayHello() => Console.WriteLine("Hello!");
+}
+```
+
+## Class
+
 A **class** is a blueprint for creating **objects** (a particular data structure), providing initial values for state (member **variables** or **fields**), and implementations of behaviour (member functions or **methods**). A **class** can be defined using the `class` keyword, followed by the **class** name.
 
 Here is an example of a simple **class**:
@@ -12,10 +34,7 @@ public class Dog
     public int age;
 
     // Methods
-    public void Bark()
-    {
-        Console.WriteLine("Woof woof!");
-    }
+    public void Bark() => Console.WriteLine("Woof woof!");
 }
 ```
 
@@ -37,22 +56,19 @@ Classes can also have **constructors**, which are special **methods** that are c
 ```cs
 public class Dog
 {
-    // fields
+    // Fields
     public string name;
     public int age;
 
-    // constructor
+    // Constructor
     public Dog(string name, int age)
     {
         this.name = name;
         this.age = age;
     }
 
-    // methods
-    public void Bark()
-    {
-        Console.WriteLine("Woof woof!");
-    }
+    // Methods
+    public void Bark() => Console.WriteLine("Woof woof!");
 }
 ```
 
@@ -99,22 +115,19 @@ public static class Utils
 }
 
 // Usage in Program.cs:
-
 int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
 
 Console.WriteLine("Original array");
+
 for (int i = 0; i < arr.Length; ++i)
-{
-    Console.Write(arr[i] + " ");
-}
+    Console.Write(arr[i] + " "); 
 
 Utils.BubbleSort(arr);
 
 Console.WriteLine("\nSorted array");
+
 for (int i = 0; i < arr.Length; ++i)
-{
     Console.Write(arr[i] + " ");
-}
 ```
 
 ## Scoping

@@ -239,10 +239,10 @@ For example, the following code uses a `for` loop to print the numbers 0 to 9 to
 
 ```cs
 for (int i = 0; i < 10; i++) // Initialise i to 0, check if i is less than 10, increment i by 1
-{
     Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
-}
 ```
+
+**Note:** You can omit the curly braces if the loop body contains only one statement.
 
 You can also decrement the value of the loop variable, like the following example:
 
@@ -345,10 +345,12 @@ In **C#**, a **method** is a block of code that performs a specific task and can
 - Instance **methods**: These **methods** are associated with an instance of a **class** and can access the instance's data.
 
 ```cs
-public class MyClass {
+public class MyClass 
+{
     public int myValue = 0;
 
-    public void IncreaseValue(int amount) { // This is the method signature - name and parameter(s)
+    public void IncreaseValue(int amount) 
+    { // This is the method signature - name and parameter(s)
         myValue += amount; // or myValue = myValue + amount;
     }
 }
@@ -364,8 +366,10 @@ Console.WriteLine(myObj.myValue); // Outputs 5
 - Static **methods**: These **methods** are associated with a **class** and do not have access to an instance's data. They can only access static data.
 
 ```cs
-public class MyClass {
-    public static int Add(int a, int b) { 
+public class MyClass 
+{
+    public static int Add(int a, int b) 
+    { 
         return a + b;
     }
 }
@@ -377,10 +381,12 @@ Console.WriteLine(MyClass.Add(2, 3)); // Outputs 5
 - Constructors: These **methods** are used to create and initialise an instance of a **class**.
 
 ```cs
-public class MyClass {
+public class MyClass 
+{
     public int myValue;
 
-    public MyClass(int value) {
+    public MyClass(int value) 
+    {
         myValue = value;
     }
 }
@@ -390,12 +396,13 @@ MyClass myObj = new MyClass(5);
 Console.WriteLine(myObj.myValue); // Outputs 5
 ```
 
-- Destructors: These **methods** are used to clean up resources when an instance of a **class** is no longer needed. It is not recommended in **C#**.
+- Finalisers/Destructors: These **methods** are used to clean up resources when an instance of a **class** is no longer needed. It is not recommended in **C#**.
 
 ```cs
 public class MyClass {
-    ~MyClass() { // Note: The use of the tilde (~) character. This indicates that this 
-                 // is a destructor. You may see this in other programming languages, for example, C++
+    ~MyClass() // Note: The use of the tilde (~) character. This indicates that this 
+               // is a finaliser/destructor. You may see this in other programming languages, for example, C++
+    { 
 
         // Clean up resources
     }
@@ -406,7 +413,8 @@ public class MyClass {
 
 ```cs
 public static class MyClass {
-    public static int Multiply(this int num, int factor) {
+    public static int Multiply(this int num, int factor) 
+    {
         return num * factor;
     }
 }
@@ -415,6 +423,24 @@ public static class MyClass {
 int result = 5.Multiply(3);
 Console.WriteLine(result); // Outputs 15
 ```
+
+**Note:** If a method's block has one statement, you use the **expression-bodied** syntax. For example:
+
+```cs
+public class MyClass 
+{
+    public int myValue = 0;
+
+    public void IncreaseValue(int amount) => myValue += amount;
+}
+```
+
+**Resources:**
+- Methods - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods>
+- Constructors - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors>
+- Finalisers/Destructors - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/destructors>
+- Extension methods - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods>
+- Expression-bodied members - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members>
 
 ## Error Handling
 

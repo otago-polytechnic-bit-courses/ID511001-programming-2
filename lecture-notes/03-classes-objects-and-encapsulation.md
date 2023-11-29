@@ -134,7 +134,7 @@ public static class Utils
                 }
             }
 
-            // If no two elements were swapped by inner loop, then break
+            // If no two members were swapped by inner loop, then break
             if (!isSwapped) break;
         }
     }
@@ -158,19 +158,19 @@ for (int i = 0; i < arr.Length; ++i)
 
 ## Scoping
 
-There are several keywords that can be used to define the scope of **variables**, **methods**, and other elements of a **class** or **struct**. The most commonly used scope keywords are:
+There are several keywords that can be used to define the scope of **variables**, **methods**, and other members of a **class** or **struct**. The most commonly used scope keywords are:
 
-- `public`: Elements defined as public can be accessed from anywhere within the program, both inside and outside the **class** or **struct** in which they are defined.
+- `public`: Members defined as public can be accessed from anywhere within the program, both inside and outside the **class** or **struct** in which they are defined.
 
-- `private`: Elements defined as private can only be accessed within the **class** or **struct** in which they are defined.
+- `private`: Members defined as private can only be accessed within the **class** or **struct** in which they are defined.
 
-- `protected`: Elements defined as protected can be accessed within the **class** or **struct** in which they are defined and any derived **classes**.
+- `protected`: Members defined as protected can be accessed within the **class** or **struct** in which they are defined and any derived **classes**.
 
-- `internal`: Elements defined as internal can be accessed within the same assembly, i.e., `.exe` file in which they are defined, but not from other assemblies.
+- `internal`: Members defined as internal can be accessed within the same assembly, i.e., `.exe` file in which they are defined, but not from other assemblies.
 
-- `protected internal`: Elements defined as protected internal can be accessed within the same assembly in which they are defined and from derived **classes** in other assemblies.
+- `protected internal`: Members defined as protected internal can be accessed within the same assembly in which they are defined and from derived **classes** in other assemblies.
 
-- `static`: Elements defined as static are associated with the **class** or **struct** rather than with a specific instance of the **class** or **struct**. They can be accessed without creating an instance of the **class** or **struct**.
+- `static`: Members defined as static are associated with the **class** or **struct** rather than with a specific instance of the **class** or **struct**. They can be accessed without creating an instance of the **class** or **struct**.
 
 It is also worth noting that there are other keywords, such as `abstract`, `sealed`, `override` and `virtual`, are used in the context of **inheritance** and **polymorphism** to define the behaviour of the **classes** and **methods**.
 
@@ -180,7 +180,11 @@ It is important to choose the right scope keyword depending on the intended use 
 
 Encapsulation is the process of hiding the implementation details of a class from the outside world and exposing only the necessary information and functionality through a public interface. Encapsulation is one of the fundamental principles of object-oriented programming, and it is used to promote the principles of abstraction, modularity, and information hiding.
 
-Encapsulation is achieved through access modifiers, such as `public`, `private`, and `protected`, which control the visibility and accessibility of class members (fields and methods).
+What is a real-world example?
+
+A good example of encapsulation is a bank account. A bank account has a balance, which is a private field that can only be accessed by the bank itself. The bank provides a public interface for accessing the balance, such as a website or mobile app, which allows customers to view their balance and make transactions. The bank also provides a public interface for making deposits and withdrawals, which allows customers to add or remove money from their account.
+
+You will see below that encapsulation is achieved through access modifiers, such as `public`, `private`, and `protected`, which control the visibility and accessibility of class members (fields and methods).
 
 For example, a class can have a private field that holds some important data and a public property that allows the data to be accessed, like this:
 
@@ -188,6 +192,7 @@ For example, a class can have a private field that holds some important data and
 public class BankAccount
 {
     private decimal balance;
+
     public decimal Balance { get => balance; set => balance = value; }
 }
 ```
@@ -196,9 +201,48 @@ In this example, the `balance` field is defined as private, meaning it can only 
 
 Encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change how the `balance` field is stored, without affecting the code that accesses it through the `Balance` property.
 
+We can extend the `Balance` property to include some validation logic, like this:
+
+```cs
+public class BankAccount
+{
+    private decimal balance;
+
+    public decimal Balance
+    {
+        get => balance;
+        set
+        {
+            if (value < 0)
+                throw new Exception("Balance cannot be negative");
+            balance = value;
+        }
+    }
+}
+```
+
+So how do we use properties? Let us take a look at the following example:
+
+```cs
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        BankAccount accountOne = new BankAccount();
+        accountOne.Balance = 1000;
+        Console.WriteLine($"Balance: {accountOne.Balance}");
+
+        BankAccount accountTwo = new BankAccount();
+        accountTwo.Balance = -1000;
+        Console.WriteLine($"Balance: {accountTwo.Balance}"); // Throws an exception
+    }
+}
+```
+
+
 ## Class Diagram
 
-A class diagram is a type of UML diagram that shows the structure of a class and its relationships with other classes. It is used to visualise the design of a system and to communicate the design to other developers.
+A class diagram is a type of **UML** diagram that shows the structure of a class and its relationships with other classes. It is used to visualise the design of a system and to communicate the design to other developers.
 
 To create a class diagram in **Visual Studio**, do the following:
 

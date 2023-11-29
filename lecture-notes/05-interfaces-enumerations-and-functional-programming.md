@@ -1,4 +1,6 @@
-# 04: Enumerations and Functional Programming
+# 04: Interfaces, Enumerations and Functional Programming
+
+## Interfaces
 
 ## Enumerations
 
@@ -188,6 +190,6 @@ Please select a colour: purple
 Invalid input. Please try again.
 ```
 
-# Formative Assessment Submission
+## Submission
 
 Push your code to your **GitHub** repository.

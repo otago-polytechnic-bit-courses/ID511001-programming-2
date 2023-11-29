@@ -228,6 +228,6 @@ Enter your choice: Circle
 Invalid input. Please try again.
 ```
 
-# Formative Assessment Submission
+## Submission
 
-Push your code to your **GitHub** repository.
+Push your code to your **GitHub** repository..

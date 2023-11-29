@@ -193,31 +193,31 @@ For example, a class can have a `private` field that holds some important data a
 ```cs
 public class BankAccount
 {
-    private decimal balance;
+    private decimal _balance;
 
-    public decimal Balance { get => balance; set => balance = value; }
+    public decimal Balance { get => _balance; set => _balance = value; }
 }
 ```
 
-In this example, the `balance` field is defined as `private`, meaning it can only be accessed within the class. On the other hand, the `Balance` property is defined as `public`, meaning it can be accessed from outside the class. It allows the class to control how the `balance` field is modified and accessed and to ensure that the data is always in a consistent state.
+In this example, the `_balance` field is defined as `private`, meaning it can only be accessed within the class. On the other hand, the `Balance` property is defined as `public`, meaning it can be accessed from outside the class. It allows the class to control how the `_balance` field is modified and accessed and to ensure that the data is always in a consistent state.
 
-Encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change how the `balance` field is stored, without affecting the code that accesses it through the `Balance` property.
+Encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change how the `_balance` field is stored, without affecting the code that accesses it through the `Balance` property.
 
 We can extend the `Balance` property to include some validation logic, like this:
 
 ```cs
 public class BankAccount
 {
-    private decimal balance;
+    private decimal _balance;
 
     public decimal Balance
     {
-        get => balance;
+        get => _balance;
         set
         {
             if (value < 0)
                 throw new Exception("Balance cannot be negative");
-            balance = value;
+            _balance = value;
         }
     }
 }
@@ -289,22 +289,22 @@ Here is an `Utils` class example to get you started:
 ```cs
 public static class Utils
 {
-    private static List<Institution> institutions = new List<Institution>();
+    private static List<Institution> s_institutions = new List<Institution>();
 
     public static List<Institution> SeedInstitutions()
     {
-        institutions.Add(new Institution("Otago Polytechnic", "Otago", "New Zealand"));
+        s_institutions.Add(new Institution("Otago Polytechnic", "Otago", "New Zealand"));
 
         // Add two more institutions
         
-        return institutions;
+        return s_institutions;
     }
 }
 
 // Usage in Program.cs:
-private static List<Institution> institutions; // Declare this above the Main method
+private static List<Institution> s_institutions; // Declare this above the Main method
 
-institutions = Utils.SeedInstitutions(); // Declare this inside the Main method
+s_institutions = Utils.SeedInstitutions(); // Declare this inside the Main method
 ```
 
 For each `course`, display its information and which `department` and `institution` it belongs to.
@@ -317,17 +317,17 @@ You have been given the following **class** and **list** of `Product` **objects*
 // Create a new file called Product.cs. Copy and paste the following code into it
 public class Product
 {
-    private string name;
-    private double price;
+    private string _name;
+    private double _price;
 
     public Product(string name, double price)
     {
-        this.name = name;
-        this.price = price;
+        this._name = name;
+        this._price = price;
     }
 
-    public string Name { get => name; set => name = value; }
-    public double Price { get => price; set => price = value; }
+    public string Name { get => _name; set => _name = value; }
+    public double Price { get => _price; set => _price = value; }
 }
 
 // Declare the following code in Program.cs

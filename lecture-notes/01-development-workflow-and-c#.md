@@ -555,6 +555,17 @@ This example uses the `StreamWriter` **class** to write the strings "Hello," and
 
 These are just a few examples of how to perform file processing. Still, the `System.IO` namespace provides many other **classes** and **methods** for working with files and directories, such as the `Directory` **class** for working with directories, the `FileInfo` and `DirectoryInfo` **classes** for working with file and directory metadata, and the `FileSystemWatcher` **class** for monitoring changes to the file system.
 
+## Naming Conventions
+
+Try and follow the naming conventions below when naming your **classes**, **methods**, **variables**, etc.:
+
+- Use meaningful names that describe what the **class**, **method**, **variable**, etc. does
+- Use **PascalCase** for **classes** and **methods**.
+- Use **camelCase** for **variables** and **parameters**.
+- Use **ALL_CAPS** for **constants**.
+- Private fields should be prefixed with an underscore (`_`).
+- Static fields should be prefixed with a lowercase `s` (`s_`).
+
 # Formative Assessment
 
 Before you start, create a new **C# Console** application called **01-formative-assessment**.
@@ -615,6 +626,6 @@ Write some code that reads in a file called `computer-jokes.txt` containing a li
 
 Write some code that reads in a file called `countries.txt` containing a list of country names. The program should display only the names of the countries that start with the letter **'B'**.
 
-# Formative Assessment Submission
+## Submission
 
 Push your code to your **GitHub** repository.

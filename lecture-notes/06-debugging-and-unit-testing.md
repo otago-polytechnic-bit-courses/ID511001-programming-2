@@ -138,6 +138,6 @@ namespace Debugging
 
 Identify one syntax error and two logical errors in the code above. Also, explain how to fix these errors.
 
-# Formative Assessment Submission
+## Submission
 
 Push your code to your **GitHub** repository.

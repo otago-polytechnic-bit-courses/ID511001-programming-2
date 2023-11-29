@@ -2,6 +2,56 @@
 
 ## Interfaces
 
+An interface is a reference type that contains only abstract members. It defines a contract that a class must implement. An interface can contain properties and methods. An interface does not provide any implementation of the members it defines—it merely specifies the members that must be supplied by classes that implement the interface.
+
+An interface is defined using the `interface` keyword, followed by the name of the interface, and a list of members. Here is an example:
+
+```cs
+interface IShape
+{
+    double Area();
+    double Perimeter();
+}
+```
+
+The `IShape` interface defines two methods: `Area` and `Perimeter`. Any class that implements the `IShape` interface must implement these two methods.
+
+To implement an interface, a class must use the `:` operator, followed by the name of the interface. Here is an example:
+
+```cs
+public class Rectangle : IShape
+{
+    private double _width;
+    private double _height;
+
+    public Rectangle(double width, double height)
+    {
+        this._width = width;
+        this._height = height;
+    }
+
+    public double Area() => Width * Height;
+    public double Perimeter() => 2 * (Width + Height);
+}
+
+public class Circle : IShape
+{
+    private double _radius;
+
+    public Circle(double radius)
+    {
+        this._radius = radius;
+    }
+
+    public double Area() => Math.PI * Math.Pow(Radius, 2);
+    public double Perimeter() => 2 * Math.PI * Radius;
+}
+```
+
+**Note:** In terms of naming conventions, interfaces should be prefixed with the letter `I`.
+
+## Composition vs. Inheritance
+
 ## Enumerations
 
 An enumeration (or enum for short) is a value type that is used to define a set of named constants. Enumerations are useful when you have a fixed set of values that a variable can take on, such as the days of the week or the suits in a deck of cards.

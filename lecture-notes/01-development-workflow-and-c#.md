@@ -438,6 +438,30 @@ public class MyClass
 - Extension methods - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods>
 - Expression-bodied members - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members>
 
+## Casting
+
+Casting is the process of converting a value of one data type to another data type. There are two types of casting in **C#**:
+
+- Implicit casting: This is when a value of one data type is converted to another data type without the need for an explicit cast. This can be done when you are converting from a smaller data type to a larger data type. For example: 
+
+```cs
+int x = 5;
+double y = x; // Implicit cast from int to double
+// Output: 5
+```
+
+The compiler handles this automatically without the need for an explicit cast.
+
+- Explicit casting: This is when a value of one data type is converted to another data type using an explicit cast. The programmer must explicitly specify the type of conversion. **Note:** There is a risk of data loss when using explicit casting. For example:
+
+```cs
+double x = 5.5;
+int y = (int)x; // Explicit cast from double to int
+// Output: 5
+```
+
+You lost the decimal part of the number when you casted from `double` to `int`.
+
 ## Error Handling
 
 Error handling is anticipating and managing errors that may occur during the execution of a program. It is typically achieved through the use of **try-catch** blocks and **exception** objects. The `try` block contains code that may generate an **exception**, and the `catch` block contains code that will be executed if an **exception** is thrown. The **exception** object contains information about the error that occurred, such as the type of error and a description of the error. The `using` statement can also be used to ensure that resources are properly disposed of even in the event of an **exception**.

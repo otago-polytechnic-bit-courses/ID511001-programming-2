@@ -16,11 +16,11 @@ public struct Dog
     public int age;
 
     // Methods
-    public void Bark() => Console.WriteLine("Woof woof!");
+    public string Bark() => "Woof woof!";
 }
 ```
 
-Look familiar? 
+Look familiar?
 
 ## Class
 
@@ -36,7 +36,7 @@ public class Dog
     public int age;
 
     // Methods
-    public void Bark() => Console.WriteLine("Woof woof!");
+    public string Bark() => "Woof woof!";
 }
 ```
 
@@ -50,7 +50,7 @@ To create an **object** from this **class**, you can use the `new` keyword and t
 Dog myDog = new Dog(); // Create a new object of type Dog
 myDog.name = "Max"; // Set the name field to "Max"
 myDog.age = 3; // Set the age field to 3
-myDog.Bark(); // Call the Bark() method which outputs - "Woof woof!"
+MessageBox.Show(myDog.Bark()); // Call the Bark() method which outputs - "Woof woof!"
 ```
 
 This code creates a new **object** of type `Dog` named `myDog`, assigns values to its `name` and `age` **fields**, and then calls the `Bark()` **method** on the **object**.
@@ -72,7 +72,7 @@ public class Dog
     }
 
     // Methods
-    public void Bark() => Console.WriteLine("Woof woof!");
+    public string Bark() => "Woof woof!";
 }
 ```
 
@@ -80,7 +80,7 @@ In this example, the **class** `Dog` has a constructor that takes two parameters
 
 ```cs
 Dog myDog = new Dog("Max", 3);
-myDog.Bark(); // Output: "Woof woof!"
+MessageBox.Show(myDog.Bark()); // Output: "Woof woof!"
 ```
 
 This code creates a new **object** of type `Dog` named "myDog" and assigns values to its `name` and `age` **fields** via the constructor. Then it calls the `Bark()` **method** on the **object**, which causes it to bark.
@@ -104,25 +104,38 @@ public class Dog
     }
 
     // Methods
-    public void Bark() => Console.WriteLine("Woof woof!");
-    public void PrintInfo() => Console.WriteLine($"Name: {this.name}, Age: {this.age}");
+    public string Bark() => "Woof woof!";
+    public void PrintInfo() => $"Name: {this.name}, Age: {this.age}";
+
+    // Instead of PrintInfo(), you can also use ToString() method
+    public override string ToString() => $"Name: {this.name}, Age: {this.age}";
 }
+```
+
+## ToString()
+
+The `ToString()` method is a special **method** that is called when an **object** is converted to a string. It is often used to provide a string representation of an **object**. For example:
+
+```cs
+Dog myDog = new Dog("Max", 3);
+MessageBox.Show(myDog); // Output: "Name: Max, Age: 3"
 ```
 
 ## What is the difference between a struct and a class?
 
-| Feature                       | Struct                   | Class                     |
-|-------------------------------|--------------------------|---------------------------|
-| **Value Type vs Reference Type** | Value type              | Reference type            |
-| **Memory Allocation**           | Stack or inline         | Heap                      |
-| **Default Constructor**         | No parameterless constructor | Allows parameterless constructor |
-| **Inheritance**                | Cannot inherit          | Supports inheritance      |
-| **Nullability**                | Cannot be null (unless nullable) | Can be null               |
-| **Performance**                | Efficient for small, immutable types | Provides more flexibility, slight overhead |
-| **Usage Scenarios**            | Small, lightweight, single-value objects | Larger, complex objects with shared state |
-| **Copying**                    | Copy involves entire value | Copy involves reference   |
+| Feature                          | Struct                                   | Class                                      |
+| -------------------------------- | ---------------------------------------- | ------------------------------------------ |
+| **Value Type vs Reference Type** | Value type                               | Reference type                             |
+| **Memory Allocation**            | Stack or inline                          | Heap                                       |
+| **Default Constructor**          | No parameterless constructor             | Allows parameterless constructor           |
+| **Inheritance**                  | Cannot inherit                           | Supports inheritance                       |
+| **Nullability**                  | Cannot be null (unless nullable)         | Can be null                                |
+| **Performance**                  | Efficient for small, immutable types     | Provides more flexibility, slight overhead |
+| **Usage Scenarios**              | Small, lightweight, single-value objects | Larger, complex objects with shared state  |
+| **Copying**                      | Copy involves entire value               | Copy involves reference                    |
 
 **Glossary:**
+
 - **Value type**: A type whose value is copied when it is assigned to a variable or passed as a parameter. Examples include `int`, `double`, `bool`, `char`, `struct`, and `enum`.
 - **Reference type**: A type whose value is passed by reference. Examples include `string`, `class`, `interface`, `delegate`, and `object`.
 - **Stack**: A region of memory that is used to store local variables and parameters.
@@ -168,17 +181,11 @@ public static class Utils
 // Usage in Program.cs:
 int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
 
-Console.WriteLine("Original array");
-
-for (int i = 0; i < arr.Length; ++i)
-    Console.Write(arr[i] + " "); 
+MessageBox.Show($"Original array: {string.Join(", ", arr)}");
 
 Utils.BubbleSort(arr);
 
-Console.WriteLine("\nSorted array");
-
-for (int i = 0; i < arr.Length; ++i)
-    Console.Write(arr[i] + " ");
+MessageBox.Show($"Sorted array: {string.Join(", ", arr)}");
 ```
 
 ## Scoping
@@ -249,21 +256,14 @@ public class BankAccount
 So how do we use properties? Let us take a look at the following example:
 
 ```cs
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        BankAccount accountOne = new BankAccount();
-        accountOne.Balance = 1000;
-        Console.WriteLine($"Balance: {accountOne.Balance}");
+BankAccount accountOne = new BankAccount();
+accountOne.Balance = 1000;
+MessageBox.Show($"Balance: {accountOne.Balance}");
 
-        BankAccount accountTwo = new BankAccount();
-        accountTwo.Balance = -1000;
-        Console.WriteLine($"Balance: {accountTwo.Balance}"); // Throws an exception
-    }
-}
+BankAccount accountTwo = new BankAccount();
+accountTwo.Balance = -1000;
+MessageBox.Show($"Balance: {accountTwo.Balance}"); // Throws an exception
 ```
-
 
 ## Class Diagram
 
@@ -293,13 +293,13 @@ Choose an object in the classroom environment or even in the outside environment
 
 ## Task 2:
 
-Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `public` **properties** for `Make`, `Model`, and `Year`. Include a **constructor** that sets the **make**, **model**, and **year** when the **object** is created. Create three `Car` **objects** and display their `Make`, `Model`, and `Year` **properties**. 
+Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `public` **properties** for `Make`, `Model`, and `Year`. Include a **constructor** that sets the **make**, **model**, and **year** when the **object** is created. Create three `Car` **objects** and display their `Make`, `Model`, and `Year` **properties**.
 
 ## Task 3:
 
 Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` **properties** for `Name`, `Age`, and `Salary`. Include a **constructor** that sets the **name**, **age**, and **salary** when the **object** is created. Create three `Employee` **objects** and display their `Name`, `Age`, and `Salary` **properties**.
 
-## Task 4: 
+## Task 4:
 
 In this task, you will create four classes that communicate with each other. The first class is called `Institution` with `private` fields for `name`, `region` and `country`. The second class is called `Department` with `private` fields for `institution` and `name`. The third class is called `Course` with `private` fields for `department` and `code`, `name`, `description`, `credits` and `fees`.
 
@@ -319,7 +319,7 @@ public static class Utils
         s_institutions.Add(new Institution("Otago Polytechnic", "Otago", "New Zealand"));
 
         // Add two more institutions
-        
+
         return s_institutions;
     }
 }
@@ -368,7 +368,7 @@ products = new List<Product>() // Declare this inside the Main method
 
 Write a **LINQ** query that displays the average price of all products in the **list** of `Product`.
 
-## Task 6: 
+## Task 6:
 
 Create a program that reads data from a text file and creates five `Dog` **objects**.
 

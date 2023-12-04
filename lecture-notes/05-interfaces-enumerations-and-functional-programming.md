@@ -1,4 +1,4 @@
-# 04: Interfaces, Enumerations and Functional Programming
+# 05: Interfaces, Enumerations and Functional Programming
 
 ## Interfaces
 
@@ -52,6 +52,8 @@ public class Circle : IShape
 
 ## Composition vs. Inheritance
 
+You will hear about two different ways of reusing code: composition and inheritance. As you know, inheritance is when a class inherits from another class. Composition is when a class contains an instance of another class. Inheritance is an "is-a" relationship, while composition is a "has-a" relationship.
+
 ## Enumerations
 
 An enumeration (or enum for short) is a value type that is used to define a set of named constants. Enumerations are useful when you have a fixed set of values that a variable can take on, such as the days of the week or the suits in a deck of cards.
@@ -82,11 +84,36 @@ if (today == Days.Friday)
 }
 else
 {
-    Console.WriteLine("It's not Friday.");
+    Console.WriteLine("It's not Friday!");
 }
 ```
 
-## 
+What about parsing a string to an enumeration value? You can use the `Enum.Parse` method to parse a string to an enumeration value. For example:
+
+```cs
+Days today = (Days)Enum.Parse(typeof(Days), "Monday");
+
+// or
+
+Days today;
+
+Enum.TryParse("Monday", out today);
+
+if (today == Days.Friday)
+{
+    Console.WriteLine("It's Friday!");
+}
+else
+{
+    Console.WriteLine("It's not Friday!");
+}
+```
+
+What is the difference between `Enum.Parse` and `Enum.TryParse`? `Enum.Parse` will throw an exception if the string cannot be parsed to an enumeration value. `Enum.TryParse` will return a boolean value indicating whether the string can be parsed to an enumeration value. If it can be parsed, the out parameter will contain the parsed value. If it cannot be parsed, the out parameter will contain the default value of the enumeration.
+
+What is the `out` keyword? The `out` keyword is used to pass a parameter by reference. It is similar to the `ref` keyword, except that the parameter does not have to be initialised before it is passed to the method. The method is responsible for initialising the parameter before it returns.
+
+##
 
 # Functional Programming
 
@@ -214,11 +241,11 @@ In this task, you will create a console program that prompts the user to select 
 Here are steps you should consider:
 
 1. Declare an `enum` called `Colour` with the following values: `Red`, `Green`, `Blue`, and `Yellow`.
-3. Display all the available colours to the user before prompting them to select a colour.
-4. Prompts the user to select a colour from the list of colors.
-5. Parse the user's input and convert it into a `Colour` enum value. **Hint:** Use `Enum.TryParse`.
-6. Use a `switch` statement to set the text colour based on the user's input, and output a message to the console based on the user's input. For example, if the user selects Red, the program should set the console text colour to red and output "You selected red".
-7. Add error handling to the program to handle invalid input. If the user enters an invalid colour, the program should output "Invalid input. Please try again." and prompt the user to select a valid colour.
+2. Display all the available colours to the user before prompting them to select a colour.
+3. Prompts the user to select a colour from the list of colors.
+4. Parse the user's input and convert it into a `Colour` enum value. **Hint:** Use `Enum.TryParse`.
+5. Use a `switch` statement to set the text colour based on the user's input, and output a message to the console based on the user's input. For example, if the user selects Red, the program should set the console text colour to red and output "You selected red".
+6. Add error handling to the program to handle invalid input. If the user enters an invalid colour, the program should output "Invalid input. Please try again." and prompt the user to select a valid colour.
 
 ```cs
 // Expected output:
@@ -229,7 +256,7 @@ Available colours:
 * Blue
 * Yellow
 Please select a colour: green
-You selected green 
+You selected green
 
 Available colours:
 * Red

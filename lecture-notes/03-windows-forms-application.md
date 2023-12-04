@@ -1,4 +1,4 @@
-# 07: Windows Forms App
+# 03: Windows Forms Application
 
 The **Microsoft Visual Studio IDE** (integrated development environment) is made up of several tools that are used to build **GUI** (Graphical User Interface) applications – those with windows, buttons menus, graphics, etc., by dragging and dropping these pre-built controls onto an existing form as we want it to appear. We build applications that will respond to events – when the user clicks on a button, when a form is closed, etc. **Visual Studio** fills in all the necessary code for how to make these events happen when it compiles our program. We concentrate on writing the code to describe what should happen when the user clicks on a button, selects a menu-item, closes a window, and so on. We don't have to worry about all the complex operating system programming underneath – **Visual Studio** takes care of that for us.
 
@@ -9,15 +9,15 @@ The **Microsoft Visual Studio IDE** (integrated development environment) is made
 3. Select **Windows Forms App (.NET Framework)**
 4. Click **Next**
 5. Fill in the following fields:
-   - **Project name:** `FirstProgram`
+   - **Project name:** `03FormativeAssessment`
    - **Location:** `<path-to-repository>`
-   - **Solution name:** `FirstProgram`
+   - **Solution name:** `03FormativeAssessment`
 
-Ensure that these four windows are visible on your screen. Note they are all dockable.
+Ensure that these four panes are visible on your screen. Note they are all moveable.
 
 ![](../resources/img/07/01-image.png)
 
-The main part is named `Form1.cs (Design)`. This is where, at design time, you create the **GUI**; it is used as a drawing canvas to resize the main form, add the buttons, labels etc that you will use in your application. This will be the main window that the user sees when your application is run. Your application can contain multiple windows (or **Forms**) that are displayed in response to user input, data values, etc. To start with, we will build projects that have only one Form.
+The main part is named `Form1.cs (Design)`. This is where, at design time, you create the **GUI**; it is used as a drawing canvas to resize the main form, add the buttons, labels etc that you will use in your application. This will be the main window that the user sees when your application is run. Your application can contain multiple windows (or **Forms**) that are displayed in response to user input, data values, etc. To start with, we will build projects that have only one `Form`.
 
 ## Adding Controls
 
@@ -94,7 +94,7 @@ label1.Text = "My text has changed";
 
 Run your program and click on the `Button` to see the `Label` change.
 
-3. Add a `Textbox` to your `Form`. Set it `Text` property to 0. Create a variable `nClicks`, The `Click` handler for a `Button` is shown below. What would be the effect of clicking on this `Button` ten times?
+3. Add a `Textbox` to your `Form`. Set it `Text` property to 0. Create a variable `nClicks`, The `Click` handler for a `Button` is shown below. What would be the effect of clicking on this `Button` ten times? 
 
 ```cs
 private void button1_Click(object sender, EventArgs e)
@@ -105,11 +105,15 @@ private void button1_Click(object sender, EventArgs e)
 }
 ```
 
-**Note:** The `Convert.ToInt16(n)` function translates the parameter value n into its 16 bit integer representation. Thus `Convert.ToInt16(5)` converts the string "5" into the integer value 5.
+**Notes:**
+- You can not write the method definition for the `button1_Click` handler yourself. You must let **Visual Studio** do it for you.
+- The `Convert.ToInt16(n)` function translates the parameter value n into its 16 bit integer representation. Thus `Convert.ToInt16(5)` converts the string "5" into the integer value 5.
 
-Similarly the `Convert.ToString()` method converts from integer to the equivalent string representation.
+Similarly the `Convert.ToString()` method converts from integer to the equivalent string representation. The `Convert.ToString` method could also be replaced by the `.ToString()` method. For example,
 
-**Note:** The `Convert.ToString` method could also be replaced by the `.ToString()` method.
+```cs
+textBox1.Text = nClicks.ToString();
+```
 
 4. Add a `TextBox` to your `Form`. As we saw earlier, the contents of a `TextBox` can be changed while the program is running. Modify your `button1_Click` handler, so that when the `button1` is clicked, the caption of the `label1` changes to whatever is in `textBox1`. Run the program and change the `Label` several times by modifying what is in `textBox1`, then clicking the `button1`.
 
@@ -145,7 +149,7 @@ If you place a number of radio buttons directly on the `Form`, they are automati
 
 # Formative Assessment
 
-Before you start, create a new **C# Console** application called **07-formative-assessment**.
+Before you start, create a new **Windows Forms Application** called **03-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -165,7 +169,7 @@ Write a program that allows the user to enter two numbers, select an arithmetic 
 
 ![](../resources/img/07/06-image.png)
 
-1.	Start a new application.
+1.	Create a new application.
 2.	Set up the `Form`, selecting an appropriate colour, font and style. Set the form's `Text` property to **Calculator**.
 3.	Add the `Buttons`, providing the values for each `Text` property. 
 4.	The line between the top two `TextBoxes` and the third `TextBox` is a `Panel`. Decide how you want your interface to look and use the appropriate control.
@@ -177,11 +181,11 @@ Write a program that allows the user to enter two numbers, select an arithmetic 
 
 ## Task 3:
 
-Write an application for use in a Pizza Parlour. The user enters his order, and the application displays the order and computes the price. Your solution could looks like this (images are optional):
+Write an application for use in a Pizza Parlour. The user enters his order, and the application displays the order and computes the price. Your solution could look like this (images are optional):
 
 ![](../resources/img/07/07-image.png)
 
-1. Start a new application.
+1. Create a new application.
 2.	Your program should allow at least two sizes of pizza, with different prices. Users must select a size. If a user tries to order without selecting a size, the user should receive polite feedback asking him to please specify the size.
 3.	You should provide at least five different extra toppings, each with associated prices. Users can select any combination of extra toppings, or none at all.
 4.	You should correctly display the order in a `ListBox` and compute the total and display it in a `TextBox`.

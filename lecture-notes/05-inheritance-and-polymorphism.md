@@ -20,22 +20,24 @@ public class Animal
         this.age = age;
     }
 
-    // virtual - derived classes can override the base class implementation
+    // Virtual - derived classes can override the base class implementation
     public virtual void Eat() { /*...*/ }
     public virtual void Sleep() { /*...*/ }
 
     public virtual string Name { get => name; set => name = value; }
-    public int Age { get => age; set => age = value; }
+    public int Age { get => age; set => age = value; } 
 }
+```
 
+```cs
 public class Dog : Animal
 {
     // Adding a new field
-    private string colour;
+    private string _colour;
 
     public Dog(string name, int age, string colour) : base(name, age) // The base class's constructor
     {
-        this.colour = colour;
+        _colour = colour;
     }
 
     // Overriding the base class's implementation
@@ -45,16 +47,29 @@ public class Dog : Animal
     public void Bark() { /*...*/ }
 
     public override string Name { get => name; set => name = value; }
-    public string Colour { get => colour; set => colour = value; }
+    public string Colour { get => _colour; set => _colour = value; }
 }
 ```
 
-In this example, the `Animal` class is the base class. It has two fields, `name` and `age`, two properties, `Name` and `Age` and two virtual methods `Eat()` and `Sleep()`. 
+In this example, the `Animal` class is the base class. It has two fields, `name` and `age`, two properties, `Name` and `Age` and two virtual methods `Eat()` and `Sleep()`.
 
 The `Dog` class is the derived class. It inherits the base class's fields and methods and has a new method, `Bark()`. A derived class can also override the base class's methods and properties
- using the `override` keyword.
+using the `override` keyword.
 
-Inheritance is a powerful concept that allows you to reuse existing code and to model relationships between classes and objects naturally and intuitively. It also enables you to create a hierarchical structure of classes that allows you to define common behaviour and characteristics in a base class and then extend or specialize that behaviour in derived classes.
+Let us look at how to use a base and derived class in C#:
+
+```cs
+public Form1() 
+{
+    InitializeComponent();
+
+    Animal animal = new("Bob", 10); // Base class
+    MessageBox.Show(animal.Name); // Base class's property
+
+    Dog dog = new("Fido", 5, "Brown"); // Derived class
+    MessageBox.Show(dog.Colour); // Base class's property
+}
+```
 
 ## Polymorphism
 
@@ -70,15 +85,8 @@ Here is an example of **polymorphism** using **method overloading**:
 ```cs
 public class Calculator
 {
-    public int Add(int x, int y)
-    {
-        return x + y;
-    }
-
-    public double Add(double x, double y)
-    {
-        return x + y;
-    }
+    public int Add(int x, int y) => x + y;
+    public double Add(double x, double y) => x + y;
 }
 ```
 
@@ -89,53 +97,55 @@ Here is an example of **polymorphism** using **virtual** method and **method ove
 ```cs
 public class Shape
 {
-    public virtual void Draw()
-    {
-        Console.WriteLine("Drawing a shape");
-    }
-}
-
-public class Rectangle : Shape
-{
-    public override void Draw()
-    {
-        Console.WriteLine("Drawing a rectangle");
-    }
-}
-
-public class Circle : Shape
-{
-    public override void Draw()
-    {
-        Console.WriteLine("Drawing a circle");
-    }
+    public virtual string Draw() => "Drawing a shape";
 }
 ```
 
-In this example, the `Shape` class is the base class, and it has a virtual method `Draw()`, that prints "Drawing a shape" to the console. The `Rectangle` class and `Circle` class are derived classes. They both inherit the `Draw()` method from the base class and then override it to provide their implementation. The `Rectangle` class will print "Drawing a rectangle".
+```cs
+public class Rectangle : Shape
+{
+    public override string Draw() => "Drawing a rectangle";
+}
+```
+
+```cs
+public class Circle : Shape
+{
+    // Notice that the Draw() method is not overridden in the Circle class
+}
+```
+
+In this example, the `Shape` class is the base class, and it has a `virtual` method `Draw()`, that outputs "Drawing a shape". The `Rectangle` class and `Circle` class are derived classes. They both inherit the `Draw()` method from the base class and then override it to provide their implementation. The `Rectangle` class will output "Drawing a rectangle".
 
 Here is an example of **polymorphism** using **abstract** classes and **method overriding**:
 
 ```cs
 public abstract class Shape
 {
-    public abstract void Draw();
+    public abstract string Draw();
 }
+```
 
+```cs
 public class Rectangle : Shape
 {
-    public override void Draw()
-    {
-        Console.WriteLine("Drawing a rectangle");
-    }
+    public override string Draw() => "Drawing a rectangle";
 }
+```
 
+```cs
 public class Circle : Shape
 {
-    public override void Draw()
-    {
-        Console.WriteLine("Drawing a circle");
-    }
+    public override string Draw() => "Drawing a circle";
+}
+```
+
+You can declare `virtual` and `abstract` methods in the same class. However, you cannot declare a method as both `virtual` and `abstract`. The following code will not compile:
+
+```cs
+public abstract class Shape
+{
+    public virtual abstract string Draw();
 }
 ```
 
@@ -145,7 +155,7 @@ The `virtual` method in the original code provides a default implementation for 
 
 # Formative Assessment
 
-Before you start, create a new **C# Console** application called **05-formative-assessment**.
+Before you start, create a new **Windows Forms Application** called **05-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -155,31 +165,31 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-Create a base class called `Vehicle` with the `protected` fields - `brand`, `model`, and `year`. Create a constructor method that accepts all fields. Create a `virtual` method called `PrintDetails` which prints the `Vehicle`'s `brand`, `model`, and `year` using `Console.WriteLine`. 
+Create a base class called `Vehicle` with the `protected` fields - `brand`, `model`, and `year`. Create a constructor method that accepts all fields. Create a `virtual` method called `DisplayDetails` which displays the `Vehicle`'s `brand`, `model`, and `year`.
 
-Create a class called `Car` which derives from `Vehicle` with the private field - `numOfDoors`. Create a constructor that accepts all base class's fields, i.e., `brand`, `model`, and `year` and its own, i.e., `numOfDoors`. Create an `override` method for `PrintDetails` which prints the `Car`s `numOfDoors` using `Console.WriteLine`. 
+Create a class called `Car` which derives from `Vehicle` with the private field - `numOfDoors`. Create a constructor that accepts all base class's fields, i.e., `brand`, `model`, and `year` and its own, i.e., `numOfDoors`. Create an `override` method for `DisplayDetails` which displays the `Car`s `numOfDoors`.
 
-In the `main` method, create two `Car` objects and call the `PrintDetails` method for each.
+In the `Form1()` constructor, create two `Car` objects and call the `DisplayDetails` method for each.
 
 ## Task 2:
 
-Extend the `Animal` and `Dog` example to include a derived class called `Cat`. 
+Extend the `Animal` and `Dog` example to include a derived class called `Cat`.
 
-In the `main` method, create a `Dog` and `Cat` object and call the `Eat` and `Sleep` methods.
+In the `Form1()` constructor, create a `Dog` and `Cat` object and call the `Eat` and `Sleep` methods.
 
 ## Task 3:
 
-Create a base class called `Person` with the `protected` fields - `name` and `age`. Create a constructor method that accepts all fields. Create a `virtual` method called `PrintDetails` which prints the `Person`'s `name` and `age` using `Console.WriteLine`. 
+Create a base class called `Person` with the `protected` fields - `name` and `age`. Create a constructor method that accepts all fields. Create a `virtual` method called `DisplayDetails` which outputs the `Person`'s `name` and `age`.
 
-Create a class called `Student` which derives from `Person` with the private field - `grade`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `grade`. Create an `override` method for `PrintDetails` which prints the `Student`'s `name`, `age` and `grade` using `Console.WriteLine`. 
+Create a class called `Student` which derives from `Person` with the private field - `grade`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `grade`. Create an `override` method for `DisplayDetails` which outputs the `Student`'s `name`, `age` and `grade`.
 
-Create a class called `Lecturer` which derives from `Person` with the private field - `subject`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `subject`. Create an `override` method for `PrintDetails` which prints the `Lecturer`'s `name`, `age` and `subject` using `Console.WriteLine`. 
+Create a class called `Lecturer` which derives from `Person` with the private field - `subject`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `subject`. Create an `override` method for `DisplayDetails` which outputs the `Lecturer`'s `name`, `age` and `subject`.
 
-In the `main` method, create a `Person`, `Student` and `Lecturer` object and call the `PrintDetails` method for each.
+In the `Form1()` constructor, create a `Person`, `Student` and `Lecturer` object and call the `DisplayDetails` method for each.
 
 ## Task 4:
 
-In this task, you will create a console program that prompts the user to enter a shape and return the area of that shape.
+In this task, you will create an application that prompts the user to select a shape and return the area of that shape.
 
 Here are steps you should consider:
 
@@ -190,44 +200,9 @@ Here are steps you should consider:
 5. Parse the user's input and create an instance of the selected shape.
 6. Prompt the user to enter the required dimensions of the selected shape. For example, if the user selects a rectangle, the program should prompt the user to enter the length and width of the rectangle.
 7. Calculate the area of the selected shape using polymorphism by calling the `CalculateArea()` method on the shape object created in step 5.
-8. Output the area of the selected shape to the console.
+8. Output the area of the selected shape.
 9. Add error handling to the program to handle invalid input. If the user enters invalid input, the program should output "Invalid input. Please try again." and prompt the user to enter valid input.
 
-```cs
-// Expected output:
+## Submission
 
-Please select a shape:
-1. Rectangle
-2. Circle
-
-Enter your choice: 1
-You selected Rectangle. Please enter the length: 5
-Please enter the width: 3
-The area of the rectangle is 15.
-
-Please select a shape:
-1. Rectangle
-2. Circle
-
-Enter your choice: 2
-You selected Circle. Please enter the radius: 4
-The area of the circle is 50.27.
-
-Please select a shape:
-1. Rectangle
-2. Circle
-
-Enter your choice: 3
-Invalid input. Please try again.
-
-Please select a shape:
-1. Rectangle
-2. Circle
-
-Enter your choice: Circle
-Invalid input. Please try again.
-```
-
-# Formative Assessment Submission
-
-Push your code to your **GitHub** repository.
+Push your code to your **GitHub** repository..

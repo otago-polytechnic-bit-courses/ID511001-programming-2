@@ -1,4 +1,4 @@
-# 04: Inheritance and Polymorphism
+# 05: Inheritance and Polymorphism
 
 ## Inheritance
 
@@ -20,14 +20,16 @@ public class Animal
         this.age = age;
     }
 
-    // virtual - derived classes can override the base class implementation
+    // Virtual - derived classes can override the base class implementation
     public virtual void Eat() { /*...*/ }
     public virtual void Sleep() { /*...*/ }
 
     public virtual string Name { get => name; set => name = value; }
     public int Age { get => age; set => age = value; }
 }
+```
 
+```cs
 public class Dog : Animal
 {
     // Adding a new field
@@ -54,7 +56,20 @@ In this example, the `Animal` class is the base class. It has two fields, `name`
 The `Dog` class is the derived class. It inherits the base class's fields and methods and has a new method, `Bark()`. A derived class can also override the base class's methods and properties
 using the `override` keyword.
 
-Inheritance is a powerful concept that allows you to reuse existing code and to model relationships between classes and objects naturally and intuitively. It also enables you to create a hierarchical structure of classes that allows you to define common behaviour and characteristics in a base class and then extend or specialize that behaviour in derived classes.
+Let us look at how to use a base and derived class in C#:
+
+```cs
+public Form1() 
+{
+    InitializeComponent();
+
+    Animal animal = new("Bob", 10); // Base class
+    MessageBox.Show(animal.Name); // Base class's property
+
+    Dog dog = new("Fido", 5, "Brown"); // Derived class
+    MessageBox.Show(dog.Colour); // Base class's property
+}
+```
 
 ## Polymorphism
 
@@ -82,38 +97,54 @@ Here is an example of **polymorphism** using **virtual** method and **method ove
 ```cs
 public class Shape
 {
-    public virtual void Draw() => Console.WriteLine("Drawing a shape");
-}
-
-public class Rectangle : Shape
-{
-    public override void Draw() => Console.WriteLine("Drawing a rectangle");
-}
-
-public class Circle : Shape
-{
-    public override void Draw() => Console.WriteLine("Drawing a circle");
+    public virtual string Draw() => "Drawing a shape";
 }
 ```
 
-In this example, the `Shape` class is the base class, and it has a virtual method `Draw()`, that prints "Drawing a shape" to the console. The `Rectangle` class and `Circle` class are derived classes. They both inherit the `Draw()` method from the base class and then override it to provide their implementation. The `Rectangle` class will print "Drawing a rectangle".
+```cs
+public class Rectangle : Shape
+{
+    public override string Draw() => "Drawing a rectangle";
+}
+```
+
+```cs
+public class Circle : Shape
+{
+    // Notice that the Draw() method is not overridden in the Circle class
+}
+```
+
+In this example, the `Shape` class is the base class, and it has a `virtual` method `Draw()`, that prints "Drawing a shape" to the console. The `Rectangle` class and `Circle` class are derived classes. They both inherit the `Draw()` method from the base class and then override it to provide their implementation. The `Rectangle` class will print "Drawing a rectangle".
 
 Here is an example of **polymorphism** using **abstract** classes and **method overriding**:
 
 ```cs
 public abstract class Shape
 {
-    public abstract void Draw();
+    public abstract string Draw();
 }
+```
 
+```cs
 public class Rectangle : Shape
 {
-    public override void Draw() => Console.WriteLine("Drawing a rectangle");
+    public override string Draw() => "Drawing a rectangle";
 }
+```
 
+```cs
 public class Circle : Shape
 {
-    public override void Draw() => Console.WriteLine("Drawing a circle");
+    public override string Draw() => "Drawing a circle";
+}
+```
+You can declare `virtual` and `abstract` methods in the same class. However, you cannot declare a method as both `virtual` and `abstract`. The following code will not compile:
+
+```cs
+public abstract class Shape
+{
+    public virtual abstract string Draw();
 }
 ```
 

@@ -1,4 +1,4 @@
-# 06: Interfaces, Enumerations and Functional Programming
+# 06: Interfaces and Enumerations
 
 ## Interfaces
 

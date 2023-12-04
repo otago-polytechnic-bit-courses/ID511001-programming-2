@@ -115,8 +115,6 @@ What is the difference between `Enum.Parse` and `Enum.TryParse`? `Enum.Parse` wi
 
 What is the `out` keyword? The `out` keyword is used to pass a parameter by reference. It is similar to the `ref` keyword, except that the parameter does not have to be initialised before it is passed to the method. The method is responsible for initialising the parameter before it returns.
 
-# Functional Programming
-
 # Formative Assessment
 
 Before you start, create a new **Windows Forms Application** called **06-formative-assessment**.

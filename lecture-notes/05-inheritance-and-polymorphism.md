@@ -25,7 +25,7 @@ public class Animal
     public virtual void Sleep() { /*...*/ }
 
     public virtual string Name { get => name; set => name = value; }
-    public int Age { get => age; set => age = value; }
+    public int Age { get => age; set => age = value; } 
 }
 ```
 
@@ -115,7 +115,7 @@ public class Circle : Shape
 }
 ```
 
-In this example, the `Shape` class is the base class, and it has a `virtual` method `Draw()`, that prints "Drawing a shape" to the console. The `Rectangle` class and `Circle` class are derived classes. They both inherit the `Draw()` method from the base class and then override it to provide their implementation. The `Rectangle` class will print "Drawing a rectangle".
+In this example, the `Shape` class is the base class, and it has a `virtual` method `Draw()`, that outputs "Drawing a shape" to the console. The `Rectangle` class and `Circle` class are derived classes. They both inherit the `Draw()` method from the base class and then override it to provide their implementation. The `Rectangle` class will print "Drawing a rectangle".
 
 Here is an example of **polymorphism** using **abstract** classes and **method overriding**:
 
@@ -139,6 +139,7 @@ public class Circle : Shape
     public override string Draw() => "Drawing a circle";
 }
 ```
+
 You can declare `virtual` and `abstract` methods in the same class. However, you cannot declare a method as both `virtual` and `abstract`. The following code will not compile:
 
 ```cs
@@ -164,31 +165,31 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-Create a base class called `Vehicle` with the `protected` fields - `brand`, `model`, and `year`. Create a constructor method that accepts all fields. Create a `virtual` method called `PrintDetails` which prints the `Vehicle`'s `brand`, `model`, and `year` using `Console.WriteLine`.
+Create a base class called `Vehicle` with the `protected` fields - `brand`, `model`, and `year`. Create a constructor method that accepts all fields. Create a `virtual` method called `DisplayDetails` which displays the `Vehicle`'s `brand`, `model`, and `year`.
 
-Create a class called `Car` which derives from `Vehicle` with the private field - `numOfDoors`. Create a constructor that accepts all base class's fields, i.e., `brand`, `model`, and `year` and its own, i.e., `numOfDoors`. Create an `override` method for `PrintDetails` which prints the `Car`s `numOfDoors` using `Console.WriteLine`.
+Create a class called `Car` which derives from `Vehicle` with the private field - `numOfDoors`. Create a constructor that accepts all base class's fields, i.e., `brand`, `model`, and `year` and its own, i.e., `numOfDoors`. Create an `override` method for `DisplayDetails` which displays the `Car`s `numOfDoors`.
 
-In the `main` method, create two `Car` objects and call the `PrintDetails` method for each.
+In the `Form1()` constructor, create two `Car` objects and call the `DisplayDetails` method for each.
 
 ## Task 2:
 
 Extend the `Animal` and `Dog` example to include a derived class called `Cat`.
 
-In the `main` method, create a `Dog` and `Cat` object and call the `Eat` and `Sleep` methods.
+In the `Form1()` constructor, create a `Dog` and `Cat` object and call the `Eat` and `Sleep` methods.
 
 ## Task 3:
 
-Create a base class called `Person` with the `protected` fields - `name` and `age`. Create a constructor method that accepts all fields. Create a `virtual` method called `PrintDetails` which prints the `Person`'s `name` and `age` using `Console.WriteLine`.
+Create a base class called `Person` with the `protected` fields - `name` and `age`. Create a constructor method that accepts all fields. Create a `virtual` method called `DisplayDetails` which outputs the `Person`'s `name` and `age`.
 
-Create a class called `Student` which derives from `Person` with the private field - `grade`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `grade`. Create an `override` method for `PrintDetails` which prints the `Student`'s `name`, `age` and `grade` using `Console.WriteLine`.
+Create a class called `Student` which derives from `Person` with the private field - `grade`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `grade`. Create an `override` method for `DisplayDetails` which outputs the `Student`'s `name`, `age` and `grade`.
 
-Create a class called `Lecturer` which derives from `Person` with the private field - `subject`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `subject`. Create an `override` method for `PrintDetails` which prints the `Lecturer`'s `name`, `age` and `subject` using `Console.WriteLine`.
+Create a class called `Lecturer` which derives from `Person` with the private field - `subject`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `subject`. Create an `override` method for `DisplayDetails` which outputs the `Lecturer`'s `name`, `age` and `subject`.
 
-In the `main` method, create a `Person`, `Student` and `Lecturer` object and call the `PrintDetails` method for each.
+In the `Form1()` constructor, create a `Person`, `Student` and `Lecturer` object and call the `DisplayDetails` method for each.
 
 ## Task 4:
 
-In this task, you will create a console program that prompts the user to enter a shape and return the area of that shape.
+In this task, you will create an application that prompts the user to select a shape and return the area of that shape.
 
 Here are steps you should consider:
 
@@ -199,43 +200,8 @@ Here are steps you should consider:
 5. Parse the user's input and create an instance of the selected shape.
 6. Prompt the user to enter the required dimensions of the selected shape. For example, if the user selects a rectangle, the program should prompt the user to enter the length and width of the rectangle.
 7. Calculate the area of the selected shape using polymorphism by calling the `CalculateArea()` method on the shape object created in step 5.
-8. Output the area of the selected shape to the console.
+8. Output the area of the selected shape.
 9. Add error handling to the program to handle invalid input. If the user enters invalid input, the program should output "Invalid input. Please try again." and prompt the user to enter valid input.
-
-```cs
-// Expected output:
-
-Please select a shape:
-1. Rectangle
-2. Circle
-
-Enter your choice: 1
-You selected Rectangle. Please enter the length: 5
-Please enter the width: 3
-The area of the rectangle is 15.
-
-Please select a shape:
-1. Rectangle
-2. Circle
-
-Enter your choice: 2
-You selected Circle. Please enter the radius: 4
-The area of the circle is 50.27.
-
-Please select a shape:
-1. Rectangle
-2. Circle
-
-Enter your choice: 3
-Invalid input. Please try again.
-
-Please select a shape:
-1. Rectangle
-2. Circle
-
-Enter your choice: Circle
-Invalid input. Please try again.
-```
 
 ## Submission
 

@@ -291,7 +291,7 @@ foreach (var item in collection)
 For example, the following code uses a foreach loop to print the items of an array to the console:
 
 ```cs
-int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 foreach (int i in numbers)
 {
     Console.WriteLine(i);

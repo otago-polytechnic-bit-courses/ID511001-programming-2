@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Exemplar
 {
-    internal class Shape
+    public abstract class Shape
     {
+        public abstract string Draw();
     }
 }

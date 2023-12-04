@@ -21,9 +21,9 @@ namespace Exemplar
 
         // Methods
         public string Bark() => "Woof woof!";
-        public string PrintInfo() => $"Name: {name}, Age: {age}";
+        public string DisplayInfo() => $"Name: {name}, Age: {age}";
 
-        // Instead of PrintInfo(), you can also use ToString() method
+        // Instead of DisplayInfo(), you can also use ToString() method
         public override string ToString() => $"Name: {name}, Age: {age}";
     }
 }

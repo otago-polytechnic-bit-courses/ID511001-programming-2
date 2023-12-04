@@ -13,7 +13,7 @@ namespace Exemplar
 
         public Dog(string name, int age, string colour) : base(name, age) // The base class's constructor
         {
-            this._colour = colour;
+            _colour = colour;
         }
 
         // Overriding the base class's implementation

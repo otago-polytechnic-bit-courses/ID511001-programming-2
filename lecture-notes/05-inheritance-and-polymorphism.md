@@ -37,7 +37,7 @@ public class Dog : Animal
 
     public Dog(string name, int age, string colour) : base(name, age) // The base class's constructor
     {
-        this._colour = colour;
+        _colour = colour;
     }
 
     // Overriding the base class's implementation
@@ -115,7 +115,7 @@ public class Circle : Shape
 }
 ```
 
-In this example, the `Shape` class is the base class, and it has a `virtual` method `Draw()`, that outputs "Drawing a shape" to the console. The `Rectangle` class and `Circle` class are derived classes. They both inherit the `Draw()` method from the base class and then override it to provide their implementation. The `Rectangle` class will print "Drawing a rectangle".
+In this example, the `Shape` class is the base class, and it has a `virtual` method `Draw()`, that outputs "Drawing a shape". The `Rectangle` class and `Circle` class are derived classes. They both inherit the `Draw()` method from the base class and then override it to provide their implementation. The `Rectangle` class will output "Drawing a rectangle".
 
 Here is an example of **polymorphism** using **abstract** classes and **method overriding**:
 
@@ -155,7 +155,7 @@ The `virtual` method in the original code provides a default implementation for 
 
 # Formative Assessment
 
-Before you start, create a new **C# Console** application called **05-formative-assessment**.
+Before you start, create a new **Windows Forms Application** called **05-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 

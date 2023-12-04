@@ -149,7 +149,7 @@ If you place a number of radio buttons directly on the `Form`, they are automati
 
 # Formative Assessment
 
-Before you start, create a new **C# Console** application called **07-formative-assessment**.
+Before you start, create a new **Windows Forms Application** called **03-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 

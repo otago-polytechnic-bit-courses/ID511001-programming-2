@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exemplar
 {
-    internal class Class1
+    public class Calculator
     {
+        public int Add(int x, int y) => x + y;
+        public double Add(double x, double y) => x + y;
     }
 }

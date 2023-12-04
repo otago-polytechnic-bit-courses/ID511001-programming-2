@@ -40,7 +40,7 @@ public class Dog
 }
 ```
 
-In this example, the **class** `Dog` has two **fields**, `name` and `age`, which represent the name and age of a dog, respectively. The **class** also has one **method**, `Bark()`, which causes the dog to bark by printing "Woof woof!" to the console.
+In this example, the **class** `Dog` has two **fields**, `name` and `age`, which represent the name and age of a dog, respectively. The **class** also has one **method**, `Bark()`, which causes the dog to bark by display "Woof woof!".
 
 ## Objects
 
@@ -115,9 +115,9 @@ public class Dog
 
     // Methods
     public string Bark() => "Woof woof!";
-    public string PrintInfo() => $"Name: {name}, Age: {age}";
+    public string DisplayInfo() => $"Name: {name}, Age: {age}";
 
-    // Instead of PrintInfo(), you can also use ToString() method
+    // Instead of DisplayInfo(), you can also use ToString() method
     public override string ToString() => $"Name: {name}, Age: {age}";
 }
 ```
@@ -329,7 +329,7 @@ To create a class diagram in **Visual Studio**, do the following:
 
 # Formative Assessment
 
-Before you start, create a new **C# Console** application called **04-formative-assessment**.
+Before you start, create a new **Windows Forms Application** called **04-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -434,7 +434,7 @@ Augie,6
 Dixie,9
 ```
 
-Use the `StreamReader` or `File` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to a **list**. Print out the `name` and `age` for each item in the **list**. Add error handling to ensure that the program gracefully handles any issues with reading the file or parsing the data.
+Use the `StreamReader` or `File` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to a **list**. Display the `name` and `age` for each item in the **list**. Add error handling to ensure that the program gracefully handles any issues with reading the file or parsing the data.
 
 ## Task 7:
 

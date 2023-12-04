@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exemplar
 {
-    public class Rectangle : Shape
+    internal interface Rectangle
     {
-        public override string Draw() => "Drawing a rectangle";
     }
 }

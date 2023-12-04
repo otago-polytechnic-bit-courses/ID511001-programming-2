@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Exemplar
 {
-    internal class Circle
+    public class Circle : Shape
     {
+        public override string Draw() => "Drawing a circle";
     }
 }

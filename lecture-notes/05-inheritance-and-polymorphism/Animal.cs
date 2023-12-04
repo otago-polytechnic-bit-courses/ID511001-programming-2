@@ -17,7 +17,7 @@ namespace Exemplar
             this.age = age;
         }
 
-        // virtual - derived classes can override the base class implementation
+        // Virtual - derived classes can override the base class implementation
         public virtual void Eat() { /*...*/ }
         public virtual void Sleep() { /*...*/ }
 

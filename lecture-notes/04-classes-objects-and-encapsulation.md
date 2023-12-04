@@ -1,4 +1,4 @@
-# 03: Classes, Objects and Encapsulation
+# 04: Classes, Objects and Encapsulation
 
 In **ID510001: Programming 1**, you learned about **structs**. Before we take a look at **classes**, let us first recap what a **struct** is.
 
@@ -47,10 +47,15 @@ In this example, the **class** `Dog` has two **fields**, `name` and `age`, which
 To create an **object** from this **class**, you can use the `new` keyword and the **class** constructor like this:
 
 ```cs
-Dog myDog = new Dog(); // Create a new object of type Dog
-myDog.name = "Max"; // Set the name field to "Max"
-myDog.age = 3; // Set the age field to 3
-MessageBox.Show(myDog.Bark()); // Call the Bark() method which outputs - "Woof woof!"
+public Form1()
+{
+    InitializeComponent();
+
+    Dog myDog = new(); // Create a new object of type Dog
+    myDog.name = "Max"; // Set the name field to "Max"
+    myDog.age = 3; // Set the age field to 3
+    MessageBox.Show(myDog.Bark()); // Call the Bark() method which outputs - "Woof woof!"
+}
 ```
 
 This code creates a new **object** of type `Dog` named `myDog`, assigns values to its `name` and `age` **fields**, and then calls the `Bark()` **method** on the **object**.
@@ -79,15 +84,20 @@ public class Dog
 In this example, the **class** `Dog` has a constructor that takes two parameters, `name` and `age`, and assigns them to the corresponding **fields**. To create an **object** from this **class**, you can use the **constructor** and pass in the required parameters like this:
 
 ```cs
-Dog myDog = new Dog("Max", 3);
-MessageBox.Show(myDog.Bark()); // Output: "Woof woof!"
+public Form1()
+{
+    InitializeComponent();
+
+    Dog myDog = new("Max", 3);
+    MessageBox.Show(myDog.Bark()); // Output: "Woof woof!"
+}
 ```
 
 This code creates a new **object** of type `Dog` named "myDog" and assigns values to its `name` and `age` **fields** via the constructor. Then it calls the `Bark()` **method** on the **object**, which causes it to bark.
 
 ## this
 
-In the previous example, we used the `this` keyword. The `this` keyword is used to refer to the current **object** in a **class** or **struct**. It can be used to access the **fields** and **methods** of the current **object**. For example:
+In the previous example, we used the `this` keyword. The `this` keyword is used to refer to the current **object** in a **class** or **struct**. For example:
 
 ```cs
 public class Dog
@@ -105,10 +115,10 @@ public class Dog
 
     // Methods
     public string Bark() => "Woof woof!";
-    public void PrintInfo() => $"Name: {this.name}, Age: {this.age}";
+    public string PrintInfo() => $"Name: {name}, Age: {age}";
 
     // Instead of PrintInfo(), you can also use ToString() method
-    public override string ToString() => $"Name: {this.name}, Age: {this.age}";
+    public override string ToString() => $"Name: {name}, Age: {age}";
 }
 ```
 
@@ -117,8 +127,13 @@ public class Dog
 The `ToString()` method is a special **method** that is called when an **object** is converted to a string. It is often used to provide a string representation of an **object**. For example:
 
 ```cs
-Dog myDog = new Dog("Max", 3);
-MessageBox.Show(myDog); // Output: "Name: Max, Age: 3"
+public Form1()
+{
+    InitializeComponent();
+
+    Dog myDog = new("Max", 3);
+    MessageBox.Show(myDog.ToString()); // Output: "Name: Max, Age: 3"
+}
 ```
 
 ## What is the difference between a struct and a class?
@@ -177,16 +192,23 @@ public static class Utils
         }
     }
 }
-
-// Usage in Program.cs:
-int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
-
-MessageBox.Show($"Original array: {string.Join(", ", arr)}");
-
-Utils.BubbleSort(arr);
-
-MessageBox.Show($"Sorted array: {string.Join(", ", arr)}");
 ```
+
+How do we use a **static** class? Let us take a look at the following example:
+
+```cs
+public Form1()
+{
+    InitializeComponent();
+
+    int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
+    MessageBox.Show($"Original array: {string.Join(", ", arr)}");
+    Utils.BubbleSort(arr);
+    MessageBox.Show($"Sorted array: {string.Join(", ", arr)}");
+}
+```
+
+**Note**: There is no need to create an **object** of type `Utils` because all the members of the **class** are **static**.
 
 ## Scoping
 
@@ -256,13 +278,41 @@ public class BankAccount
 So how do we use properties? Let us take a look at the following example:
 
 ```cs
-BankAccount accountOne = new BankAccount();
-accountOne.Balance = 1000;
-MessageBox.Show($"Balance: {accountOne.Balance}");
+public Form1()
+{
+    InitializeComponent();
 
-BankAccount accountTwo = new BankAccount();
-accountTwo.Balance = -1000;
-MessageBox.Show($"Balance: {accountTwo.Balance}"); // Throws an exception
+    BankAccount accountOne = new();
+    accountOne.Balance = 1000;
+    MessageBox.Show($"Balance: {accountOne.Balance}");
+
+    BankAccount accountTwo = new();
+    accountTwo.Balance = -1000;
+    MessageBox.Show($"Balance: {accountTwo.Balance}"); // Throws an exception
+}
+```
+
+How do I display the exception?
+
+```cs
+public Form1()
+{
+    InitializeComponent();
+
+    BankAccount accountOne = new();
+    accountOne.Balance = 1000;
+    MessageBox.Show($"Balance: {accountOne.Balance}");
+
+    BankAccount accountTwo = new();
+    try
+    {
+        accountTwo.Balance = -1000;
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show(ex.Message);
+    }
+}
 ```
 
 ## Class Diagram
@@ -279,7 +329,7 @@ To create a class diagram in **Visual Studio**, do the following:
 
 # Formative Assessment
 
-Before you start, create a new **C# Console** application called **03-formative-assessment**.
+Before you start, create a new **C# Console** application called **04-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 
@@ -316,7 +366,7 @@ public static class Utils
 
     public static List<Institution> SeedInstitutions()
     {
-        s_institutions.Add(new Institution("Otago Polytechnic", "Otago", "New Zealand"));
+        s_institutions.Add(new("Otago Polytechnic", "Otago", "New Zealand"));
 
         // Add two more institutions
 
@@ -324,10 +374,10 @@ public static class Utils
     }
 }
 
-// Usage in Program.cs:
-private static List<Institution> s_institutions; // Declare this above the Main method
+// Usage in Form1.cs
+private static List<Institution> s_institutions; // Declare this above the Form1() constructor
 
-s_institutions = Utils.SeedInstitutions(); // Declare this inside the Main method
+s_institutions = Utils.SeedInstitutions(); // Declare this inside the Form1() constructor
 ```
 
 For each `course`, display its information and which `department` and `institution` it belongs to.
@@ -353,16 +403,16 @@ public class Product
     public double Price { get => _price; set => _price = value; }
 }
 
-// Declare the following code in Program.cs
-private static List<Product> products; // Declare this above the Main method
+// Usage in Form1.cs
+private static List<Product> products; // Declare this above the the Form1() constructor
 
-products = new List<Product>() // Declare this inside the Main method
+products = new List<Product>() // Declare this inside the Form1() constructor
 {
-    new Product("Apple", 1.99),
-    new Product("Banana", 2.99),
-    new Product("Orange", 3.99),
-    new Product("Pineapple", 4.99),
-    new Product("Watermelon", 5.99)
+    new("Apple", 1.99),
+    new("Banana", 2.99),
+    new("Orange", 3.99),
+    new("Pineapple", 4.99),
+    new("Watermelon", 5.99)
 };
 ```
 
@@ -384,7 +434,7 @@ Augie,6
 Dixie,9
 ```
 
-Use the `StreamReader` or `File` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to an array. Print out the `name` and `age` for each item in the array. Add error handling to ensure that the program gracefully handles any issues with reading the file or parsing the data.
+Use the `StreamReader` or `File` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to a **list**. Print out the `name` and `age` for each item in the **list**. Add error handling to ensure that the program gracefully handles any issues with reading the file or parsing the data.
 
 ## Task 7:
 

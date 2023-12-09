@@ -169,13 +169,13 @@ Create a base class called `Vehicle` with the `protected` fields - `brand`, `mod
 
 Create a class called `Car` which derives from `Vehicle` with the private field - `numOfDoors`. Create a constructor that accepts all base class's fields, i.e., `brand`, `model`, and `year` and its own, i.e., `numOfDoors`. Create an `override` method for `DisplayDetails` which displays the `Car`s `numOfDoors`.
 
-In the `Form1()` constructor, create two `Car` objects and call the `DisplayDetails` method for each.
+In the `Form1()` constructor, create two `Car` objects. Using the `MessageBox.Show()` method, call the `DisplayDetails` method for each `Car`.
 
 ## Task 2:
 
 Extend the `Animal` and `Dog` example to include a derived class called `Cat`.
 
-In the `Form1()` constructor, create a `Dog` and `Cat` object and call the `Eat` and `Sleep` methods.
+In the `Form1()` constructor, create a `Dog` and `Cat` object. Using the `MessageBox.Show()` method, call the `Eat` and `Sleep` methods for each `Dog` and `Cat`.
 
 ## Task 3:
 
@@ -185,7 +185,7 @@ Create a class called `Student` which derives from `Person` with the private fie
 
 Create a class called `Lecturer` which derives from `Person` with the private field - `subject`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `subject`. Create an `override` method for `DisplayDetails` which outputs the `Lecturer`'s `name`, `age` and `subject`.
 
-In the `Form1()` constructor, create a `Person`, `Student` and `Lecturer` object and call the `DisplayDetails` method for each.
+In the `Form1()` constructor, create a `Person`, `Student` and `Lecturer` object. Using the `MessageBox.Show()` method, call the `DisplayDetails` method for each `Person`, `Student` and `Lecturer`.
 
 ## Task 4:
 
@@ -196,11 +196,11 @@ Here are steps you should consider:
 1. Declare a base class called Shape that contains a `virtual` method called `CalculateArea()` that returns a `double`.
 2. Declare two derived classes called `Rectangle` and `Circle` that inherit from the `Shape` base class.
 3. Implement the `CalculateArea()` method in the `Rectangle` and `Circle` classes to calculate the area of a rectangle and a circle respectively.
-4. Prompt the user to select a shape from the list of shapes.
+4. Prompt the user using a `TextBox` to select a shape from the list of shapes.
 5. Parse the user's input and create an instance of the selected shape.
-6. Prompt the user to enter the required dimensions of the selected shape. For example, if the user selects a rectangle, the application should prompt the user to enter the length and width of the rectangle.
+6. Prompt the user using a `TextBox` to enter the required dimensions of the selected shape. For example, if the user selects a rectangle, the application should prompt the user to enter the length and width of the rectangle.
 7. Calculate the area of the selected shape using polymorphism by calling the `CalculateArea()` method on the shape object created in step 5.
-8. Output the area of the selected shape.
+8. Output the area of the selected shape in a `Label`.
 9. Add error handling to the application to handle invalid input. If the user enters invalid input, the application should output "Invalid input. Please try again." and prompt the user to enter valid input.
 
 ## Submission

@@ -146,7 +146,7 @@ Here are steps you should consider:
    - 5 x `Product` with the name "Orange" and price 1.99
    - 2 x `Product` with the name "Banana" and price 2.99
 
-4. Also, im the `Form1` class, create a `private void DisplayInventory()` method that displays the inventory. The output should be similar to the following:
+4. Also, im the `Form1` class, create a `private void DisplayInventory()` method that displays the inventory in a `MessageBox.Show()`. The output should be similar to the following:
 
 ```cs
 Apple: 10
@@ -161,8 +161,8 @@ In this task, you will create an application that prompts the user to enter thei
 Here are steps you should consider:
 
 1. Create an `enum` called `EDays` with the following days: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, and `Sunday`.
-2. Parse the user's input and convert it into a `Day` enum value.
-3. Use a `switch` statement to output a message based on the user's input. For example, if the user enters "Friday", the application should output "You like Fridays!".
+2. Parse the user's input using a `TextBox` and convert it into a `Day` enum value.
+3. Use a `switch` statement to output a message based on the user's input in a `Label`. For example, if the user enters "Friday", the application should output "You like Fridays!".
 4. Add error handling to handle an invalid input. If the user enters an invalid day, the application should output "Invalid input. Please try again." and prompt the user to enter a valid day of the week.
 
 ## Submission

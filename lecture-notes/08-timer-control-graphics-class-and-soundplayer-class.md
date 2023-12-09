@@ -1,4 +1,4 @@
-# 08: Timer Control and Graphics Class
+# 08: Timer Control, Graphics Class and SoundPlayer Class
 
 ## Timer Control
 
@@ -48,6 +48,8 @@ private void Form1_Paint(object sender, PaintEventArgs e)
     graphics.DrawString("Hello, World!", font, Brushes.SkyBlue, new Point(20, 45));
 }
 ```
+
+## SoundPlayer Class
 
 # Formative Assessment
 

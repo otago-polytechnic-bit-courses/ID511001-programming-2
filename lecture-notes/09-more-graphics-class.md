@@ -1,6 +1,6 @@
 # 09: More Graphics Class
 
-No new material...just practice.
+No new material...just more practice.
 
 # Formative Assessment
 
@@ -88,7 +88,6 @@ public Form1()
 {
     InitializeComponent();
 
-
     offScreenBitmap = new Bitmap(Width, Height); // An image used as a buffer for rendering
     offScreenGraphics = Graphics.FromImage(offScreenBitmap); // Enables you to draw on the offScreenBitmap
     graphics = CreateGraphics(); // Used to rendering the form
@@ -102,7 +101,7 @@ In the `timer1_Tick` method, replace the existing code with the following:
 ```cs
 private void timer1_Tick(object sender, EventArgs e)
 {
-    // Clears the buffer by filling the entire image with a black rectangle. This prevents the previous fram from being displayed
+    // Clears the buffer by filling the entire image with a black rectangle. This prevents the previous frame from being displayed
     offScreenGraphics.FillRectangle(Brushes.Black, 0, 0, Width, Height);
     controller.Run();
     graphics.DrawImage(offScreenBitmap, 0, 0); // Eliminates flickering and ensures the frame is displayed without partial updates
@@ -133,13 +132,13 @@ My UML class diagram is:
 public abstract class Polygon
 ```
 
-3. `Polygons` should know their X and Y positions (these are the upper left corners of the square and circle’s bounding rectangle; they are the coordinates of the apex of the triangle, their size and their colour. They need a constructor so that polygon objects can be created. They should also have a `Draw()` method, and a `CalculateArea()` method. In this example, the `Draw()` and `CalculateArea()` methods will always be overridden by the subclasses of `Polygon`. We won’t ever use the base class version of `Draw()` or `CalculateArea()`, so these methods are declared as abstract. 
+3. `Polygon`s should know their X and Y positions (these are the upper left corners of the square and circle’s bounding rectangle; they are the coordinates of the apex of the triangle, their size and their colour. They need a constructor so that polygon objects can be created. They should also have a `Draw()` method, and a `CalculateArea()` method. In this example, the `Draw()` and `CalculateArea()` methods will always be overridden by the subclasses of `Polygon`. We won’t ever use the base class version of `Draw()` or `CalculateArea()`, so these methods are declared as abstract. 
 
 ```cs
 public abstract void Draw();
 ```
 
-Note: If the methods could be used by the base class as well as the subclass, the keyword would be `virtual` rather than `abstract`. 
+**Note:** If the methods could be used by the base class as well as the subclass, the keyword would be `virtual` rather than `abstract`. 
 
 4. Descend three classes from `Polygon`: `Square`, `Circle` and `Triangle`. These descendants have no new fields, properties or methods, they simply declare their overrides of `Draw()` and `CalculateArea()`. For example:
 
@@ -208,7 +207,6 @@ To build this application:
 ```cs
 Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
 ```
-
 
 2.	When we create a large number of objects and draw them to the screen, we will be consuming a large amount of RAM. To conserve our resources, after we have drawn an object, we should then destroy it, by writing:
 

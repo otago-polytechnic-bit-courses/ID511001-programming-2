@@ -214,7 +214,7 @@ public Form1()
 
 There are several keywords that can be used to define the scope of **variables**, **methods**, and other members of a **class** or **struct**. The most commonly used scope keywords are:
 
-- `public`: Members defined as public can be accessed from anywhere within the program, both inside and outside the **class** or **struct** in which they are defined.
+- `public`: Members defined as public can be accessed from anywhere within the application, both inside and outside the **class** or **struct** in which they are defined.
 
 - `private`: Members defined as private can only be accessed within the **class** or **struct** in which they are defined.
 
@@ -228,7 +228,7 @@ There are several keywords that can be used to define the scope of **variables**
 
 It is also worth noting that there are other keywords, such as `abstract`, `sealed`, `override` and `virtual`, are used in the context of **inheritance** and **polymorphism** to define the behaviour of the **classes** and **methods**.
 
-It is important to choose the right scope keyword depending on the intended use of the element in question, as it can affect the visibility, accessibility and overall design of the program.
+It is important to choose the right scope keyword depending on the intended use of the element in question, as it can affect the visibility, accessibility and overall design of the application.
 
 ## Encapsulation
 
@@ -420,7 +420,7 @@ Write a **LINQ** query that displays the average price of all products in the **
 
 ## Task 6:
 
-Create a program that reads data from a text file and creates five `Dog` **objects**.
+In this task, you will read data from a text file, create five `Dog` **objects** and display the `Dog` data in a `DataGridView`.
 
 Use the `Dog` **class** above.
 
@@ -434,11 +434,11 @@ Augie,6
 Dixie,9
 ```
 
-Use the `StreamReader` or `File` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to a **list**. Display the `name` and `age` for each item in the **list**. Add error handling to ensure that the program gracefully handles any issues with reading the file or parsing the data.
+Use the `StreamReader` or `File` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to a **list**. Display the `name` and `age` for each item in the **list**. Add error handling to ensure that the application gracefully handles any issues with reading the file or parsing the data.
 
 ## Task 7:
 
-Create a class diagram for two programs you have created.
+Create a class diagram for two applications you have created.
 
 ## Submission
 

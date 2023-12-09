@@ -1,6 +1,6 @@
 # 03: Windows Forms Application
 
-The **Microsoft Visual Studio IDE** (integrated development environment) is made up of several tools that are used to build **GUI** (Graphical User Interface) applications – those with windows, buttons menus, graphics, etc., by dragging and dropping these pre-built controls onto an existing form as we want it to appear. We build applications that will respond to events – when the user clicks on a button, when a form is closed, etc. **Visual Studio** fills in all the necessary code for how to make these events happen when it compiles our program. We concentrate on writing the code to describe what should happen when the user clicks on a button, selects a menu-item, closes a window, and so on. We don't have to worry about all the complex operating system programming underneath – **Visual Studio** takes care of that for us.
+The **Microsoft Visual Studio IDE** (integrated development environment) is made up of several tools that are used to build **GUI** (Graphical User Interface) applications – those with windows, buttons menus, graphics, etc., by dragging and dropping these pre-built controls onto an existing form as we want it to appear. We build applications that will respond to events – when the user clicks on a button, when a form is closed, etc. **Visual Studio** fills in all the necessary code for how to make these events happen when it compiles our application. We concentrate on writing the code to describe what should happen when the user clicks on a button, selects a menu-item, closes a window, and so on. We don't have to worry about all the complex operating system programming underneath – **Visual Studio** takes care of that for us.
 
 ## Creating a Windows Forms App
 
@@ -24,7 +24,7 @@ The main part is named `Form1.cs (Design)`. This is where, at design time, you c
 Open View/Toolbox/Common Controls.
 
 1. Add two `Buttons`, a `TextBox`, a `PictureBox` and a `Label` to the `Form`.
-2. Run the program. Click on one of the `Buttons`, write in the `TextBox`. What happens?
+2. Run the application. Click on one of the `Buttons`, write in the `TextBox`. What happens?
 3. Change the **size**, **text** and **name** of each of your `Buttons`.
 4. Change the text, font and visibility of the `Label`.
 5. Add an image to the `PictureBox`. How can you resize the image?
@@ -32,7 +32,7 @@ Open View/Toolbox/Common Controls.
 
 ## Design-Time or Run-Time?
 
-We said earlier that `TextBoxes` could be used to show messages to the user of your program. For this to be useful, you need to be able to change the `Text` property while the program is running, when you won't be able to get at the **Properties** list. Changing a property while you are creating your application is called _"modifying at design-time"_. Changing the property from within the program while the program is running is called _"modifying at run-time"_.
+We said earlier that `TextBoxes` could be used to show messages to the user of your application. For this to be useful, you need to be able to change the `Text` property while the application is running, when you won't be able to get at the **Properties** list. Changing a property while you are creating your application is called _"modifying at design-time"_. Changing the property from within the application while the application is running is called _"modifying at run-time"_.
 
 Modifying at run-time is very easy: you simply write an assignment statement to assign a new value to the property. To refer to an object's property at run-time you use _"dot notation"_, which you have seen before when referring to elements of records at runtime. For example, to assign the text _"Here is my new text"_ to your `TextBox`, you put this statement in your code:
 
@@ -57,7 +57,7 @@ If you select a `Button` on your `Form`, and click on the **Events** tab, it wil
 
 ![](../resources/img/07/03-image.png)
 
-This is a list of all the **Events** – things the user can do (or the program can do) – that the `Button` control understands. For each of these events, you can specify some **C#** code that should be executed if the event occurs. For example, the `Button` understands the `Click` event. Whatever code you assign to that event (we'll see how to do this in a moment), will be executed when the user clicks on the `Button`. The `Button` also has a `MouseHover` event. This event occurs when the user passes the mouse over the `Button`. The `DragDrop` event occurs when the user drags the `Button` on the screen. And so forth.
+This is a list of all the **Events** – things the user can do (or the application can do) – that the `Button` control understands. For each of these events, you can specify some **C#** code that should be executed if the event occurs. For example, the `Button` understands the `Click` event. Whatever code you assign to that event (we'll see how to do this in a moment), will be executed when the user clicks on the `Button`. The `Button` also has a `MouseHover` event. This event occurs when the user passes the mouse over the `Button`. The `DragDrop` event occurs when the user drags the `Button` on the screen. And so forth.
 
 Until you write code for any event, nothing happens when the event occurs. For example, if you haven't assigned any code to the `Click` event, the user can click on the `Button` as much as he likes, and it has no effect. You saw this happen above.
 
@@ -92,7 +92,7 @@ Enter some code for the `Button` to execute. For example, when the `button1` is 
 label1.Text = "My text has changed";
 ```
 
-Run your program and click on the `Button` to see the `Label` change.
+Run your application and click on the `Button` to see the `Label` change.
 
 3. Add a `Textbox` to your `Form`. Set it `Text` property to 0. Create a variable `nClicks`, The `Click` handler for a `Button` is shown below. What would be the effect of clicking on this `Button` ten times? 
 
@@ -115,7 +115,7 @@ Similarly the `Convert.ToString()` method converts from integer to the equivalen
 textBox1.Text = nClicks.ToString();
 ```
 
-4. Add a `TextBox` to your `Form`. As we saw earlier, the contents of a `TextBox` can be changed while the program is running. Modify your `button1_Click` handler, so that when the `button1` is clicked, the caption of the `label1` changes to whatever is in `textBox1`. Run the program and change the `Label` several times by modifying what is in `textBox1`, then clicking the `button1`.
+4. Add a `TextBox` to your `Form`. As we saw earlier, the contents of a `TextBox` can be changed while the application is running. Modify your `button1_Click` handler, so that when the `button1` is clicked, the caption of the `label1` changes to whatever is in `textBox1`. Run the application and change the `Label` several times by modifying what is in `textBox1`, then clicking the `button1`.
 
 ## TextBox and ListBox Controls
 
@@ -159,13 +159,13 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-Write a program that allows the user to enter a number into each of five `TextBoxes`. Provide `Buttons` that compute the sum and the average of the five numbers. Remember that you must use convert the contents of a `TextBox` to an integer, and convert an integer back to a string that can be displayed in a `TextBox`. A possible form layout is:
+Write code that allows the user to enter a number into each of five `TextBoxes`. Provide `Buttons` that compute the sum and the average of the five numbers. Remember that you must use convert the contents of a `TextBox` to an integer, and convert an integer back to a string that can be displayed in a `TextBox`. A possible form layout is:
 
 ![](../resources/img/07/05-image.png)
 
 ## Task 2:
 
-Write a program that allows the user to enter two numbers, select an arithmetic operation and calculate the answer. Note that this calculator accepts the data as a text entry inside a `TextBox`, rather than as a series of push-button clicks.
+Write code that allows the user to enter two numbers, select an arithmetic operation and calculate the answer. Note that this calculator accepts the data as a text entry inside a `TextBox`, rather than as a series of push-button clicks.
 
 ![](../resources/img/07/06-image.png)
 
@@ -186,7 +186,7 @@ Write an application for use in a Pizza Parlour. The user enters his order, and 
 ![](../resources/img/07/07-image.png)
 
 1. Create a new application.
-2.	Your program should allow at least two sizes of pizza, with different prices. Users must select a size. If a user tries to order without selecting a size, the user should receive polite feedback asking him to please specify the size.
+2.	Your application should allow at least two sizes of pizza, with different prices. Users must select a size. If a user tries to order without selecting a size, the user should receive polite feedback asking him to please specify the size.
 3.	You should provide at least five different extra toppings, each with associated prices. Users can select any combination of extra toppings, or none at all.
 4.	You should correctly display the order in a `ListBox` and compute the total and display it in a `TextBox`.
 5.	When a new order is generated, the old order information should be cleared from the display. 

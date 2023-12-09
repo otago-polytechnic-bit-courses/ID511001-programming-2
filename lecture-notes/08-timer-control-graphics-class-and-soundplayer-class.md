@@ -1,4 +1,4 @@
-# 08: Timer Control, Graphics Class and SoundPlayer Class
+# 08: Timer Control and Graphics Class
 
 ## Timer Control
 
@@ -47,37 +47,6 @@ private void Form1_Paint(object sender, PaintEventArgs e)
     // Draw text
     graphics.DrawString("Hello, World!", font, Brushes.SkyBlue, new Point(20, 45));
 }
-```
-
-## SoundPlayer Class
-
-The `SoundPlayer` class provides methods for playing sounds files. To get started, above the `Form1`'s constructor, declare a `SoundPlayer` variable:
-
-```csharp
-private SoundPlayer soundPlayer;
-```
-
-In the `Form1`'s constructor, create a new instance of the `SoundPlayer` class by calling the `SoundPlayer` constructor:
-
-```csharp
-public Form1()
-{
-    InitializeComponent();
-
-    soundPlayer = new SoundPlayer(); // You can also pass a file path to the constructor
-}
-```
-
-To play a sound, call the `Play` method:
-
-```csharp
-soundPlayer.Play();
-```
-
-To stop a sound, call the `Stop` method:
-
-```csharp
-soundPlayer.Stop();
 ```
 
 # Formative Assessment
@@ -188,11 +157,11 @@ graphics.DrawString("Pow!", font, Brushes.White, new Point(240, 240));
 
 1. Create a new project.
 2. Write a `Timer1_tick` handler to draw three circles on the form. Use a different colour for each circle.
-3. Place a `Timer` on the form. Modify your program so that, when the program starts, the figures are drawn automatically, and each 100 msec, the figures shift 20 pixels to the right. The example below shows the screen after several `Timer` cycles.
+3. Place a `Timer` on the form. Modify your application so that, when the application starts, the figures are drawn automatically, and each 100 msec, the figures shift 20 pixels to the right. The example below shows the screen after several `Timer` cycles.
 
 ![](../resources/img/08/06-image.png)
 
-4. Add a `CheckBox` control to your form. As the program runs, the user can turn the screen refresh feature on and off by checking and unchecking this `CheckBox`.
+4. Add a `CheckBox` control to your form. As the application runs, the user can turn the screen refresh feature on and off by checking and unchecking this `CheckBox`.
 
 When the `CheckBox` is checked, the screen refreshes.
 
@@ -202,7 +171,7 @@ When the `CheckBox` is unchecked, the screen does not refresh.
 
 ![](../resources/img/08/08-image.png)
 
-5. Modify your program so that when the drawings reach the right edge of the screen, they "wrap around" and come back in from the left edge.
+5. Modify your application so that when the drawings reach the right edge of the screen, they "wrap around" and come back in from the left edge.
 
 ![](../resources/img/08/09-image.png)
 

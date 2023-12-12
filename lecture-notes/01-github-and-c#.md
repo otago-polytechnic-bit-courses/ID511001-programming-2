@@ -1,6 +1,6 @@
 # 01: GitHub and C#
 
-# GitHub
+## GitHub
 
 In this course, we are going to use **GitHub** and **GitHub Classroom** to manage our development. Begin by clicking the following:
 

@@ -1,0 +1,36 @@
+public static void ReadFromFile(string filePath, List<Learner> learners, bool isAttendance)
+{
+    List<string> lines = File.ReadAllLines(filePath).ToList();
+    foreach (string line in lines)
+    {
+        string[] learnerDetails = line.Split(',');
+
+        int id = int.Parse(learnerDetails[0]);
+        string firstName = learnerDetails[1];
+        string lastName = learnerDetails[2]; 
+        int courseNum = int.Parse(learnerDetails[3]);
+        Learner learner;
+
+        if (isAttendance)
+        {
+            //int percentage = int.Parse(learnerDetails[4]);
+            //learner = new(id, firstName, lastName, percentage);
+        }
+        else
+        {
+            List<int> marks = new()
+            {
+                Convert.ToInt32(learnerDetails[4]),
+                Convert.ToInt32(learnerDetails[5]),
+                Convert.ToInt32(learnerDetails[6]),
+                Convert.ToInt32(learnerDetails[7]),
+                Convert.ToInt32(learnerDetails[8])
+            };
+
+            CourseAssessmentMark assessmentMarks = new(s_courses[courseNum], marks);
+            learner = new(id, firstName, lastName, assessmentMarks);
+        }
+
+        learners.Add(learner);
+    }
+}

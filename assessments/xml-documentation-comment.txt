@@ -1,0 +1,8 @@
+/// <remarks>
+/// Author: Your Name
+/// Date Created: January 1, 2000
+/// Bugs: None known at this time.
+/// </remarks>
+// <summary>
+/// This is an example class.
+/// </summary>

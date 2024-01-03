@@ -36,7 +36,7 @@
 \maketitle
 
 \section*{Assessment Overview}
-In this \textbf{individual} assessment, you will design and develop a pong \textbf{Windows Forms Application} using \textbf{C\#}.
+In this \textbf{individual} assessment, you will design and develop two \textbf{Windows Forms Applications} using \textbf{C\#}. 
 
 \section*{Learning Outcomes}
 At the successful completion of this course, learners will be able to:
@@ -85,6 +85,8 @@ Resits and reassessments \textbf{are not} applicable in \textbf{ID511001: Progra
 You will need to submit an application and documentation that meet the following requirements:\\
 
 \subsection*{Functionality - Learning Outcomes 1 and 2 (40\%)}
+
+\subsection*{Pong}
 \begin{itemize}
     \item The application needs to open without code or file structure modification in \textbf{Visual Studio}.
     \item The game needs to be driven by one \textbf{Timer} and begins when the user presses the \textbf{space bar} key.
@@ -94,7 +96,7 @@ You will need to submit an application and documentation that meet the following
     \item The user controls the left paddle via the \textbf{up arrow} and \textbf{down arrow} keys. The computer controls the right paddle. It is acceptable for the right paddle to follow the ball's position. However, other solutions are encouraged.
     \item Display the user and computer's score using the \textbf{DrawString} method.
     \item A scoring system. When the ball collides with the left and right-hand side of the screen, one point is given to either the user or computer. The game is over when either score is 10. 
-    \item A highscore system. When the game is over, appropriate feedback needs to be displayed to the user, i.e., \textbf{"You win!"} or \textbf{"You lose!"}, the user and computer's scores are saved, i.e., written to a text file. Read the scores from the text file and display the last five to the user.
+    \item When the game is over, appropriate feedback needs to be displayed to the user, i.e., \textbf{"You win!"} or \textbf{"You lose!"}, the user and computer's scores are saved, i.e., written to a text file called \textbf{highscores.txt}. 
     \item Double buffering to prevent the ball, paddles and scores from flickering.
     \item Using the \textbf{SoundPlayer} class, play a sound when:
     \begin{itemize}
@@ -105,6 +107,16 @@ You will need to submit an application and documentation that meet the following
     \item Randomise the colour of the ball and paddles.
 \end{itemize}
 
+\subsection*{Highscores}
+\begin{itemize}
+    \item The application needs to open without code or file structure modification in \textbf{Visual Studio}.
+    \item \textbf{Form1.cs}. \textbf{public class Form1} manages the user interface. This class needs to account for the following functionality:
+    \begin{itemize}
+        \item Reading the \textbf{highscores.txt} file.  
+        \item Display highscores. This needs to display the following highscore in this format - \textbf{User's Score: user's score - Computer's Score: computer's score} in a \textbf{ListBox}. \textbf{Note:} You cannot deviate from the required format.
+    \end{itemize}
+\end{itemize}
+
 \subsection*{Code Elegance - Learning Outcomes 1 and 2 (55\%)}
 \begin{itemize}
     \item A \textbf{Visual Studio} \textbf{.gitignore} file is used. 
@@ -112,20 +124,18 @@ You will need to submit an application and documentation that meet the following
     \item Idiomatic use of values, control flow, data structures and in-built functions.
     \item Efficient algorithmic approach.
     \item Sufficient modularity.
-    \item Each file has an \textbf{XML documentation comment} located at the top of the file.
-    \item In-line comments where required. It should be for code that needs further explanation.
+    \item Each file has an \textbf{XML documentation comment} located at the top of the file. In the \textbf{assessment} directory of the \textbf{course materials} repository, you will find an \textbf{XML documentation comment} example in the \textbf{xml-documentation-comment.txt} file.
     \item Formatted code.
     \item No dead or unused code.
 \end{itemize}
 
-\subsection*{Documentation and Git Usage - Learning Outcomes 1 and 2 (5\%)}
+\subsection*{Documentation and Git Usage - Learning Outcome 2 (5\%)}
 \begin{itemize}
     \item Provide the following in your repository \textbf{README.md} file:
     \begin{itemize}
         \item A class diagram of your application.
         \item If applicable, known bugs.
     \end{itemize}
-    \item Commit messages reflect the context of each functional requirement change.
 \end{itemize}
 
 \subsection*{Additional Information}

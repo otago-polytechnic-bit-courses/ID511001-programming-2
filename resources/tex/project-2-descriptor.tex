@@ -93,11 +93,11 @@ You will need to submit applications and documentation that meet the following r
     \begin{verbatim}
 public enum EPosition
 {
-    LECTURER,
-    SENIOR_LECTURER,
-    PRINCIPAL_LECTURER,
-    ASSOCIATE_PROFESSOR,
-    PROFESSOR
+    LECTURER = 0,
+    SENIOR_LECTURER = 1,
+    PRINCIPAL_LECTURER = 2,
+    ASSOCIATE_PROFESSOR = 3,
+    PROFESSOR = 4
 }
             
 public enum ESalary
@@ -143,12 +143,14 @@ public enum ESalary
 	4,Joe,Blogs,1,10,20,30,70,80
 	5,Bob,Brown,2,75,82,95,55,10
             \end{verbatim}
+            What do the numbers represent? The first number is the \textbf{id}, the second number is the \textbf{course} and the remaining numbers are the \textbf{assessment marks 1-5}. \textbf{Note:} You will use the second number to access a \textbf{Course} object from the \textbf{courses} list.
             \item \textbf{ReadFromFile()} with no return type and two parameters: \textbf{filePath} of type \textbf{string} and \textbf{lecturers} of type \textbf{List$<$Lecturer$>$}. This method reads the \textbf{lecturers.txt} file and populates the \textbf{lecturers} parameter. The \textbf{lecturers.txt} file contains the following information:\\
             \begin{verbatim}
 	1,Graydon,Ore,1,100000,0
 	2,Aidan,Moscow,2,115000,1
 	3,Jon,Seena,0,85000,2
             \end{verbatim}
+            What do the numbers represent? The first number is the \textbf{id}, the second number is the \textbf{position}, the third number is the \textbf{salary} and the fourth number is the \textbf{course}. \textbf{Note:} You will use the second number to access the enum \textbf{EPosition}, the third number to access the enum \textbf{ESalary} and fourth number to access a \textbf{Course} object from the \textbf{courses} list.
         \end{itemize}
         \item \textbf{Form1.cs}. \textbf{public class Form1} manages the user interface. This class needs to account for the following functionality:
         \begin{itemize}
@@ -256,7 +258,7 @@ public enum ESalary
             \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
             \item learner \textbf{percentage}
         \end{itemize}
-        \item Display learners at risk. A learner at risk is someone who has an attendance percentage of less than 50\%. This needs to display the following learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name} in a \textbf{ListBox}.
+        \item Display learners at risk. A learner at risk is someone who has an attendance percentage of less than 50\%. This needs to display the following learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name} in a \textbf{ListBox}. \textbf{Note:} You cannot deviate from the required format.
     \end{itemize}
 \end{itemize}
 
@@ -267,20 +269,18 @@ public enum ESalary
     \item Idiomatic use of object-oriented principles, values, control flow, data structures and in-built functions.
     \item Efficient algorithmic approach.
     \item Sufficient modularity.
-    \item Each file has an \textbf{XML documentation comment} located at the top of the file.
-    \item In-line comments where required. It should be for code that needs further explanation.
+    \item Each file has an \textbf{XML documentation comment} located at the top of the file. In the \textbf{assessment} directory of the \textbf{course materials} repository, you will find an \textbf{XML documentation comment} example in the \textbf{xml-documentation-comment.txt} file.
     \item Formatted code.
     \item No dead or unused code.
 \end{itemize}
 
-\subsection*{Documentation and Git Usage - Learning Outcomes 1 and 2 (5\%)}
+\subsection*{Documentation and Git Usage - Learning Outcome 2 (5\%)}
 \begin{itemize}
     \item Provide the following in your repository \textbf{README.md} file:
     \begin{itemize}
         \item A class diagram of your applications.
         \item If applicable, known bugs.
     \end{itemize}
-    \item Commit messages reflect the context of each functional requirement change.
 \end{itemize}
 
 \subsection*{Additional Information}

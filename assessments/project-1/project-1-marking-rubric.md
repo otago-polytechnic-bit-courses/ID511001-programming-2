@@ -1,31 +1,29 @@
-### Functionality - Student Management System
+# Marking Rubric
+
+### Functionality - Pong
 
 | **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| **Code Structure & Modifiability**                  | Application opens in Visual Studio without modification. | Application opens in Visual Studio with minor modifications. | Application opens in Visual Studio with significant modifications. | Application fails to open in Visual Studio.            |
-| **Enums Implementation**                            | Enums EPosition and ESalary are correctly implemented with values. | One or more enums are missing or incorrectly implemented. | Enums are incomplete or incorrectly implemented.      | Missing or incorrect implementation of enums.         |
-| **Class Implementation**                            | All classes are implemented with correct fields and constructors. | Minor issues in class implementation.                 | Significant issues in class implementation.           | Major errors in class implementation.                 |
-| **CourseAssessmentMark Methods**                    | All methods correctly implemented and return expected results. | Minor issues in one or more methods.                  | Significant issues in method implementation.          | Major errors in method implementation.               |
-| **Person, Learner, Lecturer Classes**               | Classes implemented correctly with inheritance and fields. | Minor issues in class implementation.                 | Significant issues in class implementation.           | Major errors in class implementation.                 |
-| **Utils Methods**                                   | All methods implemented correctly and return expected results. | Minor issues in one or more methods.                  | Significant issues in method implementation.          | Major errors in method implementation.               |
-| **Form1 Functionality**                             | All specified functionalities are correctly implemented. | Some functionalities are missing or have minor issues. | Several functionalities are incomplete or have significant issues. | Most functionalities are missing or not functional. |
-| **User Interface (DataGridView)**                  | DataGridViews display correct details for each functionality. | Minor issues in displaying details in DataGridView.   | Significant issues in displaying details in DataGridView. | DataGridViews do not display relevant details.        |
-| **Validation in Adding Learner/Lecturer**           | Validation is correctly implemented and handles all cases. | Minor issues in validation implementation.           | Significant issues in validation implementation.      | Validation is incomplete or incorrect.                |
-| **File Reading & Writing**                          | Reading from files is correct; writing to files is successful. | Minor issues in file reading/writing.                 | Significant issues in file reading/writing.           | File reading/writing is incorrect or incomplete.     |
-| **Error Handling**                                  | Application gracefully handles errors and displays meaningful messages. | Some error messages lack clarity or handling is not optimal. | Error handling is minimal or not well-implemented.    | Poor or no error handling.                           |
-| **Overall Application Functionality**               | Application fulfills all requirements with a smooth user experience. | Some functionalities are incomplete or have minor issues. | Several functionalities are missing or have significant issues. | Most functionalities are missing or not functional. |
+| **Code Structure and Modifiability**                     | Application opens in Visual Studio without modification. | Application opens with minor modifications.        | Application opens with significant modifications. | Application fails to open in Visual Studio.            |
+| **Game Initialisation and Timer**                    | Game is driven by a Timer, starts on space bar press.  | Minor issues in Timer implementation or game start. | Significant issues in Timer implementation or game start. | Game fails to start or Timer is not implemented.      |
+| **Graphics Class Usage**                            | Ball and paddles created using the Graphics class.    | Minor issues in Graphics class usage.              | Significant issues in Graphics class usage.       | Graphics class is not used correctly.                 |
+| **Collision Handling**                              | Ball collides off top, bottom, and paddles correctly.  | Minor issues in collision handling.               | Significant issues in collision handling.        | Collision handling is not implemented correctly.     |
+| **Paddle Movement Restrictions**                    | Paddles move vertically within screen boundaries.    | Minor issues in paddle movement restrictions.     | Significant issues in paddle movement restrictions. | Paddles exceed screen boundaries or do not move correctly. |
+| **User Controls for Paddle**                        | User controls left paddle with up and down arrow keys. | Minor issues in user controls.                    | Significant issues in user controls.             | User controls are not implemented correctly.         |
+| **Scoring System and Game Over**                     | Scoring system works, game ends when score reaches 10. | Minor issues in scoring or game over logic.       | Significant issues in scoring or game over logic. | Scoring or game over logic is not implemented correctly. |
+| **Feedback and High Scores**                          | Appropriate feedback displayed when the game is over, scores saved to highscores.txt. | Minor issues in feedback or high scores.          | Significant issues in feedback or high scores.   | Feedback is incorrect or high scores are not saved.    |
+| **Double Buffering Implementation**                | Double buffering prevents flickering effectively.     | Minor issues in double buffering implementation. | Significant issues in double buffering implementation. | Flickering is present, and double buffering is not effective. |
+| **SoundPlayer Usage**                               | Sounds play correctly on paddle and screen collisions, user wins, and loses. | Minor issues in SoundPlayer usage.               | Significant issues in SoundPlayer usage.        | Sounds do not play correctly or are not implemented.  |
+| **Restart and Pause Functionality**                   | Game can be restarted and paused with R and P keys.   | Minor issues in restart or pause functionality.  | Significant issues in restart or pause functionality. | Restart or pause functionality is not implemented correctly. |
+| **Random Color Assignment**                         | Ball and paddles are assigned random colors.          | Minor issues in random color assignment.         | Significant issues in random color assignment.  | Random color assignment is not implemented correctly. |
 
-### Functionality - Attendance Tracker
+### Functionality - Highscores
 
 | **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| **Code Structure & Modifiability**                  | Application opens in Visual Studio without modification. | Application opens in Visual Studio with minor modifications. | Application opens in Visual Studio with significant modifications. | Application fails to open in Visual Studio.            |
-| **Project Reference**                               | Project reference to the Student Management System is correctly added. | Project reference is added with minor issues.         | Project reference is added with significant issues.  | Project reference is missing or incorrect.            |
-| **Learner Class Modification**                      | Learner class is modified correctly with the additional "attendance" field and constructor. | Minor issues in adding the "attendance" field or constructor. | Significant issues in adding "attendance" field or constructor. | Major errors in modifying the Learner class.          |
-| **Form1 Functionality - Reading Attendance File**   | Attendance file is correctly read with the isAttendance parameter set to true. | Minor issues in reading the attendance file.         | Significant issues in reading the attendance file.  | Unable to read the attendance file.                   |
-| **Form1 Functionality - Displaying Attendance**     | DataGridView displays correct details for each learner's attendance. | Minor issues in displaying attendance details.       | Significant issues in displaying attendance details. | DataGridView does not display relevant attendance details. |
-| **Form1 Functionality - Displaying Learners at Risk**| ListBox correctly displays learners with attendance below 50%. | Minor issues in displaying learners at risk.         | Significant issues in displaying learners at risk.  | ListBox does not display learners at risk correctly.  |
-| **Overall Application Functionality**               | Application fulfills all requirements with a smooth user experience. | Some functionalities are incomplete or have minor issues. | Several functionalities are missing or have significant issues. | Most functionalities are missing or not functional. |
+| **Code Structure and Modifiability**                     | Application opens in Visual Studio without modification. | Application opens with minor modifications.        | Application opens with significant modifications. | Application fails to open in Visual Studio.            |
+| **File Reading in Form1**                           | Form1.cs successfully reads highscores.txt file.      | Minor issues in reading highscores.txt.          | Significant issues in reading highscores.txt.     | File reading is not implemented correctly.           |
+| **Highscores Display in ListBox**                   | Highscores are displayed in the required format in a ListBox. | Minor issues in displaying highscores.          | Significant issues in displaying highscores.     | Highscores are not displayed correctly or not implemented. |
 
 ### Code Elegance
 
@@ -36,14 +34,46 @@
 | **Object-Oriented Principles**                      | Object-oriented principles are applied effectively.   | Minor deviations from object-oriented principles.  | Significant deviations from object-oriented principles. | Object-oriented principles are not applied correctly. |
 | **Code Quality (Control Flow, Data Structures, Functions)** | Idiomatic use of control flow, data structures, and in-built functions. | Minor deviations from idiomatic usage.              | Significant deviations from idiomatic usage.       | Poor or non-idiomatic usage.                        |
 | **Algorithmic Efficiency**                          | Efficient algorithmic approach is demonstrated.       | Minor inefficiencies in the algorithmic approach.  | Significant inefficiencies in the algorithmic approach. | Poor or non-efficient algorithmic approach.        |
-| **Modularity**                                      | Sufficient modularity is demonstrated, with well-organized and encapsulated code. | Minor issues in modularity.                       | Significant issues in modularity.                  | Lack of modularity, code is not well-organized.     |
+| **Modularity**                                      | Sufficient modularity is demonstrated, with well-organised and encapsulated code. | Minor issues in modularity.                       | Significant issues in modularity.                  | Lack of modularity, code is not well-organised.     |
 | **XML Documentation Comments**                     | Each file contains XML documentation comments at the top, following the provided example. | Minor issues in XML documentation comments.       | Significant issues in XML documentation comments. | Missing or incorrect XML documentation comments.  |
 | **Code Formatting**                                | Code is consistently and appropriately formatted.    | Minor inconsistencies in code formatting.         | Significant inconsistencies in code formatting.  | Poor or non-consistent code formatting.            |
 | **Dead or Unused Code**                             | No dead or unused code is present in the application. | Minor instances of dead or unused code.           | Significant instances of dead or unused code.    | Widespread presence of dead or unused code.        |
 
-### Documentation
+### Documentation - 5%
 
 | **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **README Content - Class Diagram**                 | README.md contains a clear and accurate class diagram of the applications. | Minor issues or inaccuracies in the class diagram.  | Significant issues or inaccuracies in the class diagram. | Class diagram is missing or unclear.                |
 | **README Content - Known Bugs**                    | README.md includes a section on known bugs, if applicable, with clear descriptions. | Minor issues in describing known bugs.              | Significant issues in describing known bugs.       | Missing or unclear information on known bugs.       |
+
+# Marking Cover Sheet
+
+**Course Title:** [Course Title]
+
+**Assignment Title:** [Assignment Title]
+
+**Learner Name:** [Learner Name]
+
+**Learner ID:** [Learner ID]
+
+**Date Submitted:** [Date]
+
+# Overall Comments:
+
+[Insert overall comments and feedback here.]
+
+**Functionality - Pong: [x/40]**
+
+**Functionality - Highscores: [x/10]**
+
+**Code Elegance: [x/45]**
+
+**Documentation: [x/5]**
+
+**Total Marks (100%):** [Total Marks]
+
+**Assessor's Name:** [Assessor's Name]
+
+**Assessor's Signature:** ___________________
+
+*Note: This cover sheet is to be completed and submitted with the assignment.*

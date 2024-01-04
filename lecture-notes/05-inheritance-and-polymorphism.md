@@ -198,7 +198,7 @@ Here are steps you should consider:
 3. Implement the `CalculateArea()` method in the `Rectangle` and `Circle` classes to calculate the area of a rectangle and a circle respectively.
 4. Prompt the user using a `TextBox` to select a shape from the list of shapes.
 5. Parse the user's input and create an instance of the selected shape.
-6. Prompt the user using a `TextBox` to enter the required dimensions of the selected shape. For example, if the user selects a rectangle, the application should prompt the user to enter the length and width of the rectangle.
+6. Prompt the user using a `TextBox` or `TextBoxes` to enter the required dimensions of the selected shape. For example, if the user selects a rectangle, the application should prompt the user to enter the length and width of the rectangle.
 7. Calculate the area of the selected shape using polymorphism by calling the `CalculateArea()` method on the shape object created in step 5.
 8. Output the area of the selected shape in a `Label`.
 9. Add error handling to the application to handle invalid input. If the user enters invalid input, the application should output "Invalid input. Please try again." and prompt the user to enter valid input.

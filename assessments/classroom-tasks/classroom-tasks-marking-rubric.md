@@ -8,7 +8,7 @@
 | **Unit Tests Implementation**                        | 20 unit tests are implemented successfully, covering all specified cases. | Minor issues in unit test implementation.        | Significant issues in unit test implementation. | Unit tests are not implemented or do not cover specified cases. |
 
 
-### Code Elegance
+### Code Quality and Best Practices
 
 | **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
@@ -44,7 +44,7 @@
 
 **Functionality: [x/50]**
 
-**Code Elegance: [x/45]**
+**Code Quality and Best Practices: [x/45]**
 
 **Documentation: [x/5]**
 

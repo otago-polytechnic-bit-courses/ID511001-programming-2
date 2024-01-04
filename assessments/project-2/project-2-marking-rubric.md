@@ -29,7 +29,7 @@
 | **Form1 Functionality - Displaying Learners at Risk**| ListBox correctly displays learners with attendance below 50%. | Minor issues in displaying learners at risk.         | Significant issues in displaying learners at risk.  | ListBox does not display learners at risk correctly.  |
 | **Overall Application Functionality**               | Application fulfills all requirements with a smooth user experience. | Some functionalities are incomplete or have minor issues. | Several functionalities are missing or have significant issues. | Most functionalities are missing or not functional. |
 
-### Code Elegance
+### Code Quality and Best Practices
 
 | **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
@@ -70,7 +70,7 @@
 
 **Functionality - Attendance Tracker: [x/10]**
 
-**Code Elegance: [x/45]**
+**Code Quality and Best Practices: [x/45]**
 
 **Documentation: [x/5]**
 

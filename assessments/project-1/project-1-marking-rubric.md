@@ -25,7 +25,7 @@
 | **File Reading in Form1**                           | Form1.cs successfully reads highscores.txt file.      | Minor issues in reading highscores.txt.          | Significant issues in reading highscores.txt.     | File reading is not implemented correctly.           |
 | **Highscores Display in ListBox**                   | Highscores are displayed in the required format in a ListBox. | Minor issues in displaying highscores.          | Significant issues in displaying highscores.     | Highscores are not displayed correctly or not implemented. |
 
-### Code Elegance
+### Code Quality and Best Practices
 
 | **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
@@ -66,7 +66,7 @@
 
 **Functionality - Highscores: [x/10]**
 
-**Code Elegance: [x/45]**
+**Code Quality and Best Practices: [x/45]**
 
 **Documentation: [x/5]**
 

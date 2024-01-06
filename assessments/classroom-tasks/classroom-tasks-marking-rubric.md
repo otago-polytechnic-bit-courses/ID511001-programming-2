@@ -1,6 +1,6 @@
 # Marking Rubric
 
-### Functionality
+### Functionality - 50%
 
 | **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
@@ -8,7 +8,7 @@
 | **Unit Tests Implementation**                        | 20 unit tests are implemented successfully, covering all specified cases. | Minor issues in unit test implementation.        | Significant issues in unit test implementation. | Unit tests are not implemented or do not cover specified cases. |
 
 
-### Code Quality and Best Practices
+### Code Quality and Best Practices - 45%
 
 | **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |

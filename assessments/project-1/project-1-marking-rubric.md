@@ -1,6 +1,6 @@
 # Marking Rubric
 
-### Functionality - Pong
+### Functionality - Pong - 45%
 
 | **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
@@ -17,7 +17,7 @@
 | **Restart and Pause Functionality**                   | Game can be restarted and paused with R and P keys.   | Minor issues in restart or pause functionality.  | Significant issues in restart or pause functionality. | Restart or pause functionality is not implemented correctly. |
 | **Random Color Assignment**                         | Ball and paddles are assigned random colors.          | Minor issues in random color assignment.         | Significant issues in random color assignment.  | Random color assignment is not implemented correctly. |
 
-### Functionality - Highscores
+### Functionality - Highscores - 10%
 
 | **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
@@ -25,7 +25,7 @@
 | **File Reading in Form1**                           | Form1.cs successfully reads highscores.txt file.      | Minor issues in reading highscores.txt.          | Significant issues in reading highscores.txt.     | File reading is not implemented correctly.           |
 | **Highscores Display in ListBox**                   | Highscores are displayed in the required format in a ListBox. | Minor issues in displaying highscores.          | Significant issues in displaying highscores.     | Highscores are not displayed correctly or not implemented. |
 
-### Code Quality and Best Practices
+### Code Quality and Best Practices - 45%
 
 | **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |

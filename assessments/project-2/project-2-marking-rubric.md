@@ -45,7 +45,7 @@
 
 ### Documentation - 5%
 
-| **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
+| **Criteria**                                       | **5**                                              | **4**                                               | **2-3**                                               | **1-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **README Content - Class Diagram**                 | README.md contains a clear and accurate class diagram of the applications. | Minor issues or inaccuracies in the class diagram.  | Significant issues or inaccuracies in the class diagram. | Class diagram is missing or unclear.                |
 | **README Content - Known Bugs**                    | README.md includes a section on known bugs, if applicable, with clear descriptions. | Minor issues in describing known bugs.              | Significant issues in describing known bugs.       | Missing or unclear information on known bugs.       |

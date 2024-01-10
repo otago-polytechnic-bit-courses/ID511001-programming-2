@@ -22,7 +22,7 @@
 
 ### Documentation - 5%
 
-| **Criteria**                                       | **5**                                              | **4**                                               | **2-3**                                               | **1-0**                                               |
+| **Criteria**                                       | **5**                                              | **4**                                               | **3-2**                                               | **1-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **README Content - Unit Test Instructions**                | README.md provides clear instructions on how to run unit tests. | Instructions in README.md are somewhat unclear.  | Instructions in README.md are confusing.          | Unit test instructions are missing or inadequate in README.md. |
 

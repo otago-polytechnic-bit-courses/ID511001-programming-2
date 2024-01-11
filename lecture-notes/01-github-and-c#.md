@@ -674,9 +674,23 @@ Create a **static method** called `isAnagram` that takes in two parameters, `som
 
 In my solution, I converted the two **strings** to **char** arrays and sorted them using the `Array.Sort` **static method**. Then I compared the sorted char arrays using the `SequenceEqual` **static method** and returned `true` if they match, otherwise `false`.
 
+Declare the following test cases in the `Main()` method:
+
+``cs
+Console.WriteLine(isAnagram("listen", "silent")); // Expected output: true
+Console.WriteLine(isAnagram("hello", "world")); // Expected output: false
+``
+
 ## Task 5:
 
 Create a **static method** called `convert` that takes in two parameters, `hours` and `minutes` which are both integers. Inside the **static method**, write code to convert both `hours` and `minutes` to seconds. Multiply the number of hours by 3600 (the number of seconds in an hour) and the number of minutes by 60 (the number of seconds in a minute). Add these values together and return the total number of seconds.
+
+Declare the following test cases in the `Main()` method:
+
+``cs
+Console.WriteLine(convert(2, 30)); // Expected output: 9000
+Console.WriteLine(convert(1, 15)); // Expected output: 4500
+``
 
 ## Task 6:
 
@@ -690,13 +704,34 @@ Create a **static method** called `removeVowels` that takes in a parameter `word
 
 To handle the edge case where the word does not contain vowels, you can check if `word` is equal to the result after removing vowels. If it is the same, you can return a message indicating that the word does not contain vowels, otherwise, return `word` without vowels.
 
+Declare the following test cases in the `Main()` method:
+
+``cs
+Console.WriteLine(removeVowels("C#")); // Expected output: C#
+Console.WriteLine(removeVowels("programming")); // Expected output: prgrmmng
+``
+
 ## Task 8:
 
 Create a **static method** called `isPalindrome` that takes in a parameter `word` which is a string. Inside the **static method**, write code to check if `word` is a palindrome. A palindrome is a word, phrase, or sequence that reads the same backward as forward. Compare the characters of `word` from the beginning and end of the string. If they match, continue checking until you reach the middle of the string. If all characters match, return `true`, otherwise, return `false`.
 
+Declare the following test cases in the `Main()` method:
+
+``cs
+Console.WriteLine(isPalindrome("level")); // Expected output: true
+Console.WriteLine(isPalindrome("hello")); // Expected output: false
+``
+
 ## Task 9:
 
 Create a **static method** called `isPrime` that takes in a parameter `num` which is an integer. Inside the **static method**, write code to check if `num` is a prime number. A prime number is a number that is only divisible by 1 and itself. Use a loop to check if `num` is divisible by any number other than 1 and itself. If it is, return `false`, otherwise, return `true`.
+
+Declare the following test cases in the `Main()` method:
+
+``cs
+Console.WriteLine(isPrime(7)); // Expected output: true
+Console.WriteLine(isPrime(10)); // Expected output: false
+``
 
 ## Task 10:
 

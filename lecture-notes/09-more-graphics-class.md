@@ -1,6 +1,6 @@
 # 09: More Graphics Class
 
-No new material...just more practice.
+No new material...just more guidance for **Project 1**.
 
 # Formative Assessment
 

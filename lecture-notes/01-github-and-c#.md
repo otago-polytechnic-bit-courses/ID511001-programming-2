@@ -638,7 +638,7 @@ This is a multi-line comment
 */
 ```
 
-There are also **XML** comments, which are used to document code and can be used by tools like **Visual Studio** to provide **IntelliSense**. They start with `///` and continue until the end of the line.
+There are also **XML** documentation comments, which are used to document code and can be used by tools like **Visual Studio** to provide **IntelliSense**. They start with `///` and continue until the end of the line.
 
 ```cs
 /// <summary>

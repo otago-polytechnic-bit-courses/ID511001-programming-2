@@ -42,6 +42,10 @@ public class Dog
 
 In this example, the **class** `Dog` has two **fields**, `name` and `age`, which represent the name and age of a dog, respectively. The **class** also has one **method**, `Bark()`, which causes the dog to bark by display "Woof woof!".
 
+## When to use a struct vs a class?
+
+Reading - <https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct>
+
 ## Objects
 
 To create an **object** from this **class**, you can use the `new` keyword and the **class** constructor like this:

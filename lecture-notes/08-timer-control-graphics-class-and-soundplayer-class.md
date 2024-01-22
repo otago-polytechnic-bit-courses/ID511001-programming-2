@@ -51,6 +51,35 @@ private void Form1_Paint(object sender, PaintEventArgs e)
 
 ## SoundPlayer Class
 
+The `SoundPlayer` class provides methods for playing sounds files. To get started, above the `Form1`'s constructor, declare a `SoundPlayer` variable:
+
+```csharp
+private SoundPlayer soundPlayer;
+```
+
+In the `Form1`'s constructor, create a new instance of the `SoundPlayer` class by calling the `SoundPlayer` constructor:
+
+```csharp
+public Form1()
+{
+    InitializeComponent();
+
+    soundPlayer = new SoundPlayer(); // You can also pass a file path to the constructor
+}
+```
+
+To play a sound, call the `Play()` method:
+
+```csharp
+soundPlayer.Play();
+```
+
+To stop a sound, call the `Stop()` method:
+
+```csharp
+soundPlayer.Stop();
+```
+
 # Formative Assessment
 
 Before you start, create a new **C# Console** application called **08-formative-assessment**.

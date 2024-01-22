@@ -94,7 +94,7 @@ label1.Text = "My text has changed";
 
 Run your application and click on the `Button` to see the `Label` change.
 
-3. Add a `Textbox` to your `Form`. Set it `Text` property to 0. Create a variable `nClicks`, The `Click` handler for a `Button` is shown below. What would be the effect of clicking on this `Button` ten times? 
+3. Add a `Textbox` to your `Form`. Set it `Text` property to 0. Create a variable `nClicks`, The `Click` handler for a `Button` is shown below. What would be the effect of clicking on this `Button` ten times?
 
 ```cs
 private void button1_Click(object sender, EventArgs e)
@@ -106,6 +106,7 @@ private void button1_Click(object sender, EventArgs e)
 ```
 
 **Notes:**
+
 - You can not write the method definition for the `button1_Click` handler yourself. You must let **Visual Studio** do it for you.
 - The `Convert.ToInt16(n)` function translates the parameter value n into its 16 bit integer representation. Thus `Convert.ToInt16(5)` converts the string "5" into the integer value 5.
 
@@ -119,25 +120,25 @@ textBox1.Text = nClicks.ToString();
 
 ## TextBox and ListBox Controls
 
-We used a single-lined `TextBox` to read and write text. A `TextBox` can be also be multi-lined, selected from the drop down box at the top right corner of the `TextBox` control.  
+We used a single-lined `TextBox` to read and write text. A `TextBox` can be also be multi-lined, selected from the drop down box at the top right corner of the `TextBox` control.
 
 Each control has its own set of properties, events and methods, events. We used the `TextBox` control's properties (e.g. Width) and control Events (e.g. Click). There is a third part to the interface of a control: its methods. Methods are commands that the control understands. You use these commands when writing event handlers for the control. For example, `TextBox` controls have a method called `Clear()`. This method tells a `TextBox` to erase all the text it contains. To invoke a method, you use the same dot notation that you used for properties. Thus, the statement `textBox1.Clear();` will erase all the text in a `TextBox` named `textBox1`. To add text to a `TextBox`, use the `AppendText(s)` method, where the parameters is the string that is to be added to the `TextBox`.
 
 A ListBox is another control for reading and writing text. It is multi-lined by definition.
 
-One of the things that makes **C#** so powerful is that a control's properties can themselves be complex objects that have their own methods, events and sub-properties. For example, a `ListBox` contains a property called `Items`, which stores the text contents of the `ListBox` (just as the `Width` property of a `Button` stores the `Width` of the `Button`). The `Items` property is itself a complex data object with methods and properties. For example, `Items` has a method called `Clear()` to clear all items in the `ListBox`. It also has a method called `Add()`, which adds a new line of text to `Items` (and thus to the `ListBox`). To call a sub-method like `Add()`, just extend the dot notation in the logical way, adding the method name after the property name. For example, the following statement puts the string "This is a new line of text” after the current contents of the `ListBox` called `listBox1`: 
+One of the things that makes **C#** so powerful is that a control's properties can themselves be complex objects that have their own methods, events and sub-properties. For example, a `ListBox` contains a property called `Items`, which stores the text contents of the `ListBox` (just as the `Width` property of a `Button` stores the `Width` of the `Button`). The `Items` property is itself a complex data object with methods and properties. For example, `Items` has a method called `Clear()` to clear all items in the `ListBox`. It also has a method called `Add()`, which adds a new line of text to `Items` (and thus to the `ListBox`). To call a sub-method like `Add()`, just extend the dot notation in the logical way, adding the method name after the property name. For example, the following statement puts the string "This is a new line of text” after the current contents of the `ListBox` called `listBox1`:
 
 ```cs
 listBox1.Items.Add("This is new line of text");
 ```
 
-The `Items` property also has properties of its own. For example, `Items` has a property `Count`, which stores the number of lines of text the `Items` property contains (this is of course equal to the number of lines of text in the `ListBox`). 
+The `Items` property also has properties of its own. For example, `Items` has a property `Count`, which stores the number of lines of text the `Items` property contains (this is of course equal to the number of lines of text in the `ListBox`).
 
 ```cs
 listBox1.Items.Count;
 ```
 
-Note that you do not need to know how the `Clear()` method, the `Lines` property, the `Add()` method or the `Count` property are implemented. You only need to know how to use them. For example, you must know that the `Add()` method requires a string parameter, and that `Count` property is an integer value. You need to know the interface, but not the implementation. 
+Note that you do not need to know how the `Clear()` method, the `Lines` property, the `Add()` method or the `Count` property are implemented. You only need to know how to use them. For example, you must know that the `Add()` method requires a string parameter, and that `Count` property is an integer value. You need to know the interface, but not the implementation.
 
 ## Radio Button Controls
 
@@ -145,7 +146,33 @@ Note that you do not need to know how the `Clear()` method, the `Lines` property
 
 `RadioButtons` are yes/no (or on/off) controls that occur in mutually exclusive sets. That is, only one member of a set of radio buttons can be selected (on) at a time. Selecting any member of a set of radio buttons causes all the other members to be deselected.
 
-If you place a number of radio buttons directly on the `Form`, they are automatically members of a mutually exclusive set (i.e. only one of them can be selected at a time). If you want more than one set of radio buttons, you must place each set in a separate container. **C#** provides two types of containers. They can be used to group any **C#** controls, but are most frequently used to define a set of `RadioButtons`. They are a `GroupBox` and a `Panel`. You must manually place each button on the container, and must manually change the caption of each button. 
+If you place a number of radio buttons directly on the `Form`, they are automatically members of a mutually exclusive set (i.e. only one of them can be selected at a time). If you want more than one set of radio buttons, you must place each set in a separate container. **C#** provides two types of containers. They can be used to group any **C#** controls, but are most frequently used to define a set of `RadioButtons`. They are a `GroupBox` and a `Panel`. You must manually place each button on the container, and must manually change the caption of each button.
+
+## Data Grid View Control
+
+The `DataGridView` control is a new control that replaces the `DataGrid` control. The `DataGridView` control provides a powerful and flexible way to display data in a tabular format. You can use the `DataGridView` control to show read-only views of a small amount of data, or you can scale it to show editable views of very large sets of data. The `DataGridView` control supports the standard Windows Forms data binding model, so it can bind to a variety of data sources.
+
+```cs
+public partial class Form1 : Form
+{
+   private List<string>? _names;
+
+   public Form1()
+   {
+      InitializeComponent();
+
+      _names = new() { "John", "Mary", "Bob", "Jane" };
+
+      dataGridView1.Columns.Add("Name", "Name");
+
+      foreach (string name in _names)
+      {
+         int rowIdx = dataGridView1.Rows.Add();
+         dataGridView1.Rows[rowIdx].Cells["Name"].Value = name;
+      }
+   }
+}
+```
 
 # Formative Assessment
 
@@ -169,15 +196,15 @@ Write code that allows the user to enter two numbers, select an arithmetic opera
 
 ![](../resources/img/07/06-image.png)
 
-1.	Create a new application.
-2.	Set up the `Form`, selecting an appropriate colour, font and style. Set the form's `Text` property to **Calculator**.
-3.	Add the `Buttons`, providing the values for each `Text` property. 
-4.	The line between the top two `TextBoxes` and the third `TextBox` is a `Panel`. Decide how you want your interface to look and use the appropriate control.
-5.	Add the code for the `Click` event for each `Button`. 
-6.	Set the third `TextBox's` `ReadOnly` property to `True`. This will stop the user entering a value in this `TextBox` and overwriting the calculated answer.
-7.	Add **mod** and **div** `Buttons` with the appropriate functionality.
+1. Create a new application.
+2. Set up the `Form`, selecting an appropriate colour, font and style. Set the form's `Text` property to **Calculator**.
+3. Add the `Buttons`, providing the values for each `Text` property.
+4. The line between the top two `TextBoxes` and the third `TextBox` is a `Panel`. Decide how you want your interface to look and use the appropriate control.
+5. Add the code for the `Click` event for each `Button`.
+6. Set the third `TextBox's` `ReadOnly` property to `True`. This will stop the user entering a value in this `TextBox` and overwriting the calculated answer.
+7. Add **mod** and **div** `Buttons` with the appropriate functionality.
 
-**Note:** To make this application robust, so that it doesn't break under different conditions, we need to check for data validation on the input (checking that the user has entered a valid number.) This is beyond our expertise at present, so we will assume the best-case scenario, that the user enters only valid integers. 
+**Note:** To make this application robust, so that it doesn't break under different conditions, we need to check for data validation on the input (checking that the user has entered a valid number.) This is beyond our expertise at present, so we will assume the best-case scenario, that the user enters only valid integers.
 
 ## Task 3:
 
@@ -186,10 +213,10 @@ Write an application for use in a Pizza Parlour. The user enters his order, and 
 ![](../resources/img/07/07-image.png)
 
 1. Create a new application.
-2.	Your application should allow at least two sizes of pizza, with different prices. Users must select a size. If a user tries to order without selecting a size, the user should receive polite feedback asking him to please specify the size.
-3.	You should provide at least five different extra toppings, each with associated prices. Users can select any combination of extra toppings, or none at all.
-4.	You should correctly display the order in a `ListBox` and compute the total and display it in a `TextBox`.
-5.	When a new order is generated, the old order information should be cleared from the display. 
+2. Your application should allow at least two sizes of pizza, with different prices. Users must select a size. If a user tries to order without selecting a size, the user should receive polite feedback asking him to please specify the size.
+3. You should provide at least five different extra toppings, each with associated prices. Users can select any combination of extra toppings, or none at all.
+4. You should correctly display the order in a `ListBox` and compute the total and display it in a `TextBox`.
+5. When a new order is generated, the old order information should be cleared from the display.
 
 # Formative Assessment Submission
 

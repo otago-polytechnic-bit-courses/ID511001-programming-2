@@ -6,14 +6,14 @@ The **Microsoft Visual Studio IDE** (integrated development environment) is made
 
 1. Open **Visual Studio**
 2. Select **Create a new project**
-3. Select **Windows Forms App (.NET Framework)**
+3. Select **Windows Forms App (.NET Framework)**. Choose the latest version on your machine.
 4. Click **Next**
 5. Fill in the following fields:
    - **Project name:** `03FormativeAssessment`
    - **Location:** `<path-to-repository>`
    - **Solution name:** `03FormativeAssessment`
 
-Ensure that these four panes are visible on your screen. Note they are all moveable.
+You should see at least the design view, output and solution explorer panels. Note they are all moveable.
 
 ![](../resources/img/07/01-image.png)
 

@@ -77,6 +77,12 @@ foreach (string name in names) // Iterate over the names in the list using a for
 
 **Language Integrated Query** or **LINQ** provides a set of features that extends the **C#** language to support queries against data sources. It provides a consistent way to query data from different data sources, i.e., in-memory collections, databases, etc.
 
+To get started with **LINQ**, you need to include the following directive at the top of your file:
+
+```cs
+using System.Linq;
+```
+
 **LINQ** queries are written using **query expressions**. A query expression is a query that is written in a declarative syntax, similar to **SQL**. It consists of a **from** clause, a **where** clause, a **orderby** clause, a **select** clause, and a **groupby** clause.
 
 ```cs

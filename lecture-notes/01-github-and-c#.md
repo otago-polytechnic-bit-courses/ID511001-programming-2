@@ -618,7 +618,7 @@ Try and follow the naming conventions below when naming your **classes**, **meth
 - Private fields should be prefixed with an underscore (`_`).
 - Static fields should be prefixed with a lowercase `s` (`s_`).
 
-**Note:** You will learn about the private and static keywords in `03-classes-objects-and-encapsulation.md`.
+**Note:** You will learn about the private and static keywords in `04-classes-objects-and-encapsulation.md`.
 
 ## Commenting
 

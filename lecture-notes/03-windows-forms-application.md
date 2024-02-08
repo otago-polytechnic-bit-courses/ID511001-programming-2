@@ -86,6 +86,11 @@ It can be confusing to find yourself suddenly looking at the code instead of the
 
 ![](../resources/img/07/04-image.png)
 
+**Note:** If you do not see the `using` directives, click on the icon to see a list of the `using` directives that are available.
+
+![](../resources/img/07/08-image.png)
+
+
 Enter some code for the `Button` to execute. For example, when the `button1` is clicked, the caption property of the `Label` is changed. Here is one possibility:
 
 ```cs

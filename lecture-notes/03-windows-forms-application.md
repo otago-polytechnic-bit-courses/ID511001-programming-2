@@ -218,6 +218,8 @@ Write an application for use in a Pizza Parlour. The user enters his order, and 
 4. You should correctly display the order in a `ListBox` and compute the total and display it in a `TextBox`.
 5. When a new order is generated, the old order information should be cleared from the display.
 
+**Note:** You can generate a new order by clicking on a `Button` or dynamically as the user selects different options.
+
 # Formative Assessment Submission
 
 Push your code to your **GitHub** repository.

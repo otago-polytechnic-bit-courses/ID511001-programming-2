@@ -58,7 +58,13 @@ You can also use **top-level statements** to declare the **Main** method. This a
 ```cs
 // Using directives
 
-Console.WriteLine("Hello, World!");
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
 ```
 
 **Note:** In this course, it is recommended that you use the **Main** method approach.

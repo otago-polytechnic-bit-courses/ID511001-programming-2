@@ -102,7 +102,7 @@
 
 ![](img/git-integration-in-visual-studio/11.PNG) 
 
-12. Click the **Push** button to push your changes to the remote repository, i.e., on GitHub.
+12. Ignore the **Successfully pushed to origin/main**. Click the **Push** button to push your changes to the remote repository, i.e., on GitHub.
 
 ![](img/git-integration-in-visual-studio/12.PNG) 
 

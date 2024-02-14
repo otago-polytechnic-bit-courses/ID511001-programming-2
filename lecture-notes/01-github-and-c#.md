@@ -33,6 +33,10 @@ Open up **Git Bash** or whatever alternative you see fit on your computer. Clone
 
 - <https://git-scm.com/docs/git-clone>
 
+## Full Resource
+
+You can find the full resource on **GitHub** - <https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-24/resources/github-classroom-setup.md>. It also includes information on **Git Integration in Visual Studio**.
+
 ## C#
 
 **C#** is a programming language developed by **Microsoft** for building web, mobile applications, desktop applications and games. It is a modern, **object-oriented** language designed to be easy to use and similar in syntax to other popular programming languages such as **C++** and **Java**. **C#** is commonly used to build applications on the **Microsoft .NET Framework**, but developers can also use it to build cross-platform applications using frameworks like **Xamarin** and **.NET Core**.

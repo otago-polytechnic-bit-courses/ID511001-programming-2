@@ -56,7 +56,7 @@
 
 # Git Integration in Visual Studio
 
-1. To clone you repository, click the green **Code** button and copy the URL.
+1. To clone your repository, click the green **Code** button and copy the URL.
 
 ![](img/git-integration-in-visual-studio/01.jpeg) 
 
@@ -72,7 +72,7 @@
 
 ![](img/git-integration-in-visual-studio/04.PNG) 
 
-5. Provide a project name, location and place the solution and project in the same directory. Click the **Next** button.
+5. Provide a project name and location and place the solution and project in the same directory. Click the **Next** button.
 
 ![](img/git-integration-in-visual-studio/05.PNG) 
 
@@ -94,7 +94,7 @@
 
 10. Add a commit message, i.e., add project files. Click the **Commit All** button.
 
-Note: Your commit messages should describe the changes you have made to your project. 
+**Note:** Your commit messages should describe the changes you have made to your project. 
 
 ![](img/git-integration-in-visual-studio/10.PNG) 
 
@@ -102,7 +102,7 @@ Note: Your commit messages should describe the changes you have made to your pro
 
 ![](img/git-integration-in-visual-studio/11.PNG) 
 
-12. Click on the **Push** button to push your changes to the remote repository, i.e., on GitHub.
+12. Click the **Push** button to push your changes to the remote repository, i.e., on GitHub.
 
 ![](img/git-integration-in-visual-studio/12.PNG) 
 

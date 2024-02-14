@@ -56,3 +56,56 @@
 
 # Git Integration in Visual Studio
 
+1. To clone you repository, click the green **Code** button and copy the URL.
+
+![](img/git-integration-in-visual-studio/01.jpeg) 
+
+2. In your **H: drive** or **OneDrive**, clone the repository using the URL you copied using **Git Bash**.
+
+![](img/git-integration-in-visual-studio/02.PNG) 
+
+3. Open **Visual Studio** and create a new project.
+
+![](img/git-integration-in-visual-studio/03.PNG) 
+
+4. Select **Windows Forms App**. Click the **Next** button.
+
+![](img/git-integration-in-visual-studio/04.PNG) 
+
+5. Provide a project name, location and place the solution and project in the same directory. Click the **Next** button.
+
+![](img/git-integration-in-visual-studio/05.PNG) 
+
+6. Select a framework version. Click the **Create** button.
+
+![](img/git-integration-in-visual-studio/06.PNG) 
+
+7. On the right-hand side of the screen, click the **Git Changes** tab.
+
+![](img/git-integration-in-visual-studio/07.PNG) 
+
+8. Configure your username and email address.
+
+![](img/git-integration-in-visual-studio/08.PNG) 
+
+9. You will be prompted. Click the **Save** button.
+
+![](img/git-integration-in-visual-studio/09.PNG) 
+
+10. Add a commit message, i.e., add project files. Click the **Commit All** button.
+
+Note: Your commit messages should describe the changes you have made to your project. 
+
+![](img/git-integration-in-visual-studio/10.PNG) 
+
+11. The commit has been made. 
+
+![](img/git-integration-in-visual-studio/11.PNG) 
+
+12. Click on the **Push** button to push your changes to the remote repository, i.e., on GitHub.
+
+![](img/git-integration-in-visual-studio/12.PNG) 
+
+13. Go to your repository on GitHub. You should see the changes you made to your project.
+
+![](img/git-integration-in-visual-studio/13.jpeg)

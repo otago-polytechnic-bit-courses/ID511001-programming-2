@@ -656,6 +656,8 @@ There are also **XML** documentation comments, which are used to document code a
 /// </summary>
 ```
 
+**Note:** In the assessments, you will use **XML** documentation comments to document your code. You can comment out code that you wish to refer to at a later date. Otherwise, these should be removed before submitting your work.
+
 # Formative Assessment
 
 Before you start, create a new **C# Console** application called **01-formative-assessment**.

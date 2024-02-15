@@ -2,7 +2,7 @@
 
 ### Functionality - Pong - 45%
 
-| **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
+| **Criteria**                                       | **5**                                              | **4**                                               | **3-2**                                               | **1-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **Code Structure and Modifiability**                     | Application opens in Visual Studio without modification. | Application opens with minor modifications.        | Application opens with significant modifications. | Application fails to open in Visual Studio.            |
 | **Game Initialisation and Timer**                    | Game is driven by a Timer, starts on space bar press.  | Minor issues in Timer implementation or game start. | Significant issues in Timer implementation or game start. | Game fails to start or Timer is not implemented.      |
@@ -19,7 +19,7 @@
 
 ### Functionality - Highscores - 10%
 
-| **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
+| **Criteria**                                       | **5**                                              | **4**                                               | **3-2**                                               | **1-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **Code Structure and Modifiability**                     | Application opens in Visual Studio without modification. | Application opens with minor modifications.        | Application opens with significant modifications. | Application fails to open in Visual Studio.            |
 | **File Reading in Form1**                           | Form1.cs successfully reads highscores.txt file.      | Minor issues in reading highscores.txt.          | Significant issues in reading highscores.txt.     | File reading is not implemented correctly.           |
@@ -27,7 +27,7 @@
 
 ### Code Quality and Best Practices - 45%
 
-| **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
+| **Criteria**                                       | **5**                                              | **4**                                               | **3-2**                                               | **1-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **.gitignore Usage**                               | .gitignore file is present and correctly configured for Visual Studio. | Minor issues in .gitignore configuration.           | Significant issues in .gitignore configuration.    | Missing or incorrect .gitignore file.               |
 | **Naming Conventions**                              | Consistent and appropriate naming throughout files, variables, methods, and classes. | Minor inconsistencies in naming conventions.       | Significant inconsistencies in naming conventions. | Naming conventions are not followed.                |

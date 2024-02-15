@@ -2,7 +2,7 @@
 
 ### Functionality - 50%
 
-| **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
+| **Criteria**                                       | **5**                                              | **4**                                               | **3-2**                                               | **1-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **Code Structure and Modifiability**                     | Application opens in Visual Studio without modification. | Application opens with minor modifications.        | Application opens with significant modifications. | Application fails to open in Visual Studio.            |
 | **Unit Tests Implementation**                        | 20 unit tests are implemented successfully, covering all specified cases. | Minor issues in unit test implementation.        | Significant issues in unit test implementation. | Unit tests are not implemented or do not cover specified cases. |
@@ -10,7 +10,7 @@
 
 ### Code Quality and Best Practices - 45%
 
-| **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
+| **Criteria**                                       | **5**                                              | **4**                                               | **3-2**                                               | **1-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **Naming Conventions**                              | Consistent and appropriate naming throughout files, variables, methods, and classes. | Minor inconsistencies in naming conventions.       | Significant inconsistencies in naming conventions. | Naming conventions are not followed.                |
 | **Idiomatic Use**                             | Effective use of control flow, data structures, and in-built functions in an idiomatic manner. | Some instances of non-idiomatic code or inefficient use. | Significant non-idiomatic code affecting efficiency. | Poor use of control flow, data structures, or functions. |                      |

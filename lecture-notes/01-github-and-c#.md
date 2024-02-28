@@ -625,8 +625,8 @@ Try and follow the naming conventions below when naming your **classes**, **meth
 - Use **PascalCase** for **classes** and **methods**.
 - Use **camelCase** for **variables** and **parameters**.
 - Use **ALL_CAPS** for **constants**.
-- Private fields should be prefixed with an underscore (`_`).
-- Static fields should be prefixed with a lowercase `s` (`s_`).
+- Private fields should be prefixed with an underscore (`_`). For example, `private string _someVariableName;`
+- Static fields should be prefixed with a lowercase `s` (`s_`). For example, `static string s_someVariableName;`
 
 **Note:** You will learn about the private and static keywords in `04-classes-objects-and-encapsulation.md`.
 

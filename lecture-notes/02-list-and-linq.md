@@ -205,7 +205,7 @@ Implement the following:
 You have been given a list of `int` containing even numbers. Write a **LINQ** query that displays the sum of all even numbers in the list of `int`.
 
 ```cs
-List<int> numbers = new List<int>() { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+List<int> numbers = new List<int>() { 1, 4, 7, 8, 11, 12, 15, 16, 19, 20 };
 ```
 
 ## Task 5:

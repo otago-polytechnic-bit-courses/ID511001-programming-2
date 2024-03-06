@@ -198,7 +198,7 @@ Implement the following:
 1. Use the `Count` method to get the total number of book titles in `bookTitles` and assign it to a variable called `totalBooks`. Display the value of `totalBooks`.
 2. Use the `Contains` method to check if the title "Brave New World" exists in `bookTitles`. Assign the result to a variable called `hasBraveNewWorld`. Display the value of `hasBraveNewWorld`.
 3. Use the `FindIndex` method to find the index of the book title "1984" in `bookTitles` and assign it to a variable called `index1984`. Display the value of `index1984`.
-4. Use the `Clear` method to remove all elements from `bookTitles`. Display the contents of `bookTitles` after clearing it.
+4. Use the `Clear` method to remove all elements from `bookTitles`. Display the number of items in `bookTitles`.
 
 ## Task 4:
 

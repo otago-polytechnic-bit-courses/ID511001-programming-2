@@ -8,7 +8,7 @@ The **Microsoft Visual Studio IDE** (integrated development environment) is made
 2. Select **Create a new project**
 3. Select **Windows Forms App (.NET Framework)**. Choose the latest version on your machine.
    
-![](../resources/img/07/09-image.png)
+![](../resources/img/07/09-image.PNG)
 
 4. Click **Next**
 5. Fill in the following fields:

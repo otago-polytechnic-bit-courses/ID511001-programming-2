@@ -2,7 +2,7 @@
 
 ### Functionality - Student Management System - 40%
 
-| **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
+| **Criteria**                                       | **5**                                              | **4**                                               | **3-2**                                               | **1-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **Code Structure and Modifiability**                  | Application opens in Visual Studio without modification. | Application opens in Visual Studio with minor modifications. | Application opens in Visual Studio with significant modifications. | Application fails to open in Visual Studio.            |
 | **Enums Implementation**                            | Enums EPosition and ESalary are correctly implemented with values. | One or more enums are missing or incorrectly implemented. | Enums are incomplete or incorrectly implemented.      | Missing or incorrect implementation of enums.         |
@@ -19,7 +19,7 @@
 
 ### Functionality - Attendance Tracker - 10%
 
-| **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
+| **Criteria**                                       | **5**                                              | **4**                                               | **3-2**                                               | **1-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **Code Structure and Modifiability**                  | Application opens in Visual Studio without modification. | Application opens in Visual Studio with minor modifications. | Application opens in Visual Studio with significant modifications. | Application fails to open in Visual Studio.            |
 | **Project Reference**                               | Project reference to the Student Management System is correctly added. | Project reference is added with minor issues.         | Project reference is added with significant issues.  | Project reference is missing or incorrect.            |
@@ -31,7 +31,7 @@
 
 ### Code Quality and Best Practices - 45%
 
-| **Criteria**                                       | **10-9**                                              | **8-7**                                               | **6-5**                                               | **4-0**                                               |
+| **Criteria**                                       | **5**                                              | **4**                                               | **3-2**                                               | **1-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **.gitignore Usage**                               | .gitignore file is present and correctly configured for Visual Studio. | Minor issues in .gitignore configuration.           | Significant issues in .gitignore configuration.    | Missing or incorrect .gitignore file.               |
 | **Naming Conventions**                              | Consistent and appropriate naming throughout files, variables, methods, and classes. | Minor inconsistencies in naming conventions.       | Significant inconsistencies in naming conventions. | Naming conventions are not followed.                |
@@ -77,7 +77,5 @@
 **Total Marks (100%):** [Total Marks]
 
 **Assessor's Name:** [Assessor's Name]
-
-**Assessor's Signature:** ___________________
 
 *Note: This cover sheet is to be completed and submitted with the assignment.*

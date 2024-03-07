@@ -87,10 +87,23 @@ It can be confusing to find yourself suddenly looking at the code instead of the
 
 ![](../resources/img/07/04-image.png)
 
+**Note:** If you do not see the `using` directives, click on the icon to see a list of the `using` directives that are available.
+
+![](../resources/img/07/08-image.png)
+
 Enter some code for the `Button` to execute. For example, when the `button1` is clicked, the caption property of the `Label` is changed. Here is one possibility:
 
 ```cs
-label1.Text = "My text has changed";
+// using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+      label1.Text = "My text has changed";
+   }
+}
 ```
 
 Run your application and click on the `Button` to see the `Label` change.
@@ -98,11 +111,21 @@ Run your application and click on the `Button` to see the `Label` change.
 3. Add a `Textbox` to your `Form`. Set it `Text` property to 0. Create a variable `nClicks`, The `Click` handler for a `Button` is shown below. What would be the effect of clicking on this `Button` ten times?
 
 ```cs
-private void button1_Click(object sender, EventArgs e)
+// using directives
+
+public partial class Form1 : Form
 {
-   int nClicks = Convert.ToInt16(textBox1.Text);
-   nClicks = nClicks + 1; // or nClicks++; or nClicks += 1;
-   textBox1.Text = Convert.ToString(nClicks);
+   public Form1()
+   {
+      InitializeComponent();
+   }
+
+   private void button1_Click(object sender, EventArgs e)
+   {
+      int nClicks = Convert.ToInt16(textBox1.Text);
+      nClicks = nClicks + 1; // or nClicks++; or nClicks += 1;
+      textBox1.Text = Convert.ToString(nClicks);
+   }
 }
 ```
 
@@ -114,7 +137,22 @@ private void button1_Click(object sender, EventArgs e)
 Similarly the `Convert.ToString()` method converts from integer to the equivalent string representation. The `Convert.ToString` method could also be replaced by the `.ToString()` method. For example,
 
 ```cs
-textBox1.Text = nClicks.ToString();
+// using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+   }
+
+   private void button1_Click(object sender, EventArgs e)
+   {
+      int nClicks = Convert.ToInt16(textBox1.Text);
+      nClicks = nClicks + 1; // or nClicks++; or nClicks += 1;
+      textBox1.Text = nClicks.ToString();
+   }
+}
 ```
 
 4. Add a `TextBox` to your `Form`. As we saw earlier, the contents of a `TextBox` can be changed while the application is running. Modify your `button1_Click` handler, so that when the `button1` is clicked, the caption of the `label1` changes to whatever is in `textBox1`. Run the application and change the `Label` several times by modifying what is in `textBox1`, then clicking the `button1`.
@@ -130,13 +168,33 @@ A ListBox is another control for reading and writing text. It is multi-lined by 
 One of the things that makes **C#** so powerful is that a control's properties can themselves be complex objects that have their own methods, events and sub-properties. For example, a `ListBox` contains a property called `Items`, which stores the text contents of the `ListBox` (just as the `Width` property of a `Button` stores the `Width` of the `Button`). The `Items` property is itself a complex data object with methods and properties. For example, `Items` has a method called `Clear()` to clear all items in the `ListBox`. It also has a method called `Add()`, which adds a new line of text to `Items` (and thus to the `ListBox`). To call a sub-method like `Add()`, just extend the dot notation in the logical way, adding the method name after the property name. For example, the following statement puts the string "This is a new line of text” after the current contents of the `ListBox` called `listBox1`:
 
 ```cs
-listBox1.Items.Add("This is new line of text");
+// using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+      listBox1.Items.Add("This is a new line of text");
+   }
+}
 ```
 
 The `Items` property also has properties of its own. For example, `Items` has a property `Count`, which stores the number of lines of text the `Items` property contains (this is of course equal to the number of lines of text in the `ListBox`).
 
 ```cs
-listBox1.Items.Count;
+// using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+      listBox1.Items.Add("This is a new line of text");
+      int n = listBox1.Items.Count;
+      MessageBox.Show($"The ListBox contains {n} lines of text");
+   }
+}
 ```
 
 Note that you do not need to know how the `Clear()` method, the `Lines` property, the `Add()` method or the `Count` property are implemented. You only need to know how to use them. For example, you must know that the `Add()` method requires a string parameter, and that `Count` property is an integer value. You need to know the interface, but not the implementation.
@@ -154,6 +212,8 @@ If you place a number of radio buttons directly on the `Form`, they are automati
 The `DataGridView` control is a new control that replaces the `DataGrid` control. The `DataGridView` control provides a powerful and flexible way to display data in a tabular format. You can use the `DataGridView` control to show read-only views of a small amount of data, or you can scale it to show editable views of very large sets of data. The `DataGridView` control supports the standard Windows Forms data binding model, so it can bind to a variety of data sources.
 
 ```cs
+// using directives
+
 public partial class Form1 : Form
 {
    private List<string>? _names;
@@ -218,6 +278,8 @@ Write an application for use in a Pizza Parlour. The user enters his order, and 
 3. You should provide at least five different extra toppings, each with associated prices. Users can select any combination of extra toppings, or none at all.
 4. You should correctly display the order in a `ListBox` and compute the total and display it in a `TextBox`.
 5. When a new order is generated, the old order information should be cleared from the display.
+
+**Note:** You can generate a new order by clicking on a `Button` or dynamically as the user selects different options.
 
 # Formative Assessment Submission
 

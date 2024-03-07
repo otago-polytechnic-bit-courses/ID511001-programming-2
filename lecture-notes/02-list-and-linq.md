@@ -77,6 +77,12 @@ foreach (string name in names) // Iterate over the names in the list using a for
 
 **Language Integrated Query** or **LINQ** provides a set of features that extends the **C#** language to support queries against data sources. It provides a consistent way to query data from different data sources, i.e., in-memory collections, databases, etc.
 
+To get started with **LINQ**, you need to include the following directive at the top of your file:
+
+```cs
+using System.Linq;
+```
+
 **LINQ** queries are written using **query expressions**. A query expression is a query that is written in a declarative syntax, similar to **SQL**. It consists of a **from** clause, a **where** clause, a **orderby** clause, a **select** clause, and a **groupby** clause.
 
 ```cs
@@ -192,14 +198,14 @@ Implement the following:
 1. Use the `Count` method to get the total number of book titles in `bookTitles` and assign it to a variable called `totalBooks`. Display the value of `totalBooks`.
 2. Use the `Contains` method to check if the title "Brave New World" exists in `bookTitles`. Assign the result to a variable called `hasBraveNewWorld`. Display the value of `hasBraveNewWorld`.
 3. Use the `FindIndex` method to find the index of the book title "1984" in `bookTitles` and assign it to a variable called `index1984`. Display the value of `index1984`.
-4. Use the `Clear` method to remove all elements from `bookTitles`. Display the contents of `bookTitles` after clearing it.
+4. Use the `Clear` method to remove all elements from `bookTitles`. Display the number of items in `bookTitles`.
 
 ## Task 4:
 
 You have been given a list of `int` containing even numbers. Write a **LINQ** query that displays the sum of all even numbers in the list of `int`.
 
 ```cs
-List<int> numbers = new List<int>() { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+List<int> numbers = new List<int>() { 1, 4, 7, 8, 11, 12, 15, 16, 19, 20 };
 ```
 
 ## Task 5:

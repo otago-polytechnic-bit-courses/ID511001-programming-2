@@ -92,12 +92,18 @@ public Form1()
 {
     InitializeComponent();
 
-    Dog myDog = new("Max", 3);
+    Dog myDog = new("Max", 3); // Alternative syntax is Dog myDog = new Dog("Max", 3);
     MessageBox.Show(myDog.Bark()); // Output: "Woof woof!"
 }
 ```
 
 This code creates a new **object** of type `Dog` named "myDog" and assigns values to its `name` and `age` **fields** via the constructor. Then it calls the `Bark()` **method** on the **object**, which causes it to bark.
+
+If you see the following error, it means you are using an older version of **C#**.
+
+![alt text](../resources/img/07/syntax.png)
+
+
 
 ## this
 
@@ -366,7 +372,7 @@ Here is an `Utils` class example to get you started:
 ```cs
 public static class Utils
 {
-    private static List<Institution> s_institutions = new List<Institution>();
+    private static List<Institution> s_institutions = new();
 
     public static List<Institution> SeedInstitutions()
     {
@@ -410,7 +416,7 @@ public class Product
 // Usage in Form1.cs
 private static List<Product> products; // Declare this above the the Form1() constructor
 
-products = new List<Product>() // Declare this inside the Form1() constructor
+products = new() // Declare this inside the Form1() constructor
 {
     new("Apple", 1.99),
     new("Banana", 2.99),

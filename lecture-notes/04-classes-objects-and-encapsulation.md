@@ -55,7 +55,7 @@ public Form1()
 {
     InitializeComponent();
 
-    Dog myDog = new(); // Create a new object of type Dog
+    Dog myDog = new(); // Create a new object of type Dog. Alternative syntax is Dog myDog = new Dog("Max", 3);
     myDog.name = "Max"; // Set the name field to "Max"
     myDog.age = 3; // Set the age field to 3
     MessageBox.Show(myDog.Bark()); // Call the Bark() method which outputs - "Woof woof!"

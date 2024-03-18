@@ -361,7 +361,7 @@ Create an `Employee` class with `private` fields for `name`, `age`, and `salary`
 
 ## Task 4:
 
-In this task, you will create four classes that communicate with each other. The first class is called `Institution` with `private` fields for `name`, `region` and `country`. The second class is called `Department` with `private` fields for `institution` and `name`. The third class is called `Course` with `private` fields for `department` and `code`, `name`, `description`, `credits` and `fees`.
+In this task, you will create four classes that communicate with each other. The first class is called `Institution` with `private` fields for `name`, `region` and `country`. The second class is called `Department` with `private` fields for `institution` and `name`. The third class is called `Course` with `private` fields for `department` and `code`, `name`, `description`, `credits` and `fees`. Make sure you create a constructor for each class.
 
 The fourth class is called `Utils`. This class has three `static` fields called `institutions`, `departments` and `courses`. These fields are `static` **lists** of `Institution`, `Department` and `Course` **objects** respectively. The `Utils` class also has three `static` methods called `SeedInstitutions`, `SeedDepartments` and `SeedCourses`. These methods are used to populate the `institutions`, `departments` and `courses` lists respectively.
 

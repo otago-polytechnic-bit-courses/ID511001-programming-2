@@ -332,11 +332,22 @@ A class diagram is a type of **UML** diagram that shows the structure of a class
 The lab computers will already have the **Class Designer** tool installed. It will not be the case for your personal computer. To get started, do the following:
 
 1. Click on the **Tools** tab. It is between the **Analyze** and **Extensions** at the top of the window.
+
 2. Select **Get Tools and Features...**.
-3. Change to the **Individual components** tab.
-4. Search for **Class Designer**.
-5. Check the **Class Designer** box.
-6. Click on the **Modify** button. It may take a few minutes to install.
+
+![](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-24/resources/img/04/class-diagram-1.PNG?raw=true)
+
+4. Change to the **Individual components** tab.
+
+5. Search for **Class Designer**.
+
+![](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-24/resources/img/04/class-diagram-2.PNG?raw=true)
+
+6. Check the **Class Designer** box.
+
+![](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-24/resources/img/04/class-diagram-3.PNG?raw=true)
+
+7. Click on the **Modify** button. It may take a few minutes to install.
 
 ---
 

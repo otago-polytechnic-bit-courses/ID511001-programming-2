@@ -333,7 +333,7 @@ The lab computers will already have the **Class Designer** tool installed. It wi
 
 1. Click on the **Tools** tab. It is between the **Analyze** and **Extensions** at the top of the window.
 2. Select **Get Tools and Features...**.
-3. Change to the **Individual Components** tab.
+3. Change to the **Individual components** tab.
 4. Search for **Class Designer**.
 5. Check the **Class Designer** box.
 6. Click on the **Modify** button. It may take a few minutes to install.

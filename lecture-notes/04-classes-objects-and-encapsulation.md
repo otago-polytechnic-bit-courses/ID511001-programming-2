@@ -329,6 +329,17 @@ public Form1()
 
 A class diagram is a type of **UML** diagram that shows the structure of a class and its relationships with other classes. It is used to visualise the design of a system and to communicate the design to other developers.
 
+The lab computers will already have the **Class Designer** tool installed. It will not be the case for your personal computer. To get started, do the following:
+
+1. Click on the **Tools** tab. It is between the **Analyze** and **Extensions** at the top of the window.
+2. Select **Get Tools and Features...**.
+3. Change to the **Individual Components** tab.
+4. Search for **Class Designer**.
+5. Check the **Class Designer** box.
+6. Click on the **Modify** button. It may take a few minutes to install.
+
+---
+
 To create a class diagram in **Visual Studio**, do the following:
 
 1. In the **Solution Explorer**, right-click on the project name and select **Add** > **New Item**.

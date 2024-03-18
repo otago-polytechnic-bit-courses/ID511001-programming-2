@@ -355,7 +355,7 @@ To create a class diagram in **Visual Studio**, do the following:
 
 1. In the **Solution Explorer**, right-click on the project name and select **Add** > **New Item**.
 2. In the **Add New Item** window, select **Class Diagram** and give it a name. Click **Add**.
-3. The class diagram will open in the designer. You can start adding classes by dragging the **Class** item from the toolbox onto the designer. **Note:** There might be a slight delay.
+3. The class diagram will open in the designer. You can start adding classes by dragging the **Class** item from the **Solution Explorer** onto the designer. **Note:** There might be a slight delay.
 4. Once you have created your class diagram, you can save it and close the designer.
 5. You can reopen the class diagram at any time by double-clicking on it in the **Solution Explorer**.
 

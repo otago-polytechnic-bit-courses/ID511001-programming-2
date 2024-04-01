@@ -2,15 +2,25 @@ namespace Exemplar
 {
     public partial class Form1 : Form
     {
+        enum EDays { Monday = 1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
+
         public Form1()
         {
             InitializeComponent();
 
-            Animal animal = new("Bob", 10); // Base class
-            MessageBox.Show(animal.Name); // Base class's property
+            Circle circle = new Circle(5.0);
+            MessageBox.Show(circle.Area().ToString());
 
-            Dog dog = new("Fido", 5, "Brown"); // Derived class
-            MessageBox.Show(dog.Colour); // Base class's property
+            Enum.TryParse("Monday", out EDays today);
+
+            if (today == EDays.Friday)
+            {
+                MessageBox.Show("It is Friday!");
+            }
+            else
+            {
+                MessageBox.Show("It is not Friday!");
+            }
         }
     }
 }

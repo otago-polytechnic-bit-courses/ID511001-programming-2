@@ -64,7 +64,7 @@ enum EDays { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
 
 The enumerators in the example above are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday and their respective values will be 0, 1, 2, 3, 4, 5, 6.
 
-You can also give explicit values to the enumerators, for example:`
+You can also give explicit values to the enumerators, for example:
 
 ```cs
 enum EDays { Monday=1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
@@ -89,7 +89,7 @@ else
 What about parsing a string to an enumeration value? You can use the `Enum.Parse` method to parse a string to an enumeration value. For example:
 
 ```cs
-EDays today = (Days)Enum.Parse(typeof(Days), "Monday");
+EDays today = (EDays)Enum.Parse(typeof(EDays), "Monday");
 
 // or
 

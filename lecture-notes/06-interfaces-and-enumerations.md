@@ -52,10 +52,6 @@ public class Circle : IShape
 
 **Note:** In terms of naming conventions, interfaces should be prefixed with the letter `I`.
 
-## Composition vs. Inheritance
-
-You will hear about two different ways of reusing code: composition and inheritance. As you know, inheritance is when a class inherits from another class. Composition is when a class contains an instance of another class. Inheritance is an "is-a" relationship, while composition is a "has-a" relationship.
-
 ## Enumerations
 
 An enumeration (or enum for short) is a value type that is used to define a set of named constants. Enumerations are useful when you have a fixed set of values that a variable can take on, such as the days of the week or the suits in a deck of cards.

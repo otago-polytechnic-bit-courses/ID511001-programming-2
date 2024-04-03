@@ -9,7 +9,7 @@ public static void ReadFromFile(string filePath, List<Learner> learners, bool is
         string firstName = learnerDetails[1];
         string lastName = learnerDetails[2]; 
         int courseNum = int.Parse(learnerDetails[3]);
-        Learner learner;
+        Learner learner = null;
 
         if (isAttendance)
         {

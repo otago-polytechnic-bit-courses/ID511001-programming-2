@@ -127,14 +127,14 @@ In this task, you will create an application that simulates an inventory system.
 
 Here are steps you should consider:
 1. Create an `interface` called `IInventoryItem` with the following members 
-   - `void Display()`
+   - `string Display()`
    - `int Quantity { get; set; }`
 
-2. Create a `class` called `Product` that implements the `IInventoryItem` interface. The `InventoryItem` class should have the following members:
+2. Create a `class` called `Product` that implements the `IInventoryItem` interface. The `Product` class should have the following members:
    - `private string _name`
    - `private double _price`
    - `public int Quantity { get; set; }`
-   - `public void Display()`
+   - `public string Display()`
    - `public double TotalPrice()` - This method should return the total price of the item, which is the price multiplied by the quantity
   
 3. In the `Form1` class, create a `List<IInventoryItem>` called `inventory`. Add the following items to the list:

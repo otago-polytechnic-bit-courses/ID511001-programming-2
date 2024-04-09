@@ -142,7 +142,7 @@ Here are steps you should consider:
    - 5 x `Product` with the name "Orange" and price 1.99
    - 2 x `Product` with the name "Banana" and price 2.99
 
-4. Also, im the `Form1` class, create a `private void DisplayInventory()` method that displays the inventory in a `MessageBox.Show()`. The output should be similar to the following:
+4. Also, in the `Form1` class, create a `private void DisplayInventory()` method that displays the inventory in a `MessageBox.Show()`. The output should be similar to the following:
 
 ```cs
 Apple: 10

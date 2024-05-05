@@ -15,7 +15,6 @@
 | **Validation in Adding Learner/Lecturer**           | Validation is correctly implemented and handles all cases. | Minor issues in validation implementation.           | Significant issues in validation implementation.      | Validation is incomplete or incorrect.                |
 | **File Reading and Writing**                          | Reading from files is correct; writing to files is successful. | Minor issues in file reading/writing.                 | Significant issues in file reading/writing.           | File reading/writing is incorrect or incomplete.     |
 | **Error Handling**                                  | Application gracefully handles errors and displays meaningful messages. | Some error messages lack clarity or handling is not optimal. | Error handling is minimal or not well-implemented.    | Poor or no error handling.                           |
-| **Overall Application Functionality**               | Application fulfills all requirements with a smooth user experience. | Some functionalities are incomplete or have minor issues. | Several functionalities are missing or have significant issues. | Most functionalities are missing or not functional. |
 
 ### Functionality - Attendance Tracker - 10%
 

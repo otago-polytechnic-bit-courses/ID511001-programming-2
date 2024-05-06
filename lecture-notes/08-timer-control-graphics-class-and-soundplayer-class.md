@@ -82,7 +82,7 @@ soundPlayer.Stop();
 
 # Formative Assessment
 
-Before you start, create a new **C# Windows Forms Application** application called **08-formative-assessment**.
+Before you start, create a new **Windows Forms Application** application called **08-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 

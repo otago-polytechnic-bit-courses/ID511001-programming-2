@@ -13,14 +13,6 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 - Acknowledge that you are using **ChatGPT**. In the **README.md** file, please include what prompt(s) you provided to **ChatGPT** and how you used the response(s) to help you with your work
 
 ## Task 1:
-
-In the `Molecule` class, create a new `public void` method called `Move`. In the `Move` method, you will need to:
-1. Randomly generate an integer value between -10 (inclusive) and 11 (exclusive) using the `Random` class's `Next` method.
-2. Get the `Molecule's` X and Y position and add the random integer value using the addition assignment operator (`+=`).
-
-In the `Controller` class, call the `Molecule's` `Move` method in the `Run` method.
-
-## Task 2:
 In this task, you will create a bouncing ball. Feel free to create a project. You will need to create a `Ball` class and a `Controller` class. 
 
 The `Ball` class will need to have the following fields:
@@ -73,7 +65,7 @@ public void Run()
 
 In the `Form1` class, call the `Controller's` `Run` method in the `timer1_Tick` method.	
 
-## Task 3:
+## Task 2:
 
 When you run the application, you will notice the ball is flickering. In this task, you will implement double buffering. 
 
@@ -110,7 +102,7 @@ private void timer1_Tick(object sender, EventArgs e)
 
 Buffer graphics refers to a technique where drawing operations are performed off-screen on a buffer, i.e., image before being displayed on the screen. This approach is often used to reduce flickering and improve rendering performance in graphical applications.
 
-## Task 4:
+## Task 3:
 
 In this exercise, when the user clicks on a button, a circle, square or triangle is drawn and its area is calculated. The choice of shape is randomly selected on each `button1_Click()` event.
 
@@ -194,7 +186,7 @@ Write a method that tells the polygon to calculate its area and return this valu
 
 7.	Write a `button1_Click` handler for the button so that when it is clicked, it calls the `Controller's` `CreatePolygon()`, `DrawPolygon()`, `CalculatePolygonArea()` methods for the newly created polygon.  
 
-## Task 5:
+## Task 4:
 
 Once you have declared a class structure like `Polygon`, you can use it in any application where it might be needed. We will build a screen saver that fills the screen with a random assortment of squares, circles and triangles of different sizes and colours. This is my computer screen after the application has been running for about a minute:
 

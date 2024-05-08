@@ -138,6 +138,8 @@ private void Form1_MouseClick(object sender, MouseEventArgs e)
 }
 ```
 
+When you run the program and click on the form, the following should appear.
+
 ![](../resources/img/08/03-image.png)
 
 Note: You need to create the `Form1_MouseClick` event handler via the `Events` tab in the `Properties` window.

@@ -63,7 +63,10 @@ public void Run()
 }
 ```
 
-In the `Form1` class, call the `Controller's` `Run` method in the `timer1_Tick` method.	
+- In the `Form1` class:
+  - Declare `Graphics graphics` and `Controller controller`
+  - In the `Form1` constructor, initialise `graphics` and create a new instance of `Controller`, i.e., `controller = new Controller(graphics, ClientSize);`.
+  - Call the `Controller's` `Run` method in the `timer1_Tick` method.	
 
 ## Task 2:
 

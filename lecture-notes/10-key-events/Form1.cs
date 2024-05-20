@@ -28,6 +28,12 @@ namespace Exemplar
             //    case Keys.B:
             //        MessageBox.Show("B key pressed!");
             //        break;
+            //    case Keys.Right:
+            //        pictureBox1.Left += 10;
+            //        break;
+            //    case Keys.Left:
+            //        pictureBox1.Left -= 10;
+            //        break;
             //    default:
             //        MessageBox.Show("Other key pressed!");
             //        break;

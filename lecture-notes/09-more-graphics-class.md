@@ -172,13 +172,13 @@ public void CreatePolygon()
     switch (randomNumber)
     {
     case 0:
-        polygon = new Circle(Color.Blue, graphics, new Point(200, 100), 150);
+        polygon = new Circle(new SolidBrush(Color.Blue), graphics, new Point(200, 100), 150);
         break;
     case 1:
-        polygon = new Square(Color.Red, graphics, new Point(200, 100), 150);
+        polygon = new Square(new SolidBrush(Color.Red), graphics, new Point(200, 100), 150);
         break;
     case 2:
-        polygon = new Triangle(Color.Yellow, graphics, new Point(250, 100), 150);
+        polygon = new Triangle(new SolidBrush(Color.Yellow), graphics, new Point(275, 100), 150);
         break;
     default:
         polygon = null;

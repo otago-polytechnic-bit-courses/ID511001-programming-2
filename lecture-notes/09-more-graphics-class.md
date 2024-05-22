@@ -156,7 +156,7 @@ graphics.FillPolygon(brush, new Point[] { position, new Point(position.X + size,
 6. Create a `Controller` class that has a field called polygon of type Polygon:
 
 ```cs
-private Polygon? polygon;
+private Polygon polygon;
 ```
 
 Note, you can declare a polygon of type `Polygon`, and then instantiate it as any of `Polygon's` subclasses by calling the correct constructor. Make a `CreatePolygon()` method that randomly creates either a `Square`, a `Triangle` or a `Circle`: 
@@ -168,13 +168,13 @@ public void CreatePolygon()
     switch (randomNumber)
     {
     case 0:
-        polygon = new Circle(new Point(200, 100), 150, Color.Blue, graphics);
+        polygon = new Circle(Color.Blue, graphics, new Point(200, 100), 150);
         break;
     case 1:
-        polygon = new Square(new Point(200, 100), 150, Color.Red, graphics);
+        polygon = new Square(Color.Red, graphics, new Point(200, 100), 150);
         break;
     case 2:
-        polygon = new Triangle(new Point(250, 100), 150, Color.Yellow, graphics);
+        polygon = new Triangle(Color.Yellow, graphics, new Point(250, 100), 150);
         break;
     default:
         polygon = null;

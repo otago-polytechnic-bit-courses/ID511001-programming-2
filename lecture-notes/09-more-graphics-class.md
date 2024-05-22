@@ -161,6 +161,7 @@ private Polygon polygon;
 
 Note, you can declare a polygon of type `Polygon`, and then instantiate it as any of `Polygon's` subclasses by calling the correct constructor. 
 
+You need to declare `private Graphics graphics` and `private Random random`. The `Controller` constructor should initialise these two fields.
 
 Make a `CreatePolygon()` method that randomly creates either a `Square`, a `Triangle` or a `Circle`: 
     
@@ -185,8 +186,6 @@ public void CreatePolygon()
     }
 } 
 ```
-
-You need to declare `private Graphics graphics` and `private Random random`. The `Controller` constructor should initialise these two.
 
 Write a method that tells the chosen polygon to draw itself on the form.
 

@@ -12,10 +12,10 @@ namespace Exemplar
             Dog dog = new("Fido", 5, "Brown"); // Derived class
             MessageBox.Show(dog.Colour); // Base class's property
 
-            Circle circle = new();
+            Circle circle = new Circle();
             MessageBox.Show(circle.Draw());
 
-            Rectangle rect = new();
+            Rectangle rect = new Rectangle();
             MessageBox.Show(rect.Draw());
         }
     }

@@ -14,11 +14,11 @@ namespace Exemplar
             Utils.BubbleSort(arr);
             MessageBox.Show($"Sorted array: {string.Join(", ", arr)}");
 
-            BankAccount accountOne = new();
+            BankAccount accountOne = new BankAccount();
             accountOne.Balance = 1000;
             MessageBox.Show($"Balance: {accountOne.Balance}");
 
-            BankAccount accountTwo = new();
+            BankAccount accountTwo = new BankAccount();
             try
             {
                 accountTwo.Balance = -1000;

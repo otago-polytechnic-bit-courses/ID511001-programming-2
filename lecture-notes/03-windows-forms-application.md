@@ -224,7 +224,7 @@ public partial class Form1 : Form
    {
       InitializeComponent();
 
-      _names = new() { "John", "Mary", "Bob", "Jane" };
+      _names = new List<string>() { "John", "Mary", "Bob", "Jane" };
 
       dataGridView1.Columns.Add("Name", "Name");
 

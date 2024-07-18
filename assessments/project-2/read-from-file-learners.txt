@@ -18,7 +18,7 @@ public static void ReadFromFile(string filePath, List<Learner> learners, bool is
         }
         else
         {
-            List<int> marks = new()
+            List<int> marks = new List<int>()
             {
                 Convert.ToInt32(learnerDetails[4]),
                 Convert.ToInt32(learnerDetails[5]),

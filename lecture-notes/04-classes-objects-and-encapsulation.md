@@ -55,7 +55,7 @@ public Form1()
 {
     InitializeComponent();
 
-    Dog myDog = new(); // Create a new object of type Dog. Alternative syntax is Dog myDog = new Dog("Max", 3);
+    Dog myDog = new Dog(); // Create a new object of type Dog. Alternative syntax is Dog myDog = new Dog("Max", 3);
     myDog.name = "Max"; // Set the name field to "Max"
     myDog.age = 3; // Set the age field to 3
     MessageBox.Show(myDog.Bark()); // Call the Bark() method which outputs - "Woof woof!"
@@ -292,11 +292,11 @@ public Form1()
 {
     InitializeComponent();
 
-    BankAccount accountOne = new();
+    BankAccount accountOne = new BankAccount();
     accountOne.Balance = 1000;
     MessageBox.Show($"Balance: {accountOne.Balance}");
 
-    BankAccount accountTwo = new();
+    BankAccount accountTwo = new BankAccount();
     accountTwo.Balance = -1000;
     MessageBox.Show($"Balance: {accountTwo.Balance}"); // Throws an exception
 }
@@ -309,11 +309,11 @@ public Form1()
 {
     InitializeComponent();
 
-    BankAccount accountOne = new();
+    BankAccount accountOne = new BankAccount();
     accountOne.Balance = 1000;
     MessageBox.Show($"Balance: {accountOne.Balance}");
 
-    BankAccount accountTwo = new();
+    BankAccount accountTwo = new BankAccount();
     try
     {
         accountTwo.Balance = -1000;
@@ -394,7 +394,7 @@ Here is an `Utils` class example to get you started:
 ```cs
 public static class Utils
 {
-    private static List<Institution> s_institutions = new();
+    private static List<Institution> s_institutions = new List<Institution>();
 
     public static List<Institution> SeedInstitutions()
     {
@@ -438,7 +438,7 @@ public class Product
 // Usage in Form1.cs
 private static List<Product> products; // Declare this above the the Form1() constructor
 
-products = new() // Declare this inside the Form1() constructor
+products = new List<Product>() // Declare this inside the Form1() constructor
 {
     new("Apple", 1.99),
     new("Banana", 2.99),

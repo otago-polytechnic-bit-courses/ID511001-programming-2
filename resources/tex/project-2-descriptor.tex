@@ -24,7 +24,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{College of Engineering, Construction and Living Sciences\\Bachelor of Information Technology}
-\lfoot{Project 2\\Version 3, Semester Two, 2024}
+\lfoot{Project 2\\Version 4, Semester Two, 2024}
 \rfoot{\thepage}
  
 \begin{document}
@@ -53,14 +53,14 @@ At the successful completion of this course, learners will be able to:
 \begin{tabular}{|c|c|c|c|}
 	\hline
 	\textbf{Assessment}                                 & \textbf{Weighting} & \textbf{Due Date}            & \textbf{Learning Outcomes} \\ \hline
-	\small Project 1 & \small 25\%        & \small 21-06-2024 (Friday at 4.59 PM)  & \small 1 and 2                   \\ \hline
-	\small Project 2  & \small 35\%        & \small 03-05-2024 (Friday at 4.59 PM)   & \small 1 and 2                   \\ \hline
-	\small Theory Examination                        & \small 30\%        & \small 26-06-2024 (Wednesday at 3.00 PM)  & \small 1 and 2                   \\ \hline
-	\small Classroom Tasks                      & \small 10\%        & \small 03-05-2024 (Friday at 4.59 PM)  & \small 1 and 2                   \\ \hline
-\end{tabular}
+	\small Project 1 & \small 25\%        & \small \small 13-11-2024 (Wednesday at 4.59 PM)  & \small 1, 2                   \\ \hline
+	\small Project 2  & \small 35\%        & \small 18-09-2024 (Wednesday at 4.59 PM)   & \small 1, 2                   \\ \hline
+	\small Theory Examination                        & \small 30\%        & \small 18-11-2024 (Monday at 12.00 PM)  & \small 1, 2                   \\ \hline
+	\small Classroom Tasks                      & \small 10\%        & \small 18-09-2024 (Wednesday at 4.59 PM)  & \small 1, 2                   \\ \hline
+\end{tabular} 
 
 \section*{Conditions of Assessment}
-You will complete this assessment during your learner-managed time. However, there will be time during class to discuss the requirements and your progress on this assessment. This assessment will need to be completed by \textbf{Friday, 03 May 2024} at \textbf{4.59 PM}.
+You will complete this assessment during your learner-managed time. However, there will be time during class to discuss the requirements and your progress on this assessment. This assessment will need to be completed by \textbf{Wednesday, 18 September 2024} at \textbf{4.59 PM}.
 
 \section*{Pass Criteria}
 This assessment is criterion-referenced (CRA) with a cumulative pass mark of \textbf{50\%} over all assessments in \textbf{ID511001: Programming 2}.
@@ -76,7 +76,7 @@ All parts of your submitted assessment \textbf{must} be completely your work. Do
 The school's process concerning submissions, extensions, resubmissions and resits complies with \textbf{Otago Polytechnic | Te Pūkenga} policies. Learners can view policies on the \textbf{Otago Polytechnic | Te Pūkenga} website located at \href{https://www.op.ac.nz/about-us/governance-and-management/policies}{https://www.op.ac.nz/about-us/governance-and-management/policies}.
 
 \section*{Submission}
-You \textbf{must} submit all application files via \textbf{GitHub Classroom}. Here is the URL to the repository you will use for your submission – \href{https://classroom.github.com/a/Wx7UHym1}{https://classroom.github.com/a/Wx7UHym1}. If you do not have not one, create a \textbf{.gitignore} and add the ignored files in this resource - \href{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}. Create a branch called \textbf{project-2}. The latest application files in the \textbf{project-2} branch will be used to mark against the \textbf{Functionality} criterion. Please test before you submit. Partial marks \textbf{will not} be given for incomplete functionality. Late submissions will incur a \textbf{10\% penalty per day}, rolling over at \textbf{5:00 PM}.
+You \textbf{must} submit all application files via \textbf{GitHub Classroom}. Here is the URL to the repository you will use for your submission – \href{https://classroom.github.com/a/o7D2CGoa}{https://classroom.github.com/a/o7D2CGoa}. If you do not have not one, create a \textbf{.gitignore} and add the ignored files in this resource - \href{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}{https://raw.githubusercontent.com/github/gitignore/main/VisualStudio.gitignore}. Create a branch called \textbf{project-2}. The latest application files in the \textbf{project-2} branch will be used to mark against the \textbf{Functionality} criterion. Please test before you submit. Partial marks \textbf{will not} be given for incomplete functionality. Late submissions will incur a \textbf{10\% penalty per day}, rolling over at \textbf{5:00 PM}.
 
 \section*{Extensions}
 Familiarise yourself with the assessment due date. Extensions will \textbf{only} be granted if you are unable to complete the assessment by the due date because of \textbf{unforeseen circumstances outside your control}. The length of the extension granted will depend on the circumstances and \textbf{must} be negotiated with the course lecturer before the assessment due date. A medical certificate or support letter may be needed. Extensions will not be granted for poor time management or pressure of other assessments.
@@ -90,8 +90,12 @@ You will need to submit applications and documentation that meet the following r
 \subsection*{Functionality - Learning Outcome 1 (50\%)}
 
 \subsubsection*{Student Management System}
-\begin{itemize} 
-    \item The application needs to open without code or file structure modification in \textbf{Visual Studio}.
+
+The application needs to open without code or file structure modification in \textbf{Visual Studio}.
+
+\subsubsection*{Milestone One - Due Wednesday, 21 August 2024 (Week 5)}
+
+\begin{itemize}
     \item The application needs to contain the following \textbf{enums}:
     \begin{verbatim}
 public enum EPosition
@@ -112,144 +116,169 @@ public enum ESalary
     PROFESSOR_SALARY = 145000
 }
     \end{verbatim}
-    \item The application needs to contain the following \textbf{.cs files}:
+    \item \textbf{Institution.cs}. \textbf{public class Institution} has the following \textbf{private} fields: \textbf{name} of type \textbf{string}, \textbf{region} of type \textbf{string} and \textbf{country} of type \textbf{string}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{name} of type \textbf{string}, \textbf{region} of type \textbf{string} and \textbf{country} of type \textbf{string}. 
+    \item \textbf{Department.cs}. \textbf{public class Department} has the following \textbf{private} fields: \textbf{institution} of type \textbf{Institution} and \textbf{name} of type \textbf{string}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{institution} of type \textbf{Institution} and \textbf{name} of type \textbf{string}.
+    \item \textbf{Course.cs}. \textbf{public class Course} has the following \textbf{private} fields: \textbf{department} of type \textbf{Department}, \textbf{code} of type \textbf{string}, \textbf{name} of type \textbf{string}, \textbf{description} of type \textbf{string}, \textbf{credits} of type \textbf{int} and \textbf{fees} of type \textbf{double}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{department} of type \textbf{Department}, \textbf{code} of type \textbf{string}, \textbf{name} of type \textbf{string}, \textbf{description} of type \textbf{string}, \textbf{credits} of type \textbf{int} and \textbf{fees} of type \textbf{double}.
+    \item \textbf{Utils.cs}. \textbf{public static class Utils} has the following \textbf{public static} methods:
     \begin{itemize}
-        \item \textbf{Institution.cs}. \textbf{public class Institution} has the following \textbf{private} fields: \textbf{name} of type \textbf{string}, \textbf{region} of type \textbf{string} and \textbf{country} of type \textbf{string}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{name} of type \textbf{string}, \textbf{region} of type \textbf{string} and \textbf{country} of type \textbf{string}. 
-        \item \textbf{Department.cs}. \textbf{public class Department} has the following \textbf{private} fields: \textbf{institution} of type \textbf{Institution} and \textbf{name} of type \textbf{string}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{institution} of type \textbf{Institution} and \textbf{name} of type \textbf{string}.
-        \item \textbf{Course.cs}. \textbf{public class Course} has the following \textbf{private} fields: \textbf{department} of type \textbf{Department}, \textbf{code} of type \textbf{string}, \textbf{name} of type \textbf{string}, \textbf{description} of type \textbf{string}, \textbf{credits} of type \textbf{int} and \textbf{fees} of type \textbf{double}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{department} of type \textbf{Department}, \textbf{code} of type \textbf{string}, \textbf{name} of type \textbf{string}, \textbf{description} of type \textbf{string}, \textbf{credits} of type \textbf{int} and \textbf{fees} of type \textbf{double}.
-        \item \textbf{CourseAssessmentMark.cs}. \textbf{public class CourseAssessmentMark} has the following \textbf{private} fields: \textbf{course} of type \textbf{Course} and \textbf{assessmentMarks} of type \textbf{List$<$int$>$}. Also, this class has the following \textbf{public} methods:
-        \begin{itemize}
-            \item \textbf{CourseAssessmentMark()} with no return type and two parameters: \textbf{course} of type \textbf{Course} and \textbf{assessmentMarks} of type \textbf{List$<$int$>$}. 
-            \item \textbf{GetAllMarks()} with the return type of \textbf{List$<$int$>$}. This method returns all assessment marks.
-            \item \textbf{GetAllGrades()} with the return type of \textbf{List$<$string$>$}. This method returns all assessment grades.
-            \item \textbf{GetHighestMarks()} with the return type of \textbf{List$<$int$>$}. This method returns the highest passing assessment mark(s).
-            \item \textbf{GetLowestMarks()} with the return type of \textbf{List$<$int$>$}. This method returns the lowest passing assessment mark(s). 
-            \item \textbf{GetFailMarks()} with the return type of \textbf{List$<$int$>$}. This method returns the fail assessment mark(s).
-            \item \textbf{GetAverageMark()} with the return type of \textbf{double}. This method returns the average assessment mark rounded to two decimal places.
-            \item \textbf{GetAverageGrade()} with the return type of \textbf{string}. This method returns the average assessment grade.
-        \end{itemize}
-        For more information on how to calculate the highest, lowest and fail marks, refer to the \textbf{grade table} in the \textbf{Additional Information} section below.
-        \item \textbf{Person.cs}. \textbf{public class Person} has the following \textbf{protected} fields: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string} and \textbf{lastName} of type \textbf{string}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string} and \textbf{lastName} of type \textbf{string}.
-        \item \textbf{Learner.cs}. \textbf{public class Learner} inherits from \textbf{Person} and has one additional \textbf{private} field: \textbf{courseAssessmentMarks} of type \textbf{CourseAssessmentMark}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string}, \textbf{lastName} of type \textbf{string} and \textbf{courseAssessmentMarks} of type \textbf{CourseAssessmentMark}. 
-        \item \textbf{Lecturer.cs}. \textbf{public class Lecturer} inherits from \textbf{Person} and has three additional \textbf{private} fields: \textbf{position} of type \textbf{EPosition}, \textbf{salary} of type \textbf{ESalary} and \textbf{course} of type \textbf{Course}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string}, \textbf{lastName} of type \textbf{string}, \textbf{position} of type \textbf{EPosition}, \textbf{salary} of type \textbf{ESalary} and \textbf{course} of type \textbf{Course}.
-        \item \textbf{Utils.cs}. \textbf{public static class Utils} has the following \textbf{public static} methods:
-        \begin{itemize}
-            \item \textbf{SeedInstitutions()} with the return type of \textbf{List$<$Institution$>$}. This method seeds a \textbf{List$<$Institution$>$} with \textbf{three} \textbf{Institution} objects.
-            \item \textbf{SeedDepartments()} with the return type of \textbf{List$<$Department$>$}. This method seeds a \textbf{List$<$Department$>$} with \textbf{three} \textbf{Department} objects.
-            \item \textbf{SeedCourses()} with the return type of \textbf{List$<$Course$>$}. This method seeds a \textbf{List$<$Course$>$} with \textbf{three} \textbf{Course} objects. 
-            \item In the \textbf{assessments $>$ project 2} directory of the \textbf{course materials} repository, you will find the implementation of the following method in the \textbf{read-from-file-learners.txt} file.
-            \textbf{ReadFromFile()} with no return type and three parameters: \textbf{filePath} of type \textbf{string}, \textbf{learners} of type \textbf{List$<$Learner$>$} and \textbf{isAttendance} of type \textbf{bool}. This method reads the \textbf{learners.txt} file and populates the \textbf{learners} parameter. The \textbf{learners.txt} file contains the following information:\\
-            \begin{verbatim}
-	1,John,Doe,0,100,100,95,10,0
-	2,Jane,Doe,0,45,35,45,75,65
-	3,Grayson,Orr,1,50,60,75,80,55
-	4,Joe,Blogs,1,10,20,30,70,80
-	5,Bob,Brown,2,75,82,95,55,10
-            \end{verbatim}
-            What do the numbers represent? The first number is the \textbf{id}, the second number is the \textbf{course} and the remaining numbers are the \textbf{assessment marks 1-5}. \textbf{Note:} You will use the second number to access a \textbf{Course} object from the \textbf{courses} list.
-            \item \textbf{ReadFromFile()} with no return type and two parameters: \textbf{filePath} of type \textbf{string} and \textbf{lecturers} of type \textbf{List$<$Lecturer$>$}. This method reads the \textbf{lecturers.txt} file and populates the \textbf{lecturers} parameter. The \textbf{lecturers.txt} file contains the following information:\\
-            \begin{verbatim}
-	1,Graydon,Ore,1,100000,0
-	2,Aidan,Moscow,2,115000,1
-	3,Jon,Seena,0,85000,2
-            \end{verbatim}
-            What do the numbers represent? The first number is the \textbf{id}, the second number is the \textbf{position}, the third number is the \textbf{salary} and the fourth number is the \textbf{course}. \textbf{Note:} You will use the second number to access the enum \textbf{EPosition}, the third number to access the enum \textbf{ESalary} and fourth number to access a \textbf{Course} object from the \textbf{courses} list.
-        \end{itemize}
-        \item \textbf{Form1.cs}. \textbf{public class Form1} manages the user interface. This class needs to account for the following functionality:
-        \begin{itemize}
-            \item Seeding the \textbf{institutions}, \textbf{departments} and \textbf{courses} lists.
-            \item Reading the \textbf{learners.txt} and \textbf{lecturers.txt} files. When calling the \textbf{ReadFromFile()} method, the \textbf{isAttendance} parameter needs to be \textbf{false}.
-            \item Displaying course details. This needs to display the following details in a \textbf{DataGridView}:
-            \begin{itemize}
-                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
-                \item course \textbf{description}
-                \item course \textbf{credits}
-                \item course \textbf{fees}
-                \item institution \textbf{name}, \textbf{region} and \textbf{country} in this format - \textbf{name, region, country}
-                \item department \textbf{name}
-            \end{itemize}
-            \item Displaying all marks. This needs to display the following details in a \textbf{DataGridView}:
-            \begin{itemize}
-                \item learner \textbf{id}
-                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
-                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
-                \item learner \textbf{assessment marks 1-5} in this format - \textbf{mark 1, mark 2, mark 3, mark 4, mark 5}
-            \end{itemize}
-            \item Displaying all grades. This needs to display the following details in a \textbf{DataGridView}:
-            \begin{itemize}
-                \item learner \textbf{id}
-                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
-                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
-                \item learner  \textbf{assessment grades 1-5} in this format - \textbf{grade 1, grade 2, grade 3, grade 4, grade 5}
-            \end{itemize}
-            \item Displaying highest marks. This needs to display the following details in a \textbf{DataGridView}:
-            \begin{itemize}
-                \item learner \textbf{id}
-                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
-                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
-                \item learner \textbf{highest assessment mark(s)}
-            \end{itemize}
-            \item Displaying lowest marks. This needs to display the following details in a \textbf{DataGridView}:
-            \begin{itemize}
-                \item learner \textbf{id}
-                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
-                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
-                \item learner \textbf{lowest assessment mark(s)}
-            \end{itemize}
-            \item Displaying fail marks. This needs to display the following details in a \textbf{DataGridView}:
-            \begin{itemize}
-                \item learner \textbf{id}
-                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
-                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
-                \item learner \textbf{fail assessment mark(s)}
-            \end{itemize}
-            \item Displaying average marks. This needs to display the following details in a \textbf{DataGridView}:
-            \begin{itemize}
-                \item learner \textbf{id}
-                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
-                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
-                \item learner \textbf{average assessment mark}
-            \end{itemize}
-            \item Displaying average grades. This needs to display the following details in a \textbf{DataGridView}:
-            \begin{itemize}
-                \item learner \textbf{id}
-                \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
-                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
-                \item learner \textbf{average assessment grade}
-            \end{itemize}
-            \item Displaying lecturer details. This needs to display the following details in a \textbf{DataGridView}:
-            \begin{itemize}
-                \item lecturer \textbf{id}
-                \item lecturer \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
-                \item lecturer \textbf{position}
-                \item institution \textbf{name}, \textbf{region} and \textbf{country} in this format - \textbf{name, region, country}
-                \item department \textbf{name}
-                \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
-                \item lecturer \textbf{salary}
-            \end{itemize}
-            \item Adding a learner. When adding a learner, the \textbf{id} is auto-generated and unique. Prompt the user to enter the following details: \textbf{first name}, \textbf{last name}, \textbf{course} and \textbf{assessment marks 1-5}. Implement the following validation:
-            \begin{itemize}
-                \item \textbf{first name} and \textbf{last name} are not empty or, contain numbers and special characters.
-                \item \textbf{course} is a valid number.
-                \item \textbf{assessment marks 1-5} are between 0 and 100.
-            \end{itemize} 
-            If the validation is successful, add the learner to the \textbf{learners} list, write the learner to the \textbf{learners.txt} file and display a success message. Otherwise, display an error message.                          
-            \item Adding a lecturer. When adding a lecturer, the \textbf{id} is auto-generated and unique. The \textbf{salary} is calculated based on the \textbf{position}. Prompt the user to enter the following details: \textbf{first name}, \textbf{last name}, \textbf{position} and \textbf{course}. Implement the following validation:
-            \begin{itemize}
-                \item \textbf{first name} and \textbf{last name} are not empty or, contain numbers and special characters.
-                \item \textbf{position} and \textbf{course} are valid numbers.
-            \end{itemize}
-            If the validation is successful, add the lecturer to the \textbf{lecturers} list, write the lecturer to the \textbf{lecturers.txt} file and display a success message. Otherwise, display an error message.
-            \item Removing a lecturer. When removing a lecturer, prompt the user to enter the \textbf{id} of the learner to remove. If the \textbf{id} is valid, prompt the user to confirm the removal. If the user confirms the removal, remove the lecturer from the \textbf{lecturers} list and \textbf{lecturer.txt} file, and display a success message. Otherwise, display an error message.
-            \item Exiting the application
-        \end{itemize} 
-        If the user enters an invalid option, display an error message and prompt the user to enter a valid option.
+        \item \textbf{SeedInstitutions()} with the return type of \textbf{List$<$Institution$>$}. This method seeds a \textbf{List$<$Institution$>$} with \textbf{three} \textbf{Institution} objects.
+        \item \textbf{SeedDepartments()} with the return type of \textbf{List$<$Department$>$}. This method seeds a \textbf{List$<$Department$>$} with \textbf{three} \textbf{Department} objects.
+        \item \textbf{SeedCourses()} with the return type of \textbf{List$<$Course$>$}. This method seeds a \textbf{List$<$Course$>$} with \textbf{three} \textbf{Course} objects.
     \end{itemize}
 \end{itemize}
 
-\subsubsection*{Attendance Tracker}
+\subsubsection*{Milestone Two - Due Wednesday, 28 August 2024 (Week 6)}
+
 \begin{itemize}
-    \item The application needs to open without code or file structure modification in \textbf{Visual Studio}.
+    \item \textbf{CourseAssessmentMark.cs}. \textbf{public class CourseAssessmentMark} has the following \textbf{private} fields: \textbf{course} of type \textbf{Course} and \textbf{assessmentMarks} of type \textbf{List$<$int$>$}. Also, this class has the following \textbf{public} methods:
+    \begin{itemize}
+        \item \textbf{CourseAssessmentMark()} with no return type and two parameters: \textbf{course} of type \textbf{Course} and \textbf{assessmentMarks} of type \textbf{List$<$int$>$}. 
+        \item \textbf{GetAllMarks()} with the return type of \textbf{List$<$int$>$}. This method returns all assessment marks.
+        \item \textbf{GetAllGrades()} with the return type of \textbf{List$<$string$>$}. This method returns all assessment grades.
+        \item \textbf{GetHighestMarks()} with the return type of \textbf{List$<$int$>$}. This method returns the highest passing assessment mark(s).
+        \item \textbf{GetLowestMarks()} with the return type of \textbf{List$<$int$>$}. This method returns the lowest passing assessment mark(s). 
+        \item \textbf{GetFailMarks()} with the return type of \textbf{List$<$int$>$}. This method returns the fail assessment mark(s).
+        \item \textbf{GetAverageMark()} with the return type of \textbf{double}. This method returns the average assessment mark rounded to two decimal places.
+        \item \textbf{GetAverageGrade()} with the return type of \textbf{string}. This method returns the average assessment grade.
+    \end{itemize}
+    For more information on how to calculate the highest, lowest and fail marks, refer to the \textbf{grade table} in the \textbf{Additional Information} section below.
+\end{itemize}
+
+\subsubsection*{Milestone Three - Due Monday, 2 September 2024 (Week 7)}
+
+\begin{itemize}
+    \item \textbf{Person.cs}. \textbf{public class Person} has the following \textbf{protected} fields: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string} and \textbf{lastName} of type \textbf{string}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string} and \textbf{lastName} of type \textbf{string}.
+    \item \textbf{Learner.cs}. \textbf{public class Learner} inherits from \textbf{Person} and has one additional \textbf{private} field: \textbf{courseAssessmentMarks} of type \textbf{CourseAssessmentMark}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string}, \textbf{lastName} of type \textbf{string} and \textbf{courseAssessmentMarks} of type \textbf{CourseAssessmentMark}. 
+    \item \textbf{Lecturer.cs}. \textbf{public class Lecturer} inherits from \textbf{Person} and has three additional \textbf{private} fields: \textbf{position} of type \textbf{EPosition}, \textbf{salary} of type \textbf{ESalary} and \textbf{course} of type \textbf{Course}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string}, \textbf{lastName} of type \textbf{string}, \textbf{position} of type \textbf{EPosition}, \textbf{salary} of type \textbf{ESalary} and \textbf{course} of type \textbf{Course}. 
+\end{itemize}
+
+\subsubsection*{Milestone Four - Due Friday, 6 September 2024 (Week 8)}
+
+\begin{itemize}
+    \item \textbf{Utils.cs}. \textbf{public static class Utils} has the following \textbf{public static} methods:
+        \begin{itemize}
+            \item In the \textbf{assessments $>$ project 2} directory of the \textbf{course materials} repository, you will find the implementation of the following method in the \textbf{read-from-file-learners.txt} file.
+            \textbf{ReadFromFile()} with no return type and three parameters: \textbf{filePath} of type \textbf{string}, \textbf{learners} of type \textbf{List$<$Learner$>$} and \textbf{isAttendance} of type \textbf{bool}. This method reads the \textbf{learners.txt} file and populates the \textbf{learners} parameter. The \textbf{learners.txt} file contains the following information:\\
+            \begin{verbatim}
+1,John,Doe,0,100,100,95,10,0
+2,Jane,Doe,0,45,35,45,75,65
+3,Grayson,Orr,1,50,60,75,80,55
+4,Joe,Blogs,1,10,20,30,70,80
+5,Bob,Brown,2,75,82,95,55,10
+            \end{verbatim}
+            What do the numbers represent? The first number is the \textbf{id}, the second number is the \textbf{course} and the remaining numbers are the \textbf{assessment marks 1-5}. \textbf{Note:} You will use the second number to access a \textbf{Course} object from the \textbf{courses} list.
+        \item \textbf{ReadFromFile()} with no return type and two parameters: \textbf{filePath} of type \textbf{string} and \textbf{lecturers} of type \textbf{List$<$Lecturer$>$}. This method reads the \textbf{lecturers.txt} file and populates the \textbf{lecturers} parameter. The \textbf{lecturers.txt} file contains the following information:\\
+        \begin{verbatim}
+1,Graydon,Ore,1,100000,0
+2,Aidan,Moscow,2,115000,1
+3,Jon,Seena,0,85000,2
+        \end{verbatim}
+        What do the numbers represent? The first number is the \textbf{id}, the second number is the \textbf{position}, the third number is the \textbf{salary} and the fourth number is the \textbf{course}. \textbf{Note:} You will use the second number to access the enum \textbf{EPosition}, the third number to access the enum \textbf{ESalary} and fourth number to access a \textbf{Course} object from the \textbf{courses} list.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Milestone Five - Due Wednesday, 11 September 2024 (Week 9)}
+
+\begin{itemize}
+    \item \textbf{Form1.cs}. \textbf{public class Form1} manages the user interface. This class needs to account for the following functionality:
+    \begin{itemize}
+        \item Seeding the \textbf{institutions}, \textbf{departments} and \textbf{courses} lists.
+        \item Reading the \textbf{learners.txt} and \textbf{lecturers.txt} files. When calling the \textbf{ReadFromFile()} method, the \textbf{isAttendance} parameter needs to be \textbf{false}.
+        \item Displaying course details. This needs to display the following details in a \textbf{DataGridView}:
+        \begin{itemize}
+            \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+            \item course \textbf{description}
+            \item course \textbf{credits}
+            \item course \textbf{fees}
+            \item institution \textbf{name}, \textbf{region} and \textbf{country} in this format - \textbf{name, region, country}
+            \item department \textbf{name}
+        \end{itemize}
+        \item Displaying all marks. This needs to display the following details in a \textbf{DataGridView}:
+        \begin{itemize}
+            \item learner \textbf{id}
+            \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+            \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+            \item learner \textbf{assessment marks 1-5} in this format - \textbf{mark 1, mark 2, mark 3, mark 4, mark 5}
+        \end{itemize}
+        \item Displaying all grades. This needs to display the following details in a \textbf{DataGridView}:
+        \begin{itemize}
+            \item learner \textbf{id}
+            \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+            \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+            \item learner  \textbf{assessment grades 1-5} in this format - \textbf{grade 1, grade 2, grade 3, grade 4, grade 5}
+        \end{itemize}
+        \item Displaying highest marks. This needs to display the following details in a \textbf{DataGridView}:
+        \begin{itemize}
+            \item learner \textbf{id}
+            \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+            \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+            \item learner \textbf{highest assessment mark(s)}
+        \end{itemize}
+        \item Displaying lowest marks. This needs to display the following details in a \textbf{DataGridView}:
+        \begin{itemize}
+            \item learner \textbf{id}
+            \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+            \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+            \item learner \textbf{lowest assessment mark(s)}
+        \end{itemize}
+        \item Displaying fail marks. This needs to display the following details in a \textbf{DataGridView}:
+        \begin{itemize}
+            \item learner \textbf{id}
+            \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+            \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+            \item learner \textbf{fail assessment mark(s)}
+        \end{itemize}
+        \item Displaying average marks. This needs to display the following details in a \textbf{DataGridView}:
+        \begin{itemize}
+            \item learner \textbf{id}
+            \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+            \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+            \item learner \textbf{average assessment mark}
+        \end{itemize}
+        \item Displaying average grades. This needs to display the following details in a \textbf{DataGridView}:
+        \begin{itemize}
+            \item learner \textbf{id}
+            \item learner \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+            \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+            \item learner \textbf{average assessment grade}
+        \end{itemize}
+        \item Displaying lecturer details. This needs to display the following details in a \textbf{DataGridView}:
+        \begin{itemize}
+            \item lecturer \textbf{id}
+            \item lecturer \textbf{first name} and \textbf{last name} in this format - \textbf{first name last name}
+            \item lecturer \textbf{position}
+            \item institution \textbf{name}, \textbf{region} and \textbf{country} in this format - \textbf{name, region, country}
+            \item department \textbf{name}
+            \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
+            \item lecturer \textbf{salary}
+        \end{itemize}
+        \item Adding a learner. When adding a learner, the \textbf{id} is auto-generated and unique. Prompt the user to enter the following details: \textbf{first name}, \textbf{last name}, \textbf{course} and \textbf{assessment marks 1-5}. Implement the following validation:
+        \begin{itemize}
+            \item \textbf{first name} and \textbf{last name} are not empty or, contain numbers and special characters.
+            \item \textbf{course} is a valid number.
+            \item \textbf{assessment marks 1-5} are between 0 and 100.
+        \end{itemize} 
+        If the validation is successful, add the learner to the \textbf{learners} list, write the learner to the \textbf{learners.txt} file and display a success message. Otherwise, display an error message.                          
+        \item Adding a lecturer. When adding a lecturer, the \textbf{id} is auto-generated and unique. The \textbf{salary} is calculated based on the \textbf{position}. Prompt the user to enter the following details: \textbf{first name}, \textbf{last name}, \textbf{position} and \textbf{course}. Implement the following validation:
+        \begin{itemize}
+            \item \textbf{first name} and \textbf{last name} are not empty or, contain numbers and special characters.
+            \item \textbf{position} and \textbf{course} are valid numbers.
+        \end{itemize}
+        If the validation is successful, add the lecturer to the \textbf{lecturers} list, write the lecturer to the \textbf{lecturers.txt} file and display a success message. Otherwise, display an error message.
+        \item Removing a lecturer. When removing a lecturer, prompt the user to enter the \textbf{id} of the learner to remove. If the \textbf{id} is valid, prompt the user to confirm the removal. If the user confirms the removal, remove the lecturer from the \textbf{lecturers} list and \textbf{lecturer.txt} file, and display a success message. Otherwise, display an error message.
+        \item Exiting the application
+    \end{itemize} 
+    If the user enters an invalid option, display an error message and prompt the user to enter a valid option.
+\end{itemize}
+
+
+\subsubsection*{Attendance Tracker}
+
+The application needs to open without code or file structure modification in \textbf{Visual Studio}.
+
+\subsubsection*{Milestone Six - Due Wednesday, 18 September 2024 (Week 10)}
+
+\begin{itemize}
     \item Add a \textbf{Project Reference} to the \textbf{Student Management System} application.
     \item \textbf{Learner.cs}. In this class, you will add an additional \textbf{private} field: \textbf{attendance} of type \textbf{int} and a \textbf{public constructor} that takes in the following parameters: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string}, \textbf{lastName} of type \textbf{string} and \textbf{attendance} of type \textbf{int}. \textbf{Note:} This class should have two \textbf{private} fields and two \textbf{public constructors}.
     \item \textbf{Form1.cs}. \textbf{public class Form1} manages the user interface. This class needs to account for the following functionality:
@@ -282,7 +311,6 @@ public enum ESalary
     \item Provide the following in your repository \textbf{README.md} file:
     \begin{itemize}
         \item A class diagram of your applications.
-        \item If applicable, known bugs.
     \end{itemize}
 \end{itemize}
 

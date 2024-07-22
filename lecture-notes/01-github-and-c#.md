@@ -4,7 +4,7 @@
 
 In this course, we are going to use **GitHub** and **GitHub Classroom** to manage our development. Begin by clicking the following:
 
-https://classroom.github.com/a/9Cn3pu5-
+<https://classroom.github.com/a/o7D2CGoa>
 
 You will use this repository for your **formative assessments** only.
 

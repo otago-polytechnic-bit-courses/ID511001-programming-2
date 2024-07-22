@@ -352,27 +352,6 @@ do
 } while (i < 10);
 ```
 
-`foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
-
-```cs
-// Note: item is a variable that represents an item in the collection. It can be named anything you want
-foreach (var item in collection)
-{
-    // Code to be executed
-}
-```
-
-For example, the following code uses a foreach loop to print the items of an array to the console:
-
-```cs
-int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
-foreach (int i in numbers)
-{
-    Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
-}
-```
-
 ## Methods
 
 In **C#**, a **method** is a block of code that performs a specific task and can be called (invoked) by name. Methods are used to encapsulate and organise code and can accept parameters and return a value. There are several types of **methods** in **C#**, including:

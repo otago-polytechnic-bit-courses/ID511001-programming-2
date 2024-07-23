@@ -711,7 +711,7 @@ Declare the following test cases in the `Main()` method:
 ```cs
 Console.WriteLine(isPalindrome("level")); // Expected output: true
 Console.WriteLine(isPalindrome("hello")); // Expected output: false
-``
+```
 
 ## Task 9:
 

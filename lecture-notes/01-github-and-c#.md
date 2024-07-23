@@ -667,10 +667,10 @@ In my solution, I converted the two **strings** to **char** arrays and sorted th
 
 Declare the following test cases in the `Main()` method:
 
-``cs
+```cs
 Console.WriteLine(isAnagram("listen", "silent")); // Expected output: true
 Console.WriteLine(isAnagram("hello", "world")); // Expected output: false
-``
+```
 
 ## Task 5:
 
@@ -678,10 +678,10 @@ Create a **static method** called `convert` that takes in two parameters, `hours
 
 Declare the following test cases in the `Main()` method:
 
-``cs
+```cs
 Console.WriteLine(convert(2, 30)); // Expected output: 9000
 Console.WriteLine(convert(1, 15)); // Expected output: 4500
-``
+```
 
 ## Task 6:
 
@@ -697,10 +697,10 @@ To handle the edge case where the word does not contain vowels, you can check if
 
 Declare the following test cases in the `Main()` method:
 
-``cs
+```cs
 Console.WriteLine(removeVowels("C#")); // Expected output: C#
 Console.WriteLine(removeVowels("programming")); // Expected output: prgrmmng
-``
+```
 
 ## Task 8:
 
@@ -708,7 +708,7 @@ Create a **static method** called `isPalindrome` that takes in a parameter `word
 
 Declare the following test cases in the `Main()` method:
 
-``cs
+```cs
 Console.WriteLine(isPalindrome("level")); // Expected output: true
 Console.WriteLine(isPalindrome("hello")); // Expected output: false
 ``
@@ -719,10 +719,10 @@ Create a **static method** called `isPrime` that takes in a parameter `num` whic
 
 Declare the following test cases in the `Main()` method:
 
-``cs
+```cs
 Console.WriteLine(isPrime(7)); // Expected output: true
 Console.WriteLine(isPrime(10)); // Expected output: false
-``
+```
 
 ## Task 10:
 

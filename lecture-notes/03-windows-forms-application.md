@@ -350,35 +350,35 @@ public partial class Form1 : Form
    public Form1()
    {
       InitializeComponent();
+      listBox1.Items.Add("This is a new line of text 11");
+      listBox1.Items.Add("This is a new line of text 12");
    }
 
    private void radioButton1_CheckedChanged(object sender, EventArgs e)
    {
-      listBox1.Items.Clear();
       listBox1.Items.Add("This is a new line of text 1");
       listBox1.Items.Add("This is a new line of text 2");
       listBox1.Items.Add("This is a new line of text 3");
       listBox1.Items.Add("This is a new line of text 4");
       listBox1.Items.Add("This is a new line of text 5");
 
-      if (listBox1.Items.Contains("This is a new line of text 1"))
+      if (listBox1.Items.Contains("This is a new line of text 12"))
       {
-         listBox1.Items.Remove("This is a new line of text 1");
+         listBox1.Items.Remove("This is a new line of text 12");
       }
    }
 
    private void radioButton2_CheckedChanged(object sender, EventArgs e)
    {
-      listBox1.Items.Clear();
       listBox1.Items.Add("This is a new line of text 6");
       listBox1.Items.Add("This is a new line of text 7");
       listBox1.Items.Add("This is a new line of text 8");
       listBox1.Items.Add("This is a new line of text 9");
       listBox1.Items.Add("This is a new line of text 10");
 
-      if (listBox1.Items.Contains("This is a new line of text 6"))
+      if (listBox1.Items.Contains("This is a new line of text 11"))
       {
-         listBox1.Items.Remove("This is a new line of text 6");
+         listBox1.Items.Remove("This is a new line of text 11");
       }
    }
 }

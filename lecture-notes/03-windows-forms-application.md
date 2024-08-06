@@ -201,6 +201,103 @@ public partial class Form1 : Form
 
 Note that you do not need to know how the `Clear()` method, the `Lines` property, the `Add()` method or the `Count` property are implemented. You only need to know how to use them. For example, you must know that the `Add()` method requires a string parameter, and that `Count` property is an integer value. You need to know the interface, but not the implementation.
 
+### Other Useful Methods
+
+`Contains` method checks if a string is in the `ListBox`:
+
+```cs
+// using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+      listBox1.Items.Add("This is a new line of text");
+      if (listBox1.Items.Contains("This is a new line of text"))
+      {
+         MessageBox.Show("The ListBox contains the string");
+      }
+   }
+}
+```   
+
+`Remove` method removes a string from the `ListBox`:
+
+```cs
+// using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+      listBox1.Items.Add("This is a new line of text");
+      Console.WriteLine(listBox1.Items.Count); // Output: 1
+      listBox1.Items.Remove("This is a new line of text");
+      Console.WriteLine(listBox1.Items.Count); // Output: 0
+   }
+}
+```
+
+`RemoveAt` method removes a string at a specific index from the `ListBox`:
+
+```cs
+// using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+      listBox1.Items.Add("This is a new line of text 1");
+      listBox1.Items.Add("This is a new line of text 2");
+      Console.WriteLine(listBox1.Items.Count); // Output: 2
+      listBox1.Items.RemoveAt(0);
+      Console.WriteLine(listBox1.Items.Count); // Output: 1
+   }
+}
+```
+
+`IndexOf` method returns the index of a string in the `ListBox`:
+
+```cs
+// using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+      listBox1.Items.Add("This is a new line of text 1");
+      listBox1.Items.Add("This is a new line of text 2");
+      int index = listBox1.Items.IndexOf("This is a new line of text 2");
+      Console.WriteLine(index); // Output: 1
+   }
+}
+```
+
+Combining the `Contains`, `IndexOf` and `RemoveAt` methods:
+
+```cs
+// using directives  
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+      listBox1.Items.Add("This is a new line of text 1");
+      listBox1.Items.Add("This is a new line of text 2");
+      if (listBox1.Items.Contains("This is a new line of text 2"))
+      {
+         int index = listBox1.Items.IndexOf("This is a new line of text 2");
+         listBox1.Items.RemoveAt(index);
+      }
+   }
+}
+```
+
 ## Radio Button Controls
 
 **C#** provides two familiar user interface elements that can be used to collect user input to determine branching conditions. They are `RadioButtons` and `CheckBoxes`.
@@ -208,6 +305,82 @@ Note that you do not need to know how the `Clear()` method, the `Lines` property
 `RadioButtons` are yes/no (or on/off) controls that occur in mutually exclusive sets. That is, only one member of a set of radio buttons can be selected (on) at a time. Selecting any member of a set of radio buttons causes all the other members to be deselected.
 
 If you place a number of radio buttons directly on the `Form`, they are automatically members of a mutually exclusive set (i.e. only one of them can be selected at a time). If you want more than one set of radio buttons, you must place each set in a separate container. **C#** provides two types of containers. They can be used to group any **C#** controls, but are most frequently used to define a set of `RadioButtons`. They are a `GroupBox` and a `Panel`. You must manually place each button on the container, and must manually change the caption of each button.
+
+Here is an example of using the `RadioButton` with `ListBox`:
+
+```cs
+// using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+   }
+
+   private void radioButton1_CheckedChanged(object sender, EventArgs e)
+   {
+      listBox1.Items.Clear();
+      listBox1.Items.Add("This is a new line of text 1");
+      listBox1.Items.Add("This is a new line of text 2");
+      listBox1.Items.Add("This is a new line of text 3");
+      listBox1.Items.Add("This is a new line of text 4");
+      listBox1.Items.Add("This is a new line of text 5");
+   }
+
+   private void radioButton2_CheckedChanged(object sender, EventArgs e)
+   {
+      listBox1.Items.Clear();
+      listBox1.Items.Add("This is a new line of text 6");
+      listBox1.Items.Add("This is a new line of text 7");
+      listBox1.Items.Add("This is a new line of text 8");
+      listBox1.Items.Add("This is a new line of text 9");
+      listBox1.Items.Add("This is a new line of text 10");
+   }
+}
+```
+
+How to delete an item from a `ListBox` if is contains a specific string:
+
+```cs
+// using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+   }
+
+   private void radioButton1_CheckedChanged(object sender, EventArgs e)
+   {
+      listBox1.Items.Clear();
+      listBox1.Items.Add("This is a new line of text 1");
+      listBox1.Items.Add("This is a new line of text 2");
+      listBox1.Items.Add("This is a new line of text 3");
+      listBox1.Items.Add("This is a new line of text 4");
+      listBox1.Items.Add("This is a new line of text 5");
+   }
+
+   private void radioButton2_CheckedChanged(object sender, EventArgs e)
+   {
+      listBox1.Items.Clear();
+      listBox1.Items.Add("This is a new line of text 6");
+      listBox1.Items.Add("This is a new line of text 7");
+      listBox1.Items.Add("This is a new line of text 8");
+      listBox1.Items.Add("This is a new line of text 9");
+      listBox1.Items.Add("This is a new line of text 10");
+   }
+
+   private void button1_Click(object sender, EventArgs e)
+   {
+      if (listBox1.Items.Contains("This is a new line of text 1"))
+      {
+         listBox1.Items.Remove("This is a new line of text 1");
+      }
+   }
+}
+```
 
 ## Data Grid View Control
 

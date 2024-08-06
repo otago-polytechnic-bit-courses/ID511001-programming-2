@@ -360,6 +360,11 @@ public partial class Form1 : Form
       listBox1.Items.Add("This is a new line of text 3");
       listBox1.Items.Add("This is a new line of text 4");
       listBox1.Items.Add("This is a new line of text 5");
+
+      if (listBox1.Items.Contains("This is a new line of text 1"))
+      {
+         listBox1.Items.Remove("This is a new line of text 1");
+      }
    }
 
    private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -370,13 +375,10 @@ public partial class Form1 : Form
       listBox1.Items.Add("This is a new line of text 8");
       listBox1.Items.Add("This is a new line of text 9");
       listBox1.Items.Add("This is a new line of text 10");
-   }
 
-   private void button1_Click(object sender, EventArgs e)
-   {
-      if (listBox1.Items.Contains("This is a new line of text 1"))
+      if (listBox1.Items.Contains("This is a new line of text 6"))
       {
-         listBox1.Items.Remove("This is a new line of text 1");
+         listBox1.Items.Remove("This is a new line of text 6");
       }
    }
 }

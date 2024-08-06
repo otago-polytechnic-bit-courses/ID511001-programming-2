@@ -233,9 +233,9 @@ public partial class Form1 : Form
    {
       InitializeComponent();
       listBox1.Items.Add("This is a new line of text");
-      Console.WriteLine(listBox1.Items.Count); // Output: 1
+      MessageBox.Show(listBox1.Items.Count.ToString()); // Output: 1
       listBox1.Items.Remove("This is a new line of text");
-      Console.WriteLine(listBox1.Items.Count); // Output: 0
+      MessageBox.Show(listBox1.Items.Count.ToString()); // Output: 0
    }
 }
 ```
@@ -252,9 +252,9 @@ public partial class Form1 : Form
       InitializeComponent();
       listBox1.Items.Add("This is a new line of text 1");
       listBox1.Items.Add("This is a new line of text 2");
-      Console.WriteLine(listBox1.Items.Count); // Output: 2
+      MessageBox.Show(listBox1.Items.Count.ToString()); // Output: 2
       listBox1.Items.RemoveAt(0);
-      Console.WriteLine(listBox1.Items.Count); // Output: 1
+      MessageBox.Show(listBox1.Items.Count.ToString()); // Output: 1
    }
 }
 ```
@@ -272,7 +272,7 @@ public partial class Form1 : Form
       listBox1.Items.Add("This is a new line of text 1");
       listBox1.Items.Add("This is a new line of text 2");
       int index = listBox1.Items.IndexOf("This is a new line of text 2");
-      Console.WriteLine(index); // Output: 1
+      MessageBox.Show(index.ToString()); // Output: 1
    }
 }
 ```

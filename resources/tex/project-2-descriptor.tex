@@ -96,26 +96,6 @@ The application needs to open without code or file structure modification in \te
 \subsubsection*{Milestone One - Due Wednesday, 21 August 2024 (Week 5)}
 
 \begin{itemize}
-    \item The application needs to contain the following \textbf{enums}:
-    \begin{verbatim}
-public enum EPosition
-{
-    LECTURER = 0,
-    SENIOR_LECTURER = 1,
-    PRINCIPAL_LECTURER = 2,
-    ASSOCIATE_PROFESSOR = 3,
-    PROFESSOR = 4
-}
-            
-public enum ESalary
-{
-    LECTURER_SALARY = 85000,
-    SENIOR_LECTURER_SALARY = 100000,
-    PRINCIPAL_LECTURER_SALARY = 115000,
-    ASSOCIATE_PROFESSOR_SALARY = 130000,
-    PROFESSOR_SALARY = 145000
-}
-    \end{verbatim}
     \item \textbf{Institution.cs}. \textbf{public class Institution} has the following \textbf{private} fields: \textbf{name} of type \textbf{string}, \textbf{region} of type \textbf{string} and \textbf{country} of type \textbf{string}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{name} of type \textbf{string}, \textbf{region} of type \textbf{string} and \textbf{country} of type \textbf{string}. 
     \item \textbf{Department.cs}. \textbf{public class Department} has the following \textbf{private} fields: \textbf{institution} of type \textbf{Institution} and \textbf{name} of type \textbf{string}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{institution} of type \textbf{Institution} and \textbf{name} of type \textbf{string}.
     \item \textbf{Course.cs}. \textbf{public class Course} has the following \textbf{private} fields: \textbf{department} of type \textbf{Department}, \textbf{code} of type \textbf{string}, \textbf{name} of type \textbf{string}, \textbf{description} of type \textbf{string}, \textbf{credits} of type \textbf{int} and \textbf{fees} of type \textbf{double}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{department} of type \textbf{Department}, \textbf{code} of type \textbf{string}, \textbf{name} of type \textbf{string}, \textbf{description} of type \textbf{string}, \textbf{credits} of type \textbf{int} and \textbf{fees} of type \textbf{double}.
@@ -147,6 +127,26 @@ public enum ESalary
 \subsubsection*{Milestone Three - Due Monday, 2 September 2024 (Week 7)}
 
 \begin{itemize}
+    \item The application needs to contain the following \textbf{enums}:
+    \begin{verbatim}
+public enum EPosition
+{
+    LECTURER = 0,
+    SENIOR_LECTURER = 1,
+    PRINCIPAL_LECTURER = 2,
+    ASSOCIATE_PROFESSOR = 3,
+    PROFESSOR = 4
+}
+            
+public enum ESalary
+{
+    LECTURER_SALARY = 85000,
+    SENIOR_LECTURER_SALARY = 100000,
+    PRINCIPAL_LECTURER_SALARY = 115000,
+    ASSOCIATE_PROFESSOR_SALARY = 130000,
+    PROFESSOR_SALARY = 145000
+}
+    \end{verbatim}
     \item \textbf{Person.cs}. \textbf{public class Person} has the following \textbf{protected} fields: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string} and \textbf{lastName} of type \textbf{string}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string} and \textbf{lastName} of type \textbf{string}.
     \item \textbf{Learner.cs}. \textbf{public class Learner} inherits from \textbf{Person} and has one additional \textbf{private} field: \textbf{courseAssessmentMarks} of type \textbf{CourseAssessmentMark}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string}, \textbf{lastName} of type \textbf{string} and \textbf{courseAssessmentMarks} of type \textbf{CourseAssessmentMark}. 
     \item \textbf{Lecturer.cs}. \textbf{public class Lecturer} inherits from \textbf{Person} and has three additional \textbf{private} fields: \textbf{position} of type \textbf{EPosition}, \textbf{salary} of type \textbf{ESalary} and \textbf{course} of type \textbf{Course}. This class has a \textbf{public constructor} that takes in the following parameters: \textbf{id} of type \textbf{int}, \textbf{firstName} of type \textbf{string}, \textbf{lastName} of type \textbf{string}, \textbf{position} of type \textbf{EPosition}, \textbf{salary} of type \textbf{ESalary} and \textbf{course} of type \textbf{Course}. 

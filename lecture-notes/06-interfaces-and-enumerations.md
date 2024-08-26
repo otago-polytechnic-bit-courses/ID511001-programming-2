@@ -134,6 +134,7 @@ Here are steps you should consider:
    - `private string _name`
    - `private double _price`
    - `public int Quantity { get; set; }`
+   - `public Product()`. This should accept `_name` and `_price`
    - `public string Display()`
    - `public double TotalPrice()` - This method should return the total price of the item, which is the price multiplied by the quantity
   

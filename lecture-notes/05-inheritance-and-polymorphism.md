@@ -21,8 +21,8 @@ public class Animal
     }
 
     // Virtual - derived classes can override the base class implementation
-    public virtual void Eat() { /*...*/ }
-    public virtual void Sleep() { /*...*/ }
+    public virtual string Eat() { /*...*/ }
+    public virtual string Sleep() { /*...*/ }
 
     public virtual string Name { get => name; set => name = value; }
     public int Age { get => age; set => age = value; } 
@@ -41,10 +41,10 @@ public class Dog : Animal
     }
 
     // Overriding the base class's implementation
-    public override void Eat() { /*...*/ }
+    public override string Eat() { /*...*/ }
 
     // Its own class method
-    public void Bark() { /*...*/ }
+    public string Bark() { /*...*/ }
 
     public override string Name { get => name; set => name = value; }
     public string Colour { get => _colour; set => _colour = value; }
@@ -165,7 +165,7 @@ If you get stuck on any of the following tasks, feel free to use **ChatGPT** per
 
 ## Task 1:
 
-Create a base class called `Vehicle` with the `protected` fields - `brand`, `model`, and `year`. Create a constructor method that accepts all fields. Create a `virtual` method called `DisplayDetails` which displays the `Vehicle`'s `brand`, `model`, and `year`.
+Create a base class called `Vehicle` with the `protected` fields - `brand`, `model`, and `year`. Create a constructor method that accepts all fields. Create a `virtual` method called `DisplayDetails` that returna a `string` which displays the `Vehicle`'s `brand`, `model`, and `year`.
 
 Create a class called `Car` which derives from `Vehicle` with the private field - `numOfDoors`. Create a constructor that accepts all base class's fields, i.e., `brand`, `model`, and `year` and its own, i.e., `numOfDoors`. Create an `override` method for `DisplayDetails` which displays the `Car`s `numOfDoors`.
 
@@ -179,7 +179,7 @@ In the `Form1()` constructor, create a `Dog` and `Cat` object. Using the `Messag
 
 ## Task 3:
 
-Create a base class called `Person` with the `protected` fields - `name` and `age`. Create a constructor method that accepts all fields. Create a `virtual` method called `DisplayDetails` which outputs the `Person`'s `name` and `age`.
+Create a base class called `Person` with the `protected` fields - `name` and `age`. Create a constructor method that accepts all fields. Create a `virtual` method that returns a `string` called `DisplayDetails` which outputs the `Person`'s `name` and `age`.
 
 Create a class called `Student` which derives from `Person` with the private field - `grade`. Create a constructor that accepts all base class's fields, i.e., `name` and `age` and its own, i.e., `grade`. Create an `override` method for `DisplayDetails` which outputs the `Student`'s `name`, `age` and `grade`.
 

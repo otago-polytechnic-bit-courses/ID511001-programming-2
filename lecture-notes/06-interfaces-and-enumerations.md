@@ -135,7 +135,7 @@ Here are steps you should consider:
    - `private double _price`
    - `private int _quantity`
    - `public Product()`. This should accept `_name`, `_price` and `_quantity`
-   - `public string Display()`
+   - `public string Display()` - This method should return the `_name`
    - `public double TotalPrice()` - This method should return the total price of the item, which is the price multiplied by the quantity
   
 3. In the `Form1` class, create a `List<IInventoryItem>` called `inventory`. Add the following items to the list:

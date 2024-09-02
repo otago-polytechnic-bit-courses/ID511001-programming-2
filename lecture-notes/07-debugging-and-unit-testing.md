@@ -1,6 +1,6 @@
 # 07: Debugging and Unit Testing
 
-You can find today's coding example - `07-debugging-and-unit-testing` in the **lecture-notes** directory.
+You can find today's coding example - `07-calculator-example.zip` in the **lecture-notes** directory.
 
 ## Debugging
 

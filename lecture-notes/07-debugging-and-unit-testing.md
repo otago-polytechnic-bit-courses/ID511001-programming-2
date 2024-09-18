@@ -23,9 +23,9 @@ Debugging is an important part of the development process and it can save a lot 
 
 Unit testing is the process of testing individual units of code, such as methods or classes, in isolation from the rest of the application. The goal of unit testing is to ensure that each unit of code behaves correctly and that it meets the requirements specified for it. Unit tests are usually automated, which means that they can be run automatically and repeatedly without human intervention.
 
-Unit tests are typically written using a unit testing framework, such as **MSTest**, **xUnit**, or **NUnit**, which provides a set of tools and libraries for creating, running, and managing unit tests. The tests are usually written using a test-driven development (TDD) approach, where the tests are written before the actual implementation of the code.
+Unit tests are typically written using a unit testing framework, such as **Unit Test Project (.NET Framework)**, **MSTest**, **xUnit**, or **NUnit**, which provides a set of tools and libraries for creating, running, and managing unit tests. The tests are usually written using a test-driven development (TDD) approach, where the tests are written before the actual implementation of the code.
 
-Here's an example of a simple unit test using **MSTest**:
+Here's an example of a simple unit test using **Unit Test Project (.NET Framework)**:
 
 ```cs
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -55,7 +55,7 @@ When the test is run, the unit testing framework will execute the `AddShouldRetu
 
 Unit testing is an important practice in software development, as it helps to ensure that the code is working correctly, it helps to detect and fix bugs early, and it allows for more confident and safe changes and refactoring of the code. It also helps to increase the quality and maintainability of the code.
 
-Let us look at how to create a test class. Open the `Calculator` project in **Visual Studio**. Right-click on `Solution 'Calculator'` in the **Solution Explorer**. Click on **Add** then **New Project...**. You will be presented with a **Add a new project** window. Choose the **MSTest Test Project** template, and name it `CalculatorTests`. Once you have created the project, you will see the following:
+Let us look at how to create a test class. Open the `Calculator` project in **Visual Studio**. Right-click on `Solution 'Calculator'` in the **Solution Explorer**. Click on **Add** then **New Project...**. You will be presented with a **Add a new project** window. Choose the **Unit Test Project (.NET Framework)** template, name it `CalculatorTests` and set the framework to `.NET Framework 4.8.1`. Once you have created the project, you will see the following:
 
 ```cs
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -73,7 +73,7 @@ namespace CalculatorTests
 }
 ```
 
-Rename the `UnitTest1.cs` file to `CalcTests.cs` and add the code from the `CalcTests` example above. **Note:** Do not remove any `using` directives. You will need to add a project reference to `CalculatorTests`. Without this, you will not be able to access the `Calc` class. To do this, right-click on `CalculatorTests`. Click on **Add** then **Project Reference...**. You will be presented with a **Reference Manager** window. Check `Calculator`. Add the following `using` directive - `using Calculator;` below `using Microsoft.VisualStudio.TestTools.UnitTesting;`. Now you should have access to the `Calc` class. To run `CalculatorTests`, press the <kbd>ctrl</kbd> + <kbd>r</kbd> + <kbd>t</kbd>.
+Rename the `UnitTest1.cs` file to `CalcTests.cs` and add the code from the `CalcTests` example above. **Note:** Do not remove any `using` directives. You will need to add a project reference to `CalculatorTests`. Without this, you will not be able to access the `Calc` class. To do this, right-click on `CalculatorTests`. Click on **Add** then **Reference*...*. You will be presented with a **Reference Manager** window. Check `Calculator`. Add the following `using` directive - `using Calculator;` below `using Microsoft.VisualStudio.TestTools.UnitTesting;`. Now you should have access to the `Calc` class. To run `CalculatorTests`, press the <kbd>ctrl</kbd> + <kbd>r</kbd> + <kbd>t</kbd>.
 
 # Formative Assessment
 

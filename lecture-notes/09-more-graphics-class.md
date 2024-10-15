@@ -4,7 +4,7 @@ No new material...just more guidance for **Project 1**.
 
 # Formative Assessment
 
-Before you start, create a new **C# Console** application called **09-formative-assessment**.
+Before you start, create a new **C# Windows Form** application called **09-formative-assessment**.
 
 If you get stuck on any of the following tasks, feel free to use **ChatGPT** permitting, you are aware of the following:
 

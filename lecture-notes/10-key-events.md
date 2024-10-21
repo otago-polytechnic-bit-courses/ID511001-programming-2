@@ -112,6 +112,71 @@ private void Form1_KeyPress(object sender, KeyPressEventArgs e)
 }
 ```
 
+### Moving Two Keys - Project 1: Pong 
+
+The following code is designed to control the left and right paddles at the same time.
+
+```cs
+public partial class Form1 : Form
+{
+    private HashSet<Keys> pressedKeys;
+    
+    public Form1()
+    {
+        InitializeComponent();
+
+        // Initialise the HashSet for tracking pressed keys
+        pressedKeys = new HashSet<Keys>();
+    }
+
+    private void timer1_Tick(object sender, EventArgs e)
+    {
+        // Check if the W key is pressed to move the left paddle up
+        if (pressedKeys.Contains(Keys.W))
+            // Call a method to move the left paddle up
+
+        // Check if the S key is pressed to move the left paddle down
+        if (pressedKeys.Contains(Keys.S))
+            // Call a method to move the left paddle down
+
+        // Check if the Up Arrow key is pressed to move the right paddle up
+        if (pressedKeys.Contains(Keys.Up))
+            // Call a method to move the right paddle up
+
+        // Check if the Down Arrow key is pressed to move the right paddle down
+        if (pressedKeys.Contains(Keys.Down))
+            // Call a method to move the right paddle down
+    }
+
+    private void Form1_KeyDown(object sender, KeyEventArgs e)
+    {
+        pressedKeys.Add(e.KeyCode); // Add the pressed key to the set
+
+        // Check for paddle movement for the left paddle
+        if (pressedKeys.Contains(Keys.W))
+            // Call a method to move the left paddle up
+
+        if (pressedKeys.Contains(Keys.S))
+            // Call a method to move the left paddle down
+
+        // Check for paddle movement for the right paddle
+        if (pressedKeys.Contains(Keys.Up))
+            // Call a method to move the right paddle up
+
+        if (pressedKeys.Contains(Keys.Down))
+            // Call a method to move the right paddle down
+    }
+
+    private void Form1_KeyUp(object sender, KeyEventArgs e)
+    {
+        // Remove the released key from the HashSet of pressed keys
+        pressedKeys.Remove(e.KeyCode);
+    }
+}
+```
+
+When a key is pressed, the KeyDown event is triggered once for that key. If multiple keys are pressed quickly or at the same time, it may not capture all key states, as each key press triggers its own event independently.
+
 # Formative Assessment
 
 No formative assessment provided in this topic.

@@ -175,7 +175,7 @@ public partial class Form1 : Form
 }
 ```
 
-When a key is pressed, the KeyDown event is triggered once for that key. If multiple keys are pressed quickly or at the same time, it may not capture all key states, as each key press triggers its own event independently.
+When a key is pressed, the `KeyDown` event is triggered once for that key. If multiple keys are pressed quickly or at the same time, it may not capture all key states, as each key press triggers its own event independently.
 
 # Formative Assessment
 

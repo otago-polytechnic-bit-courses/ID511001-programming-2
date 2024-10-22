@@ -129,25 +129,6 @@ public partial class Form1 : Form
         pressedKeys = new HashSet<Keys>();
     }
 
-    private void timer1_Tick(object sender, EventArgs e)
-    {
-        // Check if the W key is pressed to move the left paddle up
-        if (pressedKeys.Contains(Keys.W))
-            // Call a method to move the left paddle up
-
-        // Check if the S key is pressed to move the left paddle down
-        if (pressedKeys.Contains(Keys.S))
-            // Call a method to move the left paddle down
-
-        // Check if the Up Arrow key is pressed to move the right paddle up
-        if (pressedKeys.Contains(Keys.Up))
-            // Call a method to move the right paddle up
-
-        // Check if the Down Arrow key is pressed to move the right paddle down
-        if (pressedKeys.Contains(Keys.Down))
-            // Call a method to move the right paddle down
-    }
-
     private void Form1_KeyDown(object sender, KeyEventArgs e)
     {
         pressedKeys.Add(e.KeyCode); // Add the pressed key to the set

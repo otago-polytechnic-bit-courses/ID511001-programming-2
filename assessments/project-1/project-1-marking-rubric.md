@@ -37,13 +37,13 @@
 | **Modularity**                                      | Sufficient modularity is demonstrated, with well-organised and encapsulated code. | Minor issues in modularity.                       | Significant issues in modularity.                  | Lack of modularity, code is not well-organised.     |
 | **XML Documentation Comments**                     | Each file contains XML documentation comments at the top, following the provided example. | Minor issues in XML documentation comments.       | Significant issues in XML documentation comments. | Missing or incorrect XML documentation comments.  |
 | **Code Formatting**                                | Code is consistently and appropriately formatted.    | Minor inconsistencies in code formatting.         | Significant inconsistencies in code formatting.  | Poor or non-consistent code formatting.            |
-| **Dead or Unused Code**                             | No dead or unused code is present in the application. | Minor instances of dead or unused code.           | Significant instances of dead or unused code.    | Widespread presence of dead or unused code.        |
+| **Dead or Unused Code**                             | No dead or unused code is present in the applications. | Minor instances of dead or unused code.           | Significant instances of dead or unused code.    | Widespread presence of dead or unused code.        |
 
 ### Documentation - 5%
 
 | **Criteria**                                       | **5**                                              | **4**                                               | **3-2**                                               | **1-0**                                               |
 | --------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| **README Content - Class Diagram**                 | README.md contains a clear and accurate class diagram of the applications. | Minor issues or inaccuracies in the class diagram.  | Significant issues or inaccuracies in the class diagram. | Class diagram is missing or unclear.                |
+| **README Content - Class Diagram**                 | README.md contains a clear and accurate class diagram of the Pong application. | Minor issues or inaccuracies in the class diagram.  | Significant issues or inaccuracies in the class diagram. | Class diagram is missing or unclear.                |
 
 # Marking Cover Sheet
 

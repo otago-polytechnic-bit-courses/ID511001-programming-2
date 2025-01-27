@@ -1,4 +1,4 @@
-# 04: Classes, Objects and Encapsulation
+# 04b: Classes, Objects and Encapsulation
 
 In **ID510001: Programming 1**, you learned about **structs**. Before we take a look at **classes**, let us first recap what a **struct** is.
 

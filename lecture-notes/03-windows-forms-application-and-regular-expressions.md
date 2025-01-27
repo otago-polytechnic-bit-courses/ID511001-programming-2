@@ -412,6 +412,96 @@ public partial class Form1 : Form
 }
 ```
 
+## Regular Expressions
+
+A regular expression is a pattern that describes a set of strings. Regular expressions are used to perform pattern-matching and "search-and-replace" functions on text. Regular expressions are extremely powerful, but can be difficult to understand at first. 
+
+The following table lists some of the most common regular expression characters:
+
+| Character | Description |
+|-----------|-------------|
+| . | Matches any single character except a newline. |
+| ^ | Matches the start of the string. |
+| $ | Matches the end of the string. |
+| * | Matches zero or more occurrences of the preceding character. |
+| + | Matches one or more occurrences of the preceding character. |
+| ? | Matches zero or one occurrence of the preceding character. |
+| {n} | Matches exactly n occurrences of the preceding character. |
+| {n,} | Matches n or more occurrences of the preceding character. |
+| {n,m} | Matches between n and m occurrences of the preceding character. |
+| [abc] | Matches any one of the characters a, b, or c. |
+| [^abc] | Matches any character except a, b, or c. |
+| [a-z] | Matches any character from a to z. |
+| [^a-z] | Matches any character except from a to z. |
+| \d | Matches any digit character. |
+| \D | Matches any non-digit character. |
+| \s | Matches any whitespace character. |
+| \S | Matches any non-whitespace character. |
+| \w | Matches any word character. |
+| \W | Matches any non-word character. |
+
+The following example demonstrates how to use regular expressions to validate a phone number:
+
+```cs
+using System.Text.RegularExpressions;
+
+// Other using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+   }
+
+   private void button1_Click(object sender, EventArgs e)
+   {
+      string phoneNumber = textBox1.Text;
+      string pattern = @"^\d{3}-\d{3}-\d{4}$";
+
+      if (Regex.IsMatch(phoneNumber, pattern))
+      {
+         MessageBox.Show("Valid phone number");
+      }
+      else
+      {
+         MessageBox.Show("Invalid phone number");
+      }
+   }
+}
+```
+
+The following example demonstrates how to use regular expressions to validate an email address:
+
+```cs
+using System.Text.RegularExpressions;
+
+// Other using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+   }
+
+   private void button1_Click(object sender, EventArgs e)
+   {
+      string email = textBox1.Text;
+      string pattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
+
+      if (Regex.IsMatch(email, pattern))
+      {
+         MessageBox.Show("Valid email address");
+      }
+      else
+      {
+         MessageBox.Show("Invalid email address");
+      }
+   }
+}
+```
+
 # Formative Assessment
 
 Before you start, create a new **Windows Forms Application** called **03-formative-assessment**.

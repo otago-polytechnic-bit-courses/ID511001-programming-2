@@ -92,7 +92,7 @@ public Form1()
 {
     InitializeComponent();
 
-    Dog myDog = new("Max", 3); // Alternative syntax is Dog myDog = new Dog("Max", 3);
+    Dog myDog = new Dog("Max", 3); // Alternative syntax is Dog myDog = new Dog("Max", 3);
     MessageBox.Show(myDog.Bark()); // Output: "Woof woof!"
 }
 ```
@@ -141,7 +141,7 @@ public Form1()
 {
     InitializeComponent();
 
-    Dog myDog = new("Max", 3);
+    Dog myDog = new Dog("Max", 3);
     MessageBox.Show(myDog.ToString()); // Output: "Name: Max, Age: 3"
 }
 ```
@@ -398,7 +398,7 @@ public static class Utils
 
     public static List<Institution> SeedInstitutions()
     {
-        s_institutions.Add(new("Otago Polytechnic", "Otago", "New Zealand"));
+        s_institutions.Add(new Institution("Otago Polytechnic", "Otago", "New Zealand"));
 
         // Add two more institutions
 
@@ -440,9 +440,9 @@ private static List<Product> products; // Declare this above the the Form1() con
 
 products = new List<Product>() // Declare this inside the Form1() constructor
 {
-    new("Apple", 1.99),
-    new("Banana", 2.99),
-    new("Orange", 3.99)
+    new Product("Apple", 1.99),
+    new Product("Banana", 2.99),
+    new Product("Orange", 3.99)
 };
 ```
 

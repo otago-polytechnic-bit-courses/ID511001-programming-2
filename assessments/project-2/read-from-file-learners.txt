@@ -14,7 +14,7 @@ public static void ReadFromFile(string filePath, List<Learner> learners, bool is
         if (isAttendance)
         {
             //int percentage = int.Parse(learnerDetails[4]);
-            //learner = new(id, firstName, lastName, percentage);
+            //learner = new Learner(id, firstName, lastName, percentage);
         }
         else
         {
@@ -27,8 +27,8 @@ public static void ReadFromFile(string filePath, List<Learner> learners, bool is
                 Convert.ToInt32(learnerDetails[8])
             };
 
-            CourseAssessmentMark assessmentMarks = new(s_courses[courseNum], marks);
-            learner = new(id, firstName, lastName, assessmentMarks);
+            CourseAssessmentMark assessmentMarks = new CourseAssessmentMark(s_courses[courseNum], marks);
+            learner = new Learner(id, firstName, lastName, assessmentMarks);
         }
 
         learners.Add(learner);

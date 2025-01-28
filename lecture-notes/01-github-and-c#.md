@@ -630,9 +630,33 @@ This is a multi-line comment
 There are also **XML** documentation comments, which are used to document code and can be used by tools like **Visual Studio** to provide **IntelliSense**. They start with `///` and continue until the end of the line.
 
 ```cs
-/// <summary>
-/// This is an XML comment
+/// <remarks>
+/// Author: Your Name
+/// Date Created: January 1, 2000
+/// Bugs: None known at this time.
+/// </remarks>
+// <summary>
+/// This is an example class.
 /// </summary>
+```
+
+Here is an example of a **class** with **XML** documentation comments:
+
+```cs
+/// <summary>
+/// This is an example class.
+/// </summary>
+
+public class ExampleClass
+{
+    /// <summary>
+    /// This is an example method.
+    /// </summary>
+    public void ExampleMethod()
+    {
+        // Code to be executed
+    }
+}
 ```
 
 **Note:** In the assessments, you will use **XML** documentation comments to document your code. You can comment out code that you wish to refer to at a later date. Otherwise, these should be removed before submitting your work.

@@ -128,56 +128,30 @@ You will need to submit an application and documentation that meet the following
     \end{itemize}
 \end{itemize}
 
-\subsection*{Code Quality and Best Practices - Learning Outcome 2 (45\%)}
+\subsection*{Code Quality and Best Practices - Learning Outcome 2 (40\%)}
 \begin{itemize}
-    \item A \textbf{Visual Studio} \textbf{.gitignore} file is used. 
-    \item Appropriate naming of files, variables, methods and classes.
-    \item Idiomatic use of object-oriented principles, values, control flow, data structures and in-built functions.
-    \item Efficient algorithmic approach.
-    \item Sufficient modularity.
-    \item Each file has an \textbf{XML documentation comment} located at the top of the file. In the \textbf{assessment} directory of the \textbf{course materials} repository, you will find an \textbf{XML documentation comment} example in the \textbf{xml-documentation-comment.txt} file.
-    \item Formatted code.
-    \item No dead or unused code.
-\end{itemize} 
+	\item Project Structure and Organisation (10\%)
+	\begin{itemize}
+		\item 
+	\end{itemize}
+	\item Naming Conventions (5\%)
+	\item Code Practices and Readability (10\%)
+	\item Documentation and Comments (5\%)
+	\item Code Formatting (5\%)
+	\item Dead Code and Unused Dependencies (5\%)
+	\item Performance and Scalability (5\%)
+\end{itemize}
 
-\subsection*{Documentation - Learning Outcome 2 (5\%)}
+\subsection*{Documentation and Git Usage - Learning Outcome 2 (5\%)}
 \begin{itemize}
-    \item Provide the following in your repository \textbf{README.md} file:
-    \begin{itemize}
-        \item A class diagram of your application.
-    \end{itemize}
+    \item Provide your application's class diagram in your repository \textbf{README.md} file.
+    \item Your \textbf{Git commit messages} should reflect the context of each functional requirement change.
 \end{itemize}
 
 \subsection*{Additional Information}
 \begin{itemize}
     \item An exemplar is available in \textbf{assessments $>$ project 1} directory of the \textbf{course materials} repository.
     \item You may add additional classes and methods.
-    \item When player two presses a key, i.e., \textbf{up arrow} or \textbf{down arrow}, a \textbf{KeyDown} event is generated. For the \textbf{Form1's} \textbf{KeyDown} event, the method signature is:
-    \begin{Verbatim}[tabsize=2]
-		private void Form1_KeyDown(object sender, KeyEventArgs e) {}
-	\end{Verbatim}
-	The argument you will be interested in is \textbf{KeyEventArgs e} which is the value of the pressed key. The \textbf{arrow} key values are \textbf{Keys.Left}, \textbf{Keys.Right}, \textbf{Keys.Up} and \textbf{Keys.Down}. In the \textbf{Form1\_KeyDown} method, you can use a \textbf{switch} statement. For example:
-	\begin{Verbatim}[tabsize=2]
-		switch (e.KeyCode) 
-		{
-			case Keys.Left:
-				// Do something
-				break;
-			case Keys.Right:
-				// Do something
-				break;
-			case Keys.Up:
-				// Do something
-				break;
-			case Keys.Down:
-				// Do something
-				break;
-			default:
-				// Do something
-				break;
-		}
-	\end{Verbatim}
-	\textbf{Note:} The \textbf{Form1's} \textbf{KeyPreview} event needs to be set to \textbf{True}. Otherwise, \textbf{Form1} will not respond to the \textbf{KeyDown} event.
     \item \textbf{Do not} rewrite your \textbf{Git} history. It is important that the course lecturer can see how you worked on your assessment over time.
 \end{itemize}
 

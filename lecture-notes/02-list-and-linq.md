@@ -175,7 +175,7 @@ Implement the following:
 You have been given the following list of integers:
 
 ```c#
-List<int> nums = new List<int>() { 10, 20, 30, 40, 50 };
+List<int> nums = new List<int>() { 65, 35, 79, 101, 35 };
 ```
 
 Implement the following:

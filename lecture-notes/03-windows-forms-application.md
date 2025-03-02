@@ -124,12 +124,51 @@ public partial class Form1 : Form
 
    private void button1_Click(object sender, EventArgs e)
    {
+      // Check if the TextBox is empty
+      if (textBox1.Text == "")
+      {
+         textBox1.Text = "0";
+      }
+      
+      // Convert the TextBox text to an integer
       int nClicks = Convert.ToInt16(textBox1.Text);
+
+      // Increment the integer value
       nClicks = nClicks + 1; // or nClicks++; or nClicks += 1;
+
+      // Convert the integer value back to a string and display it in the TextBox
       textBox1.Text = Convert.ToString(nClicks);
    }
 }
 ```
+
+Here is an example of using `TryParse` to convert the `TextBox` text to an integer:
+
+```cs
+// using directives
+
+public partial class Form1 : Form
+{
+   public Form1()
+   {
+      InitializeComponent();
+   }
+
+   private void button1_Click(object sender, EventArgs e)
+   {
+      int nClicks;
+      if (!int.TryParse(textBox1.Text, out nClicks))
+      {
+         nClicks = 0;
+      }
+
+      nClicks++;
+      textBox1.Text = nClicks.ToString();
+   }
+}
+```
+
+`int.TryParse` is a method that tries to convert the string representation of a number to its 32-bit signed integer equivalent. If the conversion is successful, the method returns `true` and the converted number is stored in the `out` parameter. If the conversion fails, the method returns `false` and the `out` parameter is set to `0`.
 
 **Notes:**
 

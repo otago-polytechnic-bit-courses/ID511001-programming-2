@@ -432,17 +432,17 @@ The `DataGridView` control is a new control that replaces the `DataGrid` control
 
 public partial class Form1 : Form
 {
-   private List<string>? _names;
+   private List<string> names;
 
    public Form1()
    {
       InitializeComponent();
 
-      _names = new List<string>() { "John", "Mary", "Bob", "Jane" };
+      names = new List<string>() { "John", "Mary", "Bob", "Jane" };
 
       dataGridView1.Columns.Add("Name", "Name");
 
-      foreach (string name in _names)
+      foreach (string name in names)
       {
          int rowIdx = dataGridView1.Rows.Add();
          dataGridView1.Rows[rowIdx].Cells["Name"].Value = name;

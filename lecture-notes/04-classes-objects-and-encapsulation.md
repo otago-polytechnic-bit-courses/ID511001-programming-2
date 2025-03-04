@@ -168,7 +168,7 @@ public Form1()
 - **Immutable**: An object whose state cannot be changed after it has been created.
 - **Nullable**: A type that can be assigned `null`.
 - **Parameterless constructor**: A constructor that takes no parameters.
-- **Inheritance**: The ability to create a new class from an existing class. We will talk more about this in `04-inheritance-and-polymorphism.md`.
+- **Inheritance**: The ability to create a new class from an existing class. We will talk more about this in `05-inheritance-and-polymorphism.md`.
 
 ## Static Class
 

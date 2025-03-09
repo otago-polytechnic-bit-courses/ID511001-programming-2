@@ -33,11 +33,11 @@ public class Animal
 public class Dog : Animal
 {
     // Adding a new field
-    private string _colour;
+    private string colour;
 
     public Dog(string name, int age, string colour) : base(name, age) // The base class's constructor
     {
-        _colour = colour;
+        colour = colour;
     }
 
     // Overriding the base class's implementation
@@ -47,7 +47,7 @@ public class Dog : Animal
     public string Bark() { /*...*/ }
 
     public override string Name { get => name; set => name = value; }
-    public string Colour { get => _colour; set => _colour = value; }
+    public string Colour { get => colour; set => colour = value; }
 }
 ```
 

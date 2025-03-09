@@ -21,32 +21,32 @@ To implement an interface, a class must use the `:` operator, followed by the na
 ```cs
 public class Rectangle : IShape
 {
-    private double _width;
-    private double _height;
+    private double width;
+    private double height;
 
     public Rectangle(double width, double height)
     {
-        _width = width;
-        _height = height;
+        width = width;
+        height = height;
     }
 
-    public double Area() => _width * _height;
-    public double Perimeter() => 2 * (_width + _height);
+    public double Area() => width * height;
+    public double Perimeter() => 2 * (width + height);
 }
 ```
 
 ```cs
 public class Circle : IShape
 {
-    private double _radius;
+    private double radius;
 
     public Circle(double radius)
     {
-        _radius = radius;
+        radius = radius;
     }
 
-    public double Area() => Math.PI * Math.Pow(_radius, 2);
-    public double Perimeter() => 2 * Math.PI * _radius;
+    public double Area() => Math.PI * Math.Pow(radius, 2);
+    public double Perimeter() => 2 * Math.PI * radius;
 }
 ```
 
@@ -131,11 +131,11 @@ Here are steps you should consider:
    - `double TotalPrice()` 
 
 2. Create a `class` called `Product` that implements the `IInventoryItem` interface. The `Product` class should have the following members:
-   - `private string _name`
-   - `private double _price`
-   - `private int _quantity`
-   - `public Product()`. This should accept `_name`, `_price` and `_quantity`
-   - `public string Display()` - This method should return the `_name`
+   - `private string name`
+   - `private double price`
+   - `private int quantity`
+   - `public Product()`. This should accept `name`, `price` and `quantity`
+   - `public string Display()` - This method should return the `name`
    - `public double TotalPrice()` - This method should return the total price of the item, which is the price multiplied by the quantity
   
 3. In the `Form1` class, create a `List<IInventoryItem>` called `inventory`. Add the following items to the list:

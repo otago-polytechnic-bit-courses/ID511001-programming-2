@@ -255,31 +255,31 @@ For example, a class can have a `private` field that holds some important data a
 ```cs
 public class BankAccount
 {
-    private decimal _balance;
+    private decimal balance;
 
-    public decimal Balance { get => _balance; set => _balance = value; }
+    public decimal Balance { get => balance; set => balance = value; }
 }
 ```
 
-In this example, the `_balance` field is defined as `private`, meaning it can only be accessed within the class. On the other hand, the `Balance` property is defined as `public`, meaning it can be accessed from outside the class. It allows the class to control how the `_balance` field is modified and accessed and to ensure that the data is always in a consistent state.
+In this example, the `balance` field is defined as `private`, meaning it can only be accessed within the class. On the other hand, the `Balance` property is defined as `public`, meaning it can be accessed from outside the class. It allows the class to control how the `balance` field is modified and accessed and to ensure that the data is always in a consistent state.
 
-Encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change how the `_balance` field is stored, without affecting the code that accesses it through the `Balance` property.
+Encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change how the `balance` field is stored, without affecting the code that accesses it through the `Balance` property.
 
 We can extend the `Balance` property to include some validation logic, like this:
 
 ```cs
 public class BankAccount
 {
-    private decimal _balance;
+    private decimal balance;
 
     public decimal Balance
     {
-        get => _balance;
+        get => balance;
         set
         {
             if (value < 0)
                 throw new Exception("Balance cannot be negative");
-            _balance = value;
+            balance = value;
         }
     }
 }
@@ -394,22 +394,34 @@ Here is an `Utils` class example to get you started:
 ```cs
 public static class Utils
 {
-    private static List<Institution> s_institutions = new List<Institution>();
+    private static List<Institution> institutions = new List<Institution>();
+    private static List<Department> departments = new List<Department>();
 
     public static List<Institution> SeedInstitutions()
     {
-        s_institutions.Add(new Institution("Otago Polytechnic", "Otago", "New Zealand"));
+        institutions.Add(new Institution("Otago Polytechnic", "Otago", "New Zealand"));
 
         // Add two more institutions
 
-        return s_institutions;
+        return institutions;
+    }
+
+    public static List<Department> SeedDepartments()
+    {
+        departments.Add(new Department(institutions[0], "Information Technology"));
+
+        // Add two more departments
+
+        return departments;
     }
 }
 
 // Usage in Form1.cs
-private static List<Institution> s_institutions; // Declare this above the Form1() constructor
+private static List<Institution> institutions; // Declare this above the Form1() constructor
+private static List<Department> departments; // Declare this above the Form1() constructor
 
-s_institutions = Utils.SeedInstitutions(); // Declare this inside the Form1() constructor
+institutions = Utils.SeedInstitutions(); // Declare this inside the Form1() constructor
+departments = Utils.SeedDepartments(); // Declare this inside the Form1() constructor
 ```
 
 For each `course`, display its information and which `department` and `institution` it belongs to in a `Label`.
@@ -422,17 +434,17 @@ You have been given the following **class** and **list** of `Product` **objects*
 // Create a new file called Product.cs. Copy and paste the following code into it
 public class Product
 {
-    private string _name;
-    private double _price;
+    private string name;
+    private double price;
 
     public Product(string name, double price)
     {
-        _name = name;
-        _price = price;
+        name = name;
+        price = price;
     }
 
-    public string Name { get => _name; set => _name = value; }
-    public double Price { get => _price; set => _price = value; }
+    public string Name { get => name; set => name = value; }
+    public double Price { get => price; set => price = value; }
 }
 
 // Usage in Form1.cs

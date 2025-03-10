@@ -98,7 +98,6 @@ public Form1()
     InitializeComponent();
 
     Calculator calc = new Calculator();
-
     MessageBox.Show(calc.Add(5, 5)); // 10
     MessageBox.Show(calc.Add(5.5, 5)); // 10.5
 }
@@ -138,7 +137,6 @@ public Form1()
 
     Shape shape = new Shape();
     Rectangle rectangle = new Rectangle();
-
     MessageBox.Show(shape.Draw()); // Drawing a shape
     MessageBox.Show(rectangle.Draw()); // Drawing a rectangle
 }
@@ -166,6 +164,18 @@ public class Rectangle : Shape
 public class Circle : Shape
 {
     public override string Draw() => "Drawing a circle";
+}
+```
+
+Usage in `Form1.cs`:
+
+```cs
+public Form1()
+{
+    InitializeComponent();
+
+    Circle circle = new Circle();
+    MessageBox.Show(circle.Draw()); // Drawing a circle
 }
 ```
 

@@ -373,11 +373,15 @@ Choose an object in the classroom environment or even in the outside environment
 
 ## Task 2:
 
-Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `public` **properties** for `Make`, `Model`, and `Year`. Include a **constructor** that sets the **make**, **model**, and **year** when the **object** is created. Create three `Car` **objects** and display their `Make`, `Model`, and `Year` **properties** in a `Label`.
+* Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `public` **properties** for `Make`, `Model`, and `Year`.
+* Include a **constructor** that sets the **make**, **model**, and **year** when the **object** is created.
+* Create three `Car` **objects** and display their `Make`, `Model`, and `Year` **properties** in a `Label`.
 
 ## Task 3:
 
-Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` **properties** for `Name`, `Age`, and `Salary`. Include a **constructor** that sets the **name**, **age**, and **salary** when the **object** is created. Create three `Employee` **objects** and display their `Name`, `Age`, and `Salary` **properties** in a `Label`.
+* Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` **properties** for `Name`, `Age`, and `Salary`. 
+* Include a **constructor** that sets the **name**, **age**, and **salary** when the **object** is created.
+* Create three `Employee` **objects** and display their `Name`, `Age`, and `Salary` **properties** in a `Label`.
 
 ## Task 4:
 

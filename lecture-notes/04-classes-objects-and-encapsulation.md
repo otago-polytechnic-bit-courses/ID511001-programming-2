@@ -387,7 +387,7 @@ Choose an object in the classroom environment or even in the outside environment
 
 In this task, you will create four classes that communicate with each other. 
 
-> Create a seperate `.cs` file for each class.
+> Create a separate `.cs` file for each class.
 
 * The first class is called `Institution` with `private` fields for `name`, `region` and `country`. All fields are of type `string`.
 * The second class is called `Department` with `private` fields for `institution` of type `Institution` and `name` of type `string`.

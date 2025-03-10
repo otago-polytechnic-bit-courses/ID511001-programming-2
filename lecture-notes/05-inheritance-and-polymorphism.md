@@ -90,6 +90,20 @@ public class Calculator
 }
 ```
 
+Usage in `Form1.cs`:
+
+```cs
+public Form1()
+{
+    InitializeComponent();
+
+    Calculator calc = new Calculator();
+
+    MessageBox.Show(calc.Add(5, 5)); // 10
+    MessageBox.Show(calc.Add(5.5, 5)); // 10.5
+}
+```
+
 In this example, the `Calculator` class has two methods called `Add()` that have the same name but different signatures. The first one takes two integers as arguments and returns their sum, and the second takes two doubles as arguments and returns their sum.
 
 Here is an example of **polymorphism** using **virtual** method and **method overriding**:
@@ -112,6 +126,21 @@ public class Rectangle : Shape
 public class Circle : Shape
 {
     // Notice that the Draw() method is not overridden in the Circle class
+}
+```
+
+Usage in `Form1.cs`:
+
+```cs
+public Form1()
+{
+    InitializeComponent();
+
+    Shape shape = new Shape();
+    Rectangle rectangle = new Rectangle();
+
+    MessageBox.Show(shape.Draw()); // Drawing a shape
+    MessageBox.Show(rectangle.Draw()); // Drawing a rectangle
 }
 ```
 

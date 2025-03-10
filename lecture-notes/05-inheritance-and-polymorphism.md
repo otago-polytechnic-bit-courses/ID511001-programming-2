@@ -98,8 +98,8 @@ public Form1()
     InitializeComponent();
 
     Calculator calc = new Calculator();
-    MessageBox.Show(calc.Add(5, 5)); // 10
-    MessageBox.Show(calc.Add(5.5, 5)); // 10.5
+    MessageBox.Show(calc.Add(5, 5).ToString()); // 10
+    MessageBox.Show(calc.Add(5.5, 5).ToString()); // 10.5
 }
 ```
 

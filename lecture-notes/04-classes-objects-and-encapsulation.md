@@ -103,8 +103,6 @@ If you see the following error, it means you are using an older version of **C#*
 
 ![alt text](../resources/img/07/syntax.png)
 
-
-
 ## this
 
 In the previous example, we used the `this` keyword. The `this` keyword is used to refer to the current **object** in a **class** or **struct**. For example:
@@ -417,11 +415,17 @@ public static class Utils
 }
 
 // Usage in Form1.cs
-private static List<Institution> institutions; // Declare this above the Form1() constructor
-private static List<Department> departments; // Declare this above the Form1() constructor
 
-institutions = Utils.SeedInstitutions(); // Declare this inside the Form1() constructor
-departments = Utils.SeedDepartments(); // Declare this inside the Form1() constructor
+private static List<Institution> institutions; 
+private static List<Department> departments; 
+
+public Form1()
+{
+    InitializeComponent();
+
+    institutions = Utils.SeedInstitutions();
+    departments = Utils.SeedDepartments();
+}
 ```
 
 For each `course`, display its information and which `department` and `institution` it belongs to in a `Label`.

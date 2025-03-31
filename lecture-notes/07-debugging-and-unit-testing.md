@@ -87,7 +87,7 @@ Learning to use AI tools is an important skill. While AI tools are powerful, you
 
 Create ten unit tests for the **Calculator** application above. Make sure you cover all methods in the `Calc.cs` file.
 
-## Task 3:
+## Task 2:
 
 The following activity involves debugging a application called `Debugging`.
 

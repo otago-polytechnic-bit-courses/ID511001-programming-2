@@ -1,7 +1,5 @@
 # 07: Debugging and Unit Testing
 
-You can find today's coding example - `07-calculator-example.zip` in the **lecture-notes** directory.
-
 ## Debugging
 
 Debugging is the process of identifying and resolving errors (also called bugs) in your code. When you write code, it is not uncommon to make mistakes, such as syntax errors, logical errors, or runtime errors. Debugging is the process of finding and fixing these errors so that your code runs correctly.
@@ -55,7 +53,7 @@ When the test is run, the unit testing framework will execute the `AddShouldRetu
 
 Unit testing is an important practice in software development, as it helps to ensure that the code is working correctly, it helps to detect and fix bugs early, and it allows for more confident and safe changes and refactoring of the code. It also helps to increase the quality and maintainability of the code.
 
-Let us look at how to create a test class. Open the `Calculator` project in **Visual Studio**. Right-click on `Solution 'Calculator'` in the **Solution Explorer**. Click on **Add** then **New Project...**. You will be presented with a **Add a new project** window. Choose the **Unit Test Project (.NET Framework)** template, name it `CalculatorTests` and set the framework to `.NET Framework 4.8.1`. Once you have created the project, you will see the following:
+Let us look at how to create a test class. Create a new **Unit Test Project (.NET Framework)** project, name it `CalculatorTests`. Once you have created the project, you will see the following:
 
 ```cs
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -65,6 +63,7 @@ namespace CalculatorTests
     [TestClass]
     public class UnitTest1
     {
+        // Note: Replace the code below with the AddShouldReturnCorrectSum method above
         [TestMethod]
         public void TestMethod1()
         {
@@ -73,7 +72,46 @@ namespace CalculatorTests
 }
 ```
 
-Rename the `UnitTest1.cs` file to `CalcTests.cs` and add the code from the `CalcTests` example above. **Note:** Do not remove any `using` directives. You will need to add a project reference to `CalculatorTests`. Without this, you will not be able to access the `Calc` class. To do this, right-click on `CalculatorTests`. Click on **Add** then **Reference...**. You will be presented with a **Reference Manager** window. Check `Calculator`. Add the following `using` directive - `using Calculator;` below `using Microsoft.VisualStudio.TestTools.UnitTesting;`. Now you should have access to the `Calc` class. To run `CalculatorTests`, press the <kbd>ctrl</kbd> + <kbd>r</kbd> + <kbd>t</kbd>.
+Create a new class called `Calc`. Add the following code:
+
+```cs
+public class Calc
+{
+    public Calc()
+    {
+
+    }
+
+    public double Add(double firstNum, double secondNum)
+    {
+        return firstNum + secondNum;
+    }
+
+    public double Subtract(double firstNum, double secondNum)
+    {
+        return firstNum - secondNum;
+    }
+
+    public double Multiply(double firstNum, double secondNum)
+    {
+        return firstNum * secondNum;
+    }
+
+    public double Divide(double firstNum, double secondNum)
+    {
+        if (secondNum == 0)
+        {
+            return 0;
+        }
+        else
+        {
+            return firstNum / secondNum;
+        }
+    }
+}
+```
+
+To run `CalculatorTests`, press the <kbd>ctrl</kbd> + <kbd>r</kbd> + <kbd>t</kbd>.
 
 # Formative Assessment
 
@@ -87,7 +125,7 @@ Learning to use AI tools is an important skill. While AI tools are powerful, you
 
 Create ten unit tests for the **Calculator** application above. Make sure you cover all methods in the `Calc.cs` file.
 
-## Task 3:
+## Task 2:
 
 The following activity involves debugging a application called `Debugging`.
 

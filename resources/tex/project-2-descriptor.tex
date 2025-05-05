@@ -204,12 +204,12 @@ public enum ESalary
             \item institution \textbf{name}, \textbf{region} and \textbf{country} in this format - \textbf{name, region, country}
             \item department \textbf{name}
         \end{itemize}
-        Expected output:
+        \textbf{Expected output: }
 
         \begin{figure}[h!]
             \centering
-            \includegraphics[width=100mm]{../../resources/img/attendance-tracker-example.png}
-        \end{figure}
+            \includegraphics[width=100mm]{../../resources/img/project-2/display-course-details.PNG}
+        \end{figure} 
 
         \item Displaying all marks. This needs to display the following details in a \textbf{DataGridView}:
         \begin{itemize}
@@ -218,6 +218,16 @@ public enum ESalary
             \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
             \item learner \textbf{assessment marks 1-5} in this format - \textbf{mark 1, mark 2, mark 3, mark 4, mark 5}
         \end{itemize}
+
+        \textbf{Expected output: }
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=100mm]{../../resources/img/project-2/display-all-marks.PNG}
+        \end{figure} 
+
+        \newpage
+
         \item Displaying all grades. This needs to display the following details in a \textbf{DataGridView}:
         \begin{itemize}
             \item learner \textbf{id}
@@ -225,6 +235,14 @@ public enum ESalary
             \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
             \item learner  \textbf{assessment grades 1-5} in this format - \textbf{grade 1, grade 2, grade 3, grade 4, grade 5}
         \end{itemize}
+
+        \textbf{Expected output: }
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=100mm]{../../resources/img/project-2/display-all-grades.PNG}
+        \end{figure} 
+
         \item Displaying highest marks. This needs to display the following details in a \textbf{DataGridView}:
         \begin{itemize}
             \item learner \textbf{id}
@@ -232,6 +250,17 @@ public enum ESalary
             \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
             \item learner \textbf{highest assessment mark(s)}
         \end{itemize}
+
+
+        \textbf{Expected output:}
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=100mm]{../../resources/img/project-2/display-highest-marks.PNG}
+        \end{figure} 
+
+        \newpage
+
         \item Displaying lowest marks. This needs to display the following details in a \textbf{DataGridView}:
         \begin{itemize}
             \item learner \textbf{id}
@@ -239,6 +268,14 @@ public enum ESalary
             \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
             \item learner \textbf{lowest assessment mark(s)}
         \end{itemize}
+
+        \textbf{Expected output:}
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=100mm]{../../resources/img/project-2/display-lowest-marks.PNG}
+        \end{figure} 
+
         \item Displaying fail marks. This needs to display the following details in a \textbf{DataGridView}:
         \begin{itemize}
             \item learner \textbf{id}
@@ -246,6 +283,16 @@ public enum ESalary
             \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
             \item learner \textbf{fail assessment mark(s)}
         \end{itemize}
+
+        \textbf{Expected output:}
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=100mm]{../../resources/img/project-2/display-fail-marks.PNG}
+        \end{figure} 
+
+        \newpage
+
         \item Displaying average marks. This needs to display the following details in a \textbf{DataGridView}:
         \begin{itemize}
             \item learner \textbf{id}
@@ -253,6 +300,14 @@ public enum ESalary
             \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
             \item learner \textbf{average assessment mark}
         \end{itemize}
+
+        \textbf{Expected output:}
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=100mm]{../../resources/img/project-2/display-average-marks.PNG}
+        \end{figure} 
+
         \item Displaying average grades. This needs to display the following details in a \textbf{DataGridView}:
         \begin{itemize}
             \item learner \textbf{id}
@@ -260,6 +315,14 @@ public enum ESalary
             \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
             \item learner \textbf{average assessment grade}
         \end{itemize}
+
+        \textbf{Expected output:}
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=100mm]{../../resources/img/project-2/display-average-grades.PNG}
+        \end{figure} 
+
         \item Displaying lecturer details. This needs to display the following details in a \textbf{DataGridView}:
         \begin{itemize}
             \item lecturer \textbf{id}
@@ -270,13 +333,29 @@ public enum ESalary
             \item course \textbf{code} and \textbf{name} in this format - \textbf{code: name}
             \item lecturer \textbf{salary}
         \end{itemize}
+
+        \textbf{Expected output:}
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=100mm]{../../resources/img/project-2/display-lecturer-details.PNG}
+        \end{figure} 
+
         \item Adding a learner. When adding a learner, the \textbf{id} is auto-generated and unique. Prompt the user to enter the following details: \textbf{first name}, \textbf{last name}, \textbf{course} and \textbf{assessment marks 1-5}. Implement the following validation:
         \begin{itemize}
             \item \textbf{first name} and \textbf{last name} are not empty or, contain numbers and special characters.
             \item \textbf{course} is a valid number.
             \item \textbf{assessment marks 1-5} are between 0 and 100.
         \end{itemize} 
-        If the validation is successful, add the learner to the \textbf{learners} list, write the learner to the \textbf{learners.txt} file and display a success message. Otherwise, display an error message.                          
+        If the validation is successful, add the learner to the \textbf{learners} list, write the learner to the \textbf{learners.txt} file and display a success message. Otherwise, display an error message.  
+        
+        \textbf{Expected output:}
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=100mm]{../../resources/img/project-2/add-a-learner.PNG}
+        \end{figure} 
+
         \item Adding a lecturer. When adding a lecturer, the \textbf{id} is auto-generated and unique. The \textbf{salary} is calculated based on the \textbf{position}. Prompt the user to enter the following details: \textbf{first name}, \textbf{last name}, \textbf{position} and \textbf{course}. Implement the following validation:
         \begin{itemize}
             \item \textbf{first name} and \textbf{last name} are not empty or, contain numbers and special characters.
@@ -284,6 +363,14 @@ public enum ESalary
         \end{itemize}
         If the validation is successful, add the lecturer to the \textbf{lecturers} list, write the lecturer to the \textbf{lecturers.txt} file and display a success message. Otherwise, display an error message.
         \item Removing a lecturer. When removing a lecturer, prompt the user to enter the \textbf{id} of the learner to remove. If the \textbf{id} is valid, prompt the user to confirm the removal. If the user confirms the removal, remove the lecturer from the \textbf{lecturers} list and \textbf{lecturer.txt} file, and display a success message. Otherwise, display an error message.
+        
+        \textbf{Expected output:}
+
+        \begin{figure}[h!]
+            \centering
+            \includegraphics[width=100mm]{../../resources/img/project-2/add-a-lecturer.PNG}
+        \end{figure} 
+
         \item Exiting the application
     \end{itemize} 
     If the user enters an invalid option, display an error message and prompt the user to enter a valid option.
@@ -312,12 +399,12 @@ Create a new \textbf{Windows Forms Application} called \textbf{AttendanceTracker
     \end{itemize}
 \end{itemize}
 
-Expected output:
+\textbf{Expected output:}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=100mm]{../../resources/img/attendance-tracker-example.png}
-\end{figure}
+    \includegraphics[width=100mm]{../../resources/img/project-2/attendance-tracker-example.png}
+\end{figure} 
 
 \subsection*{Code Quality and Best Practices - Learning Outcome 2 (40\%)}
 \begin{itemize}

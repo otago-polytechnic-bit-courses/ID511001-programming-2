@@ -1,4 +1,4 @@
-# 09: Key Events
+# 09: Key Events and Sound Player Class
 
 ## Key Events
 
@@ -134,12 +134,15 @@ public partial class Form1 : Form
         // Check if the W key is pressed to move the left paddle up
         if (pressedKeys.Contains(Keys.W))
             // Call a method to move the left paddle up
+
         // Check if the S key is pressed to move the left paddle down
         if (pressedKeys.Contains(Keys.S))
             // Call a method to move the left paddle down
+
         // Check if the Up Arrow key is pressed to move the right paddle up
         if (pressedKeys.Contains(Keys.Up))
             // Call a method to move the right paddle up
+
         // Check if the Down Arrow key is pressed to move the right paddle down
         if (pressedKeys.Contains(Keys.Down))
             // Call a method to move the right paddle down
@@ -159,6 +162,37 @@ public partial class Form1 : Form
 ```
 
 When a key is pressed, the `KeyDown` event is triggered once for that key. If multiple keys are pressed quickly or at the same time, it may not capture all key states, as each key press triggers its own event independently.
+
+## Sound Player Class
+
+The `SoundPlayer` class provides methods for playing sounds files. To get started, above the `Form1`'s constructor, declare a `SoundPlayer` variable:
+
+```csharp
+private SoundPlayer soundPlayer;
+```
+
+In the `Form1`'s constructor, create a new instance of the `SoundPlayer` class by calling the `SoundPlayer` constructor:
+
+```csharp
+public Form1()
+{
+    InitializeComponent();
+
+    soundPlayer = new SoundPlayer(); // You can also pass a file path to the constructor
+}
+```
+
+To play a sound, call the `Play()` method:
+
+```csharp
+soundPlayer.Play();
+```
+
+To stop a sound, call the `Stop()` method:
+
+```csharp
+soundPlayer.Stop();
+```
 
 # Formative Assessment
 

@@ -1,6 +1,48 @@
-# 02: List and Language Integrated Query
+# 02: Arrays, Lists, Dictionaries and LINQ
 
-## List
+## Arrays
+
+An array is a data structure that stores a fixed-size sequence of elements of the same type. It is a linear data structure, which means that the elements are stored in a sequence. Each element in the array is identified by its position in the array, which is called its index. The first element in the array has an index of 0, the second element has an index of 1, and so on. The last element in the array has an index of `n - 1`, where `n` is the total number of elements in the array.
+
+Here are some common operations that can be performed on arrays:
+
+- Accessing elements in the array: You can access an element by its position using an index number.
+- Modifying elements in the array: You can change the value of an element by its position
+- Searching the array: You can search the array for a specific element and find its position.
+- Sorting the array: You can sort the elements in the array in ascending or descending order.
+
+Here is an example of how to create and use an array:
+
+```cs
+int[] numbers = new int[5]; // Create an array of integers with a size of 5
+numbers[0] = 10; // Assign a value to the first element in the array
+numbers[1] = 20; // Assign a value to the second element in the array
+numbers[2] = 30; // Assign a value to the third element in the array
+numbers[3] = 40; // Assign a value to the fourth element in the array
+numbers[4] = 50; // Assign a value to the fifth element in the array
+
+int firstNumber = numbers[0]; // Access the first element in the array
+int secondNumber = numbers[1]; // Access the second element in the array
+
+int count = numbers.Length; // Get the total number of elements in the array
+```
+
+Here are more complex examples of how to create and use arrays:
+
+```cs
+// Create an array of strings with initial values
+string[] fruits = new string[] { "Apple", "Banana", "Cherry"};
+
+// Search the array for a specific element
+int indexOfBanana = Array.IndexOf(fruits, "Banana"); // Find the position of "Banana" in the array
+Console.WriteLine($"Index of Banana: {indexOfBanana}");
+
+// Sort the array in ascending order
+Array.Sort(fruits); // Sort the elements in the array
+Console.WriteLine($"Sorted fruits: {string.Join(", ", fruits)}"); 
+```
+
+## Lists
 
 A list is a data structure that stores a collection of items. It is a linear data structure, which means that the items are stored in a sequence. Each item in the list is identified by its position in the list, which is called its index. The first item in the list has an index of 0, the second item has an index of 1, and so on. The last item in the list has an index of `n - 1`, where `n` is the total number of items in the list. A list is a dynamic data structure, which means that it can grow or shrink in size during the execution of a program.
 
@@ -72,6 +114,39 @@ foreach (string name in names) // Iterate over the names in the list using a for
 **Resource:**
 
 - [List\<T> Class](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-8.0)
+
+## Dictionaries
+
+A dictionary is a data structure that stores a collection of key-value pairs. It is a linear data structure, which means that the items are stored in a sequence. Each item in the dictionary is identified by its key, which is unique within the dictionary. The value associated with the key can be of any type.
+
+Here are some common operations that can be performed on dictionaries:
+
+- Adding key-value pairs to the dictionary: You can add new key-value pairs to the dictionary.
+- Removing key-value pairs from the dictionary: You can remove a key-value pair from the dictionary
+- Accessing values in the dictionary: You can access a value by its key.
+- Searching the dictionary: You can search the dictionary for a specific key and find its value.
+- Checking if a key exists in the dictionary: You can check if a key exists in the dictionary.
+
+Here is an example of how to create and use a dictionary:
+
+```cs
+Dictionary<string, int> ages = new Dictionary<string, int>(); // Create an empty dictionary
+
+ages.Add("Alice", 30); // Add a new key-value pair to the dictionary
+ages.Add("Bob", 25);
+ages.Add("Charlie", 35);
+
+int aliceAge = ages["Alice"]; // Access the value associated with the key "Alice"
+int bobAge = ages["Bob"]; // Access the value associated with the key "Bob" 
+
+ages.Remove("Charlie"); // Remove a key-value pair from the dictionary by its key
+
+int count = ages.Count; // Get the total number of key-value pairs in the dictionary
+``` 
+
+**Resource:**
+
+- [Dictionary\<TKey, TValue> Class](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-8.0)
 
 ## Language Integrated Query
 

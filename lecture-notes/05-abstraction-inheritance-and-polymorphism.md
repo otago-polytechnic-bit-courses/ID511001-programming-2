@@ -1,10 +1,16 @@
-# 05: Inheritance and Polymorphism
+# 05: Abstraction, Inheritance and Polymorphism
+
+## Abstraction
+
+Abstraction allows you to create a class that represents a concept or an entity in the real world, without exposing the internal workings of the class. It helps you to focus on the high-level functionality of the class, rather than the low-level details.
+
+Here is a real-world example of abstraction:
+
+Imagine you have a car. You can drive the car without knowing how the engine works, how the brakes work, or how the transmission works. You just need to know how to use the steering wheel, the pedals, and the gear shift. The car's internal workings are abstracted away from you.
 
 ## Inheritance
 
-Inheritance is a mechanism that allows a new class to inherit the properties and methods of an existing class, called the base class or the parent class. The new class, called the derived class or the child class, can inherit all or some of the base class members and can also add new members or override existing members.
-
-Inheritance is one of the fundamental principles of object-oriented programming, along with encapsulation and polymorphism. It allows you to create a hierarchy of classes, where a derived class inherits the properties and methods of its base class and can add new properties and methods or override existing ones.
+Inheritance allows a new class to inherit the properties and methods of an existing class, called the base class or the parent class. The new class, called the derived class or the child class, can inherit all or some of the base class members and can also add new members or override existing members.
 
 Here's an example of inheritance:
 
@@ -73,7 +79,7 @@ public Form1()
 
 ## Polymorphism
 
-Polymorphism is a mechanism that allows a single method or property to have multiple forms or behaviours. It is one of the fundamental principles of object-oriented programming, encapsulation, and inheritance.
+Polymorphism allows a single method or property to have multiple forms or behaviours. It is one of the fundamental principles of object-oriented programming, encapsulation, and inheritance.
 
 There are two types of polymorphism:
 

@@ -270,7 +270,11 @@ private void timer1_Tick(object sender, EventArgs e)
 
 Buffer graphics refers to a technique where drawing operations are performed off-screen on a buffer, i.e., image before being displayed on the screen. This approach is often used to reduce flickering and improve rendering performance in graphical applications.
 
-## Task 9:
+# Summative Assessment
+
+The following task are part of the **Classroom Tasks** assessment worth 10%. This part is worth 4%. **Note:** Partial marks **will not** be given for incomplete functionality.
+
+## Task 1:
 
 In this exercise, when the user clicks on a button, a circle, square or triangle is drawn and its area is calculated. The choice of shape is randomly selected on each `button1_Click()` event.
 
@@ -358,7 +362,7 @@ Write a method that tells the polygon to calculate its area and return this valu
 
 7.	Write a `button1_Click` handler for the button so that when it is clicked, it calls the `Controller's` `CreatePolygon()`, `DrawPolygon()`, `CalculatePolygonArea()` methods for the newly created polygon.  
 
-## Task 10:
+## Task 2:
 
 Once you have declared a class structure like `Polygon`, you can use it in any application where it might be needed. We will build a screen saver that fills the screen with a random assortment of squares, circles and triangles of different sizes and colours. This is my computer screen after the application has been running for about a minute:
 

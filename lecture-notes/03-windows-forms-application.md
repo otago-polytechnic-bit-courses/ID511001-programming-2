@@ -467,7 +467,11 @@ Write code that allows the user to enter a number into each of five `TextBoxes`.
 
 ![](../resources/img/07/05-image.png)
 
-## Task 2:
+# Summative Assessment
+
+The following task are part of the **Classroom Tasks** assessment worth 10%. This part is worth 4%. **Note:** Partial marks **will not** be given for incomplete functionality.
+
+## Task 1:
 
 Write code that allows the user to enter two numbers, select an arithmetic operation and calculate the answer. Note that this calculator accepts the data as a text entry inside a `TextBox`, rather than as a series of push-button clicks.
 
@@ -483,7 +487,7 @@ Write code that allows the user to enter two numbers, select an arithmetic opera
 
 **Note:** To make this application robust, so that it doesn't break under different conditions, we need to check for data validation on the input (checking that the user has entered a valid number.) This is beyond our expertise at present, so we will assume the best-case scenario, that the user enters only valid integers.
 
-## Task 3:
+## Task 2:
 
 Write an application for use in a Pizza Parlour. The user enters his order, and the application displays the order and computes the price. Your solution could look like this (images are optional):
 
@@ -497,6 +501,6 @@ Write an application for use in a Pizza Parlour. The user enters his order, and 
 
 **Note:** You can generate a new order by clicking on a `Button` or dynamically as the user selects different options.
 
-# Formative Assessment Submission
+# Submission
 
 Push your code to your **GitHub** repository.

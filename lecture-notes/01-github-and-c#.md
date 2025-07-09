@@ -74,6 +74,7 @@ class Program
 **Note:** In this course, it is recommended that you use the **Main** method approach.
 
 **Resources:**
+
 - Main method - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/>
 - Top-level statements - <https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/top-level-statements>
 
@@ -359,11 +360,11 @@ In **C#**, a **method** is a block of code that performs a specific task and can
 - Instance **methods**: These **methods** are associated with an instance of a **class** and can access the instance's data.
 
 ```cs
-public class MyClass 
+public class MyClass
 {
     public int myValue = 0;
 
-    public void IncreaseValue(int amount) 
+    public void IncreaseValue(int amount)
     { // This is the method signature - name and parameter(s)
         myValue += amount; // or myValue = myValue + amount;
     }
@@ -378,10 +379,10 @@ Console.WriteLine(myObj.myValue); // 5
 - Static **methods**: These **methods** are associated with a **class** and do not have access to an instance's data. They can only access static data.
 
 ```cs
-public class MyClass 
+public class MyClass
 {
-    public static int Add(int a, int b) 
-    { 
+    public static int Add(int a, int b)
+    {
         return a + b;
     }
 }
@@ -394,11 +395,11 @@ Console.WriteLine(result); // 5
 - Constructors: These **methods** are used to create and initialise an instance of a **class**.
 
 ```cs
-public class MyClass 
+public class MyClass
 {
     public int myValue;
 
-    public MyClass(int value) 
+    public MyClass(int value)
     {
         myValue = value;
     }
@@ -413,9 +414,9 @@ Console.WriteLine(myObj.myValue); // 5
 
 ```cs
 public class MyClass {
-    ~MyClass() // Note: The use of the tilde (~) character. This indicates that this 
+    ~MyClass() // Note: The use of the tilde (~) character. This indicates that this
                // is a finaliser/destructor. You may see this in other programming languages, for example, C++
-    { 
+    {
 
         // Clean up resources
     }
@@ -426,7 +427,7 @@ public class MyClass {
 
 ```cs
 public static class MyClass {
-    public static int Multiply(this int num, int factor) 
+    public static int Multiply(this int num, int factor)
     {
         return num * factor;
     }
@@ -440,7 +441,7 @@ Console.WriteLine(result); // 15
 **Note:** If a method's block has one statement, you can use the **expression-bodied** syntax. For example:
 
 ```cs
-public class MyClass 
+public class MyClass
 {
     public int myValue = 0;
 
@@ -449,6 +450,7 @@ public class MyClass
 ```
 
 **Resources:**
+
 - Methods - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods>
 - Constructors - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors>
 - Finalisers/Destructors - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/destructors>
@@ -459,7 +461,7 @@ public class MyClass
 
 Casting is the process of converting a value of one data type to another data type. There are two types of casting in **C#**:
 
-- Implicit casting: This is when a value of one data type is converted to another data type without the need for an explicit cast. This can be done when you are converting from a smaller data type to a larger data type. For example: 
+- Implicit casting: This is when a value of one data type is converted to another data type without the need for an explicit cast. This can be done when you are converting from a smaller data type to a larger data type. For example:
 
 ```cs
 int x = 5;
@@ -519,7 +521,7 @@ You can also have multiple `catch` blocks to handle different exception types, l
 try
 {
     // Code that may throw an exception
-    int x = int.Parse("abc"); 
+    int x = int.Parse("abc");
     int y = int.Parse("456");
 }
 catch (FormatException ex)
@@ -536,7 +538,7 @@ catch (OverflowException ex)
 
 In this example, if the code in the `try` block throws a `FormatException`, the first `catch` block will be executed, if it throws a `OverflowException`, the second `catch` block will be executed.
 
-**Note:** There is a third type of block called `finally` that can be used to execute code after the `try` and `catch` blocks have been executed, regardless of whether an exception was thrown or not. 
+**Note:** There is a third type of block called `finally` that can be used to execute code after the `try` and `catch` blocks have been executed, regardless of whether an exception was thrown or not.
 
 ## File Processing
 
@@ -685,19 +687,6 @@ Create an **array** of **integers** called `nums` with the values 21, 19, 68, 55
 
 ## Task 4:
 
-Create a **static method** called `isAnagram` that takes in two parameters, `someStrOne` and `someStrTwo` which are both strings. Inside the **static method**, write code to check if `someStrOne` and `someStrTwo` are an anagram of each other. An anagram is a word or phrase made by rearranging the letters of another word or phrase. Compare the characters of both strings after sorting them. Return `true` if they match and `false` otherwise.
-
-In my solution, I converted the two **strings** to **char** arrays and sorted them using the `Array.Sort` **static method**. Then I compared the sorted char arrays using the `SequenceEqual` **static method** and returned `true` if they match, otherwise `false`.
-
-Declare the following test cases in the `Main()` method:
-
-```cs
-Console.WriteLine(isAnagram("listen", "silent")); // Expected output: true
-Console.WriteLine(isAnagram("hello", "world")); // Expected output: false
-```
-
-## Task 5:
-
 Create a **static method** called `convert` that takes in two parameters, `hours` and `minutes` which are both integers. Inside the **static method**, write code to convert both `hours` and `minutes` to seconds. Multiply the number of hours by 3600 (the number of seconds in an hour) and the number of minutes by 60 (the number of seconds in a minute). Add these values together and return the total number of seconds.
 
 Declare the following test cases in the `Main()` method:
@@ -707,37 +696,13 @@ Console.WriteLine(convert(2, 30)); // Expected output: 9000
 Console.WriteLine(convert(1, 15)); // Expected output: 4500
 ```
 
-## Task 6:
+## Task 5:
 
 Create a **string variable** called `sentence` and assign the value "The anemone, the wild violet, the hepatica, and the funny little curled-up." to it. Convert the string into an array. Use a loop to count the number of occurrences of the word "the" in the array.
 
 In my solution, I used the `String.Split` **static method** to split the sentence into words by the space character.
 
-## Task 7:
-
-Create a **static method** called `removeVowels` that takes in a parameter `word` which is a string. Inside the **static method**, write code to remove all vowels from `word`. Use a regular expression or a loop to check each character of the word and remove the vowels.
-
-To handle the edge case where the word does not contain vowels, you can check if `word` is equal to the result after removing vowels. If it is the same, you can return a message indicating that the word does not contain vowels, otherwise, return `word` without vowels.
-
-Declare the following test cases in the `Main()` method:
-
-```cs
-Console.WriteLine(removeVowels("C#")); // Expected output: C#
-Console.WriteLine(removeVowels("programming")); // Expected output: prgrmmng
-```
-
-## Task 8:
-
-Create a **static method** called `isPalindrome` that takes in a parameter `word` which is a string. Inside the **static method**, write code to check if `word` is a palindrome. A palindrome is a word, phrase, or sequence that reads the same backward as forward. Compare the characters of `word` from the beginning and end of the string. If they match, continue checking until you reach the middle of the string. If all characters match, return `true`, otherwise, return `false`.
-
-Declare the following test cases in the `Main()` method:
-
-```cs
-Console.WriteLine(isPalindrome("level")); // Expected output: true
-Console.WriteLine(isPalindrome("hello")); // Expected output: false
-```
-
-## Task 9:
+## Task 6:
 
 Create a **static method** called `isPrime` that takes in a parameter `num` which is an integer. Inside the **static method**, write code to check if `num` is a prime number. A prime number is a number that is only divisible by 1 and itself. Use a loop to check if `num` is divisible by any number other than 1 and itself. If it is, return `false`, otherwise, return `true`.
 
@@ -748,13 +713,65 @@ Console.WriteLine(isPrime(7)); // Expected output: true
 Console.WriteLine(isPrime(10)); // Expected output: false
 ```
 
-## Task 10:
+# Summative Assessment
 
-Write some code that reads in a file called `computer-jokes.txt` containing a list of computer jokes. The program should store the jokes in an array and randomly select and display a joke each time it is run.
+The following tasks are part of the **Classroom Tasks** assessment worth 10%. This part is worth 2%. **Note:** Partial marks **will not** be given for incomplete functionality.
 
-## Task 11:
+## Task 1:
 
-Write some code that reads in a file called `countries.txt` containing a list of country names. The program should display only the names of the countries that start with the letter **'B'**.
+Create a **static method** called `removeVowels` that takes in a parameter `word` which is a string. Inside the **static method**, write code to remove all vowels from `word`. Use a regular expression or a loop to check each character of the word and remove the vowels.
+
+To handle the edge case where the word does not contain vowels, you can check if `word` is equal to the result after removing vowels. If it is the same, you can return a message indicating that the word does not contain vowels, otherwise, return `word` without vowels.
+
+Declare the following test cases in the `Main()` method:
+
+```cs
+Console.WriteLine(removeVowels("AEIOU")); // Expected output: ""
+Console.WriteLine(removeVowels("bcd fgh")); // Expected output: "bcd fgh"
+Console.WriteLine(removeVowels("C@#omput!er")); // Expected output: "C@#mpt!r"
+Console.WriteLine(removeVowels("")); // Expected output: ""
+Console.WriteLine(removeVowels("aaaaa")); // Expected output: ""
+```
+
+## Task 2:
+
+Create a **static method** called `isPalindrome` that takes in a parameter `word` which is a string. Inside the **static method**, write code to check if `word` is a palindrome. A palindrome is a word, phrase, or sequence that reads the same backward as forward. Compare the characters of `word` from the beginning and end of the string. If they match, continue checking until you reach the middle of the string. If all characters match, return `true`, otherwise, return `false`.
+
+Declare the following test cases in the `Main()` method:
+
+```cs
+Console.WriteLine(isPalindrome("Racecar")); // Expected output: false
+Console.WriteLine(isPalindrome("rAceCaR".ToLower())); // Expected output: true
+Console.WriteLine(isPalindrome("")); // Expected output: true
+Console.WriteLine(isPalindrome(" ")); // Expected output: true
+Console.WriteLine(isPalindrome("a")); // Expected output: true
+Console.WriteLine(isPalindrome("12321")); // Expected output: true
+Console.WriteLine(isPalindrome("A man a plan a canal Panama".Replace(" ", "").ToLower())); // Expected: true
+```
+
+## Task 3:
+
+Create a **static method** called `isAnagram` that takes in two parameters, `someStrOne` and `someStrTwo` which are both strings. Inside the **static method**, write code to check if `someStrOne` and `someStrTwo` are an anagram of each other. An anagram is a word or phrase made by rearranging the letters of another word or phrase. Compare the characters of both strings after sorting them. Return `true` if they match and `false` otherwise.
+
+In my solution, I converted the two **strings** to **char** arrays and sorted them using the `Array.Sort` **static method**. Then I compared the sorted char arrays using the `SequenceEqual` **static method** and returned `true` if they match, otherwise `false`.
+
+Declare the following test cases in the `Main()` method:
+
+```cs
+Console.WriteLine(isAnagram("Listen", "Silent")); // Expected output: false
+Console.WriteLine(isAnagram("Listen".ToLower(), "Silent".ToLower())); // Expected: true
+Console.WriteLine(isAnagram("abc", "abcd")); // Expected output: false
+Console.WriteLine(isAnagram("", "")); // Expected output: true
+Console.WriteLine(isAnagram("a!b@c", "c@b!a")); // Expected output: true
+```
+
+## Task 4:
+
+Write some code that reads in a file called `countries.txt` containing a list of country names. The program should display only the names of the countries that start with the letter **'B'**. **Note:** You cannot change the contents of the `countries.txt` file. You must read it as is.
+
+## Task 5:
+
+Write some code that reads in a file called `computer-jokes.txt` containing a list of computer jokes. The program should store the jokes in an array and randomly select and display a joke each time it is run. **Note:** You cannot change the contents of the `computer-jokes.txt` file. You must read it as is.
 
 ## Submission
 

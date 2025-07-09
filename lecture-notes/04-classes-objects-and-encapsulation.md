@@ -395,14 +395,14 @@ In this task, you will create four classes that communicate with each other.
 
 Make sure you create a constructor for each class.
 
-* The fourth class is called `Utils`. This class has three `static` fields called `institutions`, `departments` and `courses`. These fields are `static` **lists** of `Institution`, `Department` and `Course` **objects** respectively. The `Utils` class also has three `static` methods called `SeedInstitutions`, `SeedDepartments` and `SeedCourses`. These methods are used to populate the `institutions`, `departments` and `courses` lists respectively.
+* The fourth class is called `Seeder`. This class has three `static` fields called `institutions`, `departments` and `courses`. These fields are `static` **lists** of `Institution`, `Department` and `Course` **objects** respectively. The `Seeder` class also has three `static` methods called `SeedInstitutions`, `SeedDepartments` and `SeedCourses`. These methods are used to populate the `institutions`, `departments` and `courses` lists respectively.
 
 For each of the `Seed` methods, you will need to create at least three **objects** and add them to the appropriate list. For example, the `SeedInstitutions` method will create three `Institution` **objects** and add them to the `institutions` list.
 
-Here is an `Utils` class example to get you started:
+Here is an `Seeder` class example to get you started:
 
 ```cs
-public static class Utils
+public static class Seeder
 {
     private static List<Institution> institutions = new List<Institution>();
     private static List<Department> departments = new List<Department>();
@@ -435,8 +435,8 @@ public Form1()
 {
     InitializeComponent();
 
-    institutions = Utils.SeedInstitutions();
-    departments = Utils.SeedDepartments();
+    institutions = Seeder.SeedInstitutions();
+    departments = Seeder.SeedDepartments();
 }
 ```
 

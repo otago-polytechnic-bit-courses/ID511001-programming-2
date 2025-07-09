@@ -1,5 +1,0 @@
-1,Alex,Walker,0,100
-2,Lucy,Taylor,0,45 
-3,Ethan,Moore,1,50 
-4,Chloe,Adams,2,75 
-5,Noah,Baker,2,75  

@@ -359,7 +359,7 @@ Implement the following:
 Using `LINQ`, solve the following tasks from week 1's assessments:
 
 - Task 3 in the formative assessment
-- Task 5 in the summative assessment
+- Task 4 in the summative assessment
 
 ## Submission
 

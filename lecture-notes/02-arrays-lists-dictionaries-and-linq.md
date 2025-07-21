@@ -358,8 +358,8 @@ Implement the following:
 
 Using `LINQ`, solve the following tasks from the previous formative assessment:
 
-- Task 3
-- Task 11
+- Task 3 in the formative assessment
+- Task 5 in the summative assessment
 
 ## Submission
 

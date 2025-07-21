@@ -240,7 +240,7 @@ List<string> progLangsTwo = new List<string>() { "C++", "Go", "Swift", "TypeScri
 
 Implement the following:
 
-1. Use the `AddRange` method to add the elements of `progLangsOne` to `progLangsTwo` and assign the resulting combined list to a variable called `allProgLangs`
+1. Create a new `List<string>` called `allProgLangs`. Use the `AddRange` method to add the elements of `progLangsOne` and `progLangsTwo` to `allProgLangs`
 2. Use the `Add` method to add "Rust" to `allProgLangs`
 3. Use the `Remove` method to remove "Swift" from `allProgLangs`
 4. Use a loop to display each language in `allProgLangs`

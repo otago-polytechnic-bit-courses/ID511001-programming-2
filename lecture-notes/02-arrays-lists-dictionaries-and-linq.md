@@ -111,9 +111,7 @@ foreach (string name in names) // Iterate over the names in the list using a for
 }
 ```
 
-**Resource:**
-
-- [List\<T> Class](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-8.0)
+**Resource:** [List\<T> Class](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-8.0)
 
 ## Dictionaries
 
@@ -144,9 +142,7 @@ ages.Remove("Charlie"); // Remove a key-value pair from the dictionary by its ke
 int count = ages.Count; // Get the total number of key-value pairs in the dictionary
 ``` 
 
-**Resource:**
-
-- [Dictionary\<TKey, TValue> Class](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-8.0)
+**Resource:** [Dictionary\<TKey, TValue> Class](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-8.0)
 
 ## Language Integrated Query
 

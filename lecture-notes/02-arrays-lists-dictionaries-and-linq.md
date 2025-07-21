@@ -356,7 +356,7 @@ Implement the following:
 
 ## Task 10:
 
-Using `LINQ`, solve the following tasks from the previous formative assessment:
+Using `LINQ`, solve the following tasks from week 1's assessments:
 
 - Task 3 in the formative assessment
 - Task 5 in the summative assessment

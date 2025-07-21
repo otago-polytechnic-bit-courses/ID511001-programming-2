@@ -767,7 +767,7 @@ Console.WriteLine(isAnagram("a!b@c", "c@b!a")); // Expected output: true
 
 ## Task 4:
 
-Write some code that reads in a file called `countries.txt` containing a list of country names. The program should display only the names of the countries that start with the letter **'B'**. **Note:** You cannot change the contents of the `countries.txt` file. You must read it as is.
+Write some code that reads in a file called `countries.txt` containing a list of country names. The program should display only the names of the countries that start with the letter **'B'** or **'b'**. **Note:** You cannot change the contents of the `countries.txt` file. You must read it as is.
 
 ## Task 5:
 

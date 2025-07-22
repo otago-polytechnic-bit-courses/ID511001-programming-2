@@ -351,7 +351,7 @@ Implement the following:
 
 **Note:** You do not need to use **LINQ** for this task. However, the **Hint** below will state how to solve this task using **LINQ**.
 
-> **Hint:** For **Task 8.1**, use the `Where` method with a condition like `word.ToLower().Contains("a") && word.ToLower().EndsWith("e")`. For **Task8.2**, use the `OrderByDescending` method. 
+> **Hint:** For **Task 8.1**, use the `Where` method with a condition like `word.ToLower().Contains("a") && word.ToLower().EndsWith("e")`. For **Task8.2**, use the `OrderByDescending` method. Here is an example, `OrderByDescending(word => word.Length)`.
 
 ## Task 9:
 

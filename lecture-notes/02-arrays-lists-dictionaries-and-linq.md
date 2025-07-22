@@ -279,6 +279,8 @@ You have been given a list of `int` containing even numbers. Write a **LINQ** qu
 List<int> numbers = new List<int>() { 1, 4, 7, 8, 11, 12, 15, 16, 19, 20 };
 ```
 
+> **Hint:** Filter the list with `Where` method to select only even numbers, then use `Sum` method to add them together. The result is a number so make sure you store this in the appropriate data type.
+
 ## Task 5:
 
 You have been given a list of `string` containing countries. Write a **LINQ** query that displays all countries starting with the letter "I" or "i".
@@ -301,6 +303,8 @@ List<string> countries = new List<string>
 };
 ```
 
+> **Hint:** Use the `Where` method to filter countries that start with the letter "I" or "i" by checking if `country.StartsWith("I", StringComparison.OrdinalIgnoreCase)` is `true`.
+
 ## Task 6:
 
 You have been given a list of temperatures in celsius for a week.
@@ -315,6 +319,8 @@ Implement the following:
 2. Find the highest temperature recorded during the week.
 3. Find all the temperatures that are above 25 degrees celsius and store them in a new list.
 
+> **Hint:** Use methods like `Average` to calculate the week's average temperature, `Max` to find the highest temperature, and `Where` to filter temperatures above 25 degrees celsius and store them in a new list using `ToList`.
+
 ## Task 7:
 
 You have been given a list of integers representing exam scores of learners.
@@ -327,6 +333,8 @@ Implement the following:
 
 1. Find the highest score in the list.
 2. Find all the distinct scores (remove duplicates) and store them in a new list.
+
+> **Hint:** For **Task 7.2**, use the `Distinct` method, then convert the result into a `List`. If you get stuck on coverting the result into a `List`, refer to **Task 6's** hint.
 
 ## Task 8:
 
@@ -341,6 +349,10 @@ Implement the following:
 1. Find all words that contain the letter "a" and end with the letter "e" (case-insensitive) and store them in a new list.
 2. Find the longest word in the list.
 
+**Note:** You do not need to use **LINQ** for this task. However, the **Hint** below will state how to solve this task using **LINQ**.
+
+> **Hint:** For **Task 8.1**, use the `Where` method with a condition like `word.ToLower().Contains("a") && word.ToLower().EndsWith("e")`. For **Task8.2**, use the `OrderByDescending` method. 
+
 ## Task 9:
 
 You have been given a list of integers representing the population of cities.
@@ -353,6 +365,10 @@ Implement the following:
 
 1. Find the top 3 cities with the highest populations and store their populations in a new list.
 2. Calculate the total population of all cities.
+
+**Note:** You do not need to use **LINQ** for this task. However, the **Hint** below will state how to solve this task using **LINQ**.
+
+> **Hint:** For **Task 9.1**, use `OrderByDescending` and `Take` methods, then convert the result into a `List`.
 
 ## Task 10:
 

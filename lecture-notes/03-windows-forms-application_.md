@@ -440,12 +440,12 @@ public partial class Form1 : Form
 
       names = new List<string>() { "John", "Mary", "Bob", "Jane" };
 
-      dataGridView1.Columns.Add("Name", "Name");
+      dataGridView1.Columns.Add("Col1", "Name");  //first value for column identifier and the second value for the column title you want to appear
 
       foreach (string name in names)
       {
          int rowIdx = dataGridView1.Rows.Add();
-         dataGridView1.Rows[rowIdx].Cells["Name"].Value = name;
+         dataGridView1.Rows[rowIdx].Cells["Col1"].Value = name;
       }
    }
 }

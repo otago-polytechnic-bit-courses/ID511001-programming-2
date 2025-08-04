@@ -455,8 +455,8 @@ public class Product
 
     public Product(string name, double price)
     {
-        name = name;
-        price = price;
+        this.name = name;
+        this.price = price;
     }
 
     public string Name { get => name; set => name = value; }

@@ -6,8 +6,6 @@ In this course, we are going to use **GitHub** and **GitHub Classroom** to manag
 
 [https://classroom.github.com/a/Xg7esDmf](https://classroom.github.com/a/Xg7esDmf)
 
-You will use this repository for your **formative assessments** only.
-
 ## Development Workflow
 
 By default, **GitHub Classroom** creates an empty repository. Firstly, you must create a **README** and `.gitignore` file. **GitHub** provides an option for creating new files once the repository is created.

@@ -43,7 +43,7 @@ public class Dog : Animal
 
     public Dog(string name, int age, string colour) : base(name, age) // The base class's constructor
     {
-        colour = colour;
+        this.colour = colour;
     }
 
     // Overriding the base class's implementation
@@ -210,7 +210,7 @@ Learning to use AI tools is an important skill. While AI tools are powerful, you
 
 ## Task 1:
 
-Create a base class called `Vehicle` with the `protected` fields - `brand`, `model`, and `year`. Create a constructor method that accepts all fields. Create a `virtual` method called `DisplayDetails` that returna a `string` which displays the `Vehicle`'s `brand`, `model`, and `year`.
+Create a base class called `Vehicle` with the `protected` fields - `brand`, `model`, and `year`. Create a constructor method that accepts all fields. Create a `virtual` method called `DisplayDetails` that return a `string` which displays the `Vehicle`'s `brand`, `model`, and `year`.
 
 Create a class called `Car` which derives from `Vehicle` with the private field - `numOfDoors`. Create a constructor that accepts all base class's fields, i.e., `brand`, `model`, and `year` and its own, i.e., `numOfDoors`. Create an `override` method for `DisplayDetails` which displays the `Car`s `numOfDoors`.
 

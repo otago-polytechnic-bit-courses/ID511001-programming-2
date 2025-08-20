@@ -54,7 +54,7 @@ At the successful completion of this course, learners will be able to:
 	\hline
 	\textbf{Assessment}                                 & \textbf{Weighting} & \textbf{Due Date}            & \textbf{Learning Outcomes} \\ \hline
 	\small Project 1 & \small 25\%        & \small Sunday 9th November at 11.59 PM  & \small 1, 2                  \\ \hline
-	\small Project 2  & \small 35\%        & \small Sunday 14 September at 11.59 PM   & \small 1, 2                  \\ \hline
+	\small Project 2  & \small 35\%        & \small Sunday 14th September at 11.59 PM   & \small 1, 2                  \\ \hline
 	\small Theory Examination                        & \small 30\%        & \small Wednesday 8th and Thursday 9th October from 10.00 AM - 11.45 AM & \small 1, 2                  \\ \hline
 	\small Classroom Tasks                      & \small 10\%        & \small Sunday 12th October at 11.59 PM  & \small 1, 2                  \\ \hline
 \end{tabular}
@@ -163,8 +163,8 @@ public enum ESalary
 4,Emma,Clark,1,95000,0  
 5,Liam,Harris,2,110000,1  
         \end{verbatim}
-        \item What do the values represent? The first value is the \textbf{id}, the second value is the \textbf{first name}, the third value is the \textbf{last name}, the fourth value is the \textbf{EPosition} enum (0 for LECTURER, 1 for SENIOR\_LECTURER, etc.), the fifth value is the \textbf{ESalary} enum (0 for 85000, 1 for 100000, etc.), and the sixth value is the \textbf{course} index (0 for course 1, 1 for course 2, etc.).
-    
+        \item What do the values represent? The first value is the \textbf{id}, the second value is the \textbf{first name}, the third value is the \textbf{last name}, the fourth value is the \textbf{EPosition} enum (0 for LECTURER, 1 for SENIOR\_LECTURER, etc.), the fifth value is the \textbf{ESalary} enum (85000 for LECTURER, 100000 for SENIOR\_LECTURER, etc.), and the sixth value is the \textbf{course} index (0 for course 1, 1 for course 2, etc.).
+
 \end{itemize}
 
 \subsubsection*{Part 4 (10\%)}
@@ -199,30 +199,30 @@ public enum ESalary
 
 \subsubsection*{Part 5 (15\%)}
 
-In parts 1-4, you implemented the core functionality. In this part, you will select four additional features from the list below to implement in your application. \\
+In parts 1-4, you implemented the core functionality. In this part, you will select four additional features from the list below to implement in your application. Each additional feature has been marked with either \textbf{Medium} or \textbf{Hard}.
 
 \textbf{Search:}
 \begin{itemize}
-    \item Search for a learner and lecturer by id, first name or last name. The user should be able to enter a search term and the application should display the matching learners and lecturers. 
-    \item Search for a course by code or name. The user should be able to enter a search term and the application should display the matching courses.
+    \item \textbf{Medium} - Search for a learner and lecturer by id, first name or last name. The user should be able to enter a search term and the application should display the matching learners and lecturers. 
+    \item \textbf{Medium} - Search for a course by code or name. The user should be able to enter a search term and the application should display the matching courses.
 \end{itemize}
 
 \textbf{Sort and Filter:}
 \begin{itemize}
-    \item Sort learners and lecturers by id, first name or last name. The user should be able to select the sorting criteria and order (ascending or descending) from a dropdown list.    
-    \item Sort courses by code, name or fees. The user should be able to select the sorting criteria and order (ascending or descending) from a dropdown list.
-    \item Filter learners and lecturers by course. The user should be able to select a course from a dropdown list and the application should display the learners and lecturers for that course.
-    \item Filter learners by assessment mark. The user should be able to enter a minimum and maximum mark and the application should display the learners with marks within that range.
-    \item Filter courses by country. The user should be able to select a country from a dropdown list and the application should display the courses for that country.
+    \item \textbf{Medium} - Sort learners and lecturers by id, first name or last name. The user should be able to select the sorting criteria and order (ascending or descending) from a dropdown list.    
+    \item \textbf{Medium} - Sort courses by code, name or fees. The user should be able to select the sorting criteria and order (ascending or descending) from a dropdown list.
+    \item \textbf{Hard} - Filter learners and lecturers by course. The user should be able to select a course from a dropdown list and the application should display the learners and lecturers for that course.
+    \item \textbf{Medium} - Filter learners by assessment mark. The user should be able to enter a minimum and maximum mark and the application should display the learners with marks within that range.
+    \item \textbf{Medium} - Filter courses by country. The user should be able to select a country from a dropdown list and the application should display the courses for that country.
 \end{itemize}
 
 \textbf{Statistics:}
 \begin{itemize}
-    \item Calculate and display the completion rate for each course based on the number of learners who have completed all assessments.
-    \item Calculate and display the average assessment marks and grades for each institution.
-    \item Calculate and display the average salary of all lecturers.
-    \item Calculate and display the total fees collected for each course based on the number of learners enrolled in that course. 
-    \item Calculate and display the percentage of learners who have achieved merit (B-range) and distinction (A-range) grades for each course.
+    \item \textbf{Hard} - Calculate and display the completion rate for each course based on the number of learners who have completed all assessments.
+    \item \textbf{Hard} - Calculate and display the average assessment marks and grades for each institution.
+    \item \textbf{Medium} - Calculate and display the average salary of all lecturers.
+    \item \textbf{Hard} - Calculate and display the total fees collected for each course based on the number of learners enrolled in that course. 
+    \item \textbf{Hard} - Calculate and display the percentage of learners who have achieved merit (B-range) and distinction (A-range) grades for each course.
 \end{itemize}
 
 \subsection*{Code Quality and Best Practices - Learning Outcome 2 (40\%)}

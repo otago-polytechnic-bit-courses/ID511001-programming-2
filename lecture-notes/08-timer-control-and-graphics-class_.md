@@ -49,9 +49,9 @@ private void Form1_Paint(object sender, PaintEventArgs e)
 }
 ```
 
-# Formative Assessment
+# Exercises
 
-Before you start, create a new **Windows Forms Application** application called **08-formative-assessment**.
+Before you start, create a new **Windows Forms Application** application called **08-A NAME THAT MAKES SENSE TO YOU**.
 
 Learning to use AI tools is an important skill. While AI tools are powerful, you **must** be aware of the following:
 
@@ -395,6 +395,6 @@ polygon = null;
 6. One of the advantages of the Object-Oriented approach is that the resulting code is easily extensible. Satisfy yourself of this by extending your screensaver to also draw hexagons and pentagons. 
 Did you have to modify your `Timer` handler? If so, how might you have written it so that no modification would be required?
 
-# Formative Assessment Submission
+# Exercises Submission
 
 Push your code to your **GitHub** repository.

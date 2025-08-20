@@ -31,45 +31,38 @@ Open up **Git Bash** or whatever alternative you see fit on your computer. Clone
 
 - <https://git-scm.com/docs/git-clone>
 
-## Full Resource
-
-You can find the full resource on **GitHub** - <https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-24/resources/github-classroom-setup.md>. It also includes information on **Git Integration in Visual Studio**.
 
 ## C#
 
-**C#** is a programming language developed by **Microsoft** for building web, mobile applications, desktop applications and games. It is a modern, **object-oriented** language designed to be easy to use and similar in syntax to other popular programming languages such as **C++** and **Java**. **C#** is commonly used to build applications on the **Microsoft .NET Framework**, but developers can also use it to build cross-platform applications using frameworks like **Xamarin** and **.NET Core**.
+**C#** is a programming language developed by **Microsoft** for building web applications, mobile applications, desktop applications and games. It is a modern, **object-oriented** language designed to be easy to use and similar in syntax to other popular programming languages such as **C++** and **Java**. **C#** is commonly used to build applications on the **Microsoft .NET Framework**, and developers can also use it to build cross-platform applications using frameworks like **Xamarin** and **.NET**.
 
 ## Main Method
 
 The **Main** method is the entry point for all **C#** programs. It is the first method that is called when a program is executed. The **Main** method is declared with the `static` keyword, which means that it can be called without creating an instance of the class that contains it. It also has a return type of `void`, which means that it does not return a value. The **Main** method is typically declared in a **class** called `Program` and is usually the only method in that **class**. For example:
 
 ```cs
-// Using directives
+using System;
 
 class Program
 {
     static void Main(string[] args)
     {
         // Code to be executed
-    }
-}
-```
-
-You can also use **top-level statements** to declare the **Main** method. This allows you to write code directly in the **Main** method without having to create a **class**. For example:
-
-```cs
-// Using directives
-
-class Program
-{
-    static void Main(string[] args)
-    {
         Console.WriteLine("Hello, World!");
     }
 }
 ```
 
-**Note:** In this course, it is recommended that you use the **Main** method approach.
+You can also use **top-level statements** (available in C# 9.0 and later) to simplify your code. This allows you to write code directly without having to create a **class** structure. For example:
+
+```cs
+using System;
+
+// Top-level statements - no Main method or Program class needed
+Console.WriteLine("Hello, World!");
+```
+
+**Note:** In this course, it is recommended that you use the traditional **Main** method approach for better understanding of C# structure.
 
 **Resources:**
 
@@ -86,7 +79,7 @@ string name;
 bool isTrue;
 ```
 
-In the above example, `x` is a **variable** of type `int`, `name` is a **variable** of type `string`, and `isTrue` is a **variable** of type `bool`. Once a **variable** is declared, you can assign a value using the assignment operator, i.e., `=`. For example:
+In the above example, `x` is a **variable** of type `int`, `name` is a **variable** of type `string`, and `isTrue` is a **variable** of type `bool`. Once a **variable** is declared, you can assign a value using the assignment operator (`=`). For example:
 
 ```cs
 x = 5;
@@ -94,7 +87,7 @@ name = "John Doe";
 isTrue = true;
 ```
 
-You can also declare and assign a value to a **variable** in a single statement like this:
+You can also declare and assign a value to a **variable** in a single statement:
 
 ```cs
 int x = 5;
@@ -102,24 +95,24 @@ string name = "John Doe";
 bool isTrue = true;
 ```
 
-It is also possible to use the `var` keyword to declare a **variable**. The compiler will then infer the type based on the value assigned to it.
+It is also possible to use the `var` keyword to declare a **variable**. The compiler will infer the type based on the value assigned to it:
 
 ```cs
-var x = 5;
-var name = "John Doe";
-var isTrue = true;
+var x = 5;        // Inferred as int
+var name = "John Doe";  // Inferred as string
+var isTrue = true;      // Inferred as bool
 ```
 
-Note that **variables** declared with the `var` keyword can only be initialised at the time of declaration. It cannot be reassigned with a different type.
+Note that **variables** declared with the `var` keyword must be initialized at the time of declaration, and the type cannot be changed once inferred.
 
-What happens if you want to declare a variable whose value cannot be changed once it has been assigned? You can use the `const` keyword to declare a **constant**. For example:
+If you want to declare a variable whose value cannot be changed once it has been assigned, you can use the `const` keyword to declare a **constant**:
 
 ```cs
-const int x = 5;
-const string name = "John Doe";
-const bool isTrue = true;
+const int MaxValue = 100;
+const string CompanyName = "Acme Corp";
+const bool IsDebugMode = true;
 
-x = 10; // This will cause an error
+// MaxValue = 200; // This will cause a compiler error
 ```
 
 ## If-Else Statements
@@ -137,9 +130,9 @@ else
 }
 ```
 
-The condition is a **boolean expression** evaluated as either `true` or `false`. The code inside the first curly braces (`{ }`) is executed if the condition is `true`. If the condition is `false`, the code inside the second set of curly braces is executed.
+The condition is a **boolean expression** that evaluates to either `true` or `false`. If the condition is `true`, the code inside the first set of curly braces is executed. If the condition is `false`, the code inside the `else` block is executed.
 
-For example, the following code checks if `x` is greater than `y`. If so, it prints "x is greater than y" to the console. If not, it prints "x is less than or equal to y" to the console.
+For example, the following code checks if `x` is greater than `y`:
 
 ```cs
 int x = 5;
@@ -155,7 +148,7 @@ else
 }
 ```
 
-You can also chain multiple conditions using `else if` like the following example:
+You can also chain multiple conditions using `else if`:
 
 ```cs
 int x = 5;
@@ -175,7 +168,7 @@ else
 }
 ```
 
-You can chain as many else if you need.
+You can chain as many `else if` statements as needed.
 
 ## Switch Statement
 
@@ -190,126 +183,136 @@ switch (expression)
     case value2:
         // Code to be executed if expression equals value2
         break;
-    ... // As many cases as you need
     default:
-        // Code to be executed if expression does not match any of the values
+        // Code to be executed if expression doesn't match any case
         break;
 }
 ```
 
-The expression is evaluated and its value is compared to the values specified in each case. If a match is found, the code block associated with that case is executed. It is important to include a `break` statement at the end of each case block to exit the `switch` statement after the code block has been executed.
+The expression is evaluated and its value is compared to the values specified in each case. If a match is found, the code block associated with that case is executed. It is important to include a `break` statement at the end of each case block to exit the `switch` statement.
 
-For example, the following code uses a `switch` statement to check the value of `x` and prints a message to the console based on its value:
+Here's an example using an integer:
 
 ```cs
-int x = 1;
+int dayOfWeek = 3;
 
-switch (x) // Switch on an integer
+switch (dayOfWeek)
 {
     case 1:
-        Console.WriteLine("x is 1");
+        Console.WriteLine("Monday");
         break;
     case 2:
-        Console.WriteLine("x is 2");
+        Console.WriteLine("Tuesday");
+        break;
+    case 3:
+        Console.WriteLine("Wednesday");
         break;
     default:
-        Console.WriteLine("x is not 1 or 2");
+        Console.WriteLine("Invalid day");
         break;
 }
 ```
 
-The `default` case is optional and will be executed if the value of the expression does not match any of the values specified in the case statements. You can also use the `switch` statement with `string`, like the following example:
+You can also use the `switch` statement with strings:
 
 ```cs
 string day = "Monday";
 
-switch (day) // Switch on a string
+switch (day)
 {
     case "Monday":
-        Console.WriteLine("Today is Monday");
+        Console.WriteLine("Start of the work week");
         break;
-    case "Tuesday":
-        Console.WriteLine("Today is Tuesday");
+    case "Friday":
+        Console.WriteLine("TGIF!");
         break;
     default:
-        Console.WriteLine("Today is not Monday nor Tuesday");
+        Console.WriteLine("Regular day");
         break;
 }
 ```
 
+The `default` case is optional and will be executed if the value of the expression doesn't match any of the specified cases.
+
 ## Loops
 
-There are several types of loops in **C#**, including:
+There are several types of loops in **C#**:
 
-- `for` loops: These loops are used to execute a block of code a specified number of times. The basic syntax of a `for` loop is:
+### For Loops
+
+`for` loops are used to execute a block of code a specified number of times. The basic syntax is:
 
 ```cs
-for (initialisation; condition; increment)
+for (initialization; condition; increment)
 {
     // Code to be executed
 }
 ```
 
-For example, the following code uses a `for` loop to print the numbers 0 to 9 to the console:
+Example - print numbers 0 to 9:
 
 ```cs
-for (int i = 0; i < 10; i++) // Initialise i to 0, check if i is less than 10, increment i by 1
+for (int i = 0; i < 10; i++)
+{
     Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
+}
 ```
 
 **Note:** You can omit the curly braces if the loop body contains only one statement.
 
-You can also decrement the value of the loop variable, like the following example:
+You can also decrement or use different increment values:
 
 ```cs
-for (int i = 10; i > 0; i--) // Initialise i to 10, check if i is greater than 0, decrement i by 1
+// Decrement
+for (int i = 10; i > 0; i--)
 {
     Console.WriteLine(i); // Prints 10, 9, 8, ..., 1
 }
-```
 
-How about incrementing by 2? You can do that too:
-
-```cs
-for (int i = 0; i < 10; i += 2) // Initialise i to 0, check if i is less than 10, increment i by 2
+// Increment by 2
+for (int i = 0; i < 10; i += 2)
 {
-    Console.WriteLine(i); // Prints 0, 2, 4, ..., 8
+    Console.WriteLine(i); // Prints 0, 2, 4, 6, 8
 }
 ```
 
-What happens if you want to `break` out of a loop? You can use the `break` keyword to exit the loop. For example:
+You can use the `break` keyword to exit a loop early:
 
 ```cs
 for (int i = 0; i < 10; i++)
 {
     if (i == 5)
     {
-        break; // Exit the loop when i is equal to 5
+        break; // Exit the loop when i equals 5
     }
     Console.WriteLine(i); // Prints 0, 1, 2, 3, 4
 }
 ```
 
-`foreach` loops: These loops are used to iterate over the items in a collection, such as an array or list. The basic syntax of a `foreach` loop is:
+### Foreach Loops
+
+`foreach` loops are used to iterate over collections such as arrays or lists:
 
 ```cs
-foreach (var item in collection)
+foreach (datatype variable in collection)
 {
-    // code to be executed
+    // Code to be executed
 }
 ```
 
-For example, the following code uses a foreach loop to print the items of an array to the console:
+Example:
 
 ```cs
 int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-foreach (int i in numbers)
+foreach (int number in numbers)
 {
-    Console.WriteLine(i);
+    Console.WriteLine(number);
 }
 ```
 
-- `while` loops: These loops are used to execute a block of code while a certain condition is true. The basic syntax of a `while` loop is:
+### While Loops
+
+`while` loops execute a block of code while a condition is true:
 
 ```cs
 while (condition)
@@ -318,11 +321,10 @@ while (condition)
 }
 ```
 
-For example, the following code uses a `while` loop to print the numbers 0 to 9 to the console:
+Example:
 
 ```cs
 int i = 0;
-
 while (i < 10)
 {
     Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
@@ -330,7 +332,9 @@ while (i < 10)
 }
 ```
 
-- `do-while` loops: These loops are similar to while loops, but the code inside the loop is guaranteed to be executed at least once. The basic syntax of a `do-while` loop is:
+### Do-While Loops
+
+`do-while` loops are similar to while loops, but the code is guaranteed to execute at least once:
 
 ```cs
 do
@@ -339,11 +343,10 @@ do
 } while (condition);
 ```
 
-For example, the following code uses a `do-while` loop to print the numbers 0 to 9 to the console:
+Example:
 
 ```cs
 int i = 0;
-
 do
 {
     Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
@@ -353,31 +356,40 @@ do
 
 ## Methods
 
-In **C#**, a **method** is a block of code that performs a specific task and can be called (invoked) by name. Methods are used to encapsulate and organise code and can accept parameters and return a value. There are several types of **methods** in **C#**, including:
+In **C#**, a **method** is a block of code that performs a specific task and can be called by name. Methods are used to encapsulate and organize code, and can accept parameters and return values. There are several types of **methods** in **C#**:
 
-- Instance **methods**: These **methods** are associated with an instance of a **class** and can access the instance's data.
+### Instance Methods
+
+These **methods** are associated with an instance of a **class** and can access the instance's data:
 
 ```cs
-public class MyClass
+public class Calculator
 {
-    public int myValue = 0;
+    private int value = 0;
 
-    public void IncreaseValue(int amount)
-    { // This is the method signature - name and parameter(s)
-        myValue += amount; // or myValue = myValue + amount;
+    public void Add(int amount)
+    {
+        value += amount;
+    }
+
+    public int GetValue()
+    {
+        return value;
     }
 }
 
 // Usage:
-MyClass myObj = new MyClass();
-myObj.IncreaseValue(5);
-Console.WriteLine(myObj.myValue); // 5
+Calculator calc = new Calculator();
+calc.Add(5);
+Console.WriteLine(calc.GetValue()); // Output: 5
 ```
 
-- Static **methods**: These **methods** are associated with a **class** and do not have access to an instance's data. They can only access static data.
+### Static Methods
+
+These **methods** are associated with a **class** rather than an instance and can only access static data:
 
 ```cs
-public class MyClass
+public class MathHelper
 {
     public static int Add(int a, int b)
     {
@@ -386,64 +398,42 @@ public class MyClass
 }
 
 // Usage:
-int result = MyClass.Add(2, 3);
-Console.WriteLine(result); // 5
+int result = MathHelper.Add(2, 3);
+Console.WriteLine(result); // Output: 5
 ```
 
-- Constructors: These **methods** are used to create and initialise an instance of a **class**.
+### Constructors
+
+These special **methods** are used to create and initialize instances of a **class**:
 
 ```cs
-public class MyClass
+public class Person
 {
-    public int myValue;
+    public string Name { get; set; }
+    public int Age { get; set; }
 
-    public MyClass(int value)
+    public Person(string name, int age)
     {
-        myValue = value;
+        Name = name;
+        Age = age;
     }
 }
 
 // Usage:
-MyClass myObj = new MyClass(5);
-Console.WriteLine(myObj.myValue); // 5
+Person person = new Person("John", 25);
+Console.WriteLine($"{person.Name} is {person.Age} years old");
 ```
 
-- Finalisers/Destructors: These **methods** are used to clean up resources when an instance of a **class** is no longer needed. It is not recommended in **C#**.
+
+### Expression-Bodied Methods
+
+For methods with single expressions, you can use the expression-bodied syntax:
 
 ```cs
-public class MyClass {
-    ~MyClass() // Note: The use of the tilde (~) character. This indicates that this
-               // is a finaliser/destructor. You may see this in other programming languages, for example, C++
-    {
-
-        // Clean up resources
-    }
-}
-```
-
-- Extension methods: These **methods** are used to add functionality to existing **classes** without modifying the source code. Also, they require the `this` keyword on the first parameter, which defines the type of object the **method** will be an extension of.
-
-```cs
-public static class MyClass {
-    public static int Multiply(this int num, int factor)
-    {
-        return num * factor;
-    }
-}
-
-// Usage:
-int result = 5.Multiply(3);
-Console.WriteLine(result); // 15
-```
-
-**Note:** If a method's block has one statement, you can use the **expression-bodied** syntax. For example:
-
-```cs
-public class MyClass
+public class Calculator
 {
-    public int myValue = 0;
-
-    public void IncreaseValue(int amount) => myValue += amount;
+    public int Add(int a, int b) => a + b;
+    public bool IsEven(int number) => number % 2 == 0;
 }
 ```
 
@@ -451,326 +441,384 @@ public class MyClass
 
 - Methods - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods>
 - Constructors - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors>
-- Finalisers/Destructors - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/destructors>
 - Extension methods - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods>
 - Expression-bodied members - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members>
 
-## Casting
+## Type Conversion and Casting
 
-Casting is the process of converting a value of one data type to another data type. There are two types of casting in **C#**:
+Type conversion is the process of converting a value from one data type to another. There are several types of conversions in **C#**:
 
-- Implicit casting: This is when a value of one data type is converted to another data type without the need for an explicit cast. This can be done when you are converting from a smaller data type to a larger data type. For example:
+### Implicit Conversion
+
+This occurs automatically when converting from a smaller data type to a larger one without risk of data loss:
 
 ```cs
 int x = 5;
-double y = x; // Implicit cast from int to double
-// Output: 5
+double y = x; // Implicit conversion from int to double
+Console.WriteLine(y); // Output: 5.0
 ```
 
-The compiler handles this automatically without the need for an explicit cast.
+### Explicit Casting
 
-- Explicit casting: This is when a value of one data type is converted to another data type using an explicit cast. The programmer must explicitly specify the type of conversion. **Note:** There is a risk of data loss when using explicit casting. For example:
+This requires explicit specification and may result in data loss:
 
 ```cs
-double x = 5.5;
+double x = 5.7;
 int y = (int)x; // Explicit cast from double to int
-// Output: 5
+Console.WriteLine(y); // Output: 5 (decimal part is lost)
 ```
 
-You lost the decimal part of the number when you casted from `double` to `int`.
+### Parse and Convert Methods
+
+For converting strings to other types:
+
+```cs
+string numberText = "123";
+int number = int.Parse(numberText);
+// or
+int number2 = Convert.ToInt32(numberText);
+```
+
+### TryParse Methods
+
+Safer conversion that doesn't throw exceptions:
+
+```cs
+string input = "abc";
+if (int.TryParse(input, out int result))
+{
+    Console.WriteLine($"Converted: {result}");
+}
+else
+{
+    Console.WriteLine("Conversion failed");
+}
+```
 
 ## Error Handling
 
-Error handling is anticipating and managing errors that may occur during the execution of a program. It is typically achieved through the use of **try-catch** blocks and **exception** objects. The `try` block contains code that may generate an **exception**, and the `catch` block contains code that will be executed if an **exception** is thrown. The **exception** object contains information about the error that occurred, such as the type of error and a description of the error. The `using` statement can also be used to ensure that resources are properly disposed of even in the event of an **exception**.
+Error handling involves anticipating and managing errors that may occur during program execution. This is typically achieved through **try-catch** blocks and **exception** objects.
 
-Here is an example of a basic **try-catch** block:
+### Basic Try-Catch
 
 ```cs
 try
 {
     // Code that may throw an exception
-    int x = int.Parse("abc"); // Is "abc" a valid integer?
+    int result = int.Parse("abc");
 }
 catch (FormatException ex)
 {
-    // Code that will be executed if an exception is thrown
-    Console.WriteLine($"Error: {ex.Message}");
+    // Handle specific exception type
+    Console.WriteLine($"Invalid format: {ex.Message}");
+}
+catch (Exception ex)
+{
+    // Handle any other exception
+    Console.WriteLine($"An error occurred: {ex.Message}");
 }
 ```
 
-In this example, the code in the `try` block attempts to parse a string to an integer, but the string `abc` is not a valid integer, so a `FormatException` is thrown. The `catch` block catches this exception and prints an error message to the console.
+### Try-Catch-Finally
 
-Another example using the `using` statement:
+The `finally` block executes regardless of whether an exception occurs:
+
+```cs
+try
+{
+    // Risky code
+    int result = 10 / 0;
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine("Cannot divide by zero");
+}
+finally
+{
+    // This code always runs
+    Console.WriteLine("Cleanup operations");
+}
+```
+
+### Using Statement
+
+The `using` statement ensures proper disposal of resources:
 
 ```cs
 string fileName = "example.txt";
 
-using (FileStream stream = new FileStream(fileName, FileMode.Open))
+using (var reader = new StreamReader(fileName))
 {
-    // Code that uses the stream
-}
+    string content = reader.ReadToEnd();
+    Console.WriteLine(content);
+} // StreamReader is automatically disposed here
 ```
-
-In this example, the `using` statement ensures that the `FileStream` object is properly disposed of, even if an exception is thrown while the stream is in use.
-
-You can also have multiple `catch` blocks to handle different exception types, like this:
-
-```cs
-try
-{
-    // Code that may throw an exception
-    int x = int.Parse("abc");
-    int y = int.Parse("456");
-}
-catch (FormatException ex)
-{
-    // Code that will be executed if a FormatException is thrown
-    Console.WriteLine($"Error: {ex.Message}");
-}
-catch (OverflowException ex)
-{
-    // Code that will be executed if a OverflowException is thrown
-    Console.WriteLine($"Error: {ex.Message}");
-}
-```
-
-In this example, if the code in the `try` block throws a `FormatException`, the first `catch` block will be executed, if it throws a `OverflowException`, the second `catch` block will be executed.
-
-**Note:** There is a third type of block called `finally` that can be used to execute code after the `try` and `catch` blocks have been executed, regardless of whether an exception was thrown or not.
 
 ## File Processing
 
-File processing is the process of reading from or writing to files on a computer's file system. It can be done using the **classes** and **methods** in the System.IO namespace, which provides various **classes** for working with files, directories and other types of I/O (input/output) operations.
+File processing involves reading from or writing to files using classes in the `System.IO` namespace.
 
-For example, the `File` **class** provides **methods** for creating, copying, moving, and deleting files. In contrast, the `StreamReader` and `StreamWriter` **classes** provide **methods** for reading from and writing to text files, respectively.
+### Reading Files
 
-Here is an example of how to use the `File` **class** to read the contents of a text file:
-
-```cs
-string fileName = "example.txt";
-string text = File.ReadAllText(fileName);
-Console.WriteLine(text);
-```
-
-**Question:** Where do you stored `example.txt`?
-
-This code uses the `ReadAllText()` **method** of the `File` **class** to read the contents of the file `example.txt` and assigns the result to `text`.
-
-Here is another example of how to use the `StreamReader` **class** to read the contents of a text file:
+Using the `File` class for simple operations:
 
 ```cs
-string fileName = "example.txt";
+using System;
+using System.IO;
 
-using (StreamReader reader = new StreamReader(fileName))
+// Read entire file at once
+string fileName = "example.txt";
+if (File.Exists(fileName))
 {
-    string line;
-    while ((line = reader.ReadLine()) != null)
-    {
-        Console.WriteLine(line);
-    }
+    string content = File.ReadAllText(fileName);
+    Console.WriteLine(content);
+}
+else
+{
+    Console.WriteLine("File not found");
 }
 ```
 
-In this example, the `StreamReader` **class** is used to read the contents of the file `example.txt` line by line, and each line is printed to the console.
-
-Similarly, the `File` **class** has **methods** to write to a file, as well as `StreamWriter` **class**.
+Using `StreamReader` for line-by-line reading:
 
 ```cs
 string fileName = "example.txt";
-File.WriteAllText(fileName, "Hello, World!");
+
+try
+{
+    using (StreamReader reader = new StreamReader(fileName))
+    {
+        string line;
+        while ((line = reader.ReadLine()) != null)
+        {
+            Console.WriteLine(line);
+        }
+    }
+}
+catch (FileNotFoundException)
+{
+    Console.WriteLine("File not found");
+}
 ```
 
-This code uses the `WriteAllText()` **method** of the `File` **class** to write the string "Hello, World!" to the file `example.txt`.
+### Writing Files
+
+Using the `File` class:
 
 ```cs
-string fileName = "example.txt";
+string fileName = "output.txt";
+string content = "Hello, World!";
+File.WriteAllText(fileName, content);
+```
+
+Using `StreamWriter`:
+
+```cs
+string fileName = "output.txt";
 
 using (StreamWriter writer = new StreamWriter(fileName))
 {
-    writer.WriteLine("Hello,");
-    writer.WriteLine("World!");
+    writer.WriteLine("Line 1");
+    writer.WriteLine("Line 2");
 }
 ```
 
-This example uses the `StreamWriter` **class** to write the strings "Hello," and "World!" to the file "example.txt", each on a new line.
-
-These are just a few examples of how to perform file processing. Still, the `System.IO` namespace provides many other **classes** and **methods** for working with files and directories, such as the `Directory` **class** for working with directories, the `FileInfo` and `DirectoryInfo` **classes** for working with file and directory metadata, and the `FileSystemWatcher` **class** for monitoring changes to the file system.
+**Note:** When working with file paths, consider using `Path.Combine()` for cross-platform compatibility, and always handle potential exceptions like `FileNotFoundException` or `UnauthorizedAccessException`.
 
 ## Naming Conventions
 
-Try and follow the naming conventions below when naming your **classes**, **methods**, **variables**, etc.:
+Follow these naming conventions when writing C# code:
 
-- Use meaningful names that describe what the **class**, **method**, **variable**, etc. does
-- Use **PascalCase** for **classes** and **methods**.
-- Use **camelCase** for **variables** and **parameters**.
-- Use **ALL_CAPS** for **constants**.
-- Private fields should be prefixed with an underscore (`_`). For example, `private string _someVariableName;`
-- Static fields should be prefixed with a lowercase `s` (`s_`). For example, `static string s_someVariableName;`
+- **Classes and Methods**: Use **PascalCase** (e.g., `MyClass`, `CalculateTotal`)
+- **Variables and Parameters**: Use **camelCase** (e.g., `userName`, `totalAmount`)
+- **Constants**: Use **PascalCase** (e.g., `MaxRetries`, `DefaultTimeout`)
+- **Private Fields**: Prefix with underscore and use camelCase (e.g., `_userName`, `_isInitialized`)
+- **Static Fields**: Use **PascalCase** (e.g., `DefaultValue`)
+- **Interfaces**: Prefix with 'I' and use PascalCase (e.g., `IRepository`, `ICalculator`)
 
-**Note:** You will learn about the private and static keywords in `04-classes-objects-and-encapsulation.md`.
+Use meaningful names that clearly describe the purpose of the variable, method, or class.
 
-## Commenting
+## Comments and Documentation
 
-Comments are used to explain the code and make it easier to understand. They are ignored by the compiler and do not affect the execution of the program. There are two types of comments in **C#**:
-
-- Single-line comments: These comments start with `//` and continue until the end of the line.
+### Single-Line Comments
 
 ```cs
 // This is a single-line comment
+int x = 5; // Comment at end of line
 ```
 
-- Multi-line comments: These comments start with `/*` and end with `*/`. They can span multiple lines.
+### Multi-Line Comments
 
 ```cs
 /*
 This is a multi-line comment
+that spans multiple lines
 */
 ```
 
-There are also **XML** documentation comments, which are used to document code and can be used by tools like **Visual Studio** to provide **IntelliSense**. They start with `///` and continue until the end of the line.
+### XML Documentation Comments
 
-```cs
-/// <remarks>
-/// Author: Your Name
-/// Date Created: January 1, 2000
-/// Bugs: None known at this time.
-/// </remarks>
-// <summary>
-/// This is an example class.
-/// </summary>
-```
-
-Here is an example of a **class** with **XML** documentation comments:
+Used for generating documentation and providing IntelliSense:
 
 ```cs
 /// <summary>
-/// This is an example class.
+/// Calculates the area of a rectangle
 /// </summary>
-
-public class ExampleClass
+/// <param name="width">The width of the rectangle</param>
+/// <param name="height">The height of the rectangle</param>
+/// <returns>The area of the rectangle</returns>
+public double CalculateRectangleArea(double width, double height)
 {
-    /// <summary>
-    /// This is an example method.
-    /// </summary>
-    public void ExampleMethod()
-    {
-        // Code to be executed
-    }
+    return width * height;
 }
 ```
 
-**Note:** In the assessments, you will use **XML** documentation comments to document your code. You can comment out code that you wish to refer to at a later date. Otherwise, these should be removed before submitting your work.
+**Note:** Use comments to explain complex logic, not obvious code. Write self-documenting code with meaningful names when possible.
 
-# Formative Assessment
+# Exercises
 
-Before you start, create a new **C# Console** application called **01-formative-assessment**.
+Before you start, create a new **C# Console** application with a descriptive name.
 
-Learning to use AI tools is an important skill. While AI tools are powerful, you **must** be aware of the following:
+**Important Note About AI Tools:**
 
-- If you provide an AI tool with a prompt that is not refined enough, it may generate a not-so-useful response
-- Do not trust the AI tool's responses blindly. You **must** still use your judgement and may need to do additional research to determine if the response is correct
-- Acknowledge what AI tool you have used. In the assessment's repository **README.md** file, please include what prompt(s) you provided to the AI tool and how you used the response(s) to help you with your work
+Learning to use AI tools is valuable, but you **must** be aware of the following:
+
+- Refine your prompts to get useful responses
+- Don't trust AI responses blindly - verify and test the code
+- Acknowledge AI tool usage in your assessment's repository **README.md** file, including what prompts you used and how you applied the responses
 
 ## Task 1:
 
-Create a **double array** named `nums` with the values 45.3, 67.5, -45.6, 20.34, -33.0, 45.6. Iterate over the **array** using a loop and calculate the sum of all items. Divide that sum by the total number of items in the **array** to find the average. Use **string interpolation** to display the average in the desired format.
+Create a **double array** named `nums` with the values 45.3, 67.5, -45.6, 20.34, -33.0, 45.6. Iterate over the **array** using a loop and calculate the sum of all items. Divide that sum by the total number of items in the **array** to find the average. Use **string interpolation** to display the average with appropriate formatting.
 
 ## Task 2:
 
-Create a **static method** called `fizzBuzz` that takes in an integer `num`. Inside the **static method**, check if `num` is a multiple of 3 and if so, return "Fizz". Check if `num` is a multiple of 5 and if so, return "Buzz". If `num` is a multiple of both 3 and 5, return "FizzBuzz". Create a for loop that starts at 1, ends at 15 and increments by 2 each time. Inside the for loop, call the `fizzBuzz` **static method** with the current iteration **variable** `i` and print the result.
+Create a **static method** called `FizzBuzz` that takes an integer `num` as a parameter. Inside the method:
+- If `num` is divisible by both 3 and 5, return "FizzBuzz"
+- If `num` is divisible by 3, return "Fizz"
+- If `num` is divisible by 5, return "Buzz"
+- Otherwise, return the number as a string
+
+Create a for loop that starts at 1, ends at 15, and increments by 2 each iteration. Call the `FizzBuzz` method with each value and print the result.
 
 ## Task 3:
 
-Create an **array** of **integers** called `nums` with the values 21, 19, 68, 55, 42, 12. Iterate over the **array** and check if each number is odd. If it is, display it. Finally, sort the **array** from lowest to highest, then display again.
+Create an **integer array** called `nums` with the values 21, 19, 68, 55, 42, 12. 
+1. Iterate over the array and display only the odd numbers
+2. Sort the array from lowest to highest
+3. Display the sorted array
 
 ## Task 4:
 
-Create a **static method** called `convert` that takes in two parameters, `hours` and `minutes` which are both integers. Inside the **static method**, write code to convert both `hours` and `minutes` to seconds. Multiply the number of hours by 3600 (the number of seconds in an hour) and the number of minutes by 60 (the number of seconds in a minute). Add these values together and return the total number of seconds.
+Create a **static method** called `ConvertToSeconds` that takes two parameters: `hours` and `minutes` (both integers). The method should:
+- Convert hours to seconds (multiply by 3600)
+- Convert minutes to seconds (multiply by 60)
+- Return the total seconds
 
-Declare the following test cases in the `Main()` method:
+Test your method with these cases in `Main()`:
 
 ```cs
-Console.WriteLine(convert(2, 30)); // Expected output: 9000
-Console.WriteLine(convert(1, 15)); // Expected output: 4500
+Console.WriteLine(ConvertToSeconds(2, 30)); // Expected output: 9000
+Console.WriteLine(ConvertToSeconds(1, 15)); // Expected output: 4500
 ```
 
 ## Task 5:
 
-Create a **string variable** called `sentence` and assign the value "The anemone, the wild violet, the hepatica, and the funny little curled-up." to it. Convert the string into an array. Use a loop to count the number of occurrences of the word "the" in the array.
+Create a **string variable** called `sentence` and assign it the value "The anemone, the wild violet, the hepatica, and the funny little curled-up ferns." 
 
-In my solution, I used the `String.Split` **static method** to split the sentence into words by the space character.
+Convert the string into a word array using `String.Split()` method, then use a loop to count how many times the word "the" appears (case-insensitive).
 
 ## Task 6:
 
-Create a **static method** called `isPrime` that takes in a parameter `num` which is an integer. Inside the **static method**, write code to check if `num` is a prime number. A prime number is a number that is only divisible by 1 and itself. Use a loop to check if `num` is divisible by any number other than 1 and itself. If it is, return `false`, otherwise, return `true`.
+Create a **static method** called `IsPrime` that takes an integer `num` as a parameter. The method should:
+- Return `false` for numbers less than 2
+- Check if the number is divisible by any number from 2 to the square root of `num`
+- Return `true` if no divisors are found, `false` otherwise
 
-Declare the following test cases in the `Main()` method:
+Test your method with these cases in `Main()`:
 
 ```cs
-Console.WriteLine(isPrime(7)); // Expected output: true
-Console.WriteLine(isPrime(10)); // Expected output: false
+Console.WriteLine(IsPrime(7));  // Expected output: True
+Console.WriteLine(IsPrime(10)); // Expected output: False
+Console.WriteLine(IsPrime(2));  // Expected output: True
+Console.WriteLine(IsPrime(1));  // Expected output: False
 ```
 
 # Summative Assessment
 
-The following tasks are part of the **Classroom Tasks** assessment worth 10%. This part is worth 2%. **Note:** Partial marks **will not** be given for incomplete functionality.
+The following tasks are part of the **Classroom Tasks** assessment worth 10%. This section is worth 2%. **Note:** Partial marks **will not** be given for incomplete functionality.
 
 ## Task 1:
 
-Create a **static method** called `removeVowels` that takes in a parameter `word` which is a string. Inside the **static method**, write code to remove all vowels from `word`. Use a regular expression or a loop to check each character of the word and remove the vowels.
+Create a **static method** called `RemoveVowels` that takes a string `word` as a parameter. Remove all vowels (a, e, i, o, u - both uppercase and lowercase) from the string and return the result.
 
-To handle the edge case where the word does not contain vowels, you can check if `word` is equal to the result after removing vowels. If it is the same, you can return a message indicating that the word does not contain vowels, otherwise, return `word` without vowels.
+Handle the edge case where the input string is empty or contains no vowels.
 
-Declare the following test cases in the `Main()` method:
+Test cases:
 
 ```cs
-Console.WriteLine(removeVowels("AEIOU")); // Expected output: ""
-Console.WriteLine(removeVowels("bcd fgh")); // Expected output: "bcd fgh"
-Console.WriteLine(removeVowels("C@#omput!er")); // Expected output: "C@#mpt!r"
-Console.WriteLine(removeVowels("")); // Expected output: ""
-Console.WriteLine(removeVowels("aaaaa")); // Expected output: ""
+Console.WriteLine(RemoveVowels("AEIOU"));        // Expected: ""
+Console.WriteLine(RemoveVowels("bcd fgh"));      // Expected: "bcd fgh"
+Console.WriteLine(RemoveVowels("C@#omput!er"));  // Expected: "C@#mpt!r"
+Console.WriteLine(RemoveVowels(""));             // Expected: ""
+Console.WriteLine(RemoveVowels("aaaaa"));        // Expected: ""
 ```
 
 ## Task 2:
 
-Create a **static method** called `isPalindrome` that takes in a parameter `word` which is a string. Inside the **static method**, write code to check if `word` is a palindrome. A palindrome is a word, phrase, or sequence that reads the same backward as forward. Compare the characters of `word` from the beginning and end of the string. If they match, continue checking until you reach the middle of the string. If all characters match, return `true`, otherwise, return `false`.
+Create a **static method** called `IsPalindrome` that takes a string `word` as a parameter and returns `true` if it's a palindrome (reads the same forwards and backwards), `false` otherwise.
 
-Declare the following test cases in the `Main()` method:
+Test cases:
 
 ```cs
-Console.WriteLine(isPalindrome("Racecar")); // Expected output: false
-Console.WriteLine(isPalindrome("rAceCaR".ToLower())); // Expected output: true
-Console.WriteLine(isPalindrome("")); // Expected output: true
-Console.WriteLine(isPalindrome(" ")); // Expected output: true
-Console.WriteLine(isPalindrome("a")); // Expected output: true
-Console.WriteLine(isPalindrome("12321")); // Expected output: true
-Console.WriteLine(isPalindrome("A man a plan a canal Panama".Replace(" ", "").ToLower())); // Expected: true
+Console.WriteLine(IsPalindrome("Racecar"));                                              // Expected: False
+Console.WriteLine(IsPalindrome("rAceCaR".ToLower()));                                   // Expected: True
+Console.WriteLine(IsPalindrome(""));                                                    // Expected: True
+Console.WriteLine(IsPalindrome(" "));                                                   // Expected: True
+Console.WriteLine(IsPalindrome("a"));                                                   // Expected: True
+Console.WriteLine(IsPalindrome("12321"));                                               // Expected: True
+Console.WriteLine(IsPalindrome("A man a plan a canal Panama".Replace(" ", "").ToLower())); // Expected: True
 ```
 
 ## Task 3:
 
-Create a **static method** called `isAnagram` that takes in two parameters, `someStrOne` and `someStrTwo` which are both strings. Inside the **static method**, write code to check if `someStrOne` and `someStrTwo` are an anagram of each other. An anagram is a word or phrase made by rearranging the letters of another word or phrase. Compare the characters of both strings after sorting them. Return `true` if they match and `false` otherwise.
+Create a **static method** called `IsAnagram` that takes two string parameters `firstString` and `secondString`. Return `true` if they are anagrams of each other (contain the same letters in different order), `false` otherwise.
 
-In my solution, I converted the two **strings** to **char** arrays and sorted them using the `Array.Sort` **static method**. Then I compared the sorted char arrays using the `SequenceEqual` **static method** and returned `true` if they match, otherwise `false`.
+**Hint:** Convert both strings to character arrays, sort them, and compare using `SequenceEqual` from LINQ.
 
-Declare the following test cases in the `Main()` method:
+Test cases:
 
 ```cs
-Console.WriteLine(isAnagram("Listen", "Silent")); // Expected output: false
-Console.WriteLine(isAnagram("Listen".ToLower(), "Silent".ToLower())); // Expected: true
-Console.WriteLine(isAnagram("abc", "abcd")); // Expected output: false
-Console.WriteLine(isAnagram("", "")); // Expected output: true
-Console.WriteLine(isAnagram("a!b@c", "c@b!a")); // Expected output: true
+Console.WriteLine(IsAnagram("Listen", "Silent"));                    // Expected: False
+Console.WriteLine(IsAnagram("Listen".ToLower(), "Silent".ToLower())); // Expected: True
+Console.WriteLine(IsAnagram("abc", "abcd"));                         // Expected: False
+Console.WriteLine(IsAnagram("", ""));                                // Expected: True
+Console.WriteLine(IsAnagram("a!b@c", "c@b!a"));                      // Expected: True
 ```
 
 ## Task 4:
 
-Write some code that reads in a file called `countries.txt` containing a list of country names. The program should display only the names of the countries that start with the letter **'B'** or **'b'**. **Note:** You cannot change the contents of the `countries.txt` file. You must read it as is.
+Write code that reads a file called `countries.txt` containing a list of country names (one per line). Display only the countries that start with the letter 'B' or 'b'.
+
+**Requirements:**
+- Handle the case where the file doesn't exist
+- Use proper exception handling
+- You cannot modify the `countries.txt` file
+
+**Note:** You'll need to create a `countries.txt` file in your project directory with a list of countries for testing.
 
 ## Task 5:
 
-Write some code that reads in a file called `computer-jokes.txt` containing a list of computer jokes. The program should store the jokes in an array and randomly select and display a joke each time it is run. **Note:** You cannot change the contents of the `computer-jokes.txt` file. You must read it as is.
+Write code that reads a file called `computer-jokes.txt` containing computer jokes (one per line). Store the jokes in an array and randomly select one to display each time the program runs.
+
+**Requirements:**
+- Handle the case where the file doesn't exist
+- Use proper exception handling
+- Use `Random` class for selection
+- You cannot modify the `computer-jokes.txt` file
+
+**Note:** You'll need to create a `computer-jokes.txt` file with jokes for testing.
 
 ## Submission
 
-Push your code to your **GitHub** repository.
+Push your completed code to your **GitHub** repository. Ensure your code is well-commented and follows the naming conventions outlined in this document.

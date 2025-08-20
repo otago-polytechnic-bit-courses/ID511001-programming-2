@@ -111,15 +111,17 @@ What is the difference between `Enum.Parse` and `Enum.TryParse`? `Enum.Parse` wi
 
 What is the `out` keyword? The `out` keyword is used to pass a parameter by reference. It is similar to the `ref` keyword, except that the parameter does not have to be initialised before it is passed to the method. The method is responsible for initialising the parameter before it returns.
 
-# Formative Assessment
+# Exercises
 
-Before you start, create a new **Windows Forms Application** called **06-formative-assessment**.
+Before you start, create a new **C# Windows Form Application** application with a descriptive name.
 
-Learning to use AI tools is an important skill. While AI tools are powerful, you **must** be aware of the following:
+**Important Note About AI Tools:**
 
-- If you provide an AI tool with a prompt that is not refined enough, it may generate a not-so-useful response
-- Do not trust the AI tool's responses blindly. You **must** still use your judgement and may need to do additional research to determine if the response is correct
-- Acknowledge what AI tool you have used. In the assessment's repository **README.md** file, please include what prompt(s) you provided to the AI tool and how you used the response(s) to help you with your work
+Learning to use AI tools is valuable, but you **must** be aware of the following:
+
+- Refine your prompts to get useful responses
+- Don't trust AI responses blindly - verify and test the code
+- Acknowledge AI tool usage in your assessment's repository **README.md** file, including what prompts you used and how you applied the responses
 
 ## Task 1:
 
@@ -164,4 +166,4 @@ Here are steps you should consider:
 
 ## Submission
 
-Push your code to your **GitHub** repository.
+Push your completed code to your **GitHub** repository. Ensure your code is well-commented and follows proper naming conventions.

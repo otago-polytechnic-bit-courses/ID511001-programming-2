@@ -194,6 +194,6 @@ To stop a sound, call the `Stop()` method:
 soundPlayer.Stop();
 ```
 
-# Formative Assessment
+# Exercises
 
 No formative assessment provided in this topic.

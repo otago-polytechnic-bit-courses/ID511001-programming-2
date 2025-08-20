@@ -24,7 +24,7 @@ Look familiar?
 
 ## Class
 
-So what is the difference? **class** is a blueprint for creating **objects** (a particular data structure), providing initial values for state (member **variables** or **fields**), and implementations of behaviour (member functions or **methods**). A **class** can be defined using the `class` keyword, followed by the **class** name.
+So what is the difference? A **class** is a blueprint for creating **objects** (a particular data structure), providing initial values for state (member **variables** or **fields**), and implementations of behaviour (member functions or **methods**). A **class** can be defined using the `class` keyword, followed by the **class** name.
 
 Here is an example of a simple **class**:
 
@@ -40,7 +40,7 @@ public class Dog
 }
 ```
 
-In this example, the **class** `Dog` has two **fields**, `name` and `age`, which represent the name and age of a dog, respectively. The **class** also has one **method**, `Bark()`, which causes the dog to bark by display "Woof woof!".
+In this example, the **class** `Dog` has two **fields**, `name` and `age`, which represent the name and age of a dog, respectively. The **class** also has one **method**, `Bark()`, which causes the dog to bark by displaying "Woof woof!".
 
 ## When to use a struct vs a class?
 
@@ -55,7 +55,7 @@ public Form1()
 {
     InitializeComponent();
 
-    Dog myDog = new Dog(); // Create a new object of type Dog. Alternative syntax is Dog myDog = new Dog("Max", 3);
+    Dog myDog = new Dog(); // Create a new object of type Dog
     myDog.name = "Max"; // Set the name field to "Max"
     myDog.age = 3; // Set the age field to 3
     MessageBox.Show(myDog.Bark()); // Call the Bark() method which outputs - "Woof woof!"
@@ -63,6 +63,8 @@ public Form1()
 ```
 
 This code creates a new **object** of type `Dog` named `myDog`, assigns values to its `name` and `age` **fields**, and then calls the `Bark()` **method** on the **object**.
+
+## Constructors
 
 Classes can also have **constructors**, which are special **methods** that are called when an **object** is created and can be used to initialise the **object's** state. For example:
 
@@ -92,12 +94,12 @@ public Form1()
 {
     InitializeComponent();
 
-    Dog myDog = new Dog("Max", 3); // Alternative syntax is Dog myDog = new Dog("Max", 3);
+    Dog myDog = new Dog("Max", 3); // Create object using constructor
     MessageBox.Show(myDog.Bark()); // Output: "Woof woof!"
 }
 ```
 
-This code creates a new **object** of type `Dog` named "myDog" and assigns values to its `name` and `age` **fields** via the constructor. Then it calls the `Bark()` **method** on the **object**, which causes it to bark.
+This code creates a new **object** of type `Dog` named `myDog` and assigns values to its `name` and `age` **fields** via the constructor. Then it calls the `Bark()` **method** on the **object**, which causes it to bark.
 
 If you see the following error, it means you are using an older version of **C#**.
 
@@ -105,7 +107,7 @@ If you see the following error, it means you are using an older version of **C#*
 
 ## this
 
-In the previous example, we used the `this` keyword. The `this` keyword is used to refer to the current **object** in a **class** or **struct**. For example:
+In the previous example, we used the `this` keyword. The `this` keyword is used to refer to the current **object** in a **class**. For example:
 
 ```cs
 public class Dog
@@ -220,19 +222,19 @@ public Form1()
 
 ## Scoping
 
-There are several keywords that can be used to define the scope of **variables**, **methods**, and other members of a **class** or **struct**. The most commonly used scope keywords are:
+There are several keywords that can be used to define the scope of **variables**, **methods**, and other members of a **class**. The most commonly used scope keywords are:
 
-- `public`: Members defined as public can be accessed from anywhere within the application, both inside and outside the **class** or **struct** in which they are defined.
+- `public`: Members defined as public can be accessed from anywhere within the application, both inside and outside the **class** in which they are defined.
 
-- `private`: Members defined as private can only be accessed within the **class** or **struct** in which they are defined.
+- `private`: Members defined as private can only be accessed within the **class** in which they are defined.
 
-- `protected`: Members defined as protected can be accessed within the **class** or **struct** in which they are defined and any derived **classes**.
+- `protected`: Members defined as protected can be accessed within the **class** in which they are defined and any derived **classes**.
 
 - `internal`: Members defined as internal can be accessed within the same assembly, i.e., `.exe` file in which they are defined, but not from other assemblies.
 
 - `protected internal`: Members defined as protected internal can be accessed within the same assembly in which they are defined and from derived **classes** in other assemblies.
 
-- `static`: Members defined as static are associated with the **class** or **struct** rather than with a specific instance of the **class** or **struct**. They can be accessed without creating an instance of the **class** or **struct**.
+- `static`: Members defined as static are associated with the **class** rather than with a specific instance of the **class**. They can be accessed without creating an instance of the **class**.
 
 It is also worth noting that there are other keywords, such as `abstract`, `sealed`, `override` and `virtual`, are used in the context of **inheritance** and **polymorphism** to define the behaviour of the **classes** and **methods**.
 
@@ -242,11 +244,13 @@ It is important to choose the right scope keyword depending on the intended use 
 
 Encapsulation is the process of hiding the implementation details of a class from the outside world and exposing only the necessary information and functionality through a public interface. Encapsulation is one of the fundamental principles of object-oriented programming, and it is used to promote the principles of abstraction, modularity, and information hiding.
 
-What is a real-world example?
+### Real-world Example
 
 A good example of encapsulation is a bank account. A bank account has a balance, which is a private field that can only be accessed by the bank itself. The bank provides a public interface for accessing the balance, such as a website or mobile app, which allows customers to view their balance and make transactions. The bank also provides a public interface for making deposits and withdrawals, which allows customers to add or remove money from their account.
 
 You will see below that encapsulation is achieved through access modifiers, such as `public`, `private`, and `protected`, which control the visibility and accessibility of class members (fields and methods).
+
+### Properties
 
 For example, a class can have a `private` field that holds some important data and a public property that allows the data to be accessed, like this:
 
@@ -259,9 +263,11 @@ public class BankAccount
 }
 ```
 
-In this example, the `balance` field is defined as `private`, meaning it can only be accessed within the class. On the other hand, the `Balance` property is defined as `public`, meaning it can be accessed from outside the class. It allows the class to control how the `balance` field is modified and accessed and to ensure that the data is always in a consistent state.
+In this example, the `balance` field is defined as `private`, meaning it can only be accessed within the class. On the other hand, the `Balance` property is defined as `public`, meaning it can be accessed from outside the class. This allows the class to control how the `balance` field is modified and accessed and to ensure that the data is always in a consistent state.
 
 Encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change how the `balance` field is stored, without affecting the code that accesses it through the `Balance` property.
+
+### Property Validation
 
 We can extend the `Balance` property to include some validation logic, like this:
 
@@ -295,37 +301,23 @@ public Form1()
     MessageBox.Show($"Balance: {accountOne.Balance}");
 
     BankAccount accountTwo = new BankAccount();
-    accountTwo.Balance = -1000;
-    MessageBox.Show($"Balance: {accountTwo.Balance}"); // Throws an exception
-}
-```
-
-How do I display the exception?
-
-```cs
-public Form1()
-{
-    InitializeComponent();
-
-    BankAccount accountOne = new BankAccount();
-    accountOne.Balance = 1000;
-    MessageBox.Show($"Balance: {accountOne.Balance}");
-
-    BankAccount accountTwo = new BankAccount();
     try
     {
         accountTwo.Balance = -1000;
+        MessageBox.Show($"Balance: {accountTwo.Balance}"); // This line won't execute
     }
     catch (Exception ex)
     {
-        MessageBox.Show(ex.Message);
+        MessageBox.Show(ex.Message); // Displays: "Balance cannot be negative"
     }
 }
 ```
 
 ## Class Diagram
 
-A class diagram is a type of **UML** diagram that shows the structure of a class and its relationships with other classes. It is used to visualise the design of a system and to communicate the design to other developers.
+A class diagram is a type of **UML** (Unified Modeling Language) diagram that shows the structure of a class and its relationships with other classes. It is used to visualise the design of a system and to communicate the design to other developers.
+
+### Installing Class Designer in Visual Studio
 
 The lab computers will already have the **Class Designer** tool installed. It will not be the case for your personal computer. To get started, do the following:
 
@@ -335,19 +327,19 @@ The lab computers will already have the **Class Designer** tool installed. It wi
 
 ![](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-24/resources/img/04/class-diagram-1.PNG?raw=true)
 
-4. Change to the **Individual components** tab.
+3. Change to the **Individual components** tab.
 
-5. Search for **Class Designer**.
+4. Search for **Class Designer**.
 
 ![](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-24/resources/img/04/class-diagram-2.PNG?raw=true)
 
-6. Check the **Class Designer** box.
+5. Check the **Class Designer** box.
 
 ![](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-24/resources/img/04/class-diagram-3.PNG?raw=true)
 
-7. Click on the **Modify** button. It may take a few minutes to install.
+6. Click on the **Modify** button. It may take a few minutes to install.
 
----
+### Creating a Class Diagram
 
 To create a class diagram in **Visual Studio**, do the following:
 
@@ -357,15 +349,17 @@ To create a class diagram in **Visual Studio**, do the following:
 4. Once you have created your class diagram, you can save it and close the designer.
 5. You can reopen the class diagram at any time by double-clicking on it in the **Solution Explorer**.
 
-# Formative Assessment
+# Exercises
 
-Before you start, create a new **Windows Forms Application** called **04-formative-assessment**.
+Before you start, create a new **C# Windows Forms Application** with a descriptive name.
 
-Learning to use AI tools is an important skill. While AI tools are powerful, you **must** be aware of the following:
+**Important Note About AI Tools:**
 
-- If you provide an AI tool with a prompt that is not refined enough, it may generate a not-so-useful response
-- Do not trust the AI tool's responses blindly. You **must** still use your judgement and may need to do additional research to determine if the response is correct
-- Acknowledge what AI tool you have used. In the assessment's repository **README.md** file, please include what prompt(s) you provided to the AI tool and how you used the response(s) to help you with your work
+Learning to use AI tools is valuable, but you **must** be aware of the following:
+
+- Refine your prompts to get useful responses
+- Don't trust AI responses blindly - verify and test the code
+- Acknowledge AI tool usage in your assessment's repository **README.md** file, including what prompts you used and how you applied the responses
 
 ## Task 1:
 
@@ -393,19 +387,22 @@ In this task, you will create four classes that communicate with each other.
 * The second class is called `Department` with `private` fields for `institution` of type `Institution` and `name` of type `string`.
 * The third class is called `Course` with `private` fields for `department` of type `Department`, `code` of type `string`, `name` of type `string`, `description` of type `string`, `credits` of type `int` and `fees` of type `int`.
 
-Make sure you create a constructor for each class.
+Make sure you create a constructor for each class and add public properties for all private fields.
 
 * The fourth class is called `Seeder`. This class has three `static` fields called `institutions`, `departments` and `courses`. These fields are `static` **lists** of `Institution`, `Department` and `Course` **objects** respectively. The `Seeder` class also has three `static` methods called `SeedInstitutions`, `SeedDepartments` and `SeedCourses`. These methods are used to populate the `institutions`, `departments` and `courses` lists respectively.
 
 For each of the `Seed` methods, you will need to create at least three **objects** and add them to the appropriate list. For example, the `SeedInstitutions` method will create three `Institution` **objects** and add them to the `institutions` list.
 
-Here is an `Seeder` class example to get you started:
+Here is a `Seeder` class example to get you started:
 
 ```cs
+using System.Collections.Generic;
+
 public static class Seeder
 {
     private static List<Institution> institutions = new List<Institution>();
     private static List<Department> departments = new List<Department>();
+    private static List<Course> courses = new List<Course>();
 
     public static List<Institution> SeedInstitutions()
     {
@@ -424,19 +421,34 @@ public static class Seeder
 
         return departments;
     }
+
+    public static List<Course> SeedCourses()
+    {
+        courses.Add(new Course(departments[0], "ID511001", "Programming 2", "Advanced programming concepts", 15, 3500));
+
+        // Add two more courses
+
+        return courses;
+    }
 }
 
 // Usage in Form1.cs
+using System.Collections.Generic;
 
-private static List<Institution> institutions; 
-private static List<Department> departments; 
-
-public Form1()
+public partial class Form1 : Form
 {
-    InitializeComponent();
+    private List<Institution> institutions; 
+    private List<Department> departments; 
+    private List<Course> courses;
 
-    institutions = Seeder.SeedInstitutions();
-    departments = Seeder.SeedDepartments();
+    public Form1()
+    {
+        InitializeComponent();
+
+        institutions = Seeder.SeedInstitutions();
+        departments = Seeder.SeedDepartments();
+        courses = Seeder.SeedCourses();
+    }
 }
 ```
 
@@ -464,23 +476,34 @@ public class Product
 }
 
 // Usage in Form1.cs
-private static List<Product> products; // Declare this above the the Form1() constructor
+using System.Collections.Generic;
+using System.Linq;
 
-products = new List<Product>() // Declare this inside the Form1() constructor
+public partial class Form1 : Form
 {
-    new Product("Apple", 1.99),
-    new Product("Banana", 2.99),
-    new Product("Orange", 3.99)
-};
+    private List<Product> products; // Declare this above the Form1() constructor
+
+    public Form1()
+    {
+        InitializeComponent();
+
+        products = new List<Product>() // Declare this inside the Form1() constructor
+        {
+            new Product("Apple", 1.99),
+            new Product("Banana", 2.99),
+            new Product("Orange", 3.99)
+        };
+    }
+}
 ```
 
-Write a **LINQ** query that displays the average price of all products in the **list** of `Product`  in a `Label`.
+Write a **LINQ** query that displays the average price of all products in the **list** of `Product` in a `Label`.
 
 ## Task 6:
 
 In this task, you will read data from a text file, create five `Dog` **objects** and display the `Dog` data in a `DataGridView`.
 
-Use the `Dog` **class** above.
+Use the `Dog` **class** from earlier in this document.
 
 Create a text file called `dogs.txt` with the following data:
 
@@ -492,7 +515,7 @@ Augie,6
 Dixie,9
 ```
 
-Use the `StreamReader` or `File` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to a **list**. Display the `name` and `age` for each item in the **list**. Add error handling to ensure that the application gracefully handles any issues with reading the file or parsing the data.
+Use the `StreamReader` or `File` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to a **list**. Display the `name` and `age` for each item in the **list** in a `DataGridView`. Add error handling to ensure that the application gracefully handles any issues with reading the file or parsing the data.
 
 ## Task 7:
 
@@ -500,4 +523,4 @@ Create a class diagram for two applications you have created.
 
 ## Submission
 
-Push your code to your **GitHub** repository.
+Push your completed code to your **GitHub** repository. Ensure your code is well-commented and follows proper naming conventions.

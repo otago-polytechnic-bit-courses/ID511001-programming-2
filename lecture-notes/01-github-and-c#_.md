@@ -31,7 +31,6 @@ Open up **Git Bash** or whatever alternative you see fit on your computer. Clone
 
 - <https://git-scm.com/docs/git-clone>
 
-
 ## C#
 
 **C#** is a programming language developed by **Microsoft** for building web applications, mobile applications, desktop applications and games. It is a modern, **object-oriented** language designed to be easy to use and similar in syntax to other popular programming languages such as **C++** and **Java**. **C#** is commonly used to build applications on the **Microsoft .NET Framework**, and developers can also use it to build cross-platform applications using frameworks like **Xamarin** and **.NET**.
@@ -254,7 +253,7 @@ Example - print numbers 0 to 9:
 ```cs
 for (int i = 0; i < 10; i++)
 {
-    Console.WriteLine(i); // Prints 0, 1, 2, ..., 9
+    Console.WriteLine(i); // 0, 1, 2, ..., 9
 }
 ```
 
@@ -266,13 +265,13 @@ You can also decrement or use different increment values:
 // Decrement
 for (int i = 10; i > 0; i--)
 {
-    Console.WriteLine(i); // Prints 10, 9, 8, ..., 1
+    Console.WriteLine(i); // 10, 9, 8, ..., 1
 }
 
 // Increment by 2
 for (int i = 0; i < 10; i += 2)
 {
-    Console.WriteLine(i); // Prints 0, 2, 4, 6, 8
+    Console.WriteLine(i); // 0, 2, 4, 6, 8
 }
 ```
 
@@ -304,6 +303,7 @@ Example:
 
 ```cs
 int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
 foreach (int number in numbers)
 {
     Console.WriteLine(number);
@@ -423,7 +423,6 @@ public class Person
 Person person = new Person("John", 25);
 Console.WriteLine($"{person.Name} is {person.Age} years old");
 ```
-
 
 ### Expression-Bodied Methods
 
@@ -694,6 +693,7 @@ Create a **double array** named `nums` with the values 45.3, 67.5, -45.6, 20.34,
 ## Task 2:
 
 Create a **static method** called `FizzBuzz` that takes an integer `num` as a parameter. Inside the method:
+
 - If `num` is divisible by both 3 and 5, return "FizzBuzz"
 - If `num` is divisible by 3, return "Fizz"
 - If `num` is divisible by 5, return "Buzz"
@@ -703,7 +703,8 @@ Create a for loop that starts at 1, ends at 15, and increments by 2 each iterati
 
 ## Task 3:
 
-Create an **integer array** called `nums` with the values 21, 19, 68, 55, 42, 12. 
+Create an **integer array** called `nums` with the values 21, 19, 68, 55, 42, 12.
+
 1. Iterate over the array and display only the odd numbers
 2. Sort the array from lowest to highest
 3. Display the sorted array
@@ -711,6 +712,7 @@ Create an **integer array** called `nums` with the values 21, 19, 68, 55, 42, 12
 ## Task 4:
 
 Create a **static method** called `ConvertToSeconds` that takes two parameters: `hours` and `minutes` (both integers). The method should:
+
 - Convert hours to seconds (multiply by 3600)
 - Convert minutes to seconds (multiply by 60)
 - Return the total seconds
@@ -724,13 +726,14 @@ Console.WriteLine(ConvertToSeconds(1, 15)); // Expected output: 4500
 
 ## Task 5:
 
-Create a **string variable** called `sentence` and assign it the value "The anemone, the wild violet, the hepatica, and the funny little curled-up ferns." 
+Create a **string variable** called `sentence` and assign it the value "The anemone, the wild violet, the hepatica, and the funny little curled-up ferns."
 
 Convert the string into a word array using `String.Split()` method, then use a loop to count how many times the word "the" appears (case-insensitive).
 
 ## Task 6:
 
 Create a **static method** called `IsPrime` that takes an integer `num` as a parameter. The method should:
+
 - Return `false` for numbers less than 2
 - Check if the number is divisible by any number from 2 to the square root of `num`
 - Return `true` if no divisors are found, `false` otherwise
@@ -801,6 +804,7 @@ Console.WriteLine(IsAnagram("a!b@c", "c@b!a"));                      // Expected
 Write code that reads a file called `countries.txt` containing a list of country names (one per line). Display only the countries that start with the letter 'B' or 'b'.
 
 **Requirements:**
+
 - Handle the case where the file doesn't exist
 - Use proper exception handling
 - You cannot modify the `countries.txt` file
@@ -812,6 +816,7 @@ Write code that reads a file called `countries.txt` containing a list of country
 Write code that reads a file called `computer-jokes.txt` containing computer jokes (one per line). Store the jokes in an array and randomly select one to display each time the program runs.
 
 **Requirements:**
+
 - Handle the case where the file doesn't exist
 - Use proper exception handling
 - Use `Random` class for selection

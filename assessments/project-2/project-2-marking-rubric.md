@@ -12,7 +12,7 @@
 | **Form1 Functionality (Part 4)**                   | All specified functionalities are correctly implemented.                | Some functionalities are missing or have minor issues.       | Several functionalities are incomplete or have significant issues. | Most functionalities are missing or not functional. |
 | **Additional Features (Part 5)**                   | All required additional features are correctly implemented.                | Some features are missing or have minor issues.       | Several features are incomplete or have significant issues. | Most features are missing or not functional. |
 
-### Code Quality and Best Practices - 40%
+### Code Quality and Best Practices - Learning Outcome 2 (40%)
 
 | **Criteria**           | **5-4**                                                                              | **3.5**                                      | **3-2.5**                                          | **2-0**                                     |
 | ---------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------------------------------------- | ------------------------------------------- |
@@ -25,13 +25,13 @@
 | **Code Formatting**             | Code is consistently and appropriately formatted.                                         | Minor inconsistencies in code formatting.                         | Significant inconsistencies in code formatting.                         | Poor or non-consistent code formatting.                     |
 | **Performance and Scalability** | Efficient performance and scalability approach is demonstrated.                           | Minor inefficiencies in the performance and scalability approach. | Significant inefficiencies in the performance and scalability approach. | Poor or non-efficient performance and scalability approach. |
 
-### Class Diagram - 2.5%
+### Class Diagram - Learning Outcome 2 (2.5%)
 
 | **Criteria**                                   | **2.5**                                                                                                                                                                                | **2**                                                                                                             | **1.5**                                                                                                      | **1-0**                                                                                                          |
 | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | **Class Diagram**             | A clear and accurate class diagram of the applications.                                                                                                             | Minor issues or inaccuracies in the class diagram.                                                                  | Significant issues or inaccuracies in the class diagram.                                                       | Class diagram is missing or unclear.                                                                             |
 
-### Git Commit Messages - 2.5%
+### Version Control - Learning Outcome 2 (2.5%)
 
 | **Criteria**                                   | **2.5**                                                                                                                                                                                | **2**                                                                                                             | **1.5**                                                                                                      | **1-0**                                                                                                          |
 | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |

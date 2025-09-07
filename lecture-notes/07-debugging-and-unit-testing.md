@@ -1,0 +1,181 @@
+# 07: Debugging and Unit Testing
+
+## Debugging
+
+Debugging is the process of identifying and resolving errors (also called bugs) in your code. When you write code, it is not uncommon to make mistakes, such as syntax errors, logical errors, or runtime errors. Debugging is the process of finding and fixing these errors so that your code runs correctly.
+
+There are several techniques and tools that can be used for debugging code, including:
+
+- Using the **Visual Studio Debugger**: **Visual Studio** provides a built-in debugger that allows you to step through your code line by line, set breakpoints, view the values of variables, and more.
+- Using the **Console**: You can use the `Console` class to print out the values of variables and other information to the console while your application is running. This can help you to understand what your code is doing and to identify errors.
+- Using the **Immediate Window**: The **Immediate Window** allows you to execute code and check the values of variables while your application is in break mode.
+- Using the **Watch Window**: The **Watch Window** allows you to see the value of a variable or an expression while your application is running.
+- Using the **Call Stack Window**: The **Call Stack Window** allows you to see the sequence of method calls that led to the current point in the execution of your application.
+- Using the **Output Window**: The **Output Window** allows you to see the debug messages that you write to the console.
+
+When you find an error in your code, you can use these tools and techniques to understand what is causing the error, and to fix it. Once you have fixed the error, you can then test your code again to make sure that it works correctly.
+
+Debugging is an important part of the development process and it can save a lot of time and effort by identifying and resolving errors early on.
+
+## Unit Testing
+
+Unit testing is the process of testing individual units of code, such as methods or classes, in isolation from the rest of the application. The goal of unit testing is to ensure that each unit of code behaves correctly and that it meets the requirements specified for it. Unit tests are usually automated, which means that they can be run automatically and repeatedly without human intervention.
+
+Unit tests are typically written using a unit testing framework, such as **Unit Test Project (.NET Framework)**, **MSTest**, **xUnit**, or **NUnit**, which provides a set of tools and libraries for creating, running, and managing unit tests. The tests are usually written using a test-driven development (TDD) approach, where the tests are written before the actual implementation of the code.
+
+Here's an example of a simple unit test using **Unit Test Project (.NET Framework)**:
+
+```cs
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace CalculatorTests
+{
+    [TestClass]
+    public class CalcTests
+    {
+        [TestMethod]
+        public void AddShouldReturnCorrectSum()
+        {
+            Calc calculator = new Calc();
+            double firstNum = 2.0;
+            double secondNum = 3.0;
+            double expected = 5.0;
+            double actual = calculator.Add(firstNum, secondNum);
+            Assert.AreEqual(expected, actual);
+        }
+    }
+}
+```
+
+In this example, the test class `CalcTests` has one test method `AddShouldReturnCorrectSum()`. This method uses the `Assert.AreEqual()` method to check that the result of the `Add()` method of the `Calculator` class is equal to the expected value. The test method is decorated with the `[TestMethod]` attribute, which tells the unit testing framework that this method is a test.
+
+When the test is run, the unit testing framework will execute the `AddShouldReturnCorrectSum()` method and check the assertion. If the assertion passes, the test is considered to have passed. If the assertion fails, the test is considered to have failed and the framework will provide a detailed error message.
+
+Unit testing is an important practice in software development, as it helps to ensure that the code is working correctly, it helps to detect and fix bugs early, and it allows for more confident and safe changes and refactoring of the code. It also helps to increase the quality and maintainability of the code.
+
+Let us look at how to create a test class. Open the `Calculator` project in **Visual Studio**. Right-click on `Solution 'Calculator'` in the **Solution Explorer**. Click on **Add** then **New Project...**. You will be presented with a **Add a new project** window. Choose the **Unit Test Project (.NET Framework)** template, name it `CalculatorTests` and set the framework to `.NET Framework 4.8.1`. Once you have created the project, you will see the following:
+
+```cs
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace CalculatorTests
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void TestMethod1()
+        {
+        }
+    }
+}
+```
+
+Rename the `UnitTest1.cs` file to `CalcTests.cs` and add the code from the `CalcTests` example above. **Note:** Do not remove any `using` directives. You will need to add a project reference to `CalculatorTests`. Without this, you will not be able to access the `Calc` class. To do this, right-click on `CalculatorTests`. Click on **Add** then **Reference*...*. You will be presented with a **Reference Manager\*\* window. Check `Calculator`. Add the following `using` directive - `using Calculator;` below `using Microsoft.VisualStudio.TestTools.UnitTesting;`. Now you should have access to the `Calc` class. To run `CalculatorTests`, press the <kbd>ctrl</kbd> + <kbd>r</kbd> + <kbd>t</kbd>.
+
+# Exercises
+
+Learning to use AI tools is an important skill. While AI tools are powerful, you **must** be aware of the following:
+
+- If you provide an AI tool with a prompt that is not refined enough, it may generate a not-so-useful response
+- Do not trust the AI tool's responses blindly. You **must** still use your judgement and may need to do additional research to determine if the response is correct
+- Acknowledge what AI tool you have used. In the assessment's repository **README.md** file, please include what prompt(s) you provided to the AI tool and how you used the response(s) to help you with your work
+
+## Task 1:
+
+Given the following code:
+
+```cs
+class Program {
+    static void Main(string[] args) {
+        string name = "Alex";
+        string message = $"Hello, my name is {Name}!";
+        Console.WriteLine(mesage);
+    }
+}
+```
+
+Identify and fix the errors in the code.
+
+## Task 2:
+
+Given the following code:
+
+```cs
+class Program {
+    static void Main(string[] args) {
+        int[] nums = { 1, 2, 3 };
+        for (int i = 0; i <= nums.Length; i++) {
+            Console.WriteLine(nums[j]);
+        }
+    }
+}
+```
+
+Identify and fix the errors in the code.
+
+## Task 3:
+
+Given the following code:
+
+```cs
+class Program {
+    static void Main(string[] args) {
+        int result = AddNumbers(5);
+        Console.WriteLine("Result: " + result);
+    }
+
+    static int AddNumbers(int a, int b) {
+        return a + b;
+    }
+}
+```
+
+Identify and fix the errors in the code.
+
+## Task 4:
+
+Given the following code:
+
+```cs
+public class GameManager
+{
+    private Random random;
+    private Graphics graphics;
+
+    public GameManager(Random random, Graphics graphics)
+    {
+        this.random = random;
+        this.graphics = graphics;
+    }
+}
+
+public class Form1 : Form
+{
+    private Random random;
+    private Graphics graphics;
+    private GameManager gameManager;
+
+    public Form1()
+    {
+        random = new Random();
+        gameManager = new GameManager(graphics, random);
+        InitializeComponent();
+        graphics = CreateGraphics();
+    }
+}
+```
+
+Identify and fix the errors in the code.
+
+## Task 5:
+
+## Task 6:
+
+## Task 7:
+
+## Task 8:
+
+## Submission
+
+Push your completed code to your **GitHub** repository. Ensure your code is well-commented and follows proper naming conventions.

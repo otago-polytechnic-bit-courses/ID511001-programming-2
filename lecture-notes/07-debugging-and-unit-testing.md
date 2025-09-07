@@ -43,17 +43,28 @@ namespace CalculatorTests
             double actual = calculator.Add(firstNum, secondNum);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void AddShouldReturnIncorrectSum()
+        {
+            Calc calculator = new Calc();
+            double firstNum = 2.0;
+            double secondNum = 3.0;
+            double expected = 6.0;
+            double actual = calculator.Add(firstNum, secondNum);
+            Assert.AreNotEqual(expected, actual);
+        }
     }
 }
 ```
 
-In this example, the test class `CalcTests` has one test method `AddShouldReturnCorrectSum()`. This method uses the `Assert.AreEqual()` method to check that the result of the `Add()` method of the `Calculator` class is equal to the expected value. The test method is decorated with the `[TestMethod]` attribute, which tells the unit testing framework that this method is a test.
+In this example, the test class `CalcTests` has two test methods: `AddShouldReturnCorrectSum()` and `AddShouldReturnIncorrectSum()`. The first method uses the `Assert.AreEqual()` method to check that the result of the `Add()` method of the `Calculator` class is equal to the expected value. The second method uses the `Assert.AreNotEqual()` method to check that the result of the `Add()` method is not equal to the expected value. Both test methods are decorated with the `[TestMethod]` attribute, which tells the unit testing framework that these methods are tests.
 
-When the test is run, the unit testing framework will execute the `AddShouldReturnCorrectSum()` method and check the assertion. If the assertion passes, the test is considered to have passed. If the assertion fails, the test is considered to have failed and the framework will provide a detailed error message.
+When the tests are run, the unit testing framework will execute both test methods and check the assertions. If the assertions pass, the tests are considered to have passed. If any assertion fails, the corresponding test is considered to have failed and the framework will provide a detailed error message.
 
 Unit testing is an important practice in software development, as it helps to ensure that the code is working correctly, it helps to detect and fix bugs early, and it allows for more confident and safe changes and refactoring of the code. It also helps to increase the quality and maintainability of the code.
 
-Let us look at how to create a test class. Open the `Calculator` project in **Visual Studio**. Right-click on `Solution 'Calculator'` in the **Solution Explorer**. Click on **Add** then **New Project...**. You will be presented with a **Add a new project** window. Choose the **Unit Test Project (.NET Framework)** template, name it `CalculatorTests` and set the framework to `.NET Framework 4.8.1`. Once you have created the project, you will see the following:
+Let us look at how to create a test class. Assume you have a **Windows Forms Application** project called `Calculator` open in **Visual Studio**. Right-click on `Solution 'Calculator'` in the **Solution Explorer**. Click on **Add** then **New Project...**. You will be presented with a **Add a new project** window. Choose the **Unit Test Project (.NET Framework)** template, name it `CalculatorTests` and set the framework to `.NET Framework 4.8.1`. Once you have created the project, you will see the following:
 
 ```cs
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -169,6 +180,8 @@ public class Form1 : Form
 Identify and fix the errors in the code.
 
 ## Task 5:
+
+In the `lecture-notes` directory, you have been given a **Windows Forms Application** project called `Calculator`. Create a new **Unit Test Project (.NET Framework)** project in the same solution called `CalculatorTests`. Write unit tests for the `Add`, `Subtract`, `Multiply`, and `Divide` methods in the `Calc` class. Ensure that you test for both valid and invalid inputs (e.g., division by zero).
 
 ## Task 6:
 

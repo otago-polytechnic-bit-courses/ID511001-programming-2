@@ -26,34 +26,37 @@ Unit tests are typically written using a unit testing framework, such as **Unit 
 Here's an example of a simple unit test using **Unit Test Project (.NET Framework)**:
 
 ```cs
+using Calculator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CalculatorTests
 {
-    private Calc calculator;
-
-    [TestInitialize]
-    public void Setup()
-    {
-        calculator = new Calc();
-    }
-
-    [TestCleanup]
-    public void Teardown()
-    {
-        calculator = null;
-    }
-
     [TestClass]
-    public class CalcTests
+    public class OperationsTests
     {
+        private Operations operations;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            operations = new Operations();
+        }
+
+        [TestCleanup]
+        public void Teardown()
+        {
+            operations = null;
+        }
+
         [TestMethod]
         public void AddShouldReturnCorrectSum()
         {
             double firstNum = 2.0;
             double secondNum = 3.0;
             double expected = 5.0;
-            double actual = calculator.Add(firstNum, secondNum);
+
+            double actual = operations.Add(firstNum, secondNum);
+
             Assert.AreEqual(expected, actual);
         }
 
@@ -63,7 +66,9 @@ namespace CalculatorTests
             double firstNum = 2.0;
             double secondNum = 3.0;
             double expected = 6.0;
-            double actual = calculator.Add(firstNum, secondNum);
+
+            double actual = operations.Add(firstNum, secondNum);
+
             Assert.AreNotEqual(expected, actual);
         }
     }
@@ -72,17 +77,17 @@ namespace CalculatorTests
 
 What is happening in the code above?
 
-- The code defines a unit test class `CalcTests` for testing the `Calc` class.
-- The `Setup()` method is decorated with the `[TestInitialize]` attribute, which means it will be run before each test method. It creates a new instance of the `Calc` class.
-- The `Teardown()` method is decorated with the `[TestCleanup]` attribute, which means it will be run after each test method. It sets the `calculator` instance to `null`.
-- The `AddShouldReturnCorrectSum()` method is decorated with the `[TestMethod]` attribute, which means it is a test method. It tests the `Add()` method of the `Calc` class by providing two numbers, `2.0` and `3.0`, and checking that the result is equal to `5.0` using the `Assert.AreEqual()` method.
-- The `AddShouldReturnIncorrectSum()` method is also decorated with the `[TestMethod]` attribute. It tests the `Add()` method of the `Calc` class by providing two numbers, `2.0` and `3.0`, and checking that the result is not equal to `6.0` using the `Assert.AreNotEqual()` method.        
+- The code defines a unit test class `OperationsTests` for testing the `Operations` class.
+- The `Setup()` method is decorated with the `[TestInitialize]` attribute, which means it will be run before each test method. It creates a new instance of the `Operations` class.
+- The `Teardown()` method is decorated with the `[TestCleanup]` attribute, which means it will be run after each test method. It sets the `operations` instance to `null`.
+- The `AddShouldReturnCorrectSum()` method is decorated with the `[TestMethod]` attribute, which means it is a test method. It tests the `Add()` method of the `Operations` class by providing two numbers, `2.0` and `3.0`, and checking that the result is equal to `5.0` using the `Assert.AreEqual()` method.
+- The `AddShouldReturnIncorrectSum()` method is also decorated with the `[TestMethod]` attribute. It tests the `Add()` method of the `Operations` class by providing two numbers, `2.0` and `3.0`, and checking that the result is not equal to `6.0` using the `Assert.AreNotEqual()` method.        
 
 When the tests are run, the unit testing framework will execute both test methods and check the assertions. If the assertions pass, the tests are considered to have passed. If any assertion fails, the corresponding test is considered to have failed and the framework will provide a detailed error message.
 
 Unit testing is an important practice in software development, as it helps to ensure that the code is working correctly, it helps to detect and fix bugs early, and it allows for more confident and safe changes and refactoring of the code. It also helps to increase the quality and maintainability of the code.
 
-Let us look at how to create a test class. Assume you have a **Windows Forms Application** project called `Calculator` open in **Visual Studio**. Right-click on `Solution 'Calculator'` in the **Solution Explorer**. Click on **Add** then **New Project...**. You will be presented with a **Add a new project** window. Choose the **Unit Test Project (.NET Framework)** template, name it `CalculatorTests` and set the framework to `.NET Framework 4.8.1`. Once you have created the project, you will see the following:
+Let us look at how to create a test class. Assume you have a **Windows Forms Application** project called `Calculator` open in **Visual Studio**. Right-click on `Solution 'Calculator'` in the **Solution Explorer**. Click on **Add** then **New Project...**. You will be presented with a **Add a new project** window. Choose the **Unit Test Project (.NET Framework)** template, name it `CalculatorTests` and set the framework to `.NET Framework 4.8`. Once you have created the project, you will see the following:
 
 ```cs
 using Microsoft.VisualStudio.TestTools.UnitTesting;

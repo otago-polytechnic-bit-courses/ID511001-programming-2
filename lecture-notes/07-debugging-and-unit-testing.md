@@ -115,7 +115,7 @@ Learning to use AI tools is an important skill. While AI tools are powerful, you
 Given the following code:
 
 ```cs
-class Program {
+public class Program {
     static void Main(string[] args) {
         string name = "Alex";
         string message = $"Hello, my name is {Name}!";
@@ -131,9 +131,9 @@ Identify and fix the errors in the code.
 Given the following code:
 
 ```cs
-class Program {
+public class Program {
     static void Main(string[] args) {
-        int[] nums = { 1, 2, 3 };
+        int[] nums = { 1, 2, 3 }
         for (int i = 0; i <= nums.Length; i++) {
             Console.WriteLine(nums[j]);
         }
@@ -148,13 +148,13 @@ Identify and fix the errors in the code.
 Given the following code:
 
 ```cs
-class Program {
+public class Program {
     static void Main(string[] args) {
-        int result = AddNumbers(5);
-        Console.WriteLine("Result: " + result);
+        int result = addNumbers(5);
+        Console.WriteLine($"Result: {result}");
     }
 
-    static int AddNumbers(int a, int b) {
+    int AddNumbers(int a, string b) {
         return a + b;
     }
 }
@@ -174,7 +174,6 @@ public class GameManager
 
     public GameManager(Random random, Graphics graphics)
     {
-        this.random = random;
         this.graphics = graphics;
     }
 }
@@ -185,9 +184,8 @@ public class Form1 : Form
     private Graphics graphics;
     private GameManager gameManager;
 
-    public Form1()
+    public Form2()
     {
-        random = new Random();
         gameManager = new GameManager(graphics, random);
         InitializeComponent();
         graphics = CreateGraphics();

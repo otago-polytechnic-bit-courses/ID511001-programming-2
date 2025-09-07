@@ -148,7 +148,7 @@ Identify and fix the errors in the code.
 Given the following code:
 
 ```cs
-public class Program {
+public class Program 
     static void Main(string[] args) {
         int result = addNumbers(5);
         Console.WriteLine($"Result: {result}");

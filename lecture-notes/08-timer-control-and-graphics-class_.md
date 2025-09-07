@@ -51,7 +51,7 @@ private void Form1_Paint(object sender, PaintEventArgs e)
 
 # Exercises
 
-Before you start, create a new **Windows Forms Application** application called **08-A NAME THAT MAKES SENSE TO YOU**.
+Before you start, create a new **C# Windows Form Application** application with a descriptive name.
 
 Learning to use AI tools is an important skill. While AI tools are powerful, you **must** be aware of the following:
 

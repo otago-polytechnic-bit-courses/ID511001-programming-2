@@ -204,10 +204,10 @@ Identify and fix the errors in the code.
 
 In the `lecture-notes` directory, you have been given a **Windows Forms Application** project called `Calculator`. Create a new **Unit Test Project (.NET Framework)** project in the same solution called `CalculatorTests`. Write unit tests to:
 
-- Check the `Add` method in the `Calc` class correctly returns the sum of two numbers.
-- Check the `Subtract` method in the `Calc` class correctly returns the difference of two numbers.
-- Check the `Multiply` method in the `Calc` class correctly returns the product of two numbers.
-- Check the `Divide` method in the `Calc` class correctly returns the quotient of two numbers, including invalid input (e.g., division by zero).
+- Check the `Add` method in the `Operations` class correctly returns the sum of two numbers.
+- Check the `Subtract` method in the `Operations` class correctly returns the difference of two numbers.
+- Check the `Multiply` method in the `Operations` class correctly returns the product of two numbers.
+- Check the `Divide` method in the `Operations` class correctly returns the quotient of two numbers, including invalid input (e.g., division by zero).
 
 ## Task 6:
 

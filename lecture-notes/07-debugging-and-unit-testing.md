@@ -30,13 +30,26 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CalculatorTests
 {
+    private Calc calculator;
+
+    [TestInitialize]
+    public void Setup()
+    {
+        calculator = new Calc();
+    }
+
+    [TestCleanup]
+    public void Teardown()
+    {
+        calculator = null;
+    }
+
     [TestClass]
     public class CalcTests
     {
         [TestMethod]
         public void AddShouldReturnCorrectSum()
         {
-            Calc calculator = new Calc();
             double firstNum = 2.0;
             double secondNum = 3.0;
             double expected = 5.0;
@@ -47,7 +60,6 @@ namespace CalculatorTests
         [TestMethod]
         public void AddShouldReturnIncorrectSum()
         {
-            Calc calculator = new Calc();
             double firstNum = 2.0;
             double secondNum = 3.0;
             double expected = 6.0;
@@ -58,7 +70,13 @@ namespace CalculatorTests
 }
 ```
 
-In this example, the test class `CalcTests` has two test methods: `AddShouldReturnCorrectSum()` and `AddShouldReturnIncorrectSum()`. The first method uses the `Assert.AreEqual()` method to check that the result of the `Add()` method of the `Calculator` class is equal to the expected value. The second method uses the `Assert.AreNotEqual()` method to check that the result of the `Add()` method is not equal to the expected value. Both test methods are decorated with the `[TestMethod]` attribute, which tells the unit testing framework that these methods are tests.
+What is happening in the code above?
+
+- The code defines a unit test class `CalcTests` for testing the `Calc` class.
+- The `Setup()` method is decorated with the `[TestInitialize]` attribute, which means it will be run before each test method. It creates a new instance of the `Calc` class.
+- The `Teardown()` method is decorated with the `[TestCleanup]` attribute, which means it will be run after each test method. It sets the `calculator` instance to `null`.
+- The `AddShouldReturnCorrectSum()` method is decorated with the `[TestMethod]` attribute, which means it is a test method. It tests the `Add()` method of the `Calc` class by providing two numbers, `2.0` and `3.0`, and checking that the result is equal to `5.0` using the `Assert.AreEqual()` method.
+- The `AddShouldReturnIncorrectSum()` method is also decorated with the `[TestMethod]` attribute. It tests the `Add()` method of the `Calc` class by providing two numbers, `2.0` and `3.0`, and checking that the result is not equal to `6.0` using the `Assert.AreNotEqual()` method.        
 
 When the tests are run, the unit testing framework will execute both test methods and check the assertions. If the assertions pass, the tests are considered to have passed. If any assertion fails, the corresponding test is considered to have failed and the framework will provide a detailed error message.
 
@@ -181,13 +199,21 @@ Identify and fix the errors in the code.
 
 ## Task 5:
 
-In the `lecture-notes` directory, you have been given a **Windows Forms Application** project called `Calculator`. Create a new **Unit Test Project (.NET Framework)** project in the same solution called `CalculatorTests`. Write unit tests for the `Add`, `Subtract`, `Multiply`, and `Divide` methods in the `Calc` class. Ensure that you test for both valid and invalid inputs (e.g., division by zero).
+In the `lecture-notes` directory, you have been given a **Windows Forms Application** project called `Calculator`. Create a new **Unit Test Project (.NET Framework)** project in the same solution called `CalculatorTests`. Write unit tests to:
+
+- Check the `Add` method in the `Calc` class correctly returns the sum of two numbers.
+- Check the `Subtract` method in the `Calc` class correctly returns the difference of two numbers.
+- Check the `Multiply` method in the `Calc` class correctly returns the product of two numbers.
+- Check the `Divide` method in the `Calc` class correctly returns the quotient of two numbers, including invalid input (e.g., division by zero).
 
 ## Task 6:
 
-## Task 7:
+In the `lecture-notes` directory, you have been given a **Windows Forms Application** project called `LibraryManagementSystem`. Create a new **Unit Test Project (.NET Framework)** project in the same solution called `LibraryTests`. Write unit tests to: 
 
-## Task 8:
+- Check there are three `Book` objects in `List<Book> books` after being seeded.
+- Check there are three `Member` objects in `List<Member> members` after being seeded.
+- Check if the `GetLoanDuration` method in the `Loan` class returns the correct number of days between the loan start date and return date.
+- Check if the `GetFullName` method in the `Member` class returns the correct full name.
 
 ## Submission
 

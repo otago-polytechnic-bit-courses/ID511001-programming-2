@@ -12,11 +12,11 @@ By default, **GitHub Classroom** creates an empty repository. Firstly, you must 
 
 ## Create a README
 
-Click on the **Add file** button, then the **Create new file** button. Name your file `README.md` (Markdown), then click on the **Commit new file** button. You should see a new file in your formative assessments repository called `README.md` and the `main` branch.
+Click on the **Add file** button, then the **Create new file** button. Name your file `README.md` (Markdown), then click on the **Commit new file** button. You should see a new file in your repository called `README.md` and the `main` branch.
 
 ## Create a .gitignore File
 
-Like before, click on the **Add file** button and then the **Create new file** button. Name your file `.gitignore`. A `.gitignore` template dropdown will appear on the right-hand side of the screen. Select the **Visual Studio** `.gitignore` template. Click on the **Commit new file** button. You should see a new file in your formative assessments repository called `.gitignore`.
+Like before, click on the **Add file** button and then the **Create new file** button. Name your file `.gitignore`. A `.gitignore` template dropdown will appear on the right-hand side of the screen. Select the **Visual Studio** `.gitignore` template. Click on the **Commit new file** button. You should see a new file in your repository called `.gitignore`.
 
 **Resources:**
 
@@ -25,7 +25,7 @@ Like before, click on the **Add file** button and then the **Create new file** b
 
 ## Clone a Repository
 
-Open up **Git Bash** or whatever alternative you see fit on your computer. Clone your formative assessments repository to a location on your computer using the command: `git clone <repository URL>`.
+Open up **Git Bash** or whatever alternative you see fit on your computer. Clone your repository to a location on your computer using the command: `git clone <repository URL>`.
 
 **Resource:**
 

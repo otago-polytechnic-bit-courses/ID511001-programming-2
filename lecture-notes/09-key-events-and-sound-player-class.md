@@ -196,4 +196,4 @@ soundPlayer.Stop();
 
 # Exercises
 
-No formative assessment provided in this topic.
+No exercises provided in this topic.

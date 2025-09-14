@@ -125,6 +125,7 @@ public class Program {
         string name = "Alex";
         string message = $"Hello, my name is {Name}!";
         Console.WriteLine(mesage);
+        Console.ReadLine();
     }
 }
 ```
@@ -141,6 +142,7 @@ public class Program {
         int[] nums = { 1, 2, 3 }
         for (int i = 0; i <= nums.Length; i++) {
             Console.WriteLine(nums[j]);
+            Console.ReadLine();
         }
     }
 }
@@ -157,6 +159,7 @@ public class Program
     static void Main(string[] args) {
         int result = addNumbers(5);
         Console.WriteLine($"Result: {result}");
+        Console.ReadLine();
     }
 
     int AddNumbers(int a, string b) {

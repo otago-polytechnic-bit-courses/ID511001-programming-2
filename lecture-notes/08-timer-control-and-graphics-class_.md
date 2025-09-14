@@ -6,6 +6,72 @@ The `Timer` controls provides a way to execute code at specified intervals. It i
 
 To use the `Timer` control, you must first drag it from the toolbox onto the form. Once you have done this, you can set properties such as `Interval` and `Enabled`. The `Timer` control exposes several events. The most commonly used event is the `Tick` event. This event is raised each time the `Interval` elapses.
 
+Here are some examples of how to use the `Timer` control:
+
+1. Place a `Timer` control on the form.
+2. Set the `Interval` property to `1000` (1 second).
+3. Set the `Enabled` property to `false`.
+4. Place a `Button` control on the form and set its `Text` property to "Start Timer".
+5. Place a `Label` control on the form and set its `Text` property to "Timer not started".
+6. Double-click the `Button` control to create a `button1_Click` event handler. In the `button1_Click` method, add the following code:
+
+```csharp
+private void button1_Click(object sender, EventArgs e)
+{
+    timer1.Enabled = true;
+    label1.Text = "Timer started";
+}
+```
+
+7. Double-click the `Timer` control to create a `timer1_Tick` event handler. In the `timer1_Tick` method, add the following code:
+
+```csharp
+private void timer1_Tick(object sender, EventArgs e)
+{
+    label1.Text = DateTime.Now.ToString("hh:mm:ss tt");
+}
+``` 
+
+When you run the application and click the "Start Timer" button, the label will update every second with the current time.  
+
+Here is a more complex example that uses the `Timer` control to move a `PictureBox` control across the form:
+
+1. Place a `PictureBox` control on the form and set its `Image` property to an image of your choice.
+2. Place a `Button` control on the form and set its `Text` property to "Start Moving".
+3. Double-click the `Button` control to create a `button1_Click` event handler. In the `button1_Click` method, add the following code:
+
+```csharp
+private void button1_Click(object sender, EventArgs e)
+{
+    timer1.Enabled = true;
+}
+```
+
+```csharp
+private void button1_Click(object sender, EventArgs e)
+{
+    timer1.Enabled = true;
+}
+```
+
+4. Double-click the `Timer` control to create a `timer1_Tick` event handler. In the `timer1_Tick` method, add the following code:
+
+```csharp
+private void timer1_Tick(object sender, EventArgs e)
+{
+    pictureBox1.Left += 5;
+    if (pictureBox1.Right > ClientSize.Width)
+    {
+        pictureBox1.Left = 0;
+    }
+}
+```
+
+> **Note:** The `ClientSize` property gets or sets the height and width of the client area of the form. The client area is the area inside the form's borders and title bar.
+
+When you run the application and click the "Start Moving" button, the `PictureBox` will move 5 pixels to the right every time the `Tick` event is raised. When it reaches the right edge of the form, it will reset to the left edge.
+
+
 ## Graphics Class
 
 The `Graphics` class provides methods for drawing shapes, text, images and other objects onto the form.

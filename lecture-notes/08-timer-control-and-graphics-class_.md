@@ -160,9 +160,7 @@ pictureBox1.Top += 10;
 ## Task 2:
 
 1. Create a new project.
-2. On the form, draw a green cross, a red rectangle with a black border a yellow ellipse with a blue shadowing ellipse and the slogan "Hi there!" as shown below.
-
-![](../resources/img/08/02-image.png)
+2. On the form, draw a green cross, a red rectangle with a black border and the text "Hello, World!" in blue italics.
 
 ## Task 3:
 

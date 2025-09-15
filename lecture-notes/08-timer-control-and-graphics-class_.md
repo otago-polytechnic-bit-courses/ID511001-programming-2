@@ -93,6 +93,8 @@ public Form1()
 }
 ```
 
+The `CreateGraphics` method creates a `Graphics` object that can be used to draw on the form.
+
 Create a new `Form` event called `Paint`. In the `Form1_Paint` method, add the following:
 
 ```csharp
@@ -114,6 +116,14 @@ private void Form1_Paint(object sender, PaintEventArgs e)
     graphics.DrawString("Hello, World!", font, Brushes.SkyBlue, new Point(20, 45));
 }
 ```
+
+Let us have a look at some of the methods used above:
+- `DrawLine`: Draws a line between two points. It takes in a `Pen` object and two `Point` objects. A `Point` object represents an (x, y) coordinate pair in two-dimensional space.
+- `DrawRectangle`: Draws a rectangle. It takes in a `Pen` object and a `Rectangle` object. A `Rectangle` object represents a rectangular area defined by its position (x, y) and size (width, height).
+- `FillRectangle`: Fills a rectangle with a colour. It takes in a `Brush` object and a `Rectangle` object.
+- `DrawString`: Draws text. It takes in a string, a `Font` object, a `Brush` object and a `Point` object.
+
+Note: There are some methods to draw and fill other shapes such as `DrawEllipse`, `FillEllipse`, `DrawPolygon` and `FillPolygon`.
 
 # Exercises
 

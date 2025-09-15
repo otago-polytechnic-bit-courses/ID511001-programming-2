@@ -106,6 +106,9 @@ private void Form1_Paint(object sender, PaintEventArgs e)
     // Draw a rectangle
     graphics.DrawRectangle(Pens.Blue, new Rectangle(10, 20, 100, 50));
 
+    // Alternative way to draw a rectangle
+    graphics.DrawRectangle(Pens.Blue, 10, 20, 100, 50);
+
     // Fill a rectangle with a colour
     graphics.FillRectangle(Brushes.Red, new Rectangle(10, 20, 100, 50));
 
@@ -119,7 +122,7 @@ private void Form1_Paint(object sender, PaintEventArgs e)
 
 Let us have a look at some of the methods used above:
 - `DrawLine`: Draws a line between two points. It takes in a `Pen` object and two `Point` objects. A `Point` object represents an (x, y) coordinate pair in two-dimensional space.
-- `DrawRectangle`: Draws a rectangle. It takes in a `Pen` object and a `Rectangle` object. A `Rectangle` object represents a rectangular area defined by its position (x, y) and size (width, height).
+- `DrawRectangle`: Draws a rectangle. It takes in a `Pen` object and a `Rectangle` object. A `Rectangle` object represents a rectangular area defined by its position (x, y) and size (width, height). An alternative way to draw a rectangle is to provide the x, y, width and height as separate parameters.
 - `FillRectangle`: Fills a rectangle with a colour. It takes in a `Brush` object and a `Rectangle` object.
 - `DrawString`: Draws text. It takes in a string, a `Font` object, a `Brush` object and a `Point` object.
 

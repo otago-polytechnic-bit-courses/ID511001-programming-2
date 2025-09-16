@@ -24,6 +24,8 @@ Look familiar?
 
 ## Class
 
+To create a class file, right-click on the project in the **Solution Explorer** and select **Add > Class...**. Name the class and click **Add**. By default, the **access modifier** is set to `internal`. Change it to `public`.
+
 So what is the difference? A **class** is a blueprint for creating **objects** (a particular data structure), providing initial values for state (member **variables** or **fields**), and implementations of behaviour (member functions or **methods**). A **class** can be defined using the `class` keyword, followed by the **class** name.
 
 Here is an example of a simple **class**:

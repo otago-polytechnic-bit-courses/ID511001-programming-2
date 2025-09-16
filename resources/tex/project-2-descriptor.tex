@@ -100,18 +100,16 @@ You will need to submit applications and documentation that meet the following r
 \subsection*{Functionality - Learning Outcome 1 (55\%)}
 
 \subsubsection*{Part 1 (10\%)}
-
 \begin{itemize}
-    \item \textbf{Institution.cs}. This class should have information such as name, region and country.
-    \item \textbf{Department.cs}. This class should have information such as institution and name. \textbf{Note:} The institution field should be of type \textbf{Institution}.
-    \item \textbf{Course.cs}. This class should have information such as department, code, name, description, credits and fees. \textbf{Note:} The department field should be of type \textbf{Department}.
-    \item \textbf{Seeder.cs}. This class should have three methods to seed the lists of \textbf{Institution}, \textbf{Department} and \textbf{Course} objects. Each list should contain at least three objects. 
+    \item \textbf{Institution.cs}. This \textbf{public} class should have information such as name, region and country.
+    \item \textbf{Department.cs}. This \textbf{public} class should have information such as institution and name. \textbf{Note:} The institution field should be of type \textbf{Institution}.
+    \item \textbf{Course.cs}. This \textbf{public} class should have information such as department, code, name, description, credits and fees. \textbf{Note:} The department field should be of type \textbf{Department}.
+    \item \textbf{Seeder.cs}. This \textbf{public} class should have three methods to seed the lists of \textbf{Institution}, \textbf{Department} and \textbf{Course} objects. Each list should contain at least three objects. 
 \end{itemize}
 
 \subsubsection*{Part 2 (10\%)}
-
 \begin{itemize}
-    \item \textbf{CourseAssessmentMark.cs}. This class should have information such as course and assessment marks. The assessment marks should be a list of integers. This class should also have methods to get all marks, all grades, highest marks, lowest marks, fail marks, average mark and average grade. 
+    \item \textbf{CourseAssessmentMark.cs}. This \textbf{public} class should have information such as course and assessment marks. The assessment marks should be a list of integers. This class should also have methods to get all marks, all grades, highest marks, lowest marks, fail marks, average mark and average grade. 
 \end{itemize}
 
 For more information on how to calculate the highest, lowest and fail marks, refer to the \textbf{grade table} in the \textbf{Additional Information} section below.
@@ -139,13 +137,13 @@ public enum ESalary
     PROFESSOR_SALARY = 145000
 }
     \end{verbatim}
-    \item \textbf{Person.cs}. This class should have information such as id, first name and last name. 
-    \item \textbf{Learner.cs}. This class should inherit from \textbf{Person} and have an additional field for course assessment marks. This field should be of type \textbf{CourseAssessmentMark}.
-    \item \textbf{Lecturer.cs}. This class should inherit from \textbf{Person} and have additional fields for position, salary and course. The position field should be of type \textbf{EPosition}, the salary field should be of type \textbf{ESalary} and the course field should be of type \textbf{Course}.
+    \item \textbf{Person.cs}. This \textbf{public} class should have information such as id, first name and last name. \textbf{Note:} Information should be \textbf{protected} to allow access in derived classes.
+    \item \textbf{Learner.cs}. This \textbf{public} class should inherit from \textbf{Person} and have an additional field for course assessment marks. This field should be of type \textbf{CourseAssessmentMark}.
+    \item \textbf{Lecturer.cs}. This \textbf{public} class should inherit from \textbf{Person} and have additional fields for position, salary and course. The position field should be of type \textbf{EPosition}, the salary field should be of type \textbf{ESalary} and the course field should be of type \textbf{Course}.
 \end{itemize}
 
 \begin{itemize}
-    \item \textbf{DataReader.cs}. This class should should have two methods to read from the \textbf{learners.txt} and \textbf{lecturers.txt} files. The first method should read the \textbf{learners.txt} file and populate a list of \textbf{Learner} objects. The second method should read the \textbf{lecturers.txt} file and populate a list of \textbf{Lecturer} objects.
+    \item \textbf{DataReader.cs}. This \textbf{public} class should should have two methods to read from the \textbf{learners.txt} and \textbf{lecturers.txt} files. The first method should read the \textbf{learners.txt} file and populate a list of \textbf{Learner} objects. The second method should read the \textbf{lecturers.txt} file and populate a list of \textbf{Lecturer} objects.
     \item The \textbf{learners.txt} file contains the following information:
             \begin{verbatim}
 1,Alex,Walker,0,90,95,85,15,5  
@@ -169,7 +167,7 @@ public enum ESalary
 
 \subsubsection*{Part 4 (10\%)}
 \begin{itemize}
-    \item \textbf{Form1.cs}. This class should have the following functionality:
+    \item \textbf{Form1.cs}. This \textbf{public} class should have the following functionality:
     \begin{itemize}
         \item Seed the \textbf{institutions}, \textbf{departments} and \textbf{courses} lists by calling methods from the \textbf{Seeder} class.
         \item Read the \textbf{learners.txt} and \textbf{lecturers.txt} files by calling methods from the \textbf{DataReader} class. 
@@ -227,7 +225,7 @@ In parts 1-4, you implemented the core functionality. In this part, you will sel
 
 \subsection*{Code Quality and Best Practices - Learning Outcome 2 (40\%)}
 \begin{itemize}
-    \item Naming Conventions (5\%) - File, class, method, variable, constant, property names and access modifiers should be clear, descriptive and consistent across the codebase. 
+    \item Naming Conventions (5\%) - File, class, method, variable, constant and property names should be clear, descriptive and consistent across the codebase. 
     \item Documentation and Comments (10\%) - The code should be well-documented using the \textbf{XML} documentation format with comments that explain complex logic and clarify the purpose of classes, methods or complex sections. 
     \item Code Formatting (10\%) - Consistent indentation and spacing should be used across the codebase. It includes ensuring proper indentation for code blocks, following a standard format for braces and adding blank lines between sections.
     \item Dead Code (5\%) - The code should not contain unused or redundant files, classes, methods, variables, constants or properties. Keeping unnecessary code around can lead to confusion, clutter and potential bugs down the line.

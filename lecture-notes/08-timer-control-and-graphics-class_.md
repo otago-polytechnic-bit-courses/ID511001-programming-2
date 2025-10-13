@@ -347,6 +347,8 @@ private void timer1_Tick(object sender, EventArgs e)
 
 Buffer graphics refers to a technique where drawing operations are performed off-screen on a buffer, i.e., image before being displayed on the screen. This approach is often used to reduce flickering and improve rendering performance in graphical applications.
 
+You could use `Refresh()` but it is not recommended. The `Refresh()` method forces the control to invalidate its client area and immediately redraw itself and any child controls. This can lead to performance issues, especially if called frequently, as it may cause unnecessary redraws and flickering.
+
 ## Task 9:
 
 In this exercise, when the user clicks on a button, a circle, square or triangle is drawn and its area is calculated. The choice of shape is randomly selected on each `button1_Click()` event.

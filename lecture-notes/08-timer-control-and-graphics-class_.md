@@ -290,7 +290,7 @@ The `Controller` class will need to have the following field: a `private` `Ball`
 The `Controller` class will need to have a constructor that takes in a `Graphics` called `graphics`, and a `Size` called `clientSize`. In the constructor, you will need to create a new `Ball` object and assign it to the `ball` field. For example:
 
 ```cs
-ball = new Ball(new Point(10, 10), new Point(100, 100), Color.Black, graphics, clientSize);
+ball = new Ball(new Point(10, 10), new Point(100, 100), Color.White, graphics, clientSize);
 ```
 
 The `Controller` class will have one other methods:

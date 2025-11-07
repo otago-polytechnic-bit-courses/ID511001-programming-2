@@ -467,7 +467,7 @@ Learning to use AI tools is valuable, but you **must** be aware of the following
 
 - Refine your prompts to get useful responses
 - Don't trust AI responses blindly - verify and test the code
-- Acknowledge AI tool usage in your assessment's repository **README.md** file, including what prompts you used and how you applied the responses
+- Acknowledge AI tool usage in your assessment's repository `README.md` file, including what prompts you used and how you applied the responses
 
 ## Task 1:
 

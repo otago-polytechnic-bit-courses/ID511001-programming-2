@@ -4,7 +4,7 @@
 
 In this course, we are going to use **GitHub** and **GitHub Classroom** to manage our development. Begin by clicking the following:
 
-[https://classroom.github.com/a/Xg7esDmf](https://classroom.github.com/a/Xg7esDmf)
+[https://classroom.github.com/a/Ury_53GW](https://classroom.github.com/a/Ury_53GW)
 
 ## Development Workflow
 
@@ -747,11 +747,7 @@ Console.WriteLine(IsPrime(2));  // Expected output: True
 Console.WriteLine(IsPrime(1));  // Expected output: False
 ```
 
-# Summative Assessment
-
-The following tasks are part of the **Classroom Tasks** assessment worth 10%. This section is worth 2%. **Note:** Partial marks **will not** be given for incomplete functionality.
-
-## Task 1:
+## Task 7:
 
 Create a **static method** called `RemoveVowels` that takes a string `word` as a parameter. Remove all vowels (a, e, i, o, u - both uppercase and lowercase) from the string and return the result.
 
@@ -767,7 +763,7 @@ Console.WriteLine(RemoveVowels(""));             // Expected: ""
 Console.WriteLine(RemoveVowels("aaaaa"));        // Expected: ""
 ```
 
-## Task 2:
+## Task 8:
 
 Create a **static method** called `IsPalindrome` that takes a string `word` as a parameter and returns `true` if it's a palindrome (reads the same forwards and backwards), `false` otherwise.
 
@@ -783,7 +779,7 @@ Console.WriteLine(IsPalindrome("12321"));                                       
 Console.WriteLine(IsPalindrome("A man a plan a canal Panama".Replace(" ", "").ToLower())); // Expected: True
 ```
 
-## Task 3:
+## Task 9:
 
 Create a **static method** called `IsAnagram` that takes two string parameters `firstString` and `secondString`. Return `true` if they are anagrams of each other (contain the same letters in different order), `false` otherwise.
 
@@ -799,7 +795,7 @@ Console.WriteLine(IsAnagram("", ""));                                // Expected
 Console.WriteLine(IsAnagram("a!b@c", "c@b!a"));                      // Expected: True
 ```
 
-## Task 4:
+## Task 10:
 
 Write code that reads a file called `countries.txt` containing a list of country names (one per line). Display only the countries that start with the letter 'B' or 'b'.
 
@@ -811,7 +807,7 @@ Write code that reads a file called `countries.txt` containing a list of country
 
 **Note:** You'll need to create a `countries.txt` file in your project directory with a list of countries for testing.
 
-## Task 5:
+## Task 11:
 
 Write code that reads a file called `computer-jokes.txt` containing computer jokes (one per line). Store the jokes in an array and randomly select one to display each time the program runs.
 

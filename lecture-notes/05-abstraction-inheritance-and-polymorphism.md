@@ -242,11 +242,7 @@ Create a class called `Lecturer` which derives from `Person` with the private fi
 
 In the `Form1()` constructor, create a `Person`, `Student` and `Lecturer` object. Using the `MessageBox.Show()` method, call the `DisplayDetails` method for each `Person`, `Student` and `Lecturer`.
 
-# Summative Assessment
-
-The following tasks are part of the **Classroom Tasks** assessment worth 10%. This part is worth 2%. **Note:** Partial marks **will not** be given for incomplete functionality.
-
-## Task 1:
+## Task 4:
 
 In this task, you will create an application that prompts the user to select a shape and returns the area of that shape.
 

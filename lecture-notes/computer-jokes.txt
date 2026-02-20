@@ -1,0 +1,10 @@
+Why do programmers prefer dark mode? Because light attracts bugs.
+Why did the programmer go broke? Because he lost his domain in a bet.
+Why do programmers always mix up Christmas and Halloween? Because Oct 31 == Dec 25.
+Why did the programmer quit her job? Because she didn’t get arrays
+Things aren’t always #000000 and #FFFFFF
+What did the boolean say to the integer? “You can’t handle the truth.”
+Software can be fast, reliable and cheap. Choose any two.
+How many developers does it take to screw in a lightbulb? None. It’s a hardware problem.
+How do functions break up? They have arguments.
+ // Empty line

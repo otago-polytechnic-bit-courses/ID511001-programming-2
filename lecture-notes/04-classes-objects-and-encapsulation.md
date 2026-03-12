@@ -2,9 +2,9 @@
 
 ## Navigation
 
-|            | Link                                    |
-| ---------- | --------------------------------------- |
-| ← Previous | [Week 03 — Windows Forms Application](lecture-notes/03-windows-forms-application.md) |
+|            | Link                                                                                                              |
+| ---------- | ----------------------------------------------------------------------------------------------------------------- |
+| ← Previous | [Week 03 — Windows Forms Application](lecture-notes/03-windows-forms-application.md)                              |
 | → Next     | [Week 05 — Abstraction, Inheritance & Polymorphism](lecture-notes/05-abstraction-inheritance-and-polymorphism.md) |
 
 ---

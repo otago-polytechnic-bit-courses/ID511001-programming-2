@@ -1,193 +1,235 @@
-# 02: Arrays, Lists, Dictionaries and LINQ
+# Week 02 — Arrays, Lists, Dictionaries & LINQ
 
-## Arrays
+## Navigation
 
-An **array** is a data structure that stores a fixed-size sequence of elements of the same type. Arrays are reference types in C# where elements are stored in contiguous memory locations. Each element is accessed by its index, starting from 0. The size of an array is determined when it's created and cannot be changed.
+|            | Link                                                                                 |
+| ---------- | ------------------------------------------------------------------------------------ |
+| ← Previous | [Week 01 — GitHub & C# Fundamentals](lecture-notes/01-github-and-c#.md)              |
+| → Next     | [Week 03 - Windows Forms Application](lecture-notes/03-windows-forms-application.md) |
 
-### Key Characteristics of Arrays:
-- **Fixed size**: Once created, the size cannot be modified
-- **Zero-indexed**: First element is at index 0, last element at index `Length - 1`
-- **Type-safe**: All elements must be of the same type
-- **Reference type**: Arrays are stored on the heap
+---
 
-### Creating and Using Arrays
+## 1. Arrays
 
-Here's how to create and work with arrays:
+An **array** is a data structure that stores a fixed-size sequence of elements of the same type. Elements are stored in contiguous memory locations and accessed by a zero-based index.
+
+| Characteristic | Detail                                                      |
+| -------------- | ----------------------------------------------------------- |
+| Size           | Fixed at creation — cannot be changed                       |
+| Indexing       | Zero-based — first element at `[0]`, last at `[Length - 1]` |
+| Type safety    | All elements must be of the same type                       |
+| Memory         | Reference type — stored on the heap                         |
+
+---
+
+### 1.1 Creating and Using Arrays
 
 ```cs
-// Method 1: Declare with specific size, then assign values
-int[] numbers = new int[5]; // Creates array with 5 elements (all initialized to 0)
+// Method 1 — declare with size, then assign values
+int[] numbers = new int[5]; // elements default to 0
 numbers[0] = 10;
 numbers[1] = 20;
 numbers[2] = 30;
 numbers[3] = 40;
 numbers[4] = 50;
 
-// Method 2: Initialize with values at declaration
+// Method 2 — initialise with values at declaration
 int[] values = new int[] { 10, 20, 30, 40, 50 };
 
-// Method 3: Simplified initialization syntax
+// Method 3 — simplified initialisation
 string[] fruits = { "Apple", "Banana", "Cherry" };
 
 // Accessing elements
-int firstNumber = numbers[0];    // Gets 10
-int arrayLength = numbers.Length; // Gets 5
+int first  = numbers[0];       // 10
+int length = numbers.Length;   // 5
 
-// Iterating through arrays
+// Iterating — for loop (when you need the index)
 for (int i = 0; i < numbers.Length; i++)
 {
     Console.WriteLine($"Element at index {i}: {numbers[i]}");
 }
 
-// Using foreach loop
+// Iterating — foreach (when you only need the value)
 foreach (int number in numbers)
 {
     Console.WriteLine(number);
 }
 ```
 
-### Common Array Operations
+---
+
+### 1.2 Common Array Operations
 
 ```cs
 string[] fruits = { "Banana", "Apple", "Cherry", "Date" };
 
-// Find index of an element
-int bananaIndex = Array.IndexOf(fruits, "Banana");
-Console.WriteLine($"Banana is at index: {bananaIndex}"); // Output: 0
+// Find the index of an element
+int idx = Array.IndexOf(fruits, "Banana");     // 0
 
-// Sort array (modifies original array)
+// Sort in ascending order (modifies the original array)
 Array.Sort(fruits);
-Console.WriteLine($"Sorted fruits: {string.Join(", ", fruits)}");
-// Output: Apple, Banana, Cherry, Date
+Console.WriteLine(string.Join(", ", fruits));  // Apple, Banana, Cherry, Date
 
-// Reverse array (modifies original array)
+// Reverse (modifies the original array)
 Array.Reverse(fruits);
-Console.WriteLine($"Reversed fruits: {string.Join(", ", fruits)}");
-// Output: Date, Cherry, Banana, Apple
+Console.WriteLine(string.Join(", ", fruits));  // Date, Cherry, Banana, Apple
 
-// Check if element exists
-bool hasApple = Array.Exists(fruits, fruit => fruit == "Apple");
-Console.WriteLine($"Contains Apple: {hasApple}");
+// Check whether an element satisfying a condition exists
+bool hasApple = Array.Exists(fruits, fruit => fruit == "Apple"); // true
 ```
 
-### Multi-dimensional Arrays
+---
+
+### 1.3 Multi-dimensional Arrays
 
 ```cs
-// 2D array (matrix)
-int[,] matrix = new int[3, 3] 
+// 2D array (rows × columns)
+int[,] matrix = new int[3, 3]
 {
-    {1, 2, 3},
-    {4, 5, 6},
-    {7, 8, 9}
+    { 1, 2, 3 },
+    { 4, 5, 6 },
+    { 7, 8, 9 }
 };
 
-// Access element at row 1, column 2
-int element = matrix[1, 2]; // Gets 6
+int element = matrix[1, 2]; // row 1, column 2 → 6
 
-// Jagged arrays (array of arrays)
-int[][] jaggedArray = new int[3][];
-jaggedArray[0] = new int[] { 1, 2, 3 };
-jaggedArray[1] = new int[] { 4, 5 };
-jaggedArray[2] = new int[] { 6, 7, 8, 9 };
+// Jagged array — each row can have a different length
+int[][] jagged = new int[3][];
+jagged[0] = new int[] { 1, 2, 3 };
+jagged[1] = new int[] { 4, 5 };
+jagged[2] = new int[] { 6, 7, 8, 9 };
 ```
 
-## Lists
+| Key terms           |                                                                     |
+| ------------------- | ------------------------------------------------------------------- |
+| Array               | Fixed-size, zero-indexed sequence of elements of the same type      |
+| `Array.Sort`        | Sorts the array in place in ascending order                         |
+| `Array.Reverse`     | Reverses the array in place                                         |
+| `Array.IndexOf`     | Returns the index of the first matching element, or -1 if not found |
+| 2D array `[,]`      | Rectangular grid where all rows have the same number of columns     |
+| Jagged array `[][]` | Array of arrays where each inner array can have a different length  |
 
-A **List<T>** is a generic collection that provides a resizable array. Unlike arrays, Lists can grow or shrink dynamically during runtime. Lists are part of the `System.Collections.Generic` namespace and are one of the most commonly used collections in C#.
+---
 
-### Key Characteristics of Lists:
-- **Dynamic size**: Can grow or shrink during runtime
-- **Zero-indexed**: Like arrays, first element is at index 0
-- **Type-safe**: Generic implementation ensures type safety
-- **Rich functionality**: Many built-in methods for manipulation
+## 2. Lists
 
-### Creating and Using Lists
+A **`List<T>`** is a generic, resizable collection from the `System.Collections.Generic` namespace. Unlike arrays, lists grow and shrink dynamically at runtime.
+
+| Characteristic | Detail                                                             |
+| -------------- | ------------------------------------------------------------------ |
+| Size           | Dynamic — grows or shrinks as needed                               |
+| Indexing       | Zero-based, like arrays                                            |
+| Type safety    | Generic `<T>` parameter enforces a single type                     |
+| Functionality  | Rich set of built-in methods for searching, sorting, and filtering |
+
+---
+
+### 2.1 Creating Lists
 
 ```cs
 using System.Collections.Generic;
 
-// Create empty list
+// Empty list
 List<string> names = new List<string>();
 
-// Create list with initial values
+// List with initial values
 List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
 
-// Create list with initial capacity (performance optimization)
+// List with a reserved initial capacity (avoids repeated resizing for large collections)
 List<string> cities = new List<string>(100);
 ```
 
-### Common List Operations
+---
+
+### 2.2 Common List Operations
 
 ```cs
 List<string> fruits = new List<string>();
 
-// Adding elements
-fruits.Add("Apple");           // Add to end
+// --- Adding ---
+fruits.Add("Apple");              // append to the end
 fruits.Add("Banana");
-fruits.Insert(1, "Orange");    // Insert at specific index
+fruits.Insert(1, "Orange");       // insert at index 1 → Apple, Orange, Banana
 
-// Accessing elements
-string firstFruit = fruits[0];     // Get first element
-fruits[0] = "Green Apple";          // Modify element
+// --- Accessing and modifying ---
+string first = fruits[0];         // "Apple"
+fruits[0] = "Green Apple";        // overwrite element at index 0
 
-// Removing elements
-fruits.Remove("Banana");            // Remove by value
-fruits.RemoveAt(1);                // Remove by index
-fruits.RemoveAll(f => f.StartsWith("A")); // Remove all matching
+// --- Removing ---
+fruits.Remove("Banana");                          // remove first matching value
+fruits.RemoveAt(1);                               // remove by index
+fruits.RemoveAll(f => f.StartsWith("A"));         // remove all matching a condition
 
-// Searching
-bool hasBanana = fruits.Contains("Banana");
-int appleIndex = fruits.IndexOf("Apple");
-string foundFruit = fruits.Find(f => f.Length > 5); // First match
-List<string> longFruits = fruits.FindAll(f => f.Length > 5); // All matches
+// --- Searching ---
+bool hasBanana   = fruits.Contains("Banana");
+int  appleIndex  = fruits.IndexOf("Apple");
+string longFruit = fruits.Find(f => f.Length > 5);           // first match
+List<string> longFruits = fruits.FindAll(f => f.Length > 5); // all matches
 
-// Properties
-int count = fruits.Count;        // Number of elements
-int capacity = fruits.Capacity;  // Current capacity
+// --- Properties ---
+int count    = fruits.Count;      // number of elements currently in the list
+int capacity = fruits.Capacity;   // allocated capacity (may be larger than Count)
 
-// Sorting and manipulation
-fruits.Sort();                   // Sort in ascending order
-fruits.Reverse();               // Reverse order
-fruits.Clear();                 // Remove all elements
+// --- Sorting and manipulation ---
+fruits.Sort();     // sort ascending in place
+fruits.Reverse();  // reverse in place
+fruits.Clear();    // remove all elements
 ```
 
-### List vs Array: When to Use Which
+---
 
-| Feature | Array | List |
-|---------|-------|------|
-| Size | Fixed | Dynamic |
-| Performance | Slightly faster access | Slightly slower due to bounds checking |
-| Memory | More memory efficient | Uses more memory due to capacity management |
-| Functionality | Basic operations | Rich set of methods |
-| Use Case | When size is known and won't change | When size varies or unknown |
+### 2.3 Array vs List — When to Use Which
 
-## Dictionaries
+|              | Array                   | List                                   |
+| ------------ | ----------------------- | -------------------------------------- |
+| Size         | Fixed                   | Dynamic                                |
+| Access speed | Slightly faster         | Slightly slower (bounds checking)      |
+| Memory       | More efficient          | Higher overhead (capacity management)  |
+| Methods      | Basic                   | Rich (`Find`, `Sort`, `RemoveAll`, …)  |
+| Best for     | Size known and constant | Size varies or unknown at compile time |
 
-A **Dictionary<TKey, TValue>** is a collection of key-value pairs where each key is unique. It provides fast lookup based on keys using hash table implementation. Dictionaries are ideal when you need to associate values with unique identifiers.
+| Key terms             |                                                                             |
+| --------------------- | --------------------------------------------------------------------------- |
+| `List<T>`             | Generic resizable collection — the most commonly used collection type in C# |
+| `Add`                 | Appends an element to the end of the list                                   |
+| `Insert`              | Inserts an element at a specified index                                     |
+| `Remove` / `RemoveAt` | Removes an element by value or by index                                     |
+| `Contains`            | Returns `true` if the value is present in the list                          |
+| `Find` / `FindAll`    | Returns the first / all elements matching a predicate                       |
+| `Count`               | The number of elements currently in the list                                |
 
-### Key Characteristics of Dictionaries:
-- **Key-value pairs**: Each entry consists of a unique key and associated value
-- **Fast lookup**: O(1) average time complexity for access operations
-- **Unique keys**: Each key can appear only once
-- **Unordered**: Elements are not stored in any particular order
+---
 
-### Creating and Using Dictionaries
+## 3. Dictionaries
+
+A **`Dictionary<TKey, TValue>`** is a collection of key-value pairs. Each key is unique and maps directly to a value. Internally it uses a hash table, giving O(1) average-case lookup.
+
+| Characteristic | Detail                                     |
+| -------------- | ------------------------------------------ |
+| Structure      | Key-value pairs                            |
+| Lookup speed   | O(1) average                               |
+| Keys           | Must be unique                             |
+| Order          | Unordered — do not rely on insertion order |
+
+---
+
+### 3.1 Creating Dictionaries
 
 ```cs
 using System.Collections.Generic;
 
-// Create empty dictionary
+// Empty dictionary
 Dictionary<string, int> ages = new Dictionary<string, int>();
 
-// Create dictionary with initial values
+// With initial values — object initialiser syntax
 Dictionary<string, string> capitals = new Dictionary<string, string>
 {
-    {"USA", "Washington D.C."},
-    {"France", "Paris"},
-    {"Japan", "Tokyo"}
+    { "USA",    "Washington D.C." },
+    { "France", "Paris" },
+    { "Japan",  "Tokyo" }
 };
 
-// Alternative initialization syntax
+// Indexed initialiser syntax (alternative)
 Dictionary<int, string> grades = new Dictionary<int, string>
 {
     [90] = "A",
@@ -196,402 +238,387 @@ Dictionary<int, string> grades = new Dictionary<int, string>
 };
 ```
 
-### Common Dictionary Operations
+---
+
+### 3.2 Common Dictionary Operations
 
 ```cs
-Dictionary<string, int> studentScores = new Dictionary<string, int>();
+Dictionary<string, int> scores = new Dictionary<string, int>();
 
-// Adding elements
-studentScores.Add("Alice", 95);
-studentScores["Bob"] = 87;        // Alternative way to add/update
-studentScores["Charlie"] = 92;
+// --- Adding ---
+scores.Add("Alice", 95);
+scores["Bob"] = 87;       // indexer — adds if key absent, updates if present
+scores["Charlie"] = 92;
 
-// Accessing elements
-int aliceScore = studentScores["Alice"];     // Direct access (throws exception if key doesn't exist)
+// --- Accessing ---
+int alice = scores["Alice"];  // direct access — throws KeyNotFoundException if absent
 
-// Safe access
-if (studentScores.TryGetValue("David", out int davidScore))
-{
-    Console.WriteLine($"David's score: {davidScore}");
-}
+// Safe access with TryGetValue (preferred)
+if (scores.TryGetValue("David", out int david))
+    Console.WriteLine($"David's score: {david}");
 else
-{
     Console.WriteLine("David not found");
-}
 
-// Updating elements
-studentScores["Alice"] = 98;      // Update existing value
+// --- Updating ---
+scores["Alice"] = 98;     // overwrite existing value
 
-// Removing elements
-studentScores.Remove("Bob");      // Remove by key
-bool removed = studentScores.Remove("Eve"); // Returns false if key doesn't exist
+// --- Removing ---
+scores.Remove("Bob");
+bool removed = scores.Remove("Eve"); // false if key does not exist
 
-// Checking existence
-bool hasAlice = studentScores.ContainsKey("Alice");
-bool hasScore90 = studentScores.ContainsValue(90);
+// --- Checking existence ---
+bool hasAlice    = scores.ContainsKey("Alice");
+bool hasScore90  = scores.ContainsValue(90);
 
-// Properties
-int count = studentScores.Count;
-var keys = studentScores.Keys;      // Collection of all keys
-var values = studentScores.Values;  // Collection of all values
+// --- Properties ---
+int  count  = scores.Count;
+var  keys   = scores.Keys;    // ICollection of all keys
+var  values = scores.Values;  // ICollection of all values
 
-// Iteration
-foreach (KeyValuePair<string, int> kvp in studentScores)
-{
+// --- Iterating ---
+foreach (KeyValuePair<string, int> kvp in scores)
     Console.WriteLine($"{kvp.Key}: {kvp.Value}");
-}
 
-// Alternative iteration syntax
-foreach (var student in studentScores)
-{
-    Console.WriteLine($"{student.Key}: {student.Value}");
-}
+// Shorthand with var
+foreach (var entry in scores)
+    Console.WriteLine($"{entry.Key}: {entry.Value}");
 ```
 
-### Dictionary Best Practices
+---
+
+### 3.3 Safe Access Best Practices
 
 ```cs
-// Use TryGetValue for safe access
-Dictionary<string, int> inventory = new Dictionary<string, int>();
-
-// Good: Safe access
+// Always prefer TryGetValue when the key may be absent
 if (inventory.TryGetValue("apples", out int appleCount))
-{
     Console.WriteLine($"We have {appleCount} apples");
-}
 
-// Avoid: Direct access that can throw exceptions
-// int apples = inventory["apples"]; // Throws KeyNotFoundException if key doesn't exist
-
-// Use ContainsKey before accessing if unsure
+// Or check with ContainsKey first if you need two separate operations
 if (inventory.ContainsKey("oranges"))
-{
-    int oranges = inventory["oranges"];
-}
+    Console.WriteLine(inventory["oranges"]);
+
+// Avoid: direct access on an unverified key — throws KeyNotFoundException
+// int apples = inventory["apples"];
 ```
 
-## Language Integrated Query (LINQ)
+| Key terms                  |                                                                             |
+| -------------------------- | --------------------------------------------------------------------------- |
+| `Dictionary<TKey, TValue>` | Key-value collection with O(1) average lookup via hashing                   |
+| `TryGetValue`              | Safe key lookup — returns `false` instead of throwing if the key is absent  |
+| `ContainsKey`              | Returns `true` if the key exists                                            |
+| `ContainsValue`            | Returns `true` if the value exists (O(n) — scans all values)                |
+| `KeyNotFoundException`     | Exception thrown when accessing a dictionary with a key that does not exist |
 
-**LINQ** (Language-Integrated Query) provides a powerful, consistent way to query data from various sources including collections, databases, XML, and more. LINQ integrates query capabilities directly into the C# language.
+---
 
-### LINQ Namespace
+## 4. LINQ
 
-```cs
-using System.Linq; // Required for LINQ extension methods
-```
+**LINQ** (Language-Integrated Query) provides a consistent, readable way to query and transform data from any collection. LINQ is available after adding `using System.Linq`.
 
-### Query Syntax vs Method Syntax
+---
 
-LINQ can be written in two ways: **Query Syntax** (similar to SQL) and **Method Syntax** (using extension methods).
+### 4.1 Query Syntax vs Method Syntax
 
-#### Query Syntax Example:
-
-```cs
-List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-var evenNumbers = from num in numbers
-                  where num % 2 == 0
-                  orderby num descending
-                  select num;
-
-foreach (int num in evenNumbers)
-{
-    Console.WriteLine(num); // Output: 10, 8, 6, 4, 2
-}
-```
-
-#### Method Syntax Example (Equivalent):
+LINQ can be written in two styles. Both produce identical results — method syntax is more commonly used in practice.
 
 ```cs
 List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-var evenNumbers = numbers
+// Query syntax (similar to SQL)
+var evenQ = from num in numbers
+            where num % 2 == 0
+            orderby num descending
+            select num;
+
+// Method syntax (equivalent)
+var evenM = numbers
     .Where(num => num % 2 == 0)
     .OrderByDescending(num => num);
 
-foreach (int num in evenNumbers)
-{
-    Console.WriteLine(num); // Output: 10, 8, 6, 4, 2
-}
+// Both produce: 10, 8, 6, 4, 2
 ```
 
-### Common LINQ Operations
+---
 
-#### Filtering with Where
+### 4.2 Filtering — `Where`
 
 ```cs
 List<string> names = new List<string> { "Alice", "Bob", "Charlie", "Diana", "Eve" };
 
-// Find names longer than 4 characters
-var longNames = names.Where(name => name.Length > 4);
-
-// Find names starting with 'A'
-var namesStartingWithA = names.Where(name => name.StartsWith("A"));
+var longNames         = names.Where(n => n.Length > 4);
+var namesStartWithA   = names.Where(n => n.StartsWith("A"));
 ```
 
-#### Projection with Select
+---
+
+### 4.3 Projection — `Select`
 
 ```cs
 List<string> words = new List<string> { "apple", "banana", "cherry" };
 
-// Project to lengths
-var lengths = words.Select(word => word.Length);
-
-// Project to uppercase
-var upperWords = words.Select(word => word.ToUpper());
+var lengths    = words.Select(w => w.Length);          // { 5, 6, 6 }
+var upperWords = words.Select(w => w.ToUpper());        // { "APPLE", ... }
 
 // Project to anonymous objects
-var wordInfo = words.Select(word => new { 
-    Word = word, 
-    Length = word.Length, 
-    FirstChar = word[0] 
+var wordInfo = words.Select(w => new
+{
+    Word      = w,
+    Length    = w.Length,
+    FirstChar = w[0]
 });
 ```
 
-#### Sorting
+---
+
+### 4.4 Sorting — `OrderBy` / `ThenBy`
 
 ```cs
-List<int> numbers = new List<int> { 5, 2, 8, 1, 9 };
-
-var ascending = numbers.OrderBy(n => n);
+var ascending  = numbers.OrderBy(n => n);
 var descending = numbers.OrderByDescending(n => n);
 
-// Multiple sort criteria
-List<Person> people = new List<Person> 
-{
-    new Person { Name = "Alice", Age = 30 },
-    new Person { Name = "Bob", Age = 25 },
-    new Person { Name = "Charlie", Age = 30 }
-};
-
-var sorted = people.OrderBy(p => p.Age).ThenBy(p => p.Name);
+// Multiple sort keys
+var sorted = people
+    .OrderBy(p => p.Age)
+    .ThenBy(p => p.Name);  // secondary sort within equal ages
 ```
 
-#### Aggregation Operations
+---
+
+### 4.5 Aggregation
 
 ```cs
 List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
 
-int sum = numbers.Sum();                    // 15
-double average = numbers.Average();         // 3.0
-int min = numbers.Min();                   // 1
-int max = numbers.Max();                   // 5
-int count = numbers.Count();               // 5
-int evenCount = numbers.Count(n => n % 2 == 0); // 2
+int    sum       = numbers.Sum();               // 15
+double average   = numbers.Average();           // 3.0
+int    min       = numbers.Min();               // 1
+int    max       = numbers.Max();               // 5
+int    count     = numbers.Count();             // 5
+int    evenCount = numbers.Count(n => n % 2 == 0); // 2
 ```
 
-#### Set Operations
+---
+
+### 4.6 Set Operations
 
 ```cs
-List<int> list1 = new List<int> { 1, 2, 3, 4, 5 };
-List<int> list2 = new List<int> { 4, 5, 6, 7, 8 };
+List<int> a = new List<int> { 1, 2, 3, 4, 5 };
+List<int> b = new List<int> { 4, 5, 6, 7, 8 };
 
-var distinct = list1.Distinct();           // Remove duplicates
-var union = list1.Union(list2);           // All unique elements from both
-var intersection = list1.Intersect(list2); // Common elements: 4, 5
-var except = list1.Except(list2);         // Elements in list1 but not list2: 1, 2, 3
+var distinct      = a.Distinct();            // removes duplicates within a
+var union         = a.Union(b);              // all unique elements from both
+var intersection  = a.Intersect(b);          // common elements: 4, 5
+var except        = a.Except(b);             // in a but not b: 1, 2, 3
 ```
 
-#### Element Operations
+---
+
+### 4.7 Element Operations
 
 ```cs
-List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
-
-int first = numbers.First();                    // 1 (throws if empty)
-int firstOrDefault = numbers.FirstOrDefault();  // 1 (returns default if empty)
-int last = numbers.Last();                      // 5
-bool any = numbers.Any(n => n > 3);            // true
-bool all = numbers.All(n => n > 0);            // true
-int single = numbers.Single(n => n == 3);      // 3 (throws if 0 or >1 matches)
+int first          = numbers.First();                    // throws if empty
+int firstOrDefault = numbers.FirstOrDefault();           // returns 0 if empty
+int last           = numbers.Last();
+bool any           = numbers.Any(n => n > 3);            // true
+bool all           = numbers.All(n => n > 0);            // true
+int  single        = numbers.Single(n => n == 3);        // throws if 0 or >1 matches
 ```
 
-#### Partitioning
+---
+
+### 4.8 Partitioning — `Take` / `Skip`
 
 ```cs
-List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-var firstThree = numbers.Take(3);              // 1, 2, 3
-var skipFirstThree = numbers.Skip(3);          // 4, 5, 6, 7, 8, 9, 10
-var takeWhileLessThan5 = numbers.TakeWhile(n => n < 5); // 1, 2, 3, 4
-var skipWhileLessThan5 = numbers.SkipWhile(n => n < 5); // 5, 6, 7, 8, 9, 10
+var firstThree       = numbers.Take(3);                    // 1, 2, 3
+var skipFirstThree   = numbers.Skip(3);                    // 4, 5, … 10
+var takeWhileLt5     = numbers.TakeWhile(n => n < 5);     // 1, 2, 3, 4
+var skipWhileLt5     = numbers.SkipWhile(n => n < 5);     // 5, 6, … 10
 ```
 
-### LINQ with Complex Objects
+---
+
+### 4.9 LINQ with Complex Objects
 
 ```cs
 public class Student
 {
-    public string Name { get; set; }
-    public int Age { get; set; }
-    public List<int> Grades { get; set; }
-    public string Major { get; set; }
+    public string      Name   { get; set; }
+    public int         Age    { get; set; }
+    public List<int>   Grades { get; set; }
+    public string      Major  { get; set; }
 }
 
-List<Student> students = new List<Student>
-{
-    new Student { Name = "Alice", Age = 20, Grades = new List<int> { 90, 85, 92 }, Major = "CS" },
-    new Student { Name = "Bob", Age = 19, Grades = new List<int> { 78, 82, 85 }, Major = "Math" },
-    new Student { Name = "Charlie", Age = 21, Grades = new List<int> { 95, 90, 88 }, Major = "CS" }
-};
-
-// Find CS students with average grade > 85
-var topCSStudents = students
+// CS students whose average grade exceeds 85, highest average first
+var topCS = students
     .Where(s => s.Major == "CS" && s.Grades.Average() > 85)
     .OrderByDescending(s => s.Grades.Average())
     .Select(s => new { s.Name, Average = s.Grades.Average() });
 
 // Group students by major
-var studentsByMajor = students
+var byMajor = students
     .GroupBy(s => s.Major)
     .Select(g => new { Major = g.Key, Count = g.Count(), Students = g.ToList() });
 ```
 
-### LINQ Performance Considerations
+---
 
-1. **Deferred Execution**: Most LINQ operations are executed when enumerated, not when defined
-2. **Chain Operations**: Multiple operations can be chained efficiently
-3. **ToList() vs IEnumerable**: Use `ToList()` when you need to enumerate multiple times
+### 4.10 Deferred Execution
+
+Most LINQ operations are **not** executed when the query is defined — they run when you iterate over the result.
 
 ```cs
-var query = numbers.Where(n => n > 5); // Not executed yet
-var list = query.ToList(); // Now executed and materialized
+var query = numbers.Where(n => n > 5); // query defined but not yet run
+
+// Execution happens here — at the point of enumeration
+foreach (var n in query) { ... }
+
+// ToList() forces immediate execution and stores results in memory
+var list = query.ToList(); // safe to enumerate multiple times
 ```
 
-# Exercises
+| Key terms            |                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------- |
+| LINQ                 | Language-Integrated Query — a set of extension methods for querying collections |
+| Lambda expression    | Anonymous function written as `param => expression`, used in LINQ predicates    |
+| Deferred execution   | LINQ query logic runs only when the result is enumerated, not when declared     |
+| `Where`              | Filters elements that satisfy a predicate                                       |
+| `Select`             | Projects each element to a new form                                             |
+| `OrderBy` / `ThenBy` | Sorts by one or more keys                                                       |
+| `GroupBy`            | Groups elements by a key selector                                               |
+| `ToList()`           | Forces immediate execution and returns a concrete `List<T>`                     |
+
+---
+
+## Exercises
 
 Before you start, create a new **C# Console** application with a descriptive name.
 
-**Important Note About AI Tools:**
-
-Learning to use AI tools is valuable, but you **must** be aware of the following:
+**Important:** Learning to use AI tools is valuable, but you must:
 
 - Refine your prompts to get useful responses
-- Don't trust AI responses blindly - verify and test the code
-- Acknowledge AI tool usage in your assessment's repository **README.md** file, including what prompts you used and how you applied the responses
+- Verify and test all AI-generated code before submitting
+- Acknowledge AI tool usage in your repository `README.md`, including the prompts you used and how you applied the responses
 
-## Task 1:
+---
 
-You have been given two **lists** containing programming languages:
+### Task 1 — Combine Lists
+
+You have been given two lists of programming languages:
 
 ```cs
 List<string> progLangsOne = new List<string> { "C#", "JavaScript", "Kotlin", "Python" };
 List<string> progLangsTwo = new List<string> { "C++", "Go", "Swift", "TypeScript" };
 ```
 
-Implement the following:
-
 1. Create a new `List<string>` called `allProgLangs`
-2. Use the `AddRange` method to add all elements from `progLangsOne` to `allProgLangs`
-3. Use the `AddRange` method again to add all elements from `progLangsTwo` to `allProgLangs`
-4. Use the `Add` method to add "Rust" to `allProgLangs`
-5. Use the `Remove` method to remove "Swift" from `allProgLangs`
-6. Display each language in `allProgLangs` using a foreach loop
+2. Use `AddRange` to add all elements from `progLangsOne`, then all from `progLangsTwo`
+3. Use `Add` to append `"Rust"`
+4. Use `Remove` to remove `"Swift"`
+5. Display each language with a `foreach` loop
 
-**Expected Output:** C#, JavaScript, Kotlin, Python, C++, Go, TypeScript, Rust
+**Expected output:** C#, JavaScript, Kotlin, Python, C++, Go, TypeScript, Rust
 
-## Task 2:
+---
 
-You have been given the following list of integers:
+### Task 2 — List Operations
+
+You have been given the following list:
 
 ```cs
 List<int> nums = new List<int> { 65, 35, 79, 101, 35 };
 ```
 
-Implement the following:
+| Step | Operation                                                      | Expected result         |
+| ---- | -------------------------------------------------------------- | ----------------------- |
+| 1    | `Insert` 25 at index 1                                         | 65, 25, 35, 79, 101, 35 |
+| 2    | `Contains` 35 → store in `hasNumber35`                         | `True`                  |
+| 3    | `Find` first number > 30 → store in `firstNumberGreaterThan30` | `65`                    |
+| 4    | `Sort` ascending                                               | 25, 35, 35, 65, 79, 101 |
 
-1. Use the `Insert` method to insert the number 25 at index 1 (second position) in `nums`. Display the contents of `nums` after insertion.
-2. Use the `Contains` method to check if the number 35 exists in `nums`. Store the result in a boolean variable called `hasNumber35` and display it.
-3. Use the `Find` method to find the first number in `nums` that is greater than 30. Store it in a variable called `firstNumberGreaterThan30` and display it.
-4. Use the `Sort` method to sort `nums` in ascending order. Display the contents after sorting.
+---
 
-**Expected Results:**
-- After insertion: 65, 25, 35, 79, 101, 35
-- hasNumber35: True
-- firstNumberGreaterThan30: 65
-- After sorting: 25, 35, 35, 65, 79, 101
+### Task 3 — Book List
 
-## Task 3:
-
-You have been given the following list of book titles:
+You have been given the following list:
 
 ```cs
 List<string> bookTitles = new List<string> { "The Great Gatsby", "To Kill a Mockingbird", "1984", "Brave New World" };
 ```
 
-Implement the following:
+| Step | Operation                                                  | Expected result |
+| ---- | ---------------------------------------------------------- | --------------- |
+| 1    | `Count` → store in `totalBooks`                            | `4`             |
+| 2    | `Contains` "Brave New World" → store in `hasBraveNewWorld` | `True`          |
+| 3    | `IndexOf` "1984" → store in `index1984`                    | `2`             |
+| 4    | `Clear`, then display `Count`                              | `0`             |
 
-1. Use the `Count` property to get the total number of book titles and store it in `totalBooks`. Display the value.
-2. Use the `Contains` method to check if "Brave New World" exists in the list. Store the result in `hasBraveNewWorld` and display it.
-3. Use the `IndexOf` method to find the index of "1984". Store it in `index1984` and display it.
-4. Use the `Clear` method to remove all elements from `bookTitles`. Display the count after clearing.
+---
 
-**Expected Results:**
-- totalBooks: 4
-- hasBraveNewWorld: True
-- index1984: 2
-- Count after clearing: 0
+### Task 4 — Sum of Even Numbers
 
-## Task 4:
-
-Given the following list of integers, use LINQ to find and display the sum of all even numbers:
+Given the following list, use LINQ to find and display the sum of all even numbers:
 
 ```cs
 List<int> numbers = new List<int> { 1, 4, 7, 8, 11, 12, 15, 16, 19, 20 };
 ```
 
-**Hint:** Use the `Where` method to filter even numbers, then use the `Sum` method.
+**Expected output:** `Sum of even numbers: 60`
 
-**Expected Output:** Sum of even numbers: 60
+> **Hint:** chain `Where(n => n % 2 == 0)` and `Sum()`.
 
-## Task 5:
+---
 
-Given the following list of countries, use LINQ to display all countries starting with the letter "I" (case-insensitive):
+### Task 5 — Filter Countries
+
+Given the following list of countries, use LINQ to display all countries beginning with the letter `"I"` (case-insensitive):
 
 ```cs
 List<string> countries = new List<string>
 {
-    "Argentina", "Australia", "Brazil", "Canada", "Egypt", 
-    "France", "India", "Italy", "Mexico", "Netherlands", 
+    "Argentina", "Australia", "Brazil", "Canada", "Egypt",
+    "France", "India", "Italy", "Mexico", "Netherlands",
     "South Africa", "United States"
 };
 ```
 
-**Hint:** Use `Where` with `StartsWith` and `StringComparison.OrdinalIgnoreCase`.
+**Expected output:** India, Italy
 
-**Expected Output:** India, Italy
+> **Hint:** use `Where` with `StartsWith("I", StringComparison.OrdinalIgnoreCase)`.
 
-## Task 6:
+---
 
-Given the following list of temperatures in Celsius for a week:
+### Task 6 — Temperature Analysis
+
+Given a week of daily temperatures in Celsius:
 
 ```cs
 List<double> temperatures = new List<double> { 24.5, 23.8, 25.3, 22.6, 26.1, 27.5, 21.9 };
 ```
 
-Implement the following using LINQ:
+1. Calculate and display the average temperature
+2. Find and display the highest temperature
+3. Find all temperatures above 25 °C, store them in a new list, and display them
 
-1. Calculate and display the average temperature for the week
-2. Find and display the highest temperature recorded
-3. Find all temperatures above 25°C and store them in a new list, then display them
+> **Hint:** use `Average()`, `Max()`, and `Where(...).ToList()`.
 
-**Hint:** Use `Average()`, `Max()`, and `Where().ToList()` methods.
+---
 
-## Task 7:
+### Task 7 — Exam Scores
 
-Given the following exam scores:
+Given the following scores:
 
 ```cs
 List<int> scores = new List<int> { 78, 89, 92, 65, 70, 85, 92, 78, 93, 80 };
 ```
 
-Implement the following using LINQ:
-
 1. Find and display the highest score
-2. Find all distinct scores (remove duplicates) and store them in a new list, then display them in ascending order
+2. Remove duplicates, sort the remaining scores in ascending order, and display them
 
-**Hint:** Use `Max()` and `Distinct().OrderBy().ToList()` methods.
+> **Hint:** chain `Distinct().OrderBy(n => n).ToList()`.
 
-## Task 8:
+---
+
+### Task 8 — Word Filter
 
 Given the following list of words:
 
@@ -599,20 +626,19 @@ Given the following list of words:
 List<string> words = new List<string> { "apple", "banana", "orange", "grape", "kiwi", "pineapple" };
 ```
 
-Implement the following using LINQ:
-
-1. Find all words that contain the letter "a" AND end with the letter "e" (case-insensitive) and store them in a new list
+1. Find all words that contain `"a"` **and** end with `"e"` (case-insensitive), and store them in a new list
 2. Find the longest word in the list
 
-**Hint:** 
-- For part 1: Use `Where` with `Contains("a")` and `EndsWith("e")`
-- For part 2: Use `OrderByDescending(word => word.Length).First()`
+| Expected result                          | Value                           |
+| ---------------------------------------- | ------------------------------- |
+| Words containing "a" and ending with "e" | apple, orange, grape, pineapple |
+| Longest word                             | pineapple                       |
 
-**Expected Results:**
-- Words containing "a" and ending with "e": apple, orange, grape, pineapple
-- Longest word: pineapple
+> **Hint:** for the longest word, use `OrderByDescending(w => w.Length).First()`.
 
-## Task 9:
+---
+
+### Task 9 — City Populations
 
 Given the following city populations:
 
@@ -620,74 +646,73 @@ Given the following city populations:
 List<int> cityPopulations = new List<int> { 5000000, 3000000, 1200000, 8000000, 2000000, 4500000, 6000000 };
 ```
 
-Implement the following using LINQ:
-
-1. Find the top 3 cities with the highest populations and store their populations in a new list
+1. Find the top 3 highest populations and store them in a new list
 2. Calculate the total population of all cities
 
-**Hint:** 
-- For part 1: Use `OrderByDescending().Take(3).ToList()`
-- For part 2: Use `Sum()`
+| Expected result   | Value                     |
+| ----------------- | ------------------------- |
+| Top 3 populations | 8000000, 6000000, 5000000 |
+| Total population  | 29700000                  |
 
-**Expected Results:**
-- Top 3 populations: 8000000, 6000000, 5000000
-- Total population: 29700000
+> **Hint:** use `OrderByDescending(...).Take(3).ToList()` and `Sum()`.
 
-## Task 10:
+---
 
-Create a dictionary to store student information where the key is the student name (string) and the value is their grade (int):
+### Task 10 — Student Grades Dictionary
+
+You have been given the following dictionary:
 
 ```cs
 Dictionary<string, int> studentGrades = new Dictionary<string, int>
 {
-    {"Alice", 92},
-    {"Bob", 87},
-    {"Charlie", 95},
-    {"Diana", 88},
-    {"Eve", 91}
+    { "Alice",   92 },
+    { "Bob",     87 },
+    { "Charlie", 95 },
+    { "Diana",   88 },
+    { "Eve",     91 }
 };
 ```
 
-Implement the following:
-
-1. Add a new student "Frank" with grade 89
-2. Update Bob's grade to 90
-3. Check if student "Alice" exists in the dictionary and display the result
-4. Try to get "Grace's" grade safely using `TryGetValue` and display appropriate message
+1. Add `"Frank"` with grade `89`
+2. Update Bob's grade to `90`
+3. Check if `"Alice"` exists and display the result
+4. Use `TryGetValue` to look up `"Grace"` and display an appropriate message
 5. Display all students with grades above 90
 6. Calculate and display the average grade of all students
 
-## Task 11:
+> **Hint:** for steps 5 and 6, iterate over `studentGrades` and use LINQ on `studentGrades.Values`.
 
-Create a list of `Product` objects and perform complex LINQ operations:
+---
+
+### Task 11 — Product LINQ
+
+Create the following record and list:
 
 ```cs
-public class Product
-{
-    public string Name { get; set; }
-    public decimal Price { get; set; }
-    public string Category { get; set; }
-    public int Stock { get; set; }
-}
+public record Product(string Name, decimal Price, string Category, int Stock);
 
 List<Product> products = new List<Product>
 {
-    new Product { Name = "Laptop", Price = 999.99m, Category = "Electronics", Stock = 15 },
-    new Product { Name = "Mouse", Price = 25.50m, Category = "Electronics", Stock = 50 },
-    new Product { Name = "Desk", Price = 199.99m, Category = "Furniture", Stock = 8 },
-    new Product { Name = "Chair", Price = 149.99m, Category = "Furniture", Stock = 12 },
-    new Product { Name = "Monitor", Price = 299.99m, Category = "Electronics", Stock = 20 }
+    new Product("Laptop",  999.99m, "Electronics", 15),
+    new Product("Mouse",    25.50m, "Electronics", 50),
+    new Product("Desk",    199.99m, "Furniture",    8),
+    new Product("Chair",   149.99m, "Furniture",   12),
+    new Product("Monitor", 299.99m, "Electronics", 20)
 };
 ```
 
 Implement the following using LINQ:
 
-1. Find all products in the "Electronics" category with stock > 15
+1. Find all Electronics products with stock > 15
 2. Calculate the average price of all products
-3. Group products by category and display the count of products in each category
+3. Group products by category and display the count in each group
 4. Find the most expensive product in each category
-5. Find all products with price between $100 and $500
+5. Find all products priced between $100 and $500
+
+> **Hint:** for step 4, use `GroupBy` then `MaxBy(p => p.Price)` (or `OrderByDescending(...).First()` per group).
+
+---
 
 ## Submission
 
-Push your completed code to your **GitHub** repository. Ensure your code is well-commented and follows proper naming conventions.
+Push your completed code to your GitHub repository. Ensure your code is well-commented and follows the naming conventions from Week 01.

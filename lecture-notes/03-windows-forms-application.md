@@ -1,99 +1,108 @@
-# 03: Windows Forms Application
+# Week 03 — Windows Forms Application
 
-The **Microsoft Visual Studio IDE** (integrated development environment) is made up of several tools that are used to build **GUI** (Graphical User Interface) applications – those with windows, buttons menus, graphics, etc., by dragging and dropping these pre-built controls onto an existing form as we want it to appear. We build applications that will respond to events – when the user clicks on a button, when a form is closed, etc. **Visual Studio** fills in all the necessary code for how to make these events happen when it compiles our application. We concentrate on writing the code to describe what should happen when the user clicks on a button, selects a menu-item, closes a window, and so on. We don't have to worry about all the complex operating system programming underneath – **Visual Studio** takes care of that for us.
+## Navigation
 
-## Creating a Windows Forms App
+|            | Link                                                                                                   |
+| ---------- | ------------------------------------------------------------------------------------------------------ | --- |
+| ← Previous | [Week 02 — Arrays, Lists, Dictionaries & LINQ](lecture-notes/02-arrays-lists-dictionaries-and-linq.md) |
+| → Next     | [Week 04 — Classes, Objects & Encapsulation](lecture-notes/04-classes-objects-and-encapsulation.md)    |     |
 
-1. Open **Visual Studio**
-2. Select **Create a new project**
-3. Select **Windows Forms App (.NET Framework)**. Choose the latest version on your machine.
-   
-![](../resources/img/07/09-image.PNG)
+---
 
-4. Click **Next**
-5. Fill in the following fields:
-   - **Project name:** `03FormativeAssessment`
-   - **Location:** `<path-to-repository>`
-   - **Solution name:** `03FormativeAssessment`
+## 1. Windows Forms and Visual Studio
 
-You should see at least the design view, output and solution explorer panels. Note they are all moveable.
+**Visual Studio** is an IDE (Integrated Development Environment) for building GUI (Graphical User Interface) applications — those with windows, buttons, menus, and graphics. You design an application by dragging pre-built **controls** onto a **Form** and then writing code to describe what should happen when the user interacts with them. Visual Studio handles the underlying operating system plumbing so you can focus on application logic.
 
-![](../resources/img/07/01-image.png)
+---
 
-The main part is named `Form1.cs (Design)`. This is where, at design time, you create the **GUI**; it is used as a drawing canvas to resize the main form, add the buttons, labels etc that you will use in your application. This will be the main window that the user sees when your application is run. Your application can contain multiple windows (or **Forms**) that are displayed in response to user input, data values, etc. To start with, we will build projects that have only one `Form`.
+### 1.1 Creating a Windows Forms Project
 
-## Adding Controls
+**Step 1** — Open **Visual Studio** and select **Create a new project**.
 
-Open View/Toolbox/Common Controls.
+**Step 2** — Select **Windows Forms App (.NET Framework)** — choose the latest version available on your machine.
 
-1. Add two `Buttons`, a `TextBox`, a `PictureBox` and a `Label` to the `Form`.
-2. Run the application. Click on one of the `Buttons`, write in the `TextBox`. What happens?
-3. Change the **size**, **text** and **name** of each of your `Buttons`.
-4. Change the text, font and visibility of the `Label`.
-5. Add an image to the `PictureBox`. How can you resize the image?
-6. Change the colour of the `Form`.
+**Step 3** — Fill in the project details:
 
-## Design-Time or Run-Time?
+| Field             | Value                       |
+| ----------------- | --------------------------- |
+| **Project name**  | `03WindowsFormsApplication` |
+| **Location**      | `<path-to-repository>`      |
+| **Solution name** | `03WindowsFormsApplication` |
 
-We said earlier that `TextBoxes` could be used to show messages to the user of your application. For this to be useful, you need to be able to change the `Text` property while the application is running, when you won't be able to get at the **Properties** list. Changing a property while you are creating your application is called _"modifying at design-time"_. Changing the property from within the application while the application is running is called _"modifying at run-time"_.
+After the project is created you should see three panels: **Design View**, **Output**, and **Solution Explorer**. All panels are moveable.
 
-Modifying at run-time is very easy: you simply write an assignment statement to assign a new value to the property. To refer to an object's property at run-time you use _"dot notation"_, which you have seen before when referring to elements of records at runtime. For example, to assign the text _"Here is my new text"_ to your `TextBox`, you put this statement in your code:
+The central panel is named `Form1.cs (Design)`. This is the **design canvas** — where you add and arrange controls at design time. When the application runs, this becomes the main window the user sees. Projects can contain multiple Forms, but we start with one.
+
+---
+
+### 1.2 Adding Controls
+
+Open **View > Toolbox > Common Controls**.
+
+1. Add two `Buttons`, a `TextBox`, a `PictureBox`, and a `Label` to the Form.
+2. Run the application. Click a Button and type in the TextBox — nothing happens yet because no event handlers have been written.
+3. Change the **Size**, **Text**, and **Name** of each Button.
+4. Change the **Text**, **Font**, and **Visible** properties of the Label.
+5. Add an image to the PictureBox and experiment with resizing it.
+6. Change the background colour of the Form.
+
+---
+
+## 2. Design-Time vs Run-Time
+
+**Design-time** — modifying a property using the Properties panel while you are building the application.
+
+**Run-time** — modifying a property from code while the application is executing. You use **dot notation** to access a control's property:
 
 ```cs
-textBox1.Text  = "Here is my new text";
+textBox1.Text = "Here is my new text";
 ```
 
-Assume you have three controls `button1`, `label1` and `textBox1` on your `Form`. What will be the effect of each of these statements at run-time?
+Given controls `button1`, `label1`, and `textBox1` on your Form, predict the effect of each statement at run-time:
 
-1. `button1.Width = 400;`
-2. `label1.Visible = false;`
-3. `textBox1.Text  = "Go Otago";`
-4. `button1.Text = label1.Text;`
+| Statement                     | Effect                                       |
+| ----------------------------- | -------------------------------------------- |
+| `button1.Width = 400;`        | Sets the button's width to 400 pixels        |
+| `label1.Visible = false;`     | Hides the label                              |
+| `textBox1.Text = "Go Otago";` | Replaces the TextBox content with "Go Otago" |
+| `button1.Text = label1.Text;` | Copies the Label's text onto the Button      |
 
-## Responding to Events
+| Key terms    |                                                                                 |
+| ------------ | ------------------------------------------------------------------------------- |
+| Design-time  | Modifying a property in the Properties panel while building the app             |
+| Run-time     | Modifying a property via code while the application is running                  |
+| Dot notation | Syntax for accessing a control's property or method: `controlName.PropertyName` |
 
-We have seen that controls have **Properties**. But there is also a tab for **Events**, the lightning bolt in the **Properties** window.
+---
 
-![](../resources/img/07/02-image.png)
+## 3. Responding to Events
 
-If you select a `Button` on your `Form`, and click on the **Events** tab, it will look like this:
+Controls have **Properties** and **Events**. Events are things the user (or the application) can do — clicking a button, hovering the mouse, dragging a control, and so on. You can write a block of C# code — called an **event handler** — that runs whenever a specific event occurs.
 
-![](../resources/img/07/03-image.png)
-
-This is a list of all the **Events** – things the user can do (or the application can do) – that the `Button` control understands. For each of these events, you can specify some **C#** code that should be executed if the event occurs. For example, the `Button` understands the `Click` event. Whatever code you assign to that event (we'll see how to do this in a moment), will be executed when the user clicks on the `Button`. The `Button` also has a `MouseHover` event. This event occurs when the user passes the mouse over the `Button`. The `DragDrop` event occurs when the user drags the `Button` on the screen. And so forth.
-
-Until you write code for any event, nothing happens when the event occurs. For example, if you haven't assigned any code to the `Click` event, the user can click on the `Button` as much as he likes, and it has no effect. You saw this happen above.
-
-The code that you assign to an event is called an Event Handler. The code you assign to the `Click` event is called the `button1_Click` handler. Each event handler is simply a **C#** method. The code for your event handler goes in the `Form1.cs`.
-
-Imagine that you have several `Buttons` on your `Form`, and you want different things to happen when you click each `Button`. A separate `Click` handler is associated with each `Button`, enforced by the naming convention of event handlers.
-
-For example, if my `Form` is named `Form1`, and my `Button` is named `button1`, then the code that I want to execute when the user clicks on `button1` should be in a method called
+Until you write a handler, nothing happens when the event fires. Each handler is a C# method. The naming convention is `controlName_EventName` — for example, a Click handler on `button1` is:
 
 ```cs
 private void button1_Click(object sender, EventArgs e) { ... }
 ```
 
-Fortunately, you don't have to worry about typing out these complicated method names, because **C#** will do it for you. If you double-click in the space beside any event on the Events page, three things happen:
+> **Tip:** Never type this method signature yourself. In the Properties panel, click the **Events** tab (⚡ lightning bolt icon), then **double-click** the space beside the event you want. Visual Studio will generate the correct method name, switch to the code view, and place the cursor inside the method body ready for you to type.
 
-- The correct method name is entered into that space.
-- You are automatically moved from the Form into the code.
-- **C#** creates a skeleton for your event handler with the correct method name, and curly brackets, and places the cursor after the first curly bracket, ready for you to start typing your code.
+| Key terms     |                                                                                                   |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Event         | Something the user or application does that a control can respond to (e.g. `Click`, `MouseHover`) |
+| Event handler | The C# method that runs when a specific event fires                                               |
+| `sender`      | The control that raised the event                                                                 |
+| `EventArgs e` | Additional data about the event (varies by event type)                                            |
 
-It can be confusing to find yourself suddenly looking at the code instead of the `Form`. Don't be alarmed. This is the same thing that occurs when you toggle between the two views – **C#** has just done it for you.
+---
 
-## Event Handler Examples
+## 4. Event Handler Examples
 
-1. Place a `Button` and a `Label` on the `Form`.
-2. Select the `Button`. Select the Events tab. Double-click on the space beside **Click**. You'll see this:
+---
 
-![](../resources/img/07/04-image.png)
+### 4.1 Changing a Label on Button Click
 
-**Note:** If you do not see the `using` directives, click on the icon to see a list of the `using` directives that are available.
-
-![](../resources/img/07/08-image.png)
-
-Enter some code for the `Button` to execute. For example, when the `button1` is clicked, the text property of the `Label` is changed. Here is one possibility:
+Place a `Button` and a `Label` on the Form. In the Events tab, double-click **Click** on the Button. Add:
 
 ```cs
 using System;
@@ -101,348 +110,196 @@ using System.Windows.Forms;
 
 public partial class Form1 : Form
 {
-   public Form1()
-   {
-      InitializeComponent();
-   }
+    public Form1()
+    {
+        InitializeComponent();
+    }
 
-   private void button1_Click(object sender, EventArgs e)
-   {
-      label1.Text = "My text has changed";
-   }
+    private void button1_Click(object sender, EventArgs e)
+    {
+        label1.Text = "My text has changed";
+    }
 }
 ```
 
-Run your application and click on the `Button` to see the `Label` change.
+Run the application and click the Button — the Label text updates.
 
-3. Add a `TextBox` to your `Form`. Set its `Text` property to 0. The example below demonstrates a `Click` handler that counts button clicks and displays the count in a `TextBox`. What would be the effect of clicking on this `Button` ten times?
+---
+
+### 4.2 Counting Button Clicks
+
+Add a `TextBox` and set its initial `Text` to `0`. The handler below increments the count each time the button is clicked.
+
+The preferred approach uses `int.TryParse` — it does not throw an exception if the TextBox contains invalid text:
 
 ```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
+private void button1_Click(object sender, EventArgs e)
 {
-   public Form1()
-   {
-      InitializeComponent();
-   }
+    // TryParse returns false and sets nClicks to 0 if the text is not a valid integer
+    if (!int.TryParse(textBox1.Text, out int nClicks))
+    {
+        nClicks = 0;
+    }
 
-   private void button1_Click(object sender, EventArgs e)
-   {
-      // Check if the TextBox is empty
-      if (textBox1.Text == "")
-      {
-         textBox1.Text = "0";
-      }
-      
-      // Convert the TextBox text to an integer
-      int nClicks = Convert.ToInt16(textBox1.Text);
-
-      // Increment the integer value
-      nClicks = nClicks + 1; // or nClicks++; or nClicks += 1;
-
-      // Convert the integer value back to a string and display it in the TextBox
-      textBox1.Text = Convert.ToString(nClicks);
-   }
+    nClicks++;
+    textBox1.Text = nClicks.ToString();
 }
 ```
 
-Here is an example of using `TryParse` to convert the `TextBox` text to an integer (this is a safer approach):
+An equivalent approach using `Convert.ToInt16` — simpler, but throws `FormatException` if the text is invalid:
 
 ```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
+private void button1_Click(object sender, EventArgs e)
 {
-   public Form1()
-   {
-      InitializeComponent();
-   }
-
-   private void button1_Click(object sender, EventArgs e)
-   {
-      int nClicks;
-      if (!int.TryParse(textBox1.Text, out nClicks))
-      {
-         nClicks = 0;
-      }
-
-      nClicks++;
-      textBox1.Text = nClicks.ToString();
-   }
+    int nClicks = Convert.ToInt16(textBox1.Text); // converts string → 16-bit int
+    nClicks++;
+    textBox1.Text = nClicks.ToString();           // converts int → string for display
 }
 ```
 
-`int.TryParse` is a method that tries to convert the string representation of a number to its 32-bit signed integer equivalent. If the conversion is successful, the method returns `true` and the converted number is stored in the `out` parameter. If the conversion fails, the method returns `false` and the `out` parameter is set to `0`.
+> **Note:** `Convert.ToInt16(s)` converts a string to a 16-bit integer. `nClicks.ToString()` converts an integer back to a string. You cannot assign an `int` directly to a `TextBox.Text` property — the types must match.
 
-**Notes:**
+---
 
-- You cannot write the method definition for the `button1_Click` handler yourself. You must let **Visual Studio** do it for you.
-- The `Convert.ToInt16(n)` function translates the parameter value n into its 16 bit integer representation. Thus `Convert.ToInt16("5")` converts the string "5" into the integer value 5.
+### 4.3 Copying TextBox Content to a Label
 
-Similarly the `Convert.ToString()` method converts from integer to the equivalent string representation. The `Convert.ToString` method could also be replaced by the `.ToString()` method. For example,
+Modify `button1_Click` so that clicking the button copies whatever is in `textBox1` into `label1`:
 
 ```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
+private void button1_Click(object sender, EventArgs e)
 {
-   public Form1()
-   {
-      InitializeComponent();
-   }
-
-   private void button1_Click(object sender, EventArgs e)
-   {
-      int nClicks = Convert.ToInt16(textBox1.Text);
-      nClicks = nClicks + 1; // or nClicks++; or nClicks += 1;
-      textBox1.Text = nClicks.ToString();
-   }
+    label1.Text = textBox1.Text;
 }
 ```
 
-4. Add a `TextBox` to your `Form`. As we saw earlier, the contents of a `TextBox` can be changed while the application is running. Modify your `button1_Click` handler, so that when the `button1` is clicked, the text of the `label1` changes to whatever is in `textBox1`. Run the application and change the `Label` several times by modifying what is in `textBox1`, then clicking the `button1`.
+---
 
-## TextBox and ListBox Controls
+## 5. TextBox and ListBox Controls
 
-We used a single-lined `TextBox` to read and write text. A `TextBox` can also be multi-lined, selected from the drop down box at the top right corner of the `TextBox` control.
+---
 
-Each control has its own set of properties, events and methods. We used the `TextBox` control's properties (e.g. Width) and control events (e.g. Click). There is a third part to the interface of a control: its methods. Methods are commands that the control understands. You use these commands when writing event handlers for the control. For example, `TextBox` controls have a method called `Clear()`. This method tells a `TextBox` to erase all the text it contains. To invoke a method, you use the same dot notation that you used for properties. Thus, the statement `textBox1.Clear();` will erase all the text in a `TextBox` named `textBox1`. To add text to a `TextBox`, use the `AppendText(s)` method, where the parameter is the string that is to be added to the `TextBox`.
+### 5.1 TextBox Methods
 
-A ListBox is another control for reading and writing text. It is multi-lined by definition.
+A `TextBox` can be single-line or multi-line (set via the dropdown at the top-right of the control in the designer). Key methods:
 
-One of the things that makes **C#** so powerful is that a control's properties can themselves be complex objects that have their own methods, events and sub-properties. For example, a `ListBox` contains a property called `Items`, which stores the text contents of the `ListBox` (just as the `Width` property of a `Button` stores the `Width` of the `Button`). The `Items` property is itself a complex data object with methods and properties. For example, `Items` has a method called `Clear()` to clear all items in the `ListBox`. It also has a method called `Add()`, which adds a new line of text to `Items` (and thus to the `ListBox`). To call a sub-method like `Add()`, just extend the dot notation in the logical way, adding the method name after the property name. For example, the following statement puts the string "This is a new line of text" after the current contents of the `ListBox` called `listBox1`:
+| Method                   | Effect                                     |
+| ------------------------ | ------------------------------------------ |
+| `textBox1.Clear()`       | Erases all text in the TextBox             |
+| `textBox1.AppendText(s)` | Appends string `s` to the existing content |
+
+---
+
+### 5.2 ListBox and the `Items` Property
+
+A `ListBox` displays multiple lines of text. Its content is managed through the `Items` property — itself an object with its own methods and properties.
 
 ```cs
-using System;
-using System.Windows.Forms;
+// Add a line
+listBox1.Items.Add("This is a new line of text");
 
-public partial class Form1 : Form
+// Count lines
+int n = listBox1.Items.Count;
+MessageBox.Show($"The ListBox contains {n} lines of text");
+```
+
+---
+
+### 5.3 Common ListBox Operations
+
+**`Contains`** — check whether a string is present:
+
+```cs
+if (listBox1.Items.Contains("This is a new line of text"))
+    MessageBox.Show("Found!");
+```
+
+**`Remove`** — remove a string by value:
+
+```cs
+listBox1.Items.Remove("This is a new line of text");
+```
+
+**`RemoveAt`** — remove a string by index:
+
+```cs
+listBox1.Items.RemoveAt(0); // removes the first item
+```
+
+**`IndexOf`** — find the index of a string:
+
+```cs
+int index = listBox1.Items.IndexOf("This is a new line of text 2"); // returns 1
+```
+
+**Combining `Contains`, `IndexOf`, and `RemoveAt`** — safe removal by value:
+
+```cs
+if (listBox1.Items.Contains("This is a new line of text 2"))
 {
-   public Form1()
-   {
-      InitializeComponent();
-      listBox1.Items.Add("This is a new line of text");
-   }
+    int index = listBox1.Items.IndexOf("This is a new line of text 2");
+    listBox1.Items.RemoveAt(index);
 }
 ```
 
-The `Items` property also has properties of its own. For example, `Items` has a property `Count`, which stores the number of lines of text the `Items` property contains (this is of course equal to the number of lines of text in the `ListBox`).
+| Key terms           |                                                                                              |
+| ------------------- | -------------------------------------------------------------------------------------------- |
+| `Items`             | The `ListBox` property that stores all its text content — has its own methods and properties |
+| `Items.Add(s)`      | Appends string `s` to the ListBox                                                            |
+| `Items.Clear()`     | Removes all items from the ListBox                                                           |
+| `Items.Count`       | Returns the number of items currently in the ListBox                                         |
+| `Items.Contains(s)` | Returns `true` if string `s` exists in the ListBox                                           |
+| `Items.Remove(s)`   | Removes the first occurrence of string `s`                                                   |
+| `Items.RemoveAt(i)` | Removes the item at index `i`                                                                |
+| `Items.IndexOf(s)`  | Returns the index of the first occurrence of string `s`, or -1 if not found                  |
+
+---
+
+## 6. RadioButton Controls
+
+`RadioButtons` are on/off controls that work in **mutually exclusive sets** — selecting one automatically deselects all others in the same container. If you place RadioButtons directly on the Form, they form one set. To create multiple independent sets, place each set inside a separate **GroupBox** or **Panel**.
+
+The event to handle is `CheckedChanged`, which fires whenever a RadioButton's selected state changes:
 
 ```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
+private void radioButton1_CheckedChanged(object sender, EventArgs e)
 {
-   public Form1()
-   {
-      InitializeComponent();
-      listBox1.Items.Add("This is a new line of text");
-      int n = listBox1.Items.Count;
-      MessageBox.Show($"The ListBox contains {n} lines of text");
-   }
+    listBox1.Items.Clear();
+    listBox1.Items.Add("Option A - Line 1");
+    listBox1.Items.Add("Option A - Line 2");
+}
+
+private void radioButton2_CheckedChanged(object sender, EventArgs e)
+{
+    listBox1.Items.Clear();
+    listBox1.Items.Add("Option B - Line 1");
+    listBox1.Items.Add("Option B - Line 2");
 }
 ```
 
-Note that you do not need to know how the `Clear()` method, the `Items` property, the `Add()` method or the `Count` property are implemented. You only need to know how to use them. For example, you must know that the `Add()` method requires a string parameter, and that `Count` property is an integer value. You need to know the interface, but not the implementation.
-
-### Other Useful Methods
-
-`Contains` method checks if a string is in the `ListBox`:
+Conditionally removing an item when a RadioButton is selected:
 
 ```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
+private void radioButton1_CheckedChanged(object sender, EventArgs e)
 {
-   public Form1()
-   {
-      InitializeComponent();
-      listBox1.Items.Add("This is a new line of text");
-      if (listBox1.Items.Contains("This is a new line of text"))
-      {
-         MessageBox.Show("The ListBox contains the string");
-      }
-   }
-}
-```   
+    listBox1.Items.Add("Item 1");
 
-`Remove` method removes a string from the `ListBox`:
-
-```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
-{
-   public Form1()
-   {
-      InitializeComponent();
-      listBox1.Items.Add("This is a new line of text");
-      MessageBox.Show(listBox1.Items.Count.ToString()); // Output: 1
-      listBox1.Items.Remove("This is a new line of text");
-      MessageBox.Show(listBox1.Items.Count.ToString()); // Output: 0
-   }
+    // Remove a specific item if it exists
+    if (listBox1.Items.Contains("Item 12"))
+        listBox1.Items.Remove("Item 12");
 }
 ```
 
-`RemoveAt` method removes a string at a specific index from the `ListBox`:
+| Key terms            |                                                                       |
+| -------------------- | --------------------------------------------------------------------- |
+| `RadioButton`        | An on/off control — only one in a container can be selected at a time |
+| `CheckedChanged`     | Event fired when a RadioButton's selected state changes               |
+| `GroupBox` / `Panel` | Containers used to define independent sets of RadioButtons            |
 
-```cs
-using System;
-using System.Windows.Forms;
+---
 
-public partial class Form1 : Form
-{
-   public Form1()
-   {
-      InitializeComponent();
-      listBox1.Items.Add("This is a new line of text 1");
-      listBox1.Items.Add("This is a new line of text 2");
-      MessageBox.Show(listBox1.Items.Count.ToString()); // Output: 2
-      listBox1.Items.RemoveAt(0);
-      MessageBox.Show(listBox1.Items.Count.ToString()); // Output: 1
-   }
-}
-```
+## 7. DataGridView Control
 
-`IndexOf` method returns the index of a string in the `ListBox`:
-
-```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
-{
-   public Form1()
-   {
-      InitializeComponent();
-      listBox1.Items.Add("This is a new line of text 1");
-      listBox1.Items.Add("This is a new line of text 2");
-      int index = listBox1.Items.IndexOf("This is a new line of text 2");
-      MessageBox.Show(index.ToString()); // Output: 1
-   }
-}
-```
-
-Combining the `Contains`, `IndexOf` and `RemoveAt` methods:
-
-```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
-{
-   public Form1()
-   {
-      InitializeComponent();
-      listBox1.Items.Add("This is a new line of text 1");
-      listBox1.Items.Add("This is a new line of text 2");
-      if (listBox1.Items.Contains("This is a new line of text 2"))
-      {
-         int index = listBox1.Items.IndexOf("This is a new line of text 2");
-         listBox1.Items.RemoveAt(index);
-      }
-   }
-}
-```
-
-## Radio Button Controls
-
-**C#** provides two familiar user interface elements that can be used to collect user input to determine branching conditions. They are `RadioButtons` and `CheckBoxes`.
-
-`RadioButtons` are yes/no (or on/off) controls that occur in mutually exclusive sets. That is, only one member of a set of radio buttons can be selected (on) at a time. Selecting any member of a set of radio buttons causes all the other members to be deselected.
-
-If you place a number of radio buttons directly on the `Form`, they are automatically members of a mutually exclusive set (i.e. only one of them can be selected at a time). If you want more than one set of radio buttons, you must place each set in a separate container. **C#** provides two types of containers. They can be used to group any **C#** controls, but are most frequently used to define a set of `RadioButtons`. They are a `GroupBox` and a `Panel`. You must manually place each button on the container, and must manually change the caption of each button.
-
-Here is an example of using the `RadioButton` with `ListBox`:
-
-```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
-{
-   public Form1()
-   {
-      InitializeComponent();
-   }
-
-   private void radioButton1_CheckedChanged(object sender, EventArgs e)
-   {
-      listBox1.Items.Clear();
-      listBox1.Items.Add("This is a new line of text 1");
-      listBox1.Items.Add("This is a new line of text 2");
-      listBox1.Items.Add("This is a new line of text 3");
-      listBox1.Items.Add("This is a new line of text 4");
-      listBox1.Items.Add("This is a new line of text 5");
-   }
-
-   private void radioButton2_CheckedChanged(object sender, EventArgs e)
-   {
-      listBox1.Items.Clear();
-      listBox1.Items.Add("This is a new line of text 6");
-      listBox1.Items.Add("This is a new line of text 7");
-      listBox1.Items.Add("This is a new line of text 8");
-      listBox1.Items.Add("This is a new line of text 9");
-      listBox1.Items.Add("This is a new line of text 10");
-   }
-}
-```
-
-How to delete an item from a `ListBox` if it contains a specific string:
-
-```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
-{
-   public Form1()
-   {
-      InitializeComponent();
-      listBox1.Items.Add("This is a new line of text 11");
-      listBox1.Items.Add("This is a new line of text 12");
-   }
-
-   private void radioButton1_CheckedChanged(object sender, EventArgs e)
-   {
-      listBox1.Items.Add("This is a new line of text 1");
-      listBox1.Items.Add("This is a new line of text 2");
-      listBox1.Items.Add("This is a new line of text 3");
-      listBox1.Items.Add("This is a new line of text 4");
-      listBox1.Items.Add("This is a new line of text 5");
-
-      if (listBox1.Items.Contains("This is a new line of text 12"))
-      {
-         listBox1.Items.Remove("This is a new line of text 12");
-      }
-   }
-
-   private void radioButton2_CheckedChanged(object sender, EventArgs e)
-   {
-      listBox1.Items.Add("This is a new line of text 6");
-      listBox1.Items.Add("This is a new line of text 7");
-      listBox1.Items.Add("This is a new line of text 8");
-      listBox1.Items.Add("This is a new line of text 9");
-      listBox1.Items.Add("This is a new line of text 10");
-
-      if (listBox1.Items.Contains("This is a new line of text 11"))
-      {
-         listBox1.Items.Remove("This is a new line of text 11");
-      }
-   }
-}
-```
-
-## Data Grid View Control
-
-The `DataGridView` control is a new control that replaces the `DataGrid` control. The `DataGridView` control provides a powerful and flexible way to display data in a tabular format. You can use the `DataGridView` control to show read-only views of a small amount of data, or you can scale it to show editable views of very large sets of data. The `DataGridView` control supports the standard Windows Forms data binding model, so it can bind to a variety of data sources.
+The `DataGridView` control displays data in a tabular (rows and columns) format. It supports both read-only and editable views and can be bound to a variety of data sources.
 
 ```cs
 using System;
@@ -451,329 +308,285 @@ using System.Windows.Forms;
 
 public partial class Form1 : Form
 {
-   private List<string> names;
+    private List<string> names;
 
-   public Form1()
-   {
-      InitializeComponent();
+    public Form1()
+    {
+        InitializeComponent();
 
-      names = new List<string>() { "John", "Mary", "Bob", "Jane" };
+        names = new List<string> { "John", "Mary", "Bob", "Jane" };
 
-      dataGridView1.Columns.Add("Col1", "Name");  //first value for column identifier and the second value for the column title you want to appear
+        // First argument: column identifier (used in code)
+        // Second argument: column header shown to the user
+        dataGridView1.Columns.Add("Col1", "Name");
 
-      foreach (string name in names)
-      {
-         int rowIdx = dataGridView1.Rows.Add();
-         dataGridView1.Rows[rowIdx].Cells["Col1"].Value = name;
-      }
-   }
+        foreach (string name in names)
+        {
+            int rowIdx = dataGridView1.Rows.Add();                    // add a new empty row
+            dataGridView1.Rows[rowIdx].Cells["Col1"].Value = name;    // populate the cell
+        }
+    }
 }
 ```
 
-## Creating and Managing Multiple Forms
+| Key terms                 |                                                                  |
+| ------------------------- | ---------------------------------------------------------------- |
+| `DataGridView`            | Control for displaying data in a resizable rows-and-columns grid |
+| `Columns.Add(id, header)` | Adds a column with a code identifier and a visible header label  |
+| `Rows.Add()`              | Appends a new empty row and returns its index                    |
+| `Rows[i].Cells["Col"]`    | Accesses a specific cell by row index and column identifier      |
 
-Most applications consist of multiple windows or forms. For example, you might have a main form and additional forms for settings, help, or data entry. **Visual Studio** makes it easy to add new forms to your project and navigate between them.
+---
 
-### Adding a New Form
+## 8. Creating and Managing Multiple Forms
 
-1. **Right-click** on your project name in the **Solution Explorer**.
-2. Select **Add** → **Windows Form**.
-3. Give your new form a descriptive name (e.g., `SettingsForm.cs`, `AboutForm.cs`).
+Most applications contain more than one Form — for example, a main window alongside settings, help, or data-entry dialogs.
+
+---
+
+### 8.1 Adding a New Form
+
+1. Right-click the project name in **Solution Explorer**.
+2. Select **Add > Windows Form**.
+3. Give the form a descriptive name (e.g. `SettingsForm.cs`, `AboutForm.cs`).
 4. Click **Add**.
 
-This creates a new form class that you can design just like your main form, adding controls and event handlers as needed.
+The new form can be designed and given event handlers exactly like the main form.
 
-### Opening a New Form from Code
+---
 
-To display a new form from your main form, you need to create an instance of the new form and show it. There are two main ways to display forms:
+### 8.2 Showing a Form
 
-**Modal Forms (Dialog boxes):**
-Modal forms must be closed before the user can interact with other forms in the application.
-
-```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
-{
-   public Form1()
-   {
-      InitializeComponent();
-   }
-
-   private void button1_Click(object sender, EventArgs e)
-   {
-      // Create an instance of the new form
-      Form2 settingsForm = new Form2();
-      
-      // Show it as a modal dialog
-      settingsForm.ShowDialog();
-      
-      // Code here will execute only after Form2 is closed
-   }
-}
-```
-
-**Modeless Forms:**
-Modeless forms allow the user to interact with multiple forms simultaneously.
-
-```cs
-using System;
-using System.Windows.Forms;
-
-public partial class Form1 : Form
-{
-   public Form1()
-   {
-      InitializeComponent();
-   }
-
-   private void button1_Click(object sender, EventArgs e)
-   {
-      // Create an instance of the new form
-      Form2 infoForm = new Form2();
-      
-      // Show it as a modeless form
-      infoForm.Show();
-      
-      // Code here executes immediately, Form2 stays open
-   }
-}
-```
-
-### Passing Data Between Forms
-
-Often you need to pass data from one form to another. Here are common approaches:
-
-**Using Properties:**
-
-```cs
-// In Form2.cs
-public partial class Form2 : Form
-{
-   public string UserName { get; set; }
-   public int UserAge { get; set; }
-
-   public Form2()
-   {
-      InitializeComponent();
-   }
-
-   private void Form2_Load(object sender, EventArgs e)
-   {
-      // Use the passed data
-      labelWelcome.Text = $"Welcome, {UserName}! Age: {UserAge}";
-   }
-}
-
-// In Form1.cs
-private void button1_Click(object sender, EventArgs e)
-{
-   Form2 userForm = new Form2();
-   userForm.UserName = textBoxName.Text;
-   userForm.UserAge = Convert.ToInt32(textBoxAge.Text);
-   userForm.ShowDialog();
-}
-```
-
-**Using Constructor Parameters:**
-
-```cs
-// In Form2.cs
-public partial class Form2 : Form
-{
-   public Form2(string name, int age)
-   {
-      InitializeComponent();
-      labelWelcome.Text = $"Welcome, {name}! Age: {age}";
-   }
-}
-
-// In Form1.cs
-private void button1_Click(object sender, EventArgs e)
-{
-   string name = textBoxName.Text;
-   int age = Convert.ToInt32(textBoxAge.Text);
-   Form2 userForm = new Form2(name, age);
-   userForm.ShowDialog();
-}
-```
-
-### Getting Data Back from a Form
-
-To retrieve data from a form after it closes, you can use properties:
-
-```cs
-// In Form2.cs (a data entry form)
-public partial class Form2 : Form
-{
-   public string EnteredText { get; private set; }
-   public bool UserClickedOK { get; private set; }
-
-   public Form2()
-   {
-      InitializeComponent();
-      UserClickedOK = false;
-   }
-
-   private void buttonOK_Click(object sender, EventArgs e)
-   {
-      EnteredText = textBox1.Text;
-      UserClickedOK = true;
-      this.Close();
-   }
-
-   private void buttonCancel_Click(object sender, EventArgs e)
-   {
-      UserClickedOK = false;
-      this.Close();
-   }
-}
-
-// In Form1.cs
-private void button1_Click(object sender, EventArgs e)
-{
-   Form2 dataForm = new Form2();
-   dataForm.ShowDialog();
-
-   if (dataForm.UserClickedOK)
-   {
-      string result = dataForm.EnteredText;
-      MessageBox.Show($"User entered: {result}");
-   }
-   else
-   {
-      MessageBox.Show("User cancelled");
-   }
-}
-```
-
-### Closing Forms Properly
-
-To close a form from within its own code:
-
-```cs
-private void buttonClose_Click(object sender, EventArgs e)
-{
-   this.Close();  // Closes the current form
-}
-```
-
-To close the entire application (usually from the main form):
-
-```cs
-private void buttonExit_Click(object sender, EventArgs e)
-{
-   Application.Exit();  // Closes the entire application
-}
-```
-
-### Form Events
-
-Forms have their own events that you can handle:
-
-```cs
-public partial class Form2 : Form
-{
-   public Form2()
-   {
-      InitializeComponent();
-   }
-
-   private void Form2_Load(object sender, EventArgs e)
-   {
-      // Executes when the form loads
-      MessageBox.Show("Form is loading!");
-   }
-
-   private void Form2_FormClosing(object sender, FormClosingEventArgs e)
-   {
-      // Executes when the form is about to close
-      DialogResult result = MessageBox.Show("Are you sure you want to close?", 
-                                          "Confirm Close", 
-                                          MessageBoxButtons.YesNo);
-      if (result == DialogResult.No)
-      {
-         e.Cancel = true;  // Prevents the form from closing
-      }
-   }
-}
-```
-
-### Best Practices for Multiple Forms
-
-1. **Naming Convention:** Give forms descriptive names (e.g., `LoginForm`, `SettingsForm`, `ReportForm`).
-
-2. **Resource Management:** Always dispose of forms properly. Using `ShowDialog()` automatically disposes the form when closed.
-
-3. **Data Validation:** Validate data before closing forms, especially when retrieving user input.
-
-4. **Error Handling:** Use try-catch blocks when converting user input or performing operations that might fail.
+**Modal** (`ShowDialog`) — the user must close this form before interacting with any other form:
 
 ```cs
 private void button1_Click(object sender, EventArgs e)
 {
-   try
-   {
-      int age = Convert.ToInt32(textBoxAge.Text);
-      Form2 userForm = new Form2("User", age);
-      userForm.ShowDialog();
-   }
-   catch (FormatException)
-   {
-      MessageBox.Show("Please enter a valid age.");
-   }
+    Form2 settingsForm = new Form2();
+    settingsForm.ShowDialog();
+    // Code here runs only after Form2 is closed
 }
 ```
 
-# Exercises
+**Modeless** (`Show`) — the user can interact with multiple forms simultaneously:
+
+```cs
+private void button1_Click(object sender, EventArgs e)
+{
+    Form2 infoForm = new Form2();
+    infoForm.Show();
+    // Code here runs immediately — Form2 stays open
+}
+```
+
+---
+
+### 8.3 Passing Data to a Form
+
+**Via properties** — set properties on the form instance before showing it:
+
+```cs
+// Form2.cs
+public partial class Form2 : Form
+{
+    public string UserName { get; set; }
+    public int    UserAge  { get; set; }
+
+    public Form2() { InitializeComponent(); }
+
+    private void Form2_Load(object sender, EventArgs e)
+    {
+        labelWelcome.Text = $"Welcome, {UserName}! Age: {UserAge}";
+    }
+}
+
+// Form1.cs
+private void button1_Click(object sender, EventArgs e)
+{
+    Form2 userForm = new Form2();
+    userForm.UserName = textBoxName.Text;
+    userForm.UserAge  = Convert.ToInt32(textBoxAge.Text);
+    userForm.ShowDialog();
+}
+```
+
+**Via constructor parameters** — pass data directly when the form is created:
+
+```cs
+// Form2.cs
+public Form2(string name, int age)
+{
+    InitializeComponent();
+    labelWelcome.Text = $"Welcome, {name}! Age: {age}";
+}
+
+// Form1.cs
+private void button1_Click(object sender, EventArgs e)
+{
+    Form2 userForm = new Form2(textBoxName.Text, Convert.ToInt32(textBoxAge.Text));
+    userForm.ShowDialog();
+}
+```
+
+---
+
+### 8.4 Getting Data Back from a Form
+
+Expose the result as a public property, then read it after `ShowDialog` returns:
+
+```cs
+// Form2.cs
+public partial class Form2 : Form
+{
+    public string EnteredText   { get; private set; }
+    public bool   UserClickedOK { get; private set; }
+
+    public Form2() { InitializeComponent(); }
+
+    private void buttonOK_Click(object sender, EventArgs e)
+    {
+        EnteredText   = textBox1.Text;
+        UserClickedOK = true;
+        this.Close();
+    }
+
+    private void buttonCancel_Click(object sender, EventArgs e)
+    {
+        UserClickedOK = false;
+        this.Close();
+    }
+}
+
+// Form1.cs
+private void button1_Click(object sender, EventArgs e)
+{
+    Form2 dataForm = new Form2();
+    dataForm.ShowDialog();
+
+    if (dataForm.UserClickedOK)
+        MessageBox.Show($"User entered: {dataForm.EnteredText}");
+    else
+        MessageBox.Show("User cancelled");
+}
+```
+
+---
+
+### 8.5 Closing Forms
+
+```cs
+this.Close();          // close the current form
+Application.Exit();    // close the entire application (use in the main form only)
+```
+
+---
+
+### 8.6 Form Events
+
+| Event              | When it fires                                                          |
+| ------------------ | ---------------------------------------------------------------------- |
+| `Form_Load`        | When the form is first loaded                                          |
+| `Form_FormClosing` | Just before the form closes — set `e.Cancel = true` to prevent closing |
+
+```cs
+private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+{
+    DialogResult result = MessageBox.Show(
+        "Are you sure you want to close?",
+        "Confirm Close",
+        MessageBoxButtons.YesNo);
+
+    if (result == DialogResult.No)
+        e.Cancel = true;   // abort the close
+}
+```
+
+---
+
+### 8.7 Best Practices for Multiple Forms
+
+**Naming** — use descriptive names: `LoginForm`, `SettingsForm`, `ReportForm`.
+
+**Disposal** — `ShowDialog()` automatically disposes the form when it closes. For modeless forms shown with `Show()`, dispose manually if needed.
+
+**Validation** — always validate user input before closing a data-entry form.
+
+**Error handling** — wrap input conversions in `try-catch`:
+
+```cs
+private void button1_Click(object sender, EventArgs e)
+{
+    try
+    {
+        int age = Convert.ToInt32(textBoxAge.Text);
+        Form2 userForm = new Form2("User", age);
+        userForm.ShowDialog();
+    }
+    catch (FormatException)
+    {
+        MessageBox.Show("Please enter a valid age.");
+    }
+}
+```
+
+| Key terms            |                                                                                                      |
+| -------------------- | ---------------------------------------------------------------------------------------------------- |
+| Modal form           | A form that must be closed before the user can interact with other forms — shown with `ShowDialog()` |
+| Modeless form        | A form that can coexist with other open forms — shown with `Show()`                                  |
+| `this.Close()`       | Closes the current form                                                                              |
+| `Application.Exit()` | Terminates the entire application                                                                    |
+| `Form_Load`          | Event that fires when the form is first loaded — used to set up initial state                        |
+| `FormClosing`        | Event that fires just before a form closes — set `e.Cancel = true` to abort                          |
+
+---
+
+## Exercises
 
 Before you start, create a new **C# Windows Forms** application with a descriptive name.
 
-**Important Note About AI Tools:**
-
-Learning to use AI tools is valuable, but you **must** be aware of the following:
+**Important:** Learning to use AI tools is valuable, but you must:
 
 - Refine your prompts to get useful responses
-- Don't trust AI responses blindly - verify and test the code
-- Acknowledge AI tool usage in your assessment's repository **README.md** file, including what prompts you used and how you applied the responses
+- Verify and test all AI-generated code before submitting
+- Acknowledge AI tool usage in your repository `README.md`, including the prompts you used and how you applied the responses
 
-## Task 1:
+---
 
-Write code that allows the user to enter a number into each of five `TextBoxes`. Provide `Buttons` that compute the sum and the average of the five numbers. Remember that you must convert the contents of a `TextBox` to an integer, and convert an integer back to a string that can be displayed in a `TextBox`. A possible form layout is:
+### Task 1 — Five-Number Calculator
 
-![](../resources/img/07/05-image.png)
+Write an application that lets the user enter a number into each of five `TextBox` controls. Provide two `Buttons` — one that calculates and displays the **sum**, and one that calculates and displays the **average**. Display results in a separate `TextBox` or `Label`.
 
-## Task 2:
+> **Hint:** remember to convert `TextBox.Text` to a number before arithmetic, and convert the result back to a string before assigning it to `TextBox.Text` or `Label.Text`. Use `int.TryParse` for safe conversion.
 
-Write code that allows the user to enter two numbers, select an arithmetic operation and calculate the answer. Note that this calculator accepts the data as a text entry inside a `TextBox`, rather than as a series of push-button clicks.
+---
 
-![](../resources/img/07/06-image.png)
+### Task 2 — Arithmetic Calculator
 
-1. Create a new form.
-2. Set up the form, selecting an appropriate colour, font and style. Set the form's `Text` property to **Calculator**.
-3. Add the `Buttons`, providing the values for each `Text` property.
-4. The line between the top two `TextBoxes` and the third `TextBox` is a `Panel`. Decide how you want your interface to look and use the appropriate control.
-5. Add the code for the `Click` event for each `Button`.
-6. Set the third `TextBox's` `ReadOnly` property to `True`. This will stop the user entering a value in this `TextBox` and overwriting the calculated answer.
-7. Add `Buttons` for **mod/modulus** and **div/division** with the appropriate functionality.
+Write a calculator application that accepts two numbers in `TextBox` controls, lets the user select an arithmetic operation, and displays the result.
 
-**Note:** To make this application robust, so that it doesn't break under different conditions, we need to check for data validation on the input (checking that the user has entered a valid number.) This is beyond our expertise at present, so we will assume the best-case scenario, that the user enters only valid integers.
+1. Create a new Form and set its `Text` property to `Calculator`
+2. Add two `TextBox` controls for input and one `ReadOnly` `TextBox` for the result (set `ReadOnly = true` to prevent the user from overwriting it)
+3. Add `Buttons` for `+`, `-`, `×`, `÷`, **mod**, and **div** — implement a `Click` handler for each
+4. Use a `Panel` or `Label` as a visual divider between the input fields and the result field
 
-## Task 3:
+> **Hint:** set the result TextBox's `ReadOnly` property to `true` in the Properties panel. Assume the user always enters valid integers for now — full input validation is beyond the scope of this exercise.
 
-Write an application for use in a Pizza Parlour. The user enters his order, and the application displays the order and computes the price. Your solution could look like this (images are optional):
+---
 
-![](../resources/img/07/07-image.png)
+### Task 3 — Pizza Parlour Order System
 
-1. Create a new form.
-2. Your form should allow at least two sizes of pizza, with different prices. Users must select a size. If a user tries to order without selecting a size, the user should receive polite feedback asking him to please specify the size.
-3. You should provide at least five different extra toppings, each with associated prices. Users can select any combination of extra toppings, or none at all.
-4. You should correctly display the order in a `ListBox` and compute the total and display it in a `TextBox`.
-5. When a new order is generated, the old order information should be cleared from the display.
+Write an application for a pizza parlour. The user builds an order and the application displays it with a total price.
 
-**Note:** You can generate a new order by clicking on a `Button` or dynamically as the user selects different options.
+1. Create a new Form for the order interface
+2. Provide at least **two pizza sizes** (e.g. Small, Large) with different prices — use `RadioButtons` inside a `GroupBox`. If the user clicks **Order** without selecting a size, display a polite message asking them to choose one
+3. Provide at least **five optional toppings** with associated prices — use `CheckBoxes` so the user can select any combination
+4. Add an **Order** `Button` that writes the full order to a `ListBox` and displays the total in a `TextBox`
+5. Each new order should clear the previous order from the `ListBox` and `TextBox` before displaying the new one
+
+> **Hint:** use `RadioButton.Checked` to read which size is selected, and `CheckBox.Checked` to read which toppings are selected. Use `listBox1.Items.Clear()` at the start of each order calculation.
+
+---
 
 ## Submission
 
-Push your completed code to your **GitHub** repository. Ensure your code is well-commented and follows proper naming conventions.
+Push your completed code to your GitHub repository. Ensure your code is well-commented and follows the naming conventions from Week 01.

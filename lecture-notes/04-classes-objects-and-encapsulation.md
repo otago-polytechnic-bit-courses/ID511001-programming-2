@@ -1,185 +1,178 @@
-# 04: Classes, Objects and Encapsulation
+# Week 04 — Classes, Objects & Encapsulation
 
-In **ID510001: Programming 1**, you learned about **structs**. Before we take a look at **classes**, let us first recap what a **struct** is.
+## Navigation
 
-## Struct
+|            | Link                                    |
+| ---------- | --------------------------------------- |
+| ← Previous | [Week 03 — Windows Forms Application](lecture-notes/03-windows-forms-application.md) |
+| → Next     | [Week 05 — Abstraction, Inheritance & Polymorphism](lecture-notes/05-abstraction-inheritance-and-polymorphism.md) |
 
-A **struct** is a data structure that can contain **fields** and **methods**. It is similar to a **class**, but it cannot be inherited from or used as a base class. It is often used to group related data together, such as the properties of a person or the attributes of a product.
+---
 
-Here is an example of a simple **struct**:
+## 1. Struct (Recap)
+
+A **struct** is a data structure that groups related fields and methods together. You may have encountered structs in Programming 1. Here is a simple example:
 
 ```cs
 public struct Dog
 {
-    // Fields
     public string name;
-    public int age;
+    public int    age;
 
-    // Methods
     public string Bark() => "Woof woof!";
 }
 ```
 
-Look familiar?
+---
 
-## Class
+## 2. Class
 
-So what is the difference? A **class** is a blueprint for creating **objects** (a particular data structure), providing initial values for state (member **variables** or **fields**), and implementations of behaviour (member functions or **methods**). A **class** can be defined using the `class` keyword, followed by the **class** name.
-
-Here is an example of a simple **class**:
+A **class** is a blueprint for creating **objects**. It defines the initial state (fields) and behaviour (methods) that every object created from it will have. The syntax looks almost identical to a struct:
 
 ```cs
 public class Dog
 {
-    // Fields
+    // Fields — store the object's state
     public string name;
-    public int age;
+    public int    age;
 
-    // Methods
+    // Method — defines behaviour
     public string Bark() => "Woof woof!";
 }
 ```
 
-In this example, the **class** `Dog` has two **fields**, `name` and `age`, which represent the name and age of a dog, respectively. The **class** also has one **method**, `Bark()`, which causes the dog to bark by displaying "Woof woof!".
+📖 Reference: [Choosing between class and struct](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct)
 
-## When to use a struct vs a class?
+---
 
-Reading - <https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct>
+## 3. Struct vs Class
 
-## Objects
+| Feature                   | Struct                                | Class                                     |
+| ------------------------- | ------------------------------------- | ----------------------------------------- |
+| Type                      | Value type                            | Reference type                            |
+| Memory                    | Stack or inline                       | Heap                                      |
+| Parameterless constructor | Not allowed                           | Allowed                                   |
+| Inheritance               | Cannot inherit                        | Supports inheritance                      |
+| Nullability               | Cannot be `null` (unless nullable)    | Can be `null`                             |
+| Performance               | Efficient for small, immutable types  | More flexible, slight overhead            |
+| Best for                  | Small, lightweight, single-value data | Larger, complex objects with shared state |
+| Copying                   | Copies entire value                   | Copies reference only                     |
 
-To create an **object** from this **class**, you can use the `new` keyword and the **class** constructor like this:
+| Key terms      |                                                                                   |
+| -------------- | --------------------------------------------------------------------------------- |
+| Value type     | Copied when assigned — each variable holds its own data (e.g. `int`, `struct`)    |
+| Reference type | Copied by reference — variables point to the same object in memory (e.g. `class`) |
+| Stack          | Memory region used for local variables and parameters                             |
+| Heap           | Memory region used for objects                                                    |
+| Immutable      | An object whose state cannot be changed after creation                            |
+| Nullable       | A type that can be assigned `null`                                                |
+
+---
+
+## 4. Objects
+
+To create an **object** from a class, use the `new` keyword:
 
 ```cs
 public Form1()
 {
     InitializeComponent();
 
-    Dog myDog = new Dog(); // Create a new object of type Dog
-    myDog.name = "Max"; // Set the name field to "Max"
-    myDog.age = 3; // Set the age field to 3
-    MessageBox.Show(myDog.Bark()); // Call the Bark() method which outputs - "Woof woof!"
+    Dog myDog = new Dog();   // create a new Dog object
+    myDog.name = "Max";      // set the name field
+    myDog.age  = 3;          // set the age field
+
+    MessageBox.Show(myDog.Bark()); // "Woof woof!"
 }
 ```
 
-This code creates a new **object** of type `Dog` named `myDog`, assigns values to its `name` and `age` **fields**, and then calls the `Bark()` **method** on the **object**.
+| Key terms |                                                                        |
+| --------- | ---------------------------------------------------------------------- |
+| Object    | A specific instance of a class — created with the `new` keyword        |
+| Field     | A variable declared inside a class that stores the object's state      |
+| Method    | A function declared inside a class that defines the object's behaviour |
 
-## Constructors
+---
 
-Classes can also have **constructors**, which are special **methods** that are called when an **object** is created and can be used to initialise the **object's** state. For example:
+## 5. Constructors
+
+A **constructor** is a special method called automatically when an object is created. It is used to set the object's initial state. A constructor has the same name as the class and no return type:
 
 ```cs
 public class Dog
 {
-    // Fields
     public string name;
-    public int age;
+    public int    age;
 
-    // Constructor
+    // Constructor — called when Dog object is created with new Dog(...)
     public Dog(string name, int age)
     {
-        this.name = name;
-        this.age = age;
+        this.name = name;  // 'this' refers to the current object (see Section 6)
+        this.age  = age;
     }
 
-    // Methods
     public string Bark() => "Woof woof!";
 }
 ```
 
-In this example, the **class** `Dog` has a constructor that takes two parameters, `name` and `age`, and assigns them to the corresponding **fields**. To create an **object** from this **class**, you can use the **constructor** and pass in the required parameters like this:
+Creating an object with the constructor:
 
 ```cs
-public Form1()
-{
-    InitializeComponent();
-
-    Dog myDog = new Dog("Max", 3); // Create object using constructor
-    MessageBox.Show(myDog.Bark()); // Output: "Woof woof!"
-}
+Dog myDog = new Dog("Max", 3);   // name and age set via constructor
+MessageBox.Show(myDog.Bark());   // "Woof woof!"
 ```
 
-This code creates a new **object** of type `Dog` named `myDog` and assigns values to its `name` and `age` **fields** via the constructor. Then it calls the `Bark()` **method** on the **object**, which causes it to bark.
+> **Note:** If you see a syntax error on `new Dog("Max", 3)`, you may be using an older version of C# that requires a slightly different constructor syntax. Check with your lecturer.
 
-If you see the following error, it means you are using an older version of **C#**.
+---
 
-![alt text](../resources/img/07/syntax.png)
+## 6. The `this` Keyword
 
-## this
-
-In the previous example, we used the `this` keyword. The `this` keyword is used to refer to the current **object** in a **class**. For example:
+`this` refers to the **current object** inside a class. It is most commonly used in constructors to distinguish between a parameter and a field that share the same name:
 
 ```cs
 public class Dog
 {
-    // Fields
     public string name;
-    public int age;
+    public int    age;
 
-    // Constructor
     public Dog(string name, int age)
     {
-        this.name = name;
-        this.age = age;
+        this.name = name;  // this.name = the field; name = the parameter
+        this.age  = age;
     }
 
-    // Methods
-    public string Bark() => "Woof woof!";
+    public string Bark()        => "Woof woof!";
     public string DisplayInfo() => $"Name: {name}, Age: {age}";
 
-    // Instead of DisplayInfo(), you can also use ToString() method
+    // ToString() is called automatically when the object is converted to a string
     public override string ToString() => $"Name: {name}, Age: {age}";
 }
 ```
 
-## ToString()
+---
 
-The `ToString()` method is a special **method** that is called when an **object** is converted to a string. It is often used to provide a string representation of an **object**. For example:
+## 7. `ToString()`
+
+`ToString()` is a built-in method inherited by every class. Overriding it lets you control the string representation of your object:
 
 ```cs
-public Form1()
-{
-    InitializeComponent();
-
-    Dog myDog = new Dog("Max", 3);
-    MessageBox.Show(myDog.ToString()); // Output: "Name: Max, Age: 3"
-}
+Dog myDog = new Dog("Max", 3);
+MessageBox.Show(myDog.ToString()); // "Name: Max, Age: 3"
 ```
 
-## What is the difference between a struct and a class?
+---
 
-| Feature                          | Struct                                   | Class                                      |
-| -------------------------------- | ---------------------------------------- | ------------------------------------------ |
-| **Value Type vs Reference Type** | Value type                               | Reference type                             |
-| **Memory Allocation**            | Stack or inline                          | Heap                                       |
-| **Default Constructor**          | No parameterless constructor             | Allows parameterless constructor           |
-| **Inheritance**                  | Cannot inherit                           | Supports inheritance                       |
-| **Nullability**                  | Cannot be null (unless nullable)         | Can be null                                |
-| **Performance**                  | Efficient for small, immutable types     | Provides more flexibility, slight overhead |
-| **Usage Scenarios**              | Small, lightweight, single-value objects | Larger, complex objects with shared state  |
-| **Copying**                      | Copy involves entire value               | Copy involves reference                    |
+## 8. Static Classes
 
-**Glossary:**
-
-- **Value type**: A type whose value is copied when it is assigned to a variable or passed as a parameter. Examples include `int`, `double`, `bool`, `char`, `struct`, and `enum`.
-- **Reference type**: A type whose value is passed by reference. Examples include `string`, `class`, `interface`, `delegate`, and `object`.
-- **Stack**: A region of memory that is used to store local variables and parameters.
-- **Heap**: A region of memory that is used to store objects.
-- **Immutable**: An object whose state cannot be changed after it has been created.
-- **Nullable**: A type that can be assigned `null`.
-- **Parameterless constructor**: A constructor that takes no parameters.
-- **Inheritance**: The ability to create a new class from an existing class. We will talk more about this in `05-inheritance-and-polymorphism.md`.
-
-## Static Class
-
-A **static** class cannot be instantiated and can only contain **static** members. It is often used to group related **static** members together, such as **constants** and **utility methods**. For example:
+A **static class** cannot be instantiated — you never call `new` on it. All its members must also be `static`. Static classes are useful for grouping utility methods and constants.
 
 ```cs
 public static class Utils
 {
     public static void BubbleSort(int[] arr)
     {
-        int n = arr.Length;
+        int  n = arr.Length;
         bool isSwapped;
 
         for (int i = 0; i < n - 1; i++)
@@ -190,86 +183,87 @@ public static class Utils
             {
                 if (arr[j] > arr[j + 1])
                 {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
+                    // Swap adjacent elements
+                    int temp  = arr[j];
+                    arr[j]    = arr[j + 1];
                     arr[j + 1] = temp;
                     isSwapped = true;
                 }
             }
 
-            // If no two members were swapped by inner loop, then break
+            // If no swaps occurred on this pass, the array is already sorted
             if (!isSwapped) break;
         }
     }
 }
 ```
 
-How do we use a **static** class? Let us take a look at the following example:
+Calling a static method — no object required:
 
 ```cs
-public Form1()
-{
-    InitializeComponent();
-
-    int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
-    MessageBox.Show($"Original array: {string.Join(", ", arr)}");
-    Utils.BubbleSort(arr);
-    MessageBox.Show($"Sorted array: {string.Join(", ", arr)}");
-}
+int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
+MessageBox.Show($"Original: {string.Join(", ", arr)}");
+Utils.BubbleSort(arr);
+MessageBox.Show($"Sorted:   {string.Join(", ", arr)}");
 ```
 
-**Note**: There is no need to create an **object** of type `Utils` because all the members of the **class** are **static**.
+| Key terms     |                                                                          |
+| ------------- | ------------------------------------------------------------------------ |
+| Static class  | A class that cannot be instantiated — called directly via the class name |
+| Static member | A field or method that belongs to the class itself, not to any instance  |
 
-## Scoping
+---
 
-There are several keywords that can be used to define the scope of **variables**, **methods**, and other members of a **class**. The most commonly used scope keywords are:
+## 9. Scoping (Access Modifiers)
 
-- `public`: Members defined as public can be accessed from anywhere within the application, both inside and outside the **class** in which they are defined.
+Access modifiers control the visibility of fields, methods, and other class members.
 
-- `private`: Members defined as private can only be accessed within the **class** in which they are defined.
+| Modifier             | Accessible from                                       |
+| -------------------- | ----------------------------------------------------- |
+| `public`             | Anywhere — inside and outside the class               |
+| `private`            | Only within the class where it is defined             |
+| `protected`          | Within the class and any derived (child) classes      |
+| `internal`           | Within the same assembly (`.exe` or `.dll`)           |
+| `protected internal` | Same assembly, or derived classes in other assemblies |
+| `static`             | Belongs to the class, not to a specific instance      |
 
-- `protected`: Members defined as protected can be accessed within the **class** in which they are defined and any derived **classes**.
+> Other keywords — `abstract`, `sealed`, `override`, `virtual` — relate to inheritance and polymorphism, which are covered in Week 05.
 
-- `internal`: Members defined as internal can be accessed within the same assembly, i.e., `.exe` file in which they are defined, but not from other assemblies.
+Choosing the right access modifier is important for controlling visibility, enforcing good design, and preventing unintended access to internal implementation details.
 
-- `protected internal`: Members defined as protected internal can be accessed within the same assembly in which they are defined and from derived **classes** in other assemblies.
+---
 
-- `static`: Members defined as static are associated with the **class** rather than with a specific instance of the **class**. They can be accessed without creating an instance of the **class**.
+## 10. Encapsulation
 
-It is also worth noting that there are other keywords, such as `abstract`, `sealed`, `override` and `virtual`, are used in the context of **inheritance** and **polymorphism** to define the behaviour of the **classes** and **methods**.
+**Encapsulation** means hiding the internal implementation of a class and exposing only what is necessary through a public interface. It promotes abstraction, modularity, and data integrity — one of the core principles of object-oriented programming.
 
-It is important to choose the right scope keyword depending on the intended use of the element in question, as it can affect the visibility, accessibility and overall design of the application.
+A common real-world analogy is a bank account: the balance is hidden from the public, but the bank exposes controlled operations (deposit, withdraw, view balance) through a safe interface.
 
-## Encapsulation
+---
 
-Encapsulation is the process of hiding the implementation details of a class from the outside world and exposing only the necessary information and functionality through a public interface. Encapsulation is one of the fundamental principles of object-oriented programming, and it is used to promote the principles of abstraction, modularity, and information hiding.
+### 10.1 Properties
 
-### Real-world Example
-
-A good example of encapsulation is a bank account. A bank account has a balance, which is a private field that can only be accessed by the bank itself. The bank provides a public interface for accessing the balance, such as a website or mobile app, which allows customers to view their balance and make transactions. The bank also provides a public interface for making deposits and withdrawals, which allows customers to add or remove money from their account.
-
-You will see below that encapsulation is achieved through access modifiers, such as `public`, `private`, and `protected`, which control the visibility and accessibility of class members (fields and methods).
-
-### Properties
-
-For example, a class can have a `private` field that holds some important data and a public property that allows the data to be accessed, like this:
+In C#, encapsulation is typically achieved by making fields `private` and exposing them through `public` **properties**:
 
 ```cs
 public class BankAccount
 {
-    private decimal balance;
+    private decimal balance;   // private — cannot be accessed directly from outside
 
-    public decimal Balance { get => balance; set => balance = value; }
+    // Property — the public interface for reading and writing the balance
+    public decimal Balance
+    {
+        get => balance;
+        set => balance = value;
+    }
 }
 ```
 
-In this example, the `balance` field is defined as `private`, meaning it can only be accessed within the class. On the other hand, the `Balance` property is defined as `public`, meaning it can be accessed from outside the class. This allows the class to control how the `balance` field is modified and accessed and to ensure that the data is always in a consistent state.
+---
 
-Encapsulation also allows you to change the implementation of a class without affecting the code that uses it, as long as the public interface remains the same. For example, you could change how the `balance` field is stored, without affecting the code that accesses it through the `Balance` property.
+### 10.2 Property Validation
 
-### Property Validation
-
-We can extend the `Balance` property to include some validation logic, like this:
+Properties can include validation logic in the `set` accessor to ensure data is always in a valid state:
 
 ```cs
 public class BankAccount
@@ -289,7 +283,7 @@ public class BankAccount
 }
 ```
 
-So how do we use properties? Let us take a look at the following example:
+Using the validated property:
 
 ```cs
 public Form1()
@@ -298,102 +292,126 @@ public Form1()
 
     BankAccount accountOne = new BankAccount();
     accountOne.Balance = 1000;
-    MessageBox.Show($"Balance: {accountOne.Balance}");
+    MessageBox.Show($"Balance: {accountOne.Balance}"); // "Balance: 1000"
 
     BankAccount accountTwo = new BankAccount();
     try
     {
-        accountTwo.Balance = -1000;
-        MessageBox.Show($"Balance: {accountTwo.Balance}"); // This line won't execute
+        accountTwo.Balance = -1000;                     // throws exception
+        MessageBox.Show($"Balance: {accountTwo.Balance}"); // never reached
     }
     catch (Exception ex)
     {
-        MessageBox.Show(ex.Message); // Displays: "Balance cannot be negative"
+        MessageBox.Show(ex.Message); // "Balance cannot be negative"
     }
 }
 ```
 
-## Class Diagram
+| Key terms      |                                                                                              |
+| -------------- | -------------------------------------------------------------------------------------------- |
+| Encapsulation  | Hiding implementation details and exposing only a controlled public interface                |
+| Property       | A class member with `get` and/or `set` accessors — the standard way to expose private fields |
+| `get` accessor | Reads and returns the field value                                                            |
+| `set` accessor | Assigns a new value to the field — can include validation logic                              |
+| `private`      | Restricts access to within the class — prevents direct external modification                 |
 
-A class diagram is a type of **UML** (Unified Modeling Language) diagram that shows the structure of a class and its relationships with other classes. It is used to visualise the design of a system and to communicate the design to other developers.
+---
 
-### Installing Class Designer in Visual Studio
+## 11. Class Diagram
 
-The lab computers will already have the **Class Designer** tool installed. It will not be the case for your personal computer. To get started, do the following:
+A **class diagram** is a UML (Unified Modeling Language) diagram that shows the structure of a class and its relationships with other classes. It is used to plan and communicate software design.
 
-1. Click on the **Tools** tab. It is between the **Analyze** and **Extensions** at the top of the window.
+---
 
-2. Select **Get Tools and Features...**.
+### 11.1 Installing Class Designer in Visual Studio
 
-![](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-24/resources/img/04/class-diagram-1.PNG?raw=true)
+> Lab computers have Class Designer pre-installed. For your personal machine, follow these steps.
 
-3. Change to the **Individual components** tab.
+**Step 1** — Click **Tools > Get Tools and Features...**
 
-4. Search for **Class Designer**.
+**Step 2** — Switch to the **Individual components** tab.
 
-![](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-24/resources/img/04/class-diagram-2.PNG?raw=true)
+**Step 3** — Search for **Class Designer**, check the box, then click **Modify**. Installation takes a few minutes.
 
-5. Check the **Class Designer** box.
+---
 
-![](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/main-s1-24/resources/img/04/class-diagram-3.PNG?raw=true)
+### 11.2 Creating a Class Diagram
 
-6. Click on the **Modify** button. It may take a few minutes to install.
+**Step 1** — In **Solution Explorer**, right-click the project name and select **Add > New Item**.
 
-### Creating a Class Diagram
+**Step 2** — Select **Class Diagram**, give it a name, and click **Add**.
 
-To create a class diagram in **Visual Studio**, do the following:
+**Step 3** — Drag classes from **Solution Explorer** onto the designer canvas. There may be a brief delay before they appear.
 
-1. In the **Solution Explorer**, right-click on the project name and select **Add** > **New Item**.
-2. In the **Add New Item** window, select **Class Diagram** and give it a name. Click **Add**.
-3. The class diagram will open in the designer. You can start adding classes by dragging the **Class** item from the **Solution Explorer** onto the designer. **Note:** There might be a slight delay.
-4. Once you have created your class diagram, you can save it and close the designer.
-5. You can reopen the class diagram at any time by double-clicking on it in the **Solution Explorer**.
+**Step 4** — Save and close the designer when done. Reopen at any time by double-clicking the diagram file in Solution Explorer.
 
-# Exercises
+---
+
+## Exercises
 
 Before you start, create a new **C# Windows Forms Application** with a descriptive name.
 
-**Important Note About AI Tools:**
-
-Learning to use AI tools is valuable, but you **must** be aware of the following:
+**Important:** Learning to use AI tools is valuable, but you must:
 
 - Refine your prompts to get useful responses
-- Don't trust AI responses blindly - verify and test the code
-- Acknowledge AI tool usage in your assessment's repository **README.md** file, including what prompts you used and how you applied the responses
+- Verify and test all AI-generated code before submitting
+- Acknowledge AI tool usage in your repository `README.md`, including the prompts you used and how you applied the responses
 
-## Task 1:
+---
 
-Choose an object in the classroom environment or even in the outside environment. Create a class for it. Include at least **three** fields. Feel free to add **methods** but this is not required.
+### Task 1 — Custom Class
 
-## Task 2:
+Choose an object from your classroom or everyday environment. Create a class for it with at least **three fields**. Methods are optional but encouraged.
 
-* Create a `Car` class with `private` fields: `make`, `model`, and `year`. Add `public` **properties** for `Make`, `Model`, and `Year`.
-* Include a **constructor** that sets the **make**, **model**, and **year** when the **object** is created.
-* Create three `Car` **objects** and display their `Make`, `Model`, and `Year` **properties** in a `Label`.
+> **Hint:** think about what data describes the object (its fields) and what actions it can perform (its methods).
 
-## Task 3:
+---
 
-* Create an `Employee` class with `private` fields for `name`, `age`, and `salary`. Add `public` **properties** for `Name`, `Age`, and `Salary`. 
-* Include a **constructor** that sets the **name**, **age**, and **salary** when the **object** is created.
-* Create three `Employee` **objects** and display their `Name`, `Age`, and `Salary` **properties** in a `Label`.
+### Task 2 — Car Class
 
-## Task 4:
+Create a `Car` class with the following structure, then use it in your Form:
 
-In this task, you will create four classes that communicate with each other. 
+| Member  | Type     | Access            |
+| ------- | -------- | ----------------- |
+| `make`  | `string` | `private` field   |
+| `model` | `string` | `private` field   |
+| `year`  | `int`    | `private` field   |
+| `Make`  | `string` | `public` property |
+| `Model` | `string` | `public` property |
+| `Year`  | `int`    | `public` property |
 
-> Create a separate `.cs` file for each class.
+Include a constructor that accepts `make`, `model`, and `year`. Create three `Car` objects and display their `Make`, `Model`, and `Year` in a `Label`.
 
-* The first class is called `Institution` with `private` fields for `name`, `region` and `country`. All fields are of type `string`.
-* The second class is called `Department` with `private` fields for `institution` of type `Institution` and `name` of type `string`.
-* The third class is called `Course` with `private` fields for `department` of type `Department`, `code` of type `string`, `name` of type `string`, `description` of type `string`, `credits` of type `int` and `fees` of type `int`.
+---
 
-Make sure you create a constructor for each class and add public properties for all private fields.
+### Task 3 — Employee Class
 
-* The fourth class is called `Seeder`. This class has three `static` fields called `institutions`, `departments` and `courses`. These fields are `static` **lists** of `Institution`, `Department` and `Course` **objects** respectively. The `Seeder` class also has three `static` methods called `SeedInstitutions`, `SeedDepartments` and `SeedCourses`. These methods are used to populate the `institutions`, `departments` and `courses` lists respectively.
+Create an `Employee` class with the following structure, then use it in your Form:
 
-For each of the `Seed` methods, you will need to create at least three **objects** and add them to the appropriate list. For example, the `SeedInstitutions` method will create three `Institution` **objects** and add them to the `institutions` list.
+| Member   | Type      | Access            |
+| -------- | --------- | ----------------- |
+| `name`   | `string`  | `private` field   |
+| `age`    | `int`     | `private` field   |
+| `salary` | `decimal` | `private` field   |
+| `Name`   | `string`  | `public` property |
+| `Age`    | `int`     | `public` property |
+| `Salary` | `decimal` | `public` property |
 
-Here is a `Seeder` class example to get you started:
+Include a constructor that accepts all three values. Create three `Employee` objects and display their details in a `Label`.
+
+---
+
+### Task 4 — Institution, Department, Course & Seeder
+
+Create four classes in separate `.cs` files. Each class should have a constructor and public properties for all private fields.
+
+**`Institution`** — private fields: `name` (`string`), `region` (`string`), `country` (`string`).
+
+**`Department`** — private fields: `institution` (`Institution`), `name` (`string`).
+
+**`Course`** — private fields: `department` (`Department`), `code` (`string`), `name` (`string`), `description` (`string`), `credits` (`int`), `fees` (`int`).
+
+**`Seeder`** — a `static` class with three static `List` fields (`institutions`, `departments`, `courses`) and three static seed methods. Use the starter code below:
 
 ```cs
 using System.Collections.Generic;
@@ -401,65 +419,60 @@ using System.Collections.Generic;
 public static class Seeder
 {
     private static List<Institution> institutions = new List<Institution>();
-    private static List<Department> departments = new List<Department>();
-    private static List<Course> courses = new List<Course>();
+    private static List<Department>  departments  = new List<Department>();
+    private static List<Course>      courses      = new List<Course>();
 
     public static List<Institution> SeedInstitutions()
     {
         institutions.Add(new Institution("Otago Polytechnic", "Otago", "New Zealand"));
-
-        // Add two more institutions
-
+        // TODO: add two more institutions
         return institutions;
     }
 
     public static List<Department> SeedDepartments()
     {
         departments.Add(new Department(institutions[0], "Information Technology"));
-
-        // Add two more departments
-
+        // TODO: add two more departments
         return departments;
     }
 
     public static List<Course> SeedCourses()
     {
         courses.Add(new Course(departments[0], "ID511001", "Programming 2", "Advanced programming concepts", 15, 3500));
-
-        // Add two more courses
-
+        // TODO: add two more courses
         return courses;
     }
 }
+```
 
-// Usage in Form1.cs
-using System.Collections.Generic;
+In `Form1.cs`, call the seed methods in the constructor, then display each course's details (including its department and institution) in a `Label`.
 
+```cs
 public partial class Form1 : Form
 {
-    private List<Institution> institutions; 
-    private List<Department> departments; 
-    private List<Course> courses;
+    private List<Institution> institutions;
+    private List<Department>  departments;
+    private List<Course>      courses;
 
     public Form1()
     {
         InitializeComponent();
 
         institutions = Seeder.SeedInstitutions();
-        departments = Seeder.SeedDepartments();
-        courses = Seeder.SeedCourses();
+        departments  = Seeder.SeedDepartments();
+        courses      = Seeder.SeedCourses();
     }
 }
 ```
 
-For each `course`, display its information and which `department` and `institution` it belongs to in a `Label`.
+---
 
-## Task 5:
+### Task 5 — Product Average Price
 
-You have been given the following **class** and **list** of `Product` **objects**:
+You have been given the following `Product` class and list. Create a `Product.cs` file with the class, then add the list to `Form1.cs`:
 
 ```cs
-// Create a new file called Product.cs. Copy and paste the following code into it
+// Product.cs
 public class Product
 {
     private string name;
@@ -467,45 +480,39 @@ public class Product
 
     public Product(string name, double price)
     {
-        this.name = name;
+        this.name  = name;
         this.price = price;
     }
 
-    public string Name { get => name; set => name = value; }
+    public string Name  { get => name;  set => name  = value; }
     public double Price { get => price; set => price = value; }
 }
 
-// Usage in Form1.cs
-using System.Collections.Generic;
-using System.Linq;
+// Form1.cs
+private List<Product> products;
 
-public partial class Form1 : Form
+public Form1()
 {
-    private List<Product> products; // Declare this above the Form1() constructor
+    InitializeComponent();
 
-    public Form1()
+    products = new List<Product>
     {
-        InitializeComponent();
-
-        products = new List<Product>() // Declare this inside the Form1() constructor
-        {
-            new Product("Apple", 1.99),
-            new Product("Banana", 2.99),
-            new Product("Orange", 3.99)
-        };
-    }
+        new Product("Apple",  1.99),
+        new Product("Banana", 2.99),
+        new Product("Orange", 3.99)
+    };
 }
 ```
 
-Write a **LINQ** query that displays the average price of all products in the **list** of `Product` in a `Label`.
+Write a LINQ query that calculates and displays the **average price** of all products in a `Label`.
 
-## Task 6:
+> **Hint:** use `products.Average(p => p.Price)`.
 
-In this task, you will read data from a text file, create five `Dog` **objects** and display the `Dog` data in a `DataGridView`.
+---
 
-Use the `Dog` **class** from earlier in this document.
+### Task 6 — Dogs from File
 
-Create a text file called `dogs.txt` with the following data:
+Create a text file called `dogs.txt` with the following content (one dog per line, fields separated by a comma):
 
 ```
 Scooby-Doo,2
@@ -515,12 +522,18 @@ Augie,6
 Dixie,9
 ```
 
-Use the `StreamReader` or `File` **class** to read the contents of the `dogs.txt` file. For each line in the file, create a new `Dog` **object**. Add each `Dog` **object** to a **list**. Display the `name` and `age` for each item in the **list** in a `DataGridView`. Add error handling to ensure that the application gracefully handles any issues with reading the file or parsing the data.
+Read the file using `StreamReader` or `File.ReadAllLines`. For each line, split on `','`, create a `Dog` object, and add it to a list. Display the `name` and `age` of every dog in a `DataGridView`. Include error handling for missing files and invalid data.
 
-## Task 7:
+> **Hint:** use `line.Split(',')` to separate each line into parts. Wrap the file-reading code in a `try-catch` block to handle `FileNotFoundException` and `FormatException`.
 
-Create a class diagram for two applications you have created.
+---
+
+### Task 7 — Class Diagrams
+
+Create a class diagram for **two** of the applications you have built in this course. Export or screenshot the diagrams and include them in your repository.
+
+---
 
 ## Submission
 
-Push your completed code to your **GitHub** repository. Ensure your code is well-commented and follows proper naming conventions.
+Push your completed code to your GitHub repository. Ensure your code is well-commented and follows the naming conventions from Week 01.

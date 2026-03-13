@@ -4,8 +4,8 @@
 
 |            | Link                                                                                 |
 | ---------- | ------------------------------------------------------------------------------------ |
-| ← Previous | [Week 01 — GitHub & C# Fundamentals](lecture-notes/01-github-and-c#.md)              |
-| → Next     | [Week 03 - Windows Forms Application](lecture-notes/03-windows-forms-application.md) |
+| ← Previous | [Week 01 — GitHub & C# Fundamentals](./lecture-notes/01-github-and-c#.md)              |
+| → Next     | [Week 03 - Windows Forms Application](./lecture-notes/03-windows-forms-application.md) |
 
 ---
 

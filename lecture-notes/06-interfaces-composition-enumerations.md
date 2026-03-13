@@ -4,8 +4,8 @@
 
 |            | Link                                                                                                          |
 | ---------- | ------------------------------------------------------------------------------------------------------------- |
-| ← Previous | [Week 05 — Abstraction, Inheritance & Polymorphism](lecture-notes/05-abstraction-inheritance-polymorphism.md) |
-| → Next     | [Week 07 — Debugging & Unit Testing](lecture-notes/07-debugging-unit-testing.md)                              |
+| ← Previous | [Week 05 — Abstraction, Inheritance & Polymorphism](./lecture-notes/05-abstraction-inheritance-polymorphism.md) |
+| → Next     | [Week 07 — Debugging & Unit Testing](./lecture-notes/07-debugging-unit-testing.md)                              |
 
 ---
 

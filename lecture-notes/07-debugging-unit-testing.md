@@ -4,8 +4,8 @@
 
 |            | Link                                    |
 | ---------- | --------------------------------------- |
-| ← Previous | [Week 06 — Interfaces, Composition & Enumerations](lecture-notes/06-interfaces-composition-enumerations.md) |
-| → Next     | [Week 08 — Code Smells & Refactoring](lecture-notes/08-code-smells-refactoring.md)                                |
+| ← Previous | [Week 06 — Interfaces, Composition & Enumerations](./lecture-notes/06-interfaces-composition-enumerations.md) |
+| → Next     | [Week 08 — Code Smells & Refactoring](./lecture-notes/08-code-smells-refactoring.md)                                |
 
 ---
 

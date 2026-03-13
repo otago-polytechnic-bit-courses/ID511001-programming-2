@@ -4,8 +4,8 @@
 
 |            | Link                                                                                                   |
 | ---------- | ------------------------------------------------------------------------------------------------------ | --- |
-| ← Previous | [Week 02 — Arrays, Lists, Dictionaries & LINQ](lecture-notes/02-arrays-lists-dictionaries-linq.md) |
-| → Next     | [Week 04 — Classes, Objects & Encapsulation](lecture-notes/04-classes-objects-encapsulation.md)    |     |
+| ← Previous | [Week 02 — Arrays, Lists, Dictionaries & LINQ](./lecture-notes/02-arrays-lists-dictionaries-linq.md) |
+| → Next     | [Week 04 — Classes, Objects & Encapsulation](./lecture-notes/04-classes-objects-encapsulation.md)    |     |
 
 ---
 

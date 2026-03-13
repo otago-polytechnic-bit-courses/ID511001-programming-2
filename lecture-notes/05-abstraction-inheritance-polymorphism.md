@@ -4,8 +4,8 @@
 
 | | Link |
 |---|---|
-| ← Previous | [Week 04 — Classes, Objects & Encapsulation](lecture-notes/04-classes-objects-encapsulation.md) |
-| → Next | [Week 06 — Interfaces & Enumerations](lecture-notes/06-composition-interfaces-enumerations.md) |
+| ← Previous | [Week 04 — Classes, Objects & Encapsulation](./lecture-notes/04-classes-objects-encapsulation.md) |
+| → Next | [Week 06 — Interfaces & Enumerations](./lecture-notes/06-composition-interfaces-enumerations.md) |
 
 ---
 

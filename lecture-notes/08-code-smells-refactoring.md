@@ -4,8 +4,8 @@
 
 |            | Link                                                                             |
 | ---------- | -------------------------------------------------------------------------------- |
-| ← Previous | [Week 07 — Debugging & Unit Testing](lecture-notes/07-debugging-unit-testing.md) |
-| → Next     | [Week 09 — Serialisation](lecture-notes/09-serialisation.md)                     |
+| ← Previous | [Week 07 — Debugging & Unit Testing](./lecture-notes/07-debugging-unit-testing.md) |
+| → Next     | [Week 09 — Serialisation](./lecture-notes/09-serialisation.md)                     |
 
 ---
 

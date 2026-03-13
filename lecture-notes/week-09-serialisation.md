@@ -4,8 +4,8 @@
 
 |            | Link                                                                               |
 | ---------- | ---------------------------------------------------------------------------------- |
-| ← Previous | [Week 08 — Code Smells & Refactoring](lecture-notes/08-code-smells-refactoring.md) |
-| → Next     | [Week 10 — AI-Assisted Coding](lecture-notes/week-10-ai-assisted-coding.md)        |
+| ← Previous | [Week 08 — Code Smells & Refactoring](./lecture-notes/08-code-smells-refactoring.md) |
+| → Next     | [Week 10 — AI-Assisted Coding](./lecture-notes/week-10-ai-assisted-coding.md)        |
 
 ---
 

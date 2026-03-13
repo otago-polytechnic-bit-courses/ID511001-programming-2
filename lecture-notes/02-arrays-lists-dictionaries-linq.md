@@ -4,7 +4,7 @@
 
 |            | Link                                                                                 |
 | ---------- | ------------------------------------------------------------------------------------ |
-| ← Previous | [Week 01 — GitHub & C# Fundamentals](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/s1-26/lecture-notes/01-github-c%23.md)              |
+| ← Previous | [Week 01 — GitHub & C#](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/s1-26/lecture-notes/01-github-c%23.md)              |
 | → Next     | [Week 03 - Windows Forms Application](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/s1-26/lecture-notes/03-windows-forms-application.md) |
 
 ---

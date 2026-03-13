@@ -1,4 +1,4 @@
-# Week 01 — GitHub & C# Fundamentals   
+# Week 01 — GitHub & C#   
 
 ## Navigation
 

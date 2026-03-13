@@ -4,8 +4,8 @@
 
 |            | Link                                                                                                   |
 | ---------- | ------------------------------------------------------------------------------------------------------ | --- |
-| ← Previous | [Week 02 — Arrays, Lists, Dictionaries & LINQ](lecture-notes/02-arrays-lists-dictionaries-and-linq.md) |
-| → Next     | [Week 04 — Classes, Objects & Encapsulation](lecture-notes/04-classes-objects-and-encapsulation.md)    |     |
+| ← Previous | [Week 02 — Arrays, Lists, Dictionaries & LINQ](lecture-notes/02-arrays-lists-dictionaries-linq.md) |
+| → Next     | [Week 04 — Classes, Objects & Encapsulation](lecture-notes/04-classes-objects-encapsulation.md)    |     |
 
 ---
 
@@ -367,7 +367,6 @@ private void button1_Click(object sender, EventArgs e)
     // Code here runs only after Form2 is closed
 }
 ```
-
 **Modeless** (`Show`) — the user can interact with multiple forms simultaneously:
 
 ```cs

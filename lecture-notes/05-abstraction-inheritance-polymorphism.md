@@ -4,8 +4,8 @@
 
 | | Link |
 |---|---|
-| ← Previous | [Week 04 — Classes, Objects & Encapsulation](./lecture-notes/04-classes-objects-encapsulation.md) |
-| → Next | [Week 06 — Interfaces & Enumerations](./lecture-notes/06-composition-interfaces-enumerations.md) |
+| ← Previous | [Week 04 — Classes, Objects & Encapsulation](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/s1-26/lecture-notes/04-classes-objects-encapsulation.md) |
+| → Next | [Week 06 — Interfaces & Enumerations](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/s1-26/lecture-notes/06-composition-interfaces-enumerations.md) |
 
 ---
 

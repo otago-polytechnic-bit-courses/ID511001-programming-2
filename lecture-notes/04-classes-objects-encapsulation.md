@@ -4,8 +4,8 @@
 
 |            | Link                                                                                                              |
 | ---------- | ----------------------------------------------------------------------------------------------------------------- |
-| ← Previous | [Week 03 — Windows Forms Application](./lecture-notes/03-windows-forms-application.md)                              |
-| → Next     | [Week 05 — Abstraction, Inheritance & Polymorphism](./lecture-notes/05-abstraction-inheritance-polymorphism.md) |
+| ← Previous | [Week 03 — Windows Forms Application](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/s1-26/lecture-notes/03-windows-forms-application.md)                              |
+| → Next     | [Week 05 — Abstraction, Inheritance & Polymorphism](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/s1-26/lecture-notes/05-abstraction-inheritance-polymorphism.md) |
 
 ---
 

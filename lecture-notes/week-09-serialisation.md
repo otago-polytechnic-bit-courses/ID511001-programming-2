@@ -4,8 +4,8 @@
 
 |            | Link                                                                               |
 | ---------- | ---------------------------------------------------------------------------------- |
-| ← Previous | [Week 08 — Code Smells & Refactoring](./lecture-notes/08-code-smells-refactoring.md) |
-| → Next     | [Week 10 — AI-Assisted Coding](./lecture-notes/week-10-ai-assisted-coding.md)        |
+| ← Previous | [Week 08 — Code Smells & Refactoring](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/s1-26/lecture-notes/08-code-smells-refactoring.md) |
+| → Next     | [Week 10 — AI-Assisted Coding](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/s1-26/lecture-notes/week-10-ai-assisted-coding.md)        |
 
 ---
 

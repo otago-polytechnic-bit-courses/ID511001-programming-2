@@ -5,7 +5,7 @@
 |                  | Link                                                                                         |
 | ---------------- | -------------------------------------------------------------------------------------------- |
 | GitHub Classroom | [ID511001-S1-26](https://classroom.github.com/a/Ury_53GW)                                    |
-| → Next           | [Week 02 - Arrays, Lists, Dictionaries & LINQ](./lecture-notes/02-arrays-lists-dictionaries-and-linq.md) |
+| → Next           | [Week 02 - Arrays, Lists, Dictionaries & LINQ](https://github.com/otago-polytechnic-bit-courses/ID511001-programming-2/blob/s1-26/lecture-notes/02-arrays-lists-dictionaries-and-linq.md) |
 
 ---
 

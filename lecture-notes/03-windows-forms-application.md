@@ -1,4 +1,4 @@
-# Week 03 — Windows Forms Application
+fdiv# Week 03 — Windows Forms Application
 
 ## Navigation
 
@@ -566,7 +566,7 @@ Write a calculator application that accepts two numbers in `TextBox` controls, l
 
 1. Create a new Form and set its `Text` property to `Calculator`
 2. Add two `TextBox` controls for input and one `ReadOnly` `TextBox` for the result (set `ReadOnly = true` to prevent the user from overwriting it)
-3. Add `Buttons` for `+`, `-`, `×`, `÷`, **mod**, and **div** — implement a `Click` handler for each
+3. Add `Buttons` for `+`, `-`, `×`, `÷`, and **mod** — implement a `Click` handler for each
 4. Use a `Panel` or `Label` as a visual divider between the input fields and the result field
 
 > **Hint:** set the result TextBox's `ReadOnly` property to `true` in the Properties panel. Assume the user always enters valid integers for now — full input validation is beyond the scope of this exercise.

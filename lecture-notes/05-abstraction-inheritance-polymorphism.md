@@ -285,7 +285,7 @@ In `Form1()`, create one object of each type and display each one's `DisplayDeta
 
 Build a Windows Forms application that calculates the area of a shape selected by the user.
 
-1. Declare an abstract base class `Shape` with a `virtual` method `CalculateArea()` that returns a `double`
+1. Declare an abstract base class `Shape` with a `abstract` method `CalculateArea()` that returns a `double`
 2. Derive `Rectangle` and `Circle` from `Shape` — override `CalculateArea()` in each:
    - Rectangle: `length × width`
    - Circle: `π × radius²`

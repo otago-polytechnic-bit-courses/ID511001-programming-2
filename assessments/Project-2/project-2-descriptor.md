@@ -108,7 +108,7 @@ Design a set of classes to represent the game's data. At a minimum your model mu
 
 Each character must have at least five attributes. Attribute values should be binary (Yes/No) or use a small number of distinct values so that questions can effectively eliminate characters.
 
-**Date order in text file:**
+**Data order in text file:**
 First is the id, second is the Name, third is hair colour, fourth is hair length, fifth is the style of hair, sixth is the eye colour, seventh is the skin tone, eighth is their top colour, ninth is any accessories, tenth if they have a beard, eleventh is if they have a moustache.
 
 

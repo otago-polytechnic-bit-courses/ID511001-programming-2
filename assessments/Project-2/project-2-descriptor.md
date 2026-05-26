@@ -102,7 +102,7 @@ You will need to submit an application and documentation that meet the following
 
 Design a set of classes to represent the game's data. At a minimum your model must support:
 
-- A representation of a character, including their name and a set of attributes, e.g. hair colour, eye colour, gender, has glasses, or has hat.
+- A representation of a character, including their name and a set of attributes, e.g. hair colour, eye colour, has glasses, or has hat.
 - A representation of a single attribute, with a name and a value.
 - A way to load all characters from the data file provided by the course lecturer. This should be implemented as a method or class that reads the file and returns a populated list of characters ready for the game to use.
 

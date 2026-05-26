@@ -22,7 +22,7 @@
 22,Reuben,brown,medium,wavy,brown,tanned,red,none,goatee,none
 23,Simon,blonde,short,spiky,green,fair,pink,necklace,none,none
 24,Xavier,blonde,medium,wavy,brown,brown,yellow,glasses,none,none
-25,Chris,ginger,short,wavy,blue,brown,yellow,tie,beard,moustache
+25,Chris,ginger,short,wavy,brown,brown,yellow,tie,beard,moustache
 26,Matt,ginger,medium,wavy,brown,tanned,blue,necklace,goatee,moustache
 27,Paul,grey,short,straight,green,brown,green,hat,goatee,none
 28,Steve,grey,short,straight,blue,fair,blue,glasses,none,none

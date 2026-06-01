@@ -106,8 +106,6 @@ Design a set of classes to represent the game's data. At a minimum your model mu
 - A representation of a single attribute, with a name and a value.
 - A way to load all characters from the data file provided by the course lecturer. This should be implemented as a method or class that reads the file and returns a populated list of characters ready for the game to use.
 
-Each character must have at least five attributes. Attribute values should be binary (Yes/No) or use a small number of distinct values so that questions can effectively eliminate characters.
-
 **Data order in text file:**
 First is the id, second is the Name, third is hair colour, fourth is hair length, fifth is the style of hair, sixth is the eye colour, seventh is the skin tone, eighth is their top colour, ninth is any accessories, tenth if they have a beard, eleventh is if they have a moustache.
 

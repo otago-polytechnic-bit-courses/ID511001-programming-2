@@ -1,4 +1,4 @@
-# Module 01: Getting Set Up with Git, GitHub and C#
+# Module 01: Git, GitHub and C#
 
 ## Navigation
 

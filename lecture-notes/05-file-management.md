@@ -1,4 +1,4 @@
-# Module 05: File Management with Different File Types
+# Module 05: File Management
 
 ## Navigation
 

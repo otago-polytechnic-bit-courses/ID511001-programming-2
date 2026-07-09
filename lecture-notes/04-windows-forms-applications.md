@@ -5,7 +5,7 @@
 |              | Link                                                                                       |
 | ------------ | ------------------------------------------------------------------------------------------ |
 | ← Previous   | [Module 03: Classes, Objects and Encapsulation](./03-classes-objects-and-encapsulation.md) |
-| → Next       | [Module 05: File Management Types](./05-file-management.md)            |
+| → Next       | [Module 05: File Management](./05-file-management.md)            |
 
 ---
 

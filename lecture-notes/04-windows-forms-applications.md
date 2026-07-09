@@ -4,14 +4,14 @@
 
 |              | Link                                                                                       |
 | ------------ | ------------------------------------------------------------------------------------------ |
-| ← ← Previous | [Module 03: Classes, Objects and Encapsulation](./03-classes-objects-and-encapsulation.md) |
-| → Next       | [Module 05: File Management with Different File Types](./05-file-management.md)            |
+| ← Previous   | [Module 03: Classes, Objects and Encapsulation](./03-classes-objects-and-encapsulation.md) |
+| → Next       | [Module 05: File Management Types](./05-file-management.md)            |
 
 ---
 
-_(This week uses the same recurring labels explained in Week 01: why it matters, design first, quick check, and task.)_
+_(This module uses the same recurring labels explained in Module 01: why it matters, design first, quick check, and task.)_
 
-Everything you've built so far has run top-to-bottom and stopped. This week, that changes: you'll build applications that sit and wait for the _user_ to decide what happens next. That shift, from "run in order" to "respond to whatever happens", is called **event-driven programming**, and it's the core idea behind every GUI application you'll ever build.
+Everything you've built so far has run top-to-bottom and stopped. This module, that changes: you'll build applications that sit and wait for the _user_ to decide what happens next. That shift, from "run in order" to "respond to whatever happens", is called **event-driven programming**, and it's the core idea behind every GUI application you'll ever build.
 
 ---
 
@@ -40,7 +40,7 @@ You'll see three panels: **Design View**, **Output**, and **Solution Explorer**.
 
 ## 2. Design first: sketch before you drag controls
 
-It's tempting to open the designer and start dragging controls straight away. Resist that for thirty seconds. Before building any screen this week, sketch it on paper first: boxes for each control, roughly where it sits, and a label for what it does. This is a **wireframe**, and it's standard practice in real UI work for a good reason. It's much faster to erase a badly-placed box on paper than to rearrange six controls that are already wired up with code.
+It's tempting to open the designer and start dragging controls straight away. Resist that for thirty seconds. Before building any screen this module, sketch it on paper first: boxes for each control, roughly where it sits, and a label for what it does. This is a **wireframe**, and it's standard practice in real UI work for a good reason. It's much faster to erase a badly-placed box on paper than to rearrange six controls that are already wired up with code.
 
 Once the layout is settled, do the same for behaviour: for every button, write one sentence, something like _"when clicked, this should validate the two number inputs, add them, and show the result in the label."_ That sentence becomes your event handler, almost word for word.
 
@@ -171,7 +171,7 @@ private double CalculateTotal(double price, double quantity, bool isMember)
 
 A quick way to check your own code: look at every method that isn't an event handler. If its parameter list or its body mentions a control type anywhere, the UI and the logic have become tangled together, and it's worth pulling them apart before it gets any bigger.
 
-While you're separating things out like this, it's also worth overriding `ToString()` (Week 03) on any class involved. A quick `MessageBox.Show(myObject.ToString())` while debugging is far faster than checking each field by hand, and it costs one extra method to set up.
+While you're separating things out like this, it's also worth overriding `ToString()` (Module 03) on any class involved. A quick `MessageBox.Show(myObject.ToString())` while debugging is far faster than checking each field by hand, and it costs one extra method to set up.
 
 ### 5.1 Naming keeps the separation visible
 
@@ -263,7 +263,7 @@ private void radioButton1_CheckedChanged(object sender, EventArgs e)
 
 ## 8. DataGridView
 
-`DataGridView` shows data in rows and columns. This is where your Week 03 classes and this week's controls meet.
+`DataGridView` shows data in rows and columns. This is where your Module 03 classes and this module's controls meet.
 
 ```cs
 using System.Collections.Generic;
@@ -295,7 +295,7 @@ public partial class Form1 : Form
 | `Rows.Add()`           | Appends a new empty row, returns its index |
 | `Rows[i].Cells["Col"]` | Accesses a specific cell                   |
 
-**Design first.** This task combines a class you design yourself with a control you just learned. Write the class's "knows / does" summary (Week 03, Section 4) before you write a line of it.
+**Design first.** This task combines a class you design yourself with a control you just learned. Write the class's "knows / does" summary (Module 03, Section 4) before you write a line of it.
 
 ### Task 3: Dogs from File
 
@@ -438,7 +438,7 @@ Build a small main form that collects a name and a favourite colour in two `Text
 ## Before you submit
 
 - [ ] All 5 tasks complete and tested
-- [ ] Every custom class you used follows the private-field + `this` + property pattern from Week 03
+- [ ] Every custom class you used follows the private-field + `this` + property pattern from Module 03
 - [ ] No control type (Button, TextBox, Label, CheckBox, and so on) appears anywhere outside an event handler
 - [ ] `README.md` updated with any AI prompts used
 - [ ] Pushed to your GitHub repository

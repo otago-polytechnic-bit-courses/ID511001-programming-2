@@ -4,7 +4,7 @@
 
 |              | Link                                                                        |
 | ------------ | --------------------------------------------------------------------------- |
-| ← ← Previous | [Module 02: Collections and LINQ](./02-collections-and-linq.md)             |
+| ← Previous   | [Module 02: Collections and LINQ](./02-collections-and-linq.md)             |
 | → Next       | [Module 04: Windows Forms Applications](./04-windows-forms-applications.md) |
 
 ---

@@ -9,9 +9,9 @@
 
 ---
 
-_(This week uses the same recurring labels explained in Week 01: why it matters, design first, quick check, and task.)_
+_(This module uses the same recurring labels explained in Module 01: why it matters, design first, quick check, and task.)_
 
-Everything so far has been about manipulating data C# already knows about: numbers, strings, lists of them. This week you start defining your **own** types. This is where "programming" starts to feel like modelling the real world in code, which is really what most of this course is about from here on.
+Everything so far has been about manipulating data C# already knows about: numbers, strings, lists of them. This module you start defining your **own** types. This is where "programming" starts to feel like modelling the real world in code, which is really what most of this course is about from here on.
 
 ---
 
@@ -46,7 +46,7 @@ public class Dog
 | Type           | Value type                          | Reference type                                 |
 | Stored         | Stack / inline                      | Heap                                           |
 | Copying        | Copies the whole value              | Copies a reference to the same object          |
-| Inheritance    | Not supported                       | Supported (Week 06)                            |
+| Inheritance    | Not supported                       | Supported (Module 06)                            |
 | Can be `null`? | No (unless nullable)                | Yes                                            |
 | Best for       | Small, immutable, single-value data | Larger objects with behaviour and shared state |
 
@@ -128,7 +128,7 @@ For a `Dog`, that might look like:
 
 > Knows: name, age. Does: bark.
 
-This is a tiny version of a technique called **CRC cards** (Class, Responsibility, Collaborator). Professional teams do this on whiteboards before writing a line of code, because it's much cheaper to redesign a sentence than to redesign a class hierarchy. You'll be asked to write this kind of one-line responsibility summary before several tasks this week, and it's genuinely worth doing even when it feels obvious. The times it _isn't_ obvious are exactly when this step saves you.
+This is a tiny version of a technique called **CRC cards** (Class, Responsibility, Collaborator). Professional teams do this on whiteboards before writing a line of code, because it's much cheaper to redesign a sentence than to redesign a class hierarchy. You'll be asked to write this kind of one-line responsibility summary before several tasks this module, and it's genuinely worth doing even when it feels obvious. The times it _isn't_ obvious are exactly when this step saves you.
 
 Once you've settled the responsibilities, sketching a quick **class diagram**, just a box with three sections (name, fields, methods), makes the plan visible before you type anything:
 
@@ -236,10 +236,10 @@ Not everything inside a class should be touchable from outside it. Access modifi
 | ----------- | -------------------------------------------------------- |
 | `public`    | Anywhere                                                 |
 | `private`   | Only inside the class it's declared in                   |
-| `protected` | The class, and any class that inherits from it (Week 06) |
+| `protected` | The class, and any class that inherits from it (Module 06) |
 | `internal`  | Anywhere in the same project                             |
 
-> `abstract`, `sealed`, `override`, and `virtual` relate to inheritance. You'll meet those in Week 06.
+> `abstract`, `sealed`, `override`, and `virtual` relate to inheritance. You'll meet those in Module 06.
 
 ---
 
@@ -264,7 +264,7 @@ public class BankAccount
 }
 ```
 
-This is the standard shape for encapsulated data in C#: a **private field** doing the actual storing, and a **public property** controlling access to it. Notice this is exactly the pattern you've already been using since Week 01: a private field, a constructor with `this`, and a property with `get`/`set`. Now you know _why_ it's built that way.
+This is the standard shape for encapsulated data in C#: a **private field** doing the actual storing, and a **public property** controlling access to it. Notice this is exactly the pattern you've already been using since Module 01: a private field, a constructor with `this`, and a property with `get`/`set`. Now you know _why_ it's built that way.
 
 ### 8.2 Why bother with a property instead of just a public field?
 
@@ -322,7 +322,7 @@ public class Dog
 }
 ```
 
-**Rule of thumb for this course:** if a property needs validation (like `Balance` above), write it out fully with a private field. If it's a simple pass-through with nothing to enforce, the auto-property shorthand is perfectly acceptable, and it's often what you'll see in professional codebases. Either way, keep fields `private` and interact with them through properties. A `public` field with no `get`/`set` at all is a code smell you'll formally learn about in Week 10.
+**Rule of thumb for this course:** if a property needs validation (like `Balance` above), write it out fully with a private field. If it's a simple pass-through with nothing to enforce, the auto-property shorthand is perfectly acceptable, and it's often what you'll see in professional codebases. Either way, keep fields `private` and interact with them through properties. A `public` field with no `get`/`set` at all is a code smell you'll formally learn about in Module 10.
 
 You can also restrict a property to be read-only from outside the class, by making the setter `private`:
 
@@ -332,7 +332,7 @@ public string Name { get; private set; }  // readable anywhere, settable only in
 
 ### 8.4 `readonly`: locking a field after construction
 
-You met `const` back in Week 01, for values fixed at compile time. `readonly` is the equivalent for a field whose value isn't known until an object is actually created, but that should never change after that. It's set once, in the constructor, and never again:
+You met `const` back in Module 01, for values fixed at compile time. `readonly` is the equivalent for a field whose value isn't known until an object is actually created, but that should never change after that. It's set once, in the constructor, and never again:
 
 ```cs
 public class Employee
@@ -509,7 +509,7 @@ In `Form1()`, call the three seed methods, then display each course's details, i
 
 ## 11. Bringing LINQ back in
 
-Now that you're building lists of your own objects, everything you learned about LINQ last week applies directly to them.
+Now that you're building lists of your own objects, everything you learned about LINQ last module applies directly to them.
 
 ### Task 5: Product Average Price
 
@@ -555,7 +555,7 @@ Write a LINQ query that calculates the average price of all products and display
 
 ## 12. Class diagrams in Visual Studio
 
-You've been sketching class diagrams by hand this week. Visual Studio can also generate and edit them for you, which is worth knowing for bigger projects.
+You've been sketching class diagrams by hand this module. Visual Studio can also generate and edit them for you, which is worth knowing for bigger projects.
 
 **Installing (if it's not already on your machine):** **Tools → Get Tools and Features → Individual components** tab → search **Class Designer** → check the box → **Modify**.
 
@@ -563,7 +563,7 @@ You've been sketching class diagrams by hand this week. Visual Studio can also g
 
 ### Task 6: Class Diagrams
 
-Create a class diagram for **two** of the classes (or class groups) you built this week. Export or screenshot them and include them in your repository.
+Create a class diagram for **two** of the classes (or class groups) you built this module. Export or screenshot them and include them in your repository.
 
 ---
 

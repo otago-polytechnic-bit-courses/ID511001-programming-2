@@ -9,15 +9,15 @@
 
 ---
 
-_(This week uses the same recurring labels explained in Week 01: why it matters, design first, quick check, and task.)_
+_(This module uses the same recurring labels explained in Module 01: why it matters, design first, quick check, and task.)_
 
-Last week you stored single values in variables. This week is about storing **groups** of values, and querying them without writing loops for every little thing.
+Last module you stored single values in variables. This module is about storing **groups** of values, and querying them without writing loops for every little thing.
 
 ---
 
 ## 1. Arrays: a quick recap
 
-You met arrays briefly last week. As a reminder: an array is a **fixed-size**, zero-indexed sequence of elements, all of the same type.
+You met arrays briefly last module. As a reminder: an array is a **fixed-size**, zero-indexed sequence of elements, all of the same type.
 
 ```cs
 int[] numbers = new int[5];         // all zeros to start
@@ -133,7 +133,7 @@ fruits.Clear();
 
 ### 2.2 `List<T>.ForEach` versus `foreach`
 
-`List<T>` has its own `ForEach` method, as an alternative to the `foreach` loop from Week 01. They look similar, but they're not quite the same thing:
+`List<T>` has its own `ForEach` method, as an alternative to the `foreach` loop from Module 01. They look similar, but they're not quite the same thing:
 
 ```cs
 List<string> fruits = new List<string> { "Apple", "Banana", "Cherry" };

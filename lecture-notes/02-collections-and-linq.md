@@ -4,7 +4,7 @@
 
 |            | Link                                                                                       |
 | ---------- | ------------------------------------------------------------------------------------------ |
-| ← Previous | [Module 01: Git, GitHub and C#](./01-git-github-c#.md)                     |
+| ← Previous | [Module 01: Git, GitHub and C#](./01-git-github-and-c%23.md)                     |
 | → Next     | [Module 03: Classes, Objects and Encapsulation](./03-classes-objects-and-encapsulation.md) |
 
 ---

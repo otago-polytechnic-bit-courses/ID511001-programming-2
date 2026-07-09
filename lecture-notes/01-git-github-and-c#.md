@@ -11,7 +11,7 @@
 
 ## How these notes work
 
-You'll see the same handful of markers all the way through the course, every week, so you always know what kind of thing you're looking at:
+You'll see the same handful of markers all the way through the course, every module, so you always know what kind of thing you're looking at:
 
 | Marker                | What it means                                                             |
 | --------------------- | ------------------------------------------------------------------------- |
@@ -35,7 +35,7 @@ Click the GitHub Repository link above, accept the assignment, and you'll get yo
 
 An empty repository is a blank page, so the first thing to do is give it a `README.md` and a `.gitignore` before you write a single line of C#.
 
-**README.md**: in your repository, click **Add file, then Create new file**, name it `README.md`, and commit it. This is the file GitHub shows on your repository's homepage. It's also where you'll log your AI tool usage each week (see the note at the start of every task list).
+**README.md**: in your repository, click **Add file, then Create new file**, name it `README.md`, and commit it. This is the file GitHub shows on your repository's homepage. It's also where you'll log your AI tool usage each module (see the note at the start of every task list).
 
 **.gitignore**: same process, but name it `.gitignore`. A template dropdown appears on the right of the editor, so pick **Visual Studio**. This stops build files, temporary files, and other clutter your IDE generates from ever being committed.
 
@@ -96,7 +96,7 @@ A comment should explain **why**, not **what**. If your variable and method name
 
 This is the first of many "design first" moments you'll see this course. The habit is simple: **before you write any code, write down, in plain English or a quick sketch, what the code needs to do, step by step.** This is sometimes called pseudocode.
 
-Take FizzBuzz, a classic small problem you'll meet later this week:
+Take FizzBuzz, a classic small problem you'll meet later this module:
 
 > For each number, if it divides evenly by both 3 and 5, say "FizzBuzz". If it divides by 3 only, say "Fizz". If it divides by 5 only, say "Buzz". Otherwise, say the number.
 
@@ -266,7 +266,7 @@ string day = "Monday";
 switch (day)
 {
     case "Monday":
-        Console.WriteLine("Start of the work week");
+        Console.WriteLine("Start of the work module");
         break;
     case "Friday":
         Console.WriteLine("TGIF!");
@@ -294,7 +294,7 @@ string day = "Monday";
 
 string message = day switch
 {
-    "Monday" => "Start of the work week",
+    "Monday" => "Start of the work module",
     "Friday" => "TGIF!",
     _ => "Regular day"
 };
@@ -479,7 +479,7 @@ Person person = new Person("John", 25);
 Console.WriteLine($"{person.Name} is {person.Age} years old");
 ```
 
-You'll notice `Name` and `Age` above are **properties**, not plain fields. A private field does the actual storing, and a public property controls how the outside world reads and writes it. This pattern (a private field, plus `this` in the constructor, plus a property with `get`/`set`) is the standard shape you'll use for almost every class in this course, so it's worth getting comfortable with it now. We'll dig into _why_ it's built this way in Week 03.
+You'll notice `Name` and `Age` above are **properties**, not plain fields. A private field does the actual storing, and a public property controls how the outside world reads and writes it. This pattern (a private field, plus `this` in the constructor, plus a property with `get`/`set`) is the standard shape you'll use for almost every class in this course, so it's worth getting comfortable with it now. We'll dig into _why_ it's built this way in Module 03.
 
 **Expression-bodied methods** are a shorthand for a method that's just one expression:
 
@@ -572,7 +572,7 @@ Write a static method `IsAnagram(string firstString, string secondString)` that 
 | `IsAnagram("abc", "abcd")`      | `False`  |
 | `IsAnagram("a!b@c", "c@b!a")`   | `True`   |
 
-> **Hint:** convert both strings to `char[]`, sort them, and compare with LINQ's `SequenceEqual`. You'll meet LINQ properly next week, but this is a nice early taste of it.
+> **Hint:** convert both strings to `char[]`, sort them, and compare with LINQ's `SequenceEqual`. You'll meet LINQ properly next module, but this is a nice early taste of it.
 
 ---
 
@@ -701,4 +701,4 @@ Create a `computer-jokes.txt` with one joke per line. Read them into an array, t
 - [ ] `README.md` records any AI tool prompts you used and how you used the response (refining a prompt and then checking the output counts; pasting an answer in unread doesn't)
 - [ ] Pushed to your GitHub repository
 
-**A note on AI tools:** using them well is a skill in itself. That means refining your prompt until it gives you something useful, and actually reading and testing what comes back rather than trusting it blindly. Log what you asked and how you used it in your `README.md`. This is expected every week from here on, so it won't be repeated in every file, but it always applies.
+**A note on AI tools:** using them well is a skill in itself. That means refining your prompt until it gives you something useful, and actually reading and testing what comes back rather than trusting it blindly. Log what you asked and how you used it in your `README.md`. This is expected every module from here on, so it won't be repeated in every file, but it always applies.

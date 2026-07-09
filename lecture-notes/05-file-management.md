@@ -9,9 +9,9 @@
 
 ---
 
-_(This week uses the same recurring labels explained in Week 01: why it matters, design first, quick check, and task.)_
+_(This module uses the same recurring labels explained in Module 01: why it matters, design first, quick check, and task.)_
 
-Back in Week 01 you read and wrote plain text files. Real applications usually need more structure than that: a spreadsheet of contacts, a settings file, a saved game. This week looks at two of the most common structured formats, CSV and JSON, and at handling files and folders more carefully than "hope the path is right."
+Back in Module 01 you read and wrote plain text files. Real applications usually need more structure than that: a spreadsheet of contacts, a settings file, a saved game. This module looks at two of the most common structured formats, CSV and JSON, and at handling files and folders more carefully than "hope the path is right."
 
 ---
 
@@ -38,7 +38,7 @@ Before writing any code, it's worth knowing what you're choosing between, since 
 
 ## 2. CSV files
 
-A CSV file is just a text file with a predictable shape: one record per line, fields separated by commas. You already have every tool you need to read and write one, from Week 01's string methods.
+A CSV file is just a text file with a predictable shape: one record per line, fields separated by commas. You already have every tool you need to read and write one, from Module 01's string methods.
 
 ```
 Name,Phone,Email
@@ -99,7 +99,7 @@ public static void SaveContacts(string filePath, List<Contact> contacts)
 }
 ```
 
-**Why this matters.** Notice `LoadContacts` and `SaveContacts` take a file path and a list, and return a file path and a list. Neither one mentions a `TextBox` or any other control. This is the same rule from Week 04, applied to file access instead of a calculation: reading and writing files is exactly the kind of thing that belongs in a plain method, called from an event handler, never mixed into it.
+**Why this matters.** Notice `LoadContacts` and `SaveContacts` take a file path and a list, and return a file path and a list. Neither one mentions a `TextBox` or any other control. This is the same rule from Module 04, applied to file access instead of a calculation: reading and writing files is exactly the kind of thing that belongs in a plain method, called from an event handler, never mixed into it.
 
 A genuine limitation worth knowing about: this simple approach breaks if a field itself contains a comma (an address like `"Wellington, New Zealand"` would be split into two fields by mistake). Real-world CSV handling deals with this using quoted fields, and libraries like **CsvHelper** exist specifically to handle those edge cases correctly. For this course's data, where fields don't contain commas, the simple `Split(',')` approach above is fine, but it's worth knowing the simple version has that limit.
 
@@ -170,7 +170,7 @@ Settings settings = JsonSerializer.Deserialize<Settings>(json);
 MessageBox.Show($"Welcome back, {settings.UserName}");
 ```
 
-`Settings` above uses plain auto-implemented properties (Week 03), which is what `System.Text.Json` expects by default: it needs a public property with both a `get` and a `set` for each field it's reading into.
+`Settings` above uses plain auto-implemented properties (Module 03), which is what `System.Text.Json` expects by default: it needs a public property with both a `get` and a `set` for each field it's reading into.
 
 ### 3.3 JSON handles nested objects naturally
 
@@ -223,7 +223,7 @@ Serialize the same `List<Contact>` from Task 1 to `contacts.json` instead of CSV
 
 ## 4. Handling files and folders robustly
 
-Real applications don't control what's on the user's file system. A folder might not exist yet, a file might be missing, or the user might not have permission to write somewhere. This is Week 01's `try`/`catch` habit, applied more carefully to files specifically. You'll build on this further with custom, purpose-built exceptions once you reach the Debugging and Unit Testing week.
+Real applications don't control what's on the user's file system. A folder might not exist yet, a file might be missing, or the user might not have permission to write somewhere. This is Module 01's `try`/`catch` habit, applied more carefully to files specifically. You'll build on this further with custom, purpose-built exceptions once you reach the Debugging and Unit Testing module.
 
 ### 4.1 Building paths safely
 
@@ -285,9 +285,9 @@ private void buttonSave_Click(object sender, EventArgs e)
 }
 ```
 
-Both dialogs are controls, in the sense that they belong to the UI layer. The event handlers above still follow Week 04's rule: they gather a file path from the dialog, then hand it straight to a plain method (`LoadContacts`, `SaveContacts`) that does the actual work and has no idea a dialog was ever involved.
+Both dialogs are controls, in the sense that they belong to the UI layer. The event handlers above still follow Module 04's rule: they gather a file path from the dialog, then hand it straight to a plain method (`LoadContacts`, `SaveContacts`) that does the actual work and has no idea a dialog was ever involved.
 
-**Design first.** Before writing file-handling code, list every way it could fail: the folder doesn't exist, the file doesn't exist, the file exists but is empty or corrupted, the user cancels the dialog. Decide what should happen in each case before you write the `try-catch`. Getting into this habit now will make Week 08's more formal look at defensive coding feel like a small step, not a big one.
+**Design first.** Before writing file-handling code, list every way it could fail: the folder doesn't exist, the file doesn't exist, the file exists but is empty or corrupted, the user cancels the dialog. Decide what should happen in each case before you write the `try-catch`. Getting into this habit now will make Module 08's more formal look at defensive coding feel like a small step, not a big one.
 
 | Key terms                              |                                                                   |
 | -------------------------------------- | ----------------------------------------------------------------- |

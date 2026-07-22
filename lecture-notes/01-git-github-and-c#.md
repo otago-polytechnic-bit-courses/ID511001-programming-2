@@ -1,35 +1,8 @@
 # Module 01: Git, GitHub and C#
 
-## Navigation
-
-|                   | Link                                                            |
-| ----------------- | --------------------------------------------------------------- |
-| GitHub Repository | [ID511001-S2-26](https://classroom.github.com/a/Ury_53GW)       |
-| → Next            | [Module 02: Collections and LINQ](./02-collections-and-linq.md) |
-
----
-
-## How these notes work
-
-You'll see the same handful of markers all the way through the course, every module, so you always know what kind of thing you're looking at:
-
-| Marker                | What it means                                                             |
-| --------------------- | ------------------------------------------------------------------------- |
-| **Why this matters.** | The reason the thing exists, before you see the syntax                    |
-| **Design first.**     | A short planning step to do _before_ you open the code editor             |
-| **Quick check.**      | A tiny, ungraded self-test. If you can't answer it, re-read the bit above |
-| **Task**              | A graded exercise, placed right after the content it needs                |
-| Key terms             | A glossary table at the end of each section                               |
-
-Tasks sit right after the section that teaches them, not bundled at the end. Do them as you go. It's much easier to fix a misunderstanding on the spot than to discover it three sections later.
-
----
-
 ## 1. Git & GitHub
 
 This course uses **Git** for version control and **GitHub** to hand out and collect your repositories. If you haven't used Git before: think of it as a save system for your code that also lets you look back at every previous save.
-
-Click the GitHub Repository link above, accept the assignment, and you'll get your own empty repository.
 
 ### 1.1 Your first two files
 

@@ -31,7 +31,7 @@ References: [gitignore docs](https://git-scm.com/docs/gitignore) · [GitHub giti
 
 ---
 
-## 2. The house style: naming and comments
+## 2. Naming and comments
 
 Before any code, it's worth knowing the conventions you'll be expected to follow. It's much easier to write things correctly the first time than to rename everything later.
 
@@ -665,13 +665,6 @@ Create a `countries.txt` with one country name per line. Read it and display onl
 
 Create a `computer-jokes.txt` with one joke per line. Read them into an array, then use `new Random().Next(0, jokes.Length)` to display one at random each run. Handle a missing file gracefully.
 
----
-
-## Before you submit
-
-- [ ] Every task above is complete and tested
-- [ ] Code follows the naming conventions from Section 2
-- [ ] `README.md` records any AI tool prompts you used and how you used the response (refining a prompt and then checking the output counts; pasting an answer in unread doesn't)
-- [ ] Pushed to your GitHub repository
+--
 
 **A note on AI tools:** using them well is a skill in itself. That means refining your prompt until it gives you something useful, and actually reading and testing what comes back rather than trusting it blindly. Log what you asked and how you used it in your `README.md`. This is expected every module from here on, so it won't be repeated in every file, but it always applies.

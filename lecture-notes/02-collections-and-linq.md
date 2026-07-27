@@ -1,20 +1,5 @@
 # Module 02: Collections and LINQ
 
-## Navigation
-
-|            | Link                                                                                       |
-| ---------- | ------------------------------------------------------------------------------------------ |
-| ← Previous | [Module 01: Git, GitHub and C#](./01-git-github-and-c%23.md)                     |
-| → Next     | [Module 03: Classes, Objects and Encapsulation](./03-classes-objects-and-encapsulation.md) |
-
----
-
-_(This module uses the same recurring labels explained in Module 01: why it matters, design first, quick check, and task.)_
-
-Last module you stored single values in variables. This module is about storing **groups** of values, and querying them without writing loops for every little thing.
-
----
-
 ## 1. Arrays: a quick recap
 
 You met arrays briefly last module. As a reminder: an array is a **fixed-size**, zero-indexed sequence of elements, all of the same type.
@@ -58,7 +43,7 @@ jagged[0] = new int[] { 1, 2, 3 };
 jagged[1] = new int[] { 4, 5 };
 ```
 
-**Why this matters.** Arrays are fast and memory-efficient, but that fixed size is a real limitation. You can't add a sixth item to a five-item array. That's exactly the gap `List<T>` fills.
+Arrays are fast and memory-efficient, but that fixed size is a real limitation. You can't add a sixth item to a five-item array. That's exactly the gap `List<T>` fills.
 
 ### 1.1 A modern shorthand: collection expressions
 
@@ -148,14 +133,14 @@ fruits.ForEach(fruit => Console.WriteLine(fruit));
 
 Both print the same three lines. `foreach` works on any collection at all, reads clearly to almost anyone, and is easy to step through with the debugger, one line at a time. `ForEach` only exists on `List<T>` specifically, and packs the same idea into a single expression.
 
-**Rule of thumb for this course:** default to `foreach`. It's the more general tool, it's what you'll see most often in other people's code, and it's the one this course's examples will keep using from here on. `ForEach` is worth recognising when you come across it, but it isn't something you need to reach for yourself.
+Default to `foreach`. It's the more general tool, it's what you'll see most often in other people's code, and it's the one this course's examples will keep using from here on. `ForEach` is worth recognising when you come across it, but it isn't something you need to reach for yourself.
 
 | Key terms         |                                                                                   |
 | ----------------- | --------------------------------------------------------------------------------- |
 | `foreach`         | A loop construct, works on any collection type                                    |
 | `List<T>.ForEach` | A method specific to `List<T>`, taking a lambda expression instead of a loop body |
 
-**Design first.** Before Task 1, sketch the final list on paper, something like "start empty, add all of list one, then all of list two, then Rust, then take Swift out," in that order. It's easy to get `AddRange` and `Add` mixed up if you code first and think second.
+Before Task 1, sketch the final list on paper, something like "start empty, add all of list one, then all of list two, then Rust, then take Swift out," in that order. It's easy to get `AddRange` and `Add` mixed up if you code first and think second.
 
 ### Task 1: Combine Lists
 
@@ -287,7 +272,7 @@ var evens = numbers.Where(n => n % 2 == 0).OrderByDescending(n => n);
 var evensQuery = from n in numbers where n % 2 == 0 orderby n descending select n;
 ```
 
-**Design first.** LINQ chains are pipelines: data flows through each `.Method()` in order. Before writing a chain longer than one method, write the pipeline as a short list, such as _filter, then sort, then limit_. If you can name each stage in English, the C# is just translation.
+LINQ chains are pipelines: data flows through each `.Method()` in order. Before writing a chain longer than one method, write the pipeline as a short list, such as _filter, then sort, then limit_. If you can name each stage in English, the C# is just translation.
 
 ### 4.1 Filtering and projecting
 
@@ -463,11 +448,3 @@ List<Product> products = new List<Product>
 5. All products priced between $100 and $500
 
 > **Hint:** for 4, `GroupBy` then `MaxBy(p => p.Price)` (or `OrderByDescending(...).First()` inside each group).
-
----
-
-## Before you submit
-
-- [ ] All 11 tasks complete and tested
-- [ ] `README.md` updated with any AI prompts used
-- [ ] Pushed to your GitHub repository

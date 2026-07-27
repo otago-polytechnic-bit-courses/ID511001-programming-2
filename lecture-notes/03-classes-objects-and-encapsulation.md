@@ -1,20 +1,5 @@
 # Module 03: Classes, Objects and Encapsulation
 
-## Navigation
-
-|              | Link                                                                        |
-| ------------ | --------------------------------------------------------------------------- |
-| ← Previous   | [Module 02: Collections and LINQ](./02-collections-and-linq.md)             |
-| → Next       | [Module 04: Windows Forms Applications](./04-windows-forms-applications.md) |
-
----
-
-_(This module uses the same recurring labels explained in Module 01: why it matters, design first, quick check, and task.)_
-
-Everything so far has been about manipulating data C# already knows about: numbers, strings, lists of them. This module you start defining your **own** types. This is where "programming" starts to feel like modelling the real world in code, which is really what most of this course is about from here on.
-
----
-
 ## 1. Struct: a quick recap
 
 You may have used a `struct` in Programming 1: a small bundle of related fields and methods.
@@ -50,7 +35,7 @@ public class Dog
 | Can be `null`? | No (unless nullable)                | Yes                                            |
 | Best for       | Small, immutable, single-value data | Larger objects with behaviour and shared state |
 
-**Why this matters.** If you copy a `struct` into a new variable and change the copy, the original is untouched, because each variable has its own data. Copy a class reference and change it through the new variable, and you'll see the change through the _original_ variable too, because both point at the same object. This trips people up constantly, so keep it in mind whenever something behaves unexpectedly after an assignment.
+If you copy a `struct` into a new variable and change the copy, the original is untouched, because each variable has its own data. Copy a class reference and change it through the new variable, and you'll see the change through the _original_ variable too, because both point at the same object. This trips people up constantly, so keep it in mind whenever something behaves unexpectedly after an assignment.
 
 Reference: [Choosing between class and struct](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct)
 
@@ -94,7 +79,7 @@ The **null-coalescing operator** `??` supplies a fallback value when the left-ha
 string result = myDog?.Bark() ?? "No dog to bark!";   // falls back if myDog is null, or if Bark() itself returned null
 ```
 
-**Design first.** Any time a method returns an object that might not exist (a search that might not find a match, a lookup that might come up empty), decide up front what the caller should do about that. Deciding "return `null` and let the caller check" versus "throw an exception" versus "return a default object instead" is a real design choice, not an afterthought, and it's much easier to make before you've written the method than after something crashes because of it.
+Any time a method returns an object that might not exist (a search that might not find a match, a lookup that might come up empty), decide up front what the caller should do about that. Deciding "return `null` and let the caller check" versus "throw an exception" versus "return a default object instead" is a real design choice, not an afterthought, and it's much easier to make before you've written the method than after something crashes because of it.
 
 ### 3.1 A modern feature worth recognising: nullable reference types
 
@@ -322,7 +307,7 @@ public class Dog
 }
 ```
 
-**Rule of thumb for this course:** if a property needs validation (like `Balance` above), write it out fully with a private field. If it's a simple pass-through with nothing to enforce, the auto-property shorthand is perfectly acceptable, and it's often what you'll see in professional codebases. Either way, keep fields `private` and interact with them through properties. A `public` field with no `get`/`set` at all is a code smell you'll formally learn about in Module 10.
+If a property needs validation (like `Balance` above), write it out fully with a private field. If it's a simple pass-through with nothing to enforce, the auto-property shorthand is perfectly acceptable, and it's often what you'll see in professional codebases. Either way, keep fields `private` and interact with them through properties. A `public` field with no `get`/`set` at all is a code smell you'll formally learn about in Module 10.
 
 You can also restrict a property to be read-only from outside the class, by making the setter `private`:
 
@@ -564,12 +549,3 @@ You've been sketching class diagrams by hand this module. Visual Studio can also
 ### Task 6: Class Diagrams
 
 Create a class diagram for **two** of the classes (or class groups) you built this module. Export or screenshot them and include them in your repository.
-
----
-
-## Before you submit
-
-- [ ] All 6 tasks complete and tested
-- [ ] Every class uses private fields, a constructor with `this`, and properties (full or auto), with no bare public fields
-- [ ] `README.md` updated with any AI prompts used
-- [ ] Pushed to your GitHub repository

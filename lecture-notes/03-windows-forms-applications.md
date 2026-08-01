@@ -1,19 +1,4 @@
-# Module 04: Windows Forms Applications
-
-## Navigation
-
-|              | Link                                                                                       |
-| ------------ | ------------------------------------------------------------------------------------------ |
-| ← Previous   | [Module 03: Classes, Objects and Encapsulation](./03-classes-objects-and-encapsulation.md) |
-| → Next       | [Module 05: File Management](./05-file-management.md)            |
-
----
-
-_(This module uses the same recurring labels explained in Module 01: why it matters, design first, quick check, and task.)_
-
-Everything you've built so far has run top-to-bottom and stopped. This module, that changes: you'll build applications that sit and wait for the _user_ to decide what happens next. That shift, from "run in order" to "respond to whatever happens", is called **event-driven programming**, and it's the core idea behind every GUI application you'll ever build.
-
----
+# Module 03: Windows Forms Applications
 
 ## 1. Visual Studio and Windows Forms
 

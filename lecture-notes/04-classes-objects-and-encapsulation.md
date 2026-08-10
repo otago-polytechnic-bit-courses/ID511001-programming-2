@@ -1,4 +1,4 @@
-# Module 03: Classes, Objects and Encapsulation
+# Module 04: Classes, Objects and Encapsulation
 
 ## 1. Struct: a quick recap
 

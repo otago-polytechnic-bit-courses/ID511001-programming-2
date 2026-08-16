@@ -1,20 +1,5 @@
 # Module 05: File Management
 
-## Navigation
-
-|              | Link                                                                                                     |
-| ------------ | -------------------------------------------------------------------------------------------------------- |
-| ← Previous | [Module 04: Windows Forms Applications](./04-windows-forms-applications.md)                              |
-| → Next       | [Module 06: Abstraction, Inheritance and Polymorphism](./06-abstraction-inheritance-and-polymorphism.md) |
-
----
-
-_(This module uses the same recurring labels explained in Module 01: why it matters, design first, quick check, and task.)_
-
-Back in Module 01 you read and wrote plain text files. Real applications usually need more structure than that: a spreadsheet of contacts, a settings file, a saved game. This module looks at two of the most common structured formats, CSV and JSON, and at handling files and folders more carefully than "hope the path is right."
-
----
-
 ## 1. Choosing a file format
 
 Before writing any code, it's worth knowing what you're choosing between, since each format trades off readability against structure.
@@ -25,7 +10,7 @@ Before writing any code, it's worth knowing what you're choosing between, since 
 | CSV (`.csv`)        | Flat rows and columns     | Yes, especially in a spreadsheet | Tabular data: contacts, product lists, grades                                                                      |
 | JSON (`.json`)      | Nested objects and arrays | Yes                              | Structured or nested data: settings, an object with a list inside it, data you'll also send over a network one day |
 
-**Design first.** Before saving anything to disk, ask what shape the data actually is. A flat list of records with the same few fields on every row (contacts, products) fits CSV naturally. Anything with optional fields, nested objects, or lists inside objects (a `Student` with a `List<Course>` inside it) is a much better fit for JSON. Picking the wrong format doesn't stop your code from working, but it usually means fighting the format later to represent something it wasn't designed for.
+Before saving anything to disk, ask what shape the data actually is. A flat list of records with the same few fields on every row (contacts, products) fits CSV naturally. Anything with optional fields, nested objects, or lists inside objects (a `Student` with a `List<Course>` inside it) is a much better fit for JSON. Picking the wrong format doesn't stop your code from working, but it usually means fighting the format later to represent something it wasn't designed for.
 
 | Key terms       |                                                                                   |
 | --------------- | --------------------------------------------------------------------------------- |
@@ -99,7 +84,7 @@ public static void SaveContacts(string filePath, List<Contact> contacts)
 }
 ```
 
-**Why this matters.** Notice `LoadContacts` and `SaveContacts` take a file path and a list, and return a file path and a list. Neither one mentions a `TextBox` or any other control. This is the same rule from Module 04, applied to file access instead of a calculation: reading and writing files is exactly the kind of thing that belongs in a plain method, called from an event handler, never mixed into it.
+Notice `LoadContacts` and `SaveContacts` take a file path and a list, and return a file path and a list. Neither one mentions a `TextBox` or any other control. This is the same rule from Module 04, applied to file access instead of a calculation: reading and writing files is exactly the kind of thing that belongs in a plain method, called from an event handler, never mixed into it.
 
 A genuine limitation worth knowing about: this simple approach breaks if a field itself contains a comma (an address like `"Wellington, New Zealand"` would be split into two fields by mistake). Real-world CSV handling deals with this using quoted fields, and libraries like **CsvHelper** exist specifically to handle those edge cases correctly. For this course's data, where fields don't contain commas, the simple `Split(',')` approach above is fine, but it's worth knowing the simple version has that limit.
 
@@ -298,12 +283,3 @@ Both dialogs are controls, in the sense that they belong to the UI layer. The ev
 ### Task 4: Robust Open and Save
 
 Extend Task 1 or Task 3's contacts app with `OpenFileDialog` and `SaveFileDialog`, wired up as shown above. Handle the case where the user cancels the dialog (`DialogResult` won't be `OK`), and the case where a chosen file exists but can't be parsed as a valid contacts file, using a `try-catch` around the loading logic. Show a clear `MessageBox` message for each failure case rather than letting the app crash.
-
----
-
-## Before you submit
-
-- [ ] All 4 tasks complete and tested
-- [ ] File-loading and file-saving methods take and return plain values or your own classes, never a control
-- [ ] `README.md` updated with any AI prompts used
-- [ ] Pushed to your GitHub repository
